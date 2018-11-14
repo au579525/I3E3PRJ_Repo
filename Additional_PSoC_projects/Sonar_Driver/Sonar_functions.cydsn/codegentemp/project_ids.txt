@@ -1,0 +1,6 @@
+C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn\Sonar_functions.cyprj|ae35a1f3-0d85-4013-b8fd-6572d14e0bac
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|5c49ee0d-ea0b-469d-af0c-77597ff205cd
+C:\Users\midtg\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|72c04b48-ec77-4dc0-a0ea-a74449d26b0e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|31cd300f-717b-4b2e-982c-f8583b8e1781
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|541b176c-a7b4-421e-b18c-1ea992882261
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|3df4a43c-9349-47b5-88ba-52251e5ccf41
