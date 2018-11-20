@@ -24,6 +24,9 @@ int main()
         }
         //if file doesnt open use standard path
         else{
+            ofstream pathsettings;
+            pathsettings.open("path.txt", ios::trunc);
+            pathsettings << "/opt/pigeon/";
             file = new fileaccess("/opt/pigeon/");
         }
         //check if webrequest is a POST request
