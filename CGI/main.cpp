@@ -28,11 +28,11 @@ int main()
         }
         //check if webrequest is a POST request
         if(cgiccreq.getEnvironment().getRequestMethod() == "POST"){
-            postrequest(&cgiccreq, file);
+            postrequest request(&cgiccreq, file);
         }
         //if not load website
         else{
-            htmlpage(file);
+            htmlpage page(file);
         }
     }
     catch(exception &e) {
