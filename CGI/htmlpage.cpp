@@ -2,7 +2,7 @@
 
 
 // TODO implement script for changed settings and manual control and include it in html code
-htmlpage::htmlpage(fileaccess* sysdata)
+htmlpage::htmlpage(fileaccess *sysdata)
 {
     string sysmode = sysdata->getsysmode();
     cout << HTTPHTMLHeader() << endl;
@@ -10,6 +10,7 @@ htmlpage::htmlpage(fileaccess* sysdata)
     htmlhead();
     cout << "<body>"<< endl;
     header();
+    //check if system is in manual code
     settings(sysmode, sysdata->getwatermode());
     if(sysmode == "manual"){
         manual(true);
@@ -33,6 +34,7 @@ void htmlpage::settings(string sysmode, bool watermode){
     cout << "<div class=\"select-menu-container clear\">" << endl;
     cout << "<div class=\"select-menu-select clear\">" << endl;
     cout << "<select id=\"sysmode\">" << endl;
+    //different menu outputs depending on systemmode
     if(sysmode == "normal"){
         cout << "<option value=\"normal\" selected>Normal</option>" << endl;
         cout << "<option value=\"manual\">Manual</option>" << endl;
@@ -65,6 +67,7 @@ void htmlpage::settings(string sysmode, bool watermode){
     cout << "<div class=\"section clear\">" << endl;
     cout << "<h3>Automatic watering</h3>" << endl;
     cout << "<div class=\"clear\" id=\"water-mode-button\">" << endl;
+    //check watermode
     if(watermode){
         cout << "<button class=\"btn active true\" onclick=\"changewatermode('enable')\">Enable</button>" << endl;
         cout << "<button class=\"btn false\" onclick=\"changewatermode('disable')\">Disable</button>" << endl;
@@ -80,6 +83,7 @@ void htmlpage::settings(string sysmode, bool watermode){
 }
 
 void htmlpage::manual(bool show){
+    //show or hide manualcontrol container
     if(show){
        cout << "<div class=\"clear content\" id=\"manualctn\">" << endl;
     }
@@ -121,9 +125,12 @@ void htmlpage::log(vector<string> logfile){
     cout << "<div class=\"log clear\">" << endl;
     cout << "<h2 class=\"content-header\">Log</h2>" << endl;
     cout << "<pre class=\"clear\" id=\"log-content\">" << endl;
+
+    //interate over lines in logfile and print out
     for(std::vector<string>::iterator it = logfile.begin(); it != logfile.end(); ++it){
         cout << *it << endl;
     }
+
     cout << "</pre>" << endl;
     cout << "</div>" << endl;
     cout << "</div>" << endl;

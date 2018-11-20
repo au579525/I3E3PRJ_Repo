@@ -19,7 +19,7 @@ using namespace cgicc;
 class htmlpage
 {
 public:
-    htmlpage(fileaccess* sysdata);
+    htmlpage(fileaccess *sysdata);
 private:
     void htmlhead();
     void header();
