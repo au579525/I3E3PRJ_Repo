@@ -24,7 +24,7 @@ private:
     void htmlhead();
     void header();
     void settings(string, bool);
-    void manual();
+    void manual(bool show);
     void log(vector<string>);
 };
 

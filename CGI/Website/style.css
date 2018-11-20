@@ -186,9 +186,17 @@ header div {
 	margin-bottom: 20px;
 }
 
-button:focus{
+button:focus, button:active{
 	outline: none;
+    border: none;
+
 }
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+
 
 #log-content{
 	text-align: left;
@@ -235,3 +243,6 @@ button:focus{
 	margin: 20px
 }
 
+.hide {
+    display: none !important;
+}

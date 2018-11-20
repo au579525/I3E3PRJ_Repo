@@ -52,7 +52,7 @@ void fileaccess::setsysmode(string mode)
     ofstream file;
     file.open(path + "queue", ios::app);
     if(file.is_open()){
-        file << "systemmode " << mode;
+        file << endl << "systemmode " << mode;
     }
 }
 
@@ -62,10 +62,10 @@ void fileaccess::setwatermode(bool mode)
     file.open(path + "queue", ios::app);
     if(file.is_open()){
         if(mode){
-            file << "watermode enabled";
+            file << endl << "watermode enabled";
         }
         else{
-            file << "watermode disabled";
+            file << endl << "watermode disabled";
         }
     }
 }
@@ -75,6 +75,6 @@ void fileaccess::manualcontrol(string action)
     ofstream file;
     file.open(path + "queue", ios::app);
     if(file.is_open()){
-        file << "manualcontrol " << action;
+        file << endl << "manualcontrol " << action;
     }
 }

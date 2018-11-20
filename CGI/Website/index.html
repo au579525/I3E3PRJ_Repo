@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<title>PES</title>
 		<link rel="stylesheet" href="style.css">
 		<link href="font-awesome/css/all.css" rel="stylesheet">
 	</head>
@@ -9,7 +10,7 @@
 	<body>
 		<header class="clear">
 			<div id="header-text">
-				<h1>Pigeon Exterminator 3000</h1>
+				<h1>PIGEON EXTERMINATION SYSTEM</h1>
 				<p>Configuration website</p>
 			</div>
 		</header>
@@ -21,48 +22,48 @@
 					<h3>Choose system mode</h3>
 					<div class="select-menu-container clear">
 						<div class="select-menu-select clear">
-							<select>
+							<select id="sysmode">
 								<option value="normal">Normal</option>
 								<option value="manual">Manual</option>
 								<option value="powersaving">Powersaving</option>
 								<option value="standby">Standby</option>
 							</select>
 						</div>
-						<button class="select-menu-save">Save</button>
+						<button class="select-menu-save" onclick="changesysmode()">Save</button>
 					</div>
 					
 				</div>
 				<div class="section clear">
 					<h3>Automatic watering</h3>
 					<div class="clear" id="water-mode-button">
-						<button class="btn active true">Enable</button>
-						<button class="btn false">Disable</button>
+						<button class="btn active true" onclick="changewatermode('enable')">Enable</button>
+						<button class="btn false" onclick="changewatermode('disable')">Disable</button>
 					</div>
 				</div>
 			</div>			
 		</div>
 		
-		<div class="clear content">
+		<div class="clear content" id="manualctn">
 			<div class="manual-control clear">
 				<h2 class="content-header">Manual Control</h2>
 				<div class="button-container clear">
-					<button class="control-btn arrow up">
+					<button class="control-btn arrow up" onclick="manualcontrol('up')">
 						<i class="fas fa-angle-up"></i>
 					</button>
 				</div>
 				<div class="button-container clear">
-					<button class="control-btn ">
+					<button class="control-btn " onclick="manualcontrol('left')">
 						<i class="fas fa-angle-left"></i>
 					</button>
-					<button class="control-btn shoot-btn">
+					<button class="control-btn shoot-btn" onclick="manualcontrol('shoot')">
 						<i class="circle"></i>
 					</button>
-					<button class="control-btn">
+					<button class="control-btn" onclick="manualcontrol('right')">
 						<i class="fas fa-angle-right"></i>
 					</button>
 				</div>
 				<div class="button-container clear">
-					<button class="control-btn">
+					<button class="control-btn" onclick="manualcontrol('down')">
 						<i class="fas fa-angle-down"></i>
 					</button>
 				</div>
@@ -99,7 +100,7 @@
 				</pre>
 			</div>
 		</div>
-		
+		<script src="postrequests.js"></script>
 		<script src="selectmenu.js"></script>
 	</body>
 	
