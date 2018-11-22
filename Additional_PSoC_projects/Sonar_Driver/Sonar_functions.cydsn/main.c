@@ -30,7 +30,7 @@ int main(void)
     CyGlobalIntEnable; /* Enable global interrupts. */
     UART_RX_interrupt_StartEx(ISR_UART_RX_handler);
     //isr_echo_recieved_StartEx(isr_echo_recieved_handler);
-    Sonar_Start();
+    SonarDriverStart();
     //Klargører hardware:
     UART_1_Start();
    
@@ -48,7 +48,7 @@ int main(void)
         while(flagstart != 1){}
         flagstart = 0;
         
-        struct position p = Sonar_GetPosition();
+        struct position p = GetPigeonPos();
         
         if (p.detected == 1){
         snprintf(outputBuffer, sizeof(outputBuffer), "Pigeon detected in position: %d, with the distance: %.3f\n\r",p.width,p.distance); 
