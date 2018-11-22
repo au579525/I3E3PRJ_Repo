@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>PES</title>
+		<link rel="stylesheet" href="style.css">
+		<link href="font-awesome/css/all.css" rel="stylesheet">
+	</head>
+	
+	<body>
+		<header class="clear">
+			<div id="header-text">
+				<h1>PIGEON EXTERMINATION SYSTEM</h1>
+				<p>Configuration website</p>
+			</div>
+		</header>
+		
+		<div class="clear content">
+			<div class="settings clear">
+				<h2 class="content-header">Settings</h2>
+				<div class="section clear">
+					<h3>Choose system mode</h3>
+					<div class="select-menu-container clear">
+						<div class="select-menu-select clear">
+							<select id="sysmode">
+								<option value="normal">Normal</option>
+								<option value="manual">Manual</option>
+								<option value="powersaving">Powersaving</option>
+								<option value="standby">Standby</option>
+							</select>
+						</div>
+						<button class="select-menu-save" onclick="changesysmode()">Save</button>
+					</div>
+					
+				</div>
+				<div class="section clear">
+					<h3>Automatic watering</h3>
+					<div class="clear" id="water-mode-button">
+						<button class="btn active true" onclick="changewatermode('enable')">Enable</button>
+						<button class="btn false" onclick="changewatermode('disable')">Disable</button>
+					</div>
+				</div>
+			</div>			
+		</div>
+		
+		<div class="clear content" id="manualctn">
+			<div class="manual-control clear">
+				<h2 class="content-header">Manual Control</h2>
+				<div class="button-container clear">
+					<button class="control-btn arrow up" onclick="manualcontrol('up')">
+						<i class="fas fa-angle-up"></i>
+					</button>
+				</div>
+				<div class="button-container clear">
+					<button class="control-btn " onclick="manualcontrol('left')">
+						<i class="fas fa-angle-left"></i>
+					</button>
+					<button class="control-btn shoot-btn" onclick="manualcontrol('shoot')">
+						<i class="circle"></i>
+					</button>
+					<button class="control-btn" onclick="manualcontrol('right')">
+						<i class="fas fa-angle-right"></i>
+					</button>
+				</div>
+				<div class="button-container clear">
+					<button class="control-btn" onclick="manualcontrol('down')">
+						<i class="fas fa-angle-down"></i>
+					</button>
+				</div>
+				<div class="instruct-text">
+				Press the buttons to move the gun by 5°. Press the button in the middle to shoot water for 3 seconds.
+				</div>
+			</div>
+		</div>
+		
+		<div class="clear content">
+			<div class="log clear">
+				<h2 class="content-header">Log</h2>
+				<pre class="clear" id="log-content">
+2018-11-17 19:18:07 POSTPROCESSOR-AUTO :: Processing failed for /var/lib/deluge/tmp/outlander.s401e02.1080p.web.h264-memento/outlander.s401e02.1080p.web.h264-memento.mkv: 
+2018-11-17 19:18:07 POSTPROCESSOR-AUTO :: Processing Failed
+2018-11-17 10:11:16 SEARCHQUEUE-BACKLOG-270408 :: [Danishbits] :: Alle API hits er brugt - se status i din profil
+2018-11-17 10:11:12 SEARCHQUEUE-BACKLOG-328634 :: [Danishbits] :: Alle API hits er brugt - se status i din profil
+2018-11-17 10:10:53 SEARCHQUEUE-BACKLOG-349271 :: [Danishbits] :: Alle API hits er brugt - se status i din profil
+2018-11-17 10:10:39 SEARCHQUEUE-BACKLOG-342107 :: [Danishbits] :: Alle API hits er brugt - se status i din profil
+2018-11-17 10:10:21 SEARCHQUEUE-BACKLOG-79269 :: [Danishbits] :: Alle API hits er brugt - se status i din profil
+2018-11-17 10:09:11 SEARCHQUEUE-BACKLOG-328724 :: [Danishbits] :: Alle API hits er brugt - se status i din profil
+2018-11-17 10:08:58 SEARCHQUEUE-BACKLOG-78804 :: [Danishbits] :: Alle API hits er brugt - se status i din profil
+2018-11-17 10:08:41 SEARCHQUEUE-BACKLOG-161511 :: [Danishbits] :: Alle API hits er brugt - se status i din profil
+2018-11-17 10:08:22 SEARCHQUEUE-BACKLOG-328552 :: [Danishbits] :: Alle API hits er brugt - se status i din profil
+2018-11-17 10:08:00 SEARCHQUEUE-BACKLOG-261690 :: [Danishbits] :: Alle API hits er brugt - se status i din profil
+2018-11-17 10:07:41 SEARCHQUEUE-BACKLOG-311790 :: [Danishbits] :: Alle API hits er brugt - se status i din profil
+2018-11-17 10:06:59 SEARCHQUEUE-BACKLOG-296762 :: [Danishbits] :: Alle API hits er brugt - se status i din profil
+2018-11-17 10:06:53 SEARCHQUEUE-BACKLOG-269586 :: [Danishbits] :: Alle API hits er brugt - se status i din profil
+2018-11-16 22:00:38 SEARCHQUEUE-BACKLOG-279536 :: [Danishbits] :: Alle API hits er brugt - se status i din profil
+2018-11-16 22:00:30 SEARCHQUEUE-BACKLOG-247808 :: [Danishbits] :: Alle API hits er brugt - se status i din profil
+2018-11-16 22:00:13 SEARCHQUEUE-BACKLOG-295829 :: [Danishbits] :: Alle API hits er brugt - se status i din profil
+2018-11-16 21:59:47 FINDPROPERS :: [Danishbits] :: Alle API hits er brugt - se status i din profil
+2018-11-15 22:09:54 SEARCHQUEUE-DAILY-SEARCH :: [IPTorrents] :: Stupid captcha
+				</pre>
+			</div>
+		</div>
+		<script src="postrequests.js"></script>
+		<script src="selectmenu.js"></script>
+	</body>
+	
+	
+</html>
