@@ -12,7 +12,7 @@
 #include "MotorDriver.h"
 
 
-void init() {               //GIT PUSH TEST
+void init() {
     Pin_1_Write(0);
     Pin_2_Write(0);
     
@@ -30,6 +30,7 @@ void rotateClockwise() {
     else {
         ++stepperState;
     }
+    moveStep();
 }
 
 void rotateCounterClockwise() {
@@ -39,13 +40,34 @@ void rotateCounterClockwise() {
     else {
         --stepperState;
     }
+    moveStep();
 }
 
 void moveStep() {
-    
+    if(stepperState == NORTH) {
+        Pin_1_Write(0);
+        CyDelay(TIME);
+        Pin_2_Write(0);
+    }
+    else if(stepperState == EAST) {
+        Pin_1_Write(1);
+        CyDelay(TIME);
+        Pin_2_Write(0);
+    }
+    else if(stepperState == SOUTH) {
+        Pin_1_Write(1);
+        CyDelay(TIME);
+        Pin_2_Write(1);
+    }
+    else if(stepperState == WEST) {
+        Pin_1_Write(0);
+        CyDelay(TIME);
+        Pin_2_Write(1);
+    }
+    CyDelay(TIME);
 }
 
-void moveDegrees(int deg) { //Positivt antal grader skrives hvis armen skal kører med uret og negativt gradtal skrives hvis den skal køre mod uret
+void moveDegrees(int deg) { //Positivt antal grader skrives hvis armen skal køre med uret og negativt gradtal skrives hvis den skal køre mod uret
     if(deg > 0) {
         for(int i = 0; i < deg; i++) {
             Pin_1_Write(1);
