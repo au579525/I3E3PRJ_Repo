@@ -1,8 +1,22 @@
 #include "fileaccess.h"
 
-fileaccess::fileaccess(string _path)
+fileaccess::fileaccess()
 {
-    path = _path;
+    //get path of folder with queue and setting files
+    ifstream pathsettings;
+    pathsettings.open("path.txt");
+    //check if file is open
+    if(pathsettings.is_open()){
+        string line;
+        getline(pathsettings,path);
+    }
+    //if file doesnt open use standard path
+    else{
+        ofstream pathsettings;
+        pathsettings.open("path.txt", ios::trunc);
+        pathsettings << "/opt/pigeon/";
+        path = "/opt/pigeon/";
+    }
 }
 
 string fileaccess::getsysmode()
