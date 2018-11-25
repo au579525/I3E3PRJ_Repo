@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace01\Sonar_functions\Header Files\SonarDriver.h">
+<ExpandedNodeIds>
+<v>Workspace01</v>
+<v>Workspace01\Sonar_functions</v>
+<v>Workspace01\Sonar_functions\TopDesign</v>
+<v>Workspace01\Sonar_functions\Sonar_functions.cydwr</v>
+<v>Workspace01\Sonar_functions\Sonar_functions.cydwr\Pins</v>
+<v>Workspace01\Sonar_functions\Sonar_functions.cydwr\Analog</v>
+<v>Workspace01\Sonar_functions\Sonar_functions.cydwr\Clocks</v>
+<v>Workspace01\Sonar_functions\Sonar_functions.cydwr\Interrupts</v>
+<v>Workspace01\Sonar_functions\Sonar_functions.cydwr\DMA</v>
+<v>Workspace01\Sonar_functions\Sonar_functions.cydwr\System</v>
+<v>Workspace01\Sonar_functions\Sonar_functions.cydwr\Directives</v>
+<v>Workspace01\Sonar_functions\Sonar_functions.cydwr\Flash Security</v>
+<v>Workspace01\Sonar_functions\Sonar_functions.cydwr\EEPROM</v>
+<v>Workspace01\Sonar_functions\Header Files</v>
+<v>Workspace01\Sonar_functions\Header Files\cyapicallbacks.h</v>
+<v>Workspace01\Sonar_functions\Header Files\SonarDriver.h</v>
+<v>Workspace01\Sonar_functions\Source Files</v>
+<v>Workspace01\Sonar_functions\Source Files\main.c</v>
+<v>Workspace01\Sonar_functions\Generated_Source</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Workspace01</v>
+<v>Workspace01\Sonar_functions</v>
+<v>Workspace01\Sonar_functions\TopDesign</v>
+<v>Workspace01\Sonar_functions\Sonar_functions.cydwr</v>
+<v>Workspace01\Sonar_functions\Sonar_functions.cydwr\Pins</v>
+<v>Workspace01\Sonar_functions\Sonar_functions.cydwr\Analog</v>
+<v>Workspace01\Sonar_functions\Sonar_functions.cydwr\Clocks</v>
+<v>Workspace01\Sonar_functions\Sonar_functions.cydwr\Interrupts</v>
+<v>Workspace01\Sonar_functions\Sonar_functions.cydwr\DMA</v>
+<v>Workspace01\Sonar_functions\Sonar_functions.cydwr\System</v>
+<v>Workspace01\Sonar_functions\Sonar_functions.cydwr\Directives</v>
+<v>Workspace01\Sonar_functions\Sonar_functions.cydwr\Flash Security</v>
+<v>Workspace01\Sonar_functions\Sonar_functions.cydwr\EEPROM</v>
+<v>Workspace01\Sonar_functions\Header Files</v>
+<v>Workspace01\Sonar_functions\Header Files\cyapicallbacks.h</v>
+<v>Workspace01\Sonar_functions\Header Files\SonarDriver.h</v>
+<v>Workspace01\Sonar_functions\Source Files</v>
+<v>Workspace01\Sonar_functions\Source Files\main.c</v>
+<v>Workspace01\Sonar_functions\Generated_Source</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\cy_boot</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\Echo_1</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\Echo_2</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\isr_echo_recieved</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\Timer_Sonar</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\Trigger_1</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\Trigger_2</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\UART_1</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\UART_1_IntClock</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\UART_RX_interrupt</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\cydevice.h</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\cyfitter.h</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\cyfitter_cfg.c</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\cyfitter_cfg.h</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\cyfittergnu.inc</v>
+<v>Workspace01\Sonar_functions\Generated_Source\PSoC5\cyfitteriar.inc</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Workspace01</v>
+<v>Workspace01\Sonar_functions</v>
+<v>Workspace01\Sonar_functions\TopDesign</v>
+<v>Workspace01\Sonar_functions\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Workspace01</v>
+<v>Workspace01\Sonar_functions</v>
+<v>Workspace01\Sonar_functions\TopDesign</v>
+<v>Workspace01\Sonar_functions\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Workspace01</v>
+<v>Workspace01\Sonar_functions</v>
+<v>Workspace01\Sonar_functions\CortexM3</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_1.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_2.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_echo_recieved.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_Sonar.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_Sonar_PM.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\Trigger_1.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\Trigger_2.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_INT.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_IntClock.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_PM.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_RX_interrupt.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Sonar_functions.elf</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Sonar_functions.hex</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Sonar_functions.map</v>
+<v>Workspace01\Sonar_functions\Sonar_functions.gpdsc</v>
+<v>Workspace01\Sonar_functions\Sonar_functions.rpt</v>
+<v>Workspace01\Sonar_functions\Sonar_functions_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Workspace01</v>
+<v>Workspace01\Sonar_functions</v>
+<v>Workspace01\Sonar_functions\CortexM3</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_1.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_2.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_echo_recieved.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_Sonar.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_Sonar_PM.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\Trigger_1.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\Trigger_2.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_INT.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_IntClock.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_PM.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_RX_interrupt.lst</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Sonar_functions.elf</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Sonar_functions.hex</v>
+<v>Workspace01\Sonar_functions\CortexM3\ARM_GCC_541\Debug\Sonar_functions.map</v>
+<v>Workspace01\Sonar_functions\Sonar_functions.gpdsc</v>
+<v>Workspace01\Sonar_functions\Sonar_functions.rpt</v>
+<v>Workspace01\Sonar_functions\Sonar_functions_timing.html</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Workspace01</v>
+<v>Workspace01\Sonar_functions</v>
+<v>Workspace01\Sonar_functions\PSoC 5LP Architecture TRM</v>
+<v>Workspace01\Sonar_functions\CY8C58LP Family Datasheet</v>
+<v>Workspace01\Sonar_functions\System Reference Guides</v>
+<v>Workspace01\Sonar_functions\System Reference Guides\cy_boot_v5_70</v>
+<v>Workspace01\Sonar_functions\cy_clock_v2_20.pdf</v>
+<v>Workspace01\Sonar_functions\cy_isr_v1_70</v>
+<v>Workspace01\Sonar_functions\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>Workspace01\Sonar_functions\cy_pins_v2_0</v>
+<v>Workspace01\Sonar_functions\cy_pins_v2_0\cy_pins_v2_0.pdf</v>
+<v>Workspace01\Sonar_functions\cy_pins_v2_20</v>
+<v>Workspace01\Sonar_functions\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Workspace01\Sonar_functions\Timer_v2_80.pdf</v>
+<v>Workspace01\Sonar_functions\UART_v2_50.pdf</v>
+<v>Workspace01\Sonar_functions\ZeroTerminal</v>
+<v>Workspace01\Sonar_functions\ZeroTerminal\ZeroTerminal.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Workspace01</v>
+<v>Workspace01\Sonar_functions</v>
+<v>Workspace01\Sonar_functions\PSoC 5LP Architecture TRM</v>
+<v>Workspace01\Sonar_functions\CY8C58LP Family Datasheet</v>
+<v>Workspace01\Sonar_functions\System Reference Guides</v>
+<v>Workspace01\Sonar_functions\System Reference Guides\cy_boot_v5_70</v>
+<v>Workspace01\Sonar_functions\cy_clock_v2_20.pdf</v>
+<v>Workspace01\Sonar_functions\cy_isr_v1_70</v>
+<v>Workspace01\Sonar_functions\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>Workspace01\Sonar_functions\cy_pins_v2_0</v>
+<v>Workspace01\Sonar_functions\cy_pins_v2_0\cy_pins_v2_0.pdf</v>
+<v>Workspace01\Sonar_functions\cy_pins_v2_20</v>
+<v>Workspace01\Sonar_functions\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Workspace01\Sonar_functions\Timer_v2_80.pdf</v>
+<v>Workspace01\Sonar_functions\UART_v2_50.pdf</v>
+<v>Workspace01\Sonar_functions\ZeroTerminal</v>
+<v>Workspace01\Sonar_functions\ZeroTerminal\ZeroTerminal.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\Sonar_functions.cydsn\main.c" />
+<name v=".\Sonar_functions.cydsn\SonarDriver.h" />
+<name v=".\Sonar_functions.cydsn\cyapicallbacks.h" />
+<name v=".\Sonar_functions.cydsn\TopDesign\TopDesign.cysch" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1439, 711" SelectedTabbedMdiWindow="2ccd9767-f3cb-4b95-9ea6-a8e54baf0064"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="63638a12-f3bc-455e-832a-5a422a3e72f7" /><DocumentWindow Key="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn\main.c" Guid="d0e8be9c-cc0a-44a8-9a93-c9a2a5ca4349" /><DocumentWindow Key="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn\SonarDriver.h" Guid="2ccd9767-f3cb-4b95-9ea6-a8e54baf0064" /><DocumentWindow Key="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn\cyapicallbacks.h" Guid="33603fe1-55f5-4a56-9abd-c47dc8831e3e" /><DocumentWindow Key="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn\TopDesign\TopDesign.cysch" Guid="ba324c90-3f04-4560-a4df-e702fc5798be" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

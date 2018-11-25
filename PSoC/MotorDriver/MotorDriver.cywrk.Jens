@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="MotorDriver\Stepper\Source Files\MotorDriver.c">
+<ExpandedNodeIds>
+<v>MotorDriver</v>
+<v>MotorDriver\Stepper</v>
+<v>MotorDriver\Stepper\TopDesign</v>
+<v>MotorDriver\Stepper\Stepper.cydwr</v>
+<v>MotorDriver\Stepper\Stepper.cydwr\Pins</v>
+<v>MotorDriver\Stepper\Stepper.cydwr\Analog</v>
+<v>MotorDriver\Stepper\Stepper.cydwr\Clocks</v>
+<v>MotorDriver\Stepper\Stepper.cydwr\Interrupts</v>
+<v>MotorDriver\Stepper\Stepper.cydwr\DMA</v>
+<v>MotorDriver\Stepper\Stepper.cydwr\System</v>
+<v>MotorDriver\Stepper\Stepper.cydwr\Directives</v>
+<v>MotorDriver\Stepper\Stepper.cydwr\Flash Security</v>
+<v>MotorDriver\Stepper\Stepper.cydwr\EEPROM</v>
+<v>MotorDriver\Stepper\Header Files</v>
+<v>MotorDriver\Stepper\Header Files\cyapicallbacks.h</v>
+<v>MotorDriver\Stepper\Header Files\MotorDriver.h</v>
+<v>MotorDriver\Stepper\Source Files</v>
+<v>MotorDriver\Stepper\Source Files\main.c</v>
+<v>MotorDriver\Stepper\Source Files\MotorDriver.c</v>
+<v>MotorDriver\Stepper\Generated_Source</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>MotorDriver</v>
+<v>MotorDriver\Stepper</v>
+<v>MotorDriver\Stepper\TopDesign</v>
+<v>MotorDriver\Stepper\Stepper.cydwr</v>
+<v>MotorDriver\Stepper\Stepper.cydwr\Pins</v>
+<v>MotorDriver\Stepper\Stepper.cydwr\Analog</v>
+<v>MotorDriver\Stepper\Stepper.cydwr\Clocks</v>
+<v>MotorDriver\Stepper\Stepper.cydwr\Interrupts</v>
+<v>MotorDriver\Stepper\Stepper.cydwr\DMA</v>
+<v>MotorDriver\Stepper\Stepper.cydwr\System</v>
+<v>MotorDriver\Stepper\Stepper.cydwr\Directives</v>
+<v>MotorDriver\Stepper\Stepper.cydwr\Flash Security</v>
+<v>MotorDriver\Stepper\Stepper.cydwr\EEPROM</v>
+<v>MotorDriver\Stepper\Header Files</v>
+<v>MotorDriver\Stepper\Header Files\cyapicallbacks.h</v>
+<v>MotorDriver\Stepper\Header Files\MotorDriver.h</v>
+<v>MotorDriver\Stepper\Source Files</v>
+<v>MotorDriver\Stepper\Source Files\main.c</v>
+<v>MotorDriver\Stepper\Source Files\MotorDriver.c</v>
+<v>MotorDriver\Stepper\Generated_Source</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5\cy_boot</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5\Pin_1</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5\Pin_2</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5\Pin_3</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5\cydevice.h</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5\cyfitter.h</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5\cyfitter_cfg.c</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5\cyfitter_cfg.h</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5\cyfittergnu.inc</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5\cyfitteriar.inc</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5\cyfitterrv.inc</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5\cymetadata.c</v>
+<v>MotorDriver\Stepper\Generated_Source\PSoC5\project.h</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>MotorDriver</v>
+<v>MotorDriver\Stepper</v>
+<v>MotorDriver\Stepper\TopDesign</v>
+<v>MotorDriver\Stepper\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>MotorDriver</v>
+<v>MotorDriver\Stepper</v>
+<v>MotorDriver\Stepper\TopDesign</v>
+<v>MotorDriver\Stepper\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>MotorDriver</v>
+<v>MotorDriver\Stepper</v>
+<v>MotorDriver\Stepper\CortexM3</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_2.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Stepper.elf</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Stepper.hex</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Stepper.map</v>
+<v>MotorDriver\Stepper\Stepper.gpdsc</v>
+<v>MotorDriver\Stepper\Stepper.rpt</v>
+<v>MotorDriver\Stepper\Stepper_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>MotorDriver</v>
+<v>MotorDriver\Stepper</v>
+<v>MotorDriver\Stepper\CortexM3</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_2.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Stepper.elf</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Stepper.hex</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Stepper.map</v>
+<v>MotorDriver\Stepper\Stepper.gpdsc</v>
+<v>MotorDriver\Stepper\Stepper.rpt</v>
+<v>MotorDriver\Stepper\Stepper_timing.html</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>MotorDriver</v>
+<v>MotorDriver\Stepper</v>
+<v>MotorDriver\Stepper\PSoC 5LP Architecture TRM</v>
+<v>MotorDriver\Stepper\CY8C58LP Family Datasheet</v>
+<v>MotorDriver\Stepper\System Reference Guides</v>
+<v>MotorDriver\Stepper\System Reference Guides\cy_boot_v5_70</v>
+<v>MotorDriver\Stepper\cy_pins_v2_20</v>
+<v>MotorDriver\Stepper\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>MotorDriver</v>
+<v>MotorDriver\Stepper</v>
+<v>MotorDriver\Stepper\PSoC 5LP Architecture TRM</v>
+<v>MotorDriver\Stepper\CY8C58LP Family Datasheet</v>
+<v>MotorDriver\Stepper\System Reference Guides</v>
+<v>MotorDriver\Stepper\System Reference Guides\cy_boot_v5_70</v>
+<v>MotorDriver\Stepper\cy_pins_v2_20</v>
+<v>MotorDriver\Stepper\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\Stepper.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Stepper.cydsn\Stepper.cydwr" />
+<name v=".\Stepper.cydsn\main.c" />
+<name v=".\Stepper.cydsn\MotorDriver.h" />
+<name v=".\Stepper.cydsn\MotorDriver.c" />
+<name v=".\Stepper.cydsn\cyapicallbacks.h" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1439, 711" SelectedTabbedMdiWindow="f509a9be-5e81-495a-892b-6937d6587b13"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="63638a12-f3bc-455e-832a-5a422a3e72f7" /><DocumentWindow Key="C:\Users\jens1\Desktop\Skoleting\3. semester\PRJ3\Motorkode\Ny\MotorDriver\Stepper.cydsn\TopDesign\TopDesign.cysch" Guid="328b11d8-1ebf-4731-8f04-db3f8b0a75bc" /><DocumentWindow Key="C:\Users\jens1\Desktop\Skoleting\3. semester\PRJ3\Motorkode\Ny\MotorDriver\Stepper.cydsn\Stepper.cydwr" Guid="ee6c6482-cc8f-4bc4-bcb2-01221616c7e3" /><DocumentWindow Key="C:\Users\jens1\Desktop\Skoleting\3. semester\PRJ3\Motorkode\Ny\MotorDriver\Stepper.cydsn\main.c" Guid="726b4dad-0d1d-4fe3-8b2b-26daf99a50c9" /><DocumentWindow Key="C:\Users\jens1\Desktop\Skoleting\3. semester\PRJ3\Motorkode\Ny\MotorDriver\Stepper.cydsn\MotorDriver.h" Guid="abeb2846-8ed7-43c9-8cde-e02a83208ab7" /><DocumentWindow Key="C:\Users\jens1\Desktop\Skoleting\3. semester\PRJ3\Motorkode\Ny\MotorDriver\Stepper.cydsn\MotorDriver.c" Guid="f509a9be-5e81-495a-892b-6937d6587b13" /><DocumentWindow Key="C:\Users\jens1\Desktop\Skoleting\3. semester\PRJ3\Motorkode\Ny\MotorDriver\Stepper.cydsn\cyapicallbacks.h" Guid="82cee21b-16a3-449e-a007-873442de1c23" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

@@ -1,0 +1,21 @@
+(DELAYFILE
+ (SDFVERSION "IEEE 1497 4.0")
+ (DATE "2018-11-21T17:21:53Z")
+ (DESIGN "Stepper")
+ (VENDOR "Cypress Semiconductor")
+ (PROGRAM "PSoC Creator")
+ (VERSION " 4.2")
+ (DIVIDER .)
+ (TIMESCALE 1 ns)
+ (CELL
+  (CELLTYPE "Stepper")
+  (INSTANCE *)
+  (DELAY
+   (ABSOLUTE
+    (INTERCONNECT Pin_1\(0\)_PAD Pin_1\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT Pin_2\(0\)_PAD Pin_2\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT Pin_3\(0\)_PAD Pin_3\(0\).pad_in (0.000:0.000:0.000))
+   )
+  )
+ )
+)
