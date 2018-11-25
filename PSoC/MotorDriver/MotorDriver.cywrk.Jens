@@ -192,12 +192,7 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\Stepper.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\Stepper.cydsn\Stepper.cydwr" />
-<name v=".\Stepper.cydsn\main.c" />
-<name v=".\Stepper.cydsn\MotorDriver.h" />
 <name v=".\Stepper.cydsn\MotorDriver.c" />
-<name v=".\Stepper.cydsn\cyapicallbacks.h" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -205,7 +200,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1439, 711" SelectedTabbedMdiWindow="f509a9be-5e81-495a-892b-6937d6587b13"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="63638a12-f3bc-455e-832a-5a422a3e72f7" /><DocumentWindow Key="C:\Users\jens1\Desktop\Skoleting\3. semester\PRJ3\Motorkode\Ny\MotorDriver\Stepper.cydsn\TopDesign\TopDesign.cysch" Guid="328b11d8-1ebf-4731-8f04-db3f8b0a75bc" /><DocumentWindow Key="C:\Users\jens1\Desktop\Skoleting\3. semester\PRJ3\Motorkode\Ny\MotorDriver\Stepper.cydsn\Stepper.cydwr" Guid="ee6c6482-cc8f-4bc4-bcb2-01221616c7e3" /><DocumentWindow Key="C:\Users\jens1\Desktop\Skoleting\3. semester\PRJ3\Motorkode\Ny\MotorDriver\Stepper.cydsn\main.c" Guid="726b4dad-0d1d-4fe3-8b2b-26daf99a50c9" /><DocumentWindow Key="C:\Users\jens1\Desktop\Skoleting\3. semester\PRJ3\Motorkode\Ny\MotorDriver\Stepper.cydsn\MotorDriver.h" Guid="abeb2846-8ed7-43c9-8cde-e02a83208ab7" /><DocumentWindow Key="C:\Users\jens1\Desktop\Skoleting\3. semester\PRJ3\Motorkode\Ny\MotorDriver\Stepper.cydsn\MotorDriver.c" Guid="f509a9be-5e81-495a-892b-6937d6587b13" /><DocumentWindow Key="C:\Users\jens1\Desktop\Skoleting\3. semester\PRJ3\Motorkode\Ny\MotorDriver\Stepper.cydsn\cyapicallbacks.h" Guid="82cee21b-16a3-449e-a007-873442de1c23" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1439, 711" SelectedTabbedMdiWindow="b528b3e0-bf47-418f-b9be-d1d59aaae0b6"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="63638a12-f3bc-455e-832a-5a422a3e72f7" /><DocumentWindow Key="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\PSoC\MotorDriver\Stepper.cydsn\MotorDriver.c" Guid="b528b3e0-bf47-418f-b9be-d1d59aaae0b6" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

@@ -12,7 +12,7 @@
 #include "MotorDriver.h"
 
 
-void init() {
+void init() {               //GIT PUSH TEST
     Pin_1_Write(0);
     Pin_2_Write(0);
     
