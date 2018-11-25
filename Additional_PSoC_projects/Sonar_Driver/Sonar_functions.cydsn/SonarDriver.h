@@ -23,29 +23,33 @@ struct position{
     double distance;
 };
 
-void Sonar_Start(){
+void SonarDriverStart(){
     Trigger_1_Write(0);
     Trigger_2_Write(0);
     Timer_Sonar_Start();
 }
 
-struct position Sonar_GetPosition(){
+struct position GetPigeonPos(){
+         //Start Sonar 1, with 10 us pulse on Trigger 1: 
         Trigger_1_Write(1);
         CyDelayUs(10);
         Trigger_1_Write(0);
         
+        //Wait for Echo_1 to go high 
         while(Echo_1_Read() != 1){}
-       
+        
+        //Reset timer:
         Timer_Sonar_WriteCounter(16777215);
        
+        //Wait for Echo_1 to go low (Sonar has recieved echo)
         while(Echo_1_Read() == 1){}
         
+        //Calculate the time Echo_1 was high:
         uint32_t timervaerdi = Timer_Sonar_ReadCounter();
-    
         double time = ((double)16777215.0 - (double)timervaerdi)/(double)24.0;
+        
+        //Calculate distance to object 
         double distance_sonar_1 = time/58.0;
-         //double distance = (time * 340.0)/2; 
-   
     
         //Delay between readings:
         CyDelay(60);
@@ -65,6 +69,9 @@ struct position Sonar_GetPosition(){
     
         double timeus = ((double)16777215.0 - (double)timervaerdi)/(double)24.0;
         double distance_sonar_2 = timeus/58.0;
+        
+        
+        
          //double distance = (time * 340.0)/2; 
         if(distance_sonar_1 < 2.5 || distance_sonar_1 > 55){
             //Pigeon not detected
@@ -76,7 +83,6 @@ struct position Sonar_GetPosition(){
             distance_sonar_2 = 0;
         }
             
-   
         if (
             distance_sonar_1 !=0 && distance_sonar_2 != 0){
                 
@@ -88,6 +94,7 @@ struct position Sonar_GetPosition(){
                 struct position p = {1,width,calculated_distance};
                 return  p; 
             }
+            
         else if(distance_sonar_1 !=0 && distance_sonar_2 == 0){
                  uint8_t width = 3; //Only Sonar 1 detects pigeon, so assumed to be in position 3 of 3.
                
