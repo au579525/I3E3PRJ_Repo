@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace01\Sonar_functions\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace01\Sonar_functions\TopDesign">
 <ExpandedNodeIds>
 <v>Workspace01</v>
 <v>Workspace01\Sonar_functions</v>
@@ -221,9 +221,6 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\Sonar_functions.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\Sonar_functions.cydsn\main.c" />
-<name v=".\Sonar_functions.cydsn\Sonar_functions.cydwr" />
-<name v=".\Sonar_functions.cydsn\SonarDriver.h" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -231,7 +228,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1067, 505" SelectedTabbedMdiWindow="ada48274-b8bd-4176-bd42-7e0e65a576b2"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="15b2d77c-e46b-4b02-a1f5-ff19d8507aaa" /><DocumentWindow Key="C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn\TopDesign\TopDesign.cysch" Guid="0eefca70-9678-4ecf-ae82-7bc7d93e57ec" /><DocumentWindow Key="C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn\main.c" Guid="a0285c23-6331-48a5-9035-5f4b02034bcb" /><DocumentWindow Key="C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn\Sonar_functions.cydwr" Guid="5217b601-a1ae-44b8-a418-5b421fe55adf" /><DocumentWindow Key="C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn\SonarDriver.h" Guid="ada48274-b8bd-4176-bd42-7e0e65a576b2" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1014, 505" SelectedTabbedMdiWindow="ba2b751d-27b8-4812-83f8-1d834406b771"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="15b2d77c-e46b-4b02-a1f5-ff19d8507aaa" /><DocumentWindow Key="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn\TopDesign\TopDesign.cysch" Guid="ba2b751d-27b8-4812-83f8-1d834406b771" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
