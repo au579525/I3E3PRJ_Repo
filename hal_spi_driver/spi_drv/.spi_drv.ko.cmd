@@ -1,0 +1,1 @@
+cmd_/home/stud/i3hal_e2018_halhjertet_indsats/Exercise7/spi_drv/spi_drv.ko := arm-poky-linux-gnueabi-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/stud/i3hal_e2018_halhjertet_indsats/Exercise7/spi_drv/spi_drv.ko /home/stud/i3hal_e2018_halhjertet_indsats/Exercise7/spi_drv/spi_drv.o /home/stud/i3hal_e2018_halhjertet_indsats/Exercise7/spi_drv/spi_drv.mod.o ;  true

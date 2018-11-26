@@ -1,0 +1,1 @@
+cmd_/home/stud/SPI_kode_RPI/spi_drv/spi_drv.ko := arm-poky-linux-gnueabi-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/stud/SPI_kode_RPI/spi_drv/spi_drv.ko /home/stud/SPI_kode_RPI/spi_drv/spi_drv.o /home/stud/SPI_kode_RPI/spi_drv/spi_drv.mod.o ;  true
