@@ -9,10 +9,10 @@ SOURCES += main.cpp \
     fileaccess.cpp \
     postrequest.cpp
 
-unix:!macx: LIBS += -L$$PWD/../../../../../opt/lib/ -lcgicc
+unix:!macx: LIBS += -L$$PWD/../../../../../opt/rpicgi/lib -lcgicc
 
-INCLUDEPATH += $$PWD/../../../../../opt/include
-DEPENDPATH += $$PWD/../../../../../opt/include
+INCLUDEPATH += $$PWD/../../../../../opt/rpicgi/include
+DEPENDPATH += $$PWD/../../../../../opt/rpicgi/include
 
 HEADERS += \
     htmlpage.h \
