@@ -11,7 +11,7 @@ using namespace std;
 class fileaccess
 {
 public:
-    fileaccess(string _path);
+    fileaccess();
     string getsysmode();
     bool getwatermode();
     vector<string> getlog();
