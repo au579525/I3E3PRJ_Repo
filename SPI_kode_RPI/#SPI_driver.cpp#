@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <iostream>
 
 #include <osapi/Thread.hpp>
 #include <osapi/ThreadFunctor.hpp>
@@ -17,34 +16,33 @@ public:
 
 private:
   void run(){
-
     while(1){
 
       std::cout << "in spi_req_function" << '\n';
-      uint8_t data;
-      uint8_t * dataptr = &data;
+      int data;
+      int * dataptr = &data;
       int err;
       err = fread(dataptr,1,1, SPI_driver);
 
       mut.lock();
       switch (data) {
-        case 1:
-          uint8_t x,y;
+        case 10:
+          int x,y;
           std::cout << "due skudt" << '\n';
           err = fread(&x,1,1, SPI_driver);
           err = fread(&y,1,1, SPI_driver);
           std::cout << "Duens position var X:" << x << " Y:" << y << '\n';
           break;
-        case 2:
+        case 11:
           std::cout << " due detekteret " << '\n';
           break;
-        case 3:
+        case 12:
           std::cout << "lavt vand" << '\n';
           break;
-        case 4:
+        case 13:
           std::cout << "vand tømt" << '\n';
           break;
-        case 5:
+        case 14:
           std::cout << "blomster vandet" << '\n';
           break;
         default:
@@ -64,36 +62,23 @@ public:
   }
 private:
   void run(){
-    uint8_t data;
-    uint8_t * dataptr = &data;
     while(1){
-      std::cout<<"run 1"<<std::endl;
       mut.lock();
-      std::cout<<"run 2"<<std::endl;
       std::cout << "in main_thread" << '\n';
-      std::cout<<"run 3"<<std::endl;
-      std::cout<<"run 4"<<std::endl;
-      std::cout<<"run 5"<<std::endl;
+      int data;
+      int * dataptr = &data;
       std::cout << "read request from user, write an int" << '\n';
-      std::cout<<"run 6"<<std::endl;                                 //error occures at line 79, when trying to use input stream and inserting data
       std::cin >> data;
-      std::cout<<"run 7"<<std::endl;
       std::cout << "writing " << data << " to PSoC over SPI" << '\n';
-      std::cout<<"run 8"<<std::endl;
       int err = fwrite(dataptr,1,1,SPI_driver);
-      std::cout<<"run 9"<<std::endl;
       std::cout << "data written" << '\n';
-      std::cout<<"run 10"<<std::endl;
       mut.unlock();
-      std::cout<<"run done"<<std::endl;
     }
   }
 
 };
 
 int main()
-{
-  try
 {
   SPI_driver = fopen("/dev/spi_drv0","r+");
 
@@ -108,12 +93,6 @@ int main()
 
   p.join();
   t.join();
-}
-catch (std::exception& e)
-{
-  std::cout<<"error found: " << e.what() << '\n';
-}
-
 
   return 0;
 }
