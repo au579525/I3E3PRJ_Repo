@@ -1,0 +1,3 @@
+/home/stud/i3hal_e2018_halhjertet_indsats/Exercise7/spi_drv/spi_drv.ko
+/home/stud/i3hal_e2018_halhjertet_indsats/Exercise7/spi_drv/spi_drv.o
+
