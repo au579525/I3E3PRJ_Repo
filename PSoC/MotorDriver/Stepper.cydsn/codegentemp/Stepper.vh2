@@ -2,7 +2,7 @@
 --	Conversion of Stepper.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed Nov 21 18:21:49 2018
+--	Tue Nov 27 10:39:38 2018
 --
 
 USE cypress.cypress.all;
@@ -12,30 +12,30 @@ ATTRIBUTE part_name of top_RTL:TYPE IS "cpsoc3";
 END top_RTL;
 --------------------------------------------------------
 ARCHITECTURE R_T_L OF top_RTL IS
-SIGNAL tmpOE__Pin_1_net_0 : bit;
+SIGNAL tmpOE__Pin_X1_net_0 : bit;
 SIGNAL zero : bit;
-SIGNAL tmpFB_0__Pin_1_net_0 : bit;
-SIGNAL tmpIO_0__Pin_1_net_0 : bit;
-TERMINAL tmpSIOVREF__Pin_1_net_0 : bit;
+SIGNAL tmpFB_0__Pin_X1_net_0 : bit;
+SIGNAL tmpIO_0__Pin_X1_net_0 : bit;
+TERMINAL tmpSIOVREF__Pin_X1_net_0 : bit;
 SIGNAL one : bit;
-SIGNAL tmpINTERRUPT_0__Pin_1_net_0 : bit;
-SIGNAL tmpOE__Pin_2_net_0 : bit;
-SIGNAL tmpFB_0__Pin_2_net_0 : bit;
-SIGNAL tmpIO_0__Pin_2_net_0 : bit;
-TERMINAL tmpSIOVREF__Pin_2_net_0 : bit;
-SIGNAL tmpINTERRUPT_0__Pin_2_net_0 : bit;
-SIGNAL tmpOE__Pin_3_net_0 : bit;
-SIGNAL tmpFB_0__Pin_3_net_0 : bit;
-SIGNAL tmpIO_0__Pin_3_net_0 : bit;
-TERMINAL tmpSIOVREF__Pin_3_net_0 : bit;
-SIGNAL tmpINTERRUPT_0__Pin_3_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__Pin_X1_net_0 : bit;
+SIGNAL tmpOE__Pin_X2_net_0 : bit;
+SIGNAL tmpFB_0__Pin_X2_net_0 : bit;
+SIGNAL tmpIO_0__Pin_X2_net_0 : bit;
+TERMINAL tmpSIOVREF__Pin_X2_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__Pin_X2_net_0 : bit;
+SIGNAL tmpOE__Pin_X3_net_0 : bit;
+SIGNAL tmpFB_0__Pin_X3_net_0 : bit;
+SIGNAL tmpIO_0__Pin_X3_net_0 : bit;
+TERMINAL tmpSIOVREF__Pin_X3_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__Pin_X3_net_0 : bit;
 BEGIN
 
 zero <=  ('0') ;
 
-tmpOE__Pin_1_net_0 <=  ('1') ;
+tmpOE__Pin_X1_net_0 <=  ('1') ;
 
-Pin_1:cy_psoc3_pins_v1_10
+Pin_X1:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"e851a3b9-efb8-48be-bbb8-b303b216c393",
 		drive_mode=>"110",
 		ibuf_enabled=>"1",
@@ -91,21 +91,21 @@ Pin_1:cy_psoc3_pins_v1_10
 		ovt_slew_control=>"00",
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
-	PORT MAP(oe=>(tmpOE__Pin_1_net_0),
+	PORT MAP(oe=>(tmpOE__Pin_X1_net_0),
 		y=>(zero),
-		fb=>(tmpFB_0__Pin_1_net_0),
+		fb=>(tmpFB_0__Pin_X1_net_0),
 		analog=>(open),
-		io=>(tmpIO_0__Pin_1_net_0),
-		siovref=>(tmpSIOVREF__Pin_1_net_0),
+		io=>(tmpIO_0__Pin_X1_net_0),
+		siovref=>(tmpSIOVREF__Pin_X1_net_0),
 		annotation=>(open),
 		in_clock=>zero,
-		in_clock_en=>tmpOE__Pin_1_net_0,
+		in_clock_en=>tmpOE__Pin_X1_net_0,
 		in_reset=>zero,
 		out_clock=>zero,
-		out_clock_en=>tmpOE__Pin_1_net_0,
+		out_clock_en=>tmpOE__Pin_X1_net_0,
 		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__Pin_1_net_0);
-Pin_2:cy_psoc3_pins_v1_10
+		interrupt=>tmpINTERRUPT_0__Pin_X1_net_0);
+Pin_X2:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"8e541f48-516b-4ca5-a325-906d1e47a76a",
 		drive_mode=>"110",
 		ibuf_enabled=>"1",
@@ -161,21 +161,21 @@ Pin_2:cy_psoc3_pins_v1_10
 		ovt_slew_control=>"00",
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
-	PORT MAP(oe=>(tmpOE__Pin_1_net_0),
+	PORT MAP(oe=>(tmpOE__Pin_X1_net_0),
 		y=>(zero),
-		fb=>(tmpFB_0__Pin_2_net_0),
+		fb=>(tmpFB_0__Pin_X2_net_0),
 		analog=>(open),
-		io=>(tmpIO_0__Pin_2_net_0),
-		siovref=>(tmpSIOVREF__Pin_2_net_0),
+		io=>(tmpIO_0__Pin_X2_net_0),
+		siovref=>(tmpSIOVREF__Pin_X2_net_0),
 		annotation=>(open),
 		in_clock=>zero,
-		in_clock_en=>tmpOE__Pin_1_net_0,
+		in_clock_en=>tmpOE__Pin_X1_net_0,
 		in_reset=>zero,
 		out_clock=>zero,
-		out_clock_en=>tmpOE__Pin_1_net_0,
+		out_clock_en=>tmpOE__Pin_X1_net_0,
 		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__Pin_2_net_0);
-Pin_3:cy_psoc3_pins_v1_10
+		interrupt=>tmpINTERRUPT_0__Pin_X2_net_0);
+Pin_X3:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba",
 		drive_mode=>"001",
 		ibuf_enabled=>"1",
@@ -231,19 +231,19 @@ Pin_3:cy_psoc3_pins_v1_10
 		ovt_slew_control=>"00",
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
-	PORT MAP(oe=>(tmpOE__Pin_1_net_0),
+	PORT MAP(oe=>(tmpOE__Pin_X1_net_0),
 		y=>(zero),
-		fb=>(tmpFB_0__Pin_3_net_0),
+		fb=>(tmpFB_0__Pin_X3_net_0),
 		analog=>(open),
-		io=>(tmpIO_0__Pin_3_net_0),
-		siovref=>(tmpSIOVREF__Pin_3_net_0),
+		io=>(tmpIO_0__Pin_X3_net_0),
+		siovref=>(tmpSIOVREF__Pin_X3_net_0),
 		annotation=>(open),
 		in_clock=>zero,
-		in_clock_en=>tmpOE__Pin_1_net_0,
+		in_clock_en=>tmpOE__Pin_X1_net_0,
 		in_reset=>zero,
 		out_clock=>zero,
-		out_clock_en=>tmpOE__Pin_1_net_0,
+		out_clock_en=>tmpOE__Pin_X1_net_0,
 		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__Pin_3_net_0);
+		interrupt=>tmpINTERRUPT_0__Pin_X3_net_0);
 
 END R_T_L;

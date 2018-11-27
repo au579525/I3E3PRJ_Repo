@@ -1,6 +1,6 @@
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|1bb88e2c-049f-437c-bd7e-38f38fd53529
-C:\Users\jens1\OneDrive\Dokumenter\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|6a7817e9-7530-4a36-8464-2c6264c2d575
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|d25763a8-b407-4ebd-928a-8b7321c7121a
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|a4a3de84-f2cc-4443-8860-b7df3a587355
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|e4959e06-cfbb-4a7a-8d72-f6d009c9eb26
-C:\Users\jens1\Desktop\Skoleting\3. semester\PRJ3\Motorkode\Ny\MotorDriver\Stepper.cydsn\Stepper.cyprj|f31d455f-8161-4b81-97c9-5d9394204cf3
+C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\PSoC\MotorDriver\Stepper.cydsn\Stepper.cyprj|143758e5-d89b-444c-b7c8-5dbb35e80942
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|6d9fcda0-0098-4528-868f-eaf9ca8a7b1d
+C:\Users\jens1\OneDrive\Dokumenter\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|a3bf2c8d-501e-426b-8aa9-e70d3384917e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|ca31bf3d-e649-4ca6-9e18-43bffe2b726a
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|2f22b053-9519-4cc5-8113-27e4c487ab2e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|561b9ac7-b3e7-4ea9-bf2c-6a41debeb527

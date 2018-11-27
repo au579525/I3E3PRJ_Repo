@@ -11,95 +11,83 @@
 */
 #include "MotorDriver.h"
 
-
-void init() {
-    Pin_1_Write(0);
-    Pin_2_Write(0);
+void initX() {
+    Pin_X1_Write(0);
+    Pin_X2_Write(0);
     
-    resetPosition();
+    resetPositionX();
 }
 
-int getPosition() {
-    return stepperPosition;
-}
-
-void rotateClockwise() {
-    if(stepperState == WEST) {
-        stepperState = NORTH;
+static void rotateClockwiseX() {
+    if(stepperStateX == WEST) { 
+        stepperStateX = NORTH;
     }
     else {
-        ++stepperState;
+        ++stepperStateX;
     }
-    moveStep();
+    moveStepX();
+    ++stepperPositionX;
 }
 
-void rotateCounterClockwise() {
-    if(stepperState == NORTH) {
-        stepperState = WEST;
+static void rotateCounterClockwiseX() {
+    if(stepperStateX == NORTH) {
+        stepperStateX = WEST;
     }
     else {
-        --stepperState;
+        --stepperStateX;
     }
-    moveStep();
+    moveStepX();
+    --stepperPositionX;
 }
 
-void moveStep() {
-    if(stepperState == NORTH) {
-        Pin_1_Write(0);
-        CyDelay(TIME);
-        Pin_2_Write(0);
+static void moveStepX() {
+    if(stepperStateX == NORTH) {
+        Pin_X1_Write(0);
+        Pin_X2_Write(0);
     }
-    else if(stepperState == EAST) {
-        Pin_1_Write(1);
-        CyDelay(TIME);
-        Pin_2_Write(0);
+    else if(stepperStateX == EAST) {
+        Pin_X1_Write(1);
+        Pin_X2_Write(0);
     }
-    else if(stepperState == SOUTH) {
-        Pin_1_Write(1);
-        CyDelay(TIME);
-        Pin_2_Write(1);
+    else if(stepperStateX == SOUTH) {
+        Pin_X1_Write(1);
+        Pin_X2_Write(1);
     }
-    else if(stepperState == WEST) {
-        Pin_1_Write(0);
-        CyDelay(TIME);
-        Pin_2_Write(1);
+    else if(stepperStateX == WEST) {
+        Pin_X1_Write(0);
+        Pin_X2_Write(1);
     }
-    CyDelay(TIME);
 }
 
-void moveDegrees(int deg) { //Positivt antal grader skrives hvis armen skal køre med uret og negativt gradtal skrives hvis den skal køre mod uret
-    if(deg > 0) {
-        for(int i = 0; i < deg; i++) {
-            Pin_1_Write(1);
+void moveDegreesX(int deg) { //Positivt antal grader skrives hvis armen skal køre med uret og negativt gradtal skrives hvis den skal køre mod uret
+    float round1 = deg / 1.8; //Grader divideret med stepvinkel = antal steps der skal køres
+    int steps = round(round1); //Afrund antallet af steps
+    
+    if(steps > 0) {
+        for(int i = 0; i < steps; i++) {
+            rotateClockwiseX();
             CyDelay(TIME);
-            Pin_2_Write(1);
-            CyDelay(TIME);
-            Pin_1_Write(0);
-            CyDelay(TIME);
-            Pin_2_Write(0);
-            CyDelay(TIME);
-            i++;
         }
     }
-    else if(deg < 0) {
-        if((stepperPosition + deg) < 0) { //Hvis der forsøges at gå længere tilbage end til proben
-            
+    else if(steps < 0) {
+        if(steps < (stepperPositionX * -1)) {    //Hvis antallet af steps der skal køres tilbage er mere end vi kan køre, før proben rammes
+            resetPositionX();
+        }
+        else if(steps > (stepperPositionX * -1)) {
+            for(int i = 0; i > steps; i--) {
+                rotateCounterClockwiseX();
+                CyDelay(TIME);
+            }
         }
     }
 }
 
-void resetPosition() {
-        while(Pin_3_Read() == 1) { //Her kører stepperen fremad (med uret). Hvis den skal køre den anden vej for at ramme proben, byttes om på pin 1 og 2
-        Pin_1_Write(1);
-        CyDelay(TIME);
-        Pin_2_Write(1);
-        CyDelay(TIME);
-        Pin_1_Write(0);
-        CyDelay(TIME);
-        Pin_2_Write(0);
+static void resetPositionX() {
+    while(Pin_X3_Read() == 1) {
+        rotateCounterClockwiseX();
         CyDelay(TIME);
     }
-    stepperPosition = 0;
+    stepperPositionX = 0;
 }
 
 

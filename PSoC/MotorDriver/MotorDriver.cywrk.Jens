@@ -93,8 +93,6 @@
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
-<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
-<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_2.lst</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Stepper.elf</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Stepper.hex</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Stepper.map</v>
@@ -121,8 +119,6 @@
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
-<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
-<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_2.lst</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Stepper.elf</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Stepper.hex</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Stepper.map</v>
