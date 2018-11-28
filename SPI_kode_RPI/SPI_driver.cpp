@@ -24,9 +24,11 @@ private:
       uint8_t data;
       uint8_t * dataptr = &data;
       int err;
-      err = fread(dataptr,1,1, SPI_driver);
 
       mut.lock();
+      SPI_driver = fopen("/dev/spi_drv0","r");
+      err = fread(dataptr,1,1, SPI_driver);
+      //data = fgetc(SPI_driver);
       switch (data) {
         case 1:
           uint8_t x,y;
@@ -49,8 +51,11 @@ private:
           break;
         default:
           std::cout << "message from PSoC was misunderstood" << '\n';
+          std::cout << data << std::endl;
           break;
       }
+      std::cout << err << std::endl;
+      fclose(SPI_driver);
       mut.unlock();
     }
   }
@@ -69,6 +74,7 @@ private:
     while(1){
       std::cout<<"run 1"<<std::endl;
       mut.lock();
+      SPI_driver = fopen("/dev/spi_drv0","a");
       std::cout<<"run 2"<<std::endl;
       std::cout << "in main_thread" << '\n';
       std::cout<<"run 3"<<std::endl;
@@ -84,8 +90,10 @@ private:
       std::cout<<"run 9"<<std::endl;
       std::cout << "data written" << '\n';
       std::cout<<"run 10"<<std::endl;
+      fclose(SPI_driver);
       mut.unlock();
       std::cout<<"run done"<<std::endl;
+      std::cout<< err <<std::endl;
     }
   }
 
@@ -95,7 +103,6 @@ int main()
 {
   try
 {
-  SPI_driver = fopen("/dev/spi_drv0","r+");
 
   spi_req_function spi_req_f;
   main_thread main_f;
