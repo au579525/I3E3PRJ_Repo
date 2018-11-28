@@ -21,20 +21,23 @@ private:
     while(1){
 
       std::cout << "in spi_req_function" << '\n';
-      uint8_t data;
-      uint8_t * dataptr = &data;
+      int data;
+      int * dataptr = &data;
+      //uint8_t data;
+      //uint8_t * dataptr = &data;
       int err;
-
-      mut.lock();
       SPI_driver = fopen("/dev/spi_drv0","r");
-      err = fread(dataptr,1,1, SPI_driver);
-      //data = fgetc(SPI_driver);
+      err = fscanf(SPI_driver, "%i", dataptr);
+      mut.lock();
+
+      //err = fread(dataptr,1,1, SPI_driver);
+
       switch (data) {
         case 1:
           uint8_t x,y;
           std::cout << "due skudt" << '\n';
-          err = fread(&x,1,1, SPI_driver);
-          err = fread(&y,1,1, SPI_driver);
+          //err = fread(&x,1,1, SPI_driver); //skal måske er stattes med andet protokoll? alt mellem 100-199 due skudt og position x er andet ciffer og position y tredje ciffer
+          //err = fread(&y,1,1, SPI_driver); //så 195 = due skudt, x = 9, y = 5
           std::cout << "Duens position var X:" << x << " Y:" << y << '\n';
           break;
         case 2:
@@ -54,9 +57,10 @@ private:
           std::cout << data << std::endl;
           break;
       }
+
       std::cout << err << std::endl;
-      fclose(SPI_driver);
       mut.unlock();
+      fclose(SPI_driver);
     }
   }
 };
