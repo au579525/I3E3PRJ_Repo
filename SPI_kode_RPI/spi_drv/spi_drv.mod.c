@@ -33,6 +33,7 @@ __attribute__((section("__versions"))) = {
 	{ 0xf13781a7, __VMLINUX_SYMBOL_STR(cdev_add) },
 	{ 0xc31596a7, __VMLINUX_SYMBOL_STR(cdev_init) },
 	{ 0x29537c9e, __VMLINUX_SYMBOL_STR(alloc_chrdev_region) },
+	{ 0x201a4b32, __VMLINUX_SYMBOL_STR(__mutex_init) },
 	{ 0xd6b8e852, __VMLINUX_SYMBOL_STR(request_threaded_irq) },
 	{ 0x49bae918, __VMLINUX_SYMBOL_STR(gpiod_to_irq) },
 	{ 0xfe990052, __VMLINUX_SYMBOL_STR(gpio_free) },
@@ -49,8 +50,10 @@ __attribute__((section("__versions"))) = {
 	{ 0xb52aa66f, __VMLINUX_SYMBOL_STR(device_create) },
 	{ 0xcbdbb617, __VMLINUX_SYMBOL_STR(spi_setup) },
 	{ 0xc783e105, __VMLINUX_SYMBOL_STR(device_destroy) },
+	{ 0x5fc262cb, __VMLINUX_SYMBOL_STR(mutex_unlock) },
 	{ 0x9912916d, __VMLINUX_SYMBOL_STR(spi_sync) },
 	{ 0xfa2a45e, __VMLINUX_SYMBOL_STR(__memzero) },
+	{ 0x195a71c2, __VMLINUX_SYMBOL_STR(mutex_lock) },
 	{ 0x20c55ae0, __VMLINUX_SYMBOL_STR(sscanf) },
 	{ 0x28cc25db, __VMLINUX_SYMBOL_STR(arm_copy_from_user) },
 	{ 0x27e1a049, __VMLINUX_SYMBOL_STR(printk) },
@@ -65,4 +68,4 @@ __attribute__((section(".modinfo"))) =
 "depends=";
 
 
-MODULE_INFO(srcversion, "024034B7E1E3F4EFB8CA759");
+MODULE_INFO(srcversion, "49CF7EDC749FE0C1BA49AE8");

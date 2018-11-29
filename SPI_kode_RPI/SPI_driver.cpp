@@ -1,14 +1,20 @@
 #include <stdio.h>
 #include <iostream>
+#include <stdlib.h>
+#include <string.h>
+#include <fcntl.h>
+#include <unistd.h>
 
 #include <osapi/Thread.hpp>
 #include <osapi/ThreadFunctor.hpp>
 #include <osapi/Utility.hpp>
 #include <osapi/Mutex.hpp>
 
+#define BUFFER_LENGTH 8
+
 osapi::Mutex mut;
 
-FILE * SPI_driver;
+//FILE * SPI_driver;
 
 class spi_req_function : public osapi::ThreadFunctor{
 
@@ -21,13 +27,15 @@ private:
     while(1){
 
       std::cout << "in spi_req_function" << '\n';
+      int SPI_driver;
       int data;
-      int * dataptr = &data;
+      //int * dataptr = &data;
       //uint8_t data;
       //uint8_t * dataptr = &data;
       int err;
-      SPI_driver = fopen("/dev/spi_drv0","r");
-      err = fscanf(SPI_driver, "%i", dataptr);
+      SPI_driver = open("/dev/spi_drv0",O_RDWR);
+      //err = fscanf(SPI_driver, "%i", dataptr);
+      read(SPI_driver, &data, BUFFER_LENGTH);
       mut.lock();
 
       //err = fread(dataptr,1,1, SPI_driver);
@@ -60,7 +68,7 @@ private:
 
       std::cout << err << std::endl;
       mut.unlock();
-      fclose(SPI_driver);
+      //fclose(SPI_driver);
     }
   }
 };
@@ -73,13 +81,15 @@ public:
   }
 private:
   void run(){
-    uint8_t data;
-    uint8_t * dataptr = &data;
+    int SPI_driver;
+    int8_t data;
+
     while(1){
       std::cout<<"run 1"<<std::endl;
       mut.lock();
-      SPI_driver = fopen("/dev/spi_drv0","a");
+      SPI_driver = open("/dev/spi_drv0",O_RDWR);
       std::cout<<"run 2"<<std::endl;
+
       std::cout << "in main_thread" << '\n';
       std::cout<<"run 3"<<std::endl;
       std::cout<<"run 4"<<std::endl;
@@ -90,11 +100,11 @@ private:
       std::cout<<"run 7"<<std::endl;
       std::cout << "writing " << data << " to PSoC over SPI" << '\n';
       std::cout<<"run 8"<<std::endl;
-      int err = fwrite(dataptr,1,1,SPI_driver);
+      int err = write(SPI_driver, &data, BUFFER_LENGTH);
       std::cout<<"run 9"<<std::endl;
       std::cout << "data written" << '\n';
       std::cout<<"run 10"<<std::endl;
-      fclose(SPI_driver);
+      //close(SPI_driver);
       mut.unlock();
       std::cout<<"run done"<<std::endl;
       std::cout<< err <<std::endl;

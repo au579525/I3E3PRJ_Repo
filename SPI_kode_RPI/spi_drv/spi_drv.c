@@ -5,19 +5,20 @@
 #include <linux/gpio.h>
 #include <linux/wait.h>
 #include <linux/interrupt.h>
+#include <linux/mutex.h>
 
 #define GPIO_NUM 25
 #define IRQF_TRIGGER_RISING 0x00000001
+#define MAXLEN 32
+#define MODULE_DEBUG 1   // Enable/Disable Debug messages
 
 static DECLARE_WAIT_QUEUE_HEAD(wq);
-
 int IRQ_NUM;
 int spi_req_flag;
 
 static irqreturn_t spi_req_handler(int irq, void *dev_id);
 
-#define MAXLEN 32
-#define MODULE_DEBUG 1   // Enable/Disable Debug messages
+struct mutex Mut;
 
 /* Char Driver Globals */
 static struct spi_driver spi_drv_spi_driver;
@@ -96,7 +97,7 @@ int spi_req_init(void){
   IRQ_NUM = gpio_to_irq(GPIO_NUM);
 
   err = request_irq(IRQ_NUM, spi_req_handler,
-  IRQF_TRIGGER_FALLING, "spi_req_irq", NULL);
+  IRQF_TRIGGER_RISING, "spi_req_irq", NULL);
   if (err < 0){
     goto err_free_buff;
   }
@@ -116,6 +117,7 @@ int spi_req_init(void){
  */
 static int __init spi_drv_init(void)
 {
+  mutex_init(&Mut);
   int err=0;
 
   spi_req_init();
@@ -182,7 +184,6 @@ ssize_t spi_drv_write(struct file *filep, const char __user *ubuf,
 {
   int minor, len, value;
   char kbuf[MAXLEN];
-
   minor = iminor(filep->f_inode);
 
   printk(KERN_ALERT "Writing to spi_drv [Minor] %i \n", minor);
@@ -207,6 +208,7 @@ ssize_t spi_drv_write(struct file *filep, const char __user *ubuf,
     Do something with value ....
 
   */
+  mutex_lock(&Mut);
   struct spi_transfer t[1]; //Only one spi_transfer
   struct spi_message m;
 
@@ -227,7 +229,7 @@ ssize_t spi_drv_write(struct file *filep, const char __user *ubuf,
    * Move it the length actually  written
    * for compability */
   *f_pos += len;
-
+  mutex_unlock(&Mut);
   /* return length actually written */
   return len;
 }
@@ -238,15 +240,15 @@ ssize_t spi_drv_write(struct file *filep, const char __user *ubuf,
 ssize_t spi_drv_read(struct file *filep, char __user *ubuf,
                      size_t count, loff_t *f_pos)
 {
-  wait_event_interruptible(wq,spi_req_flag == 1);
-  spi_req_flag = 0;
   int minor, len;
   char resultBuf[MAXLEN];
   //s16 result=1234;
   u8 data;
 
+  wait_event_interruptible(wq,spi_req_flag == 1);
+  mutex_lock(&Mut);
+  spi_req_flag = 0;
   minor = iminor(filep->f_inode);
-
   /*
     Provide a result to write to user space
   */
@@ -265,9 +267,11 @@ ssize_t spi_drv_read(struct file *filep, char __user *ubuf,
   len++;
 
   /* Copy data to user space */
-  if(copy_to_user(ubuf, resultBuf, len))
-    return -EFAULT;
+  if(copy_to_user(ubuf, resultBuf, len)){
+        return -EFAULT;
+  }
 
+    mutex_unlock(&Mut);
   /* Move fileptr */
   *f_pos += len;
 
