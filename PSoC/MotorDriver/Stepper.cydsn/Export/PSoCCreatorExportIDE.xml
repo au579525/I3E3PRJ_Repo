@@ -102,6 +102,13 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_X3_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_X3.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_X3.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_StepperX.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_StepperX.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_StepperX_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\stepper_isr.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\stepper_isr.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\PSoC\MotorDriver\Stepper.cydsn\Export\ARM_GCC_Generic">

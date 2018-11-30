@@ -11,6 +11,10 @@
 */
 #include "MotorDriver.h"
 
+CY_ISR(stepper_isr_handler) {
+    
+}
+
 void initX() {
     Pin_X1_Write(0);
     Pin_X2_Write(0);

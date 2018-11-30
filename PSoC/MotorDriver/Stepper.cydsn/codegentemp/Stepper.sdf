@@ -1,6 +1,6 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2018-11-27T09:39:42Z")
+ (DATE "2018-11-29T10:36:40Z")
  (DESIGN "Stepper")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "PSoC Creator")
@@ -12,6 +12,10 @@
   (INSTANCE *)
   (DELAY
    (ABSOLUTE
+    (INTERCONNECT ClockBlock.clk_bus_glb stepper_isr.clock (0.000:0.000:0.000))
+    (INTERCONNECT \\Timer_StepperX\:TimerHW\\.tc stepper_isr.interrupt (3.425:3.425:3.425))
+    (INTERCONNECT __ONE__.q \\Timer_StepperX\:TimerHW\\.enable (0.000:0.000:0.000))
+    (INTERCONNECT ClockBlock.dclk_glb_ff_0 \\Timer_StepperX\:TimerHW\\.clock (0.000:0.000:0.000))
     (INTERCONNECT Pin_X1\(0\)_PAD Pin_X1\(0\).pad_in (0.000:0.000:0.000))
     (INTERCONNECT Pin_X2\(0\)_PAD Pin_X2\(0\).pad_in (0.000:0.000:0.000))
     (INTERCONNECT Pin_X3\(0\)_PAD Pin_X3\(0\).pad_in (0.000:0.000:0.000))

@@ -140,8 +140,12 @@
 <v>MotorDriver\Stepper\CY8C58LP Family Datasheet</v>
 <v>MotorDriver\Stepper\System Reference Guides</v>
 <v>MotorDriver\Stepper\System Reference Guides\cy_boot_v5_70</v>
+<v>MotorDriver\Stepper\cy_clock_v2_20.pdf</v>
+<v>MotorDriver\Stepper\cy_isr_v1_70.pdf</v>
 <v>MotorDriver\Stepper\cy_pins_v2_20</v>
 <v>MotorDriver\Stepper\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>MotorDriver\Stepper\Timer_v2_80.pdf</v>
+<v>MotorDriver\Stepper\ZeroTerminal.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>MotorDriver</v>
@@ -150,8 +154,12 @@
 <v>MotorDriver\Stepper\CY8C58LP Family Datasheet</v>
 <v>MotorDriver\Stepper\System Reference Guides</v>
 <v>MotorDriver\Stepper\System Reference Guides\cy_boot_v5_70</v>
+<v>MotorDriver\Stepper\cy_clock_v2_20.pdf</v>
+<v>MotorDriver\Stepper\cy_isr_v1_70.pdf</v>
 <v>MotorDriver\Stepper\cy_pins_v2_20</v>
 <v>MotorDriver\Stepper\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>MotorDriver\Stepper\Timer_v2_80.pdf</v>
+<v>MotorDriver\Stepper\ZeroTerminal.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -164,6 +172,9 @@
 <name v=".\Stepper.cydsn\MotorDriver.c" />
 <name v=".\Stepper.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\Stepper.cydsn\MotorDriver.h" />
+<name v=".\Stepper.cydsn\cyapicallbacks.h" />
+<name v=".\Stepper.cydsn\main.c" />
+<name v=".\Stepper.cydsn\Stepper.cydwr" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -171,7 +182,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1439, 711" SelectedTabbedMdiWindow="b528b3e0-bf47-418f-b9be-d1d59aaae0b6"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="63638a12-f3bc-455e-832a-5a422a3e72f7" /><DocumentWindow Key="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\PSoC\MotorDriver\Stepper.cydsn\MotorDriver.c" Guid="b528b3e0-bf47-418f-b9be-d1d59aaae0b6" /><DocumentWindow Key="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\PSoC\MotorDriver\Stepper.cydsn\TopDesign\TopDesign.cysch" Guid="35b4adf9-223c-4a5a-a02d-2f9e1910df44" /><DocumentWindow Key="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\PSoC\MotorDriver\Stepper.cydsn\MotorDriver.h" Guid="ac8948c5-f57d-4df5-8799-0f72bc53a05b" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1439, 711" SelectedTabbedMdiWindow="b528b3e0-bf47-418f-b9be-d1d59aaae0b6"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="63638a12-f3bc-455e-832a-5a422a3e72f7" /><DocumentWindow Key="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\PSoC\MotorDriver\Stepper.cydsn\MotorDriver.c" Guid="b528b3e0-bf47-418f-b9be-d1d59aaae0b6" /><DocumentWindow Key="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\PSoC\MotorDriver\Stepper.cydsn\TopDesign\TopDesign.cysch" Guid="35b4adf9-223c-4a5a-a02d-2f9e1910df44" /><DocumentWindow Key="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\PSoC\MotorDriver\Stepper.cydsn\MotorDriver.h" Guid="ac8948c5-f57d-4df5-8799-0f72bc53a05b" /><DocumentWindow Key="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\PSoC\MotorDriver\Stepper.cydsn\cyapicallbacks.h" Guid="9fc0d3ee-077b-4125-8e96-21533054aed7" /><DocumentWindow Key="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\PSoC\MotorDriver\Stepper.cydsn\main.c" Guid="6b44a8c7-e51d-4b4d-943e-e8fe83c57452" /><DocumentWindow Key="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\PSoC\MotorDriver\Stepper.cydsn\Stepper.cydwr" Guid="45cf24e5-c22a-4ead-97bb-36a3d5163427" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

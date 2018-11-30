@@ -1,0 +1,34 @@
+net ClockBlock_BUS_CLK
+	term   ":clockblockcell.clk_bus_glb"
+	switch ":clockblockcell.clk_bus_glb==>:interrupt_0.clock"
+	term   ":interrupt_0.clock"
+end ClockBlock_BUS_CLK
+net Net_14
+	term   ":timercell_0.tc"
+	switch ":timercell_0.tc==>Stub-:dsiswitch_bottom@[DSI=(1,3)][side=bottom]:dsihc_bottom:v16+:dsiswitch_bottom@[DSI=(1,3)][side=bottom]:dsihc_bottom:v18"
+	switch "OStub-:dsiswitch_bottom@[DSI=(1,3)][side=bottom]:dsihc_bottom:v16+:dsiswitch_bottom@[DSI=(1,3)][side=bottom]:dsihc_bottom:v18"
+	switch ":dsiswitch_bottom@[DSI=(1,3)][side=bottom]:dsihc_bottom:16,71"
+	switch ":hvswitch@[UDB=(3,3)][side=left]:hseg_71_f"
+	switch ":hvswitch@[UDB=(3,4)][side=left]:hseg_71_f"
+	switch ":dsiswitch_bottom@[DSI=(1,5)][side=bottom]:dsihc_bottom:48,71_f"
+	switch "IStub-:dsiswitch_bottom@[DSI=(1,5)][side=bottom]:dsihc_bottom:v48+:dsiswitch_bottom@[DSI=(1,5)][side=bottom]:dsihc_bottom:v50"
+	switch "Stub-:dsiswitch_bottom@[DSI=(1,5)][side=bottom]:dsihc_bottom:v48+:dsiswitch_bottom@[DSI=(1,5)][side=bottom]:dsihc_bottom:v50==>:interrupt_idmux_0.in_2"
+	switch ":interrupt_idmux_0.interrupt_idmux_0__out==>:interrupt_0.interrupt"
+	term   ":interrupt_0.interrupt"
+end Net_14
+net __ONE__
+	term   ":udb@[UDB=(1,3)]:pld0:mc0.q"
+	switch ":udb@[UDB=(1,3)]:pld0:mc0.q==>:udb@[UDB=(1,3)]:pld0:output_permute2.q_0"
+	switch ":udb@[UDB=(1,3)]:pld0:output_permute2.output_2==>Stub-:udbswitch@[UDB=(0,3)][side=top]:v29"
+	switch "OStub-:udbswitch@[UDB=(0,3)][side=top]:v29"
+	switch ":udbswitch@[UDB=(0,3)][side=top]:29,89"
+	switch ":hvswitch@[UDB=(1,2)][side=left]:23,89_f"
+	switch ":hvswitch@[UDB=(2,2)][side=left]:vseg_23_top_f"
+	switch ":hvswitch@[UDB=(3,2)][side=left]:vseg_23_top_f"
+	switch ":hvswitch@[UDB=(3,2)][side=left]:23,74_b"
+	switch ":dsiswitch_bottom@[DSI=(1,3)][side=bottom]:dsihc_bottom:96,74_f"
+	switch "IStub-:dsiswitch_bottom@[DSI=(1,3)][side=bottom]:dsihc_bottom:v92+:dsiswitch_bottom@[DSI=(1,3)][side=bottom]:dsihc_bottom:v94+:dsiswitch_bottom@[DSI=(1,3)][side=bottom]:dsihc_bottom:v96"
+	switch "Stub-:dsiswitch_bottom@[DSI=(1,3)][side=bottom]:dsihc_bottom:v92+:dsiswitch_bottom@[DSI=(1,3)][side=bottom]:dsihc_bottom:v94+:dsiswitch_bottom@[DSI=(1,3)][side=bottom]:dsihc_bottom:v96==>:timercell_0_permute.in0"
+	switch ":timercell_0_permute.enable==>:timercell_0.enable"
+	term   ":timercell_0.enable"
+end __ONE__

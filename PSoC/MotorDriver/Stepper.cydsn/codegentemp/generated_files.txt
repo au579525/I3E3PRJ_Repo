@@ -27,6 +27,13 @@
   <file name="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\PSoC\MotorDriver\Stepper.cydsn\codegentemp\Pin_X3_aliases.h" value="HEADER;;;;;Pin_X3" />
   <file name="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\PSoC\MotorDriver\Stepper.cydsn\codegentemp\Pin_X3.c" value="SOURCE_C;CortexM3;;;;Pin_X3" />
   <file name="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\PSoC\MotorDriver\Stepper.cydsn\codegentemp\Pin_X3.h" value="HEADER;;;;;Pin_X3" />
+  <file name="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\PSoC\MotorDriver\Stepper.cydsn\codegentemp\Clock_1.c" value="SOURCE_C;CortexM3;;;;Clock_1" />
+  <file name="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\PSoC\MotorDriver\Stepper.cydsn\codegentemp\Clock_1.h" value="HEADER;;;;;Clock_1" />
+  <file name="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\PSoC\MotorDriver\Stepper.cydsn\codegentemp\Timer_StepperX.c" value="SOURCE_C;CortexM3;;;;Timer_StepperX" />
+  <file name="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\PSoC\MotorDriver\Stepper.cydsn\codegentemp\Timer_StepperX.h" value="HEADER;;;;;Timer_StepperX" />
+  <file name="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\PSoC\MotorDriver\Stepper.cydsn\codegentemp\Timer_StepperX_PM.c" value="SOURCE_C;CortexM3;;;;Timer_StepperX" />
+  <file name="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\PSoC\MotorDriver\Stepper.cydsn\codegentemp\stepper_isr.c" value="SOURCE_C;CortexM3;;;;stepper_isr" />
+  <file name="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\PSoC\MotorDriver\Stepper.cydsn\codegentemp\stepper_isr.h" value="HEADER;;;;;stepper_isr" />
   <file name="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\PSoC\MotorDriver\Stepper.cydsn\codegentemp\cy_em_eeprom.c" value="SOURCE_C;CortexM3;;;;Em_EEPROM_Dynamic" />
   <file name="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\PSoC\MotorDriver\Stepper.cydsn\codegentemp\cy_em_eeprom.h" value="HEADER;;;;;Em_EEPROM_Dynamic" />
   <file name="C:\Users\jens1\Desktop\Skoleting\I3E3PRJ_Repo\PSoC\MotorDriver\Stepper.cydsn\codegentemp\cm3gcc.ld" value="LINKER_SCRIPT;;;b98f980c-3bd1-4fc7-a887-c56a20a46fdd;;cy_boot" />

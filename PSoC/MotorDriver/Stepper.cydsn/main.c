@@ -17,7 +17,8 @@ int main(void)
     CyGlobalIntEnable; /* Enable global interrupts. */
 
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-
+    stepper_isr_StartEx(stepper_isr_handler);
+    Timer_StepperX_Start();
     for(;;)
     {
         
