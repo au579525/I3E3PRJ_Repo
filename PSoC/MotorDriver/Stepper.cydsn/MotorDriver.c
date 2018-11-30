@@ -10,14 +10,18 @@
  * ========================================
 */
 #include "MotorDriver.h"
+#include <math.h>
 
 CY_ISR(stepper_isr_handler) {
-    
+    Timer_StepperX_Stop();
+    timerDoneFlag = 1;
 }
 
 void initX() {
     Pin_X1_Write(0);
     Pin_X2_Write(0);
+    
+    timerDoneFlag = 0;
     
     resetPositionX();
 }
@@ -31,6 +35,8 @@ static void rotateClockwiseX() {
     }
     moveStepX();
     ++stepperPositionX;
+    
+    UART_1_PutString("Rotated clockwise once\n\r");
 }
 
 static void rotateCounterClockwiseX() {
@@ -64,13 +70,16 @@ static void moveStepX() {
 }
 
 void moveDegreesX(int deg) { //Positivt antal grader skrives hvis armen skal køre med uret og negativt gradtal skrives hvis den skal køre mod uret
+    UART_1_PutString("Starting moveDegreesX function...\n\r");
     float round1 = deg / 1.8; //Grader divideret med stepvinkel = antal steps der skal køres
-    int steps = round(round1); //Afrund antallet af steps
+    int steps = (int)round(round1); //Afrund antallet af steps
     
     if(steps > 0) {
         for(int i = 0; i < steps; i++) {
+            Timer_StepperX_Start();
+            while(timerDoneFlag == 0); //wait here
             rotateClockwiseX();
-            CyDelay(TIME);
+            timerDoneFlag = 0;
         }
     }
     else if(steps < 0) {
@@ -79,8 +88,10 @@ void moveDegreesX(int deg) { //Positivt antal grader skrives hvis armen skal kø
         }
         else if(steps > (stepperPositionX * -1)) {
             for(int i = 0; i > steps; i--) {
+                Timer_StepperX_Start();
+                while(timerDoneFlag == 0);
                 rotateCounterClockwiseX();
-                CyDelay(TIME);
+                timerDoneFlag = 0;
             }
         }
     }
@@ -88,11 +99,13 @@ void moveDegreesX(int deg) { //Positivt antal grader skrives hvis armen skal kø
 
 static void resetPositionX() {
     while(Pin_X3_Read() == 1) {
+        Timer_StepperX_Start();
+        while(timerDoneFlag == 0);
         rotateCounterClockwiseX();
-        CyDelay(TIME);
+        timerDoneFlag = 0;
     }
     stepperPositionX = 0;
+    UART_1_PutString("Stepper reset\n\r");
 }
-
 
 /* [] END OF FILE */

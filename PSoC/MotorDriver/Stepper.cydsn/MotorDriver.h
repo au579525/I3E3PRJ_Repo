@@ -18,6 +18,7 @@
 enum state {NORTH, EAST, SOUTH, WEST};  //Steppermotorcoils 4 positioner
 
 int stepperPositionX;
+uint8 timerDoneFlag;
 enum state stepperStateX;
 
 CY_ISR_PROTO(stepper_isr_handler);

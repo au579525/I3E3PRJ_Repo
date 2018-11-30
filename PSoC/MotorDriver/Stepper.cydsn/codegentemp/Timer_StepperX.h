@@ -44,7 +44,7 @@ extern uint8 Timer_StepperX_initVar;
 #define Timer_StepperX_UsingHWEnable              0u
 #define Timer_StepperX_EnableTriggerMode          0u
 #define Timer_StepperX_InterruptOnCaptureCount    0u
-#define Timer_StepperX_RunModeUsed                0u
+#define Timer_StepperX_RunModeUsed                1u
 #define Timer_StepperX_ControlRegRemoved          0u
 
 #if defined(Timer_StepperX_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__CONTROL_REG)
@@ -168,8 +168,8 @@ void Timer_StepperX_Wakeup(void)        ;
 *    Initialial Parameter Constants
 ***************************************/
 
-#define Timer_StepperX_INIT_PERIOD             9999u
-#define Timer_StepperX_INIT_CAPTURE_MODE       ((uint8)((uint8)1u << Timer_StepperX_CTRL_CAP_MODE_SHIFT))
+#define Timer_StepperX_INIT_PERIOD             7499u
+#define Timer_StepperX_INIT_CAPTURE_MODE       ((uint8)((uint8)0u << Timer_StepperX_CTRL_CAP_MODE_SHIFT))
 #define Timer_StepperX_INIT_TRIGGER_MODE       ((uint8)((uint8)0u << Timer_StepperX_CTRL_TRIG_MODE_SHIFT))
 #if (Timer_StepperX_UsingFixedFunction)
     #define Timer_StepperX_INIT_INTERRUPT_MODE (((uint8)((uint8)0u << Timer_StepperX_STATUS_TC_INT_MASK_SHIFT)) | \
