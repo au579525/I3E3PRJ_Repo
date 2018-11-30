@@ -21,6 +21,7 @@ void initX() {
     Pin_X1_Write(0);
     Pin_X2_Write(0);
     
+    stepper_isr_StartEx(stepper_isr_handler);
     timerDoneFlag = 0;
     
     resetPositionX();
@@ -70,13 +71,14 @@ static void moveStepX() {
 }
 
 void moveDegreesX(int deg) { //Positivt antal grader skrives hvis armen skal køre med uret og negativt gradtal skrives hvis den skal køre mod uret
-    UART_1_PutString("Starting moveDegreesX function...\n\r");
+//    UART_1_PutString("Starting moveDegreesX function...\n\r");
     float round1 = deg / 1.8; //Grader divideret med stepvinkel = antal steps der skal køres
     int steps = (int)round(round1); //Afrund antallet af steps
     
     if(steps > 0) {
         for(int i = 0; i < steps; i++) {
             Timer_StepperX_Start();
+//            UART_1_PutString("Starting timer\n\r");
             while(timerDoneFlag == 0); //wait here
             rotateClockwiseX();
             timerDoneFlag = 0;

@@ -1,5 +1,5 @@
 -- Project:   Stepper
--- Generated: 11/30/2018 10:03:48
+-- Generated: 11/30/2018 10:27:30
 -- PSoC Creator  4.2
 
 ENTITY Stepper IS
@@ -38,6 +38,7 @@ ARCHITECTURE __DEFAULT__ OF Stepper IS
     SIGNAL Net_14 : bit;
     SIGNAL Net_42 : bit;
     SIGNAL Net_47 : bit;
+    SIGNAL Net_49 : bit;
     SIGNAL Pin_X1(0)__PA : bit;
     SIGNAL Pin_X2(0)__PA : bit;
     SIGNAL Pin_X3(0)__PA : bit;
@@ -1214,7 +1215,16 @@ BEGIN
             status_3 => \UART_1:BUART:rx_status_3\,
             status_2 => open,
             status_1 => open,
-            status_0 => open);
+            status_0 => open,
+            interrupt => Net_49);
+
+    uart_isr:interrupt
+        GENERIC MAP(
+            int_type => "10",
+            is_nmi => 0)
+        PORT MAP(
+            interrupt => Net_49,
+            clock => ClockBlock_BUS_CLK);
 
     \UART_1:BUART:txn\:macrocell
         GENERIC MAP(

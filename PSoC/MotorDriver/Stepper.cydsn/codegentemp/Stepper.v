@@ -1,6 +1,6 @@
 // ======================================================================
 // Stepper.v generated from TopDesign.cysch
-// 11/30/2018 at 10:03
+// 11/30/2018 at 10:27
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -808,6 +808,13 @@ module top ;
 		  .out_reset({1'b0}));
 
 	assign tmpOE__Tx_1_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+
+	cy_isr_v1_0
+		#(.int_type(2'b10))
+		uart_isr
+		 (.int_signal(Net_49));
+
 
 
 

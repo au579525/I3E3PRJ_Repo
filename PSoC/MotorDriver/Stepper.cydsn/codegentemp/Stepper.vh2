@@ -2,7 +2,7 @@
 --	Conversion of Stepper.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Fri Nov 30 10:03:47 2018
+--	Fri Nov 30 10:27:29 2018
 --
 
 USE cypress.cypress.all;
@@ -1067,7 +1067,7 @@ stepper_isr:cy_isr_v1_0
 		clock=>\UART_1:BUART:clock_op\,
 		status=>(zero, \UART_1:BUART:rx_status_5\, \UART_1:BUART:rx_status_4\, \UART_1:BUART:rx_status_3\,
 			\UART_1:BUART:rx_status_2\, zero, zero),
-		interrupt=>\UART_1:BUART:rx_interrupt_out\);
+		interrupt=>Net_49);
 Rx_1:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"1425177d-0d0e-4468-8bcc-e638e5509a9b",
 		drive_mode=>"001",
@@ -1208,6 +1208,10 @@ Tx_1:cy_psoc3_pins_v1_10
 		out_clock_en=>tmpOE__Pin_X1_net_0,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__Tx_1_net_0);
+uart_isr:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
+	PORT MAP(int_signal=>Net_49);
 \UART_1:BUART:reset_reg\:cy_dff
 	PORT MAP(d=>zero,
 		clk=>\UART_1:BUART:clock_op\,

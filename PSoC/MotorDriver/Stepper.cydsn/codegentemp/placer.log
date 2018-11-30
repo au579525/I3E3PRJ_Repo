@@ -6,7 +6,7 @@
 
 #Build Date:         Dec  5 2017 15:35:27
 
-#File Generated:     Nov 30 2018 10:03:48
+#File Generated:     Nov 30 2018 10:27:30
 
 #Purpose:            
 
@@ -54,7 +54,7 @@ Design Statistics after Packing
 
 Device Utilization Summary after Packing
     Macrocells                  :	25/192
-    UDBS                        :	4/24
+    UDBS                        :	5/24
     IOs                         :	5/72
 
 
@@ -87,7 +87,7 @@ Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:   3.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyPLL_OUT            | Frequency: N/A       | Target:  24.0 MHz
-Clock: UART_1_IntClock      | Frequency:  55.6 MHz | Target:   0.5 MHz
+Clock: UART_1_IntClock      | Frequency:  53.6 MHz | Target:   0.5 MHz
 
 ======================================================================
                      End of Clock Summary
