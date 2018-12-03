@@ -30,7 +30,7 @@ int main(void)
     for(;;)
     {
         if (moveFlag == 1) {
-            moveDegreesX(15);
+            moveDegreesX(90);
             moveFlag = 0;
         }
     }
@@ -41,6 +41,8 @@ CY_ISR( uart_isr_handler ){
         case 1:
             moveFlag = 1;
             break;
+        case 2:
+            moveFlag = ;
         default:
             break;
     }

@@ -81,6 +81,7 @@
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
@@ -93,6 +94,19 @@
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorDriver.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_X1.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_X2.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_X3.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\stepper_isr.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_StepperX.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_StepperX_PM.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_INT.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_IntClock.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_PM.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\uart_isr.lst</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Stepper.elf</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Stepper.hex</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Stepper.map</v>
@@ -107,6 +121,7 @@
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
@@ -119,6 +134,19 @@
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorDriver.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_X1.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_X2.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_X3.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\stepper_isr.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_StepperX.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_StepperX_PM.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_INT.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_IntClock.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_PM.lst</v>
+<v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\uart_isr.lst</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Stepper.elf</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Stepper.hex</v>
 <v>MotorDriver\Stepper\CortexM3\ARM_GCC_541\Debug\Stepper.map</v>
@@ -141,10 +169,12 @@
 <v>MotorDriver\Stepper\System Reference Guides</v>
 <v>MotorDriver\Stepper\System Reference Guides\cy_boot_v5_70</v>
 <v>MotorDriver\Stepper\cy_clock_v2_20.pdf</v>
-<v>MotorDriver\Stepper\cy_isr_v1_70.pdf</v>
+<v>MotorDriver\Stepper\cy_isr_v1_70</v>
+<v>MotorDriver\Stepper\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
 <v>MotorDriver\Stepper\cy_pins_v2_20</v>
 <v>MotorDriver\Stepper\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>MotorDriver\Stepper\Timer_v2_80.pdf</v>
+<v>MotorDriver\Stepper\UART_v2_50.pdf</v>
 <v>MotorDriver\Stepper\ZeroTerminal.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
@@ -155,10 +185,12 @@
 <v>MotorDriver\Stepper\System Reference Guides</v>
 <v>MotorDriver\Stepper\System Reference Guides\cy_boot_v5_70</v>
 <v>MotorDriver\Stepper\cy_clock_v2_20.pdf</v>
-<v>MotorDriver\Stepper\cy_isr_v1_70.pdf</v>
+<v>MotorDriver\Stepper\cy_isr_v1_70</v>
+<v>MotorDriver\Stepper\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
 <v>MotorDriver\Stepper\cy_pins_v2_20</v>
 <v>MotorDriver\Stepper\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>MotorDriver\Stepper\Timer_v2_80.pdf</v>
+<v>MotorDriver\Stepper\UART_v2_50.pdf</v>
 <v>MotorDriver\Stepper\ZeroTerminal.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>

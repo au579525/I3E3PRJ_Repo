@@ -2,7 +2,7 @@
 --	Conversion of Stepper.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Fri Nov 30 10:27:29 2018
+--	Fri Nov 30 11:23:51 2018
 --
 
 USE cypress.cypress.all;
