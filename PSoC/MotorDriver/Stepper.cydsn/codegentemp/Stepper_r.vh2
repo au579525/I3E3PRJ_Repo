@@ -1,5 +1,5 @@
 -- Project:   Stepper
--- Generated: 11/30/2018 10:27:31
+-- Generated: 11/30/2018 11:23:54
 -- PSoC Creator  4.2
 
 ENTITY Stepper IS
@@ -128,7 +128,7 @@ ARCHITECTURE __DEFAULT__ OF Stepper IS
     ATTRIBUTE lib_model OF Pin_X2(0) : LABEL IS "iocell2";
     ATTRIBUTE Location OF Pin_X2(0) : LABEL IS "P2[1]";
     ATTRIBUTE lib_model OF Pin_X3(0) : LABEL IS "iocell3";
-    ATTRIBUTE Location OF Pin_X3(0) : LABEL IS "P1[7]";
+    ATTRIBUTE Location OF Pin_X3(0) : LABEL IS "P2[3]";
     ATTRIBUTE lib_model OF Rx_1(0) : LABEL IS "iocell4";
     ATTRIBUTE Location OF Rx_1(0) : LABEL IS "P12[6]";
     ATTRIBUTE lib_model OF Tx_1(0) : LABEL IS "iocell5";

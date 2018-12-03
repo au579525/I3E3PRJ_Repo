@@ -36,7 +36,7 @@ set_location "ClockBlock" clockblockcell -1 -1 0
 # Note: port 12 is the logical name for port 7
 set_io "Rx_1(0)" iocell 12 6
 set_location "\Timer_StepperX:TimerHW\" timercell -1 -1 0
-set_io "Pin_X3(0)" iocell 1 7
+set_io "Pin_X3(0)" iocell 2 3
 # Note: port 12 is the logical name for port 7
 set_io "Tx_1(0)" iocell 12 7
 set_location "uart_isr" interrupt -1 -1 1
