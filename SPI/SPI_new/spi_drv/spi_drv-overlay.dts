@@ -25,7 +25,7 @@
                 reg = <0>; // SPI Chip Select 0 ADC(MCP3202)
                 /* spi-cpha; */ /* Comment in to set CPHA */
                 /* spi-cpol; */ /* Comment in to set CPOL */
-                spi-max-frequency = <1000000>; // 1MHz/1Mbps for PSoC (can do 5mbps)
+                spi-max-frequency = <100000>; // 0.8MHz/0.8Mbps for PSoC (can do 5mbps)
             };
         };
     };

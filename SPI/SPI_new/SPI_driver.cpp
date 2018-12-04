@@ -25,31 +25,41 @@ private:
   void run(){
 
     while(1){
-      int fd;
-      int err;
-      char data;
 
+      int err;
+      unsigned int data;
+
+      FILE * fp;
+      fp = fopen("/dev/spi_drv0","r");
       std::cout << "in spi_req_function" << '\n';
-      fd = open("/dev/spi_drv0",O_RDWR);
-      read(fd, &data, BUFFER_LENGTH);
+      fscanf(fp,"%d",&data);
+
+      //fd = open("/dev/spi_drv0",O_RDWR);
+      //read(fd, &data, BUFFER_LENGTH);
       mut.lock();
 
+      std::cout << "data recieved" << data << '\n';
       switch (data) {
-        case 1:
-          uint8_t x,y;
+        case 'a':
+          unsigned int x,y;
           std::cout << "due skudt" << '\n';
+          fscanf(fp,"%d",&x);//Her læses ingen værdi ud,
+
+          fscanf(fp,"%d",&y);//og ventes ikke på interrupt
+
           std::cout << "Duens position var X:" << x << " Y:" << y << '\n';
+
           break;
-        case 2:
+        case 'b':
           std::cout << " due detekteret " << '\n';
           break;
-        case 3:
+        case 'c':
           std::cout << "lavt vand" << '\n';
           break;
-        case 4:
+        case 'd':
           std::cout << "vand tømt" << '\n';
           break;
-        case 5:
+        case 'e':
           std::cout << "blomster vandet" << '\n';
           break;
         default:
@@ -57,7 +67,7 @@ private:
           std::cout << data << std::endl;
           break;
       }
-
+      fclose(fp);
       std::cout << err << std::endl;
       mut.unlock();
       //fclose(fd);
@@ -74,14 +84,13 @@ public:
 private:
   void run(){
     int fd;
-    unsigned char data; //<------- Issues here, no way to send over an integer over 9.
+    char data; //<------- Issues here, no way to send over an integer over 9.
 
     while(1){
       std::cout<<"run 1"<<std::endl;
       mut.lock();
       fd = open("/dev/spi_drv0",O_RDWR);
       std::cout<<"run 2"<<std::endl;
-
       std::cout << "in main_thread" << '\n';
       std::cout<<"run 3"<<std::endl;
       std::cout<<"run 4"<<std::endl;
@@ -99,6 +108,9 @@ private:
       //close(fd);
       mut.unlock();
       std::cout<<"run done"<<std::endl;
+      std::cout << "sleep startet" << '\n';
+      osapi::sleep(5000);
+      std::cout << "sleep ended" << '\n';
       std::cout<< err <<std::endl;
     }
   }
@@ -111,16 +123,16 @@ int main()
 {
 
   spi_req_function spi_req_f;
-  main_thread main_f;
+  //main_thread main_f;
 
   osapi::Thread p(&spi_req_f);
-  osapi::Thread t(&main_f);
+  //osapi::Thread t(&main_f);
 
   p.start();
-  t.start();
+  //t.start();
 
   p.join();
-  t.join();
+  //t.join();
 }
 catch (std::exception& e)
 {
