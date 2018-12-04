@@ -12,9 +12,9 @@
 
 #define BUFFER_LENGTH 8
 
+
 osapi::Mutex mut;
 
-//FILE * fd;
 
 class spi_req_function : public osapi::ThreadFunctor{
 
@@ -29,14 +29,10 @@ private:
       unsigned int data;
       FILE * fp;
       fp = fopen("/dev/spi_drv0","r");
-      std::cout << "in spi_req_function" << '\n';
-      fscanf(fp,"%d",&data);
 
-      //fd = open("/dev/spi_drv0",O_RDWR);
-      //read(fd, &data, BUFFER_LENGTH);
+      fscanf(fp,"%d",&data);
       mut.lock();
 
-      std::cout << "data recieved" << data << '\n';
       switch (data) {
         case 'a':
           unsigned int x,y;
@@ -47,7 +43,6 @@ private:
           fscanf(fp,"%d",&y);//og ventes ikke på interrupt
 
           std::cout << "Duens position var X:" << x << " Y:" << y << '\n';
-
           break;
         case 'b':
           std::cout << " due detekteret " << '\n';
@@ -118,6 +113,7 @@ int main()
 {
   try
 {
+
 
   spi_req_function spi_req_f;
   //main_thread main_f;
