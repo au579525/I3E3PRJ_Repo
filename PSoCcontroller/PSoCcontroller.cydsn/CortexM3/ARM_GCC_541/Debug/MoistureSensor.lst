@@ -1,0 +1,645 @@
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"MoistureSensor.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.MoistureSensor_init,"ax",%progbits
+  20              		.align	2
+  21              		.global	MoistureSensor_init
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	MoistureSensor_init, %function
+  25              	MoistureSensor_init:
+  26              	.LFB63:
+  27              		.file 1 "MoistureSensor.c"
+   1:MoistureSensor.c **** /* ========================================
+   2:MoistureSensor.c ****  * PIGEON EXTERMINATION SYSTEM
+   3:MoistureSensor.c ****  * Moisture Sensor Driver
+   4:MoistureSensor.c ****  * Source-file
+   5:MoistureSensor.c ****  * 
+   6:MoistureSensor.c ****  * Author: Lasse Krarup
+   7:MoistureSensor.c ****  *
+   8:MoistureSensor.c ****  * ========================================
+   9:MoistureSensor.c **** */
+  10:MoistureSensor.c **** #include "MoistureSensor.h"
+  11:MoistureSensor.c **** 
+  12:MoistureSensor.c **** void MoistureSensor_init(void) {
+  28              		.loc 1 12 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 08B5     		push	{r3, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+  13:MoistureSensor.c ****     ADC_Moisture_Start();   
+  36              		.loc 1 13 0
+  37 0002 FFF7FEFF 		bl	ADC_Moisture_Start
+  38              	.LVL0:
+  39 0006 08BD     		pop	{r3, pc}
+  40              		.cfi_endproc
+  41              	.LFE63:
+  42              		.size	MoistureSensor_init, .-MoistureSensor_init
+  43              		.section	.text.MoistureSensor_getResult,"ax",%progbits
+  44              		.align	2
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 2
+
+
+  45              		.global	MoistureSensor_getResult
+  46              		.thumb
+  47              		.thumb_func
+  48              		.type	MoistureSensor_getResult, %function
+  49              	MoistureSensor_getResult:
+  50              	.LFB64:
+  14:MoistureSensor.c **** }
+  15:MoistureSensor.c **** 
+  16:MoistureSensor.c **** int MoistureSensor_getResult(void) {
+  51              		.loc 1 16 0
+  52              		.cfi_startproc
+  53              		@ args = 0, pretend = 0, frame = 0
+  54              		@ frame_needed = 0, uses_anonymous_args = 0
+  55 0000 08B5     		push	{r3, lr}
+  56              		.cfi_def_cfa_offset 8
+  57              		.cfi_offset 3, -8
+  58              		.cfi_offset 14, -4
+  17:MoistureSensor.c ****     ADC_Moisture_StartConvert();
+  59              		.loc 1 17 0
+  60 0002 FFF7FEFF 		bl	ADC_Moisture_StartConvert
+  61              	.LVL1:
+  62              	.L4:
+  18:MoistureSensor.c ****     while(!ADC_Moisture_IsEndConversion(1)); //wait for result
+  63              		.loc 1 18 0 discriminator 1
+  64 0006 0120     		movs	r0, #1
+  65 0008 FFF7FEFF 		bl	ADC_Moisture_IsEndConversion
+  66              	.LVL2:
+  67 000c 0028     		cmp	r0, #0
+  68 000e FAD0     		beq	.L4
+  19:MoistureSensor.c ****     
+  20:MoistureSensor.c ****     return ADC_Moisture_GetResult16();
+  69              		.loc 1 20 0
+  70 0010 FFF7FEFF 		bl	ADC_Moisture_GetResult16
+  71              	.LVL3:
+  21:MoistureSensor.c **** }
+  72              		.loc 1 21 0
+  73 0014 08BD     		pop	{r3, pc}
+  74              		.cfi_endproc
+  75              	.LFE64:
+  76              		.size	MoistureSensor_getResult, .-MoistureSensor_getResult
+  77 0016 00BF     		.text
+  78              	.Letext0:
+  79              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+  80              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+  81              		.file 4 "Generated_Source\\PSoC5/ADC_Moisture.h"
+  82              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+  83              		.section	.debug_info,"",%progbits
+  84              	.Ldebug_info0:
+  85 0000 3C010000 		.4byte	0x13c
+  86 0004 0400     		.2byte	0x4
+  87 0006 00000000 		.4byte	.Ldebug_abbrev0
+  88 000a 04       		.byte	0x4
+  89 000b 01       		.uleb128 0x1
+  90 000c 45000000 		.4byte	.LASF20
+  91 0010 0C       		.byte	0xc
+  92 0011 0E000000 		.4byte	.LASF21
+  93 0015 4D010000 		.4byte	.LASF22
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 3
+
+
+  94 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  95 001d 00000000 		.4byte	0
+  96 0021 00000000 		.4byte	.Ldebug_line0
+  97 0025 02       		.uleb128 0x2
+  98 0026 01       		.byte	0x1
+  99 0027 06       		.byte	0x6
+ 100 0028 28020000 		.4byte	.LASF0
+ 101 002c 02       		.uleb128 0x2
+ 102 002d 01       		.byte	0x1
+ 103 002e 08       		.byte	0x8
+ 104 002f 3F010000 		.4byte	.LASF1
+ 105 0033 02       		.uleb128 0x2
+ 106 0034 02       		.byte	0x2
+ 107 0035 05       		.byte	0x5
+ 108 0036 DD010000 		.4byte	.LASF2
+ 109 003a 02       		.uleb128 0x2
+ 110 003b 02       		.byte	0x2
+ 111 003c 07       		.byte	0x7
+ 112 003d 15010000 		.4byte	.LASF3
+ 113 0041 03       		.uleb128 0x3
+ 114 0042 40020000 		.4byte	.LASF9
+ 115 0046 02       		.byte	0x2
+ 116 0047 3F       		.byte	0x3f
+ 117 0048 4C000000 		.4byte	0x4c
+ 118 004c 02       		.uleb128 0x2
+ 119 004d 04       		.byte	0x4
+ 120 004e 05       		.byte	0x5
+ 121 004f D4010000 		.4byte	.LASF4
+ 122 0053 02       		.uleb128 0x2
+ 123 0054 04       		.byte	0x4
+ 124 0055 07       		.byte	0x7
+ 125 0056 D3000000 		.4byte	.LASF5
+ 126 005a 02       		.uleb128 0x2
+ 127 005b 08       		.byte	0x8
+ 128 005c 05       		.byte	0x5
+ 129 005d 00000000 		.4byte	.LASF6
+ 130 0061 02       		.uleb128 0x2
+ 131 0062 08       		.byte	0x8
+ 132 0063 07       		.byte	0x7
+ 133 0064 28010000 		.4byte	.LASF7
+ 134 0068 04       		.uleb128 0x4
+ 135 0069 04       		.byte	0x4
+ 136 006a 05       		.byte	0x5
+ 137 006b 696E7400 		.ascii	"int\000"
+ 138 006f 02       		.uleb128 0x2
+ 139 0070 04       		.byte	0x4
+ 140 0071 07       		.byte	0x7
+ 141 0072 1F000000 		.4byte	.LASF8
+ 142 0076 03       		.uleb128 0x3
+ 143 0077 6A020000 		.4byte	.LASF10
+ 144 007b 03       		.byte	0x3
+ 145 007c 2C       		.byte	0x2c
+ 146 007d 41000000 		.4byte	0x41
+ 147 0081 02       		.uleb128 0x2
+ 148 0082 04       		.byte	0x4
+ 149 0083 04       		.byte	0x4
+ 150 0084 4A020000 		.4byte	.LASF11
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 4
+
+
+ 151 0088 02       		.uleb128 0x2
+ 152 0089 08       		.byte	0x8
+ 153 008a 04       		.byte	0x4
+ 154 008b E7010000 		.4byte	.LASF12
+ 155 008f 02       		.uleb128 0x2
+ 156 0090 01       		.byte	0x1
+ 157 0091 08       		.byte	0x8
+ 158 0092 CF010000 		.4byte	.LASF13
+ 159 0096 02       		.uleb128 0x2
+ 160 0097 08       		.byte	0x8
+ 161 0098 04       		.byte	0x4
+ 162 0099 34020000 		.4byte	.LASF14
+ 163 009d 02       		.uleb128 0x2
+ 164 009e 04       		.byte	0x4
+ 165 009f 07       		.byte	0x7
+ 166 00a0 72020000 		.4byte	.LASF15
+ 167 00a4 05       		.uleb128 0x5
+ 168 00a5 07020000 		.4byte	.LASF23
+ 169 00a9 01       		.byte	0x1
+ 170 00aa 0C       		.byte	0xc
+ 171 00ab 00000000 		.4byte	.LFB63
+ 172 00af 08000000 		.4byte	.LFE63-.LFB63
+ 173 00b3 01       		.uleb128 0x1
+ 174 00b4 9C       		.byte	0x9c
+ 175 00b5 C3000000 		.4byte	0xc3
+ 176 00b9 06       		.uleb128 0x6
+ 177 00ba 06000000 		.4byte	.LVL0
+ 178 00be 13010000 		.4byte	0x113
+ 179 00c2 00       		.byte	0
+ 180 00c3 07       		.uleb128 0x7
+ 181 00c4 EE010000 		.4byte	.LASF24
+ 182 00c8 01       		.byte	0x1
+ 183 00c9 10       		.byte	0x10
+ 184 00ca 68000000 		.4byte	0x68
+ 185 00ce 00000000 		.4byte	.LFB64
+ 186 00d2 16000000 		.4byte	.LFE64-.LFB64
+ 187 00d6 01       		.uleb128 0x1
+ 188 00d7 9C       		.byte	0x9c
+ 189 00d8 02010000 		.4byte	0x102
+ 190 00dc 06       		.uleb128 0x6
+ 191 00dd 06000000 		.4byte	.LVL1
+ 192 00e1 1E010000 		.4byte	0x11e
+ 193 00e5 08       		.uleb128 0x8
+ 194 00e6 0C000000 		.4byte	.LVL2
+ 195 00ea 29010000 		.4byte	0x129
+ 196 00ee F8000000 		.4byte	0xf8
+ 197 00f2 09       		.uleb128 0x9
+ 198 00f3 01       		.uleb128 0x1
+ 199 00f4 50       		.byte	0x50
+ 200 00f5 01       		.uleb128 0x1
+ 201 00f6 31       		.byte	0x31
+ 202 00f7 00       		.byte	0
+ 203 00f8 06       		.uleb128 0x6
+ 204 00f9 14000000 		.4byte	.LVL3
+ 205 00fd 34010000 		.4byte	0x134
+ 206 0101 00       		.byte	0
+ 207 0102 0A       		.uleb128 0xa
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 5
+
+
+ 208 0103 1B020000 		.4byte	.LASF25
+ 209 0107 05       		.byte	0x5
+ 210 0108 1207     		.2byte	0x712
+ 211 010a 0E010000 		.4byte	0x10e
+ 212 010e 0B       		.uleb128 0xb
+ 213 010f 76000000 		.4byte	0x76
+ 214 0113 0C       		.uleb128 0xc
+ 215 0114 02010000 		.4byte	.LASF16
+ 216 0118 02010000 		.4byte	.LASF16
+ 217 011c 04       		.byte	0x4
+ 218 011d 34       		.byte	0x34
+ 219 011e 0C       		.uleb128 0xc
+ 220 011f 50020000 		.4byte	.LASF17
+ 221 0123 50020000 		.4byte	.LASF17
+ 222 0127 04       		.byte	0x4
+ 223 0128 D1       		.byte	0xd1
+ 224 0129 0C       		.uleb128 0xc
+ 225 012a E5000000 		.4byte	.LASF18
+ 226 012e E5000000 		.4byte	.LASF18
+ 227 0132 04       		.byte	0x4
+ 228 0133 39       		.byte	0x39
+ 229 0134 0C       		.uleb128 0xc
+ 230 0135 2C000000 		.4byte	.LASF19
+ 231 0139 2C000000 		.4byte	.LASF19
+ 232 013d 04       		.byte	0x4
+ 233 013e 3B       		.byte	0x3b
+ 234 013f 00       		.byte	0
+ 235              		.section	.debug_abbrev,"",%progbits
+ 236              	.Ldebug_abbrev0:
+ 237 0000 01       		.uleb128 0x1
+ 238 0001 11       		.uleb128 0x11
+ 239 0002 01       		.byte	0x1
+ 240 0003 25       		.uleb128 0x25
+ 241 0004 0E       		.uleb128 0xe
+ 242 0005 13       		.uleb128 0x13
+ 243 0006 0B       		.uleb128 0xb
+ 244 0007 03       		.uleb128 0x3
+ 245 0008 0E       		.uleb128 0xe
+ 246 0009 1B       		.uleb128 0x1b
+ 247 000a 0E       		.uleb128 0xe
+ 248 000b 55       		.uleb128 0x55
+ 249 000c 17       		.uleb128 0x17
+ 250 000d 11       		.uleb128 0x11
+ 251 000e 01       		.uleb128 0x1
+ 252 000f 10       		.uleb128 0x10
+ 253 0010 17       		.uleb128 0x17
+ 254 0011 00       		.byte	0
+ 255 0012 00       		.byte	0
+ 256 0013 02       		.uleb128 0x2
+ 257 0014 24       		.uleb128 0x24
+ 258 0015 00       		.byte	0
+ 259 0016 0B       		.uleb128 0xb
+ 260 0017 0B       		.uleb128 0xb
+ 261 0018 3E       		.uleb128 0x3e
+ 262 0019 0B       		.uleb128 0xb
+ 263 001a 03       		.uleb128 0x3
+ 264 001b 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 6
+
+
+ 265 001c 00       		.byte	0
+ 266 001d 00       		.byte	0
+ 267 001e 03       		.uleb128 0x3
+ 268 001f 16       		.uleb128 0x16
+ 269 0020 00       		.byte	0
+ 270 0021 03       		.uleb128 0x3
+ 271 0022 0E       		.uleb128 0xe
+ 272 0023 3A       		.uleb128 0x3a
+ 273 0024 0B       		.uleb128 0xb
+ 274 0025 3B       		.uleb128 0x3b
+ 275 0026 0B       		.uleb128 0xb
+ 276 0027 49       		.uleb128 0x49
+ 277 0028 13       		.uleb128 0x13
+ 278 0029 00       		.byte	0
+ 279 002a 00       		.byte	0
+ 280 002b 04       		.uleb128 0x4
+ 281 002c 24       		.uleb128 0x24
+ 282 002d 00       		.byte	0
+ 283 002e 0B       		.uleb128 0xb
+ 284 002f 0B       		.uleb128 0xb
+ 285 0030 3E       		.uleb128 0x3e
+ 286 0031 0B       		.uleb128 0xb
+ 287 0032 03       		.uleb128 0x3
+ 288 0033 08       		.uleb128 0x8
+ 289 0034 00       		.byte	0
+ 290 0035 00       		.byte	0
+ 291 0036 05       		.uleb128 0x5
+ 292 0037 2E       		.uleb128 0x2e
+ 293 0038 01       		.byte	0x1
+ 294 0039 3F       		.uleb128 0x3f
+ 295 003a 19       		.uleb128 0x19
+ 296 003b 03       		.uleb128 0x3
+ 297 003c 0E       		.uleb128 0xe
+ 298 003d 3A       		.uleb128 0x3a
+ 299 003e 0B       		.uleb128 0xb
+ 300 003f 3B       		.uleb128 0x3b
+ 301 0040 0B       		.uleb128 0xb
+ 302 0041 27       		.uleb128 0x27
+ 303 0042 19       		.uleb128 0x19
+ 304 0043 11       		.uleb128 0x11
+ 305 0044 01       		.uleb128 0x1
+ 306 0045 12       		.uleb128 0x12
+ 307 0046 06       		.uleb128 0x6
+ 308 0047 40       		.uleb128 0x40
+ 309 0048 18       		.uleb128 0x18
+ 310 0049 9742     		.uleb128 0x2117
+ 311 004b 19       		.uleb128 0x19
+ 312 004c 01       		.uleb128 0x1
+ 313 004d 13       		.uleb128 0x13
+ 314 004e 00       		.byte	0
+ 315 004f 00       		.byte	0
+ 316 0050 06       		.uleb128 0x6
+ 317 0051 898201   		.uleb128 0x4109
+ 318 0054 00       		.byte	0
+ 319 0055 11       		.uleb128 0x11
+ 320 0056 01       		.uleb128 0x1
+ 321 0057 31       		.uleb128 0x31
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 7
+
+
+ 322 0058 13       		.uleb128 0x13
+ 323 0059 00       		.byte	0
+ 324 005a 00       		.byte	0
+ 325 005b 07       		.uleb128 0x7
+ 326 005c 2E       		.uleb128 0x2e
+ 327 005d 01       		.byte	0x1
+ 328 005e 3F       		.uleb128 0x3f
+ 329 005f 19       		.uleb128 0x19
+ 330 0060 03       		.uleb128 0x3
+ 331 0061 0E       		.uleb128 0xe
+ 332 0062 3A       		.uleb128 0x3a
+ 333 0063 0B       		.uleb128 0xb
+ 334 0064 3B       		.uleb128 0x3b
+ 335 0065 0B       		.uleb128 0xb
+ 336 0066 27       		.uleb128 0x27
+ 337 0067 19       		.uleb128 0x19
+ 338 0068 49       		.uleb128 0x49
+ 339 0069 13       		.uleb128 0x13
+ 340 006a 11       		.uleb128 0x11
+ 341 006b 01       		.uleb128 0x1
+ 342 006c 12       		.uleb128 0x12
+ 343 006d 06       		.uleb128 0x6
+ 344 006e 40       		.uleb128 0x40
+ 345 006f 18       		.uleb128 0x18
+ 346 0070 9742     		.uleb128 0x2117
+ 347 0072 19       		.uleb128 0x19
+ 348 0073 01       		.uleb128 0x1
+ 349 0074 13       		.uleb128 0x13
+ 350 0075 00       		.byte	0
+ 351 0076 00       		.byte	0
+ 352 0077 08       		.uleb128 0x8
+ 353 0078 898201   		.uleb128 0x4109
+ 354 007b 01       		.byte	0x1
+ 355 007c 11       		.uleb128 0x11
+ 356 007d 01       		.uleb128 0x1
+ 357 007e 31       		.uleb128 0x31
+ 358 007f 13       		.uleb128 0x13
+ 359 0080 01       		.uleb128 0x1
+ 360 0081 13       		.uleb128 0x13
+ 361 0082 00       		.byte	0
+ 362 0083 00       		.byte	0
+ 363 0084 09       		.uleb128 0x9
+ 364 0085 8A8201   		.uleb128 0x410a
+ 365 0088 00       		.byte	0
+ 366 0089 02       		.uleb128 0x2
+ 367 008a 18       		.uleb128 0x18
+ 368 008b 9142     		.uleb128 0x2111
+ 369 008d 18       		.uleb128 0x18
+ 370 008e 00       		.byte	0
+ 371 008f 00       		.byte	0
+ 372 0090 0A       		.uleb128 0xa
+ 373 0091 34       		.uleb128 0x34
+ 374 0092 00       		.byte	0
+ 375 0093 03       		.uleb128 0x3
+ 376 0094 0E       		.uleb128 0xe
+ 377 0095 3A       		.uleb128 0x3a
+ 378 0096 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 8
+
+
+ 379 0097 3B       		.uleb128 0x3b
+ 380 0098 05       		.uleb128 0x5
+ 381 0099 49       		.uleb128 0x49
+ 382 009a 13       		.uleb128 0x13
+ 383 009b 3F       		.uleb128 0x3f
+ 384 009c 19       		.uleb128 0x19
+ 385 009d 3C       		.uleb128 0x3c
+ 386 009e 19       		.uleb128 0x19
+ 387 009f 00       		.byte	0
+ 388 00a0 00       		.byte	0
+ 389 00a1 0B       		.uleb128 0xb
+ 390 00a2 35       		.uleb128 0x35
+ 391 00a3 00       		.byte	0
+ 392 00a4 49       		.uleb128 0x49
+ 393 00a5 13       		.uleb128 0x13
+ 394 00a6 00       		.byte	0
+ 395 00a7 00       		.byte	0
+ 396 00a8 0C       		.uleb128 0xc
+ 397 00a9 2E       		.uleb128 0x2e
+ 398 00aa 00       		.byte	0
+ 399 00ab 3F       		.uleb128 0x3f
+ 400 00ac 19       		.uleb128 0x19
+ 401 00ad 3C       		.uleb128 0x3c
+ 402 00ae 19       		.uleb128 0x19
+ 403 00af 6E       		.uleb128 0x6e
+ 404 00b0 0E       		.uleb128 0xe
+ 405 00b1 03       		.uleb128 0x3
+ 406 00b2 0E       		.uleb128 0xe
+ 407 00b3 3A       		.uleb128 0x3a
+ 408 00b4 0B       		.uleb128 0xb
+ 409 00b5 3B       		.uleb128 0x3b
+ 410 00b6 0B       		.uleb128 0xb
+ 411 00b7 00       		.byte	0
+ 412 00b8 00       		.byte	0
+ 413 00b9 00       		.byte	0
+ 414              		.section	.debug_aranges,"",%progbits
+ 415 0000 24000000 		.4byte	0x24
+ 416 0004 0200     		.2byte	0x2
+ 417 0006 00000000 		.4byte	.Ldebug_info0
+ 418 000a 04       		.byte	0x4
+ 419 000b 00       		.byte	0
+ 420 000c 0000     		.2byte	0
+ 421 000e 0000     		.2byte	0
+ 422 0010 00000000 		.4byte	.LFB63
+ 423 0014 08000000 		.4byte	.LFE63-.LFB63
+ 424 0018 00000000 		.4byte	.LFB64
+ 425 001c 16000000 		.4byte	.LFE64-.LFB64
+ 426 0020 00000000 		.4byte	0
+ 427 0024 00000000 		.4byte	0
+ 428              		.section	.debug_ranges,"",%progbits
+ 429              	.Ldebug_ranges0:
+ 430 0000 00000000 		.4byte	.LFB63
+ 431 0004 08000000 		.4byte	.LFE63
+ 432 0008 00000000 		.4byte	.LFB64
+ 433 000c 16000000 		.4byte	.LFE64
+ 434 0010 00000000 		.4byte	0
+ 435 0014 00000000 		.4byte	0
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 9
+
+
+ 436              		.section	.debug_line,"",%progbits
+ 437              	.Ldebug_line0:
+ 438 0000 88010000 		.section	.debug_str,"MS",%progbits,1
+ 438      02005B01 
+ 438      00000201 
+ 438      FB0E0D00 
+ 438      01010101 
+ 439              	.LASF6:
+ 440 0000 6C6F6E67 		.ascii	"long long int\000"
+ 440      206C6F6E 
+ 440      6720696E 
+ 440      7400
+ 441              	.LASF21:
+ 442 000e 4D6F6973 		.ascii	"MoistureSensor.c\000"
+ 442      74757265 
+ 442      53656E73 
+ 442      6F722E63 
+ 442      00
+ 443              	.LASF8:
+ 444 001f 756E7369 		.ascii	"unsigned int\000"
+ 444      676E6564 
+ 444      20696E74 
+ 444      00
+ 445              	.LASF19:
+ 446 002c 4144435F 		.ascii	"ADC_Moisture_GetResult16\000"
+ 446      4D6F6973 
+ 446      74757265 
+ 446      5F476574 
+ 446      52657375 
+ 447              	.LASF20:
+ 448 0045 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 448      43313120 
+ 448      352E342E 
+ 448      31203230 
+ 448      31363036 
+ 449 0078 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 449      20726576 
+ 449      6973696F 
+ 449      6E203233 
+ 449      37373135 
+ 450 00ab 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 450      66756E63 
+ 450      74696F6E 
+ 450      2D736563 
+ 450      74696F6E 
+ 451              	.LASF5:
+ 452 00d3 6C6F6E67 		.ascii	"long unsigned int\000"
+ 452      20756E73 
+ 452      69676E65 
+ 452      6420696E 
+ 452      7400
+ 453              	.LASF18:
+ 454 00e5 4144435F 		.ascii	"ADC_Moisture_IsEndConversion\000"
+ 454      4D6F6973 
+ 454      74757265 
+ 454      5F497345 
+ 454      6E64436F 
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 10
+
+
+ 455              	.LASF16:
+ 456 0102 4144435F 		.ascii	"ADC_Moisture_Start\000"
+ 456      4D6F6973 
+ 456      74757265 
+ 456      5F537461 
+ 456      727400
+ 457              	.LASF3:
+ 458 0115 73686F72 		.ascii	"short unsigned int\000"
+ 458      7420756E 
+ 458      7369676E 
+ 458      65642069 
+ 458      6E7400
+ 459              	.LASF7:
+ 460 0128 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 460      206C6F6E 
+ 460      6720756E 
+ 460      7369676E 
+ 460      65642069 
+ 461              	.LASF1:
+ 462 013f 756E7369 		.ascii	"unsigned char\000"
+ 462      676E6564 
+ 462      20636861 
+ 462      7200
+ 463              	.LASF22:
+ 464 014d 443A5C4F 		.ascii	"D:\\OneDrive - Aarhus Universitet\\Aarhus Universit"
+ 464      6E654472 
+ 464      69766520 
+ 464      2D204161 
+ 464      72687573 
+ 465 017e 65745C45 		.ascii	"et\\E3\\E3PRJ\\Dokumenter\\Design\\PSoCcontroller\\"
+ 465      335C4533 
+ 465      50524A5C 
+ 465      446F6B75 
+ 465      6D656E74 
+ 466 01ab 50536F43 		.ascii	"PSoCcontroller\\PSoCcontroller.cydsn\000"
+ 466      636F6E74 
+ 466      726F6C6C 
+ 466      65725C50 
+ 466      536F4363 
+ 467              	.LASF13:
+ 468 01cf 63686172 		.ascii	"char\000"
+ 468      00
+ 469              	.LASF4:
+ 470 01d4 6C6F6E67 		.ascii	"long int\000"
+ 470      20696E74 
+ 470      00
+ 471              	.LASF2:
+ 472 01dd 73686F72 		.ascii	"short int\000"
+ 472      7420696E 
+ 472      7400
+ 473              	.LASF12:
+ 474 01e7 646F7562 		.ascii	"double\000"
+ 474      6C6500
+ 475              	.LASF24:
+ 476 01ee 4D6F6973 		.ascii	"MoistureSensor_getResult\000"
+ 476      74757265 
+ 476      53656E73 
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 11
+
+
+ 476      6F725F67 
+ 476      65745265 
+ 477              	.LASF23:
+ 478 0207 4D6F6973 		.ascii	"MoistureSensor_init\000"
+ 478      74757265 
+ 478      53656E73 
+ 478      6F725F69 
+ 478      6E697400 
+ 479              	.LASF25:
+ 480 021b 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 480      52784275 
+ 480      66666572 
+ 480      00
+ 481              	.LASF0:
+ 482 0228 7369676E 		.ascii	"signed char\000"
+ 482      65642063 
+ 482      68617200 
+ 483              	.LASF14:
+ 484 0234 6C6F6E67 		.ascii	"long double\000"
+ 484      20646F75 
+ 484      626C6500 
+ 485              	.LASF9:
+ 486 0240 5F5F696E 		.ascii	"__int32_t\000"
+ 486      7433325F 
+ 486      7400
+ 487              	.LASF11:
+ 488 024a 666C6F61 		.ascii	"float\000"
+ 488      7400
+ 489              	.LASF17:
+ 490 0250 4144435F 		.ascii	"ADC_Moisture_StartConvert\000"
+ 490      4D6F6973 
+ 490      74757265 
+ 490      5F537461 
+ 490      7274436F 
+ 491              	.LASF10:
+ 492 026a 696E7433 		.ascii	"int32_t\000"
+ 492      325F7400 
+ 493              	.LASF15:
+ 494 0272 73697A65 		.ascii	"sizetype\000"
+ 494      74797065 
+ 494      00
+ 495              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
