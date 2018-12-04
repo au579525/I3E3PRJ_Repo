@@ -1,0 +1,1 @@
+cmd_/home/stud/Desktop/projekt/I3E3PRJ_Repo/SPI_kode_RPI/spi_drv/built-in.o :=  rm -f /home/stud/Desktop/projekt/I3E3PRJ_Repo/SPI_kode_RPI/spi_drv/built-in.o; arm-poky-linux-gnueabi-ar rcSTPD /home/stud/Desktop/projekt/I3E3PRJ_Repo/SPI_kode_RPI/spi_drv/built-in.o

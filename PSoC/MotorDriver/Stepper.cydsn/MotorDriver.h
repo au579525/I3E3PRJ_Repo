@@ -9,21 +9,25 @@
  *
  * ========================================
 */
-#include <stdio.h>
 #include <project.h>
+#include <stdlib.h>
+#include <math.h>
+
 #define TIME 15
 
 enum state {NORTH, EAST, SOUTH, WEST};  //Steppermotorcoils 4 positioner
 
-int stepperPosition;
-enum state stepperState;
+int stepperPositionX;
+uint8 timerDoneFlag;
+enum state stepperStateX;
 
-void init();
-int getPosition();
-void rotateClockwise();
-void rotateCounterClockwise();
-void moveStep();
-void moveDegrees(int deg);
-void resetPosition();
+CY_ISR_PROTO(stepper_isr_handler);
+
+void initX();
+static void rotateClockwiseX();
+static void rotateCounterClockwiseX();
+static void moveStepX();
+void moveDegreesX(int deg);
+static void resetPositionX();
 
 /* [] END OF FILE */

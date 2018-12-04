@@ -1,0 +1,1 @@
+cmd_/home/stud/i3hal_e2018_halhjertet_indsats/Exercise7/spi_drv/built-in.o :=  rm -f /home/stud/i3hal_e2018_halhjertet_indsats/Exercise7/spi_drv/built-in.o; arm-poky-linux-gnueabi-ar rcSTPD /home/stud/i3hal_e2018_halhjertet_indsats/Exercise7/spi_drv/built-in.o

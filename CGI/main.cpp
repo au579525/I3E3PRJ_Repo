@@ -9,7 +9,7 @@ using namespace cgicc;
 
 int main()
 {
-    fileaccess* file;
+    fileaccess* file = nullptr;
     try{
         Cgicc cgiccreq;
 

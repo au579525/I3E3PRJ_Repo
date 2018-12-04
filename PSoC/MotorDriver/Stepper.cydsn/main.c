@@ -10,38 +10,41 @@
  * ========================================
 */
 #include "project.h"
+#include "MotorDriver.h"
 
-#define TIME 15
+CY_ISR_PROTO(uart_isr_handler);
+
+uint8 moveFlag = 0;
 
 int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */
+    UART_1_Start();
+    uart_isr_StartEx( uart_isr_handler );
+    
+    initX();
 
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-    Pin_1_Write(0);
-    Pin_2_Write(0);
 
-    while(Pin_3_Read() == 0) {
-        Pin_1_Write(1);
-        CyDelay(TIME);
-        Pin_2_Write(1);
-        CyDelay(TIME);
-        Pin_1_Write(0);
-        CyDelay(TIME);
-        Pin_2_Write(0);
-        CyDelay(TIME);
-    }
+    
     for(;;)
     {
-        
-        Pin_1_Write(1);
-        CyDelay(TIME);
-        Pin_2_Write(1);
-        CyDelay(TIME);
-        Pin_1_Write(0);
-        CyDelay(TIME);
-        Pin_2_Write(0);
-        CyDelay(TIME);
+        if (moveFlag == 1) {
+            moveDegreesX(90);
+            moveFlag = 0;
+        }
+    }
+}
+
+CY_ISR( uart_isr_handler ){
+    switch(UART_1_ReadRxData()) {
+        case 1:
+            moveFlag = 1;
+            break;
+        case 2:
+            moveFlag = ;
+        default:
+            break;
     }
 }
 
