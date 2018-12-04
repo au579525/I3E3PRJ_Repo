@@ -174,6 +174,8 @@ static void __exit spi_drv_exit(void)
   class_destroy(spi_drv_class);
   cdev_del(&spi_drv_cdev);
   unregister_chrdev(MAJOR(devno), "spi_drv");
+  gpio_free(GPIO_NUM);
+  free_irq(IRQ_NUM, NULL);
 }
 
 /*
