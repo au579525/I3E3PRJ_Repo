@@ -13,6 +13,50 @@
 
 osapi::Mutex mut;
 
+//I Denne funktion skal tilføjes logging funktioner i stedet for cout
+void SPI_req_function::run(){
+  while(1){
+
+    unsigned int data;
+    FILE * fp;
+    fp = fopen("/dev/spi_drv0","r");
+
+    fscanf(fp,"%d",&data);
+    mut.lock();
+
+    switch (data) {
+      case 'a':
+        unsigned int x,y;
+        std::cout << "due skudt" << '\n';
+        freopen("/dev/spi_drv0","r", fp);
+        fscanf(fp,"%d",&x);//Her læses ingen værdi ud,
+        freopen("/dev/spi_drv0","r", fp);
+        fscanf(fp,"%d",&y);//og ventes ikke på interrupt
+
+        std::cout << "Duens position var X:" << x << " Y:" << y << '\n';
+        break;
+      case 'b':
+        std::cout << " due detekteret " << '\n';
+        break;
+      case 'c':
+        std::cout << "lavt vand" << '\n';
+        break;
+      case 'd':
+        std::cout << "vand tømt" << '\n';
+        break;
+      case 'e':
+        std::cout << "blomster vandet" << '\n';
+        break;
+      default:
+        std::cout << "message from PSoC was misunderstood" << '\n';
+        std::cout << data << std::endl;
+        break;
+    }
+    fclose(fp);
+    mut.unlock();
+  }
+}
+
 void SPI_Set_normal_mode(){
   FILE * fp;
 

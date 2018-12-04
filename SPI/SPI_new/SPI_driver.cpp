@@ -65,6 +65,7 @@ private:
       mut.unlock();
     }
   }
+
 };
 
 class main_thread : public osapi::ThreadFunctor{

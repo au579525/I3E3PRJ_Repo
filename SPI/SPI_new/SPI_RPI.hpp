@@ -23,3 +23,12 @@ void SPI_move_down();
 void SPI_start_shooting();
 
 void SPI_stop_shooting();
+
+class spi_req_function : public osapi::ThreadFunctor{
+
+public:
+  spi_req_function(){};
+
+private:
+  void run();
+};
