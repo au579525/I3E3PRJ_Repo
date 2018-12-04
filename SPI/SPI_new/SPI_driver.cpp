@@ -43,8 +43,9 @@ private:
         case 'a':
           unsigned int x,y;
           std::cout << "due skudt" << '\n';
+          fp = freopen("/dev/spi_drv0","r");
           fscanf(fp,"%d",&x);//Her læses ingen værdi ud,
-
+          fp = freopen("/dev/spi_drv0","r");
           fscanf(fp,"%d",&y);//og ventes ikke på interrupt
 
           std::cout << "Duens position var X:" << x << " Y:" << y << '\n';
@@ -70,7 +71,6 @@ private:
       fclose(fp);
       std::cout << err << std::endl;
       mut.unlock();
-      //fclose(fd);
     }
   }
 };
@@ -84,12 +84,12 @@ public:
 private:
   void run(){
     int fd;
-    char data; //<------- Issues here, no way to send over an integer over 9.
+    char data; //<------- Issues heropene, no way to send over an integer over 9.
 
     while(1){
       std::cout<<"run 1"<<std::endl;
       mut.lock();
-      fd = open("/dev/spi_drv0",O_RDWR);
+      fd = fopen("/dev/spi_drv0","w");
       std::cout<<"run 2"<<std::endl;
       std::cout << "in main_thread" << '\n';
       std::cout<<"run 3"<<std::endl;
@@ -105,7 +105,7 @@ private:
       std::cout<<"run 9"<<std::endl;
       std::cout << "data written" << '\n';
       std::cout<<"run 10"<<std::endl;
-      //close(fd);
+      fclose(fd):
       mut.unlock();
       std::cout<<"run done"<<std::endl;
       std::cout << "sleep startet" << '\n';
