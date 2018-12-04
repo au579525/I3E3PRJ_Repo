@@ -1,10 +1,10 @@
 # Quick and dirty (does not handle changes in h-file)
-ifndef Target
-Target=host
+ifndef TARGET
+TARGET=target
 endif
 
 #IF Target is host set compiler and BUILD_DIR
-ifeq (${Target},host)
+ifeq (${TARGET},host)
 CXX = g++
 BUILD_DIR = host
 endif
