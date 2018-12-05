@@ -1,6 +1,5 @@
-#pragma once
-
 #include "Fileaccess.hpp"
+#include "modes.hpp"
 #include <stdio.h>
 #include <iostream>
 #include <stdlib.h>
@@ -14,26 +13,9 @@
 #include <osapi/Utility.hpp>
 #include <osapi/Mutex.hpp>
 
-class modes{
-public:
-  void SPI_Set_normal_mode();
-  void SPI_Set_normal_mode();
-  void SPI_Set_Manual_mode();
-  void SPI_Set_PowerSaving_mode();
-  void SPI_Set_Standby_mode();
-  void SPI_Set_AutomaticWatering_mode();
-  void SPI_move_left();
-  void SPI_move_right();
-  void SPI_move_up();
-  void SPI_move_down();
-  void SPI_start_shooting();
-  void SPI_stop_shooting();
-private:
-
-}
 
 
-class spi_req_function : public osapi::ThreadFunctor{
+class spi_req_function : public osapi::ThreadFunctor, public modes{
 
 public:
   spi_req_function(Fileaccess *);
@@ -43,7 +25,7 @@ private:
   void run();
 };
 
-class queue_thread : public osapi::ThreadFunctor{
+class queue_thread : public osapi::ThreadFunctor, public modes{
 
 public:
   queue_thread(Fileaccess *);
