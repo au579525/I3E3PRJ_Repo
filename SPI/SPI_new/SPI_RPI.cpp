@@ -51,7 +51,7 @@ void spi_req_function::run(){
   }
 }
 
-void SPI_Set_normal_mode(){
+void modes::SPI_Set_normal_mode(){
   FILE * fp;
 
   mut.lock();
@@ -63,7 +63,7 @@ void SPI_Set_normal_mode(){
   mut.unlock();
 }
 
-void SPI_Set_Manual_mode(){
+void modes::SPI_Set_Manual_mode(){
   FILE * fp;
 
   mut.lock();
@@ -75,7 +75,7 @@ void SPI_Set_Manual_mode(){
   mut.unlock();
 }
 
-void SPI_Set_PowerSaving_mode(){
+void modes::SPI_Set_PowerSaving_mode(){
   FILE * fp;
 
   mut.lock();
@@ -87,7 +87,7 @@ void SPI_Set_PowerSaving_mode(){
   mut.unlock();
 }
 
-void SPI_Set_Standby_mode(){
+void modes::SPI_Set_Standby_mode(){
   FILE * fp;
 
   mut.lock();
@@ -99,7 +99,7 @@ void SPI_Set_Standby_mode(){
   mut.unlock();
 }
 
-void SPI_Set_AutomaticWatering_mode(){
+void modes::SPI_Set_AutomaticWatering_mode(){
   FILE * fp;
 
   mut.lock();
@@ -111,7 +111,7 @@ void SPI_Set_AutomaticWatering_mode(){
   mut.unlock();
 }
 
-void SPI_move_left(){
+void modes::SPI_move_left(){
   FILE * fp;
 
   mut.lock();
@@ -123,7 +123,7 @@ void SPI_move_left(){
   mut.unlock();
 }
 
-void SPI_move_right(){
+void modes::SPI_move_right(){
   FILE * fp;
 
   mut.lock();
@@ -135,7 +135,7 @@ void SPI_move_right(){
   mut.unlock();
 }
 
-void SPI_move_up(){
+void modes::SPI_move_up(){
   FILE * fp;
 
   mut.lock();
@@ -147,7 +147,7 @@ void SPI_move_up(){
   mut.unlock();
 }
 
-void SPI_move_down(){
+void modes::SPI_move_down(){
   FILE * fp;
 
   mut.lock();
@@ -159,7 +159,7 @@ void SPI_move_down(){
   mut.unlock();
 }
 
-void SPI_start_shooting(){
+void modes::SPI_start_shooting(){
   FILE * fp;
 
   mut.lock();
@@ -171,7 +171,7 @@ void SPI_start_shooting(){
   mut.unlock();
 }
 
-void SPI_stop_shooting(){
+void modes::SPI_stop_shooting(){
   FILE * fp;
 
   mut.lock();
