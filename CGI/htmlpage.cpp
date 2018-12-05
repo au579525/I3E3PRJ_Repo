@@ -127,7 +127,9 @@ void htmlpage::log(vector<string> logfile){
     cout << "<pre class=\"clear\" id=\"log-content\">" << endl;
 
     //interate over lines in logfile and print out
-    for(std::vector<string>::iterator it = logfile.begin(); it != logfile.end(); ++it){
+    int i = 0;
+    for(std::vector<string>::reverse_iterator it = logfile.rbegin(); it != logfile.rend() && i<50 ; ++it){
+        i++;
         cout << *it << endl;
     }
 

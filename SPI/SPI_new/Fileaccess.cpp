@@ -49,6 +49,7 @@ void Fileaccess::set_mode(string mode){
      if(file.is_open()){
        file << mode;
      }
+     log("Systemmode changed to: " + mode);
 }
 
 void Fileaccess::set_AutomaticWatering_mode(){
@@ -67,10 +68,12 @@ void Fileaccess::set_AutomaticWatering_mode(){
     filewrite.open(path + "watermode", ios::trunc);
     if(filewrite.is_open()){
       if(enabled){
-        filewrite << "enabled";
+        filewrite << "disabled";
+        log("Automatic watering disabled");
       }
       else{
-        filewrite << "disabled";
+        filewrite << "enabled";
+        log("Automatic watering enabled");
       }
     }
 }
@@ -78,10 +81,12 @@ void Fileaccess::set_AutomaticWatering_mode(){
 void Fileaccess::log(string message){
       ofstream file;
       file.open(path + "log", ios::app);
-      time_t curtime;
-      time(&curtime);
+      char timestring[1000];
+      time_t t = time(NULL);
+      struct tm * p = localtime(&t);
+      strftime(timestring, 1000, "%D, %R", p);
       if(file.is_open()){
-        file << ctime(&curtime) << ": " << message << endl;
+        file << timestring << ": " << message << endl;
       }
 }
 
@@ -92,5 +97,9 @@ vector<string> Fileaccess::getQueue(){
     for(string line; getline(file, line);){
       queue.push_back(line);
     }
+    file.close();
+    ofstream filedl;
+    filedl.open(path + "queue", ios::trunc);
+    filedl.close();
     return queue;
 }

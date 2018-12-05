@@ -45,7 +45,8 @@ function manual(enable){
 		element.classList.remove("hide");
 	}
 	else{
-		if(element.classList.contains("hide"))
-		element.classList.add("hide");
+		if(!element.classList.contains("hide")){
+            element.classList.add("hide");
+        }
 	}
 }

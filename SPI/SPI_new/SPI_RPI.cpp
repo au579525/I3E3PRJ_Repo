@@ -193,43 +193,54 @@ void modes::SPI_stop_shooting(){
       std::vector<string> v = fileac->getQueue();
       if(!v.empty()){
         for(std::vector<string>::iterator it = v.begin(); it != v.end(); ++it){
+
           if(string(*it).find("systemmode") != std::string::npos){
             if(string(*it).find("normal") != std::string::npos){
               SPI_Set_normal_mode();
+              fileac->set_mode("normal");
             }
             else if (string(*it).find("manual") != std::string::npos) {
               SPI_Set_Manual_mode();
+              fileac->set_mode("manual");
             }
             else if (string(*it).find("standby") != std::string::npos) {
               SPI_Set_Standby_mode();
+              fileac->set_mode("standby");
             }
             else if (string(*it).find("powersaving") != std::string::npos) {
               SPI_Set_PowerSaving_mode();
+              fileac->set_mode("powersaving");
             }
           }
           else if (string(*it).find("watermode") != std::string::npos) {
             SPI_Set_AutomaticWatering_mode();
+            fileac->set_AutomaticWatering_mode();
           }
           else if (string(*it).find("manualcontrol") != std::string::npos){
             if(string(*it).find("up") != std::string::npos){
               SPI_move_up();
+              fileac->log("Manual: cannon moved up");
             }
             else if (string(*it).find("down") != std::string::npos) {
               SPI_move_down();
+              fileac->log("Manual: cannon moved down");
             }
             else if (string(*it).find("left") != std::string::npos) {
               SPI_move_left();
+              fileac->log("Manual: cannon moved left");
             }
             else if (string(*it).find("right") != std::string::npos) {
               SPI_move_right();
+              fileac->log("Manual: cannon moved right");
             }
             else if (string(*it).find("shoot") != std::string::npos) {
               SPI_start_shooting();
+              fileac->log("Manual: shoot");
             }
           }
         }
       }
-      osapi::sleep(5000);
+      osapi::sleep(50);
     }
   }
 
