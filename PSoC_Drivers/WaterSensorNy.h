@@ -10,8 +10,9 @@ int WaSensMeasure()
 {
     ADC_SAR_WaSens_StartConvert();
     // OBS - værdier skal omkalibreres når kredsløb er færdigt
-    double Factor1 = -0.6984;
-    double Offset1 = 740;
+    double Factor1 = 0.000297;
+    double Factor2 = -2.579;
+    double Offset1 = 5783;
     uint16_t result;
     uint16_t result2;
     
