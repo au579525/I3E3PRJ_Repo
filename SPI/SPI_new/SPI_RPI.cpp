@@ -1,22 +1,15 @@
 #include "SPI_RPI.hpp"
-#include <stdio.h>
-#include <iostream>
-#include <stdlib.h>
-#include <string.h>
-#include <fcntl.h>
-#include <unistd.h>
-
-#include <osapi/Thread.hpp>
-#include <osapi/ThreadFunctor.hpp>
-#include <osapi/Utility.hpp>
-#include <osapi/Mutex.hpp>
 
 osapi::Mutex mut;
 
 //I Denne funktion skal tilføjes logging funktioner i stedet for cout
-void SPI_req_function::run(){
-  while(1){
+  spi_req_function::spi_req_function(Fileaccess * _fileac){
+    fileac = _fileac;
+  }
 
+void spi_req_function::run(){
+  while(1){
+    ostringstream output;
     unsigned int data;
     FILE * fp;
     fp = fopen("/dev/spi_drv0","r");
@@ -27,29 +20,30 @@ void SPI_req_function::run(){
     switch (data) {
       case 'a':
         unsigned int x,y;
-        std::cout << "due skudt" << '\n';
+        fileac->log("due skudt");
         freopen("/dev/spi_drv0","r", fp);
         fscanf(fp,"%d",&x);//Her læses ingen værdi ud,
         freopen("/dev/spi_drv0","r", fp);
         fscanf(fp,"%d",&y);//og ventes ikke på interrupt
-
-        std::cout << "Duens position var X:" << x << " Y:" << y << '\n';
+        output << "Duens position var X:" << x << " Y:" << y;
+        fileac->log(output.str());
         break;
       case 'b':
-        std::cout << " due detekteret " << '\n';
+        fileac->log("due detekteret");
         break;
       case 'c':
-        std::cout << "lavt vand" << '\n';
+        fileac->log("lavt vand");
         break;
       case 'd':
-        std::cout << "vand tømt" << '\n';
+        fileac->log("vand tømt");
         break;
       case 'e':
-        std::cout << "blomster vandet" << '\n';
+        fileac->log("blomster vandet");
         break;
       default:
-        std::cout << "message from PSoC was misunderstood" << '\n';
-        std::cout << data << std::endl;
+        fileac->log("message from PSoC was misunderstood");
+        output << data;
+        fileac->log(output.str());
         break;
     }
     fclose(fp);
@@ -63,19 +57,7 @@ void SPI_Set_normal_mode(){
   mut.lock();
 
   fp = fopen("/dev/spi_drv0","w");
-  int err = fputc('A', fp);
-  fclose(fp);
-
-  mut.unlock();
-}
-
-void SPI_Set_normal_mode(){
-  FILE * fp;
-
-  mut.lock();
-
-  fp = fopen("/dev/spi_drv0","w");
-  int err = fputc('A', fp);
+  fputc('A', fp);
   fclose(fp);
 
   mut.unlock();
@@ -87,7 +69,7 @@ void SPI_Set_Manual_mode(){
   mut.lock();
 
   fp = fopen("/dev/spi_drv0","w");
-  int err = fputc('B', fp);
+  fputc('B', fp);
   fclose(fp);
 
   mut.unlock();
@@ -99,7 +81,7 @@ void SPI_Set_PowerSaving_mode(){
   mut.lock();
 
   fp = fopen("/dev/spi_drv0","w");
-  int err = fputc('C', fp);
+  fputc('C', fp);
   fclose(fp);
 
   mut.unlock();
@@ -111,7 +93,7 @@ void SPI_Set_Standby_mode(){
   mut.lock();
 
   fp = fopen("/dev/spi_drv0","w");
-  int err = fputc('D', fp);
+  fputc('D', fp);
   fclose(fp);
 
   mut.unlock();
@@ -123,7 +105,7 @@ void SPI_Set_AutomaticWatering_mode(){
   mut.lock();
 
   fp = fopen("/dev/spi_drv0","w");
-  int err = fputc('E', fp);
+  fputc('E', fp);
   fclose(fp);
 
   mut.unlock();
@@ -135,7 +117,7 @@ void SPI_move_left(){
   mut.lock();
 
   fp = fopen("/dev/spi_drv0","w");
-  int err = fputc('F', fp);
+  fputc('F', fp);
   fclose(fp);
 
   mut.unlock();
@@ -147,7 +129,7 @@ void SPI_move_right(){
   mut.lock();
 
   fp = fopen("/dev/spi_drv0","w");
-  int err = fputc('G', fp);
+  fputc('G', fp);
   fclose(fp);
 
   mut.unlock();
@@ -159,7 +141,7 @@ void SPI_move_up(){
   mut.lock();
 
   fp = fopen("/dev/spi_drv0","w");
-  int err = fputc('H', fp);
+  fputc('H', fp);
   fclose(fp);
 
   mut.unlock();
@@ -171,7 +153,7 @@ void SPI_move_down(){
   mut.lock();
 
   fp = fopen("/dev/spi_drv0","w");
-  int err = fputc('I', fp);
+  fputc('I', fp);
   fclose(fp);
 
   mut.unlock();
@@ -183,7 +165,7 @@ void SPI_start_shooting(){
   mut.lock();
 
   fp = fopen("/dev/spi_drv0","w");
-  int err = fputc('J', fp);
+  fputc('J', fp);
   fclose(fp);
 
   mut.unlock();
@@ -195,8 +177,85 @@ void SPI_stop_shooting(){
   mut.lock();
 
   fp = fopen("/dev/spi_drv0","w");
-  int err = fputc('K', fp);
+  fputc('K', fp);
   fclose(fp);
 
   mut.unlock();
+}
+
+  queue_thread::queue_thread(Fileaccess * _fileac){
+    fileac = _fileac;
+  }
+
+  void queue_thread::run(){
+
+    while(1){
+      std::vector<string> v = fileac->getQueue();
+      if(!v.empty()){
+        for(std::vector<string>::iterator it = v.begin(); it != v.end(); ++it){
+          if(string(*it).find("systemmode") != std::string::npos){
+            if(string(*it).find("normal") != std::string::npos){
+              SPI_Set_normal_mode();
+            }
+            else if (string(*it).find("manual") != std::string::npos) {
+              SPI_Set_Manual_mode();
+            }
+            else if (string(*it).find("standby") != std::string::npos) {
+              SPI_Set_Standby_mode();
+            }
+            else if (string(*it).find("powersaving") != std::string::npos) {
+              SPI_Set_PowerSaving_mode();
+            }
+          }
+          else if (string(*it).find("watermode") != std::string::npos) {
+            SPI_Set_AutomaticWatering_mode();
+          }
+          else if (string(*it).find("manualcontrol") != std::string::npos){
+            if(string(*it).find("up") != std::string::npos){
+              SPI_move_up();
+            }
+            else if (string(*it).find("down") != std::string::npos) {
+              SPI_move_down();
+            }
+            else if (string(*it).find("left") != std::string::npos) {
+              SPI_move_left();
+            }
+            else if (string(*it).find("right") != std::string::npos) {
+              SPI_move_right();
+            }
+            else if (string(*it).find("shoot") != std::string::npos) {
+              SPI_start_shooting();
+            }
+          }
+        }
+      }
+      osapi::sleep(5000);
+    }
+  }
+
+int main()
+{
+  try
+{
+  Fileaccess f;
+
+  spi_req_function spi_req_f(&f);
+  queue_thread queue_t(&f);
+
+  osapi::Thread p(&spi_req_f);
+  osapi::Thread t(&queue_t);
+
+  p.start();
+  t.start();
+
+  p.join();
+  t.join();
+}
+catch (std::exception& e)
+{
+  std::cout<<"error found: " << e.what() << '\n';
+}
+
+
+  return 0;
 }

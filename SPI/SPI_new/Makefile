@@ -15,7 +15,7 @@ CXX = arm-rpizw-g++
 BUILD_DIR = target
 endif
 
-SRCS=SPI_driver.cpp
+SRCS=SPI_RPI.cpp Fileaccess.cpp
 OBJS=$(SRCS:.cpp=.o)
 BASEPATH=/home/stud/apps/OSApi
 
