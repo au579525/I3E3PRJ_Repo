@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 1
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccTC3G9f.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 1
   42              		.size	MoistureSensor_init, .-MoistureSensor_init
   43              		.section	.text.MoistureSensor_getResult,"ax",%progbits
   44              		.align	2
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 2
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccTC3G9f.s 			page 2
 
 
   45              		.global	MoistureSensor_getResult
@@ -117,8 +117,8 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 1
   90 000c 45000000 		.4byte	.LASF20
   91 0010 0C       		.byte	0xc
   92 0011 0E000000 		.4byte	.LASF21
-  93 0015 4D010000 		.4byte	.LASF22
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 3
+  93 0015 52010000 		.4byte	.LASF22
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccTC3G9f.s 			page 3
 
 
   94 0019 00000000 		.4byte	.Ldebug_ranges0+0
@@ -127,7 +127,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 1
   97 0025 02       		.uleb128 0x2
   98 0026 01       		.byte	0x1
   99 0027 06       		.byte	0x6
- 100 0028 28020000 		.4byte	.LASF0
+ 100 0028 14020000 		.4byte	.LASF0
  101 002c 02       		.uleb128 0x2
  102 002d 01       		.byte	0x1
  103 002e 08       		.byte	0x8
@@ -135,20 +135,20 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 1
  105 0033 02       		.uleb128 0x2
  106 0034 02       		.byte	0x2
  107 0035 05       		.byte	0x5
- 108 0036 DD010000 		.4byte	.LASF2
+ 108 0036 C9010000 		.4byte	.LASF2
  109 003a 02       		.uleb128 0x2
  110 003b 02       		.byte	0x2
  111 003c 07       		.byte	0x7
  112 003d 15010000 		.4byte	.LASF3
  113 0041 03       		.uleb128 0x3
- 114 0042 40020000 		.4byte	.LASF9
+ 114 0042 2C020000 		.4byte	.LASF9
  115 0046 02       		.byte	0x2
  116 0047 3F       		.byte	0x3f
  117 0048 4C000000 		.4byte	0x4c
  118 004c 02       		.uleb128 0x2
  119 004d 04       		.byte	0x4
  120 004e 05       		.byte	0x5
- 121 004f D4010000 		.4byte	.LASF4
+ 121 004f C0010000 		.4byte	.LASF4
  122 0053 02       		.uleb128 0x2
  123 0054 04       		.byte	0x4
  124 0055 07       		.byte	0x7
@@ -170,35 +170,35 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 1
  140 0071 07       		.byte	0x7
  141 0072 1F000000 		.4byte	.LASF8
  142 0076 03       		.uleb128 0x3
- 143 0077 6A020000 		.4byte	.LASF10
+ 143 0077 56020000 		.4byte	.LASF10
  144 007b 03       		.byte	0x3
  145 007c 2C       		.byte	0x2c
  146 007d 41000000 		.4byte	0x41
  147 0081 02       		.uleb128 0x2
  148 0082 04       		.byte	0x4
  149 0083 04       		.byte	0x4
- 150 0084 4A020000 		.4byte	.LASF11
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 4
+ 150 0084 36020000 		.4byte	.LASF11
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccTC3G9f.s 			page 4
 
 
  151 0088 02       		.uleb128 0x2
  152 0089 08       		.byte	0x8
  153 008a 04       		.byte	0x4
- 154 008b E7010000 		.4byte	.LASF12
+ 154 008b D3010000 		.4byte	.LASF12
  155 008f 02       		.uleb128 0x2
  156 0090 01       		.byte	0x1
  157 0091 08       		.byte	0x8
- 158 0092 CF010000 		.4byte	.LASF13
+ 158 0092 4D010000 		.4byte	.LASF13
  159 0096 02       		.uleb128 0x2
  160 0097 08       		.byte	0x8
  161 0098 04       		.byte	0x4
- 162 0099 34020000 		.4byte	.LASF14
+ 162 0099 20020000 		.4byte	.LASF14
  163 009d 02       		.uleb128 0x2
  164 009e 04       		.byte	0x4
  165 009f 07       		.byte	0x7
- 166 00a0 72020000 		.4byte	.LASF15
+ 166 00a0 5E020000 		.4byte	.LASF15
  167 00a4 05       		.uleb128 0x5
- 168 00a5 07020000 		.4byte	.LASF23
+ 168 00a5 F3010000 		.4byte	.LASF23
  169 00a9 01       		.byte	0x1
  170 00aa 0C       		.byte	0xc
  171 00ab 00000000 		.4byte	.LFB63
@@ -211,7 +211,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 1
  178 00be 13010000 		.4byte	0x113
  179 00c2 00       		.byte	0
  180 00c3 07       		.uleb128 0x7
- 181 00c4 EE010000 		.4byte	.LASF24
+ 181 00c4 DA010000 		.4byte	.LASF24
  182 00c8 01       		.byte	0x1
  183 00c9 10       		.byte	0x10
  184 00ca 68000000 		.4byte	0x68
@@ -238,10 +238,10 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 1
  205 00fd 34010000 		.4byte	0x134
  206 0101 00       		.byte	0
  207 0102 0A       		.uleb128 0xa
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 5
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccTC3G9f.s 			page 5
 
 
- 208 0103 1B020000 		.4byte	.LASF25
+ 208 0103 07020000 		.4byte	.LASF25
  209 0107 05       		.byte	0x5
  210 0108 1207     		.2byte	0x712
  211 010a 0E010000 		.4byte	0x10e
@@ -253,8 +253,8 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 1
  217 011c 04       		.byte	0x4
  218 011d 34       		.byte	0x34
  219 011e 0C       		.uleb128 0xc
- 220 011f 50020000 		.4byte	.LASF17
- 221 0123 50020000 		.4byte	.LASF17
+ 220 011f 3C020000 		.4byte	.LASF17
+ 221 0123 3C020000 		.4byte	.LASF17
  222 0127 04       		.byte	0x4
  223 0128 D1       		.byte	0xd1
  224 0129 0C       		.uleb128 0xc
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 1
  262 0019 0B       		.uleb128 0xb
  263 001a 03       		.uleb128 0x3
  264 001b 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 6
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccTC3G9f.s 			page 6
 
 
  265 001c 00       		.byte	0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 1
  319 0055 11       		.uleb128 0x11
  320 0056 01       		.uleb128 0x1
  321 0057 31       		.uleb128 0x31
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 7
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccTC3G9f.s 			page 7
 
 
  322 0058 13       		.uleb128 0x13
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 1
  376 0094 0E       		.uleb128 0xe
  377 0095 3A       		.uleb128 0x3a
  378 0096 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 8
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccTC3G9f.s 			page 8
 
 
  379 0097 3B       		.uleb128 0x3b
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 1
  433 000c 16000000 		.4byte	.LFE64
  434 0010 00000000 		.4byte	0
  435 0014 00000000 		.4byte	0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 9
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccTC3G9f.s 			page 9
 
 
  436              		.section	.debug_line,"",%progbits
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 1
  454      74757265 
  454      5F497345 
  454      6E64436F 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 10
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccTC3G9f.s 			page 10
 
 
  455              	.LASF16:
@@ -564,82 +564,81 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 1
  462      676E6564 
  462      20636861 
  462      7200
- 463              	.LASF22:
- 464 014d 443A5C4F 		.ascii	"D:\\OneDrive - Aarhus Universitet\\Aarhus Universit"
- 464      6E654472 
- 464      69766520 
- 464      2D204161 
- 464      72687573 
- 465 017e 65745C45 		.ascii	"et\\E3\\E3PRJ\\Dokumenter\\Design\\PSoCcontroller\\"
- 465      335C4533 
- 465      50524A5C 
- 465      446F6B75 
- 465      6D656E74 
- 466 01ab 50536F43 		.ascii	"PSoCcontroller\\PSoCcontroller.cydsn\000"
- 466      636F6E74 
- 466      726F6C6C 
- 466      65725C50 
- 466      536F4363 
- 467              	.LASF13:
- 468 01cf 63686172 		.ascii	"char\000"
- 468      00
+ 463              	.LASF13:
+ 464 014d 63686172 		.ascii	"char\000"
+ 464      00
+ 465              	.LASF22:
+ 466 0152 443A5C4F 		.ascii	"D:\\OneDrive - Aarhus Universitet\\Aarhus Universit"
+ 466      6E654472 
+ 466      69766520 
+ 466      2D204161 
+ 466      72687573 
+ 467 0183 65745C45 		.ascii	"et\\E3\\E3PRJ\\I3E3PRJ_Repo\\PSoCcontroller\\PSoCco"
+ 467      335C4533 
+ 467      50524A5C 
+ 467      49334533 
+ 467      50524A5F 
+ 468 01b1 6E74726F 		.ascii	"ntroller.cydsn\000"
+ 468      6C6C6572 
+ 468      2E637964 
+ 468      736E00
  469              	.LASF4:
- 470 01d4 6C6F6E67 		.ascii	"long int\000"
+ 470 01c0 6C6F6E67 		.ascii	"long int\000"
  470      20696E74 
  470      00
  471              	.LASF2:
- 472 01dd 73686F72 		.ascii	"short int\000"
+ 472 01c9 73686F72 		.ascii	"short int\000"
  472      7420696E 
  472      7400
  473              	.LASF12:
- 474 01e7 646F7562 		.ascii	"double\000"
+ 474 01d3 646F7562 		.ascii	"double\000"
  474      6C6500
  475              	.LASF24:
- 476 01ee 4D6F6973 		.ascii	"MoistureSensor_getResult\000"
+ 476 01da 4D6F6973 		.ascii	"MoistureSensor_getResult\000"
  476      74757265 
  476      53656E73 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc0BnvFl.s 			page 11
-
-
  476      6F725F67 
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccTC3G9f.s 			page 11
+
+
  476      65745265 
  477              	.LASF23:
- 478 0207 4D6F6973 		.ascii	"MoistureSensor_init\000"
+ 478 01f3 4D6F6973 		.ascii	"MoistureSensor_init\000"
  478      74757265 
  478      53656E73 
  478      6F725F69 
  478      6E697400 
  479              	.LASF25:
- 480 021b 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 480 0207 49544D5F 		.ascii	"ITM_RxBuffer\000"
  480      52784275 
  480      66666572 
  480      00
  481              	.LASF0:
- 482 0228 7369676E 		.ascii	"signed char\000"
+ 482 0214 7369676E 		.ascii	"signed char\000"
  482      65642063 
  482      68617200 
  483              	.LASF14:
- 484 0234 6C6F6E67 		.ascii	"long double\000"
+ 484 0220 6C6F6E67 		.ascii	"long double\000"
  484      20646F75 
  484      626C6500 
  485              	.LASF9:
- 486 0240 5F5F696E 		.ascii	"__int32_t\000"
+ 486 022c 5F5F696E 		.ascii	"__int32_t\000"
  486      7433325F 
  486      7400
  487              	.LASF11:
- 488 024a 666C6F61 		.ascii	"float\000"
+ 488 0236 666C6F61 		.ascii	"float\000"
  488      7400
  489              	.LASF17:
- 490 0250 4144435F 		.ascii	"ADC_Moisture_StartConvert\000"
+ 490 023c 4144435F 		.ascii	"ADC_Moisture_StartConvert\000"
  490      4D6F6973 
  490      74757265 
  490      5F537461 
  490      7274436F 
  491              	.LASF10:
- 492 026a 696E7433 		.ascii	"int32_t\000"
+ 492 0256 696E7433 		.ascii	"int32_t\000"
  492      325F7400 
  493              	.LASF15:
- 494 0272 73697A65 		.ascii	"sizetype\000"
+ 494 025e 73697A65 		.ascii	"sizetype\000"
  494      74797065 
  494      00
  495              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

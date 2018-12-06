@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 1
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc76miDY.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 1
   28:Generated_Source\PSoC5/Echo_1.c **** *
   29:Generated_Source\PSoC5/Echo_1.c **** * \brief Writes the value to the physical port (data output register), masking
   30:Generated_Source\PSoC5/Echo_1.c **** *  and shifting the bits appropriately. 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 2
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc76miDY.s 			page 2
 
 
   31:Generated_Source\PSoC5/Echo_1.c **** *
@@ -112,13 +112,13 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 1
   46              	.L3:
   47              		.align	2
   48              	.L2:
-  49 0014 00510040 		.word	1073762560
+  49 0014 10510040 		.word	1073762576
   50              		.cfi_endproc
   51              	.LFE0:
   52              		.size	Echo_1_Write, .-Echo_1_Write
   53              		.section	.text.Echo_1_SetDriveMode,"ax",%progbits
   54              		.align	2
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 3
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc76miDY.s 			page 3
 
 
   55              		.global	Echo_1_SetDriveMode
@@ -177,8 +177,8 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 1
   76              	.L6:
   77 0012 00BF     		.align	2
   78              	.L5:
-  79 0014 05500040 		.word	1073762309
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 4
+  79 0014 0D500040 		.word	1073762317
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc76miDY.s 			page 4
 
 
   80              		.cfi_endproc
@@ -230,7 +230,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 1
  102              	.L9:
  103 000a 00BF     		.align	2
  104              	.L8:
- 105 000c 01510040 		.word	1073762561
+ 105 000c 11510040 		.word	1073762577
  106              		.cfi_endproc
  107              	.LFE2:
  108              		.size	Echo_1_Read, .-Echo_1_Read
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 1
  110              		.align	2
  111              		.global	Echo_1_ReadDataReg
  112              		.thumb
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 5
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc76miDY.s 			page 5
 
 
  113              		.thumb_func
@@ -287,7 +287,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 1
  128              	.L12:
  129 000a 00BF     		.align	2
  130              	.L11:
- 131 000c 00510040 		.word	1073762560
+ 131 000c 10510040 		.word	1073762576
  132              		.cfi_endproc
  133              	.LFE3:
  134              		.size	Echo_1_ReadDataReg, .-Echo_1_ReadDataReg
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 1
  139              	.Ldebug_info0:
  140 0000 1B010000 		.4byte	0x11b
  141 0004 0400     		.2byte	0x4
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 6
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc76miDY.s 			page 6
 
 
  142 0006 00000000 		.4byte	.Ldebug_abbrev0
@@ -306,15 +306,15 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 1
  144 000b 01       		.uleb128 0x1
  145 000c 52000000 		.4byte	.LASF20
  146 0010 0C       		.byte	0xc
- 147 0011 85010000 		.4byte	.LASF21
- 148 0015 A5010000 		.4byte	.LASF22
+ 147 0011 F3010000 		.4byte	.LASF21
+ 148 0015 48010000 		.4byte	.LASF22
  149 0019 00000000 		.4byte	.Ldebug_ranges0+0
  150 001d 00000000 		.4byte	0
  151 0021 00000000 		.4byte	.Ldebug_line0
  152 0025 02       		.uleb128 0x2
  153 0026 01       		.byte	0x1
  154 0027 06       		.byte	0x6
- 155 0028 79010000 		.4byte	.LASF0
+ 155 0028 E7010000 		.4byte	.LASF0
  156 002c 02       		.uleb128 0x2
  157 002d 01       		.byte	0x1
  158 002e 08       		.byte	0x8
@@ -322,7 +322,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 1
  160 0033 02       		.uleb128 0x2
  161 0034 02       		.byte	0x2
  162 0035 05       		.byte	0x5
- 163 0036 60010000 		.4byte	.LASF2
+ 163 0036 CE010000 		.4byte	.LASF2
  164 003a 02       		.uleb128 0x2
  165 003b 02       		.byte	0x2
  166 003c 07       		.byte	0x7
@@ -330,7 +330,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 1
  168 0041 02       		.uleb128 0x2
  169 0042 04       		.byte	0x4
  170 0043 05       		.byte	0x5
- 171 0044 70010000 		.4byte	.LASF4
+ 171 0044 DE010000 		.4byte	.LASF4
  172 0048 02       		.uleb128 0x2
  173 0049 04       		.byte	0x4
  174 004a 07       		.byte	0x7
@@ -338,7 +338,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 1
  176 004f 02       		.uleb128 0x2
  177 0050 08       		.byte	0x8
  178 0051 05       		.byte	0x5
- 179 0052 4D010000 		.4byte	.LASF6
+ 179 0052 BB010000 		.4byte	.LASF6
  180 0056 02       		.uleb128 0x2
  181 0057 08       		.byte	0x8
  182 0058 07       		.byte	0x7
@@ -352,13 +352,13 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 1
  190 0066 07       		.byte	0x7
  191 0067 24010000 		.4byte	.LASF8
  192 006b 04       		.uleb128 0x4
- 193 006c 6A010000 		.4byte	.LASF12
+ 193 006c D8010000 		.4byte	.LASF12
  194 0070 02       		.byte	0x2
  195 0071 E401     		.2byte	0x1e4
  196 0073 2C000000 		.4byte	0x2c
  197 0077 02       		.uleb128 0x2
  198 0078 04       		.byte	0x4
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 7
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc76miDY.s 			page 7
 
 
  199 0079 04       		.byte	0x4
@@ -370,7 +370,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 1
  205 0085 02       		.uleb128 0x2
  206 0086 01       		.byte	0x1
  207 0087 08       		.byte	0x8
- 208 0088 5B010000 		.4byte	.LASF11
+ 208 0088 C9010000 		.4byte	.LASF11
  209 008c 04       		.uleb128 0x4
  210 008d E0000000 		.4byte	.LASF13
  211 0091 02       		.byte	0x2
@@ -411,14 +411,14 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 1
  246 00df 9C       		.byte	0x9c
  247 00e0 F4000000 		.4byte	0xf4
  248 00e4 07       		.uleb128 0x7
- 249 00e5 48010000 		.4byte	.LASF17
+ 249 00e5 B6010000 		.4byte	.LASF17
  250 00e9 01       		.byte	0x1
  251 00ea 5A       		.byte	0x5a
  252 00eb 6B000000 		.4byte	0x6b
  253 00ef 21000000 		.4byte	.LLST1
  254 00f3 00       		.byte	0
  255 00f4 09       		.uleb128 0x9
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 8
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc76miDY.s 			page 8
 
 
  256 00f5 14000000 		.4byte	.LASF18
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 1
  310 0022 0B       		.uleb128 0xb
  311 0023 3E       		.uleb128 0x3e
  312 0024 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 9
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc76miDY.s 			page 9
 
 
  313 0025 03       		.uleb128 0x3
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 1
  367 005c 3A       		.uleb128 0x3a
  368 005d 0B       		.uleb128 0xb
  369 005e 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 10
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc76miDY.s 			page 10
 
 
  370 005f 0B       		.uleb128 0xb
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 1
  424 000a 50       		.byte	0x50
  425 000b 0A000000 		.4byte	.LVL2
  426 000f 18000000 		.4byte	.LFE0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 11
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc76miDY.s 			page 11
 
 
  427 0013 0400     		.2byte	0x4
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 1
  480      02004300 
  480      00000201 
  480      FB0E0D00 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 12
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc76miDY.s 			page 12
 
 
  480      01010101 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 1
  502      6420696E 
  502      7400
  503              	.LASF19:
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 13
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc76miDY.s 			page 13
 
 
  504 00f7 4563686F 		.ascii	"Echo_1_ReadDataReg\000"
@@ -746,55 +746,54 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 1
  512      6720756E 
  512      7369676E 
  512      65642069 
- 513              	.LASF17:
- 514 0148 6D6F6465 		.ascii	"mode\000"
- 514      00
- 515              	.LASF6:
- 516 014d 6C6F6E67 		.ascii	"long long int\000"
- 516      206C6F6E 
- 516      6720696E 
- 516      7400
- 517              	.LASF11:
- 518 015b 63686172 		.ascii	"char\000"
+ 513              	.LASF22:
+ 514 0148 443A5C4F 		.ascii	"D:\\OneDrive - Aarhus Universitet\\Aarhus Universit"
+ 514      6E654472 
+ 514      69766520 
+ 514      2D204161 
+ 514      72687573 
+ 515 0179 65745C45 		.ascii	"et\\E3\\E3PRJ\\I3E3PRJ_Repo\\PSoCcontroller\\PSoCco"
+ 515      335C4533 
+ 515      50524A5C 
+ 515      49334533 
+ 515      50524A5F 
+ 516 01a7 6E74726F 		.ascii	"ntroller.cydsn\000"
+ 516      6C6C6572 
+ 516      2E637964 
+ 516      736E00
+ 517              	.LASF17:
+ 518 01b6 6D6F6465 		.ascii	"mode\000"
  518      00
- 519              	.LASF2:
- 520 0160 73686F72 		.ascii	"short int\000"
- 520      7420696E 
+ 519              	.LASF6:
+ 520 01bb 6C6F6E67 		.ascii	"long long int\000"
+ 520      206C6F6E 
+ 520      6720696E 
  520      7400
- 521              	.LASF12:
- 522 016a 75696E74 		.ascii	"uint8\000"
- 522      3800
- 523              	.LASF4:
- 524 0170 6C6F6E67 		.ascii	"long int\000"
- 524      20696E74 
- 524      00
- 525              	.LASF0:
- 526 0179 7369676E 		.ascii	"signed char\000"
- 526      65642063 
- 526      68617200 
- 527              	.LASF21:
- 528 0185 47656E65 		.ascii	"Generated_Source\\PSoC5\\Echo_1.c\000"
- 528      72617465 
- 528      645F536F 
- 528      75726365 
- 528      5C50536F 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cclkBPZA.s 			page 14
+ 521              	.LASF11:
+ 522 01c9 63686172 		.ascii	"char\000"
+ 522      00
+ 523              	.LASF2:
+ 524 01ce 73686F72 		.ascii	"short int\000"
+ 524      7420696E 
+ 524      7400
+ 525              	.LASF12:
+ 526 01d8 75696E74 		.ascii	"uint8\000"
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc76miDY.s 			page 14
 
 
- 529              	.LASF22:
- 530 01a5 443A5C4F 		.ascii	"D:\\OneDrive - Aarhus Universitet\\Aarhus Universit"
- 530      6E654472 
- 530      69766520 
- 530      2D204161 
- 530      72687573 
- 531 01d6 65745C45 		.ascii	"et\\E3\\E3PRJ\\Dokumenter\\Design\\PSoCcontroller\\"
- 531      335C4533 
- 531      50524A5C 
- 531      446F6B75 
- 531      6D656E74 
- 532 0203 50536F43 		.ascii	"PSoCcontroller\\PSoCcontroller.cydsn\000"
- 532      636F6E74 
- 532      726F6C6C 
- 532      65725C50 
- 532      536F4363 
+ 526      3800
+ 527              	.LASF4:
+ 528 01de 6C6F6E67 		.ascii	"long int\000"
+ 528      20696E74 
+ 528      00
+ 529              	.LASF0:
+ 530 01e7 7369676E 		.ascii	"signed char\000"
+ 530      65642063 
+ 530      68617200 
+ 531              	.LASF21:
+ 532 01f3 47656E65 		.ascii	"Generated_Source\\PSoC5\\Echo_1.c\000"
+ 532      72617465 
+ 532      645F536F 
+ 532      75726365 
+ 532      5C50536F 
  533              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

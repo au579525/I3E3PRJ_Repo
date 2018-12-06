@@ -6,7 +6,7 @@
 
 #Build Date:         Dec  5 2017 15:35:27
 
-#File Generated:     Dec 4 2018 23:31:00
+#File Generated:     Dec 6 2018 01:11:06
 
 #Purpose:            
 
@@ -93,9 +93,9 @@ Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:   3.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyPLL_OUT            | Frequency: N/A       | Target:  24.0 MHz
-Clock: SPI_1_IntClock       | Frequency:  56.8 MHz | Target:   2.0 MHz
+Clock: SPI_1_IntClock       | Frequency:  90.3 MHz | Target:   2.0 MHz
 Clock: Slave_clk(0)_PAD     | Frequency:  41.7 MHz | Target:   0.1 MHz
-Clock: UART_1_IntClock      | Frequency:  57.2 MHz | Target:   0.5 MHz
+Clock: UART_1_IntClock      | Frequency:  49.6 MHz | Target:   0.5 MHz
 
 ======================================================================
                      End of Clock Summary
@@ -116,19 +116,19 @@ Clock: Clock_1              | Frequency:  59.7 MHz | Target:   0.0 MHz
 Clock: Clock_2              | Frequency: N/A       | Target:   0.5 MHz
 Clock: Clock_2(fixed-function) | Frequency: N/A       | Target:   0.5 MHz
 Clock: Clock_3              | Frequency:  77.2 MHz | Target:   1.0 MHz
-Clock: CyBUS_CLK            | Frequency:   2.9 MHz | Target:  24.0 MHz
+Clock: CyBUS_CLK            | Frequency:   2.8 MHz | Target:  24.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:   3.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyPLL_OUT            | Frequency: N/A       | Target:  24.0 MHz
-Clock: SPI_1_IntClock       | Frequency:  59.2 MHz | Target:   2.0 MHz
+Clock: SPI_1_IntClock       | Frequency:  85.5 MHz | Target:   2.0 MHz
 Clock: Slave_clk(0)_PAD     | Frequency:  41.7 MHz | Target:   0.1 MHz
-Clock: UART_1_IntClock      | Frequency:   2.9 MHz | Target:   0.5 MHz
+Clock: UART_1_IntClock      | Frequency:   2.8 MHz | Target:   0.5 MHz
 
 ======================================================================
                      End of Clock Summary
 ######################################################################
-D2088: Phase 7, elapsed time : 0.4 (sec)
+D2088: Phase 7, elapsed time : 0.2 (sec)
 
 Final Design Statistics
     Number of Combinational MCs 	:	21
@@ -167,14 +167,14 @@ Clock: Clock_1              | Frequency:  59.7 MHz | Target:   0.0 MHz
 Clock: Clock_2              | Frequency: N/A       | Target:   0.5 MHz
 Clock: Clock_2(fixed-function) | Frequency: N/A       | Target:   0.5 MHz
 Clock: Clock_3              | Frequency:  77.2 MHz | Target:   1.0 MHz
-Clock: CyBUS_CLK            | Frequency:   2.9 MHz | Target:  24.0 MHz
+Clock: CyBUS_CLK            | Frequency:   2.8 MHz | Target:  24.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:   3.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyPLL_OUT            | Frequency: N/A       | Target:  24.0 MHz
-Clock: SPI_1_IntClock       | Frequency:  59.2 MHz | Target:   2.0 MHz
+Clock: SPI_1_IntClock       | Frequency:  85.5 MHz | Target:   2.0 MHz
 Clock: Slave_clk(0)_PAD     | Frequency:  41.7 MHz | Target:   0.1 MHz
-Clock: UART_1_IntClock      | Frequency:   2.9 MHz | Target:   0.5 MHz
+Clock: UART_1_IntClock      | Frequency:   2.8 MHz | Target:   0.5 MHz
 
 ======================================================================
                      End of Clock Summary
@@ -201,13 +201,13 @@ Clock: ADC_SAR_WaSens_theACLK(fixed-function) | Frequency: N/A       | Target:  
 Clock: Clock_1              | Frequency:  59.7 MHz | Target:   0.0 MHz
 Clock: Clock_2              | Frequency: N/A       | Target:   0.5 MHz
 Clock: Clock_2(fixed-function) | Frequency: N/A       | Target:   0.5 MHz
-Clock: Clock_3              | Frequency:  77.2 MHz | Target:   1.0 MHz
+Clock: Clock_3              | Frequency:  48.5 MHz | Target:   1.0 MHz
 Clock: CyBUS_CLK            | Frequency:   2.8 MHz | Target:  24.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:   3.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyPLL_OUT            | Frequency: N/A       | Target:  24.0 MHz
-Clock: SPI_1_IntClock       | Frequency:  56.8 MHz | Target:   2.0 MHz
+Clock: SPI_1_IntClock       | Frequency:  72.5 MHz | Target:   2.0 MHz
 Clock: Slave_clk(0)_PAD     | Frequency:  41.7 MHz | Target:   0.1 MHz
 Clock: UART_1_IntClock      | Frequency:   2.8 MHz | Target:   0.5 MHz
 
@@ -226,18 +226,18 @@ Clock: ADC_Moisture_theACLK | Frequency: N/A       | Target:  12.0 MHz
 Clock: ADC_Moisture_theACLK(fixed-function) | Frequency: N/A       | Target:  12.0 MHz
 Clock: ADC_SAR_WaSens_theACLK | Frequency: N/A       | Target:  12.0 MHz
 Clock: ADC_SAR_WaSens_theACLK(fixed-function) | Frequency: N/A       | Target:  12.0 MHz
-Clock: Clock_1              | Frequency:  51.4 MHz | Target:   0.0 MHz
+Clock: Clock_1              | Frequency:  53.1 MHz | Target:   0.0 MHz
 Clock: Clock_2              | Frequency: N/A       | Target:   0.5 MHz
 Clock: Clock_2(fixed-function) | Frequency: N/A       | Target:   0.5 MHz
-Clock: Clock_3              | Frequency:  77.2 MHz | Target:   1.0 MHz
-Clock: CyBUS_CLK            | Frequency:   2.8 MHz | Target:  24.0 MHz
+Clock: Clock_3              | Frequency:  64.8 MHz | Target:   1.0 MHz
+Clock: CyBUS_CLK            | Frequency:   2.9 MHz | Target:  24.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:   3.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyPLL_OUT            | Frequency: N/A       | Target:  24.0 MHz
 Clock: SPI_1_IntClock       | Frequency:  86.0 MHz | Target:   2.0 MHz
 Clock: Slave_clk(0)_PAD     | Frequency:  41.7 MHz | Target:   0.1 MHz
-Clock: UART_1_IntClock      | Frequency:   2.8 MHz | Target:   0.5 MHz
+Clock: UART_1_IntClock      | Frequency:   2.9 MHz | Target:   0.5 MHz
 
 ======================================================================
                      End of Clock Summary
@@ -277,7 +277,7 @@ Clock: ADC_Moisture_theACLK | Frequency: N/A       | Target:  12.0 MHz
 Clock: ADC_Moisture_theACLK(fixed-function) | Frequency: N/A       | Target:  12.0 MHz
 Clock: ADC_SAR_WaSens_theACLK | Frequency: N/A       | Target:  12.0 MHz
 Clock: ADC_SAR_WaSens_theACLK(fixed-function) | Frequency: N/A       | Target:  12.0 MHz
-Clock: Clock_1              | Frequency:  48.6 MHz | Target:   0.0 MHz
+Clock: Clock_1              | Frequency:  59.7 MHz | Target:   0.0 MHz
 Clock: Clock_2              | Frequency: N/A       | Target:   0.5 MHz
 Clock: Clock_2(fixed-function) | Frequency: N/A       | Target:   0.5 MHz
 Clock: Clock_3              | Frequency:  85.3 MHz | Target:   1.0 MHz
@@ -286,8 +286,8 @@ Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:   3.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyPLL_OUT            | Frequency: N/A       | Target:  24.0 MHz
-Clock: SPI_1_IntClock       | Frequency:  78.6 MHz | Target:   2.0 MHz
-Clock: Slave_clk(0)_PAD     | Frequency:  39.9 MHz | Target:   0.1 MHz
+Clock: SPI_1_IntClock       | Frequency:  86.0 MHz | Target:   2.0 MHz
+Clock: Slave_clk(0)_PAD     | Frequency:  35.8 MHz | Target:   0.1 MHz
 Clock: UART_1_IntClock      | Frequency:   3.1 MHz | Target:   0.5 MHz
 
 ======================================================================
@@ -299,5 +299,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 2.3 sec.
+I2076: Total run-time: 2.1 sec.
 

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc6SURD7.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
   28:Generated_Source\PSoC5/PWM_WaSens_PM.c **** *  Saves the current user configuration of the component.
   29:Generated_Source\PSoC5/PWM_WaSens_PM.c **** *
   30:Generated_Source\PSoC5/PWM_WaSens_PM.c **** * Parameters:
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 2
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc6SURD7.s 			page 2
 
 
   31:Generated_Source\PSoC5/PWM_WaSens_PM.c **** *  None
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
   64:Generated_Source\PSoC5/PWM_WaSens_PM.c ****             PWM_WaSens_backup.PWMControlRegister = PWM_WaSens_ReadControlRegister();
   49              		.loc 1 64 0
   50 0016 FFF7FEFF 		bl	PWM_WaSens_ReadControlRegister
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 3
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc6SURD7.s 			page 3
 
 
   51              	.LVL2:
@@ -128,7 +128,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
   55 001e 00BF     		.align	2
   56              	.L3:
   57 0020 00000000 		.word	.LANCHOR0
-  58 0024 8B640040 		.word	1073767563
+  58 0024 83640040 		.word	1073767555
   59              		.cfi_endproc
   60              	.LFE0:
   61              		.size	PWM_WaSens_SaveConfig, .-PWM_WaSens_SaveConfig
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
   92:Generated_Source\PSoC5/PWM_WaSens_PM.c ****                 PWM_WaSens_WritePeriod(PWM_WaSens_backup.PWMPeriod);
   78              		.loc 1 92 0
   79 0002 074C     		ldr	r4, .L7
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 4
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc6SURD7.s 			page 4
 
 
   80 0004 A078     		ldrb	r0, [r4, #2]	@ zero_extendqisi2
@@ -220,7 +220,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
   97 001e 00BF     		.align	2
   98              	.L7:
   99 0020 00000000 		.word	.LANCHOR0
- 100 0024 8B640040 		.word	1073767563
+ 100 0024 83640040 		.word	1073767555
  101              		.cfi_endproc
  102              	.LFE1:
  103              		.size	PWM_WaSens_RestoreConfig, .-PWM_WaSens_RestoreConfig
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
  115:Generated_Source\PSoC5/PWM_WaSens_PM.c **** 
  116:Generated_Source\PSoC5/PWM_WaSens_PM.c **** 
  117:Generated_Source\PSoC5/PWM_WaSens_PM.c **** /*******************************************************************************
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 5
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc6SURD7.s 			page 5
 
 
  118:Generated_Source\PSoC5/PWM_WaSens_PM.c **** * Function Name: PWM_WaSens_Sleep
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
  148:Generated_Source\PSoC5/PWM_WaSens_PM.c ****         }
  149:Generated_Source\PSoC5/PWM_WaSens_PM.c ****     #endif /* (PWM_WaSens_UseControl) */
  150:Generated_Source\PSoC5/PWM_WaSens_PM.c **** 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 6
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc6SURD7.s 			page 6
 
 
  151:Generated_Source\PSoC5/PWM_WaSens_PM.c ****     /* Stop component */
@@ -316,7 +316,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
  143              	.L14:
  144              		.align	2
  145              	.L13:
- 146 0024 7B640040 		.word	1073767547
+ 146 0024 73640040 		.word	1073767539
  147 0028 00000000 		.word	.LANCHOR0
  148              		.cfi_endproc
  149              	.LFE2:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
  161              		@ args = 0, pretend = 0, frame = 0
  162              		@ frame_needed = 0, uses_anonymous_args = 0
  163 0000 08B5     		push	{r3, lr}
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 7
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc6SURD7.s 			page 7
 
 
  164              		.cfi_def_cfa_offset 8
@@ -412,17 +412,17 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
  204 000c 6E000000 		.4byte	.LASF34
  205 0010 0C       		.byte	0xc
  206 0011 3B010000 		.4byte	.LASF35
- 207 0015 EA020000 		.4byte	.LASF36
+ 207 0015 E7010000 		.4byte	.LASF36
  208 0019 00000000 		.4byte	.Ldebug_ranges0+0
  209 001d 00000000 		.4byte	0
  210 0021 00000000 		.4byte	.Ldebug_line0
  211 0025 02       		.uleb128 0x2
  212 0026 01       		.byte	0x1
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 8
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc6SURD7.s 			page 8
 
 
  213 0027 06       		.byte	0x6
- 214 0028 9A020000 		.4byte	.LASF0
+ 214 0028 08030000 		.4byte	.LASF0
  215 002c 02       		.uleb128 0x2
  216 002d 01       		.byte	0x1
  217 002e 08       		.byte	0x8
@@ -438,7 +438,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
  227 0041 02       		.uleb128 0x2
  228 0042 04       		.byte	0x4
  229 0043 05       		.byte	0x5
- 230 0044 67020000 		.4byte	.LASF4
+ 230 0044 D5020000 		.4byte	.LASF4
  231 0048 02       		.uleb128 0x2
  232 0049 04       		.byte	0x4
  233 004a 07       		.byte	0x7
@@ -446,7 +446,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
  235 004f 02       		.uleb128 0x2
  236 0050 08       		.byte	0x8
  237 0051 05       		.byte	0x5
- 238 0052 01020000 		.4byte	.LASF6
+ 238 0052 6F020000 		.4byte	.LASF6
  239 0056 02       		.uleb128 0x2
  240 0057 08       		.byte	0x8
  241 0058 07       		.byte	0x7
@@ -475,10 +475,10 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
  264 0085 02       		.uleb128 0x2
  265 0086 01       		.byte	0x1
  266 0087 08       		.byte	0x8
- 267 0088 26020000 		.4byte	.LASF11
+ 267 0088 94020000 		.4byte	.LASF11
  268 008c 04       		.uleb128 0x4
- 269 008d E7010000 		.4byte	.LASF13
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 9
+ 269 008d 55020000 		.4byte	.LASF13
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc6SURD7.s 			page 9
 
 
  270 0091 02       		.byte	0x2
@@ -489,11 +489,11 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
  275 009d 02       		.uleb128 0x2
  276 009e 08       		.byte	0x8
  277 009f 04       		.byte	0x4
- 278 00a0 EC010000 		.4byte	.LASF14
+ 278 00a0 5A020000 		.4byte	.LASF14
  279 00a4 02       		.uleb128 0x2
  280 00a5 04       		.byte	0x4
  281 00a6 07       		.byte	0x7
- 282 00a7 F8010000 		.4byte	.LASF15
+ 282 00a7 66020000 		.4byte	.LASF15
  283 00ab 06       		.uleb128 0x6
  284 00ac 05       		.byte	0x5
  285 00ad 03       		.byte	0x3
@@ -518,7 +518,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
  304 00d2 6B000000 		.4byte	0x6b
  305 00d6 02       		.byte	0x2
  306 00d7 07       		.uleb128 0x7
- 307 00d8 D7020000 		.4byte	.LASF19
+ 307 00d8 45030000 		.4byte	.LASF19
  308 00dc 03       		.byte	0x3
  309 00dd 76       		.byte	0x76
  310 00de 6B000000 		.4byte	0x6b
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
  324 00fb 09       		.uleb128 0x9
  325 00fc 62010000 		.4byte	.LASF22
  326 0100 01       		.byte	0x1
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 10
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc6SURD7.s 			page 10
 
 
  327 0101 2A       		.byte	0x2a
@@ -558,7 +558,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
  341 0127 D4010000 		.4byte	0x1d4
  342 012b 00       		.byte	0
  343 012c 09       		.uleb128 0x9
- 344 012d 3C020000 		.4byte	.LASF23
+ 344 012d AA020000 		.4byte	.LASF23
  345 0131 01       		.byte	0x1
  346 0132 58       		.byte	0x58
  347 0133 00000000 		.4byte	.LFB1
@@ -577,7 +577,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
  360 0158 F5010000 		.4byte	0x1f5
  361 015c 00       		.byte	0
  362 015d 09       		.uleb128 0x9
- 363 015e 2B020000 		.4byte	.LASF24
+ 363 015e 99020000 		.4byte	.LASF24
  364 0162 01       		.byte	0x1
  365 0163 88       		.byte	0x88
  366 0164 00000000 		.4byte	.LFB2
@@ -593,12 +593,12 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
  376 0180 FB000000 		.4byte	0xfb
  377 0184 00       		.byte	0
  378 0185 09       		.uleb128 0x9
- 379 0186 88020000 		.4byte	.LASF25
+ 379 0186 F6020000 		.4byte	.LASF25
  380 018a 01       		.byte	0x1
  381 018b B2       		.byte	0xb2
  382 018c 00000000 		.4byte	.LFB3
  383 0190 18000000 		.4byte	.LFE3-.LFB3
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 11
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc6SURD7.s 			page 11
 
 
  384 0194 01       		.uleb128 0x1
@@ -612,7 +612,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
  392 01a8 0B020000 		.4byte	0x20b
  393 01ac 00       		.byte	0
  394 01ad 0B       		.uleb128 0xb
- 395 01ae 55020000 		.4byte	.LASF37
+ 395 01ae C3020000 		.4byte	.LASF37
  396 01b2 01       		.byte	0x1
  397 01b3 14       		.byte	0x14
  398 01b4 F0000000 		.4byte	0xf0
@@ -630,18 +630,18 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
  410 01d2 03       		.byte	0x3
  411 01d3 B3       		.byte	0xb3
  412 01d4 0C       		.uleb128 0xc
- 413 01d5 B8020000 		.4byte	.LASF28
- 414 01d9 B8020000 		.4byte	.LASF28
+ 413 01d5 26030000 		.4byte	.LASF28
+ 414 01d9 26030000 		.4byte	.LASF28
  415 01dd 03       		.byte	0x3
  416 01de 9D       		.byte	0x9d
  417 01df 0C       		.uleb128 0xc
- 418 01e0 0F020000 		.4byte	.LASF29
- 419 01e4 0F020000 		.4byte	.LASF29
+ 418 01e0 7D020000 		.4byte	.LASF29
+ 419 01e4 7D020000 		.4byte	.LASF29
  420 01e8 03       		.byte	0x3
  421 01e9 BE       		.byte	0xbe
  422 01ea 0C       		.uleb128 0xc
- 423 01eb 70020000 		.4byte	.LASF30
- 424 01ef 70020000 		.4byte	.LASF30
+ 423 01eb DE020000 		.4byte	.LASF30
+ 424 01ef DE020000 		.4byte	.LASF30
  425 01f3 03       		.byte	0x3
  426 01f4 BA       		.byte	0xba
  427 01f5 0C       		.uleb128 0xc
@@ -655,10 +655,10 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
  435 0209 03       		.byte	0x3
  436 020a 93       		.byte	0x93
  437 020b 0C       		.uleb128 0xc
- 438 020c A6020000 		.4byte	.LASF33
- 439 0210 A6020000 		.4byte	.LASF33
+ 438 020c 14030000 		.4byte	.LASF33
+ 439 0210 14030000 		.4byte	.LASF33
  440 0214 03       		.byte	0x3
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 12
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc6SURD7.s 			page 12
 
 
  441 0215 DB       		.byte	0xdb
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
  495 0032 49       		.uleb128 0x49
  496 0033 13       		.uleb128 0x13
  497 0034 00       		.byte	0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 13
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc6SURD7.s 			page 13
 
 
  498 0035 00       		.byte	0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
  552 006b 03       		.uleb128 0x3
  553 006c 0E       		.uleb128 0xe
  554 006d 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 14
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc6SURD7.s 			page 14
 
 
  555 006e 0B       		.uleb128 0xb
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
  609 00a7 3B       		.uleb128 0x3b
  610 00a8 0B       		.uleb128 0xb
  611 00a9 00       		.byte	0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 15
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc6SURD7.s 			page 15
 
 
  612 00aa 00       		.byte	0
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
  654      7420756E 
  654      7369676E 
  654      65642069 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 16
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc6SURD7.s 			page 16
 
 
  654      6E7400
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
  674      645F536F 
  674      75726365 
  674      5C50536F 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 17
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc6SURD7.s 			page 17
 
 
  675              	.LASF22:
@@ -1002,107 +1002,106 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 1
  690      6720756E 
  690      7369676E 
  690      65642069 
- 691              	.LASF13:
- 692 01e7 72656738 		.ascii	"reg8\000"
- 692      00
- 693              	.LASF14:
- 694 01ec 6C6F6E67 		.ascii	"long double\000"
- 694      20646F75 
- 694      626C6500 
- 695              	.LASF15:
- 696 01f8 73697A65 		.ascii	"sizetype\000"
- 696      74797065 
+ 691              	.LASF36:
+ 692 01e7 443A5C4F 		.ascii	"D:\\OneDrive - Aarhus Universitet\\Aarhus Universit"
+ 692      6E654472 
+ 692      69766520 
+ 692      2D204161 
+ 692      72687573 
+ 693 0218 65745C45 		.ascii	"et\\E3\\E3PRJ\\I3E3PRJ_Repo\\PSoCcontroller\\PSoCco"
+ 693      335C4533 
+ 693      50524A5C 
+ 693      49334533 
+ 693      50524A5F 
+ 694 0246 6E74726F 		.ascii	"ntroller.cydsn\000"
+ 694      6C6C6572 
+ 694      2E637964 
+ 694      736E00
+ 695              	.LASF13:
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc6SURD7.s 			page 18
+
+
+ 696 0255 72656738 		.ascii	"reg8\000"
  696      00
- 697              	.LASF6:
- 698 0201 6C6F6E67 		.ascii	"long long int\000"
- 698      206C6F6E 
- 698      6720696E 
- 698      7400
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 18
-
-
- 699              	.LASF29:
- 700 020f 50574D5F 		.ascii	"PWM_WaSens_WritePeriod\000"
- 700      57615365 
- 700      6E735F57 
- 700      72697465 
- 700      50657269 
- 701              	.LASF11:
- 702 0226 63686172 		.ascii	"char\000"
- 702      00
- 703              	.LASF24:
- 704 022b 50574D5F 		.ascii	"PWM_WaSens_Sleep\000"
+ 697              	.LASF14:
+ 698 025a 6C6F6E67 		.ascii	"long double\000"
+ 698      20646F75 
+ 698      626C6500 
+ 699              	.LASF15:
+ 700 0266 73697A65 		.ascii	"sizetype\000"
+ 700      74797065 
+ 700      00
+ 701              	.LASF6:
+ 702 026f 6C6F6E67 		.ascii	"long long int\000"
+ 702      206C6F6E 
+ 702      6720696E 
+ 702      7400
+ 703              	.LASF29:
+ 704 027d 50574D5F 		.ascii	"PWM_WaSens_WritePeriod\000"
  704      57615365 
- 704      6E735F53 
- 704      6C656570 
- 704      00
- 705              	.LASF23:
- 706 023c 50574D5F 		.ascii	"PWM_WaSens_RestoreConfig\000"
- 706      57615365 
- 706      6E735F52 
- 706      6573746F 
- 706      7265436F 
- 707              	.LASF37:
- 708 0255 50574D5F 		.ascii	"PWM_WaSens_backup\000"
+ 704      6E735F57 
+ 704      72697465 
+ 704      50657269 
+ 705              	.LASF11:
+ 706 0294 63686172 		.ascii	"char\000"
+ 706      00
+ 707              	.LASF24:
+ 708 0299 50574D5F 		.ascii	"PWM_WaSens_Sleep\000"
  708      57615365 
- 708      6E735F62 
- 708      61636B75 
- 708      7000
- 709              	.LASF4:
- 710 0267 6C6F6E67 		.ascii	"long int\000"
- 710      20696E74 
- 710      00
- 711              	.LASF30:
- 712 0270 50574D5F 		.ascii	"PWM_WaSens_WriteCounter\000"
+ 708      6E735F53 
+ 708      6C656570 
+ 708      00
+ 709              	.LASF23:
+ 710 02aa 50574D5F 		.ascii	"PWM_WaSens_RestoreConfig\000"
+ 710      57615365 
+ 710      6E735F52 
+ 710      6573746F 
+ 710      7265436F 
+ 711              	.LASF37:
+ 712 02c3 50574D5F 		.ascii	"PWM_WaSens_backup\000"
  712      57615365 
- 712      6E735F57 
- 712      72697465 
- 712      436F756E 
- 713              	.LASF25:
- 714 0288 50574D5F 		.ascii	"PWM_WaSens_Wakeup\000"
- 714      57615365 
- 714      6E735F57 
- 714      616B6575 
- 714      7000
- 715              	.LASF0:
- 716 029a 7369676E 		.ascii	"signed char\000"
- 716      65642063 
- 716      68617200 
- 717              	.LASF33:
- 718 02a6 50574D5F 		.ascii	"PWM_WaSens_Enable\000"
+ 712      6E735F62 
+ 712      61636B75 
+ 712      7000
+ 713              	.LASF4:
+ 714 02d5 6C6F6E67 		.ascii	"long int\000"
+ 714      20696E74 
+ 714      00
+ 715              	.LASF30:
+ 716 02de 50574D5F 		.ascii	"PWM_WaSens_WriteCounter\000"
+ 716      57615365 
+ 716      6E735F57 
+ 716      72697465 
+ 716      436F756E 
+ 717              	.LASF25:
+ 718 02f6 50574D5F 		.ascii	"PWM_WaSens_Wakeup\000"
  718      57615365 
- 718      6E735F45 
- 718      6E61626C 
- 718      6500
- 719              	.LASF28:
- 720 02b8 50574D5F 		.ascii	"PWM_WaSens_ReadControlRegister\000"
- 720      57615365 
- 720      6E735F52 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cceLwxsC.s 			page 19
+ 718      6E735F57 
+ 718      616B6575 
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc6SURD7.s 			page 19
 
 
- 720      65616443 
- 720      6F6E7472 
- 721              	.LASF19:
- 722 02d7 496E7465 		.ascii	"InterruptMaskValue\000"
- 722      72727570 
- 722      744D6173 
- 722      6B56616C 
- 722      756500
- 723              	.LASF36:
- 724 02ea 443A5C4F 		.ascii	"D:\\OneDrive - Aarhus Universitet\\Aarhus Universit"
- 724      6E654472 
- 724      69766520 
- 724      2D204161 
- 724      72687573 
- 725 031b 65745C45 		.ascii	"et\\E3\\E3PRJ\\Dokumenter\\Design\\PSoCcontroller\\"
- 725      335C4533 
- 725      50524A5C 
- 725      446F6B75 
- 725      6D656E74 
- 726 0348 50536F43 		.ascii	"PSoCcontroller\\PSoCcontroller.cydsn\000"
- 726      636F6E74 
- 726      726F6C6C 
- 726      65725C50 
- 726      536F4363 
+ 718      7000
+ 719              	.LASF0:
+ 720 0308 7369676E 		.ascii	"signed char\000"
+ 720      65642063 
+ 720      68617200 
+ 721              	.LASF33:
+ 722 0314 50574D5F 		.ascii	"PWM_WaSens_Enable\000"
+ 722      57615365 
+ 722      6E735F45 
+ 722      6E61626C 
+ 722      6500
+ 723              	.LASF28:
+ 724 0326 50574D5F 		.ascii	"PWM_WaSens_ReadControlRegister\000"
+ 724      57615365 
+ 724      6E735F52 
+ 724      65616443 
+ 724      6F6E7472 
+ 725              	.LASF19:
+ 726 0345 496E7465 		.ascii	"InterruptMaskValue\000"
+ 726      72727570 
+ 726      744D6173 
+ 726      6B56616C 
+ 726      756500
  727              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

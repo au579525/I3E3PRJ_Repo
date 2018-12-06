@@ -12,13 +12,12 @@
 #ifndef MOTORDRIVERY_H
 #define MOTORDRIVERY_H
         
-    #include <project.h>
+    #include "project.h"
     #include <stdlib.h>
     #include <math.h>
+    #include "MotorDriverX.h"
 
     #define MAX_STEPS_Y 200 //180 degrees (stepper is geared wrong)
-
-    enum state {NORTH, EAST, SOUTH, WEST};  //Steppermotorcoils 4 positioner
 
     int stepperPositionY;
     uint8 timerDoneFlagY;
@@ -27,11 +26,11 @@
     CY_ISR_PROTO(stepperY_isr_handler);
 
     void initStepperY();
-    static void rotateClockwiseY();
-    static void rotateCounterClockwiseY();
-    static void moveStepY();
+    void rotateClockwiseY();
+    void rotateCounterClockwiseY();
+    void moveStepY();
     void moveDegreesY(int deg);
-    static void resetPositionY();
+    void resetPositionY();
 
 #endif
 /* [] END OF FILE */

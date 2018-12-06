@@ -1,7 +1,6 @@
-C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\GFV\SPI kode\SPI_Lab2 - SLAVE\Design01.cydsn\Design01.cyprj|7e1fc31e-8881-4fdc-ae30-0c3239294401
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|1cf74602-b21a-4425-85f0-c6aeec0e9f4a
-C:\Users\midtg\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|7b17f321-2cb9-4315-9844-117589a052c1
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|ba65ae94-e5c0-45a1-b8e9-1fca65d155e6
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|c43c91bd-3023-4897-b800-ee4035330fae
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|c1466b94-56a0-4a3d-8aa2-6096d99f0134
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc3\AnalogDevice\PSoC35AnalogDevice.cylib\PSoC35AnalogDevice.cyprj|b933dd78-531a-401f-8ea7-c1d0e599c155
+C:\Users\Chris\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\I3E3PRJ_Repo\PSoC_Drivers\SPIDriver\Design01.cydsn\Design01.cyprj|7482aaaa-f6bc-4211-b3f2-1507a12f53fb
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|b4d23d3e-a133-4e72-9bc4-88e79ce5df3b
+C:\Users\Chris\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|c3b171d9-85a9-4d87-ab74-bae77c1ae1fa
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|bdb11976-0868-4687-8a9d-f92acba47d99
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|f32d803a-c3ec-4ff4-b14e-d0760c30b9c7
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|34d9088b-c3e8-408d-8d57-2624ccb971ef

@@ -10,7 +10,6 @@
  * ========================================
 */
 #include "MotorDriverY.h"
-#include <math.h>
 
 CY_ISR(stepperY_isr_handler) {
     Timer_StepperY_Stop();
@@ -27,7 +26,7 @@ void initStepperY() {
     resetPositionY();
 }
 
-static void rotateClockwiseY() {
+void rotateClockwiseY() {
     if(stepperStateY == WEST) { 
         stepperStateY = NORTH;
     }
@@ -40,7 +39,7 @@ static void rotateClockwiseY() {
     UART_1_PutString("Rotated clockwise once\n\r");
 }
 
-static void rotateCounterClockwiseY() {
+void rotateCounterClockwiseY() {
     if(stepperStateY == NORTH) {
         stepperStateY = WEST;
     }
@@ -51,7 +50,7 @@ static void rotateCounterClockwiseY() {
     --stepperPositionY;
 }
 
-static void moveStepY() {
+void moveStepY() {
     if(stepperStateY == NORTH) {
         Pin_Y1_Write(0);
         Pin_Y2_Write(0);
@@ -76,35 +75,35 @@ void moveDegreesY(int deg) { //Positivt antal grader skrives hvis armen skal kø
     float round1 = deg / 0.9; //Grader divideret med stepvinkel = antal steps der skal køres
     int steps = (int)round(round1); //Afrund antallet af steps
     
-    if(steps > 0) {
-        for(int i = 0; i < steps; i++) {
+    if(steps < 0) {
+        for(int i = 0; i > steps; i--) {
             Timer_StepperY_Start();
-//            UART_1_PutString("Starting timer\n\r");
+            UART_1_PutString("Starting timer\n\r");
             while(timerDoneFlagY == 0); //wait here
-            rotateClockwiseY();
+            rotateCounterClockwiseY();
             timerDoneFlagY = 0;
         }
     }
-    else if(steps < 0) {
-        if(steps < (stepperPositionY * -1)) {    //Hvis antallet af steps der skal køres tilbage er mere end vi kan køre, før proben rammes
-            resetPositionY();
+    else if(steps > 0) {
+        if(steps >= (stepperPositionY * -1)) {    //Hvis antallet af steps der skal køres tilbage er mere end vi kan køre, før proben rammes
+            UART_1_PutString("Moving too far dude\n\r");
         }
-        else if(steps > (stepperPositionY * -1)) {
-            for(int i = 0; i > steps; i--) {
+        else {
+            for(int i = 0; i < steps; i++) {
                 Timer_StepperY_Start();
                 while(timerDoneFlagY == 0);
-                rotateCounterClockwiseY();
+                rotateClockwiseY();
                 timerDoneFlagY = 0;
             }
         }
     }
 }
 
-static void resetPositionY() {
+void resetPositionY() {
     while(Pin_Y3_Read() == 1) {
         Timer_StepperY_Start();
         while(timerDoneFlagY == 0);
-        rotateCounterClockwiseY();
+        rotateClockwiseY();
         timerDoneFlagY = 0;
     }
     stepperPositionY = 0;

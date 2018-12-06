@@ -14,22 +14,20 @@
 
 
 void SPI_start(){
-      
     SPI_recieved_flag = 0;
     SPI_ISR_StartEx(ISR_SPI_RX_handler);
     SPI_1_Start();
-
+    SPI_read_req_Write(0);
 }
 
 void SPI_send_pigeon_detected(){
-            
             SPI_1_WriteTxDataZero('b');
             
             //UART_1_PutString("Writing status - to Raspberry Pi");
             
             SPI_read_req_Write(1);
             
-            CyDelayUs(1);
+            CyDelayUs(50);
             
             SPI_read_req_Write(0);
             
@@ -44,7 +42,7 @@ void SPI_send_low_water(){
             
             SPI_read_req_Write(1);
             
-            CyDelayUs(1);
+            CyDelayUs(50);
             
             SPI_read_req_Write(0);
             
@@ -57,7 +55,7 @@ void SPI_send_water_empty(){
             
             SPI_read_req_Write(1);
             
-            CyDelayUs(1);
+            CyDelayUs(50);
             
             SPI_read_req_Write(0);
 }
@@ -69,7 +67,7 @@ void SPI_send_flowers_watered(){
             
             SPI_read_req_Write(1);
             
-            CyDelayUs(1);
+            CyDelayUs(50);
             
             SPI_read_req_Write(0);
 }
@@ -80,7 +78,7 @@ void SPI_send_pigeon_shot_position(char pigeon_position_x, char pigeon_position_
             
             SPI_read_req_Write(1);
             
-            CyDelayUs(1);
+            CyDelayUs(50);
             
             SPI_read_req_Write(0);
             
@@ -92,7 +90,7 @@ void SPI_send_pigeon_shot_position(char pigeon_position_x, char pigeon_position_
             
             SPI_read_req_Write(1);
             
-            CyDelayUs(1);
+            CyDelayUs(50);
             
             SPI_read_req_Write(0);
             
@@ -104,7 +102,7 @@ void SPI_send_pigeon_shot_position(char pigeon_position_x, char pigeon_position_
             
             SPI_read_req_Write(1);
             
-            CyDelayUs(1);
+            CyDelayUs(50);
             
             SPI_read_req_Write(0);
             

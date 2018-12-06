@@ -2,7 +2,7 @@
 --	Conversion of PSoCcontroller.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Tue Dec 04 23:30:57 2018
+--	Thu Dec 06 01:11:04 2018
 --
 
 USE cypress.cypress.all;

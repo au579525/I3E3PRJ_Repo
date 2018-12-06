@@ -1,3 +1,3 @@
-# Component constraints for C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\GFV\SPI kode\SPI_Lab2 - SLAVE\Design01.cydsn\TopDesign\TopDesign.cysch
-# Project: C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\GFV\SPI kode\SPI_Lab2 - SLAVE\Design01.cydsn\Design01.cyprj
-# Date: Tue, 04 Dec 2018 12:22:32 GMT
+# Component constraints for C:\Users\Chris\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\I3E3PRJ_Repo\PSoC_Drivers\SPIDriver\Design01.cydsn\TopDesign\TopDesign.cysch
+# Project: C:\Users\Chris\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\I3E3PRJ_Repo\PSoC_Drivers\SPIDriver\Design01.cydsn\Design01.cyprj
+# Date: Wed, 05 Dec 2018 12:56:53 GMT

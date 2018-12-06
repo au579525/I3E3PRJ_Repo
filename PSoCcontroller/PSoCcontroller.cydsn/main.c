@@ -79,7 +79,7 @@ int main(void)
     initCircbuf(&circBuf);
     Sonar_Start();
     WaSensInit();
-//    SPI_start();
+    SPI_start();
     
     if (WaSensMeasure() < WATER_THRESHOLD_NO_WATER) {
         UART_1_PutString("Water low! Entering standby\n\r");
@@ -92,11 +92,16 @@ int main(void)
     }
     
     while(1) {
+//        WaSensMeasure();
         currentState();     //perform state operations in while loop
     }
 }
 
 // ================ FOR TESTING ============
+CY_ISR(SPI_1_RxInternalInterrupt){
+    UART_1_PutString("RX INTERNAL INTERRUPT!!\n\r");   
+}
+
 CY_ISR(UARTisr) {
     char input = UART_1_ReadRxData();
     switch(input) {
@@ -149,6 +154,10 @@ CY_ISR(UARTisr) {
             if (mode == MANUAL_MODE) {
                 circBuf.push(&circBuf, WaterPump_fireWater, FALSE);
             }
+            break;
+        case 'L': //test
+            UART_1_PutString("Send pigeon detected\n\r");
+            SPI_send_pigeon_shot_position(10, 20);
             break;
         default:
             break;
@@ -210,6 +219,9 @@ CY_ISR(ISR_SPI_RX_handler)
     } else {
         SPI_recieved_flag = 1;
     }
+    CyDelay(10);
+    UART_1_PutString("Leaving interrupt\n\r");
+    CyDelay(10);
 }
 // ===================== FUNCTION DEFINITIONS ===================================
 static void setMode(enum Mode newMode){
@@ -273,49 +285,49 @@ void manualMode(void) {
     if (SPI_recieved_flag == 1) {
         switch(SPI_recieved) {
             case 'F': //LEFT
+                UART_1_PutString("F recieved");
                 if (mode == MANUAL_MODE) {
                     circBuf.push(&circBuf, moveDegreesX, -5);
                 }
                 break;
             case 'G': //RIGHT
+                UART_1_PutString("G recieved");
                 if (mode == MANUAL_MODE) {
                     circBuf.push(&circBuf, moveDegreesX, 5);
                 }
                 break;
             case 'H': //UP
+                UART_1_PutString("H recieved");
                 if (mode == MANUAL_MODE) {
                     circBuf.push(&circBuf, moveDegreesY, 5);
                 }
                 break;
             case 'I': //DOWN
+                UART_1_PutString("I recieved");
                 if (mode == MANUAL_MODE) {
                     circBuf.push(&circBuf, moveDegreesY, -5);
                 }
                 break;
             case 'J': //START FIRING
+                UART_1_PutString("J recieved");
                 if (mode == MANUAL_MODE) {
                     circBuf.push(&circBuf, WaterPump_fireWater, TRUE);
                 }
-                break;
-            case 'K': //STOP FIRING
-                if (mode == MANUAL_MODE) {
-                    circBuf.push(&circBuf, WaterPump_fireWater, FALSE);
-                }
-                break;
+                break;//            default:
             default:
                 break;
         }
         
         SPI_recieved_flag = 0;
     }
-    
+
     circBuf.pop(&circBuf); //pop from queue. pop function checks for empty queue and does nothing if it is empty
-    CyDelay(10); //introduce small delay to reduce risk of getting trapped in interrupt
+    CyDelay(25); //introduce small delay to reduce risk of getting trapped in interrupt
 }
 
 void automatiskVanding(void) {
     if (MoistureSensor_getResult() > MOISTURE_THRESHOLD) {
-        SPI_sendMoisture(MoistureSensor_getResult());
+        //SPI_sendMoisture(MoistureSensor_getResult());
         //move to top left corner
         //start firing
         //move to top right corner

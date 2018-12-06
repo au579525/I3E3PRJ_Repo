@@ -42,12 +42,6 @@ void SPI_send_pigeon_shot_position(char,char);
 
 void Handle_SPI_recieved();
 
-void SPI_sendMoisture(int x) {
-    char msg[256];
-    snprintf(msg, sizeof(msg), "Logging moisture level: %d (PS: make this function)\n\r", x);
-    UART_1_PutString(msg);
-};
-
 
 
 /* [] END OF FILE */

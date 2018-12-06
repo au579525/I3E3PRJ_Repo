@@ -48,17 +48,6 @@
 <v>PSoCcontroller\PSoCcontroller\Generated_Source\PSoC5</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>PSoCcontroller\PSoCcontroller</v>
-<v>PSoCcontroller\PSoCcontroller\TopDesign</v>
-<v>PSoCcontroller\PSoCcontroller\PSoCcontroller.cydwr</v>
-<v>PSoCcontroller\PSoCcontroller\PSoCcontroller.cydwr\Pins</v>
-<v>PSoCcontroller\PSoCcontroller\PSoCcontroller.cydwr\Analog</v>
-<v>PSoCcontroller\PSoCcontroller\PSoCcontroller.cydwr\Clocks</v>
-<v>PSoCcontroller\PSoCcontroller\PSoCcontroller.cydwr\Interrupts</v>
-<v>PSoCcontroller\PSoCcontroller\PSoCcontroller.cydwr\DMA</v>
-<v>PSoCcontroller\PSoCcontroller\PSoCcontroller.cydwr\System</v>
-<v>PSoCcontroller\PSoCcontroller\PSoCcontroller.cydwr\Directives</v>
-<v>PSoCcontroller\PSoCcontroller\PSoCcontroller.cydwr\Flash Security</v>
 <v>PSoCcontroller\PSoCcontroller\PSoCcontroller.cydwr\EEPROM</v>
 <v>PSoCcontroller\PSoCcontroller\Header Files</v>
 <v>PSoCcontroller\PSoCcontroller\Header Files\CircularBuffer.h</v>
@@ -80,7 +69,7 @@
 <v>PSoCcontroller\PSoCcontroller\Generated_Source</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSoCcontroller">
 <ExpandedNodeIds>
 <v>PSoCcontroller</v>
 <v>PSoCcontroller\PSoCcontroller</v>
@@ -143,6 +132,8 @@
 <v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
 <v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\Moisture_Analog_Input.lst</v>
 <v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\MoistureSensor.lst</v>
+<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorDriverX.lst</v>
+<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorDriverY.lst</v>
 <v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
 <v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_ADC_WaSens.lst</v>
 <v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_ISR_WaSens.lst</v>
@@ -157,6 +148,18 @@
 <v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_Y3.lst</v>
 <v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_WaSens.lst</v>
 <v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_WaSens_PM.lst</v>
+<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\Slave_clk.lst</v>
+<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\Slave_Miso.lst</v>
+<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\Slave_mosi.lst</v>
+<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI_1.lst</v>
+<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI_1_BOOT.lst</v>
+<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI_1_INT.lst</v>
+<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI_1_IntClock.lst</v>
+<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI_1_PM.lst</v>
+<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI_driver_PSoC.lst</v>
+<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI_ISR.lst</v>
+<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI_read_req.lst</v>
+<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\ss.lst</v>
 <v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_Sonar.lst</v>
 <v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_Sonar_PM.lst</v>
 <v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_StepperX.lst</v>
@@ -197,17 +200,6 @@
 <v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_WaSens_PM.lst</v>
 <v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_WaSens_theACLK.lst</v>
 <v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\CircularBuffer.lst</v>
-<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
-<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_2.lst</v>
-<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_3.lst</v>
-<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
-<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
-<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
-<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
-<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -259,8 +251,6 @@
 <v>PSoCcontroller\PSoCcontroller\Timer_v2_80</v>
 <v>PSoCcontroller\PSoCcontroller\Timer_v2_80\Timer_v2_80.pdf</v>
 <v>PSoCcontroller\PSoCcontroller\UART_v2_50.pdf</v>
-<v>PSoCcontroller\PSoCcontroller\ZeroTerminal</v>
-<v>PSoCcontroller\PSoCcontroller\ZeroTerminal\ZeroTerminal.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -270,27 +260,18 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\PSoCcontroller.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\PSoCcontroller.cydsn\main.c" />
-<name v=".\PSoCcontroller.cydsn\SonarDriver.h" />
-<name v=".\PSoCcontroller.cydsn\WaterPump.h" />
-<name v=".\PSoCcontroller.cydsn\WaterSensor.h" />
 <name v=".\PSoCcontroller.cydsn\PSoCcontroller.cydwr" />
-<name v=".\PSoCcontroller.cydsn\Generated_Source\PSoC5\cyPm.c" />
-<name v=".\PSoCcontroller.cydsn\CircularBuffer.h" />
-<name v=".\PSoCcontroller.cydsn\CircularBuffer.c" />
-<name v=".\PSoCcontroller.cydsn\Generated_Source\PSoC5\UART_1.c" />
-<name v=".\PSoCcontroller.cydsn\Generated_Source\PSoC5\Cm3Start.c" />
-<name v=".\PSoCcontroller.cydsn\MoistureSensor.h" />
-<name v=".\PSoCcontroller.cydsn\MoistureSensor.c" />
-<name v=".\PSoCcontroller.cydsn\cyapicallbacks.h" />
+<name v=".\PSoCcontroller.cydsn\main.c" />
+<name v=".\PSoCcontroller.cydsn\MotorDriverY.h" />
 <name v=".\PSoCcontroller.cydsn\MotorDriverX.h" />
 <name v=".\PSoCcontroller.cydsn\MotorDriverX.c" />
-<name v=".\PSoCcontroller.cydsn\TopDesign\TopDesign.cysym" />
-<name v=".\PSoCcontroller.cydsn\MotorDriverY.h" />
 <name v=".\PSoCcontroller.cydsn\MotorDriverY.c" />
 <name v=".\PSoCcontroller.cydsn\SPI_driver_PSoC.h" />
 <name v=".\PSoCcontroller.cydsn\SPI_driver_PSoC.c" />
+<name v=".\PSoCcontroller.cydsn\MoistureSensor.c" />
+<name v=".\PSoCcontroller.cydsn\SonarDriver.h" />
+<name v=".\PSoCcontroller.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\PSoCcontroller.cydsn\WaterSensor.h" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -298,7 +279,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="908, 603" SelectedTabbedMdiWindow="888657bb-3921-4a4d-a678-893a8415a75c"><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\TopDesign\TopDesign.cysch" Guid="fcc5ed57-593e-4c25-a5b2-4906a70b1e71" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\main.c" Guid="888657bb-3921-4a4d-a678-893a8415a75c" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\SonarDriver.h" Guid="613dd2fd-40e0-4956-a6d2-7970bdd44d47" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\WaterPump.h" Guid="753dc9a9-39d4-4967-a042-f25f28c16128" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\WaterSensor.h" Guid="a9307ee4-0b14-41e3-9c9b-57d4e8d81b7d" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\PSoCcontroller.cydwr" Guid="feb66352-5168-4307-8cc1-f1139622bebf" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\Generated_Source\PSoC5\cyPm.c" Guid="aa998185-9aa1-4558-b006-dddcc16e1dd5" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\CircularBuffer.h" Guid="394b1cd6-4df3-48df-8a9d-7fa462186a4f" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\CircularBuffer.c" Guid="bb37b0c2-069c-4110-a597-e54831823199" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\Generated_Source\PSoC5\UART_1.c" Guid="7b7c3697-4483-4fe5-b794-471dc189b35f" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\Generated_Source\PSoC5\Cm3Start.c" Guid="a1a2361d-76f1-42cf-8615-2f8cfbac726a" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\MoistureSensor.h" Guid="96099d08-ab2c-4e3a-b9dd-0482f1ca34e8" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\MoistureSensor.c" Guid="2b6e1bea-bb30-4c61-8178-df8a277ac798" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\cyapicallbacks.h" Guid="d78cf767-f00d-4310-b989-c6edcabe2baa" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\MotorDriverX.h" Guid="beb77c55-61e5-46ec-a9b0-0f58021b8703" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\MotorDriverX.c" Guid="333c80e2-2691-408f-af82-4c1178e4ab3a" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\TopDesign\TopDesign.cysym" Guid="d5c0b23d-86ad-4501-be6f-27212fa4d829" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="2b35477c-afe0-45b0-a357-08e8f5637bec" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\MotorDriverY.h" Guid="0ce52f13-f7bd-4669-b876-11709341479f" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\MotorDriverY.c" Guid="c1a8e6a3-c0a1-44e9-adce-89c5a24aa7f9" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\SPI_driver_PSoC.h" Guid="9575948e-a85d-4ae8-963a-f09a5fc62775" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\SPI_driver_PSoC.c" Guid="223ff838-e706-405a-90b2-9c01ed577faf" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="908, 399" SelectedTabbedMdiWindow="e195895c-8ca2-4c30-8317-01be40468a86"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="2b35477c-afe0-45b0-a357-08e8f5637bec" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\PSoCcontroller.cydwr" Guid="ce6dff19-7c56-475e-b7fc-1c29aa62c067" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\main.c" Guid="e195895c-8ca2-4c30-8317-01be40468a86" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\MotorDriverY.h" Guid="9f06abd5-613f-484a-bb07-50b9ad6e7423" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\MotorDriverX.h" Guid="6b949c83-56c9-4a8b-bd10-42fa490ecc09" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\MotorDriverX.c" Guid="f4b925d6-05fc-4510-8dc8-fbe2aeb29e8d" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\MotorDriverY.c" Guid="032d40c8-63bf-4d78-b294-f2fb44855b02" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\SPI_driver_PSoC.h" Guid="2f5f8dc1-0783-4a86-8269-95170b693111" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\SPI_driver_PSoC.c" Guid="9b23bfc8-9bd0-4bbb-8132-8c50dbefc26c" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\MoistureSensor.c" Guid="44b0411a-e196-4c55-994f-fba8f5b2fa31" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\SonarDriver.h" Guid="a3b9b4f6-740c-4f08-b637-52c3033f687f" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\TopDesign\TopDesign.cysch" Guid="8865e593-605e-4bce-9d43-2e1054d4a946" /><DocumentWindow Key="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\WaterSensor.h" Guid="c8fbe0a3-97da-4469-a90d-eec78eb5be37" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

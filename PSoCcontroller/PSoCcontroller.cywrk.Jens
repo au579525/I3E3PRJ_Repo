@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSoCcontroller\PSoCcontroller\Source Files\MotorDriver.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>PSoCcontroller</v>
 <v>PSoCcontroller\PSoCcontroller</v>
@@ -32,16 +32,19 @@
 <v>PSoCcontroller\PSoCcontroller\Header Files\CircularBuffer.h</v>
 <v>PSoCcontroller\PSoCcontroller\Header Files\cyapicallbacks.h</v>
 <v>PSoCcontroller\PSoCcontroller\Header Files\MoistureSensor.h</v>
-<v>PSoCcontroller\PSoCcontroller\Header Files\MotorDriver.h</v>
+<v>PSoCcontroller\PSoCcontroller\Header Files\MotorDriverX.h</v>
+<v>PSoCcontroller\PSoCcontroller\Header Files\MotorDriverY.h</v>
 <v>PSoCcontroller\PSoCcontroller\Header Files\SonarDriver.h</v>
-<v>PSoCcontroller\PSoCcontroller\Header Files\SPIcommunication.h</v>
+<v>PSoCcontroller\PSoCcontroller\Header Files\SPI_driver_PSoC.h</v>
 <v>PSoCcontroller\PSoCcontroller\Header Files\WaterPump.h</v>
 <v>PSoCcontroller\PSoCcontroller\Header Files\WaterSensor.h</v>
 <v>PSoCcontroller\PSoCcontroller\Source Files</v>
 <v>PSoCcontroller\PSoCcontroller\Source Files\CircularBuffer.c</v>
 <v>PSoCcontroller\PSoCcontroller\Source Files\main.c</v>
 <v>PSoCcontroller\PSoCcontroller\Source Files\MoistureSensor.c</v>
-<v>PSoCcontroller\PSoCcontroller\Source Files\MotorDriver.c</v>
+<v>PSoCcontroller\PSoCcontroller\Source Files\MotorDriverX.c</v>
+<v>PSoCcontroller\PSoCcontroller\Source Files\MotorDriverY.c</v>
+<v>PSoCcontroller\PSoCcontroller\Source Files\SPI_driver_PSoC.c</v>
 <v>PSoCcontroller\PSoCcontroller\Generated_Source</v>
 <v>PSoCcontroller\PSoCcontroller\Generated_Source\PSoC5</v>
 </ExpandedNodeIds>
@@ -63,16 +66,19 @@
 <v>PSoCcontroller\PSoCcontroller\Header Files\CircularBuffer.h</v>
 <v>PSoCcontroller\PSoCcontroller\Header Files\cyapicallbacks.h</v>
 <v>PSoCcontroller\PSoCcontroller\Header Files\MoistureSensor.h</v>
-<v>PSoCcontroller\PSoCcontroller\Header Files\MotorDriver.h</v>
+<v>PSoCcontroller\PSoCcontroller\Header Files\MotorDriverX.h</v>
+<v>PSoCcontroller\PSoCcontroller\Header Files\MotorDriverY.h</v>
 <v>PSoCcontroller\PSoCcontroller\Header Files\SonarDriver.h</v>
-<v>PSoCcontroller\PSoCcontroller\Header Files\SPIcommunication.h</v>
+<v>PSoCcontroller\PSoCcontroller\Header Files\SPI_driver_PSoC.h</v>
 <v>PSoCcontroller\PSoCcontroller\Header Files\WaterPump.h</v>
 <v>PSoCcontroller\PSoCcontroller\Header Files\WaterSensor.h</v>
 <v>PSoCcontroller\PSoCcontroller\Source Files</v>
 <v>PSoCcontroller\PSoCcontroller\Source Files\CircularBuffer.c</v>
 <v>PSoCcontroller\PSoCcontroller\Source Files\main.c</v>
 <v>PSoCcontroller\PSoCcontroller\Source Files\MoistureSensor.c</v>
-<v>PSoCcontroller\PSoCcontroller\Source Files\MotorDriver.c</v>
+<v>PSoCcontroller\PSoCcontroller\Source Files\MotorDriverX.c</v>
+<v>PSoCcontroller\PSoCcontroller\Source Files\MotorDriverY.c</v>
+<v>PSoCcontroller\PSoCcontroller\Source Files\SPI_driver_PSoC.c</v>
 <v>PSoCcontroller\PSoCcontroller\Generated_Source</v>
 <v>PSoCcontroller\PSoCcontroller\Generated_Source\PSoC5</v>
 <v>PSoCcontroller\PSoCcontroller\Generated_Source\PSoC5\ADC_Moisture</v>
@@ -91,9 +97,6 @@
 <v>PSoCcontroller\PSoCcontroller\Generated_Source\PSoC5\Echo_1</v>
 <v>PSoCcontroller\PSoCcontroller\Generated_Source\PSoC5\Echo_2</v>
 <v>PSoCcontroller\PSoCcontroller\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
-<v>PSoCcontroller\PSoCcontroller\Generated_Source\PSoC5\ISR_delay</v>
-<v>PSoCcontroller\PSoCcontroller\Generated_Source\PSoC5\ISR_stepperX</v>
-<v>PSoCcontroller\PSoCcontroller\Generated_Source\PSoC5\ISR_stepperY</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -159,7 +162,6 @@
 <v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
 <v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\Moisture_Analog_Input.lst</v>
 <v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\MoistureSensor.lst</v>
-<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorDriver.lst</v>
 <v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
 <v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_ADC_WaSens.lst</v>
 <v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_ISR_WaSens.lst</v>
@@ -240,9 +242,9 @@
 <v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
 <v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\Moisture_Analog_Input.lst</v>
 <v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\MoistureSensor.lst</v>
-<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\MotorDriver.lst</v>
 <v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
 <v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_ADC_WaSens.lst</v>
+<v>PSoCcontroller\PSoCcontroller\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_ISR_WaSens.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -257,21 +259,6 @@
 <v>PSoCcontroller\PSoCcontroller\PSoC 5LP Architecture TRM</v>
 <v>PSoCcontroller\PSoCcontroller\CY8C58LP Family Datasheet</v>
 <v>PSoCcontroller\PSoCcontroller\System Reference Guides</v>
-<v>PSoCcontroller\PSoCcontroller\System Reference Guides\cy_boot_v5_70</v>
-<v>PSoCcontroller\PSoCcontroller\ADC_SAR_v3_10</v>
-<v>PSoCcontroller\PSoCcontroller\ADC_SAR_v3_10\ADC_SAR_v3_10.pdf</v>
-<v>PSoCcontroller\PSoCcontroller\cy_clock_v2_20</v>
-<v>PSoCcontroller\PSoCcontroller\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
-<v>PSoCcontroller\PSoCcontroller\cy_isr_v1_70</v>
-<v>PSoCcontroller\PSoCcontroller\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
-<v>PSoCcontroller\PSoCcontroller\cy_pins_v2_20</v>
-<v>PSoCcontroller\PSoCcontroller\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>PSoCcontroller\PSoCcontroller\PWM_v3_30.pdf</v>
-<v>PSoCcontroller\PSoCcontroller\Timer_v2_80</v>
-<v>PSoCcontroller\PSoCcontroller\Timer_v2_80\Timer_v2_80.pdf</v>
-<v>PSoCcontroller\PSoCcontroller\UART_v2_50.pdf</v>
-<v>PSoCcontroller\PSoCcontroller\ZeroTerminal</v>
-<v>PSoCcontroller\PSoCcontroller\ZeroTerminal\ZeroTerminal.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>PSoCcontroller</v>
@@ -279,21 +266,6 @@
 <v>PSoCcontroller\PSoCcontroller\PSoC 5LP Architecture TRM</v>
 <v>PSoCcontroller\PSoCcontroller\CY8C58LP Family Datasheet</v>
 <v>PSoCcontroller\PSoCcontroller\System Reference Guides</v>
-<v>PSoCcontroller\PSoCcontroller\System Reference Guides\cy_boot_v5_70</v>
-<v>PSoCcontroller\PSoCcontroller\ADC_SAR_v3_10</v>
-<v>PSoCcontroller\PSoCcontroller\ADC_SAR_v3_10\ADC_SAR_v3_10.pdf</v>
-<v>PSoCcontroller\PSoCcontroller\cy_clock_v2_20</v>
-<v>PSoCcontroller\PSoCcontroller\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
-<v>PSoCcontroller\PSoCcontroller\cy_isr_v1_70</v>
-<v>PSoCcontroller\PSoCcontroller\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
-<v>PSoCcontroller\PSoCcontroller\cy_pins_v2_20</v>
-<v>PSoCcontroller\PSoCcontroller\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>PSoCcontroller\PSoCcontroller\PWM_v3_30.pdf</v>
-<v>PSoCcontroller\PSoCcontroller\Timer_v2_80</v>
-<v>PSoCcontroller\PSoCcontroller\Timer_v2_80\Timer_v2_80.pdf</v>
-<v>PSoCcontroller\PSoCcontroller\UART_v2_50.pdf</v>
-<v>PSoCcontroller\PSoCcontroller\ZeroTerminal</v>
-<v>PSoCcontroller\PSoCcontroller\ZeroTerminal\ZeroTerminal.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -302,7 +274,20 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs />
+<OpenDocs>
+<name v=".\PSoCcontroller.cydsn\main.c" />
+<name v=".\PSoCcontroller.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\PSoCcontroller.cydsn\WaterSensor.h" />
+<name v=".\PSoCcontroller.cydsn\WaterPump.h" />
+<name v=".\PSoCcontroller.cydsn\PSoCcontroller.cydwr" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1439, 711" SelectedTabbedMdiWindow="14f096e8-005f-4a58-8dd6-24b097836391"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="63638a12-f3bc-455e-832a-5a422a3e72f7" /><DocumentWindow Key="C:\Users\jens1\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\main.c" Guid="14f096e8-005f-4a58-8dd6-24b097836391" /><DocumentWindow Key="C:\Users\jens1\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\TopDesign\TopDesign.cysch" Guid="f27fac57-ef0a-4f09-acb1-f456034cc563" /><DocumentWindow Key="C:\Users\jens1\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\WaterSensor.h" Guid="b24d37d0-9424-47fc-888e-c2bcb12500d6" /><DocumentWindow Key="C:\Users\jens1\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\WaterPump.h" Guid="7e4548a3-84bb-4daa-8956-c6039cd57c8a" /><DocumentWindow Key="C:\Users\jens1\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\PSoCcontroller.cydwr" Guid="d74bfc63-e0e4-4972-b026-cae2e41c2d6b" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

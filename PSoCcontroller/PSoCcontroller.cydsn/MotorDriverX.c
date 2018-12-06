@@ -10,7 +10,6 @@
  * ========================================
 */
 #include "MotorDriverX.h"
-#include <math.h>
 
 CY_ISR(stepperX_isr_handler) {
     Timer_StepperX_Stop();
@@ -27,7 +26,7 @@ void initStepperX() {
     resetPositionX();
 }
 
-static void rotateClockwiseX() {
+void rotateClockwiseX() {
     if(stepperStateX == WEST) { 
         stepperStateX = NORTH;
     }
@@ -40,7 +39,7 @@ static void rotateClockwiseX() {
     UART_1_PutString("Rotated clockwise once\n\r");
 }
 
-static void rotateCounterClockwiseX() {
+void rotateCounterClockwiseX() {
     if(stepperStateX == NORTH) {
         stepperStateX = WEST;
     }
@@ -51,7 +50,7 @@ static void rotateCounterClockwiseX() {
     --stepperPositionX;
 }
 
-static void moveStepX() {
+void moveStepX() {
     if(stepperStateX == NORTH) {
         Pin_X1_Write(0);
         Pin_X2_Write(0);
@@ -85,8 +84,8 @@ void moveDegreesX(int deg) { //Positivt antal grader skrives hvis armen skal kø
         }
     }
     else if(steps < 0) {
-        if(steps < (stepperPositionX * -1)) {    //Hvis antallet af steps der skal køres tilbage er mere end vi kan køre, før proben rammes
-            resetPositionX();
+        if(steps <= (stepperPositionX * -1)) {    //Hvis antallet af steps der skal køres tilbage er mere end vi kan køre, før proben rammes
+            UART_1_PutString("Moving too far dude\n\r"); //nothing
         }
         else if(steps > (stepperPositionX * -1)) {
             for(int i = 0; i > steps; i--) {
@@ -99,7 +98,7 @@ void moveDegreesX(int deg) { //Positivt antal grader skrives hvis armen skal kø
     }
 }
 
-static void resetPositionX() {
+void resetPositionX() {
     while(Pin_X3_Read() == 1) {
         Timer_StepperX_Start();
         while(timerDoneFlagX == 0);

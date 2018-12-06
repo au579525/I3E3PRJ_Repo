@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 1
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccLxePOd.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 1
   28:Generated_Source\PSoC5/ADC_Moisture_Bypass.c **** *
   29:Generated_Source\PSoC5/ADC_Moisture_Bypass.c **** * \brief Writes the value to the physical port (data output register), masking
   30:Generated_Source\PSoC5/ADC_Moisture_Bypass.c **** *  and shifting the bits appropriately. 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 2
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccLxePOd.s 			page 2
 
 
   31:Generated_Source\PSoC5/ADC_Moisture_Bypass.c **** *
@@ -99,13 +99,13 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 1
   34              		.loc 1 59 0
   35 0000 044A     		ldr	r2, .L2
   36 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
-  37 0004 03F0EF03 		and	r3, r3, #239
+  37 0004 03F0FB03 		and	r3, r3, #251
   38              	.LVL1:
   60:Generated_Source\PSoC5/ADC_Moisture_Bypass.c ****     ADC_Moisture_Bypass_DR = staticBits | ((uint8)(value << ADC_Moisture_Bypass_SHIFT) & ADC_Moistu
   39              		.loc 1 60 0
-  40 0008 0001     		lsls	r0, r0, #4
+  40 0008 8000     		lsls	r0, r0, #2
   41              	.LVL2:
-  42 000a 00F01000 		and	r0, r0, #16
+  42 000a 00F00400 		and	r0, r0, #4
   43 000e 1843     		orrs	r0, r0, r3
   44 0010 1070     		strb	r0, [r2]
   45 0012 7047     		bx	lr
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 1
   52              		.size	ADC_Moisture_Bypass_Write, .-ADC_Moisture_Bypass_Write
   53              		.section	.text.ADC_Moisture_Bypass_SetDriveMode,"ax",%progbits
   54              		.align	2
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 3
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccLxePOd.s 			page 3
 
 
   55              		.global	ADC_Moisture_Bypass_SetDriveMode
@@ -177,8 +177,8 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 1
   76              	.L6:
   77 0012 00BF     		.align	2
   78              	.L5:
-  79 0014 04500040 		.word	1073762308
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 4
+  79 0014 02500040 		.word	1073762306
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccLxePOd.s 			page 4
 
 
   80              		.cfi_endproc
@@ -225,7 +225,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 1
   98 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
  116:Generated_Source\PSoC5/ADC_Moisture_Bypass.c **** }
   99              		.loc 1 116 0
- 100 0004 C0F30010 		ubfx	r0, r0, #4, #1
+ 100 0004 C0F38000 		ubfx	r0, r0, #2, #1
  101 0008 7047     		bx	lr
  102              	.L9:
  103 000a 00BF     		.align	2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 1
  110              		.align	2
  111              		.global	ADC_Moisture_Bypass_ReadDataReg
  112              		.thumb
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 5
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccLxePOd.s 			page 5
 
 
  113              		.thumb_func
@@ -282,7 +282,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 1
  124 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
  144:Generated_Source\PSoC5/ADC_Moisture_Bypass.c **** }
  125              		.loc 1 144 0
- 126 0004 C0F30010 		ubfx	r0, r0, #4, #1
+ 126 0004 C0F38000 		ubfx	r0, r0, #2, #1
  127 0008 7047     		bx	lr
  128              	.L12:
  129 000a 00BF     		.align	2
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 1
  139              	.Ldebug_info0:
  140 0000 1B010000 		.4byte	0x11b
  141 0004 0400     		.2byte	0x4
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 6
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccLxePOd.s 			page 6
 
 
  142 0006 00000000 		.4byte	.Ldebug_abbrev0
@@ -307,14 +307,14 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 1
  145 000c 8C000000 		.4byte	.LASF20
  146 0010 0C       		.byte	0xc
  147 0011 4B000000 		.4byte	.LASF21
- 148 0015 E6010000 		.4byte	.LASF22
+ 148 0015 6F010000 		.4byte	.LASF22
  149 0019 00000000 		.4byte	.Ldebug_ranges0+0
  150 001d 00000000 		.4byte	0
  151 0021 00000000 		.4byte	.Ldebug_line0
  152 0025 02       		.uleb128 0x2
  153 0026 01       		.byte	0x1
  154 0027 06       		.byte	0x6
- 155 0028 C0010000 		.4byte	.LASF0
+ 155 0028 2E020000 		.4byte	.LASF0
  156 002c 02       		.uleb128 0x2
  157 002d 01       		.byte	0x1
  158 002e 08       		.byte	0x8
@@ -322,7 +322,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 1
  160 0033 02       		.uleb128 0x2
  161 0034 02       		.byte	0x2
  162 0035 05       		.byte	0x5
- 163 0036 A7010000 		.4byte	.LASF2
+ 163 0036 15020000 		.4byte	.LASF2
  164 003a 02       		.uleb128 0x2
  165 003b 02       		.byte	0x2
  166 003c 07       		.byte	0x7
@@ -330,7 +330,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 1
  168 0041 02       		.uleb128 0x2
  169 0042 04       		.byte	0x4
  170 0043 05       		.byte	0x5
- 171 0044 B7010000 		.4byte	.LASF4
+ 171 0044 25020000 		.4byte	.LASF4
  172 0048 02       		.uleb128 0x2
  173 0049 04       		.byte	0x4
  174 004a 07       		.byte	0x7
@@ -338,7 +338,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 1
  176 004f 02       		.uleb128 0x2
  177 0050 08       		.byte	0x8
  178 0051 05       		.byte	0x5
- 179 0052 74010000 		.4byte	.LASF6
+ 179 0052 E2010000 		.4byte	.LASF6
  180 0056 02       		.uleb128 0x2
  181 0057 08       		.byte	0x8
  182 0058 07       		.byte	0x7
@@ -352,13 +352,13 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 1
  190 0066 07       		.byte	0x7
  191 0067 4B010000 		.4byte	.LASF8
  192 006b 04       		.uleb128 0x4
- 193 006c B1010000 		.4byte	.LASF12
+ 193 006c 1F020000 		.4byte	.LASF12
  194 0070 02       		.byte	0x2
  195 0071 E401     		.2byte	0x1e4
  196 0073 2C000000 		.4byte	0x2c
  197 0077 02       		.uleb128 0x2
  198 0078 04       		.byte	0x4
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 7
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccLxePOd.s 			page 7
 
 
  199 0079 04       		.byte	0x4
@@ -370,7 +370,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 1
  205 0085 02       		.uleb128 0x2
  206 0086 01       		.byte	0x1
  207 0087 08       		.byte	0x8
- 208 0088 82010000 		.4byte	.LASF11
+ 208 0088 F0010000 		.4byte	.LASF11
  209 008c 04       		.uleb128 0x4
  210 008d 1A010000 		.4byte	.LASF13
  211 0091 02       		.byte	0x2
@@ -379,7 +379,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 1
  214 0098 05       		.uleb128 0x5
  215 0099 6B000000 		.4byte	0x6b
  216 009d 06       		.uleb128 0x6
- 217 009e CC010000 		.4byte	.LASF14
+ 217 009e 3A020000 		.4byte	.LASF14
  218 00a2 01       		.byte	0x1
  219 00a3 39       		.byte	0x39
  220 00a4 00000000 		.4byte	.LFB0
@@ -411,14 +411,14 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 1
  246 00df 9C       		.byte	0x9c
  247 00e0 F4000000 		.4byte	0xf4
  248 00e4 07       		.uleb128 0x7
- 249 00e5 6F010000 		.4byte	.LASF17
+ 249 00e5 DD010000 		.4byte	.LASF17
  250 00e9 01       		.byte	0x1
  251 00ea 5A       		.byte	0x5a
  252 00eb 6B000000 		.4byte	0x6b
  253 00ef 21000000 		.4byte	.LLST1
  254 00f3 00       		.byte	0
  255 00f4 09       		.uleb128 0x9
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 8
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccLxePOd.s 			page 8
 
 
  256 00f5 32000000 		.4byte	.LASF18
@@ -430,7 +430,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 1
  262 0107 01       		.uleb128 0x1
  263 0108 9C       		.byte	0x9c
  264 0109 09       		.uleb128 0x9
- 265 010a 87010000 		.4byte	.LASF19
+ 265 010a F5010000 		.4byte	.LASF19
  266 010e 01       		.byte	0x1
  267 010f 8D       		.byte	0x8d
  268 0110 6B000000 		.4byte	0x6b
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 1
  310 0022 0B       		.uleb128 0xb
  311 0023 3E       		.uleb128 0x3e
  312 0024 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 9
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccLxePOd.s 			page 9
 
 
  313 0025 03       		.uleb128 0x3
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 1
  367 005c 3A       		.uleb128 0x3a
  368 005d 0B       		.uleb128 0xb
  369 005e 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 10
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccLxePOd.s 			page 10
 
 
  370 005f 0B       		.uleb128 0xb
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 1
  424 000a 50       		.byte	0x50
  425 000b 0A000000 		.4byte	.LVL2
  426 000f 18000000 		.4byte	.LFE0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 11
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccLxePOd.s 			page 11
 
 
  427 0013 0400     		.2byte	0x4
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 1
  480      02005000 
  480      00000201 
  480      FB0E0D00 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 12
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccLxePOd.s 			page 12
 
 
  480      01010101 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 1
  502 011f 6C6F6E67 		.ascii	"long unsigned int\000"
  502      20756E73 
  502      69676E65 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 13
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccLxePOd.s 			page 13
 
 
  502      6420696E 
@@ -743,61 +743,60 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 1
  510      6720756E 
  510      7369676E 
  510      65642069 
- 511              	.LASF17:
- 512 016f 6D6F6465 		.ascii	"mode\000"
- 512      00
- 513              	.LASF6:
- 514 0174 6C6F6E67 		.ascii	"long long int\000"
- 514      206C6F6E 
- 514      6720696E 
- 514      7400
- 515              	.LASF11:
- 516 0182 63686172 		.ascii	"char\000"
+ 511              	.LASF22:
+ 512 016f 443A5C4F 		.ascii	"D:\\OneDrive - Aarhus Universitet\\Aarhus Universit"
+ 512      6E654472 
+ 512      69766520 
+ 512      2D204161 
+ 512      72687573 
+ 513 01a0 65745C45 		.ascii	"et\\E3\\E3PRJ\\I3E3PRJ_Repo\\PSoCcontroller\\PSoCco"
+ 513      335C4533 
+ 513      50524A5C 
+ 513      49334533 
+ 513      50524A5F 
+ 514 01ce 6E74726F 		.ascii	"ntroller.cydsn\000"
+ 514      6C6C6572 
+ 514      2E637964 
+ 514      736E00
+ 515              	.LASF17:
+ 516 01dd 6D6F6465 		.ascii	"mode\000"
  516      00
- 517              	.LASF19:
- 518 0187 4144435F 		.ascii	"ADC_Moisture_Bypass_ReadDataReg\000"
- 518      4D6F6973 
- 518      74757265 
- 518      5F427970 
- 518      6173735F 
- 519              	.LASF2:
- 520 01a7 73686F72 		.ascii	"short int\000"
- 520      7420696E 
- 520      7400
- 521              	.LASF12:
- 522 01b1 75696E74 		.ascii	"uint8\000"
- 522      3800
- 523              	.LASF4:
- 524 01b7 6C6F6E67 		.ascii	"long int\000"
- 524      20696E74 
- 524      00
- 525              	.LASF0:
- 526 01c0 7369676E 		.ascii	"signed char\000"
- 526      65642063 
- 526      68617200 
- 527              	.LASF14:
- 528 01cc 4144435F 		.ascii	"ADC_Moisture_Bypass_Write\000"
- 528      4D6F6973 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccsadxUf.s 			page 14
+ 517              	.LASF6:
+ 518 01e2 6C6F6E67 		.ascii	"long long int\000"
+ 518      206C6F6E 
+ 518      6720696E 
+ 518      7400
+ 519              	.LASF11:
+ 520 01f0 63686172 		.ascii	"char\000"
+ 520      00
+ 521              	.LASF19:
+ 522 01f5 4144435F 		.ascii	"ADC_Moisture_Bypass_ReadDataReg\000"
+ 522      4D6F6973 
+ 522      74757265 
+ 522      5F427970 
+ 522      6173735F 
+ 523              	.LASF2:
+ 524 0215 73686F72 		.ascii	"short int\000"
+ 524      7420696E 
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccLxePOd.s 			page 14
 
 
- 528      74757265 
- 528      5F427970 
- 528      6173735F 
- 529              	.LASF22:
- 530 01e6 443A5C4F 		.ascii	"D:\\OneDrive - Aarhus Universitet\\Aarhus Universit"
- 530      6E654472 
- 530      69766520 
- 530      2D204161 
- 530      72687573 
- 531 0217 65745C45 		.ascii	"et\\E3\\E3PRJ\\Dokumenter\\Design\\PSoCcontroller\\"
- 531      335C4533 
- 531      50524A5C 
- 531      446F6B75 
- 531      6D656E74 
- 532 0244 50536F43 		.ascii	"PSoCcontroller\\PSoCcontroller.cydsn\000"
- 532      636F6E74 
- 532      726F6C6C 
- 532      65725C50 
- 532      536F4363 
+ 524      7400
+ 525              	.LASF12:
+ 526 021f 75696E74 		.ascii	"uint8\000"
+ 526      3800
+ 527              	.LASF4:
+ 528 0225 6C6F6E67 		.ascii	"long int\000"
+ 528      20696E74 
+ 528      00
+ 529              	.LASF0:
+ 530 022e 7369676E 		.ascii	"signed char\000"
+ 530      65642063 
+ 530      68617200 
+ 531              	.LASF14:
+ 532 023a 4144435F 		.ascii	"ADC_Moisture_Bypass_Write\000"
+ 532      4D6F6973 
+ 532      74757265 
+ 532      5F427970 
+ 532      6173735F 
  533              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -13,7 +13,7 @@
 #ifndef MOTORDRIVERX_H
 #define MOTORDRIVERX_H
     
-    #include <project.h>
+    #include "project.h"
     #include <stdlib.h>
     #include <math.h>
 
@@ -28,11 +28,11 @@
     CY_ISR_PROTO(stepperX_isr_handler);
 
     void initStepperX();
-    static void rotateClockwiseX();
-    static void rotateCounterClockwiseX();
-    static void moveStepX();
+    void rotateClockwiseX();
+    void rotateCounterClockwiseX();
+    void moveStepX();
     void moveDegreesX(int deg);
-    static void resetPositionX();
+    void resetPositionX();
     
 #endif
 

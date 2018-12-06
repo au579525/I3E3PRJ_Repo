@@ -1,5 +1,5 @@
 -- Project:   PSoCcontroller
--- Generated: 12/04/2018 23:31:00
+-- Generated: 12/06/2018 01:11:06
 -- PSoC Creator  4.2
 
 ENTITY PSoCcontroller IS
@@ -314,9 +314,9 @@ ARCHITECTURE __DEFAULT__ OF PSoCcontroller IS
     ATTRIBUTE lib_model OF Pin_1(0) : LABEL IS "iocell3";
     ATTRIBUTE Location OF Pin_1(0) : LABEL IS "P1[7]";
     ATTRIBUTE lib_model OF \ADC_Moisture:Bypass(0)\ : LABEL IS "iocell4";
-    ATTRIBUTE Location OF \ADC_Moisture:Bypass(0)\ : LABEL IS "P0[4]";
+    ATTRIBUTE Location OF \ADC_Moisture:Bypass(0)\ : LABEL IS "P0[2]";
     ATTRIBUTE lib_model OF Moisture_Analog_Input(0) : LABEL IS "iocell5";
-    ATTRIBUTE Location OF Moisture_Analog_Input(0) : LABEL IS "P0[3]";
+    ATTRIBUTE Location OF Moisture_Analog_Input(0) : LABEL IS "P15[1]";
     ATTRIBUTE lib_model OF Pin_X1(0) : LABEL IS "iocell6";
     ATTRIBUTE Location OF Pin_X1(0) : LABEL IS "P2[5]";
     ATTRIBUTE lib_model OF Pin_X2(0) : LABEL IS "iocell7";
@@ -330,9 +330,21 @@ ARCHITECTURE __DEFAULT__ OF PSoCcontroller IS
     ATTRIBUTE lib_model OF Pin_Y3(0) : LABEL IS "iocell11";
     ATTRIBUTE Location OF Pin_Y3(0) : LABEL IS "P2[0]";
     ATTRIBUTE lib_model OF \ADC_SAR_WaSens:Bypass(0)\ : LABEL IS "iocell12";
-    ATTRIBUTE Location OF \ADC_SAR_WaSens:Bypass(0)\ : LABEL IS "P0[2]";
+    ATTRIBUTE Location OF \ADC_SAR_WaSens:Bypass(0)\ : LABEL IS "P0[4]";
     ATTRIBUTE lib_model OF Pin_ADC_WaSens(0) : LABEL IS "iocell13";
-    ATTRIBUTE Location OF Pin_ADC_WaSens(0) : LABEL IS "P15[1]";
+    ATTRIBUTE Location OF Pin_ADC_WaSens(0) : LABEL IS "P0[0]";
+    ATTRIBUTE lib_model OF Pin_WaterPump(0) : LABEL IS "iocell14";
+    ATTRIBUTE Location OF Pin_WaterPump(0) : LABEL IS "P2[6]";
+    ATTRIBUTE lib_model OF Slave_Miso(0) : LABEL IS "iocell15";
+    ATTRIBUTE Location OF Slave_Miso(0) : LABEL IS "P0[6]";
+    ATTRIBUTE lib_model OF Slave_mosi(0) : LABEL IS "iocell16";
+    ATTRIBUTE Location OF Slave_mosi(0) : LABEL IS "P0[5]";
+    ATTRIBUTE lib_model OF Slave_clk(0) : LABEL IS "iocell17";
+    ATTRIBUTE Location OF Slave_clk(0) : LABEL IS "P0[7]";
+    ATTRIBUTE lib_model OF ss(0) : LABEL IS "iocell18";
+    ATTRIBUTE Location OF ss(0) : LABEL IS "P0[1]";
+    ATTRIBUTE lib_model OF SPI_read_req(0) : LABEL IS "iocell19";
+    ATTRIBUTE Location OF SPI_read_req(0) : LABEL IS "P0[3]";
     ATTRIBUTE lib_model OF \Delay_Timer:TimerUDB:status_tc\ : LABEL IS "macrocell1";
     ATTRIBUTE lib_model OF \Timer_Sonar:TimerUDB:status_tc\ : LABEL IS "macrocell2";
     ATTRIBUTE lib_model OF Net_359 : LABEL IS "macrocell3";
@@ -368,8 +380,8 @@ ARCHITECTURE __DEFAULT__ OF PSoCcontroller IS
     ATTRIBUTE lib_model OF \UART_1:BUART:sTX:TxSts\ : LABEL IS "statusicell3";
     ATTRIBUTE lib_model OF \UART_1:BUART:sRX:RxShifter:u0\ : LABEL IS "datapathcell8";
     ATTRIBUTE lib_model OF \UART_1:BUART:sRX:RxSts\ : LABEL IS "statusicell4";
-    ATTRIBUTE Location OF \ADC_Moisture:ADC_SAR\ : LABEL IS "F(SAR,0)";
-    ATTRIBUTE Location OF \ADC_SAR_WaSens:ADC_SAR\ : LABEL IS "F(SAR,1)";
+    ATTRIBUTE Location OF \ADC_Moisture:ADC_SAR\ : LABEL IS "F(SAR,1)";
+    ATTRIBUTE Location OF \ADC_SAR_WaSens:ADC_SAR\ : LABEL IS "F(SAR,0)";
     ATTRIBUTE lib_model OF \PWM_WaSens:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell3";
     ATTRIBUTE lib_model OF \PWM_WaSens:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell5";
     ATTRIBUTE lib_model OF \PWM_WaSens:PWMUDB:sP8:pwmdp:u0\ : LABEL IS "datapathcell9";
