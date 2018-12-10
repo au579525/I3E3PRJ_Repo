@@ -6,6 +6,8 @@ Fileaccess::Fileaccess(){
     ifstream watermode;
     ifstream log;
     ifstream queue;
+    ifstream waterLevel;
+
     pathsettings.open("path.txt");
     //check if file is open
     if(pathsettings.is_open()){
@@ -41,6 +43,13 @@ Fileaccess::Fileaccess(){
       ofstream queuew;
       queuew.open(path + "queue", ios::trunc);
     }
+    //new block 10-12
+    waterLevel.open(path + "waterLevel");
+    if(!waterLevel.is_open ()){
+      ofstream waterLevelw;
+      waterLevelw.open(path + "waterLevel", ios::trunc);
+    }
+
 }
 
 void Fileaccess::set_mode(string mode){

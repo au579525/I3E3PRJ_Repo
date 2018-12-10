@@ -18,7 +18,7 @@ void spi_req_function::run(){
 
     switch (data) {
       case 'a':
-        unsigned int x,y;
+        unsigned int x, y, level;
         fileac->log("due skudt");
         freopen("/dev/spi_drv0","r", fp);
         fscanf(fp,"%d",&x);//Her læses ingen værdi ud,
@@ -39,6 +39,14 @@ void spi_req_function::run(){
       case 'e':
         fileac->log("blomster vandet");
         break;
+      //ny block
+      case 'f':
+        fileac->log("Vandstanden måles");
+        freopen("/dev/spi_drv0", "r", fp);
+        fscanf(fp, "%d", &level);
+        output << "Vandstandens niveau er:" << level << "mL";
+        break;
+
       default:
         fileac->log("message from PSoC was misunderstood");
         output << data;
