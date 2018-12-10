@@ -106,7 +106,6 @@ string fileaccess::getwaterlvl(){
     if(file.is_open()){
         getline(file, line);
         return line;
-
     }
-    return "";
+    return "999";
 }

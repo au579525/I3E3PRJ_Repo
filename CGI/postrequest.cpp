@@ -105,5 +105,5 @@ void postrequest::manualctl(string control)
 void postrequest::waterlvl(){
     cout << HTTPXHTMLHeader() << endl;
     string s = file->getwaterlvl();
-    cout << "waterlvl=" << s;
+    cout << "waterlvl=" << s << endl;
 }

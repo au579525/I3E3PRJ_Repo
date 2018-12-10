@@ -36,14 +36,6 @@ function manualcontrol(control){
 	xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	xhttp.send("manualctl=" + control);
 }
-function serverresponse(xhttp) {
-	if(xhttp.responseText.includes("waterlvl")){
-		setwaterlvl(xhttp.responseText);
-	}
-	else{
-		confirm(xhttp.responseText);
-	}
-}
 function manual(enable){
 	var element = document.getElementById("manualctn");
 	if(enable){
@@ -58,6 +50,11 @@ function manual(enable){
 function getwaterlvl(){
 	var xhttp;
 	xhttp=new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			serverresponse(this);
+		}
+	};
 	xhttp.open("POST", "index.cgi", true);
 	xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	xhttp.send("waterlvl");
@@ -75,5 +72,12 @@ function setwaterlvl(lvl){
 		document.getElementById("waterlvl").innerHTML = "There are approximately " + waterlvl[1] + " ml water in the tank";
 	}
 }
-
-setInterval(getwaterlvl(), 60000);
+function serverresponse(xhttp) {
+	if(xhttp.responseText.includes("waterlvl")){
+		setwaterlvl(xhttp.responseText);
+	}
+	else{
+		confirm(xhttp.responseText);
+	}
+}
+setInterval(getwaterlvl, 60000);
