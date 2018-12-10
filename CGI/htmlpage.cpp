@@ -35,7 +35,7 @@ void htmlpage::waterlvl(string lvl){
         cout << "There is not enough water in the tank!" << endl;
     }
     else{
-        cout << "There are approximately " << lvl << " water in the tank";
+        cout << "There are approximately " << lvl << "mL water in the tank";
     }
     cout << "</h3>" << endl;
     cout << "<div class=\"waterlvltxt\">" << endl;
