@@ -26,6 +26,7 @@ private:
     void settings(string, bool);
     void manual(bool show);
     void log(vector<string>);
+    void waterlvl(string);
 };
 
 #endif // HTMLPAGE_H

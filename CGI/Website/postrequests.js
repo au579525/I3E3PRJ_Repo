@@ -37,7 +37,12 @@ function manualcontrol(control){
 	xhttp.send("manualctl=" + control);
 }
 function serverresponse(xhttp) {
-	confirm(xhttp.responseText);
+	if(xhttp.responseText.includes("waterlvl")){
+		setwaterlvl(xhttp.responseText);
+	}
+	else{
+		confirm(xhttp.responseText);
+	}
 }
 function manual(enable){
 	var element = document.getElementById("manualctn");
@@ -50,3 +55,25 @@ function manual(enable){
         }
 	}
 }
+function getwaterlvl(){
+	var xhttp;
+	xhttp=new XMLHttpRequest();
+	xhttp.open("POST", "index.cgi", true);
+	xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	xhttp.send("waterlvl");
+}
+function setwaterlvl(lvl){
+	var waterlvl = lvl.split('=');
+	if(waterlvl[1] == '0'){
+		var element = document.getElementById("sysmode");
+		if(e.options[e.selectedIndex].value != "standby"){
+		confirm("System in standby mode because of low water level!");
+		document.location.reload(true);
+		}
+	}
+	else{
+		document.getElementById("waterlvl").innerHTML = "There are approximately " + waterlvl[1] + " ml water in the tank";
+	}
+}
+
+setInterval(getwaterlvl(), 60000);

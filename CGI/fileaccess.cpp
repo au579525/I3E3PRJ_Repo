@@ -98,3 +98,15 @@ void fileaccess::manualcontrol(string action)
         file << endl << "manualcontrol " << action;
     }
 }
+
+string fileaccess::getwaterlvl(){
+    string line;
+    ifstream file;
+    file.open(path + "waterlevel");
+    if(file.is_open()){
+        getline(file, line);
+        return line;
+
+    }
+    return "";
+}

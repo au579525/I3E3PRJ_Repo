@@ -44,12 +44,25 @@ Fileaccess::Fileaccess(){
       queuew.open(path + "queue", ios::trunc);
     }
     //new block 10-12
-    waterLevel.open(path + "waterLevel");
+    waterLevel.open(path + "waterlevel");
     if(!waterLevel.is_open ()){
       ofstream waterLevelw;
-      waterLevelw.open(path + "waterLevel", ios::trunc);
+      waterLevelw.open(path + "waterlevel", ios::trunc);
+      waterLevelw << "1";
     }
 
+}
+
+void Fileaccess::setwaterlvl(int lvl){
+    ofstream file;
+    file.open(path + "waterlevel", ios::trunc);
+    if(lvl == 0){
+      set_mode("standby");
+      log("Waterlevel too low!");
+    }
+    if(file.is_open()){
+      file << lvl;
+    }
 }
 
 void Fileaccess::set_mode(string mode){

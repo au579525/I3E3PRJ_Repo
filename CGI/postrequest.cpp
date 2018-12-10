@@ -23,6 +23,14 @@ postrequest::postrequest(Cgicc *data, fileaccess *_file)
         manualctl(datastring);
         return;
     }
+
+    //check if waterlvl is requested
+    found=datastring.find("waterlvl");
+    if (found!=std::string::npos){
+        waterlvl();
+        return;
+    }
+
 }
 
 void postrequest::sysmode(string mode)
@@ -92,4 +100,10 @@ void postrequest::manualctl(string control)
     std::smatch matches;
     std::regex_search(control, matches, rgx);
     file->manualcontrol(matches[1].str());
+}
+
+void postrequest::waterlvl(){
+    cout << HTTPXHTMLHeader() << endl;
+    string s = file->getwaterlvl();
+    cout << "waterlvl=" << s;
 }

@@ -18,7 +18,7 @@ void spi_req_function::run(){
 
     switch (data) {
       case 'a':
-        unsigned int x, y, level;
+        unsigned int x, y;
         fileac->log("due skudt");
         freopen("/dev/spi_drv0","r", fp);
         fscanf(fp,"%d",&x);//Her læses ingen værdi ud,
@@ -41,10 +41,13 @@ void spi_req_function::run(){
         break;
       //ny block
       case 'f':
+        unsigned int level;
         fileac->log("Vandstanden måles");
         freopen("/dev/spi_drv0", "r", fp);
         fscanf(fp, "%d", &level);
         output << "Vandstandens niveau er:" << level << "mL";
+        fileac->log(output.str());
+        fileac->setwaterlvl(level);
         break;
 
       default:

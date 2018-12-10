@@ -18,6 +18,7 @@ public:
     void setsysmode(string);
     void setwatermode(bool);
     void manualcontrol(string);
+    string getwaterlvl();
 private:
     string path;
 };

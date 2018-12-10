@@ -10,6 +10,7 @@ htmlpage::htmlpage(fileaccess *sysdata)
     htmlhead();
     cout << "<body>"<< endl;
     header();
+    waterlvl(sysdata->getwaterlvl());
     //check if system is in manual code
     settings(sysmode, sysdata->getwatermode());
     if(sysmode == "manual"){
@@ -23,6 +24,25 @@ htmlpage::htmlpage(fileaccess *sysdata)
     cout << "<script src=\"selectmenu.js\"></script>" << endl;
     cout << "</body>" << endl;
     cout << "</html>" << endl;
+}
+
+void htmlpage::waterlvl(string lvl){
+    cout << "<div class=\"clear content\">" << endl;
+    cout << "<div class=\"waterlvl clear \">" << endl;
+    cout << "<h2 class=\"content-header\">Water level</h2>" << endl;
+    cout << "<h3 id=\"waterlvl\">" << endl;
+    if(lvl == "0"){
+        cout << "There is not enough water in the tank!" << endl;
+    }
+    else{
+        cout << "There are approximately " << lvl << " water in the tank";
+    }
+    cout << "</h3>" << endl;
+    cout << "<div class=\"waterlvltxt\">" << endl;
+    cout << "If the water level gets below 200 ml the system automatically goes into standby mode" << endl;
+    cout << "</div>" << endl;
+    cout << "</div>" << endl;
+    cout << "</div>" << endl;
 }
 
 void htmlpage::settings(string sysmode, bool watermode){
