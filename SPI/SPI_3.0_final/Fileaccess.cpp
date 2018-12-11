@@ -53,11 +53,12 @@ Fileaccess::Fileaccess(){
 
 }
 
-void Fileaccess::setwaterlvl(int lvl){
+void Fileaccess::set_waterlvl(int lvl){
     ofstream file;
     file.open(path + "waterlevel", ios::trunc);
     if(lvl == 0){
       set_mode("standby");
+      file << lvl;
       log("Waterlevel too low!");
     }
     if(file.is_open()){

@@ -47,7 +47,7 @@ void spi_req_function::run(){
         fscanf(fp, "%d", &level);
         output << "Vandstandens niveau er:" << level << "mL";
         fileac->log(output.str());
-        fileac->setwaterlvl(level);
+        fileac->set_waterlvl(level);
         break;
 
       default:

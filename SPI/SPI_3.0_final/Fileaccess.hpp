@@ -11,7 +11,7 @@ class Fileaccess {
 public:
   Fileaccess();
   void set_mode(string);
-  void setwaterlvl(int);
+  void set_waterlvl(int);
   void set_AutomaticWatering_mode();
   void log(string);
   vector<string> getQueue();
