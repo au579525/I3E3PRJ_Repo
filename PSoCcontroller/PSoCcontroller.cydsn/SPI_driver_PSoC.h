@@ -32,13 +32,14 @@ void SPI_start();
 
 void SPI_send_pigeon_detected();
 
-void SPI_send_low_water();
+void SPI_send_resetToDefault();
 
 void SPI_send_water_empty();
 
 void SPI_send_flowers_watered();
 
 void SPI_send_pigeon_shot_position(char,char);
+void SPI_send_waterlevel(uint8 waterlevel);
 
 void Handle_SPI_recieved();
 

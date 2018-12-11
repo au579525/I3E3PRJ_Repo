@@ -1,5 +1,5 @@
 -- Project:   PSoCcontroller
--- Generated: 12/06/2018 01:11:06
+-- Generated: 12/11/2018 17:10:59
 -- PSoC Creator  4.2
 
 ENTITY PSoCcontroller IS
@@ -19,6 +19,7 @@ ENTITY PSoCcontroller IS
         Pin_Y2(0)_PAD : OUT std_ulogic;
         Pin_Y3(0)_PAD : IN std_ulogic;
         Pin_PWM_WaSens(0)_PAD : OUT std_ulogic;
+        Pin_2(0)_PAD : IN std_ulogic;
         Pin_WaterPump(0)_PAD : OUT std_ulogic;
         Pin_ISR_WaSens(0)_PAD : IN std_ulogic;
         Slave_Miso(0)_PAD : OUT std_ulogic;
@@ -67,14 +68,7 @@ ARCHITECTURE __DEFAULT__ OF PSoCcontroller IS
     SIGNAL Net_226 : bit;
     SIGNAL Net_229 : bit;
     SIGNAL Net_28 : bit;
-    SIGNAL Net_329 : bit;
-    ATTRIBUTE udbclken_assigned OF Net_329 : SIGNAL IS "True";
-    ATTRIBUTE global_signal OF Net_329 : SIGNAL IS true;
-    SIGNAL Net_329_local : bit;
     SIGNAL Net_331 : bit;
-    SIGNAL Net_347 : bit;
-    ATTRIBUTE global_signal OF Net_347 : SIGNAL IS true;
-    SIGNAL Net_347_local : bit;
     SIGNAL Net_359 : bit;
     SIGNAL Net_405 : bit;
     ATTRIBUTE udbclken_assigned OF Net_405 : SIGNAL IS "False";
@@ -82,7 +76,13 @@ ARCHITECTURE __DEFAULT__ OF PSoCcontroller IS
     SIGNAL Net_411 : bit;
     SIGNAL Net_414 : bit;
     SIGNAL Net_415 : bit;
+    SIGNAL Net_423 : bit;
+    ATTRIBUTE udbclken_assigned OF Net_423 : SIGNAL IS "True";
+    ATTRIBUTE global_signal OF Net_423 : SIGNAL IS true;
+    SIGNAL Net_423_local : bit;
+    SIGNAL Net_428 : bit;
     SIGNAL Pin_1(0)__PA : bit;
+    SIGNAL Pin_2(0)__PA : bit;
     SIGNAL Pin_ADC_WaSens(0)__PA : bit;
     SIGNAL Pin_ISR_WaSens(0)__PA : bit;
     SIGNAL Pin_Low_WL(0)__PA : bit;
@@ -102,7 +102,6 @@ ARCHITECTURE __DEFAULT__ OF PSoCcontroller IS
     SIGNAL Trigger_1(0)__PA : bit;
     SIGNAL Trigger_2(0)__PA : bit;
     SIGNAL Tx_1(0)__PA : bit;
-    SIGNAL \\\ADC_Moisture:Bypass(0)\\__PA\ : bit;
     SIGNAL \ADC_Moisture:Net_207_0\ : bit;
     SIGNAL \ADC_Moisture:Net_207_10\ : bit;
     SIGNAL \ADC_Moisture:Net_207_11\ : bit;
@@ -121,7 +120,6 @@ ARCHITECTURE __DEFAULT__ OF PSoCcontroller IS
     SIGNAL \ADC_Moisture:Net_385\ : bit;
     ATTRIBUTE global_signal OF \ADC_Moisture:Net_385\ : SIGNAL IS true;
     SIGNAL \ADC_Moisture:Net_385_local\ : bit;
-    SIGNAL \\\ADC_SAR_WaSens:Bypass(0)\\__PA\ : bit;
     SIGNAL \ADC_SAR_WaSens:Net_207_0\ : bit;
     SIGNAL \ADC_SAR_WaSens:Net_207_10\ : bit;
     SIGNAL \ADC_SAR_WaSens:Net_207_11\ : bit;
@@ -154,14 +152,6 @@ ARCHITECTURE __DEFAULT__ OF PSoCcontroller IS
     SIGNAL \Delay_Timer:TimerUDB:status_3\ : bit;
     SIGNAL \Delay_Timer:TimerUDB:status_tc\ : bit;
     SIGNAL \PWM_WaSens:PWMUDB:cmp1_less\ : bit;
-    SIGNAL \PWM_WaSens:PWMUDB:control_0\ : bit;
-    SIGNAL \PWM_WaSens:PWMUDB:control_1\ : bit;
-    SIGNAL \PWM_WaSens:PWMUDB:control_2\ : bit;
-    SIGNAL \PWM_WaSens:PWMUDB:control_3\ : bit;
-    SIGNAL \PWM_WaSens:PWMUDB:control_4\ : bit;
-    SIGNAL \PWM_WaSens:PWMUDB:control_5\ : bit;
-    SIGNAL \PWM_WaSens:PWMUDB:control_6\ : bit;
-    SIGNAL \PWM_WaSens:PWMUDB:control_7\ : bit;
     SIGNAL \PWM_WaSens:PWMUDB:prevCompare1\ : bit;
     SIGNAL \PWM_WaSens:PWMUDB:runmode_enable\ : bit;
     SIGNAL \PWM_WaSens:PWMUDB:status_0\ : bit;
@@ -209,13 +199,35 @@ ARCHITECTURE __DEFAULT__ OF PSoCcontroller IS
     SIGNAL \Timer_Sonar:TimerUDB:control_7\ : bit;
     SIGNAL \Timer_Sonar:TimerUDB:per_zero\ : bit;
     SIGNAL \Timer_Sonar:TimerUDB:sT24:timerdp:u1.ce0__sig\ : bit;
+    SIGNAL \Timer_StepperX:TimerUDB:sT16:timerdp:u0.ce0__sig\ : bit;
     SIGNAL \Timer_Sonar:TimerUDB:status_2\ : bit;
     SIGNAL \Timer_Sonar:TimerUDB:status_3\ : bit;
     SIGNAL \Timer_Sonar:TimerUDB:status_tc\ : bit;
-    SIGNAL \Timer_StepperX:Net_261\ : bit;
-    SIGNAL \Timer_StepperX:Net_57\ : bit;
-    SIGNAL \Timer_StepperY:Net_261\ : bit;
-    SIGNAL \Timer_StepperY:Net_57\ : bit;
+    SIGNAL \Timer_StepperX:TimerUDB:control_0\ : bit;
+    SIGNAL \Timer_StepperX:TimerUDB:control_1\ : bit;
+    SIGNAL \Timer_StepperX:TimerUDB:control_2\ : bit;
+    SIGNAL \Timer_StepperX:TimerUDB:control_3\ : bit;
+    SIGNAL \Timer_StepperX:TimerUDB:control_4\ : bit;
+    SIGNAL \Timer_StepperX:TimerUDB:control_5\ : bit;
+    SIGNAL \Timer_StepperX:TimerUDB:control_6\ : bit;
+    SIGNAL \Timer_StepperX:TimerUDB:control_7\ : bit;
+    SIGNAL \Timer_StepperX:TimerUDB:per_zero\ : bit;
+    SIGNAL \Timer_StepperY:TimerUDB:sT16:timerdp:u0.ce0__sig\ : bit;
+    SIGNAL \Timer_StepperX:TimerUDB:status_2\ : bit;
+    SIGNAL \Timer_StepperX:TimerUDB:status_3\ : bit;
+    SIGNAL \Timer_StepperX:TimerUDB:status_tc\ : bit;
+    SIGNAL \Timer_StepperY:TimerUDB:control_0\ : bit;
+    SIGNAL \Timer_StepperY:TimerUDB:control_1\ : bit;
+    SIGNAL \Timer_StepperY:TimerUDB:control_2\ : bit;
+    SIGNAL \Timer_StepperY:TimerUDB:control_3\ : bit;
+    SIGNAL \Timer_StepperY:TimerUDB:control_4\ : bit;
+    SIGNAL \Timer_StepperY:TimerUDB:control_5\ : bit;
+    SIGNAL \Timer_StepperY:TimerUDB:control_6\ : bit;
+    SIGNAL \Timer_StepperY:TimerUDB:control_7\ : bit;
+    SIGNAL \Timer_StepperY:TimerUDB:per_zero\ : bit;
+    SIGNAL \Timer_StepperY:TimerUDB:status_2\ : bit;
+    SIGNAL \Timer_StepperY:TimerUDB:status_3\ : bit;
+    SIGNAL \Timer_StepperY:TimerUDB:status_tc\ : bit;
     SIGNAL \UART_1:BUART:counter_load_not\ : bit;
     SIGNAL \UART_1:BUART:pollcount_0\ : bit;
     SIGNAL \UART_1:BUART:pollcount_1\ : bit;
@@ -269,7 +281,6 @@ ARCHITECTURE __DEFAULT__ OF PSoCcontroller IS
     ATTRIBUTE GROUND OF zero : SIGNAL IS true;
     SIGNAL \ClockBlock.aclk_glb_ff_0__sig\ : bit;
     SIGNAL \ClockBlock.aclk_glb_ff_1__sig\ : bit;
-    SIGNAL \ClockBlock.dclk_glb_ff_2__sig\ : bit;
     SIGNAL \Delay_Timer:TimerUDB:sT16:timerdp:u0.ce0__sig\ : bit;
     SIGNAL \Delay_Timer:TimerUDB:sT16:timerdp:u0.cl0__sig\ : bit;
     SIGNAL \Delay_Timer:TimerUDB:sT16:timerdp:u0.z0__sig\ : bit;
@@ -307,44 +318,76 @@ ARCHITECTURE __DEFAULT__ OF PSoCcontroller IS
     SIGNAL \Timer_Sonar:TimerUDB:sT24:timerdp:u1.cfbo__sig\ : bit;
     SIGNAL \Timer_Sonar:TimerUDB:sT24:timerdp:u2.sor__sig\ : bit;
     SIGNAL \Timer_Sonar:TimerUDB:sT24:timerdp:u2.cmsbo__sig\ : bit;
-    ATTRIBUTE lib_model OF Rx_1(0) : LABEL IS "iocell1";
+    SIGNAL \Timer_StepperX:TimerUDB:sT16:timerdp:u0.cl0__sig\ : bit;
+    SIGNAL \Timer_StepperX:TimerUDB:sT16:timerdp:u0.z0__sig\ : bit;
+    SIGNAL \Timer_StepperX:TimerUDB:sT16:timerdp:u0.ff0__sig\ : bit;
+    SIGNAL \Timer_StepperX:TimerUDB:sT16:timerdp:u0.ce1__sig\ : bit;
+    SIGNAL \Timer_StepperX:TimerUDB:sT16:timerdp:u0.cl1__sig\ : bit;
+    SIGNAL \Timer_StepperX:TimerUDB:sT16:timerdp:u0.z1__sig\ : bit;
+    SIGNAL \Timer_StepperX:TimerUDB:sT16:timerdp:u0.ff1__sig\ : bit;
+    SIGNAL \Timer_StepperX:TimerUDB:sT16:timerdp:u0.co_msb__sig\ : bit;
+    SIGNAL \Timer_StepperX:TimerUDB:sT16:timerdp:u0.sol_msb__sig\ : bit;
+    SIGNAL \Timer_StepperX:TimerUDB:sT16:timerdp:u0.cfbo__sig\ : bit;
+    SIGNAL \Timer_StepperX:TimerUDB:sT16:timerdp:u1.sor__sig\ : bit;
+    SIGNAL \Timer_StepperX:TimerUDB:sT16:timerdp:u1.cmsbo__sig\ : bit;
+    SIGNAL \Timer_StepperY:TimerUDB:sT16:timerdp:u0.cl0__sig\ : bit;
+    SIGNAL \Timer_StepperY:TimerUDB:sT16:timerdp:u0.z0__sig\ : bit;
+    SIGNAL \Timer_StepperY:TimerUDB:sT16:timerdp:u0.ff0__sig\ : bit;
+    SIGNAL \Timer_StepperY:TimerUDB:sT16:timerdp:u0.ce1__sig\ : bit;
+    SIGNAL \Timer_StepperY:TimerUDB:sT16:timerdp:u0.cl1__sig\ : bit;
+    SIGNAL \Timer_StepperY:TimerUDB:sT16:timerdp:u0.z1__sig\ : bit;
+    SIGNAL \Timer_StepperY:TimerUDB:sT16:timerdp:u0.ff1__sig\ : bit;
+    SIGNAL \Timer_StepperY:TimerUDB:sT16:timerdp:u0.co_msb__sig\ : bit;
+    SIGNAL \Timer_StepperY:TimerUDB:sT16:timerdp:u0.sol_msb__sig\ : bit;
+    SIGNAL \Timer_StepperY:TimerUDB:sT16:timerdp:u0.cfbo__sig\ : bit;
+    SIGNAL \Timer_StepperY:TimerUDB:sT16:timerdp:u1.sor__sig\ : bit;
+    SIGNAL \Timer_StepperY:TimerUDB:sT16:timerdp:u1.cmsbo__sig\ : bit;
+    ATTRIBUTE lib_model OF Trigger_1(0) : LABEL IS "iocell1";
+    ATTRIBUTE Location OF Trigger_1(0) : LABEL IS "P3[5]";
+    ATTRIBUTE lib_model OF Trigger_2(0) : LABEL IS "iocell2";
+    ATTRIBUTE Location OF Trigger_2(0) : LABEL IS "P3[6]";
+    ATTRIBUTE lib_model OF Echo_1(0) : LABEL IS "iocell3";
+    ATTRIBUTE Location OF Echo_1(0) : LABEL IS "P3[3]";
+    ATTRIBUTE lib_model OF Echo_2(0) : LABEL IS "iocell4";
+    ATTRIBUTE Location OF Echo_2(0) : LABEL IS "P3[4]";
+    ATTRIBUTE lib_model OF Rx_1(0) : LABEL IS "iocell5";
     ATTRIBUTE Location OF Rx_1(0) : LABEL IS "P12[6]";
-    ATTRIBUTE lib_model OF Tx_1(0) : LABEL IS "iocell2";
+    ATTRIBUTE lib_model OF Tx_1(0) : LABEL IS "iocell6";
     ATTRIBUTE Location OF Tx_1(0) : LABEL IS "P12[7]";
-    ATTRIBUTE lib_model OF Pin_1(0) : LABEL IS "iocell3";
-    ATTRIBUTE Location OF Pin_1(0) : LABEL IS "P1[7]";
-    ATTRIBUTE lib_model OF \ADC_Moisture:Bypass(0)\ : LABEL IS "iocell4";
-    ATTRIBUTE Location OF \ADC_Moisture:Bypass(0)\ : LABEL IS "P0[2]";
-    ATTRIBUTE lib_model OF Moisture_Analog_Input(0) : LABEL IS "iocell5";
-    ATTRIBUTE Location OF Moisture_Analog_Input(0) : LABEL IS "P15[1]";
-    ATTRIBUTE lib_model OF Pin_X1(0) : LABEL IS "iocell6";
-    ATTRIBUTE Location OF Pin_X1(0) : LABEL IS "P2[5]";
-    ATTRIBUTE lib_model OF Pin_X2(0) : LABEL IS "iocell7";
-    ATTRIBUTE Location OF Pin_X2(0) : LABEL IS "P2[4]";
-    ATTRIBUTE lib_model OF Pin_X3(0) : LABEL IS "iocell8";
-    ATTRIBUTE Location OF Pin_X3(0) : LABEL IS "P2[3]";
-    ATTRIBUTE lib_model OF Pin_Y1(0) : LABEL IS "iocell9";
-    ATTRIBUTE Location OF Pin_Y1(0) : LABEL IS "P2[2]";
-    ATTRIBUTE lib_model OF Pin_Y2(0) : LABEL IS "iocell10";
-    ATTRIBUTE Location OF Pin_Y2(0) : LABEL IS "P2[1]";
-    ATTRIBUTE lib_model OF Pin_Y3(0) : LABEL IS "iocell11";
+    ATTRIBUTE lib_model OF Moisture_Analog_Input(0) : LABEL IS "iocell7";
+    ATTRIBUTE Location OF Moisture_Analog_Input(0) : LABEL IS "P0[2]";
+    ATTRIBUTE lib_model OF Pin_Low_WL(0) : LABEL IS "iocell8";
+    ATTRIBUTE Location OF Pin_Low_WL(0) : LABEL IS "P3[7]";
+    ATTRIBUTE lib_model OF Pin_X1(0) : LABEL IS "iocell9";
+    ATTRIBUTE Location OF Pin_X1(0) : LABEL IS "P2[7]";
+    ATTRIBUTE lib_model OF Pin_X2(0) : LABEL IS "iocell10";
+    ATTRIBUTE Location OF Pin_X2(0) : LABEL IS "P2[6]";
+    ATTRIBUTE lib_model OF Pin_X3(0) : LABEL IS "iocell11";
+    ATTRIBUTE Location OF Pin_X3(0) : LABEL IS "P2[5]";
+    ATTRIBUTE lib_model OF Pin_Y1(0) : LABEL IS "iocell12";
+    ATTRIBUTE Location OF Pin_Y1(0) : LABEL IS "P2[4]";
+    ATTRIBUTE lib_model OF Pin_Y2(0) : LABEL IS "iocell13";
+    ATTRIBUTE Location OF Pin_Y2(0) : LABEL IS "P2[3]";
+    ATTRIBUTE lib_model OF Pin_Y3(0) : LABEL IS "iocell14";
     ATTRIBUTE Location OF Pin_Y3(0) : LABEL IS "P2[0]";
-    ATTRIBUTE lib_model OF \ADC_SAR_WaSens:Bypass(0)\ : LABEL IS "iocell12";
-    ATTRIBUTE Location OF \ADC_SAR_WaSens:Bypass(0)\ : LABEL IS "P0[4]";
-    ATTRIBUTE lib_model OF Pin_ADC_WaSens(0) : LABEL IS "iocell13";
-    ATTRIBUTE Location OF Pin_ADC_WaSens(0) : LABEL IS "P0[0]";
-    ATTRIBUTE lib_model OF Pin_WaterPump(0) : LABEL IS "iocell14";
-    ATTRIBUTE Location OF Pin_WaterPump(0) : LABEL IS "P2[6]";
-    ATTRIBUTE lib_model OF Slave_Miso(0) : LABEL IS "iocell15";
-    ATTRIBUTE Location OF Slave_Miso(0) : LABEL IS "P0[6]";
-    ATTRIBUTE lib_model OF Slave_mosi(0) : LABEL IS "iocell16";
-    ATTRIBUTE Location OF Slave_mosi(0) : LABEL IS "P0[5]";
-    ATTRIBUTE lib_model OF Slave_clk(0) : LABEL IS "iocell17";
-    ATTRIBUTE Location OF Slave_clk(0) : LABEL IS "P0[7]";
-    ATTRIBUTE lib_model OF ss(0) : LABEL IS "iocell18";
+    ATTRIBUTE lib_model OF Pin_PWM_WaSens(0) : LABEL IS "iocell15";
+    ATTRIBUTE Location OF Pin_PWM_WaSens(0) : LABEL IS "P3[0]";
+    ATTRIBUTE lib_model OF Pin_ADC_WaSens(0) : LABEL IS "iocell16";
+    ATTRIBUTE Location OF Pin_ADC_WaSens(0) : LABEL IS "P15[0]";
+    ATTRIBUTE lib_model OF Pin_WaterPump(0) : LABEL IS "iocell17";
+    ATTRIBUTE Location OF Pin_WaterPump(0) : LABEL IS "P1[7]";
+    ATTRIBUTE lib_model OF Pin_ISR_WaSens(0) : LABEL IS "iocell18";
+    ATTRIBUTE Location OF Pin_ISR_WaSens(0) : LABEL IS "P3[2]";
+    ATTRIBUTE lib_model OF Slave_Miso(0) : LABEL IS "iocell19";
+    ATTRIBUTE Location OF Slave_Miso(0) : LABEL IS "P0[5]";
+    ATTRIBUTE lib_model OF Slave_mosi(0) : LABEL IS "iocell20";
+    ATTRIBUTE Location OF Slave_mosi(0) : LABEL IS "P0[0]";
+    ATTRIBUTE lib_model OF Slave_clk(0) : LABEL IS "iocell21";
+    ATTRIBUTE Location OF Slave_clk(0) : LABEL IS "P0[6]";
+    ATTRIBUTE lib_model OF ss(0) : LABEL IS "iocell22";
     ATTRIBUTE Location OF ss(0) : LABEL IS "P0[1]";
-    ATTRIBUTE lib_model OF SPI_read_req(0) : LABEL IS "iocell19";
-    ATTRIBUTE Location OF SPI_read_req(0) : LABEL IS "P0[3]";
+    ATTRIBUTE lib_model OF SPI_read_req(0) : LABEL IS "iocell23";
+    ATTRIBUTE Location OF SPI_read_req(0) : LABEL IS "P0[7]";
     ATTRIBUTE lib_model OF \Delay_Timer:TimerUDB:status_tc\ : LABEL IS "macrocell1";
     ATTRIBUTE lib_model OF \Timer_Sonar:TimerUDB:status_tc\ : LABEL IS "macrocell2";
     ATTRIBUTE lib_model OF Net_359 : LABEL IS "macrocell3";
@@ -355,17 +398,18 @@ ARCHITECTURE __DEFAULT__ OF PSoCcontroller IS
     ATTRIBUTE lib_model OF \UART_1:BUART:rx_postpoll\ : LABEL IS "macrocell8";
     ATTRIBUTE lib_model OF \UART_1:BUART:rx_status_4\ : LABEL IS "macrocell9";
     ATTRIBUTE lib_model OF \UART_1:BUART:rx_status_5\ : LABEL IS "macrocell10";
-    ATTRIBUTE lib_model OF \PWM_WaSens:PWMUDB:status_2\ : LABEL IS "macrocell11";
-    ATTRIBUTE lib_model OF \SPI_1:BSPIS:inv_ss\ : LABEL IS "macrocell12";
-    ATTRIBUTE lib_model OF \SPI_1:BSPIS:tx_load\ : LABEL IS "macrocell13";
-    ATTRIBUTE lib_model OF \SPI_1:BSPIS:byte_complete\ : LABEL IS "macrocell14";
-    ATTRIBUTE lib_model OF \SPI_1:BSPIS:rx_buf_overrun\ : LABEL IS "macrocell15";
-    ATTRIBUTE lib_model OF Net_407 : LABEL IS "macrocell16";
-    ATTRIBUTE lib_model OF \SPI_1:BSPIS:mosi_buf_overrun\ : LABEL IS "macrocell17";
-    ATTRIBUTE lib_model OF \SPI_1:BSPIS:tx_status_0\ : LABEL IS "macrocell18";
-    ATTRIBUTE lib_model OF \SPI_1:BSPIS:rx_status_4\ : LABEL IS "macrocell19";
-    ATTRIBUTE lib_model OF \SPI_1:BSPIS:mosi_to_dp\ : LABEL IS "macrocell20";
-    ATTRIBUTE lib_model OF __ONE__ : LABEL IS "macrocell21";
+    ATTRIBUTE lib_model OF \Timer_StepperX:TimerUDB:status_tc\ : LABEL IS "macrocell11";
+    ATTRIBUTE lib_model OF \Timer_StepperY:TimerUDB:status_tc\ : LABEL IS "macrocell12";
+    ATTRIBUTE lib_model OF \PWM_WaSens:PWMUDB:status_2\ : LABEL IS "macrocell13";
+    ATTRIBUTE lib_model OF \SPI_1:BSPIS:inv_ss\ : LABEL IS "macrocell14";
+    ATTRIBUTE lib_model OF \SPI_1:BSPIS:tx_load\ : LABEL IS "macrocell15";
+    ATTRIBUTE lib_model OF \SPI_1:BSPIS:byte_complete\ : LABEL IS "macrocell16";
+    ATTRIBUTE lib_model OF \SPI_1:BSPIS:rx_buf_overrun\ : LABEL IS "macrocell17";
+    ATTRIBUTE lib_model OF Net_407 : LABEL IS "macrocell18";
+    ATTRIBUTE lib_model OF \SPI_1:BSPIS:mosi_buf_overrun\ : LABEL IS "macrocell19";
+    ATTRIBUTE lib_model OF \SPI_1:BSPIS:tx_status_0\ : LABEL IS "macrocell20";
+    ATTRIBUTE lib_model OF \SPI_1:BSPIS:rx_status_4\ : LABEL IS "macrocell21";
+    ATTRIBUTE lib_model OF \SPI_1:BSPIS:mosi_to_dp\ : LABEL IS "macrocell22";
     ATTRIBUTE lib_model OF \Delay_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell1";
     ATTRIBUTE lib_model OF \Delay_Timer:TimerUDB:rstSts:stsreg\ : LABEL IS "statusicell1";
     ATTRIBUTE lib_model OF \Delay_Timer:TimerUDB:sT16:timerdp:u0\ : LABEL IS "datapathcell1";
@@ -380,37 +424,46 @@ ARCHITECTURE __DEFAULT__ OF PSoCcontroller IS
     ATTRIBUTE lib_model OF \UART_1:BUART:sTX:TxSts\ : LABEL IS "statusicell3";
     ATTRIBUTE lib_model OF \UART_1:BUART:sRX:RxShifter:u0\ : LABEL IS "datapathcell8";
     ATTRIBUTE lib_model OF \UART_1:BUART:sRX:RxSts\ : LABEL IS "statusicell4";
-    ATTRIBUTE Location OF \ADC_Moisture:ADC_SAR\ : LABEL IS "F(SAR,1)";
-    ATTRIBUTE Location OF \ADC_SAR_WaSens:ADC_SAR\ : LABEL IS "F(SAR,0)";
-    ATTRIBUTE lib_model OF \PWM_WaSens:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell3";
-    ATTRIBUTE lib_model OF \PWM_WaSens:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell5";
-    ATTRIBUTE lib_model OF \PWM_WaSens:PWMUDB:sP8:pwmdp:u0\ : LABEL IS "datapathcell9";
-    ATTRIBUTE lib_model OF \SPI_1:BSPIS:TxStsReg\ : LABEL IS "statusicell6";
-    ATTRIBUTE lib_model OF \SPI_1:BSPIS:RxStsReg\ : LABEL IS "statusicell7";
-    ATTRIBUTE lib_model OF \SPI_1:BSPIS:sR8:Dp:u0\ : LABEL IS "datapathcell10";
-    ATTRIBUTE lib_model OF \UART_1:BUART:txn\ : LABEL IS "macrocell22";
-    ATTRIBUTE lib_model OF \UART_1:BUART:tx_state_1\ : LABEL IS "macrocell23";
-    ATTRIBUTE lib_model OF \UART_1:BUART:tx_state_0\ : LABEL IS "macrocell24";
-    ATTRIBUTE lib_model OF \UART_1:BUART:tx_state_2\ : LABEL IS "macrocell25";
-    ATTRIBUTE lib_model OF \UART_1:BUART:tx_bitclk\ : LABEL IS "macrocell26";
-    ATTRIBUTE lib_model OF \UART_1:BUART:tx_ctrl_mark_last\ : LABEL IS "macrocell27";
-    ATTRIBUTE lib_model OF \UART_1:BUART:rx_state_0\ : LABEL IS "macrocell28";
-    ATTRIBUTE lib_model OF \UART_1:BUART:rx_load_fifo\ : LABEL IS "macrocell29";
-    ATTRIBUTE lib_model OF \UART_1:BUART:rx_state_3\ : LABEL IS "macrocell30";
-    ATTRIBUTE lib_model OF \UART_1:BUART:rx_state_2\ : LABEL IS "macrocell31";
-    ATTRIBUTE lib_model OF \UART_1:BUART:rx_bitclk_enable\ : LABEL IS "macrocell32";
-    ATTRIBUTE lib_model OF \UART_1:BUART:rx_state_stop1_reg\ : LABEL IS "macrocell33";
-    ATTRIBUTE lib_model OF \UART_1:BUART:pollcount_1\ : LABEL IS "macrocell34";
-    ATTRIBUTE lib_model OF \UART_1:BUART:pollcount_0\ : LABEL IS "macrocell35";
-    ATTRIBUTE lib_model OF \UART_1:BUART:rx_status_3\ : LABEL IS "macrocell36";
-    ATTRIBUTE lib_model OF \UART_1:BUART:rx_last\ : LABEL IS "macrocell37";
-    ATTRIBUTE lib_model OF \PWM_WaSens:PWMUDB:runmode_enable\ : LABEL IS "macrocell38";
-    ATTRIBUTE lib_model OF \PWM_WaSens:PWMUDB:prevCompare1\ : LABEL IS "macrocell39";
-    ATTRIBUTE lib_model OF \PWM_WaSens:PWMUDB:status_0\ : LABEL IS "macrocell40";
-    ATTRIBUTE lib_model OF Net_331 : LABEL IS "macrocell41";
-    ATTRIBUTE lib_model OF \SPI_1:BSPIS:dpcounter_one_reg\ : LABEL IS "macrocell42";
-    ATTRIBUTE lib_model OF \SPI_1:BSPIS:mosi_buf_overrun_fin\ : LABEL IS "macrocell43";
-    ATTRIBUTE lib_model OF \SPI_1:BSPIS:mosi_tmp\ : LABEL IS "macrocell44";
+    ATTRIBUTE Location OF \ADC_Moisture:ADC_SAR\ : LABEL IS "F(SAR,0)";
+    ATTRIBUTE lib_model OF \Timer_StepperX:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell3";
+    ATTRIBUTE lib_model OF \Timer_StepperX:TimerUDB:rstSts:stsreg\ : LABEL IS "statusicell5";
+    ATTRIBUTE lib_model OF \Timer_StepperX:TimerUDB:sT16:timerdp:u0\ : LABEL IS "datapathcell9";
+    ATTRIBUTE lib_model OF \Timer_StepperX:TimerUDB:sT16:timerdp:u1\ : LABEL IS "datapathcell10";
+    ATTRIBUTE lib_model OF \Timer_StepperY:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell4";
+    ATTRIBUTE lib_model OF \Timer_StepperY:TimerUDB:rstSts:stsreg\ : LABEL IS "statusicell6";
+    ATTRIBUTE lib_model OF \Timer_StepperY:TimerUDB:sT16:timerdp:u0\ : LABEL IS "datapathcell11";
+    ATTRIBUTE lib_model OF \Timer_StepperY:TimerUDB:sT16:timerdp:u1\ : LABEL IS "datapathcell12";
+    ATTRIBUTE Location OF \ADC_SAR_WaSens:ADC_SAR\ : LABEL IS "F(SAR,1)";
+    ATTRIBUTE lib_model OF \PWM_WaSens:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell7";
+    ATTRIBUTE lib_model OF \PWM_WaSens:PWMUDB:sP8:pwmdp:u0\ : LABEL IS "datapathcell13";
+    ATTRIBUTE lib_model OF \SPI_1:BSPIS:TxStsReg\ : LABEL IS "statusicell8";
+    ATTRIBUTE lib_model OF \SPI_1:BSPIS:RxStsReg\ : LABEL IS "statusicell9";
+    ATTRIBUTE lib_model OF \SPI_1:BSPIS:sR8:Dp:u0\ : LABEL IS "datapathcell14";
+    ATTRIBUTE lib_model OF \UART_1:BUART:txn\ : LABEL IS "macrocell23";
+    ATTRIBUTE lib_model OF \UART_1:BUART:tx_state_1\ : LABEL IS "macrocell24";
+    ATTRIBUTE lib_model OF \UART_1:BUART:tx_state_0\ : LABEL IS "macrocell25";
+    ATTRIBUTE lib_model OF \UART_1:BUART:tx_state_2\ : LABEL IS "macrocell26";
+    ATTRIBUTE lib_model OF \UART_1:BUART:tx_bitclk\ : LABEL IS "macrocell27";
+    ATTRIBUTE lib_model OF \UART_1:BUART:tx_ctrl_mark_last\ : LABEL IS "macrocell28";
+    ATTRIBUTE lib_model OF \UART_1:BUART:rx_state_0\ : LABEL IS "macrocell29";
+    ATTRIBUTE lib_model OF \UART_1:BUART:rx_load_fifo\ : LABEL IS "macrocell30";
+    ATTRIBUTE lib_model OF \UART_1:BUART:rx_state_3\ : LABEL IS "macrocell31";
+    ATTRIBUTE lib_model OF \UART_1:BUART:rx_state_2\ : LABEL IS "macrocell32";
+    ATTRIBUTE lib_model OF \UART_1:BUART:rx_bitclk_enable\ : LABEL IS "macrocell33";
+    ATTRIBUTE lib_model OF \UART_1:BUART:rx_state_stop1_reg\ : LABEL IS "macrocell34";
+    ATTRIBUTE lib_model OF \UART_1:BUART:pollcount_1\ : LABEL IS "macrocell35";
+    ATTRIBUTE lib_model OF \UART_1:BUART:pollcount_0\ : LABEL IS "macrocell36";
+    ATTRIBUTE lib_model OF \UART_1:BUART:rx_status_3\ : LABEL IS "macrocell37";
+    ATTRIBUTE lib_model OF \UART_1:BUART:rx_last\ : LABEL IS "macrocell38";
+    ATTRIBUTE lib_model OF Net_189 : LABEL IS "macrocell39";
+    ATTRIBUTE lib_model OF Net_209 : LABEL IS "macrocell40";
+    ATTRIBUTE lib_model OF \PWM_WaSens:PWMUDB:runmode_enable\ : LABEL IS "macrocell41";
+    ATTRIBUTE lib_model OF \PWM_WaSens:PWMUDB:prevCompare1\ : LABEL IS "macrocell42";
+    ATTRIBUTE lib_model OF \PWM_WaSens:PWMUDB:status_0\ : LABEL IS "macrocell43";
+    ATTRIBUTE lib_model OF Net_331 : LABEL IS "macrocell44";
+    ATTRIBUTE lib_model OF \SPI_1:BSPIS:dpcounter_one_reg\ : LABEL IS "macrocell45";
+    ATTRIBUTE lib_model OF \SPI_1:BSPIS:mosi_buf_overrun_fin\ : LABEL IS "macrocell46";
+    ATTRIBUTE lib_model OF \SPI_1:BSPIS:mosi_tmp\ : LABEL IS "macrocell47";
     COMPONENT clockblockcell
         PORT (
             dclk_0 : OUT std_ulogic;
@@ -777,17 +830,6 @@ ARCHITECTURE __DEFAULT__ OF PSoCcontroller IS
     END COMPONENT;
     ATTRIBUTE udb_clk OF synccell : COMPONENT IS "clock,clock_n,extclk,extclk_n";
     ATTRIBUTE udb_clken OF synccell : COMPONENT IS "clk_en";
-    COMPONENT timercell
-        PORT (
-            clock : IN std_ulogic;
-            kill : IN std_ulogic;
-            enable : IN std_ulogic;
-            capture : IN std_ulogic;
-            timer_reset : IN std_ulogic;
-            tc : OUT std_ulogic;
-            cmp : OUT std_ulogic;
-            irq : OUT std_ulogic);
-    END COMPONENT;
 BEGIN
 
     ClockBlock:clockblockcell
@@ -805,6 +847,8 @@ BEGIN
             clk_bus => ClockBlock_BUS_CLK_local,
             dsi_clkin_div => open,
             dsi_glb_div => open,
+            dclk_glb_0 => \SPI_1:Net_81\,
+            dclk_0 => \SPI_1:Net_81_local\,
             aclk_glb_0 => \ADC_Moisture:Net_385\,
             aclk_0 => \ADC_Moisture:Net_385_local\,
             clk_a_dig_glb_0 => \ADC_Moisture:Net_381\,
@@ -813,19 +857,14 @@ BEGIN
             aclk_1 => \ADC_SAR_WaSens:Net_385_local\,
             clk_a_dig_glb_1 => \ADC_SAR_WaSens:Net_381\,
             clk_a_dig_1 => \ADC_SAR_WaSens:Net_381_local\,
-            dclk_glb_0 => \SPI_1:Net_81\,
-            dclk_0 => \SPI_1:Net_81_local\,
-            dclk_glb_1 => Net_329,
-            dclk_1 => Net_329_local,
-            dclk_glb_2 => Net_347,
-            dclk_2 => Net_347_local,
-            dclk_glb_3 => \UART_1:Net_9\,
-            dclk_3 => \UART_1:Net_9_local\,
-            dclk_glb_4 => Net_10,
-            dclk_4 => Net_10_local,
+            dclk_glb_1 => Net_423,
+            dclk_1 => Net_423_local,
+            dclk_glb_2 => \UART_1:Net_9\,
+            dclk_2 => \UART_1:Net_9_local\,
+            dclk_glb_3 => Net_10,
+            dclk_3 => Net_10_local,
             aclk_glb_ff_0 => \ClockBlock.aclk_glb_ff_0__sig\,
-            aclk_glb_ff_1 => \ClockBlock.aclk_glb_ff_1__sig\,
-            dclk_glb_ff_2 => \ClockBlock.dclk_glb_ff_2__sig\);
+            aclk_glb_ff_1 => \ClockBlock.aclk_glb_ff_1__sig\);
 
     Trigger_1:logicalport
         GENERIC MAP(
@@ -1454,95 +1493,6 @@ BEGIN
             pa_out => Pin_1(0)__PA,
             oe => open,
             pad_in => Pin_1(0)_PAD,
-            in_clock => open,
-            in_clock_en => '1',
-            in_reset => '0',
-            out_clock => open,
-            out_clock_en => '1',
-            out_reset => '0');
-
-    \ADC_Moisture:Bypass\:logicalport
-        GENERIC MAP(
-            drive_mode => "000",
-            ibuf_enabled => "0",
-            id => "49279f92-b67f-4536-9cdd-37ba0e34f3f0/16a808f6-2e13-45b9-bce0-b001c8655113",
-            init_dr_st => "0",
-            input_buffer_sel => "00",
-            input_clk_en => 0,
-            input_sync => "1",
-            input_sync_mode => "0",
-            intr_mode => "00",
-            invert_in_clock => 0,
-            invert_in_clock_en => 0,
-            invert_in_reset => 0,
-            invert_out_clock => 0,
-            invert_out_clock_en => 0,
-            invert_out_reset => 0,
-            io_voltage => "",
-            layout_mode => "CONTIGUOUS",
-            oe_conn => "0",
-            oe_reset => 0,
-            oe_sync => "0",
-            output_clk_en => 0,
-            output_clock_mode => "0",
-            output_conn => "0",
-            output_mode => "0",
-            output_reset => 0,
-            output_sync => "0",
-            ovt_hyst_trim => "0",
-            ovt_needed => "0",
-            ovt_slew_control => "00",
-            pa_in_clock => -1,
-            pa_in_clock_en => -1,
-            pa_in_reset => -1,
-            pa_out_clock => -1,
-            pa_out_clock_en => -1,
-            pa_out_reset => -1,
-            pin_aliases => "",
-            pin_mode => "A",
-            por_state => 4,
-            port_alias_group => "",
-            port_alias_required => 0,
-            sio_group_cnt => 0,
-            sio_hifreq => "00000000",
-            sio_hyst => "1",
-            sio_ibuf => "00000000",
-            sio_info => "00",
-            sio_obuf => "00000000",
-            sio_refsel => "00000000",
-            sio_vohsel => "00000000",
-            sio_vtrip => "00000000",
-            slew_rate => "0",
-            spanning => 0,
-            sw_only => 0,
-            use_annotation => "0",
-            vtrip => "10",
-            width => 1,
-            in_clk_inv => 0,
-            in_clken_inv => 0,
-            in_clken_mode => 1,
-            in_rst_inv => 0,
-            out_clk_inv => 0,
-            out_clken_inv => 0,
-            out_clken_mode => 1,
-            out_rst_inv => 0)
-        PORT MAP(
-            in_clock_en => open,
-            in_reset => open,
-            out_clock_en => open,
-            out_reset => open);
-
-    \ADC_Moisture:Bypass(0)\:iocell
-        GENERIC MAP(
-            in_sync_mode => 0,
-            out_sync_mode => 0,
-            oe_sync_mode => 0,
-            logicalport => "\ADC_Moisture:Bypass\",
-            logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000010")
-        PORT MAP(
-            pa_out => \\\ADC_Moisture:Bypass(0)\\__PA\,
-            oe => open,
             in_clock => open,
             in_clock_en => '1',
             in_reset => '0',
@@ -2269,95 +2219,6 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    \ADC_SAR_WaSens:Bypass\:logicalport
-        GENERIC MAP(
-            drive_mode => "000",
-            ibuf_enabled => "0",
-            id => "9d936231-9718-4d96-86dc-f2b151a9d077/16a808f6-2e13-45b9-bce0-b001c8655113",
-            init_dr_st => "0",
-            input_buffer_sel => "00",
-            input_clk_en => 0,
-            input_sync => "1",
-            input_sync_mode => "0",
-            intr_mode => "00",
-            invert_in_clock => 0,
-            invert_in_clock_en => 0,
-            invert_in_reset => 0,
-            invert_out_clock => 0,
-            invert_out_clock_en => 0,
-            invert_out_reset => 0,
-            io_voltage => "",
-            layout_mode => "CONTIGUOUS",
-            oe_conn => "0",
-            oe_reset => 0,
-            oe_sync => "0",
-            output_clk_en => 0,
-            output_clock_mode => "0",
-            output_conn => "0",
-            output_mode => "0",
-            output_reset => 0,
-            output_sync => "0",
-            ovt_hyst_trim => "0",
-            ovt_needed => "0",
-            ovt_slew_control => "00",
-            pa_in_clock => -1,
-            pa_in_clock_en => -1,
-            pa_in_reset => -1,
-            pa_out_clock => -1,
-            pa_out_clock_en => -1,
-            pa_out_reset => -1,
-            pin_aliases => "",
-            pin_mode => "A",
-            por_state => 4,
-            port_alias_group => "",
-            port_alias_required => 0,
-            sio_group_cnt => 0,
-            sio_hifreq => "00000000",
-            sio_hyst => "1",
-            sio_ibuf => "00000000",
-            sio_info => "00",
-            sio_obuf => "00000000",
-            sio_refsel => "00000000",
-            sio_vohsel => "00000000",
-            sio_vtrip => "00000000",
-            slew_rate => "0",
-            spanning => 0,
-            sw_only => 0,
-            use_annotation => "0",
-            vtrip => "10",
-            width => 1,
-            in_clk_inv => 0,
-            in_clken_inv => 0,
-            in_clken_mode => 1,
-            in_rst_inv => 0,
-            out_clk_inv => 0,
-            out_clken_inv => 0,
-            out_clken_mode => 1,
-            out_rst_inv => 0)
-        PORT MAP(
-            in_clock_en => open,
-            in_reset => open,
-            out_clock_en => open,
-            out_reset => open);
-
-    \ADC_SAR_WaSens:Bypass(0)\:iocell
-        GENERIC MAP(
-            in_sync_mode => 0,
-            out_sync_mode => 0,
-            oe_sync_mode => 0,
-            logicalport => "\ADC_SAR_WaSens:Bypass\",
-            logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000010")
-        PORT MAP(
-            pa_out => \\\ADC_SAR_WaSens:Bypass(0)\\__PA\,
-            oe => open,
-            in_clock => open,
-            in_clock_en => '1',
-            in_reset => '0',
-            out_clock => open,
-            out_clock_en => '1',
-            out_reset => '0');
-
     Pin_PWM_WaSens:logicalport
         GENERIC MAP(
             drive_mode => "110",
@@ -2443,6 +2304,97 @@ BEGIN
             pin_input => Net_331,
             pad_out => Pin_PWM_WaSens(0)_PAD,
             pad_in => Pin_PWM_WaSens(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    Pin_2:logicalport
+        GENERIC MAP(
+            drive_mode => "001",
+            ibuf_enabled => "1",
+            id => "23b924c0-be73-4362-a4a8-df9ce4ffc7bd",
+            init_dr_st => "1",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "0",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "0",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "I",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "00",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    Pin_2(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "Pin_2",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+        PORT MAP(
+            pa_out => Pin_2(0)__PA,
+            oe => open,
+            fb => Net_428,
+            pad_in => Pin_2(0)_PAD,
             in_clock => open,
             in_clock_en => '1',
             in_reset => '0',
@@ -3281,6 +3233,26 @@ BEGIN
             main_0 => \UART_1:BUART:rx_fifonotempty\,
             main_1 => \UART_1:BUART:rx_state_stop1_reg\);
 
+    \Timer_StepperX:TimerUDB:status_tc\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => \Timer_StepperX:TimerUDB:status_tc\,
+            main_0 => \Timer_StepperX:TimerUDB:control_7\,
+            main_1 => \Timer_StepperX:TimerUDB:per_zero\);
+
+    \Timer_StepperY:TimerUDB:status_tc\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => \Timer_StepperY:TimerUDB:status_tc\,
+            main_0 => \Timer_StepperY:TimerUDB:control_7\,
+            main_1 => \Timer_StepperY:TimerUDB:per_zero\);
+
     \PWM_WaSens:PWMUDB:status_2\:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1)",
@@ -3388,14 +3360,6 @@ BEGIN
             main_3 => \SPI_1:BSPIS:count_0\,
             main_4 => \SPI_1:BSPIS:mosi_tmp\,
             main_5 => Net_415);
-
-    __ONE__:macrocell
-        GENERIC MAP(
-            eqn_main => "1'b0",
-            regmode => 0,
-            clken_mode => 1)
-        PORT MAP(
-            q => __ONE__);
 
     \Delay_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\:controlcell
         GENERIC MAP(
@@ -3958,18 +3922,138 @@ BEGIN
             interrupt => Net_170,
             clock => ClockBlock_BUS_CLK);
 
-    \Timer_StepperX:TimerHW\:timercell
+    \Timer_StepperX:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\:controlcell
         GENERIC MAP(
-            cy_registers => "")
+            cy_ctrl_mode_0 => "11111111",
+            cy_ctrl_mode_1 => "00000000",
+            cy_ext_reset => 0,
+            cy_force_order => 1,
+            cy_init_value => "00000000",
+            clk_inv => '0',
+            clken_mode => 1)
         PORT MAP(
-            clock => \ClockBlock.dclk_glb_ff_2__sig\,
-            kill => open,
-            enable => __ONE__,
-            capture => open,
-            timer_reset => open,
-            tc => Net_189,
-            cmp => \Timer_StepperX:Net_261\,
-            irq => \Timer_StepperX:Net_57\);
+            clock => Net_423,
+            control_7 => \Timer_StepperX:TimerUDB:control_7\,
+            control_6 => \Timer_StepperX:TimerUDB:control_6\,
+            control_5 => \Timer_StepperX:TimerUDB:control_5\,
+            control_4 => \Timer_StepperX:TimerUDB:control_4\,
+            control_3 => \Timer_StepperX:TimerUDB:control_3\,
+            control_2 => \Timer_StepperX:TimerUDB:control_2\,
+            control_1 => \Timer_StepperX:TimerUDB:control_1\,
+            control_0 => \Timer_StepperX:TimerUDB:control_0\,
+            busclk => ClockBlock_BUS_CLK);
+
+    \Timer_StepperX:TimerUDB:rstSts:stsreg\:statusicell
+        GENERIC MAP(
+            cy_force_order => 1,
+            cy_int_mask => "1111111",
+            cy_md_select => "0000011",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_423,
+            status_6 => open,
+            status_5 => open,
+            status_4 => open,
+            status_3 => \Timer_StepperX:TimerUDB:status_3\,
+            status_2 => \Timer_StepperX:TimerUDB:status_2\,
+            status_1 => open,
+            status_0 => \Timer_StepperX:TimerUDB:status_tc\);
+
+    \Timer_StepperX:TimerUDB:sT16:timerdp:u0\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111000000000000000000000001000000000000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_423,
+            cs_addr_1 => \Timer_StepperX:TimerUDB:control_7\,
+            cs_addr_0 => \Timer_StepperX:TimerUDB:per_zero\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0 => \Timer_StepperX:TimerUDB:sT16:timerdp:u0.ce0__sig\,
+            cl0 => \Timer_StepperX:TimerUDB:sT16:timerdp:u0.cl0__sig\,
+            z0 => \Timer_StepperX:TimerUDB:sT16:timerdp:u0.z0__sig\,
+            ff0 => \Timer_StepperX:TimerUDB:sT16:timerdp:u0.ff0__sig\,
+            ce1 => \Timer_StepperX:TimerUDB:sT16:timerdp:u0.ce1__sig\,
+            cl1 => \Timer_StepperX:TimerUDB:sT16:timerdp:u0.cl1__sig\,
+            z1 => \Timer_StepperX:TimerUDB:sT16:timerdp:u0.z1__sig\,
+            ff1 => \Timer_StepperX:TimerUDB:sT16:timerdp:u0.ff1__sig\,
+            co_msb => \Timer_StepperX:TimerUDB:sT16:timerdp:u0.co_msb__sig\,
+            sol_msb => \Timer_StepperX:TimerUDB:sT16:timerdp:u0.sol_msb__sig\,
+            cfbo => \Timer_StepperX:TimerUDB:sT16:timerdp:u0.cfbo__sig\,
+            sil => \Timer_StepperX:TimerUDB:sT16:timerdp:u1.sor__sig\,
+            cmsbi => \Timer_StepperX:TimerUDB:sT16:timerdp:u1.cmsbo__sig\);
+
+    \Timer_StepperX:TimerUDB:sT16:timerdp:u1\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_423,
+            cs_addr_1 => \Timer_StepperX:TimerUDB:control_7\,
+            cs_addr_0 => \Timer_StepperX:TimerUDB:per_zero\,
+            z0_comb => \Timer_StepperX:TimerUDB:per_zero\,
+            f0_bus_stat_comb => \Timer_StepperX:TimerUDB:status_3\,
+            f0_blk_stat_comb => \Timer_StepperX:TimerUDB:status_2\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0i => \Timer_StepperX:TimerUDB:sT16:timerdp:u0.ce0__sig\,
+            cl0i => \Timer_StepperX:TimerUDB:sT16:timerdp:u0.cl0__sig\,
+            z0i => \Timer_StepperX:TimerUDB:sT16:timerdp:u0.z0__sig\,
+            ff0i => \Timer_StepperX:TimerUDB:sT16:timerdp:u0.ff0__sig\,
+            ce1i => \Timer_StepperX:TimerUDB:sT16:timerdp:u0.ce1__sig\,
+            cl1i => \Timer_StepperX:TimerUDB:sT16:timerdp:u0.cl1__sig\,
+            z1i => \Timer_StepperX:TimerUDB:sT16:timerdp:u0.z1__sig\,
+            ff1i => \Timer_StepperX:TimerUDB:sT16:timerdp:u0.ff1__sig\,
+            ci => \Timer_StepperX:TimerUDB:sT16:timerdp:u0.co_msb__sig\,
+            sir => \Timer_StepperX:TimerUDB:sT16:timerdp:u0.sol_msb__sig\,
+            cfbi => \Timer_StepperX:TimerUDB:sT16:timerdp:u0.cfbo__sig\,
+            sor => \Timer_StepperX:TimerUDB:sT16:timerdp:u1.sor__sig\,
+            cmsbo => \Timer_StepperX:TimerUDB:sT16:timerdp:u1.cmsbo__sig\);
 
     ISR_stepperY:interrupt
         GENERIC MAP(
@@ -3979,18 +4063,138 @@ BEGIN
             interrupt => Net_209,
             clock => ClockBlock_BUS_CLK);
 
-    \Timer_StepperY:TimerHW\:timercell
+    \Timer_StepperY:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\:controlcell
         GENERIC MAP(
-            cy_registers => "")
+            cy_ctrl_mode_0 => "11111111",
+            cy_ctrl_mode_1 => "00000000",
+            cy_ext_reset => 0,
+            cy_force_order => 1,
+            cy_init_value => "00000000",
+            clk_inv => '0',
+            clken_mode => 1)
         PORT MAP(
-            clock => \ClockBlock.dclk_glb_ff_2__sig\,
-            kill => open,
-            enable => __ONE__,
-            capture => open,
-            timer_reset => open,
-            tc => Net_209,
-            cmp => \Timer_StepperY:Net_261\,
-            irq => \Timer_StepperY:Net_57\);
+            clock => Net_423,
+            control_7 => \Timer_StepperY:TimerUDB:control_7\,
+            control_6 => \Timer_StepperY:TimerUDB:control_6\,
+            control_5 => \Timer_StepperY:TimerUDB:control_5\,
+            control_4 => \Timer_StepperY:TimerUDB:control_4\,
+            control_3 => \Timer_StepperY:TimerUDB:control_3\,
+            control_2 => \Timer_StepperY:TimerUDB:control_2\,
+            control_1 => \Timer_StepperY:TimerUDB:control_1\,
+            control_0 => \Timer_StepperY:TimerUDB:control_0\,
+            busclk => ClockBlock_BUS_CLK);
+
+    \Timer_StepperY:TimerUDB:rstSts:stsreg\:statusicell
+        GENERIC MAP(
+            cy_force_order => 1,
+            cy_int_mask => "1111111",
+            cy_md_select => "0000011",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_423,
+            status_6 => open,
+            status_5 => open,
+            status_4 => open,
+            status_3 => \Timer_StepperY:TimerUDB:status_3\,
+            status_2 => \Timer_StepperY:TimerUDB:status_2\,
+            status_1 => open,
+            status_0 => \Timer_StepperY:TimerUDB:status_tc\);
+
+    \Timer_StepperY:TimerUDB:sT16:timerdp:u0\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111000000000000000000000001000000000000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_423,
+            cs_addr_1 => \Timer_StepperY:TimerUDB:control_7\,
+            cs_addr_0 => \Timer_StepperY:TimerUDB:per_zero\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0 => \Timer_StepperY:TimerUDB:sT16:timerdp:u0.ce0__sig\,
+            cl0 => \Timer_StepperY:TimerUDB:sT16:timerdp:u0.cl0__sig\,
+            z0 => \Timer_StepperY:TimerUDB:sT16:timerdp:u0.z0__sig\,
+            ff0 => \Timer_StepperY:TimerUDB:sT16:timerdp:u0.ff0__sig\,
+            ce1 => \Timer_StepperY:TimerUDB:sT16:timerdp:u0.ce1__sig\,
+            cl1 => \Timer_StepperY:TimerUDB:sT16:timerdp:u0.cl1__sig\,
+            z1 => \Timer_StepperY:TimerUDB:sT16:timerdp:u0.z1__sig\,
+            ff1 => \Timer_StepperY:TimerUDB:sT16:timerdp:u0.ff1__sig\,
+            co_msb => \Timer_StepperY:TimerUDB:sT16:timerdp:u0.co_msb__sig\,
+            sol_msb => \Timer_StepperY:TimerUDB:sT16:timerdp:u0.sol_msb__sig\,
+            cfbo => \Timer_StepperY:TimerUDB:sT16:timerdp:u0.cfbo__sig\,
+            sil => \Timer_StepperY:TimerUDB:sT16:timerdp:u1.sor__sig\,
+            cmsbi => \Timer_StepperY:TimerUDB:sT16:timerdp:u1.cmsbo__sig\);
+
+    \Timer_StepperY:TimerUDB:sT16:timerdp:u1\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_423,
+            cs_addr_1 => \Timer_StepperY:TimerUDB:control_7\,
+            cs_addr_0 => \Timer_StepperY:TimerUDB:per_zero\,
+            z0_comb => \Timer_StepperY:TimerUDB:per_zero\,
+            f0_bus_stat_comb => \Timer_StepperY:TimerUDB:status_3\,
+            f0_blk_stat_comb => \Timer_StepperY:TimerUDB:status_2\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0i => \Timer_StepperY:TimerUDB:sT16:timerdp:u0.ce0__sig\,
+            cl0i => \Timer_StepperY:TimerUDB:sT16:timerdp:u0.cl0__sig\,
+            z0i => \Timer_StepperY:TimerUDB:sT16:timerdp:u0.z0__sig\,
+            ff0i => \Timer_StepperY:TimerUDB:sT16:timerdp:u0.ff0__sig\,
+            ce1i => \Timer_StepperY:TimerUDB:sT16:timerdp:u0.ce1__sig\,
+            cl1i => \Timer_StepperY:TimerUDB:sT16:timerdp:u0.cl1__sig\,
+            z1i => \Timer_StepperY:TimerUDB:sT16:timerdp:u0.z1__sig\,
+            ff1i => \Timer_StepperY:TimerUDB:sT16:timerdp:u0.ff1__sig\,
+            ci => \Timer_StepperY:TimerUDB:sT16:timerdp:u0.co_msb__sig\,
+            sir => \Timer_StepperY:TimerUDB:sT16:timerdp:u0.sol_msb__sig\,
+            cfbi => \Timer_StepperY:TimerUDB:sT16:timerdp:u0.cfbo__sig\,
+            sor => \Timer_StepperY:TimerUDB:sT16:timerdp:u1.sor__sig\,
+            cmsbo => \Timer_StepperY:TimerUDB:sT16:timerdp:u1.cmsbo__sig\);
 
     ISR_stepperX:interrupt
         GENERIC MAP(
@@ -4039,27 +4243,6 @@ BEGIN
             data_out_udb_0 => \ADC_SAR_WaSens:Net_207_0\,
             eof_udb => Net_226);
 
-    \PWM_WaSens:PWMUDB:genblk1:ctrlreg\:controlcell
-        GENERIC MAP(
-            cy_ctrl_mode_0 => "11111111",
-            cy_ctrl_mode_1 => "00000000",
-            cy_ext_reset => 0,
-            cy_force_order => 1,
-            cy_init_value => "00000000",
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            clock => Net_329,
-            control_7 => \PWM_WaSens:PWMUDB:control_7\,
-            control_6 => \PWM_WaSens:PWMUDB:control_6\,
-            control_5 => \PWM_WaSens:PWMUDB:control_5\,
-            control_4 => \PWM_WaSens:PWMUDB:control_4\,
-            control_3 => \PWM_WaSens:PWMUDB:control_3\,
-            control_2 => \PWM_WaSens:PWMUDB:control_2\,
-            control_1 => \PWM_WaSens:PWMUDB:control_1\,
-            control_0 => \PWM_WaSens:PWMUDB:control_0\,
-            busclk => ClockBlock_BUS_CLK);
-
     \PWM_WaSens:PWMUDB:genblk8:stsreg\:statusicell
         GENERIC MAP(
             cy_force_order => 1,
@@ -4068,7 +4251,7 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => Net_329,
+            clock => Net_423,
             status_6 => open,
             status_5 => open,
             status_4 => open,
@@ -4105,7 +4288,7 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => Net_329,
+            clock => Net_423,
             cs_addr_2 => \PWM_WaSens:PWMUDB:tc_i\,
             cs_addr_1 => \PWM_WaSens:PWMUDB:runmode_enable\,
             cl0_comb => \PWM_WaSens:PWMUDB:cmp1_less\,
@@ -4514,6 +4697,30 @@ BEGIN
             clock_0 => \UART_1:Net_9\,
             main_0 => Net_122);
 
+    Net_189:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_189,
+            clock_0 => Net_423,
+            main_0 => \Timer_StepperX:TimerUDB:control_7\,
+            main_1 => \Timer_StepperX:TimerUDB:per_zero\);
+
+    Net_209:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_209,
+            clock_0 => Net_423,
+            main_0 => \Timer_StepperY:TimerUDB:control_7\,
+            main_1 => \Timer_StepperY:TimerUDB:per_zero\);
+
     \PWM_WaSens:PWMUDB:runmode_enable\:macrocell
         GENERIC MAP(
             eqn_main => "(main_0)",
@@ -4522,8 +4729,8 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \PWM_WaSens:PWMUDB:runmode_enable\,
-            clock_0 => Net_329,
-            main_0 => \PWM_WaSens:PWMUDB:control_7\);
+            clock_0 => Net_423,
+            main_0 => Net_428);
 
     \PWM_WaSens:PWMUDB:prevCompare1\:macrocell
         GENERIC MAP(
@@ -4533,7 +4740,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \PWM_WaSens:PWMUDB:prevCompare1\,
-            clock_0 => Net_329,
+            clock_0 => Net_423,
             main_0 => \PWM_WaSens:PWMUDB:cmp1_less\);
 
     \PWM_WaSens:PWMUDB:status_0\:macrocell
@@ -4544,7 +4751,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \PWM_WaSens:PWMUDB:status_0\,
-            clock_0 => Net_329,
+            clock_0 => Net_423,
             main_0 => \PWM_WaSens:PWMUDB:prevCompare1\,
             main_1 => \PWM_WaSens:PWMUDB:cmp1_less\);
 
@@ -4556,7 +4763,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => Net_331,
-            clock_0 => Net_329,
+            clock_0 => Net_423,
             main_0 => \PWM_WaSens:PWMUDB:runmode_enable\,
             main_1 => \PWM_WaSens:PWMUDB:cmp1_less\);
 

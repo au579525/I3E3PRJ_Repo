@@ -1,14 +1,3 @@
-/* ========================================
- *
- * Copyright YOUR COMPANY, THE YEAR
- * All Rights Reserved
- * UNPUBLISHED, LICENSED SOFTWARE.
- *
- * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
- *
- * ========================================
-*/
 #include "MotorDriverX.h"
 
 CY_ISR(stepperX_isr_handler) {
@@ -35,8 +24,6 @@ void rotateClockwiseX() {
     }
     moveStepX();
     ++stepperPositionX;
-    
-    UART_1_PutString("Rotated clockwise once\n\r");
 }
 
 void rotateCounterClockwiseX() {
@@ -70,14 +57,15 @@ void moveStepX() {
 }
 
 void moveDegreesX(int deg) { //Positivt antal grader skrives hvis armen skal køre med uret og negativt gradtal skrives hvis den skal køre mod uret
-//    UART_1_PutString("Starting moveDegreesX function...\n\r");
     float round1 = deg / 1.8; //Grader divideret med stepvinkel = antal steps der skal køres
     int steps = (int)round(round1); //Afrund antallet af steps
     
     if(steps > 0) {
+        if (stepperPositionX+steps > MAX_STEPS_X) { //limit to max
+            steps = MAX_STEPS_X-stepperPositionX;   
+        }
         for(int i = 0; i < steps; i++) {
             Timer_StepperX_Start();
-//            UART_1_PutString("Starting timer\n\r");
             while(timerDoneFlagX == 0); //wait here
             rotateClockwiseX();
             timerDoneFlagX = 0;
@@ -85,7 +73,7 @@ void moveDegreesX(int deg) { //Positivt antal grader skrives hvis armen skal kø
     }
     else if(steps < 0) {
         if(steps <= (stepperPositionX * -1)) {    //Hvis antallet af steps der skal køres tilbage er mere end vi kan køre, før proben rammes
-            UART_1_PutString("Moving too far dude\n\r"); //nothing
+            resetPositionX(); //move to zero position
         }
         else if(steps > (stepperPositionX * -1)) {
             for(int i = 0; i > steps; i--) {
@@ -106,7 +94,6 @@ void resetPositionX() {
         timerDoneFlagX = 0;
     }
     stepperPositionX = 0;
-    UART_1_PutString("Stepper reset\n\r");
 }
 
 /* [] END OF FILE */

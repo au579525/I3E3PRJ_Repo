@@ -274,20 +274,14 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs>
-<name v=".\PSoCcontroller.cydsn\main.c" />
-<name v=".\PSoCcontroller.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\PSoCcontroller.cydsn\WaterSensor.h" />
-<name v=".\PSoCcontroller.cydsn\WaterPump.h" />
-<name v=".\PSoCcontroller.cydsn\PSoCcontroller.cydwr" />
-</OpenDocs>
+<OpenDocs />
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
   Actipro Docking/MDI for WinForms
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1439, 711" SelectedTabbedMdiWindow="14f096e8-005f-4a58-8dd6-24b097836391"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="63638a12-f3bc-455e-832a-5a422a3e72f7" /><DocumentWindow Key="C:\Users\jens1\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\main.c" Guid="14f096e8-005f-4a58-8dd6-24b097836391" /><DocumentWindow Key="C:\Users\jens1\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\TopDesign\TopDesign.cysch" Guid="f27fac57-ef0a-4f09-acb1-f456034cc563" /><DocumentWindow Key="C:\Users\jens1\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\WaterSensor.h" Guid="b24d37d0-9424-47fc-888e-c2bcb12500d6" /><DocumentWindow Key="C:\Users\jens1\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\WaterPump.h" Guid="7e4548a3-84bb-4daa-8956-c6039cd57c8a" /><DocumentWindow Key="C:\Users\jens1\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\Dokumenter\Design\PSoCcontroller\PSoCcontroller\PSoCcontroller.cydsn\PSoCcontroller.cydwr" Guid="d74bfc63-e0e4-4972-b026-cae2e41c2d6b" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1693, 711" SelectedTabbedMdiWindow="63638a12-f3bc-455e-832a-5a422a3e72f7"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="63638a12-f3bc-455e-832a-5a422a3e72f7" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

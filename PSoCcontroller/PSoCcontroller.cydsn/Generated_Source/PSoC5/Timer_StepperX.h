@@ -37,7 +37,7 @@ extern uint8 Timer_StepperX_initVar;
 **************************************/
 
 #define Timer_StepperX_Resolution                 16u
-#define Timer_StepperX_UsingFixedFunction         1u
+#define Timer_StepperX_UsingFixedFunction         0u
 #define Timer_StepperX_UsingHWCaptureCounter      0u
 #define Timer_StepperX_SoftwareCaptureMode        0u
 #define Timer_StepperX_SoftwareTriggerMode        0u
@@ -169,13 +169,13 @@ void Timer_StepperX_Wakeup(void)        ;
 ***************************************/
 
 #define Timer_StepperX_INIT_PERIOD             7499u
-#define Timer_StepperX_INIT_CAPTURE_MODE       ((uint8)((uint8)1u << Timer_StepperX_CTRL_CAP_MODE_SHIFT))
+#define Timer_StepperX_INIT_CAPTURE_MODE       ((uint8)((uint8)0u << Timer_StepperX_CTRL_CAP_MODE_SHIFT))
 #define Timer_StepperX_INIT_TRIGGER_MODE       ((uint8)((uint8)0u << Timer_StepperX_CTRL_TRIG_MODE_SHIFT))
 #if (Timer_StepperX_UsingFixedFunction)
-    #define Timer_StepperX_INIT_INTERRUPT_MODE (((uint8)((uint8)0u << Timer_StepperX_STATUS_TC_INT_MASK_SHIFT)) | \
+    #define Timer_StepperX_INIT_INTERRUPT_MODE (((uint8)((uint8)1u << Timer_StepperX_STATUS_TC_INT_MASK_SHIFT)) | \
                                                   ((uint8)((uint8)0 << Timer_StepperX_STATUS_CAPTURE_INT_MASK_SHIFT)))
 #else
-    #define Timer_StepperX_INIT_INTERRUPT_MODE (((uint8)((uint8)0u << Timer_StepperX_STATUS_TC_INT_MASK_SHIFT)) | \
+    #define Timer_StepperX_INIT_INTERRUPT_MODE (((uint8)((uint8)1u << Timer_StepperX_STATUS_TC_INT_MASK_SHIFT)) | \
                                                  ((uint8)((uint8)0 << Timer_StepperX_STATUS_CAPTURE_INT_MASK_SHIFT)) | \
                                                  ((uint8)((uint8)0 << Timer_StepperX_STATUS_FIFOFULL_INT_MASK_SHIFT)))
 #endif /* (Timer_StepperX_UsingFixedFunction) */

@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: ADC_Moisture_Bypass.c  
+* File Name: Pin_PWMkill.c  
 * Version 2.20
 *
 * Description:
@@ -15,15 +15,15 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "ADC_Moisture_Bypass.h"
+#include "Pin_PWMkill.h"
 
 /* APIs are not generated for P15[7:6] on PSoC 5 */
 #if !(CY_PSOC5A &&\
-	 ADC_Moisture_Bypass__PORT == 15 && ((ADC_Moisture_Bypass__MASK & 0xC0) != 0))
+	 Pin_PWMkill__PORT == 15 && ((Pin_PWMkill__MASK & 0xC0) != 0))
 
 
 /*******************************************************************************
-* Function Name: ADC_Moisture_Bypass_Write
+* Function Name: Pin_PWMkill_Write
 ****************************************************************************//**
 *
 * \brief Writes the value to the physical port (data output register), masking
@@ -52,17 +52,17 @@
 *  this function.
 *
 * \funcusage
-*  \snippet ADC_Moisture_Bypass_SUT.c usage_ADC_Moisture_Bypass_Write
+*  \snippet Pin_PWMkill_SUT.c usage_Pin_PWMkill_Write
 *******************************************************************************/
-void ADC_Moisture_Bypass_Write(uint8 value)
+void Pin_PWMkill_Write(uint8 value)
 {
-    uint8 staticBits = (ADC_Moisture_Bypass_DR & (uint8)(~ADC_Moisture_Bypass_MASK));
-    ADC_Moisture_Bypass_DR = staticBits | ((uint8)(value << ADC_Moisture_Bypass_SHIFT) & ADC_Moisture_Bypass_MASK);
+    uint8 staticBits = (Pin_PWMkill_DR & (uint8)(~Pin_PWMkill_MASK));
+    Pin_PWMkill_DR = staticBits | ((uint8)(value << Pin_PWMkill_SHIFT) & Pin_PWMkill_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: ADC_Moisture_Bypass_SetDriveMode
+* Function Name: Pin_PWMkill_SetDriveMode
 ****************************************************************************//**
 *
 * \brief Sets the drive mode for each of the Pins component's pins.
@@ -85,16 +85,16 @@ void ADC_Moisture_Bypass_Write(uint8 value)
 *  APIs (primary method) or disable interrupts around this function.
 *
 * \funcusage
-*  \snippet ADC_Moisture_Bypass_SUT.c usage_ADC_Moisture_Bypass_SetDriveMode
+*  \snippet Pin_PWMkill_SUT.c usage_Pin_PWMkill_SetDriveMode
 *******************************************************************************/
-void ADC_Moisture_Bypass_SetDriveMode(uint8 mode)
+void Pin_PWMkill_SetDriveMode(uint8 mode)
 {
-	CyPins_SetPinDriveMode(ADC_Moisture_Bypass_0, mode);
+	CyPins_SetPinDriveMode(Pin_PWMkill_0, mode);
 }
 
 
 /*******************************************************************************
-* Function Name: ADC_Moisture_Bypass_Read
+* Function Name: Pin_PWMkill_Read
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port (pin status register) and masks 
@@ -108,16 +108,16 @@ void ADC_Moisture_Bypass_SetDriveMode(uint8 mode)
 *  The current value for the pins in the component as a right justified number.
 *
 * \funcusage
-*  \snippet ADC_Moisture_Bypass_SUT.c usage_ADC_Moisture_Bypass_Read  
+*  \snippet Pin_PWMkill_SUT.c usage_Pin_PWMkill_Read  
 *******************************************************************************/
-uint8 ADC_Moisture_Bypass_Read(void)
+uint8 Pin_PWMkill_Read(void)
 {
-    return (ADC_Moisture_Bypass_PS & ADC_Moisture_Bypass_MASK) >> ADC_Moisture_Bypass_SHIFT;
+    return (Pin_PWMkill_PS & Pin_PWMkill_MASK) >> Pin_PWMkill_SHIFT;
 }
 
 
 /*******************************************************************************
-* Function Name: ADC_Moisture_Bypass_ReadDataReg
+* Function Name: Pin_PWMkill_ReadDataReg
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port's data output register and masks 
@@ -126,8 +126,8 @@ uint8 ADC_Moisture_Bypass_Read(void)
 *
 * The data output register controls the signal applied to the physical pin in 
 * conjunction with the drive mode parameter. This is not the same as the 
-* preferred ADC_Moisture_Bypass_Read() API because the 
-* ADC_Moisture_Bypass_ReadDataReg() reads the data register instead of the status 
+* preferred Pin_PWMkill_Read() API because the 
+* Pin_PWMkill_ReadDataReg() reads the data register instead of the status 
 * register. For output pins this is a useful function to determine the value 
 * just written to the pin.
 *
@@ -136,19 +136,19 @@ uint8 ADC_Moisture_Bypass_Read(void)
 *  justified number for the component instance.
 *
 * \funcusage
-*  \snippet ADC_Moisture_Bypass_SUT.c usage_ADC_Moisture_Bypass_ReadDataReg 
+*  \snippet Pin_PWMkill_SUT.c usage_Pin_PWMkill_ReadDataReg 
 *******************************************************************************/
-uint8 ADC_Moisture_Bypass_ReadDataReg(void)
+uint8 Pin_PWMkill_ReadDataReg(void)
 {
-    return (ADC_Moisture_Bypass_DR & ADC_Moisture_Bypass_MASK) >> ADC_Moisture_Bypass_SHIFT;
+    return (Pin_PWMkill_DR & Pin_PWMkill_MASK) >> Pin_PWMkill_SHIFT;
 }
 
 
 /* If interrupt is connected for this Pins component */ 
-#if defined(ADC_Moisture_Bypass_INTSTAT) 
+#if defined(Pin_PWMkill_INTSTAT) 
 
     /*******************************************************************************
-    * Function Name: ADC_Moisture_Bypass_SetInterruptMode
+    * Function Name: Pin_PWMkill_SetInterruptMode
     ****************************************************************************//**
     *
     * \brief Configures the interrupt mode for each of the Pins component's
@@ -161,12 +161,12 @@ uint8 ADC_Moisture_Bypass_ReadDataReg(void)
     * \param position
     *  The pin position as listed in the Pins component. You may OR these to be 
     *  able to configure the interrupt mode of multiple pins within a Pins 
-    *  component. Or you may use ADC_Moisture_Bypass_INTR_ALL to configure the
+    *  component. Or you may use Pin_PWMkill_INTR_ALL to configure the
     *  interrupt mode of all the pins in the Pins component.       
-    *  - ADC_Moisture_Bypass_0_INTR       (First pin in the list)
-    *  - ADC_Moisture_Bypass_1_INTR       (Second pin in the list)
+    *  - Pin_PWMkill_0_INTR       (First pin in the list)
+    *  - Pin_PWMkill_1_INTR       (Second pin in the list)
     *  - ...
-    *  - ADC_Moisture_Bypass_INTR_ALL     (All pins in Pins component)
+    *  - Pin_PWMkill_INTR_ALL     (All pins in Pins component)
     *
     * \param mode
     *  Interrupt mode for the selected pins. Valid options are documented in
@@ -182,19 +182,19 @@ uint8 ADC_Moisture_Bypass_ReadDataReg(void)
     *  port.
     *
     * \funcusage
-    *  \snippet ADC_Moisture_Bypass_SUT.c usage_ADC_Moisture_Bypass_SetInterruptMode
+    *  \snippet Pin_PWMkill_SUT.c usage_Pin_PWMkill_SetInterruptMode
     *******************************************************************************/
-    void ADC_Moisture_Bypass_SetInterruptMode(uint16 position, uint16 mode)
+    void Pin_PWMkill_SetInterruptMode(uint16 position, uint16 mode)
     {
-		if((position & ADC_Moisture_Bypass_0_INTR) != 0u) 
+		if((position & Pin_PWMkill_0_INTR) != 0u) 
 		{ 
-			 ADC_Moisture_Bypass_0_INTTYPE_REG = (uint8)mode; 
+			 Pin_PWMkill_0_INTTYPE_REG = (uint8)mode; 
 		}
     }
     
     
     /*******************************************************************************
-    * Function Name: ADC_Moisture_Bypass_ClearInterrupt
+    * Function Name: Pin_PWMkill_ClearInterrupt
     ****************************************************************************//**
     *
     * \brief Clears any active interrupts attached with the component and returns 
@@ -211,11 +211,11 @@ uint8 ADC_Moisture_Bypass_ReadDataReg(void)
     *  those associated with the Pins component.
     *
     * \funcusage
-    *  \snippet ADC_Moisture_Bypass_SUT.c usage_ADC_Moisture_Bypass_ClearInterrupt
+    *  \snippet Pin_PWMkill_SUT.c usage_Pin_PWMkill_ClearInterrupt
     *******************************************************************************/
-    uint8 ADC_Moisture_Bypass_ClearInterrupt(void)
+    uint8 Pin_PWMkill_ClearInterrupt(void)
     {
-        return (ADC_Moisture_Bypass_INTSTAT & ADC_Moisture_Bypass_MASK) >> ADC_Moisture_Bypass_SHIFT;
+        return (Pin_PWMkill_INTSTAT & Pin_PWMkill_MASK) >> Pin_PWMkill_SHIFT;
     }
 
 #endif /* If Interrupts Are Enabled for this Pins component */ 

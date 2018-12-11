@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 1
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccQluXJ0.s 			page 1
 
 
    1              		.syntax unified
@@ -19,13 +19,13 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text.isEmpty,"ax",%progbits
+  19              		.section	.text.isFull,"ax",%progbits
   20              		.align	2
   21              		.thumb
   22              		.thumb_func
-  23              		.type	isEmpty, %function
-  24              	isEmpty:
-  25              	.LFB64:
+  23              		.type	isFull, %function
+  24              	isFull:
+  25              	.LFB63:
   26              		.file 1 "CircularBuffer.c"
    1:CircularBuffer.c **** /* ========================================
    2:CircularBuffer.c ****  * PIGEON EXTERMINATION SYSTEM
@@ -39,1751 +39,1506 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 1
   10:CircularBuffer.c **** #include "project.h"
   11:CircularBuffer.c **** 
   12:CircularBuffer.c **** static uint8 isFull(struct CircBuf * circ_ptr){
-  13:CircularBuffer.c ****     if ((circ_ptr->rear + 1) % circ_ptr->maxLength ==  circ_ptr->front) {
-  14:CircularBuffer.c ****         UART_1_PutString("Buffer full\n\r");
-  15:CircularBuffer.c ****         return 1;
-  16:CircularBuffer.c ****     } else
-  17:CircularBuffer.c ****         return 0;
-  18:CircularBuffer.c **** }
-  19:CircularBuffer.c **** 
-  20:CircularBuffer.c **** static uint8 isEmpty(struct CircBuf * circ_ptr){
-  27              		.loc 1 20 0
+  27              		.loc 1 12 0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
   30              		@ frame_needed = 0, uses_anonymous_args = 0
   31              		@ link register save eliminated.
   32              	.LVL0:
-  21:CircularBuffer.c ****     if (circ_ptr->rear == -1 && circ_ptr->front == -1) {
-  33              		.loc 1 21 0
-  34 0000 B0F9B430 		ldrsh	r3, [r0, #180]
-  35 0004 B3F1FF3F 		cmp	r3, #-1
-  36 0008 01D1     		bne	.L3
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 2
-
-
-  22:CircularBuffer.c **** //        UART_1_PutString("Buffer empty\n\r");
-  23:CircularBuffer.c ****         return 1;
-  37              		.loc 1 23 0
-  38 000a 0120     		movs	r0, #1
-  39              	.LVL1:
-  40 000c 7047     		bx	lr
-  41              	.LVL2:
-  42              	.L3:
-  24:CircularBuffer.c ****     } else
-  25:CircularBuffer.c ****         return 0;
-  43              		.loc 1 25 0
-  44 000e 0020     		movs	r0, #0
-  45              	.LVL3:
-  26:CircularBuffer.c **** }
-  46              		.loc 1 26 0
-  47 0010 7047     		bx	lr
-  48              		.cfi_endproc
-  49              	.LFE64:
-  50              		.size	isEmpty, .-isEmpty
-  51 0012 00BF     		.section	.text.clearBuffer,"ax",%progbits
-  52              		.align	2
-  53              		.thumb
-  54              		.thumb_func
-  55              		.type	clearBuffer, %function
-  56              	clearBuffer:
-  57              	.LFB67:
-  27:CircularBuffer.c **** 
-  28:CircularBuffer.c **** void push(struct CircBuf * circ_ptr, void (*newFuncPtr)(), int newParam) {
-  29:CircularBuffer.c ****     struct queueElement * QIhandle;
-  30:CircularBuffer.c ****     
-  31:CircularBuffer.c ****     if (isFull(circ_ptr)) {
-  32:CircularBuffer.c ****         ; //do nothing
-  33:CircularBuffer.c ****     } else if (isEmpty(circ_ptr)) {
-  34:CircularBuffer.c ****         UART_1_PutString("Pushing first element in buffer\n\r");
-  35:CircularBuffer.c ****         circ_ptr->front = 0;
-  36:CircularBuffer.c ****         circ_ptr->rear = 0;
-  37:CircularBuffer.c ****         QIhandle = &circ_ptr->queueItem[circ_ptr->rear];
-  38:CircularBuffer.c ****         QIhandle->funcPtr = newFuncPtr;
-  39:CircularBuffer.c ****         QIhandle->param = newParam;
-  40:CircularBuffer.c ****     } else {
-  41:CircularBuffer.c ****         UART_1_PutString("Pushing element\n\r");
-  42:CircularBuffer.c ****         circ_ptr->rear = (circ_ptr->rear + 1) % circ_ptr->maxLength;
-  43:CircularBuffer.c ****         QIhandle = &circ_ptr->queueItem[circ_ptr->rear];
-  44:CircularBuffer.c ****         QIhandle->funcPtr = newFuncPtr; //place function pointer in queue
-  45:CircularBuffer.c ****         QIhandle->param = newParam; //place parameter in queue
-  46:CircularBuffer.c ****     }
-  47:CircularBuffer.c **** };
-  48:CircularBuffer.c **** 
-  49:CircularBuffer.c **** void pop(struct CircBuf * circ_ptr) {
-  50:CircularBuffer.c ****     struct queueElement * QIhandle = &circ_ptr->queueItem[circ_ptr->front];
-  51:CircularBuffer.c ****     
-  52:CircularBuffer.c ****     if (!isEmpty(circ_ptr)) {
-  53:CircularBuffer.c ****         UART_1_PutString("Popping element\n\r");
-  54:CircularBuffer.c ****         (*QIhandle->funcPtr)(QIhandle->param); //perform operation in queue
-  55:CircularBuffer.c ****         
-  56:CircularBuffer.c ****         if (circ_ptr->front == circ_ptr->rear) {
-  57:CircularBuffer.c ****             circ_ptr->front = -1;
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 3
-
-
-  58:CircularBuffer.c ****             circ_ptr->rear = -1;
-  59:CircularBuffer.c ****         } else {
-  60:CircularBuffer.c ****             circ_ptr->front = (circ_ptr->front + 1) % circ_ptr->maxLength;
-  61:CircularBuffer.c ****         }
-  62:CircularBuffer.c ****     }
-  63:CircularBuffer.c **** };
-  64:CircularBuffer.c **** 
-  65:CircularBuffer.c **** static void clearBuffer(struct CircBuf * circ_ptr) {
-  58              		.loc 1 65 0
-  59              		.cfi_startproc
-  60              		@ args = 0, pretend = 0, frame = 0
-  61              		@ frame_needed = 0, uses_anonymous_args = 0
-  62              		@ link register save eliminated.
-  63              	.LVL4:
-  66:CircularBuffer.c ****     circ_ptr->front = -1;
-  64              		.loc 1 66 0
-  65 0000 FF23     		movs	r3, #255
-  66 0002 80F8B430 		strb	r3, [r0, #180]
-  67:CircularBuffer.c ****     circ_ptr->rear = -1;
-  67              		.loc 1 67 0
-  68 0006 80F8B530 		strb	r3, [r0, #181]
-  69 000a 7047     		bx	lr
-  70              		.cfi_endproc
-  71              	.LFE67:
-  72              		.size	clearBuffer, .-clearBuffer
-  73              		.section	.text.isFull,"ax",%progbits
-  74              		.align	2
-  75              		.thumb
-  76              		.thumb_func
-  77              		.type	isFull, %function
-  78              	isFull:
-  79              	.LFB63:
-  12:CircularBuffer.c ****     if ((circ_ptr->rear + 1) % circ_ptr->maxLength ==  circ_ptr->front) {
-  80              		.loc 1 12 0
-  81              		.cfi_startproc
-  82              		@ args = 0, pretend = 0, frame = 0
-  83              		@ frame_needed = 0, uses_anonymous_args = 0
-  84              	.LVL5:
-  85 0000 08B5     		push	{r3, lr}
-  86              		.cfi_def_cfa_offset 8
-  87              		.cfi_offset 3, -8
-  88              		.cfi_offset 14, -4
-  13:CircularBuffer.c ****         UART_1_PutString("Buffer full\n\r");
-  89              		.loc 1 13 0
-  90 0002 90F9B530 		ldrsb	r3, [r0, #181]
-  91 0006 0133     		adds	r3, r3, #1
-  92 0008 90F8B610 		ldrb	r1, [r0, #182]	@ zero_extendqisi2
-  93 000c 93FBF1F2 		sdiv	r2, r3, r1
-  94 0010 01FB1233 		mls	r3, r1, r2, r3
-  95 0014 90F9B420 		ldrsb	r2, [r0, #180]
-  96 0018 9342     		cmp	r3, r2
-  97 001a 04D1     		bne	.L7
+  13:CircularBuffer.c ****     if ((circ_ptr->rear + 1) % circ_ptr->maxLength ==  circ_ptr->front) {
+  33              		.loc 1 13 0
+  34 0000 90F9B530 		ldrsb	r3, [r0, #181]
+  35 0004 0133     		adds	r3, r3, #1
+  36 0006 90F8B610 		ldrb	r1, [r0, #182]	@ zero_extendqisi2
+  37 000a 93FBF1F2 		sdiv	r2, r3, r1
+  38 000e 01FB1233 		mls	r3, r1, r2, r3
+  39 0012 90F9B420 		ldrsb	r2, [r0, #180]
+  40 0016 9342     		cmp	r3, r2
+  41 0018 01D1     		bne	.L3
   14:CircularBuffer.c ****         return 1;
-  98              		.loc 1 14 0
-  99 001c 0348     		ldr	r0, .L9
- 100              	.LVL6:
- 101 001e FFF7FEFF 		bl	UART_1_PutString
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 4
+  42              		.loc 1 14 0
+  43 001a 0120     		movs	r0, #1
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccQluXJ0.s 			page 2
 
 
- 102              	.LVL7:
+  44              	.LVL1:
+  45 001c 7047     		bx	lr
+  46              	.LVL2:
+  47              	.L3:
   15:CircularBuffer.c ****     } else
- 103              		.loc 1 15 0
- 104 0022 0120     		movs	r0, #1
- 105 0024 08BD     		pop	{r3, pc}
- 106              	.LVL8:
- 107              	.L7:
+  16:CircularBuffer.c ****         return 0;
+  48              		.loc 1 16 0
+  49 001e 0020     		movs	r0, #0
+  50              	.LVL3:
   17:CircularBuffer.c **** }
- 108              		.loc 1 17 0
- 109 0026 0020     		movs	r0, #0
- 110              	.LVL9:
+  51              		.loc 1 17 0
+  52 0020 7047     		bx	lr
+  53              		.cfi_endproc
+  54              	.LFE63:
+  55              		.size	isFull, .-isFull
+  56 0022 00BF     		.section	.text.isEmpty,"ax",%progbits
+  57              		.align	2
+  58              		.thumb
+  59              		.thumb_func
+  60              		.type	isEmpty, %function
+  61              	isEmpty:
+  62              	.LFB64:
   18:CircularBuffer.c **** 
- 111              		.loc 1 18 0
- 112 0028 08BD     		pop	{r3, pc}
- 113              	.L10:
- 114 002a 00BF     		.align	2
- 115              	.L9:
- 116 002c 00000000 		.word	.LC0
- 117              		.cfi_endproc
- 118              	.LFE63:
- 119              		.size	isFull, .-isFull
- 120              		.section	.text.push,"ax",%progbits
- 121              		.align	2
- 122              		.global	push
- 123              		.thumb
- 124              		.thumb_func
- 125              		.type	push, %function
- 126              	push:
- 127              	.LFB65:
-  28:CircularBuffer.c ****     struct queueElement * QIhandle;
- 128              		.loc 1 28 0
- 129              		.cfi_startproc
- 130              		@ args = 0, pretend = 0, frame = 0
- 131              		@ frame_needed = 0, uses_anonymous_args = 0
- 132              	.LVL10:
- 133 0000 70B5     		push	{r4, r5, r6, lr}
- 134              		.cfi_def_cfa_offset 16
- 135              		.cfi_offset 4, -16
- 136              		.cfi_offset 5, -12
- 137              		.cfi_offset 6, -8
- 138              		.cfi_offset 14, -4
- 139 0002 0446     		mov	r4, r0
- 140 0004 0E46     		mov	r6, r1
- 141 0006 1546     		mov	r5, r2
-  31:CircularBuffer.c ****         ; //do nothing
- 142              		.loc 1 31 0
- 143 0008 FFF7FEFF 		bl	isFull
- 144              	.LVL11:
- 145 000c 10BB     		cbnz	r0, .L11
-  33:CircularBuffer.c ****         UART_1_PutString("Pushing first element in buffer\n\r");
- 146              		.loc 1 33 0
- 147 000e 2046     		mov	r0, r4
- 148 0010 FFF7FEFF 		bl	isEmpty
- 149              	.LVL12:
- 150 0014 50B1     		cbz	r0, .L13
-  34:CircularBuffer.c ****         circ_ptr->front = 0;
- 151              		.loc 1 34 0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 5
+  19:CircularBuffer.c **** static uint8 isEmpty(struct CircBuf * circ_ptr){
+  63              		.loc 1 19 0
+  64              		.cfi_startproc
+  65              		@ args = 0, pretend = 0, frame = 0
+  66              		@ frame_needed = 0, uses_anonymous_args = 0
+  67              		@ link register save eliminated.
+  68              	.LVL4:
+  20:CircularBuffer.c ****     if (circ_ptr->rear == -1 && circ_ptr->front == -1) {
+  69              		.loc 1 20 0
+  70 0000 B0F9B430 		ldrsh	r3, [r0, #180]
+  71 0004 B3F1FF3F 		cmp	r3, #-1
+  72 0008 01D1     		bne	.L6
+  21:CircularBuffer.c ****         return 1;
+  73              		.loc 1 21 0
+  74 000a 0120     		movs	r0, #1
+  75              	.LVL5:
+  76 000c 7047     		bx	lr
+  77              	.LVL6:
+  78              	.L6:
+  22:CircularBuffer.c ****     } else
+  23:CircularBuffer.c ****         return 0;
+  79              		.loc 1 23 0
+  80 000e 0020     		movs	r0, #0
+  81              	.LVL7:
+  24:CircularBuffer.c **** }
+  82              		.loc 1 24 0
+  83 0010 7047     		bx	lr
+  84              		.cfi_endproc
+  85              	.LFE64:
+  86              		.size	isEmpty, .-isEmpty
+  87 0012 00BF     		.section	.text.push,"ax",%progbits
+  88              		.align	2
+  89              		.global	push
+  90              		.thumb
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccQluXJ0.s 			page 3
 
 
- 152 0016 1048     		ldr	r0, .L15
- 153 0018 FFF7FEFF 		bl	UART_1_PutString
- 154              	.LVL13:
-  35:CircularBuffer.c ****         circ_ptr->rear = 0;
- 155              		.loc 1 35 0
- 156 001c 0023     		movs	r3, #0
- 157 001e 84F8B430 		strb	r3, [r4, #180]
-  36:CircularBuffer.c ****         QIhandle = &circ_ptr->queueItem[circ_ptr->rear];
- 158              		.loc 1 36 0
- 159 0022 84F8B530 		strb	r3, [r4, #181]
- 160              	.LVL14:
-  38:CircularBuffer.c ****         QIhandle->param = newParam;
- 161              		.loc 1 38 0
- 162 0026 2660     		str	r6, [r4]
-  39:CircularBuffer.c ****     } else {
- 163              		.loc 1 39 0
- 164 0028 6560     		str	r5, [r4, #4]
- 165 002a 70BD     		pop	{r4, r5, r6, pc}
- 166              	.LVL15:
- 167              	.L13:
-  41:CircularBuffer.c ****         circ_ptr->rear = (circ_ptr->rear + 1) % circ_ptr->maxLength;
- 168              		.loc 1 41 0
- 169 002c 0B48     		ldr	r0, .L15+4
- 170 002e FFF7FEFF 		bl	UART_1_PutString
- 171              	.LVL16:
-  42:CircularBuffer.c ****         QIhandle = &circ_ptr->queueItem[circ_ptr->rear];
- 172              		.loc 1 42 0
- 173 0032 94F9B530 		ldrsb	r3, [r4, #181]
- 174 0036 0133     		adds	r3, r3, #1
- 175 0038 94F8B610 		ldrb	r1, [r4, #182]	@ zero_extendqisi2
- 176 003c 93FBF1F2 		sdiv	r2, r3, r1
- 177 0040 01FB1233 		mls	r3, r1, r2, r3
- 178 0044 5BB2     		sxtb	r3, r3
- 179 0046 84F8B530 		strb	r3, [r4, #181]
- 180              	.LVL17:
-  44:CircularBuffer.c ****         QIhandle->param = newParam; //place parameter in queue
- 181              		.loc 1 44 0
- 182 004a 44F83360 		str	r6, [r4, r3, lsl #3]
-  45:CircularBuffer.c ****     }
- 183              		.loc 1 45 0
- 184 004e 04EBC304 		add	r4, r4, r3, lsl #3
- 185              	.LVL18:
- 186 0052 6560     		str	r5, [r4, #4]
- 187              	.LVL19:
- 188              	.L11:
- 189 0054 70BD     		pop	{r4, r5, r6, pc}
- 190              	.LVL20:
- 191              	.L16:
- 192 0056 00BF     		.align	2
- 193              	.L15:
- 194 0058 10000000 		.word	.LC1
- 195 005c 34000000 		.word	.LC2
- 196              		.cfi_endproc
- 197              	.LFE65:
- 198              		.size	push, .-push
- 199              		.section	.text.pop,"ax",%progbits
- 200              		.align	2
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 6
+  91              		.thumb_func
+  92              		.type	push, %function
+  93              	push:
+  94              	.LFB65:
+  25:CircularBuffer.c **** 
+  26:CircularBuffer.c **** void push(struct CircBuf * circ_ptr, void (*newFuncPtr)(), int newParam) {
+  95              		.loc 1 26 0
+  96              		.cfi_startproc
+  97              		@ args = 0, pretend = 0, frame = 0
+  98              		@ frame_needed = 0, uses_anonymous_args = 0
+  99              	.LVL8:
+ 100 0000 70B5     		push	{r4, r5, r6, lr}
+ 101              		.cfi_def_cfa_offset 16
+ 102              		.cfi_offset 4, -16
+ 103              		.cfi_offset 5, -12
+ 104              		.cfi_offset 6, -8
+ 105              		.cfi_offset 14, -4
+ 106 0002 0446     		mov	r4, r0
+ 107 0004 0E46     		mov	r6, r1
+ 108 0006 1546     		mov	r5, r2
+  27:CircularBuffer.c ****     struct queueElement * QIhandle;
+  28:CircularBuffer.c ****     
+  29:CircularBuffer.c ****     if (isFull(circ_ptr)) {
+ 109              		.loc 1 29 0
+ 110 0008 FFF7FEFF 		bl	isFull
+ 111              	.LVL9:
+ 112 000c E0B9     		cbnz	r0, .L7
+  30:CircularBuffer.c ****         ; //do nothing
+  31:CircularBuffer.c ****     } else if (isEmpty(circ_ptr)) {
+ 113              		.loc 1 31 0
+ 114 000e 2046     		mov	r0, r4
+ 115 0010 FFF7FEFF 		bl	isEmpty
+ 116              	.LVL10:
+ 117 0014 38B1     		cbz	r0, .L9
+  32:CircularBuffer.c ****         circ_ptr->front = 0;
+ 118              		.loc 1 32 0
+ 119 0016 0023     		movs	r3, #0
+ 120 0018 84F8B430 		strb	r3, [r4, #180]
+  33:CircularBuffer.c ****         circ_ptr->rear = 0;
+ 121              		.loc 1 33 0
+ 122 001c 84F8B530 		strb	r3, [r4, #181]
+ 123              	.LVL11:
+  34:CircularBuffer.c ****         QIhandle = &circ_ptr->queueItem[circ_ptr->rear];
+  35:CircularBuffer.c ****         QIhandle->funcPtr = newFuncPtr;
+ 124              		.loc 1 35 0
+ 125 0020 2660     		str	r6, [r4]
+  36:CircularBuffer.c ****         QIhandle->param = newParam;
+ 126              		.loc 1 36 0
+ 127 0022 6560     		str	r5, [r4, #4]
+ 128 0024 70BD     		pop	{r4, r5, r6, pc}
+ 129              	.LVL12:
+ 130              	.L9:
+  37:CircularBuffer.c ****     } else {
+  38:CircularBuffer.c ****         circ_ptr->rear = (circ_ptr->rear + 1) % circ_ptr->maxLength;
+ 131              		.loc 1 38 0
+ 132 0026 94F9B530 		ldrsb	r3, [r4, #181]
+ 133 002a 0133     		adds	r3, r3, #1
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccQluXJ0.s 			page 4
 
 
- 201              		.global	pop
- 202              		.thumb
- 203              		.thumb_func
- 204              		.type	pop, %function
- 205              	pop:
- 206              	.LFB66:
-  49:CircularBuffer.c ****     struct queueElement * QIhandle = &circ_ptr->queueItem[circ_ptr->front];
- 207              		.loc 1 49 0
- 208              		.cfi_startproc
- 209              		@ args = 0, pretend = 0, frame = 0
- 210              		@ frame_needed = 0, uses_anonymous_args = 0
- 211              	.LVL21:
- 212 0000 38B5     		push	{r3, r4, r5, lr}
- 213              		.cfi_def_cfa_offset 16
- 214              		.cfi_offset 3, -16
- 215              		.cfi_offset 4, -12
- 216              		.cfi_offset 5, -8
- 217              		.cfi_offset 14, -4
- 218 0002 0446     		mov	r4, r0
-  50:CircularBuffer.c ****     
- 219              		.loc 1 50 0
- 220 0004 90F9B450 		ldrsb	r5, [r0, #180]
- 221              	.LVL22:
-  52:CircularBuffer.c ****         UART_1_PutString("Popping element\n\r");
- 222              		.loc 1 52 0
- 223 0008 FFF7FEFF 		bl	isEmpty
- 224              	.LVL23:
- 225 000c E8B9     		cbnz	r0, .L17
-  53:CircularBuffer.c ****         (*QIhandle->funcPtr)(QIhandle->param); //perform operation in queue
- 226              		.loc 1 53 0
- 227 000e 0F48     		ldr	r0, .L21
- 228 0010 FFF7FEFF 		bl	UART_1_PutString
- 229              	.LVL24:
-  54:CircularBuffer.c ****         
- 230              		.loc 1 54 0
- 231 0014 04EBC502 		add	r2, r4, r5, lsl #3
- 232 0018 54F83530 		ldr	r3, [r4, r5, lsl #3]
- 233 001c 5068     		ldr	r0, [r2, #4]
- 234 001e 9847     		blx	r3
- 235              	.LVL25:
-  56:CircularBuffer.c ****             circ_ptr->front = -1;
- 236              		.loc 1 56 0
- 237 0020 94F9B430 		ldrsb	r3, [r4, #180]
- 238 0024 94F9B520 		ldrsb	r2, [r4, #181]
- 239 0028 9342     		cmp	r3, r2
- 240 002a 05D1     		bne	.L19
-  57:CircularBuffer.c ****             circ_ptr->rear = -1;
- 241              		.loc 1 57 0
- 242 002c FF23     		movs	r3, #255
- 243 002e 84F8B430 		strb	r3, [r4, #180]
-  58:CircularBuffer.c ****         } else {
- 244              		.loc 1 58 0
- 245 0032 84F8B530 		strb	r3, [r4, #181]
- 246 0036 38BD     		pop	{r3, r4, r5, pc}
- 247              	.LVL26:
- 248              	.L19:
-  60:CircularBuffer.c ****         }
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 7
+ 134 002c 94F8B610 		ldrb	r1, [r4, #182]	@ zero_extendqisi2
+ 135 0030 93FBF1F2 		sdiv	r2, r3, r1
+ 136 0034 01FB1233 		mls	r3, r1, r2, r3
+ 137 0038 5BB2     		sxtb	r3, r3
+ 138 003a 84F8B530 		strb	r3, [r4, #181]
+ 139              	.LVL13:
+  39:CircularBuffer.c ****         QIhandle = &circ_ptr->queueItem[circ_ptr->rear];
+  40:CircularBuffer.c ****         QIhandle->funcPtr = newFuncPtr; //place function pointer in queue
+ 140              		.loc 1 40 0
+ 141 003e 44F83360 		str	r6, [r4, r3, lsl #3]
+  41:CircularBuffer.c ****         QIhandle->param = newParam; //place parameter in queue
+ 142              		.loc 1 41 0
+ 143 0042 04EBC304 		add	r4, r4, r3, lsl #3
+ 144              	.LVL14:
+ 145 0046 6560     		str	r5, [r4, #4]
+ 146              	.LVL15:
+ 147              	.L7:
+ 148 0048 70BD     		pop	{r4, r5, r6, pc}
+ 149              		.cfi_endproc
+ 150              	.LFE65:
+ 151              		.size	push, .-push
+ 152 004a 00BF     		.section	.text.pop,"ax",%progbits
+ 153              		.align	2
+ 154              		.global	pop
+ 155              		.thumb
+ 156              		.thumb_func
+ 157              		.type	pop, %function
+ 158              	pop:
+ 159              	.LFB66:
+  42:CircularBuffer.c ****     }
+  43:CircularBuffer.c **** };
+  44:CircularBuffer.c **** 
+  45:CircularBuffer.c **** void pop(struct CircBuf * circ_ptr) {
+ 160              		.loc 1 45 0
+ 161              		.cfi_startproc
+ 162              		@ args = 0, pretend = 0, frame = 0
+ 163              		@ frame_needed = 0, uses_anonymous_args = 0
+ 164              	.LVL16:
+ 165 0000 38B5     		push	{r3, r4, r5, lr}
+ 166              		.cfi_def_cfa_offset 16
+ 167              		.cfi_offset 3, -16
+ 168              		.cfi_offset 4, -12
+ 169              		.cfi_offset 5, -8
+ 170              		.cfi_offset 14, -4
+ 171 0002 0446     		mov	r4, r0
+  46:CircularBuffer.c ****     struct queueElement * QIhandle = &circ_ptr->queueItem[circ_ptr->front];
+ 172              		.loc 1 46 0
+ 173 0004 90F9B450 		ldrsb	r5, [r0, #180]
+ 174              	.LVL17:
+  47:CircularBuffer.c ****     
+  48:CircularBuffer.c ****     if (!isEmpty(circ_ptr)) {
+ 175              		.loc 1 48 0
+ 176 0008 FFF7FEFF 		bl	isEmpty
+ 177              	.LVL18:
+ 178 000c D0B9     		cbnz	r0, .L11
+  49:CircularBuffer.c ****         (*QIhandle->funcPtr)(QIhandle->param); //perform operation in queue
+ 179              		.loc 1 49 0
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccQluXJ0.s 			page 5
 
 
- 249              		.loc 1 60 0
- 250 0038 0133     		adds	r3, r3, #1
- 251 003a 94F8B610 		ldrb	r1, [r4, #182]	@ zero_extendqisi2
- 252 003e 93FBF1F2 		sdiv	r2, r3, r1
- 253 0042 01FB1233 		mls	r3, r1, r2, r3
- 254 0046 84F8B430 		strb	r3, [r4, #180]
- 255              	.L17:
- 256 004a 38BD     		pop	{r3, r4, r5, pc}
- 257              	.LVL27:
- 258              	.L22:
- 259              		.align	2
- 260              	.L21:
- 261 004c 48000000 		.word	.LC3
- 262              		.cfi_endproc
- 263              	.LFE66:
- 264              		.size	pop, .-pop
- 265              		.section	.text.initCircbuf,"ax",%progbits
- 266              		.align	2
- 267              		.global	initCircbuf
- 268              		.thumb
- 269              		.thumb_func
- 270              		.type	initCircbuf, %function
- 271              	initCircbuf:
- 272              	.LFB68:
-  68:CircularBuffer.c **** }
-  69:CircularBuffer.c **** 
-  70:CircularBuffer.c **** void initCircbuf(struct CircBuf * circ_ptr) {
- 273              		.loc 1 70 0
- 274              		.cfi_startproc
- 275              		@ args = 0, pretend = 0, frame = 0
- 276              		@ frame_needed = 0, uses_anonymous_args = 0
- 277              	.LVL28:
- 278 0000 10B5     		push	{r4, lr}
- 279              		.cfi_def_cfa_offset 8
- 280              		.cfi_offset 4, -8
- 281              		.cfi_offset 14, -4
- 282 0002 0446     		mov	r4, r0
-  71:CircularBuffer.c ****     UART_1_PutString("Buffer initializing\n\r");
- 283              		.loc 1 71 0
- 284 0004 0D48     		ldr	r0, .L25
- 285              	.LVL29:
- 286 0006 FFF7FEFF 		bl	UART_1_PutString
- 287              	.LVL30:
-  72:CircularBuffer.c ****     
-  73:CircularBuffer.c ****     circ_ptr->maxLength = CIRCBUF_MAX_LENGTH;
- 288              		.loc 1 73 0
- 289 000a 1423     		movs	r3, #20
- 290 000c 84F8B630 		strb	r3, [r4, #182]
-  74:CircularBuffer.c ****     circ_ptr->front = -1;
- 291              		.loc 1 74 0
- 292 0010 FF23     		movs	r3, #255
- 293 0012 84F8B430 		strb	r3, [r4, #180]
-  75:CircularBuffer.c ****     circ_ptr->rear = -1;
- 294              		.loc 1 75 0
- 295 0016 84F8B530 		strb	r3, [r4, #181]
-  76:CircularBuffer.c ****     circ_ptr->isFull = isFull;
- 296              		.loc 1 76 0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 8
+ 180 000e 04EBC502 		add	r2, r4, r5, lsl #3
+ 181 0012 54F83530 		ldr	r3, [r4, r5, lsl #3]
+ 182 0016 5068     		ldr	r0, [r2, #4]
+ 183 0018 9847     		blx	r3
+ 184              	.LVL19:
+  50:CircularBuffer.c ****         
+  51:CircularBuffer.c ****         if (circ_ptr->front == circ_ptr->rear) {
+ 185              		.loc 1 51 0
+ 186 001a 94F9B430 		ldrsb	r3, [r4, #180]
+ 187 001e 94F9B520 		ldrsb	r2, [r4, #181]
+ 188 0022 9342     		cmp	r3, r2
+ 189 0024 05D1     		bne	.L13
+  52:CircularBuffer.c ****             circ_ptr->front = -1;
+ 190              		.loc 1 52 0
+ 191 0026 FF23     		movs	r3, #255
+ 192 0028 84F8B430 		strb	r3, [r4, #180]
+  53:CircularBuffer.c ****             circ_ptr->rear = -1;
+ 193              		.loc 1 53 0
+ 194 002c 84F8B530 		strb	r3, [r4, #181]
+ 195 0030 38BD     		pop	{r3, r4, r5, pc}
+ 196              	.LVL20:
+ 197              	.L13:
+  54:CircularBuffer.c ****         } else {
+  55:CircularBuffer.c ****             circ_ptr->front = (circ_ptr->front + 1) % circ_ptr->maxLength;
+ 198              		.loc 1 55 0
+ 199 0032 0133     		adds	r3, r3, #1
+ 200 0034 94F8B610 		ldrb	r1, [r4, #182]	@ zero_extendqisi2
+ 201 0038 93FBF1F2 		sdiv	r2, r3, r1
+ 202 003c 01FB1233 		mls	r3, r1, r2, r3
+ 203 0040 84F8B430 		strb	r3, [r4, #180]
+ 204              	.L11:
+ 205 0044 38BD     		pop	{r3, r4, r5, pc}
+ 206              		.cfi_endproc
+ 207              	.LFE66:
+ 208              		.size	pop, .-pop
+ 209 0046 00BF     		.section	.text.clearBuffer,"ax",%progbits
+ 210              		.align	2
+ 211              		.thumb
+ 212              		.thumb_func
+ 213              		.type	clearBuffer, %function
+ 214              	clearBuffer:
+ 215              	.LFB67:
+  56:CircularBuffer.c ****         }
+  57:CircularBuffer.c ****     }
+  58:CircularBuffer.c **** };
+  59:CircularBuffer.c **** 
+  60:CircularBuffer.c **** static void clearBuffer(struct CircBuf * circ_ptr) {
+ 216              		.loc 1 60 0
+ 217              		.cfi_startproc
+ 218              		@ args = 0, pretend = 0, frame = 0
+ 219              		@ frame_needed = 0, uses_anonymous_args = 0
+ 220              		@ link register save eliminated.
+ 221              	.LVL21:
+  61:CircularBuffer.c ****     circ_ptr->front = -1;
+ 222              		.loc 1 61 0
+ 223 0000 FF23     		movs	r3, #255
+ 224 0002 80F8B430 		strb	r3, [r0, #180]
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccQluXJ0.s 			page 6
 
 
- 297 001a 094B     		ldr	r3, .L25+4
- 298 001c C4F8A830 		str	r3, [r4, #168]
-  77:CircularBuffer.c ****     circ_ptr->isEmpty = isEmpty;
- 299              		.loc 1 77 0
- 300 0020 084B     		ldr	r3, .L25+8
- 301 0022 C4F8AC30 		str	r3, [r4, #172]
-  78:CircularBuffer.c ****     circ_ptr->clearBuffer = clearBuffer;
- 302              		.loc 1 78 0
- 303 0026 084B     		ldr	r3, .L25+12
- 304 0028 C4F8B030 		str	r3, [r4, #176]
-  79:CircularBuffer.c ****     circ_ptr->push = push;
- 305              		.loc 1 79 0
- 306 002c 074B     		ldr	r3, .L25+16
- 307 002e C4F8A430 		str	r3, [r4, #164]
-  80:CircularBuffer.c ****     circ_ptr->pop = pop;
- 308              		.loc 1 80 0
- 309 0032 074B     		ldr	r3, .L25+20
- 310 0034 C4F8A030 		str	r3, [r4, #160]
- 311 0038 10BD     		pop	{r4, pc}
- 312              	.LVL31:
- 313              	.L26:
- 314 003a 00BF     		.align	2
- 315              	.L25:
- 316 003c 5C000000 		.word	.LC4
- 317 0040 00000000 		.word	isFull
- 318 0044 00000000 		.word	isEmpty
- 319 0048 00000000 		.word	clearBuffer
- 320 004c 00000000 		.word	push
- 321 0050 00000000 		.word	pop
- 322              		.cfi_endproc
- 323              	.LFE68:
- 324              		.size	initCircbuf, .-initCircbuf
- 325              		.section	.rodata.str1.4,"aMS",%progbits,1
- 326              		.align	2
- 327              	.LC0:
- 328 0000 42756666 		.ascii	"Buffer full\012\015\000"
- 328      65722066 
- 328      756C6C0A 
- 328      0D00
- 329 000e 0000     		.space	2
- 330              	.LC1:
- 331 0010 50757368 		.ascii	"Pushing first element in buffer\012\015\000"
- 331      696E6720 
- 331      66697273 
- 331      7420656C 
- 331      656D656E 
- 332 0032 0000     		.space	2
- 333              	.LC2:
- 334 0034 50757368 		.ascii	"Pushing element\012\015\000"
- 334      696E6720 
- 334      656C656D 
- 334      656E740A 
- 334      0D00
- 335 0046 0000     		.space	2
- 336              	.LC3:
- 337 0048 506F7070 		.ascii	"Popping element\012\015\000"
- 337      696E6720 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 9
+  62:CircularBuffer.c ****     circ_ptr->rear = -1;
+ 225              		.loc 1 62 0
+ 226 0006 80F8B530 		strb	r3, [r0, #181]
+ 227 000a 7047     		bx	lr
+ 228              		.cfi_endproc
+ 229              	.LFE67:
+ 230              		.size	clearBuffer, .-clearBuffer
+ 231              		.section	.text.initCircbuf,"ax",%progbits
+ 232              		.align	2
+ 233              		.global	initCircbuf
+ 234              		.thumb
+ 235              		.thumb_func
+ 236              		.type	initCircbuf, %function
+ 237              	initCircbuf:
+ 238              	.LFB68:
+  63:CircularBuffer.c **** }
+  64:CircularBuffer.c **** 
+  65:CircularBuffer.c **** void initCircbuf(struct CircBuf * circ_ptr) {
+ 239              		.loc 1 65 0
+ 240              		.cfi_startproc
+ 241              		@ args = 0, pretend = 0, frame = 0
+ 242              		@ frame_needed = 0, uses_anonymous_args = 0
+ 243              		@ link register save eliminated.
+ 244              	.LVL22:
+  66:CircularBuffer.c ****     
+  67:CircularBuffer.c ****     circ_ptr->maxLength = CIRCBUF_MAX_LENGTH;
+ 245              		.loc 1 67 0
+ 246 0000 1423     		movs	r3, #20
+ 247 0002 80F8B630 		strb	r3, [r0, #182]
+  68:CircularBuffer.c ****     circ_ptr->front = -1;
+ 248              		.loc 1 68 0
+ 249 0006 FF23     		movs	r3, #255
+ 250 0008 80F8B430 		strb	r3, [r0, #180]
+  69:CircularBuffer.c ****     circ_ptr->rear = -1;
+ 251              		.loc 1 69 0
+ 252 000c 80F8B530 		strb	r3, [r0, #181]
+  70:CircularBuffer.c ****     circ_ptr->isFull = isFull;
+ 253              		.loc 1 70 0
+ 254 0010 074B     		ldr	r3, .L17
+ 255 0012 C0F8A830 		str	r3, [r0, #168]
+  71:CircularBuffer.c ****     circ_ptr->isEmpty = isEmpty;
+ 256              		.loc 1 71 0
+ 257 0016 074B     		ldr	r3, .L17+4
+ 258 0018 C0F8AC30 		str	r3, [r0, #172]
+  72:CircularBuffer.c ****     circ_ptr->clearBuffer = clearBuffer;
+ 259              		.loc 1 72 0
+ 260 001c 064B     		ldr	r3, .L17+8
+ 261 001e C0F8B030 		str	r3, [r0, #176]
+  73:CircularBuffer.c ****     circ_ptr->push = push;
+ 262              		.loc 1 73 0
+ 263 0022 064B     		ldr	r3, .L17+12
+ 264 0024 C0F8A430 		str	r3, [r0, #164]
+  74:CircularBuffer.c ****     circ_ptr->pop = pop;
+ 265              		.loc 1 74 0
+ 266 0028 054B     		ldr	r3, .L17+16
+ 267 002a C0F8A030 		str	r3, [r0, #160]
+ 268 002e 7047     		bx	lr
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccQluXJ0.s 			page 7
 
 
- 337      656C656D 
- 337      656E740A 
- 337      0D00
- 338 005a 0000     		.space	2
- 339              	.LC4:
- 340 005c 42756666 		.ascii	"Buffer initializing\012\015\000"
- 340      65722069 
- 340      6E697469 
- 340      616C697A 
- 340      696E670A 
- 341              		.text
- 342              	.Letext0:
- 343              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 344              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 345              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
- 346              		.file 5 "CircularBuffer.h"
- 347              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
- 348              		.file 7 "Generated_Source\\PSoC5/UART_1.h"
- 349              		.section	.debug_info,"",%progbits
- 350              	.Ldebug_info0:
- 351 0000 6C030000 		.4byte	0x36c
- 352 0004 0400     		.2byte	0x4
- 353 0006 00000000 		.4byte	.Ldebug_abbrev0
- 354 000a 04       		.byte	0x4
- 355 000b 01       		.uleb128 0x1
- 356 000c 64000000 		.4byte	.LASF35
- 357 0010 0C       		.byte	0xc
- 358 0011 DC010000 		.4byte	.LASF36
- 359 0015 6E010000 		.4byte	.LASF37
- 360 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 361 001d 00000000 		.4byte	0
- 362 0021 00000000 		.4byte	.Ldebug_line0
- 363 0025 02       		.uleb128 0x2
- 364 0026 01       		.byte	0x1
- 365 0027 06       		.byte	0x6
- 366 0028 61020000 		.4byte	.LASF0
- 367 002c 02       		.uleb128 0x2
- 368 002d 01       		.byte	0x1
- 369 002e 08       		.byte	0x8
- 370 002f 56000000 		.4byte	.LASF1
- 371 0033 02       		.uleb128 0x2
- 372 0034 02       		.byte	0x2
- 373 0035 05       		.byte	0x5
- 374 0036 24020000 		.4byte	.LASF2
- 375 003a 02       		.uleb128 0x2
- 376 003b 02       		.byte	0x2
- 377 003c 07       		.byte	0x7
- 378 003d F8000000 		.4byte	.LASF3
- 379 0041 03       		.uleb128 0x3
- 380 0042 13000000 		.4byte	.LASF9
- 381 0046 02       		.byte	0x2
- 382 0047 3F       		.byte	0x3f
- 383 0048 4C000000 		.4byte	0x4c
- 384 004c 02       		.uleb128 0x2
- 385 004d 04       		.byte	0x4
- 386 004e 05       		.byte	0x5
- 387 004f 40020000 		.4byte	.LASF4
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 10
+ 269              	.L18:
+ 270              		.align	2
+ 271              	.L17:
+ 272 0030 00000000 		.word	isFull
+ 273 0034 00000000 		.word	isEmpty
+ 274 0038 00000000 		.word	clearBuffer
+ 275 003c 00000000 		.word	push
+ 276 0040 00000000 		.word	pop
+ 277              		.cfi_endproc
+ 278              	.LFE68:
+ 279              		.size	initCircbuf, .-initCircbuf
+ 280              		.text
+ 281              	.Letext0:
+ 282              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 283              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 284              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 285              		.file 5 "CircularBuffer.h"
+ 286              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
+ 287              		.section	.debug_info,"",%progbits
+ 288              	.Ldebug_info0:
+ 289 0000 F4020000 		.4byte	0x2f4
+ 290 0004 0400     		.2byte	0x4
+ 291 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 292 000a 04       		.byte	0x4
+ 293 000b 01       		.uleb128 0x1
+ 294 000c 64000000 		.4byte	.LASF35
+ 295 0010 0C       		.byte	0xc
+ 296 0011 DC010000 		.4byte	.LASF36
+ 297 0015 6E010000 		.4byte	.LASF37
+ 298 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 299 001d 00000000 		.4byte	0
+ 300 0021 00000000 		.4byte	.Ldebug_line0
+ 301 0025 02       		.uleb128 0x2
+ 302 0026 01       		.byte	0x1
+ 303 0027 06       		.byte	0x6
+ 304 0028 61020000 		.4byte	.LASF0
+ 305 002c 02       		.uleb128 0x2
+ 306 002d 01       		.byte	0x1
+ 307 002e 08       		.byte	0x8
+ 308 002f 56000000 		.4byte	.LASF1
+ 309 0033 02       		.uleb128 0x2
+ 310 0034 02       		.byte	0x2
+ 311 0035 05       		.byte	0x5
+ 312 0036 24020000 		.4byte	.LASF2
+ 313 003a 02       		.uleb128 0x2
+ 314 003b 02       		.byte	0x2
+ 315 003c 07       		.byte	0x7
+ 316 003d F8000000 		.4byte	.LASF3
+ 317 0041 03       		.uleb128 0x3
+ 318 0042 13000000 		.4byte	.LASF9
+ 319 0046 02       		.byte	0x2
+ 320 0047 3F       		.byte	0x3f
+ 321 0048 4C000000 		.4byte	0x4c
+ 322 004c 02       		.uleb128 0x2
+ 323 004d 04       		.byte	0x4
+ 324 004e 05       		.byte	0x5
+ 325 004f 40020000 		.4byte	.LASF4
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccQluXJ0.s 			page 8
 
 
- 388 0053 02       		.uleb128 0x2
- 389 0054 04       		.byte	0x4
- 390 0055 07       		.byte	0x7
- 391 0056 2B010000 		.4byte	.LASF5
- 392 005a 02       		.uleb128 0x2
- 393 005b 08       		.byte	0x8
- 394 005c 05       		.byte	0x5
- 395 005d 09020000 		.4byte	.LASF6
- 396 0061 02       		.uleb128 0x2
- 397 0062 08       		.byte	0x8
- 398 0063 07       		.byte	0x7
- 399 0064 57010000 		.4byte	.LASF7
- 400 0068 04       		.uleb128 0x4
- 401 0069 04       		.byte	0x4
- 402 006a 05       		.byte	0x5
- 403 006b 696E7400 		.ascii	"int\000"
- 404 006f 02       		.uleb128 0x2
- 405 0070 04       		.byte	0x4
- 406 0071 07       		.byte	0x7
- 407 0072 42010000 		.4byte	.LASF8
- 408 0076 03       		.uleb128 0x3
- 409 0077 ED010000 		.4byte	.LASF10
- 410 007b 03       		.byte	0x3
- 411 007c 2C       		.byte	0x2c
- 412 007d 41000000 		.4byte	0x41
- 413 0081 05       		.uleb128 0x5
- 414 0082 24000000 		.4byte	.LASF11
- 415 0086 04       		.byte	0x4
- 416 0087 E401     		.2byte	0x1e4
- 417 0089 2C000000 		.4byte	0x2c
- 418 008d 05       		.uleb128 0x5
- 419 008e 3D010000 		.4byte	.LASF12
- 420 0092 04       		.byte	0x4
- 421 0093 E701     		.2byte	0x1e7
- 422 0095 25000000 		.4byte	0x25
- 423 0099 02       		.uleb128 0x2
- 424 009a 04       		.byte	0x4
- 425 009b 04       		.byte	0x4
- 426 009c 42000000 		.4byte	.LASF13
- 427 00a0 02       		.uleb128 0x2
- 428 00a1 08       		.byte	0x8
- 429 00a2 04       		.byte	0x4
- 430 00a3 1D000000 		.4byte	.LASF14
- 431 00a7 02       		.uleb128 0x2
- 432 00a8 01       		.byte	0x1
- 433 00a9 08       		.byte	0x8
- 434 00aa 17020000 		.4byte	.LASF15
- 435 00ae 02       		.uleb128 0x2
- 436 00af 08       		.byte	0x8
- 437 00b0 04       		.byte	0x4
- 438 00b1 49020000 		.4byte	.LASF16
- 439 00b5 02       		.uleb128 0x2
- 440 00b6 04       		.byte	0x4
- 441 00b7 07       		.byte	0x7
- 442 00b8 F5010000 		.4byte	.LASF17
- 443 00bc 06       		.uleb128 0x6
- 444 00bd 1E010000 		.4byte	.LASF20
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 11
+ 326 0053 02       		.uleb128 0x2
+ 327 0054 04       		.byte	0x4
+ 328 0055 07       		.byte	0x7
+ 329 0056 2B010000 		.4byte	.LASF5
+ 330 005a 02       		.uleb128 0x2
+ 331 005b 08       		.byte	0x8
+ 332 005c 05       		.byte	0x5
+ 333 005d 09020000 		.4byte	.LASF6
+ 334 0061 02       		.uleb128 0x2
+ 335 0062 08       		.byte	0x8
+ 336 0063 07       		.byte	0x7
+ 337 0064 57010000 		.4byte	.LASF7
+ 338 0068 04       		.uleb128 0x4
+ 339 0069 04       		.byte	0x4
+ 340 006a 05       		.byte	0x5
+ 341 006b 696E7400 		.ascii	"int\000"
+ 342 006f 02       		.uleb128 0x2
+ 343 0070 04       		.byte	0x4
+ 344 0071 07       		.byte	0x7
+ 345 0072 42010000 		.4byte	.LASF8
+ 346 0076 03       		.uleb128 0x3
+ 347 0077 ED010000 		.4byte	.LASF10
+ 348 007b 03       		.byte	0x3
+ 349 007c 2C       		.byte	0x2c
+ 350 007d 41000000 		.4byte	0x41
+ 351 0081 05       		.uleb128 0x5
+ 352 0082 24000000 		.4byte	.LASF11
+ 353 0086 04       		.byte	0x4
+ 354 0087 E401     		.2byte	0x1e4
+ 355 0089 2C000000 		.4byte	0x2c
+ 356 008d 05       		.uleb128 0x5
+ 357 008e 3D010000 		.4byte	.LASF12
+ 358 0092 04       		.byte	0x4
+ 359 0093 E701     		.2byte	0x1e7
+ 360 0095 25000000 		.4byte	0x25
+ 361 0099 02       		.uleb128 0x2
+ 362 009a 04       		.byte	0x4
+ 363 009b 04       		.byte	0x4
+ 364 009c 42000000 		.4byte	.LASF13
+ 365 00a0 02       		.uleb128 0x2
+ 366 00a1 08       		.byte	0x8
+ 367 00a2 04       		.byte	0x4
+ 368 00a3 1D000000 		.4byte	.LASF14
+ 369 00a7 02       		.uleb128 0x2
+ 370 00a8 01       		.byte	0x1
+ 371 00a9 08       		.byte	0x8
+ 372 00aa 17020000 		.4byte	.LASF15
+ 373 00ae 02       		.uleb128 0x2
+ 374 00af 08       		.byte	0x8
+ 375 00b0 04       		.byte	0x4
+ 376 00b1 49020000 		.4byte	.LASF16
+ 377 00b5 02       		.uleb128 0x2
+ 378 00b6 04       		.byte	0x4
+ 379 00b7 07       		.byte	0x7
+ 380 00b8 F5010000 		.4byte	.LASF17
+ 381 00bc 06       		.uleb128 0x6
+ 382 00bd 1E010000 		.4byte	.LASF20
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccQluXJ0.s 			page 9
 
 
- 445 00c1 08       		.byte	0x8
- 446 00c2 05       		.byte	0x5
- 447 00c3 10       		.byte	0x10
- 448 00c4 E1000000 		.4byte	0xe1
- 449 00c8 07       		.uleb128 0x7
- 450 00c9 2E020000 		.4byte	.LASF18
- 451 00cd 05       		.byte	0x5
- 452 00ce 11       		.byte	0x11
- 453 00cf E8000000 		.4byte	0xe8
- 454 00d3 00       		.byte	0
- 455 00d4 07       		.uleb128 0x7
- 456 00d5 F2000000 		.4byte	.LASF19
- 457 00d9 05       		.byte	0x5
- 458 00da 12       		.byte	0x12
- 459 00db 68000000 		.4byte	0x68
- 460 00df 04       		.byte	0x4
- 461 00e0 00       		.byte	0
- 462 00e1 08       		.uleb128 0x8
- 463 00e2 E8000000 		.4byte	0xe8
- 464 00e6 09       		.uleb128 0x9
- 465 00e7 00       		.byte	0
- 466 00e8 0A       		.uleb128 0xa
- 467 00e9 04       		.byte	0x4
- 468 00ea E1000000 		.4byte	0xe1
- 469 00ee 06       		.uleb128 0x6
- 470 00ef 4F010000 		.4byte	.LASF21
- 471 00f3 B8       		.byte	0xb8
- 472 00f4 05       		.byte	0x5
- 473 00f5 15       		.byte	0x15
- 474 00f6 67010000 		.4byte	0x167
- 475 00fa 07       		.uleb128 0x7
- 476 00fb 36020000 		.4byte	.LASF22
- 477 00ff 05       		.byte	0x5
- 478 0100 16       		.byte	0x16
- 479 0101 67010000 		.4byte	0x167
- 480 0105 00       		.byte	0
- 481 0106 0B       		.uleb128 0xb
- 482 0107 706F7000 		.ascii	"pop\000"
- 483 010b 05       		.byte	0x5
- 484 010c 17       		.byte	0x17
- 485 010d E8000000 		.4byte	0xe8
- 486 0111 A0       		.byte	0xa0
- 487 0112 07       		.uleb128 0x7
- 488 0113 51000000 		.4byte	.LASF23
- 489 0117 05       		.byte	0x5
- 490 0118 18       		.byte	0x18
- 491 0119 E8000000 		.4byte	0xe8
- 492 011d A4       		.byte	0xa4
- 493 011e 07       		.uleb128 0x7
- 494 011f 3B000000 		.4byte	.LASF24
- 495 0123 05       		.byte	0x5
- 496 0124 19       		.byte	0x19
- 497 0125 82010000 		.4byte	0x182
- 498 0129 A8       		.byte	0xa8
- 499 012a 07       		.uleb128 0x7
- 500 012b 1C020000 		.4byte	.LASF25
- 501 012f 05       		.byte	0x5
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 12
+ 383 00c1 08       		.byte	0x8
+ 384 00c2 05       		.byte	0x5
+ 385 00c3 10       		.byte	0x10
+ 386 00c4 E1000000 		.4byte	0xe1
+ 387 00c8 07       		.uleb128 0x7
+ 388 00c9 2E020000 		.4byte	.LASF18
+ 389 00cd 05       		.byte	0x5
+ 390 00ce 11       		.byte	0x11
+ 391 00cf E8000000 		.4byte	0xe8
+ 392 00d3 00       		.byte	0
+ 393 00d4 07       		.uleb128 0x7
+ 394 00d5 F2000000 		.4byte	.LASF19
+ 395 00d9 05       		.byte	0x5
+ 396 00da 12       		.byte	0x12
+ 397 00db 68000000 		.4byte	0x68
+ 398 00df 04       		.byte	0x4
+ 399 00e0 00       		.byte	0
+ 400 00e1 08       		.uleb128 0x8
+ 401 00e2 E8000000 		.4byte	0xe8
+ 402 00e6 09       		.uleb128 0x9
+ 403 00e7 00       		.byte	0
+ 404 00e8 0A       		.uleb128 0xa
+ 405 00e9 04       		.byte	0x4
+ 406 00ea E1000000 		.4byte	0xe1
+ 407 00ee 06       		.uleb128 0x6
+ 408 00ef 4F010000 		.4byte	.LASF21
+ 409 00f3 B8       		.byte	0xb8
+ 410 00f4 05       		.byte	0x5
+ 411 00f5 15       		.byte	0x15
+ 412 00f6 67010000 		.4byte	0x167
+ 413 00fa 07       		.uleb128 0x7
+ 414 00fb 36020000 		.4byte	.LASF22
+ 415 00ff 05       		.byte	0x5
+ 416 0100 16       		.byte	0x16
+ 417 0101 67010000 		.4byte	0x167
+ 418 0105 00       		.byte	0
+ 419 0106 0B       		.uleb128 0xb
+ 420 0107 706F7000 		.ascii	"pop\000"
+ 421 010b 05       		.byte	0x5
+ 422 010c 17       		.byte	0x17
+ 423 010d E8000000 		.4byte	0xe8
+ 424 0111 A0       		.byte	0xa0
+ 425 0112 07       		.uleb128 0x7
+ 426 0113 51000000 		.4byte	.LASF23
+ 427 0117 05       		.byte	0x5
+ 428 0118 18       		.byte	0x18
+ 429 0119 E8000000 		.4byte	0xe8
+ 430 011d A4       		.byte	0xa4
+ 431 011e 07       		.uleb128 0x7
+ 432 011f 3B000000 		.4byte	.LASF24
+ 433 0123 05       		.byte	0x5
+ 434 0124 19       		.byte	0x19
+ 435 0125 82010000 		.4byte	0x182
+ 436 0129 A8       		.byte	0xa8
+ 437 012a 07       		.uleb128 0x7
+ 438 012b 1C020000 		.4byte	.LASF25
+ 439 012f 05       		.byte	0x5
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccQluXJ0.s 			page 10
 
 
- 502 0130 1A       		.byte	0x1a
- 503 0131 82010000 		.4byte	0x182
- 504 0135 AC       		.byte	0xac
- 505 0136 07       		.uleb128 0x7
- 506 0137 2F000000 		.4byte	.LASF26
- 507 013b 05       		.byte	0x5
- 508 013c 1B       		.byte	0x1b
- 509 013d E8000000 		.4byte	0xe8
- 510 0141 B0       		.byte	0xb0
- 511 0142 07       		.uleb128 0x7
- 512 0143 0B010000 		.4byte	.LASF27
- 513 0147 05       		.byte	0x5
- 514 0148 1C       		.byte	0x1c
- 515 0149 8D000000 		.4byte	0x8d
- 516 014d B4       		.byte	0xb4
- 517 014e 07       		.uleb128 0x7
- 518 014f 2A000000 		.4byte	.LASF28
- 519 0153 05       		.byte	0x5
- 520 0154 1D       		.byte	0x1d
- 521 0155 8D000000 		.4byte	0x8d
- 522 0159 B5       		.byte	0xb5
- 523 015a 07       		.uleb128 0x7
- 524 015b 00000000 		.4byte	.LASF29
- 525 015f 05       		.byte	0x5
- 526 0160 1E       		.byte	0x1e
- 527 0161 81000000 		.4byte	0x81
- 528 0165 B6       		.byte	0xb6
- 529 0166 00       		.byte	0
- 530 0167 0C       		.uleb128 0xc
- 531 0168 BC000000 		.4byte	0xbc
- 532 016c 77010000 		.4byte	0x177
- 533 0170 0D       		.uleb128 0xd
- 534 0171 B5000000 		.4byte	0xb5
- 535 0175 13       		.byte	0x13
- 536 0176 00       		.byte	0
- 537 0177 0E       		.uleb128 0xe
- 538 0178 81000000 		.4byte	0x81
- 539 017c 82010000 		.4byte	0x182
- 540 0180 09       		.uleb128 0x9
- 541 0181 00       		.byte	0
- 542 0182 0A       		.uleb128 0xa
- 543 0183 04       		.byte	0x4
- 544 0184 77010000 		.4byte	0x177
- 545 0188 0F       		.uleb128 0xf
- 546 0189 1C020000 		.4byte	.LASF25
- 547 018d 01       		.byte	0x1
- 548 018e 14       		.byte	0x14
- 549 018f 81000000 		.4byte	0x81
- 550 0193 00000000 		.4byte	.LFB64
- 551 0197 12000000 		.4byte	.LFE64-.LFB64
- 552 019b 01       		.uleb128 0x1
- 553 019c 9C       		.byte	0x9c
- 554 019d B1010000 		.4byte	0x1b1
- 555 01a1 10       		.uleb128 0x10
- 556 01a2 48000000 		.4byte	.LASF30
- 557 01a6 01       		.byte	0x1
- 558 01a7 14       		.byte	0x14
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 13
+ 440 0130 1A       		.byte	0x1a
+ 441 0131 82010000 		.4byte	0x182
+ 442 0135 AC       		.byte	0xac
+ 443 0136 07       		.uleb128 0x7
+ 444 0137 2F000000 		.4byte	.LASF26
+ 445 013b 05       		.byte	0x5
+ 446 013c 1B       		.byte	0x1b
+ 447 013d E8000000 		.4byte	0xe8
+ 448 0141 B0       		.byte	0xb0
+ 449 0142 07       		.uleb128 0x7
+ 450 0143 0B010000 		.4byte	.LASF27
+ 451 0147 05       		.byte	0x5
+ 452 0148 1C       		.byte	0x1c
+ 453 0149 8D000000 		.4byte	0x8d
+ 454 014d B4       		.byte	0xb4
+ 455 014e 07       		.uleb128 0x7
+ 456 014f 2A000000 		.4byte	.LASF28
+ 457 0153 05       		.byte	0x5
+ 458 0154 1D       		.byte	0x1d
+ 459 0155 8D000000 		.4byte	0x8d
+ 460 0159 B5       		.byte	0xb5
+ 461 015a 07       		.uleb128 0x7
+ 462 015b 00000000 		.4byte	.LASF29
+ 463 015f 05       		.byte	0x5
+ 464 0160 1E       		.byte	0x1e
+ 465 0161 81000000 		.4byte	0x81
+ 466 0165 B6       		.byte	0xb6
+ 467 0166 00       		.byte	0
+ 468 0167 0C       		.uleb128 0xc
+ 469 0168 BC000000 		.4byte	0xbc
+ 470 016c 77010000 		.4byte	0x177
+ 471 0170 0D       		.uleb128 0xd
+ 472 0171 B5000000 		.4byte	0xb5
+ 473 0175 13       		.byte	0x13
+ 474 0176 00       		.byte	0
+ 475 0177 0E       		.uleb128 0xe
+ 476 0178 81000000 		.4byte	0x81
+ 477 017c 82010000 		.4byte	0x182
+ 478 0180 09       		.uleb128 0x9
+ 479 0181 00       		.byte	0
+ 480 0182 0A       		.uleb128 0xa
+ 481 0183 04       		.byte	0x4
+ 482 0184 77010000 		.4byte	0x177
+ 483 0188 0F       		.uleb128 0xf
+ 484 0189 3B000000 		.4byte	.LASF24
+ 485 018d 01       		.byte	0x1
+ 486 018e 0C       		.byte	0xc
+ 487 018f 81000000 		.4byte	0x81
+ 488 0193 00000000 		.4byte	.LFB63
+ 489 0197 22000000 		.4byte	.LFE63-.LFB63
+ 490 019b 01       		.uleb128 0x1
+ 491 019c 9C       		.byte	0x9c
+ 492 019d B1010000 		.4byte	0x1b1
+ 493 01a1 10       		.uleb128 0x10
+ 494 01a2 48000000 		.4byte	.LASF30
+ 495 01a6 01       		.byte	0x1
+ 496 01a7 0C       		.byte	0xc
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccQluXJ0.s 			page 11
 
 
- 559 01a8 B1010000 		.4byte	0x1b1
- 560 01ac 00000000 		.4byte	.LLST0
- 561 01b0 00       		.byte	0
- 562 01b1 0A       		.uleb128 0xa
- 563 01b2 04       		.byte	0x4
- 564 01b3 EE000000 		.4byte	0xee
- 565 01b7 11       		.uleb128 0x11
- 566 01b8 2F000000 		.4byte	.LASF26
- 567 01bc 01       		.byte	0x1
- 568 01bd 41       		.byte	0x41
- 569 01be 00000000 		.4byte	.LFB67
- 570 01c2 0C000000 		.4byte	.LFE67-.LFB67
- 571 01c6 01       		.uleb128 0x1
- 572 01c7 9C       		.byte	0x9c
- 573 01c8 DA010000 		.4byte	0x1da
- 574 01cc 12       		.uleb128 0x12
- 575 01cd 48000000 		.4byte	.LASF30
- 576 01d1 01       		.byte	0x1
- 577 01d2 41       		.byte	0x41
- 578 01d3 B1010000 		.4byte	0x1b1
- 579 01d7 01       		.uleb128 0x1
- 580 01d8 50       		.byte	0x50
- 581 01d9 00       		.byte	0
- 582 01da 0F       		.uleb128 0xf
- 583 01db 3B000000 		.4byte	.LASF24
- 584 01df 01       		.byte	0x1
- 585 01e0 0C       		.byte	0xc
- 586 01e1 81000000 		.4byte	0x81
- 587 01e5 00000000 		.4byte	.LFB63
- 588 01e9 30000000 		.4byte	.LFE63-.LFB63
- 589 01ed 01       		.uleb128 0x1
- 590 01ee 9C       		.byte	0x9c
- 591 01ef 16020000 		.4byte	0x216
- 592 01f3 10       		.uleb128 0x10
- 593 01f4 48000000 		.4byte	.LASF30
- 594 01f8 01       		.byte	0x1
- 595 01f9 0C       		.byte	0xc
- 596 01fa B1010000 		.4byte	0x1b1
- 597 01fe 3A000000 		.4byte	.LLST1
- 598 0202 13       		.uleb128 0x13
- 599 0203 22000000 		.4byte	.LVL7
- 600 0207 64030000 		.4byte	0x364
- 601 020b 14       		.uleb128 0x14
- 602 020c 01       		.uleb128 0x1
- 603 020d 50       		.byte	0x50
- 604 020e 05       		.uleb128 0x5
- 605 020f 03       		.byte	0x3
- 606 0210 00000000 		.4byte	.LC0
- 607 0214 00       		.byte	0
- 608 0215 00       		.byte	0
- 609 0216 15       		.uleb128 0x15
- 610 0217 51000000 		.4byte	.LASF23
- 611 021b 01       		.byte	0x1
- 612 021c 1C       		.byte	0x1c
- 613 021d 00000000 		.4byte	.LFB65
- 614 0221 60000000 		.4byte	.LFE65-.LFB65
- 615 0225 01       		.uleb128 0x1
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 14
+ 497 01a8 B1010000 		.4byte	0x1b1
+ 498 01ac 00000000 		.4byte	.LLST0
+ 499 01b0 00       		.byte	0
+ 500 01b1 0A       		.uleb128 0xa
+ 501 01b2 04       		.byte	0x4
+ 502 01b3 EE000000 		.4byte	0xee
+ 503 01b7 0F       		.uleb128 0xf
+ 504 01b8 1C020000 		.4byte	.LASF25
+ 505 01bc 01       		.byte	0x1
+ 506 01bd 13       		.byte	0x13
+ 507 01be 81000000 		.4byte	0x81
+ 508 01c2 00000000 		.4byte	.LFB64
+ 509 01c6 12000000 		.4byte	.LFE64-.LFB64
+ 510 01ca 01       		.uleb128 0x1
+ 511 01cb 9C       		.byte	0x9c
+ 512 01cc E0010000 		.4byte	0x1e0
+ 513 01d0 10       		.uleb128 0x10
+ 514 01d1 48000000 		.4byte	.LASF30
+ 515 01d5 01       		.byte	0x1
+ 516 01d6 13       		.byte	0x13
+ 517 01d7 B1010000 		.4byte	0x1b1
+ 518 01db 3A000000 		.4byte	.LLST1
+ 519 01df 00       		.byte	0
+ 520 01e0 11       		.uleb128 0x11
+ 521 01e1 51000000 		.4byte	.LASF23
+ 522 01e5 01       		.byte	0x1
+ 523 01e6 1A       		.byte	0x1a
+ 524 01e7 00000000 		.4byte	.LFB65
+ 525 01eb 4A000000 		.4byte	.LFE65-.LFB65
+ 526 01ef 01       		.uleb128 0x1
+ 527 01f0 9C       		.byte	0x9c
+ 528 01f1 56020000 		.4byte	0x256
+ 529 01f5 10       		.uleb128 0x10
+ 530 01f6 48000000 		.4byte	.LASF30
+ 531 01fa 01       		.byte	0x1
+ 532 01fb 1A       		.byte	0x1a
+ 533 01fc B1010000 		.4byte	0x1b1
+ 534 0200 74000000 		.4byte	.LLST2
+ 535 0204 10       		.uleb128 0x10
+ 536 0205 FE010000 		.4byte	.LASF31
+ 537 0209 01       		.byte	0x1
+ 538 020a 1A       		.byte	0x1a
+ 539 020b E8000000 		.4byte	0xe8
+ 540 020f A0000000 		.4byte	.LLST3
+ 541 0213 10       		.uleb128 0x10
+ 542 0214 6D020000 		.4byte	.LASF32
+ 543 0218 01       		.byte	0x1
+ 544 0219 1A       		.byte	0x1a
+ 545 021a 68000000 		.4byte	0x68
+ 546 021e BE000000 		.4byte	.LLST4
+ 547 0222 12       		.uleb128 0x12
+ 548 0223 0A000000 		.4byte	.LASF33
+ 549 0227 01       		.byte	0x1
+ 550 0228 1B       		.byte	0x1b
+ 551 0229 56020000 		.4byte	0x256
+ 552 022d DC000000 		.4byte	.LLST5
+ 553 0231 13       		.uleb128 0x13
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccQluXJ0.s 			page 12
 
 
- 616 0226 9C       		.byte	0x9c
- 617 0227 BA020000 		.4byte	0x2ba
- 618 022b 10       		.uleb128 0x10
- 619 022c 48000000 		.4byte	.LASF30
- 620 0230 01       		.byte	0x1
- 621 0231 1C       		.byte	0x1c
- 622 0232 B1010000 		.4byte	0x1b1
- 623 0236 74000000 		.4byte	.LLST2
- 624 023a 10       		.uleb128 0x10
- 625 023b FE010000 		.4byte	.LASF31
- 626 023f 01       		.byte	0x1
- 627 0240 1C       		.byte	0x1c
- 628 0241 E8000000 		.4byte	0xe8
- 629 0245 A0000000 		.4byte	.LLST3
- 630 0249 10       		.uleb128 0x10
- 631 024a 6D020000 		.4byte	.LASF32
- 632 024e 01       		.byte	0x1
- 633 024f 1C       		.byte	0x1c
- 634 0250 68000000 		.4byte	0x68
- 635 0254 CC000000 		.4byte	.LLST4
- 636 0258 16       		.uleb128 0x16
- 637 0259 0A000000 		.4byte	.LASF33
- 638 025d 01       		.byte	0x1
- 639 025e 1D       		.byte	0x1d
- 640 025f BA020000 		.4byte	0x2ba
- 641 0263 F8000000 		.4byte	.LLST5
- 642 0267 17       		.uleb128 0x17
- 643 0268 0C000000 		.4byte	.LVL11
- 644 026c DA010000 		.4byte	0x1da
- 645 0270 7B020000 		.4byte	0x27b
- 646 0274 14       		.uleb128 0x14
- 647 0275 01       		.uleb128 0x1
- 648 0276 50       		.byte	0x50
- 649 0277 02       		.uleb128 0x2
- 650 0278 74       		.byte	0x74
- 651 0279 00       		.sleb128 0
- 652 027a 00       		.byte	0
- 653 027b 17       		.uleb128 0x17
- 654 027c 14000000 		.4byte	.LVL12
- 655 0280 88010000 		.4byte	0x188
- 656 0284 8F020000 		.4byte	0x28f
- 657 0288 14       		.uleb128 0x14
- 658 0289 01       		.uleb128 0x1
- 659 028a 50       		.byte	0x50
- 660 028b 02       		.uleb128 0x2
- 661 028c 74       		.byte	0x74
- 662 028d 00       		.sleb128 0
- 663 028e 00       		.byte	0
- 664 028f 17       		.uleb128 0x17
- 665 0290 1C000000 		.4byte	.LVL13
- 666 0294 64030000 		.4byte	0x364
- 667 0298 A6020000 		.4byte	0x2a6
- 668 029c 14       		.uleb128 0x14
- 669 029d 01       		.uleb128 0x1
- 670 029e 50       		.byte	0x50
- 671 029f 05       		.uleb128 0x5
- 672 02a0 03       		.byte	0x3
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 15
+ 554 0232 0C000000 		.4byte	.LVL9
+ 555 0236 88010000 		.4byte	0x188
+ 556 023a 45020000 		.4byte	0x245
+ 557 023e 14       		.uleb128 0x14
+ 558 023f 01       		.uleb128 0x1
+ 559 0240 50       		.byte	0x50
+ 560 0241 02       		.uleb128 0x2
+ 561 0242 74       		.byte	0x74
+ 562 0243 00       		.sleb128 0
+ 563 0244 00       		.byte	0
+ 564 0245 15       		.uleb128 0x15
+ 565 0246 14000000 		.4byte	.LVL10
+ 566 024a B7010000 		.4byte	0x1b7
+ 567 024e 14       		.uleb128 0x14
+ 568 024f 01       		.uleb128 0x1
+ 569 0250 50       		.byte	0x50
+ 570 0251 02       		.uleb128 0x2
+ 571 0252 74       		.byte	0x74
+ 572 0253 00       		.sleb128 0
+ 573 0254 00       		.byte	0
+ 574 0255 00       		.byte	0
+ 575 0256 0A       		.uleb128 0xa
+ 576 0257 04       		.byte	0x4
+ 577 0258 BC000000 		.4byte	0xbc
+ 578 025c 16       		.uleb128 0x16
+ 579 025d 706F7000 		.ascii	"pop\000"
+ 580 0261 01       		.byte	0x1
+ 581 0262 2D       		.byte	0x2d
+ 582 0263 00000000 		.4byte	.LFB66
+ 583 0267 46000000 		.4byte	.LFE66-.LFB66
+ 584 026b 01       		.uleb128 0x1
+ 585 026c 9C       		.byte	0x9c
+ 586 026d A0020000 		.4byte	0x2a0
+ 587 0271 10       		.uleb128 0x10
+ 588 0272 48000000 		.4byte	.LASF30
+ 589 0276 01       		.byte	0x1
+ 590 0277 2D       		.byte	0x2d
+ 591 0278 B1010000 		.4byte	0x1b1
+ 592 027c 14010000 		.4byte	.LLST6
+ 593 0280 12       		.uleb128 0x12
+ 594 0281 0A000000 		.4byte	.LASF33
+ 595 0285 01       		.byte	0x1
+ 596 0286 2E       		.byte	0x2e
+ 597 0287 56020000 		.4byte	0x256
+ 598 028b 32010000 		.4byte	.LLST7
+ 599 028f 15       		.uleb128 0x15
+ 600 0290 0C000000 		.4byte	.LVL18
+ 601 0294 B7010000 		.4byte	0x1b7
+ 602 0298 14       		.uleb128 0x14
+ 603 0299 01       		.uleb128 0x1
+ 604 029a 50       		.byte	0x50
+ 605 029b 02       		.uleb128 0x2
+ 606 029c 74       		.byte	0x74
+ 607 029d 00       		.sleb128 0
+ 608 029e 00       		.byte	0
+ 609 029f 00       		.byte	0
+ 610 02a0 17       		.uleb128 0x17
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccQluXJ0.s 			page 13
 
 
- 673 02a1 10000000 		.4byte	.LC1
- 674 02a5 00       		.byte	0
- 675 02a6 13       		.uleb128 0x13
- 676 02a7 32000000 		.4byte	.LVL16
- 677 02ab 64030000 		.4byte	0x364
- 678 02af 14       		.uleb128 0x14
- 679 02b0 01       		.uleb128 0x1
- 680 02b1 50       		.byte	0x50
- 681 02b2 05       		.uleb128 0x5
- 682 02b3 03       		.byte	0x3
- 683 02b4 34000000 		.4byte	.LC2
- 684 02b8 00       		.byte	0
- 685 02b9 00       		.byte	0
- 686 02ba 0A       		.uleb128 0xa
- 687 02bb 04       		.byte	0x4
- 688 02bc BC000000 		.4byte	0xbc
- 689 02c0 18       		.uleb128 0x18
- 690 02c1 706F7000 		.ascii	"pop\000"
- 691 02c5 01       		.byte	0x1
- 692 02c6 31       		.byte	0x31
- 693 02c7 00000000 		.4byte	.LFB66
- 694 02cb 50000000 		.4byte	.LFE66-.LFB66
- 695 02cf 01       		.uleb128 0x1
- 696 02d0 9C       		.byte	0x9c
- 697 02d1 1B030000 		.4byte	0x31b
- 698 02d5 10       		.uleb128 0x10
- 699 02d6 48000000 		.4byte	.LASF30
- 700 02da 01       		.byte	0x1
- 701 02db 31       		.byte	0x31
- 702 02dc B1010000 		.4byte	0x1b1
- 703 02e0 30010000 		.4byte	.LLST6
- 704 02e4 16       		.uleb128 0x16
- 705 02e5 0A000000 		.4byte	.LASF33
- 706 02e9 01       		.byte	0x1
- 707 02ea 32       		.byte	0x32
- 708 02eb BA020000 		.4byte	0x2ba
- 709 02ef 5C010000 		.4byte	.LLST7
- 710 02f3 17       		.uleb128 0x17
- 711 02f4 0C000000 		.4byte	.LVL23
- 712 02f8 88010000 		.4byte	0x188
- 713 02fc 07030000 		.4byte	0x307
- 714 0300 14       		.uleb128 0x14
- 715 0301 01       		.uleb128 0x1
- 716 0302 50       		.byte	0x50
- 717 0303 02       		.uleb128 0x2
- 718 0304 74       		.byte	0x74
- 719 0305 00       		.sleb128 0
- 720 0306 00       		.byte	0
- 721 0307 13       		.uleb128 0x13
- 722 0308 14000000 		.4byte	.LVL24
- 723 030c 64030000 		.4byte	0x364
- 724 0310 14       		.uleb128 0x14
- 725 0311 01       		.uleb128 0x1
- 726 0312 50       		.byte	0x50
- 727 0313 05       		.uleb128 0x5
- 728 0314 03       		.byte	0x3
- 729 0315 48000000 		.4byte	.LC3
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 16
+ 611 02a1 2F000000 		.4byte	.LASF26
+ 612 02a5 01       		.byte	0x1
+ 613 02a6 3C       		.byte	0x3c
+ 614 02a7 00000000 		.4byte	.LFB67
+ 615 02ab 0C000000 		.4byte	.LFE67-.LFB67
+ 616 02af 01       		.uleb128 0x1
+ 617 02b0 9C       		.byte	0x9c
+ 618 02b1 C3020000 		.4byte	0x2c3
+ 619 02b5 18       		.uleb128 0x18
+ 620 02b6 48000000 		.4byte	.LASF30
+ 621 02ba 01       		.byte	0x1
+ 622 02bb 3C       		.byte	0x3c
+ 623 02bc B1010000 		.4byte	0x1b1
+ 624 02c0 01       		.uleb128 0x1
+ 625 02c1 50       		.byte	0x50
+ 626 02c2 00       		.byte	0
+ 627 02c3 11       		.uleb128 0x11
+ 628 02c4 55020000 		.4byte	.LASF34
+ 629 02c8 01       		.byte	0x1
+ 630 02c9 41       		.byte	0x41
+ 631 02ca 00000000 		.4byte	.LFB68
+ 632 02ce 44000000 		.4byte	.LFE68-.LFB68
+ 633 02d2 01       		.uleb128 0x1
+ 634 02d3 9C       		.byte	0x9c
+ 635 02d4 E6020000 		.4byte	0x2e6
+ 636 02d8 18       		.uleb128 0x18
+ 637 02d9 48000000 		.4byte	.LASF30
+ 638 02dd 01       		.byte	0x1
+ 639 02de 41       		.byte	0x41
+ 640 02df B1010000 		.4byte	0x1b1
+ 641 02e3 01       		.uleb128 0x1
+ 642 02e4 50       		.byte	0x50
+ 643 02e5 00       		.byte	0
+ 644 02e6 19       		.uleb128 0x19
+ 645 02e7 11010000 		.4byte	.LASF38
+ 646 02eb 06       		.byte	0x6
+ 647 02ec 1207     		.2byte	0x712
+ 648 02ee F2020000 		.4byte	0x2f2
+ 649 02f2 1A       		.uleb128 0x1a
+ 650 02f3 76000000 		.4byte	0x76
+ 651 02f7 00       		.byte	0
+ 652              		.section	.debug_abbrev,"",%progbits
+ 653              	.Ldebug_abbrev0:
+ 654 0000 01       		.uleb128 0x1
+ 655 0001 11       		.uleb128 0x11
+ 656 0002 01       		.byte	0x1
+ 657 0003 25       		.uleb128 0x25
+ 658 0004 0E       		.uleb128 0xe
+ 659 0005 13       		.uleb128 0x13
+ 660 0006 0B       		.uleb128 0xb
+ 661 0007 03       		.uleb128 0x3
+ 662 0008 0E       		.uleb128 0xe
+ 663 0009 1B       		.uleb128 0x1b
+ 664 000a 0E       		.uleb128 0xe
+ 665 000b 55       		.uleb128 0x55
+ 666 000c 17       		.uleb128 0x17
+ 667 000d 11       		.uleb128 0x11
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccQluXJ0.s 			page 14
 
 
- 730 0319 00       		.byte	0
- 731 031a 00       		.byte	0
- 732 031b 15       		.uleb128 0x15
- 733 031c 55020000 		.4byte	.LASF34
- 734 0320 01       		.byte	0x1
- 735 0321 46       		.byte	0x46
- 736 0322 00000000 		.4byte	.LFB68
- 737 0326 54000000 		.4byte	.LFE68-.LFB68
- 738 032a 01       		.uleb128 0x1
- 739 032b 9C       		.byte	0x9c
- 740 032c 53030000 		.4byte	0x353
- 741 0330 10       		.uleb128 0x10
- 742 0331 48000000 		.4byte	.LASF30
- 743 0335 01       		.byte	0x1
- 744 0336 46       		.byte	0x46
- 745 0337 B1010000 		.4byte	0x1b1
- 746 033b 88010000 		.4byte	.LLST8
- 747 033f 13       		.uleb128 0x13
- 748 0340 0A000000 		.4byte	.LVL30
- 749 0344 64030000 		.4byte	0x364
- 750 0348 14       		.uleb128 0x14
- 751 0349 01       		.uleb128 0x1
- 752 034a 50       		.byte	0x50
- 753 034b 05       		.uleb128 0x5
- 754 034c 03       		.byte	0x3
- 755 034d 5C000000 		.4byte	.LC4
- 756 0351 00       		.byte	0
- 757 0352 00       		.byte	0
- 758 0353 19       		.uleb128 0x19
- 759 0354 11010000 		.4byte	.LASF38
- 760 0358 06       		.byte	0x6
- 761 0359 1207     		.2byte	0x712
- 762 035b 5F030000 		.4byte	0x35f
- 763 035f 1A       		.uleb128 0x1a
- 764 0360 76000000 		.4byte	0x76
- 765 0364 1B       		.uleb128 0x1b
- 766 0365 76020000 		.4byte	.LASF39
- 767 0369 76020000 		.4byte	.LASF39
- 768 036d 07       		.byte	0x7
- 769 036e 8B       		.byte	0x8b
- 770 036f 00       		.byte	0
- 771              		.section	.debug_abbrev,"",%progbits
- 772              	.Ldebug_abbrev0:
- 773 0000 01       		.uleb128 0x1
- 774 0001 11       		.uleb128 0x11
- 775 0002 01       		.byte	0x1
- 776 0003 25       		.uleb128 0x25
- 777 0004 0E       		.uleb128 0xe
- 778 0005 13       		.uleb128 0x13
- 779 0006 0B       		.uleb128 0xb
- 780 0007 03       		.uleb128 0x3
- 781 0008 0E       		.uleb128 0xe
- 782 0009 1B       		.uleb128 0x1b
- 783 000a 0E       		.uleb128 0xe
- 784 000b 55       		.uleb128 0x55
- 785 000c 17       		.uleb128 0x17
- 786 000d 11       		.uleb128 0x11
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 17
+ 668 000e 01       		.uleb128 0x1
+ 669 000f 10       		.uleb128 0x10
+ 670 0010 17       		.uleb128 0x17
+ 671 0011 00       		.byte	0
+ 672 0012 00       		.byte	0
+ 673 0013 02       		.uleb128 0x2
+ 674 0014 24       		.uleb128 0x24
+ 675 0015 00       		.byte	0
+ 676 0016 0B       		.uleb128 0xb
+ 677 0017 0B       		.uleb128 0xb
+ 678 0018 3E       		.uleb128 0x3e
+ 679 0019 0B       		.uleb128 0xb
+ 680 001a 03       		.uleb128 0x3
+ 681 001b 0E       		.uleb128 0xe
+ 682 001c 00       		.byte	0
+ 683 001d 00       		.byte	0
+ 684 001e 03       		.uleb128 0x3
+ 685 001f 16       		.uleb128 0x16
+ 686 0020 00       		.byte	0
+ 687 0021 03       		.uleb128 0x3
+ 688 0022 0E       		.uleb128 0xe
+ 689 0023 3A       		.uleb128 0x3a
+ 690 0024 0B       		.uleb128 0xb
+ 691 0025 3B       		.uleb128 0x3b
+ 692 0026 0B       		.uleb128 0xb
+ 693 0027 49       		.uleb128 0x49
+ 694 0028 13       		.uleb128 0x13
+ 695 0029 00       		.byte	0
+ 696 002a 00       		.byte	0
+ 697 002b 04       		.uleb128 0x4
+ 698 002c 24       		.uleb128 0x24
+ 699 002d 00       		.byte	0
+ 700 002e 0B       		.uleb128 0xb
+ 701 002f 0B       		.uleb128 0xb
+ 702 0030 3E       		.uleb128 0x3e
+ 703 0031 0B       		.uleb128 0xb
+ 704 0032 03       		.uleb128 0x3
+ 705 0033 08       		.uleb128 0x8
+ 706 0034 00       		.byte	0
+ 707 0035 00       		.byte	0
+ 708 0036 05       		.uleb128 0x5
+ 709 0037 16       		.uleb128 0x16
+ 710 0038 00       		.byte	0
+ 711 0039 03       		.uleb128 0x3
+ 712 003a 0E       		.uleb128 0xe
+ 713 003b 3A       		.uleb128 0x3a
+ 714 003c 0B       		.uleb128 0xb
+ 715 003d 3B       		.uleb128 0x3b
+ 716 003e 05       		.uleb128 0x5
+ 717 003f 49       		.uleb128 0x49
+ 718 0040 13       		.uleb128 0x13
+ 719 0041 00       		.byte	0
+ 720 0042 00       		.byte	0
+ 721 0043 06       		.uleb128 0x6
+ 722 0044 13       		.uleb128 0x13
+ 723 0045 01       		.byte	0x1
+ 724 0046 03       		.uleb128 0x3
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccQluXJ0.s 			page 15
 
 
- 787 000e 01       		.uleb128 0x1
- 788 000f 10       		.uleb128 0x10
- 789 0010 17       		.uleb128 0x17
- 790 0011 00       		.byte	0
- 791 0012 00       		.byte	0
- 792 0013 02       		.uleb128 0x2
- 793 0014 24       		.uleb128 0x24
- 794 0015 00       		.byte	0
- 795 0016 0B       		.uleb128 0xb
- 796 0017 0B       		.uleb128 0xb
- 797 0018 3E       		.uleb128 0x3e
- 798 0019 0B       		.uleb128 0xb
- 799 001a 03       		.uleb128 0x3
- 800 001b 0E       		.uleb128 0xe
- 801 001c 00       		.byte	0
- 802 001d 00       		.byte	0
- 803 001e 03       		.uleb128 0x3
- 804 001f 16       		.uleb128 0x16
- 805 0020 00       		.byte	0
- 806 0021 03       		.uleb128 0x3
- 807 0022 0E       		.uleb128 0xe
- 808 0023 3A       		.uleb128 0x3a
- 809 0024 0B       		.uleb128 0xb
- 810 0025 3B       		.uleb128 0x3b
- 811 0026 0B       		.uleb128 0xb
- 812 0027 49       		.uleb128 0x49
- 813 0028 13       		.uleb128 0x13
- 814 0029 00       		.byte	0
- 815 002a 00       		.byte	0
- 816 002b 04       		.uleb128 0x4
- 817 002c 24       		.uleb128 0x24
- 818 002d 00       		.byte	0
- 819 002e 0B       		.uleb128 0xb
- 820 002f 0B       		.uleb128 0xb
- 821 0030 3E       		.uleb128 0x3e
- 822 0031 0B       		.uleb128 0xb
- 823 0032 03       		.uleb128 0x3
- 824 0033 08       		.uleb128 0x8
- 825 0034 00       		.byte	0
- 826 0035 00       		.byte	0
- 827 0036 05       		.uleb128 0x5
- 828 0037 16       		.uleb128 0x16
- 829 0038 00       		.byte	0
- 830 0039 03       		.uleb128 0x3
- 831 003a 0E       		.uleb128 0xe
- 832 003b 3A       		.uleb128 0x3a
- 833 003c 0B       		.uleb128 0xb
- 834 003d 3B       		.uleb128 0x3b
- 835 003e 05       		.uleb128 0x5
- 836 003f 49       		.uleb128 0x49
- 837 0040 13       		.uleb128 0x13
- 838 0041 00       		.byte	0
- 839 0042 00       		.byte	0
- 840 0043 06       		.uleb128 0x6
- 841 0044 13       		.uleb128 0x13
- 842 0045 01       		.byte	0x1
- 843 0046 03       		.uleb128 0x3
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 18
+ 725 0047 0E       		.uleb128 0xe
+ 726 0048 0B       		.uleb128 0xb
+ 727 0049 0B       		.uleb128 0xb
+ 728 004a 3A       		.uleb128 0x3a
+ 729 004b 0B       		.uleb128 0xb
+ 730 004c 3B       		.uleb128 0x3b
+ 731 004d 0B       		.uleb128 0xb
+ 732 004e 01       		.uleb128 0x1
+ 733 004f 13       		.uleb128 0x13
+ 734 0050 00       		.byte	0
+ 735 0051 00       		.byte	0
+ 736 0052 07       		.uleb128 0x7
+ 737 0053 0D       		.uleb128 0xd
+ 738 0054 00       		.byte	0
+ 739 0055 03       		.uleb128 0x3
+ 740 0056 0E       		.uleb128 0xe
+ 741 0057 3A       		.uleb128 0x3a
+ 742 0058 0B       		.uleb128 0xb
+ 743 0059 3B       		.uleb128 0x3b
+ 744 005a 0B       		.uleb128 0xb
+ 745 005b 49       		.uleb128 0x49
+ 746 005c 13       		.uleb128 0x13
+ 747 005d 38       		.uleb128 0x38
+ 748 005e 0B       		.uleb128 0xb
+ 749 005f 00       		.byte	0
+ 750 0060 00       		.byte	0
+ 751 0061 08       		.uleb128 0x8
+ 752 0062 15       		.uleb128 0x15
+ 753 0063 01       		.byte	0x1
+ 754 0064 01       		.uleb128 0x1
+ 755 0065 13       		.uleb128 0x13
+ 756 0066 00       		.byte	0
+ 757 0067 00       		.byte	0
+ 758 0068 09       		.uleb128 0x9
+ 759 0069 18       		.uleb128 0x18
+ 760 006a 00       		.byte	0
+ 761 006b 00       		.byte	0
+ 762 006c 00       		.byte	0
+ 763 006d 0A       		.uleb128 0xa
+ 764 006e 0F       		.uleb128 0xf
+ 765 006f 00       		.byte	0
+ 766 0070 0B       		.uleb128 0xb
+ 767 0071 0B       		.uleb128 0xb
+ 768 0072 49       		.uleb128 0x49
+ 769 0073 13       		.uleb128 0x13
+ 770 0074 00       		.byte	0
+ 771 0075 00       		.byte	0
+ 772 0076 0B       		.uleb128 0xb
+ 773 0077 0D       		.uleb128 0xd
+ 774 0078 00       		.byte	0
+ 775 0079 03       		.uleb128 0x3
+ 776 007a 08       		.uleb128 0x8
+ 777 007b 3A       		.uleb128 0x3a
+ 778 007c 0B       		.uleb128 0xb
+ 779 007d 3B       		.uleb128 0x3b
+ 780 007e 0B       		.uleb128 0xb
+ 781 007f 49       		.uleb128 0x49
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccQluXJ0.s 			page 16
 
 
- 844 0047 0E       		.uleb128 0xe
- 845 0048 0B       		.uleb128 0xb
- 846 0049 0B       		.uleb128 0xb
- 847 004a 3A       		.uleb128 0x3a
- 848 004b 0B       		.uleb128 0xb
- 849 004c 3B       		.uleb128 0x3b
- 850 004d 0B       		.uleb128 0xb
- 851 004e 01       		.uleb128 0x1
- 852 004f 13       		.uleb128 0x13
- 853 0050 00       		.byte	0
- 854 0051 00       		.byte	0
- 855 0052 07       		.uleb128 0x7
- 856 0053 0D       		.uleb128 0xd
- 857 0054 00       		.byte	0
- 858 0055 03       		.uleb128 0x3
- 859 0056 0E       		.uleb128 0xe
- 860 0057 3A       		.uleb128 0x3a
- 861 0058 0B       		.uleb128 0xb
- 862 0059 3B       		.uleb128 0x3b
- 863 005a 0B       		.uleb128 0xb
- 864 005b 49       		.uleb128 0x49
- 865 005c 13       		.uleb128 0x13
- 866 005d 38       		.uleb128 0x38
- 867 005e 0B       		.uleb128 0xb
- 868 005f 00       		.byte	0
- 869 0060 00       		.byte	0
- 870 0061 08       		.uleb128 0x8
- 871 0062 15       		.uleb128 0x15
- 872 0063 01       		.byte	0x1
- 873 0064 01       		.uleb128 0x1
- 874 0065 13       		.uleb128 0x13
- 875 0066 00       		.byte	0
- 876 0067 00       		.byte	0
- 877 0068 09       		.uleb128 0x9
- 878 0069 18       		.uleb128 0x18
- 879 006a 00       		.byte	0
- 880 006b 00       		.byte	0
- 881 006c 00       		.byte	0
- 882 006d 0A       		.uleb128 0xa
- 883 006e 0F       		.uleb128 0xf
- 884 006f 00       		.byte	0
- 885 0070 0B       		.uleb128 0xb
- 886 0071 0B       		.uleb128 0xb
- 887 0072 49       		.uleb128 0x49
- 888 0073 13       		.uleb128 0x13
- 889 0074 00       		.byte	0
- 890 0075 00       		.byte	0
- 891 0076 0B       		.uleb128 0xb
- 892 0077 0D       		.uleb128 0xd
- 893 0078 00       		.byte	0
- 894 0079 03       		.uleb128 0x3
- 895 007a 08       		.uleb128 0x8
- 896 007b 3A       		.uleb128 0x3a
- 897 007c 0B       		.uleb128 0xb
- 898 007d 3B       		.uleb128 0x3b
- 899 007e 0B       		.uleb128 0xb
- 900 007f 49       		.uleb128 0x49
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 19
+ 782 0080 13       		.uleb128 0x13
+ 783 0081 38       		.uleb128 0x38
+ 784 0082 0B       		.uleb128 0xb
+ 785 0083 00       		.byte	0
+ 786 0084 00       		.byte	0
+ 787 0085 0C       		.uleb128 0xc
+ 788 0086 01       		.uleb128 0x1
+ 789 0087 01       		.byte	0x1
+ 790 0088 49       		.uleb128 0x49
+ 791 0089 13       		.uleb128 0x13
+ 792 008a 01       		.uleb128 0x1
+ 793 008b 13       		.uleb128 0x13
+ 794 008c 00       		.byte	0
+ 795 008d 00       		.byte	0
+ 796 008e 0D       		.uleb128 0xd
+ 797 008f 21       		.uleb128 0x21
+ 798 0090 00       		.byte	0
+ 799 0091 49       		.uleb128 0x49
+ 800 0092 13       		.uleb128 0x13
+ 801 0093 2F       		.uleb128 0x2f
+ 802 0094 0B       		.uleb128 0xb
+ 803 0095 00       		.byte	0
+ 804 0096 00       		.byte	0
+ 805 0097 0E       		.uleb128 0xe
+ 806 0098 15       		.uleb128 0x15
+ 807 0099 01       		.byte	0x1
+ 808 009a 49       		.uleb128 0x49
+ 809 009b 13       		.uleb128 0x13
+ 810 009c 01       		.uleb128 0x1
+ 811 009d 13       		.uleb128 0x13
+ 812 009e 00       		.byte	0
+ 813 009f 00       		.byte	0
+ 814 00a0 0F       		.uleb128 0xf
+ 815 00a1 2E       		.uleb128 0x2e
+ 816 00a2 01       		.byte	0x1
+ 817 00a3 03       		.uleb128 0x3
+ 818 00a4 0E       		.uleb128 0xe
+ 819 00a5 3A       		.uleb128 0x3a
+ 820 00a6 0B       		.uleb128 0xb
+ 821 00a7 3B       		.uleb128 0x3b
+ 822 00a8 0B       		.uleb128 0xb
+ 823 00a9 27       		.uleb128 0x27
+ 824 00aa 19       		.uleb128 0x19
+ 825 00ab 49       		.uleb128 0x49
+ 826 00ac 13       		.uleb128 0x13
+ 827 00ad 11       		.uleb128 0x11
+ 828 00ae 01       		.uleb128 0x1
+ 829 00af 12       		.uleb128 0x12
+ 830 00b0 06       		.uleb128 0x6
+ 831 00b1 40       		.uleb128 0x40
+ 832 00b2 18       		.uleb128 0x18
+ 833 00b3 9742     		.uleb128 0x2117
+ 834 00b5 19       		.uleb128 0x19
+ 835 00b6 01       		.uleb128 0x1
+ 836 00b7 13       		.uleb128 0x13
+ 837 00b8 00       		.byte	0
+ 838 00b9 00       		.byte	0
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccQluXJ0.s 			page 17
 
 
- 901 0080 13       		.uleb128 0x13
- 902 0081 38       		.uleb128 0x38
- 903 0082 0B       		.uleb128 0xb
- 904 0083 00       		.byte	0
- 905 0084 00       		.byte	0
- 906 0085 0C       		.uleb128 0xc
- 907 0086 01       		.uleb128 0x1
- 908 0087 01       		.byte	0x1
- 909 0088 49       		.uleb128 0x49
- 910 0089 13       		.uleb128 0x13
- 911 008a 01       		.uleb128 0x1
- 912 008b 13       		.uleb128 0x13
- 913 008c 00       		.byte	0
- 914 008d 00       		.byte	0
- 915 008e 0D       		.uleb128 0xd
- 916 008f 21       		.uleb128 0x21
- 917 0090 00       		.byte	0
- 918 0091 49       		.uleb128 0x49
- 919 0092 13       		.uleb128 0x13
- 920 0093 2F       		.uleb128 0x2f
- 921 0094 0B       		.uleb128 0xb
- 922 0095 00       		.byte	0
- 923 0096 00       		.byte	0
- 924 0097 0E       		.uleb128 0xe
- 925 0098 15       		.uleb128 0x15
- 926 0099 01       		.byte	0x1
- 927 009a 49       		.uleb128 0x49
- 928 009b 13       		.uleb128 0x13
- 929 009c 01       		.uleb128 0x1
- 930 009d 13       		.uleb128 0x13
- 931 009e 00       		.byte	0
- 932 009f 00       		.byte	0
- 933 00a0 0F       		.uleb128 0xf
- 934 00a1 2E       		.uleb128 0x2e
- 935 00a2 01       		.byte	0x1
- 936 00a3 03       		.uleb128 0x3
- 937 00a4 0E       		.uleb128 0xe
- 938 00a5 3A       		.uleb128 0x3a
- 939 00a6 0B       		.uleb128 0xb
- 940 00a7 3B       		.uleb128 0x3b
- 941 00a8 0B       		.uleb128 0xb
- 942 00a9 27       		.uleb128 0x27
- 943 00aa 19       		.uleb128 0x19
- 944 00ab 49       		.uleb128 0x49
- 945 00ac 13       		.uleb128 0x13
- 946 00ad 11       		.uleb128 0x11
- 947 00ae 01       		.uleb128 0x1
- 948 00af 12       		.uleb128 0x12
- 949 00b0 06       		.uleb128 0x6
- 950 00b1 40       		.uleb128 0x40
- 951 00b2 18       		.uleb128 0x18
- 952 00b3 9742     		.uleb128 0x2117
- 953 00b5 19       		.uleb128 0x19
- 954 00b6 01       		.uleb128 0x1
- 955 00b7 13       		.uleb128 0x13
- 956 00b8 00       		.byte	0
- 957 00b9 00       		.byte	0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 20
+ 839 00ba 10       		.uleb128 0x10
+ 840 00bb 05       		.uleb128 0x5
+ 841 00bc 00       		.byte	0
+ 842 00bd 03       		.uleb128 0x3
+ 843 00be 0E       		.uleb128 0xe
+ 844 00bf 3A       		.uleb128 0x3a
+ 845 00c0 0B       		.uleb128 0xb
+ 846 00c1 3B       		.uleb128 0x3b
+ 847 00c2 0B       		.uleb128 0xb
+ 848 00c3 49       		.uleb128 0x49
+ 849 00c4 13       		.uleb128 0x13
+ 850 00c5 02       		.uleb128 0x2
+ 851 00c6 17       		.uleb128 0x17
+ 852 00c7 00       		.byte	0
+ 853 00c8 00       		.byte	0
+ 854 00c9 11       		.uleb128 0x11
+ 855 00ca 2E       		.uleb128 0x2e
+ 856 00cb 01       		.byte	0x1
+ 857 00cc 3F       		.uleb128 0x3f
+ 858 00cd 19       		.uleb128 0x19
+ 859 00ce 03       		.uleb128 0x3
+ 860 00cf 0E       		.uleb128 0xe
+ 861 00d0 3A       		.uleb128 0x3a
+ 862 00d1 0B       		.uleb128 0xb
+ 863 00d2 3B       		.uleb128 0x3b
+ 864 00d3 0B       		.uleb128 0xb
+ 865 00d4 27       		.uleb128 0x27
+ 866 00d5 19       		.uleb128 0x19
+ 867 00d6 11       		.uleb128 0x11
+ 868 00d7 01       		.uleb128 0x1
+ 869 00d8 12       		.uleb128 0x12
+ 870 00d9 06       		.uleb128 0x6
+ 871 00da 40       		.uleb128 0x40
+ 872 00db 18       		.uleb128 0x18
+ 873 00dc 9742     		.uleb128 0x2117
+ 874 00de 19       		.uleb128 0x19
+ 875 00df 01       		.uleb128 0x1
+ 876 00e0 13       		.uleb128 0x13
+ 877 00e1 00       		.byte	0
+ 878 00e2 00       		.byte	0
+ 879 00e3 12       		.uleb128 0x12
+ 880 00e4 34       		.uleb128 0x34
+ 881 00e5 00       		.byte	0
+ 882 00e6 03       		.uleb128 0x3
+ 883 00e7 0E       		.uleb128 0xe
+ 884 00e8 3A       		.uleb128 0x3a
+ 885 00e9 0B       		.uleb128 0xb
+ 886 00ea 3B       		.uleb128 0x3b
+ 887 00eb 0B       		.uleb128 0xb
+ 888 00ec 49       		.uleb128 0x49
+ 889 00ed 13       		.uleb128 0x13
+ 890 00ee 02       		.uleb128 0x2
+ 891 00ef 17       		.uleb128 0x17
+ 892 00f0 00       		.byte	0
+ 893 00f1 00       		.byte	0
+ 894 00f2 13       		.uleb128 0x13
+ 895 00f3 898201   		.uleb128 0x4109
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccQluXJ0.s 			page 18
 
 
- 958 00ba 10       		.uleb128 0x10
- 959 00bb 05       		.uleb128 0x5
- 960 00bc 00       		.byte	0
- 961 00bd 03       		.uleb128 0x3
- 962 00be 0E       		.uleb128 0xe
- 963 00bf 3A       		.uleb128 0x3a
- 964 00c0 0B       		.uleb128 0xb
- 965 00c1 3B       		.uleb128 0x3b
- 966 00c2 0B       		.uleb128 0xb
- 967 00c3 49       		.uleb128 0x49
- 968 00c4 13       		.uleb128 0x13
- 969 00c5 02       		.uleb128 0x2
- 970 00c6 17       		.uleb128 0x17
- 971 00c7 00       		.byte	0
- 972 00c8 00       		.byte	0
- 973 00c9 11       		.uleb128 0x11
- 974 00ca 2E       		.uleb128 0x2e
- 975 00cb 01       		.byte	0x1
- 976 00cc 03       		.uleb128 0x3
- 977 00cd 0E       		.uleb128 0xe
- 978 00ce 3A       		.uleb128 0x3a
- 979 00cf 0B       		.uleb128 0xb
- 980 00d0 3B       		.uleb128 0x3b
- 981 00d1 0B       		.uleb128 0xb
- 982 00d2 27       		.uleb128 0x27
- 983 00d3 19       		.uleb128 0x19
- 984 00d4 11       		.uleb128 0x11
- 985 00d5 01       		.uleb128 0x1
- 986 00d6 12       		.uleb128 0x12
- 987 00d7 06       		.uleb128 0x6
- 988 00d8 40       		.uleb128 0x40
- 989 00d9 18       		.uleb128 0x18
- 990 00da 9742     		.uleb128 0x2117
- 991 00dc 19       		.uleb128 0x19
- 992 00dd 01       		.uleb128 0x1
- 993 00de 13       		.uleb128 0x13
- 994 00df 00       		.byte	0
- 995 00e0 00       		.byte	0
- 996 00e1 12       		.uleb128 0x12
- 997 00e2 05       		.uleb128 0x5
- 998 00e3 00       		.byte	0
- 999 00e4 03       		.uleb128 0x3
- 1000 00e5 0E       		.uleb128 0xe
- 1001 00e6 3A       		.uleb128 0x3a
- 1002 00e7 0B       		.uleb128 0xb
- 1003 00e8 3B       		.uleb128 0x3b
- 1004 00e9 0B       		.uleb128 0xb
- 1005 00ea 49       		.uleb128 0x49
- 1006 00eb 13       		.uleb128 0x13
- 1007 00ec 02       		.uleb128 0x2
- 1008 00ed 18       		.uleb128 0x18
- 1009 00ee 00       		.byte	0
- 1010 00ef 00       		.byte	0
- 1011 00f0 13       		.uleb128 0x13
- 1012 00f1 898201   		.uleb128 0x4109
- 1013 00f4 01       		.byte	0x1
- 1014 00f5 11       		.uleb128 0x11
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 21
+ 896 00f6 01       		.byte	0x1
+ 897 00f7 11       		.uleb128 0x11
+ 898 00f8 01       		.uleb128 0x1
+ 899 00f9 31       		.uleb128 0x31
+ 900 00fa 13       		.uleb128 0x13
+ 901 00fb 01       		.uleb128 0x1
+ 902 00fc 13       		.uleb128 0x13
+ 903 00fd 00       		.byte	0
+ 904 00fe 00       		.byte	0
+ 905 00ff 14       		.uleb128 0x14
+ 906 0100 8A8201   		.uleb128 0x410a
+ 907 0103 00       		.byte	0
+ 908 0104 02       		.uleb128 0x2
+ 909 0105 18       		.uleb128 0x18
+ 910 0106 9142     		.uleb128 0x2111
+ 911 0108 18       		.uleb128 0x18
+ 912 0109 00       		.byte	0
+ 913 010a 00       		.byte	0
+ 914 010b 15       		.uleb128 0x15
+ 915 010c 898201   		.uleb128 0x4109
+ 916 010f 01       		.byte	0x1
+ 917 0110 11       		.uleb128 0x11
+ 918 0111 01       		.uleb128 0x1
+ 919 0112 31       		.uleb128 0x31
+ 920 0113 13       		.uleb128 0x13
+ 921 0114 00       		.byte	0
+ 922 0115 00       		.byte	0
+ 923 0116 16       		.uleb128 0x16
+ 924 0117 2E       		.uleb128 0x2e
+ 925 0118 01       		.byte	0x1
+ 926 0119 3F       		.uleb128 0x3f
+ 927 011a 19       		.uleb128 0x19
+ 928 011b 03       		.uleb128 0x3
+ 929 011c 08       		.uleb128 0x8
+ 930 011d 3A       		.uleb128 0x3a
+ 931 011e 0B       		.uleb128 0xb
+ 932 011f 3B       		.uleb128 0x3b
+ 933 0120 0B       		.uleb128 0xb
+ 934 0121 27       		.uleb128 0x27
+ 935 0122 19       		.uleb128 0x19
+ 936 0123 11       		.uleb128 0x11
+ 937 0124 01       		.uleb128 0x1
+ 938 0125 12       		.uleb128 0x12
+ 939 0126 06       		.uleb128 0x6
+ 940 0127 40       		.uleb128 0x40
+ 941 0128 18       		.uleb128 0x18
+ 942 0129 9642     		.uleb128 0x2116
+ 943 012b 19       		.uleb128 0x19
+ 944 012c 01       		.uleb128 0x1
+ 945 012d 13       		.uleb128 0x13
+ 946 012e 00       		.byte	0
+ 947 012f 00       		.byte	0
+ 948 0130 17       		.uleb128 0x17
+ 949 0131 2E       		.uleb128 0x2e
+ 950 0132 01       		.byte	0x1
+ 951 0133 03       		.uleb128 0x3
+ 952 0134 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccQluXJ0.s 			page 19
 
 
- 1015 00f6 01       		.uleb128 0x1
- 1016 00f7 31       		.uleb128 0x31
- 1017 00f8 13       		.uleb128 0x13
- 1018 00f9 00       		.byte	0
- 1019 00fa 00       		.byte	0
- 1020 00fb 14       		.uleb128 0x14
- 1021 00fc 8A8201   		.uleb128 0x410a
- 1022 00ff 00       		.byte	0
- 1023 0100 02       		.uleb128 0x2
- 1024 0101 18       		.uleb128 0x18
- 1025 0102 9142     		.uleb128 0x2111
- 1026 0104 18       		.uleb128 0x18
- 1027 0105 00       		.byte	0
- 1028 0106 00       		.byte	0
- 1029 0107 15       		.uleb128 0x15
- 1030 0108 2E       		.uleb128 0x2e
- 1031 0109 01       		.byte	0x1
- 1032 010a 3F       		.uleb128 0x3f
- 1033 010b 19       		.uleb128 0x19
- 1034 010c 03       		.uleb128 0x3
- 1035 010d 0E       		.uleb128 0xe
- 1036 010e 3A       		.uleb128 0x3a
- 1037 010f 0B       		.uleb128 0xb
- 1038 0110 3B       		.uleb128 0x3b
- 1039 0111 0B       		.uleb128 0xb
- 1040 0112 27       		.uleb128 0x27
- 1041 0113 19       		.uleb128 0x19
- 1042 0114 11       		.uleb128 0x11
- 1043 0115 01       		.uleb128 0x1
- 1044 0116 12       		.uleb128 0x12
- 1045 0117 06       		.uleb128 0x6
- 1046 0118 40       		.uleb128 0x40
- 1047 0119 18       		.uleb128 0x18
- 1048 011a 9742     		.uleb128 0x2117
- 1049 011c 19       		.uleb128 0x19
- 1050 011d 01       		.uleb128 0x1
- 1051 011e 13       		.uleb128 0x13
- 1052 011f 00       		.byte	0
- 1053 0120 00       		.byte	0
- 1054 0121 16       		.uleb128 0x16
- 1055 0122 34       		.uleb128 0x34
- 1056 0123 00       		.byte	0
- 1057 0124 03       		.uleb128 0x3
- 1058 0125 0E       		.uleb128 0xe
- 1059 0126 3A       		.uleb128 0x3a
- 1060 0127 0B       		.uleb128 0xb
- 1061 0128 3B       		.uleb128 0x3b
- 1062 0129 0B       		.uleb128 0xb
- 1063 012a 49       		.uleb128 0x49
- 1064 012b 13       		.uleb128 0x13
- 1065 012c 02       		.uleb128 0x2
- 1066 012d 17       		.uleb128 0x17
- 1067 012e 00       		.byte	0
- 1068 012f 00       		.byte	0
- 1069 0130 17       		.uleb128 0x17
- 1070 0131 898201   		.uleb128 0x4109
- 1071 0134 01       		.byte	0x1
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 22
+ 953 0135 3A       		.uleb128 0x3a
+ 954 0136 0B       		.uleb128 0xb
+ 955 0137 3B       		.uleb128 0x3b
+ 956 0138 0B       		.uleb128 0xb
+ 957 0139 27       		.uleb128 0x27
+ 958 013a 19       		.uleb128 0x19
+ 959 013b 11       		.uleb128 0x11
+ 960 013c 01       		.uleb128 0x1
+ 961 013d 12       		.uleb128 0x12
+ 962 013e 06       		.uleb128 0x6
+ 963 013f 40       		.uleb128 0x40
+ 964 0140 18       		.uleb128 0x18
+ 965 0141 9742     		.uleb128 0x2117
+ 966 0143 19       		.uleb128 0x19
+ 967 0144 01       		.uleb128 0x1
+ 968 0145 13       		.uleb128 0x13
+ 969 0146 00       		.byte	0
+ 970 0147 00       		.byte	0
+ 971 0148 18       		.uleb128 0x18
+ 972 0149 05       		.uleb128 0x5
+ 973 014a 00       		.byte	0
+ 974 014b 03       		.uleb128 0x3
+ 975 014c 0E       		.uleb128 0xe
+ 976 014d 3A       		.uleb128 0x3a
+ 977 014e 0B       		.uleb128 0xb
+ 978 014f 3B       		.uleb128 0x3b
+ 979 0150 0B       		.uleb128 0xb
+ 980 0151 49       		.uleb128 0x49
+ 981 0152 13       		.uleb128 0x13
+ 982 0153 02       		.uleb128 0x2
+ 983 0154 18       		.uleb128 0x18
+ 984 0155 00       		.byte	0
+ 985 0156 00       		.byte	0
+ 986 0157 19       		.uleb128 0x19
+ 987 0158 34       		.uleb128 0x34
+ 988 0159 00       		.byte	0
+ 989 015a 03       		.uleb128 0x3
+ 990 015b 0E       		.uleb128 0xe
+ 991 015c 3A       		.uleb128 0x3a
+ 992 015d 0B       		.uleb128 0xb
+ 993 015e 3B       		.uleb128 0x3b
+ 994 015f 05       		.uleb128 0x5
+ 995 0160 49       		.uleb128 0x49
+ 996 0161 13       		.uleb128 0x13
+ 997 0162 3F       		.uleb128 0x3f
+ 998 0163 19       		.uleb128 0x19
+ 999 0164 3C       		.uleb128 0x3c
+ 1000 0165 19       		.uleb128 0x19
+ 1001 0166 00       		.byte	0
+ 1002 0167 00       		.byte	0
+ 1003 0168 1A       		.uleb128 0x1a
+ 1004 0169 35       		.uleb128 0x35
+ 1005 016a 00       		.byte	0
+ 1006 016b 49       		.uleb128 0x49
+ 1007 016c 13       		.uleb128 0x13
+ 1008 016d 00       		.byte	0
+ 1009 016e 00       		.byte	0
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccQluXJ0.s 			page 20
 
 
- 1072 0135 11       		.uleb128 0x11
- 1073 0136 01       		.uleb128 0x1
- 1074 0137 31       		.uleb128 0x31
- 1075 0138 13       		.uleb128 0x13
- 1076 0139 01       		.uleb128 0x1
- 1077 013a 13       		.uleb128 0x13
- 1078 013b 00       		.byte	0
- 1079 013c 00       		.byte	0
- 1080 013d 18       		.uleb128 0x18
- 1081 013e 2E       		.uleb128 0x2e
- 1082 013f 01       		.byte	0x1
- 1083 0140 3F       		.uleb128 0x3f
- 1084 0141 19       		.uleb128 0x19
- 1085 0142 03       		.uleb128 0x3
- 1086 0143 08       		.uleb128 0x8
- 1087 0144 3A       		.uleb128 0x3a
- 1088 0145 0B       		.uleb128 0xb
- 1089 0146 3B       		.uleb128 0x3b
- 1090 0147 0B       		.uleb128 0xb
- 1091 0148 27       		.uleb128 0x27
- 1092 0149 19       		.uleb128 0x19
- 1093 014a 11       		.uleb128 0x11
- 1094 014b 01       		.uleb128 0x1
- 1095 014c 12       		.uleb128 0x12
- 1096 014d 06       		.uleb128 0x6
- 1097 014e 40       		.uleb128 0x40
- 1098 014f 18       		.uleb128 0x18
- 1099 0150 9642     		.uleb128 0x2116
- 1100 0152 19       		.uleb128 0x19
- 1101 0153 01       		.uleb128 0x1
- 1102 0154 13       		.uleb128 0x13
- 1103 0155 00       		.byte	0
- 1104 0156 00       		.byte	0
- 1105 0157 19       		.uleb128 0x19
- 1106 0158 34       		.uleb128 0x34
- 1107 0159 00       		.byte	0
- 1108 015a 03       		.uleb128 0x3
- 1109 015b 0E       		.uleb128 0xe
- 1110 015c 3A       		.uleb128 0x3a
- 1111 015d 0B       		.uleb128 0xb
- 1112 015e 3B       		.uleb128 0x3b
- 1113 015f 05       		.uleb128 0x5
- 1114 0160 49       		.uleb128 0x49
- 1115 0161 13       		.uleb128 0x13
- 1116 0162 3F       		.uleb128 0x3f
- 1117 0163 19       		.uleb128 0x19
- 1118 0164 3C       		.uleb128 0x3c
- 1119 0165 19       		.uleb128 0x19
- 1120 0166 00       		.byte	0
- 1121 0167 00       		.byte	0
- 1122 0168 1A       		.uleb128 0x1a
- 1123 0169 35       		.uleb128 0x35
- 1124 016a 00       		.byte	0
- 1125 016b 49       		.uleb128 0x49
- 1126 016c 13       		.uleb128 0x13
- 1127 016d 00       		.byte	0
- 1128 016e 00       		.byte	0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 23
+ 1010 016f 00       		.byte	0
+ 1011              		.section	.debug_loc,"",%progbits
+ 1012              	.Ldebug_loc0:
+ 1013              	.LLST0:
+ 1014 0000 00000000 		.4byte	.LVL0
+ 1015 0004 1C000000 		.4byte	.LVL1
+ 1016 0008 0100     		.2byte	0x1
+ 1017 000a 50       		.byte	0x50
+ 1018 000b 1C000000 		.4byte	.LVL1
+ 1019 000f 1E000000 		.4byte	.LVL2
+ 1020 0013 0400     		.2byte	0x4
+ 1021 0015 F3       		.byte	0xf3
+ 1022 0016 01       		.uleb128 0x1
+ 1023 0017 50       		.byte	0x50
+ 1024 0018 9F       		.byte	0x9f
+ 1025 0019 1E000000 		.4byte	.LVL2
+ 1026 001d 20000000 		.4byte	.LVL3
+ 1027 0021 0100     		.2byte	0x1
+ 1028 0023 50       		.byte	0x50
+ 1029 0024 20000000 		.4byte	.LVL3
+ 1030 0028 22000000 		.4byte	.LFE63
+ 1031 002c 0400     		.2byte	0x4
+ 1032 002e F3       		.byte	0xf3
+ 1033 002f 01       		.uleb128 0x1
+ 1034 0030 50       		.byte	0x50
+ 1035 0031 9F       		.byte	0x9f
+ 1036 0032 00000000 		.4byte	0
+ 1037 0036 00000000 		.4byte	0
+ 1038              	.LLST1:
+ 1039 003a 00000000 		.4byte	.LVL4
+ 1040 003e 0C000000 		.4byte	.LVL5
+ 1041 0042 0100     		.2byte	0x1
+ 1042 0044 50       		.byte	0x50
+ 1043 0045 0C000000 		.4byte	.LVL5
+ 1044 0049 0E000000 		.4byte	.LVL6
+ 1045 004d 0400     		.2byte	0x4
+ 1046 004f F3       		.byte	0xf3
+ 1047 0050 01       		.uleb128 0x1
+ 1048 0051 50       		.byte	0x50
+ 1049 0052 9F       		.byte	0x9f
+ 1050 0053 0E000000 		.4byte	.LVL6
+ 1051 0057 10000000 		.4byte	.LVL7
+ 1052 005b 0100     		.2byte	0x1
+ 1053 005d 50       		.byte	0x50
+ 1054 005e 10000000 		.4byte	.LVL7
+ 1055 0062 12000000 		.4byte	.LFE64
+ 1056 0066 0400     		.2byte	0x4
+ 1057 0068 F3       		.byte	0xf3
+ 1058 0069 01       		.uleb128 0x1
+ 1059 006a 50       		.byte	0x50
+ 1060 006b 9F       		.byte	0x9f
+ 1061 006c 00000000 		.4byte	0
+ 1062 0070 00000000 		.4byte	0
+ 1063              	.LLST2:
+ 1064 0074 00000000 		.4byte	.LVL8
+ 1065 0078 0B000000 		.4byte	.LVL9-1
+ 1066 007c 0100     		.2byte	0x1
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccQluXJ0.s 			page 21
 
 
- 1129 016f 1B       		.uleb128 0x1b
- 1130 0170 2E       		.uleb128 0x2e
- 1131 0171 00       		.byte	0
- 1132 0172 3F       		.uleb128 0x3f
- 1133 0173 19       		.uleb128 0x19
- 1134 0174 3C       		.uleb128 0x3c
- 1135 0175 19       		.uleb128 0x19
- 1136 0176 6E       		.uleb128 0x6e
- 1137 0177 0E       		.uleb128 0xe
- 1138 0178 03       		.uleb128 0x3
- 1139 0179 0E       		.uleb128 0xe
- 1140 017a 3A       		.uleb128 0x3a
- 1141 017b 0B       		.uleb128 0xb
- 1142 017c 3B       		.uleb128 0x3b
- 1143 017d 0B       		.uleb128 0xb
- 1144 017e 00       		.byte	0
- 1145 017f 00       		.byte	0
- 1146 0180 00       		.byte	0
- 1147              		.section	.debug_loc,"",%progbits
- 1148              	.Ldebug_loc0:
- 1149              	.LLST0:
- 1150 0000 00000000 		.4byte	.LVL0
- 1151 0004 0C000000 		.4byte	.LVL1
- 1152 0008 0100     		.2byte	0x1
- 1153 000a 50       		.byte	0x50
- 1154 000b 0C000000 		.4byte	.LVL1
- 1155 000f 0E000000 		.4byte	.LVL2
- 1156 0013 0400     		.2byte	0x4
- 1157 0015 F3       		.byte	0xf3
- 1158 0016 01       		.uleb128 0x1
- 1159 0017 50       		.byte	0x50
- 1160 0018 9F       		.byte	0x9f
- 1161 0019 0E000000 		.4byte	.LVL2
- 1162 001d 10000000 		.4byte	.LVL3
- 1163 0021 0100     		.2byte	0x1
- 1164 0023 50       		.byte	0x50
- 1165 0024 10000000 		.4byte	.LVL3
- 1166 0028 12000000 		.4byte	.LFE64
- 1167 002c 0400     		.2byte	0x4
- 1168 002e F3       		.byte	0xf3
- 1169 002f 01       		.uleb128 0x1
- 1170 0030 50       		.byte	0x50
- 1171 0031 9F       		.byte	0x9f
- 1172 0032 00000000 		.4byte	0
- 1173 0036 00000000 		.4byte	0
- 1174              	.LLST1:
- 1175 003a 00000000 		.4byte	.LVL5
- 1176 003e 1E000000 		.4byte	.LVL6
- 1177 0042 0100     		.2byte	0x1
- 1178 0044 50       		.byte	0x50
- 1179 0045 1E000000 		.4byte	.LVL6
- 1180 0049 26000000 		.4byte	.LVL8
- 1181 004d 0400     		.2byte	0x4
- 1182 004f F3       		.byte	0xf3
- 1183 0050 01       		.uleb128 0x1
- 1184 0051 50       		.byte	0x50
- 1185 0052 9F       		.byte	0x9f
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 24
+ 1067 007e 50       		.byte	0x50
+ 1068 007f 0B000000 		.4byte	.LVL9-1
+ 1069 0083 46000000 		.4byte	.LVL14
+ 1070 0087 0100     		.2byte	0x1
+ 1071 0089 54       		.byte	0x54
+ 1072 008a 46000000 		.4byte	.LVL14
+ 1073 008e 4A000000 		.4byte	.LFE65
+ 1074 0092 0400     		.2byte	0x4
+ 1075 0094 F3       		.byte	0xf3
+ 1076 0095 01       		.uleb128 0x1
+ 1077 0096 50       		.byte	0x50
+ 1078 0097 9F       		.byte	0x9f
+ 1079 0098 00000000 		.4byte	0
+ 1080 009c 00000000 		.4byte	0
+ 1081              	.LLST3:
+ 1082 00a0 00000000 		.4byte	.LVL8
+ 1083 00a4 0B000000 		.4byte	.LVL9-1
+ 1084 00a8 0100     		.2byte	0x1
+ 1085 00aa 51       		.byte	0x51
+ 1086 00ab 0B000000 		.4byte	.LVL9-1
+ 1087 00af 4A000000 		.4byte	.LFE65
+ 1088 00b3 0100     		.2byte	0x1
+ 1089 00b5 56       		.byte	0x56
+ 1090 00b6 00000000 		.4byte	0
+ 1091 00ba 00000000 		.4byte	0
+ 1092              	.LLST4:
+ 1093 00be 00000000 		.4byte	.LVL8
+ 1094 00c2 0B000000 		.4byte	.LVL9-1
+ 1095 00c6 0100     		.2byte	0x1
+ 1096 00c8 52       		.byte	0x52
+ 1097 00c9 0B000000 		.4byte	.LVL9-1
+ 1098 00cd 4A000000 		.4byte	.LFE65
+ 1099 00d1 0100     		.2byte	0x1
+ 1100 00d3 55       		.byte	0x55
+ 1101 00d4 00000000 		.4byte	0
+ 1102 00d8 00000000 		.4byte	0
+ 1103              	.LLST5:
+ 1104 00dc 20000000 		.4byte	.LVL11
+ 1105 00e0 26000000 		.4byte	.LVL12
+ 1106 00e4 0100     		.2byte	0x1
+ 1107 00e6 54       		.byte	0x54
+ 1108 00e7 3E000000 		.4byte	.LVL13
+ 1109 00eb 46000000 		.4byte	.LVL14
+ 1110 00ef 0800     		.2byte	0x8
+ 1111 00f1 73       		.byte	0x73
+ 1112 00f2 00       		.sleb128 0
+ 1113 00f3 33       		.byte	0x33
+ 1114 00f4 24       		.byte	0x24
+ 1115 00f5 74       		.byte	0x74
+ 1116 00f6 00       		.sleb128 0
+ 1117 00f7 22       		.byte	0x22
+ 1118 00f8 9F       		.byte	0x9f
+ 1119 00f9 46000000 		.4byte	.LVL14
+ 1120 00fd 48000000 		.4byte	.LVL15
+ 1121 0101 0900     		.2byte	0x9
+ 1122 0103 73       		.byte	0x73
+ 1123 0104 00       		.sleb128 0
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccQluXJ0.s 			page 22
 
 
- 1186 0053 26000000 		.4byte	.LVL8
- 1187 0057 28000000 		.4byte	.LVL9
- 1188 005b 0100     		.2byte	0x1
- 1189 005d 50       		.byte	0x50
- 1190 005e 28000000 		.4byte	.LVL9
- 1191 0062 30000000 		.4byte	.LFE63
- 1192 0066 0400     		.2byte	0x4
- 1193 0068 F3       		.byte	0xf3
- 1194 0069 01       		.uleb128 0x1
- 1195 006a 50       		.byte	0x50
- 1196 006b 9F       		.byte	0x9f
- 1197 006c 00000000 		.4byte	0
- 1198 0070 00000000 		.4byte	0
- 1199              	.LLST2:
- 1200 0074 00000000 		.4byte	.LVL10
- 1201 0078 0B000000 		.4byte	.LVL11-1
- 1202 007c 0100     		.2byte	0x1
- 1203 007e 50       		.byte	0x50
- 1204 007f 0B000000 		.4byte	.LVL11-1
- 1205 0083 52000000 		.4byte	.LVL18
- 1206 0087 0100     		.2byte	0x1
- 1207 0089 54       		.byte	0x54
- 1208 008a 52000000 		.4byte	.LVL18
- 1209 008e 60000000 		.4byte	.LFE65
- 1210 0092 0400     		.2byte	0x4
- 1211 0094 F3       		.byte	0xf3
- 1212 0095 01       		.uleb128 0x1
- 1213 0096 50       		.byte	0x50
- 1214 0097 9F       		.byte	0x9f
- 1215 0098 00000000 		.4byte	0
- 1216 009c 00000000 		.4byte	0
- 1217              	.LLST3:
- 1218 00a0 00000000 		.4byte	.LVL10
- 1219 00a4 0B000000 		.4byte	.LVL11-1
- 1220 00a8 0100     		.2byte	0x1
- 1221 00aa 51       		.byte	0x51
- 1222 00ab 0B000000 		.4byte	.LVL11-1
- 1223 00af 56000000 		.4byte	.LVL20
- 1224 00b3 0100     		.2byte	0x1
- 1225 00b5 56       		.byte	0x56
- 1226 00b6 56000000 		.4byte	.LVL20
- 1227 00ba 60000000 		.4byte	.LFE65
- 1228 00be 0400     		.2byte	0x4
- 1229 00c0 F3       		.byte	0xf3
- 1230 00c1 01       		.uleb128 0x1
- 1231 00c2 51       		.byte	0x51
- 1232 00c3 9F       		.byte	0x9f
- 1233 00c4 00000000 		.4byte	0
- 1234 00c8 00000000 		.4byte	0
- 1235              	.LLST4:
- 1236 00cc 00000000 		.4byte	.LVL10
- 1237 00d0 0B000000 		.4byte	.LVL11-1
- 1238 00d4 0100     		.2byte	0x1
- 1239 00d6 52       		.byte	0x52
- 1240 00d7 0B000000 		.4byte	.LVL11-1
- 1241 00db 56000000 		.4byte	.LVL20
- 1242 00df 0100     		.2byte	0x1
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 25
+ 1124 0105 33       		.byte	0x33
+ 1125 0106 24       		.byte	0x24
+ 1126 0107 F3       		.byte	0xf3
+ 1127 0108 01       		.uleb128 0x1
+ 1128 0109 50       		.byte	0x50
+ 1129 010a 22       		.byte	0x22
+ 1130 010b 9F       		.byte	0x9f
+ 1131 010c 00000000 		.4byte	0
+ 1132 0110 00000000 		.4byte	0
+ 1133              	.LLST6:
+ 1134 0114 00000000 		.4byte	.LVL16
+ 1135 0118 0B000000 		.4byte	.LVL18-1
+ 1136 011c 0100     		.2byte	0x1
+ 1137 011e 50       		.byte	0x50
+ 1138 011f 0B000000 		.4byte	.LVL18-1
+ 1139 0123 46000000 		.4byte	.LFE66
+ 1140 0127 0100     		.2byte	0x1
+ 1141 0129 54       		.byte	0x54
+ 1142 012a 00000000 		.4byte	0
+ 1143 012e 00000000 		.4byte	0
+ 1144              	.LLST7:
+ 1145 0132 08000000 		.4byte	.LVL17
+ 1146 0136 0B000000 		.4byte	.LVL18-1
+ 1147 013a 0800     		.2byte	0x8
+ 1148 013c 75       		.byte	0x75
+ 1149 013d 00       		.sleb128 0
+ 1150 013e 33       		.byte	0x33
+ 1151 013f 24       		.byte	0x24
+ 1152 0140 70       		.byte	0x70
+ 1153 0141 00       		.sleb128 0
+ 1154 0142 22       		.byte	0x22
+ 1155 0143 9F       		.byte	0x9f
+ 1156 0144 0B000000 		.4byte	.LVL18-1
+ 1157 0148 46000000 		.4byte	.LFE66
+ 1158 014c 0800     		.2byte	0x8
+ 1159 014e 75       		.byte	0x75
+ 1160 014f 00       		.sleb128 0
+ 1161 0150 33       		.byte	0x33
+ 1162 0151 24       		.byte	0x24
+ 1163 0152 74       		.byte	0x74
+ 1164 0153 00       		.sleb128 0
+ 1165 0154 22       		.byte	0x22
+ 1166 0155 9F       		.byte	0x9f
+ 1167 0156 00000000 		.4byte	0
+ 1168 015a 00000000 		.4byte	0
+ 1169              		.section	.debug_aranges,"",%progbits
+ 1170 0000 44000000 		.4byte	0x44
+ 1171 0004 0200     		.2byte	0x2
+ 1172 0006 00000000 		.4byte	.Ldebug_info0
+ 1173 000a 04       		.byte	0x4
+ 1174 000b 00       		.byte	0
+ 1175 000c 0000     		.2byte	0
+ 1176 000e 0000     		.2byte	0
+ 1177 0010 00000000 		.4byte	.LFB63
+ 1178 0014 22000000 		.4byte	.LFE63-.LFB63
+ 1179 0018 00000000 		.4byte	.LFB64
+ 1180 001c 12000000 		.4byte	.LFE64-.LFB64
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccQluXJ0.s 			page 23
 
 
- 1243 00e1 55       		.byte	0x55
- 1244 00e2 56000000 		.4byte	.LVL20
- 1245 00e6 60000000 		.4byte	.LFE65
- 1246 00ea 0400     		.2byte	0x4
- 1247 00ec F3       		.byte	0xf3
- 1248 00ed 01       		.uleb128 0x1
- 1249 00ee 52       		.byte	0x52
- 1250 00ef 9F       		.byte	0x9f
- 1251 00f0 00000000 		.4byte	0
- 1252 00f4 00000000 		.4byte	0
- 1253              	.LLST5:
- 1254 00f8 26000000 		.4byte	.LVL14
- 1255 00fc 2C000000 		.4byte	.LVL15
- 1256 0100 0100     		.2byte	0x1
- 1257 0102 54       		.byte	0x54
- 1258 0103 4A000000 		.4byte	.LVL17
- 1259 0107 52000000 		.4byte	.LVL18
- 1260 010b 0800     		.2byte	0x8
- 1261 010d 73       		.byte	0x73
- 1262 010e 00       		.sleb128 0
- 1263 010f 33       		.byte	0x33
- 1264 0110 24       		.byte	0x24
- 1265 0111 74       		.byte	0x74
- 1266 0112 00       		.sleb128 0
- 1267 0113 22       		.byte	0x22
- 1268 0114 9F       		.byte	0x9f
- 1269 0115 52000000 		.4byte	.LVL18
- 1270 0119 54000000 		.4byte	.LVL19
- 1271 011d 0900     		.2byte	0x9
- 1272 011f 73       		.byte	0x73
- 1273 0120 00       		.sleb128 0
- 1274 0121 33       		.byte	0x33
- 1275 0122 24       		.byte	0x24
- 1276 0123 F3       		.byte	0xf3
- 1277 0124 01       		.uleb128 0x1
- 1278 0125 50       		.byte	0x50
- 1279 0126 22       		.byte	0x22
- 1280 0127 9F       		.byte	0x9f
- 1281 0128 00000000 		.4byte	0
- 1282 012c 00000000 		.4byte	0
- 1283              	.LLST6:
- 1284 0130 00000000 		.4byte	.LVL21
- 1285 0134 0B000000 		.4byte	.LVL23-1
- 1286 0138 0100     		.2byte	0x1
- 1287 013a 50       		.byte	0x50
- 1288 013b 0B000000 		.4byte	.LVL23-1
- 1289 013f 4C000000 		.4byte	.LVL27
- 1290 0143 0100     		.2byte	0x1
- 1291 0145 54       		.byte	0x54
- 1292 0146 4C000000 		.4byte	.LVL27
- 1293 014a 50000000 		.4byte	.LFE66
- 1294 014e 0400     		.2byte	0x4
- 1295 0150 F3       		.byte	0xf3
- 1296 0151 01       		.uleb128 0x1
- 1297 0152 50       		.byte	0x50
- 1298 0153 9F       		.byte	0x9f
- 1299 0154 00000000 		.4byte	0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 26
+ 1181 0020 00000000 		.4byte	.LFB65
+ 1182 0024 4A000000 		.4byte	.LFE65-.LFB65
+ 1183 0028 00000000 		.4byte	.LFB66
+ 1184 002c 46000000 		.4byte	.LFE66-.LFB66
+ 1185 0030 00000000 		.4byte	.LFB67
+ 1186 0034 0C000000 		.4byte	.LFE67-.LFB67
+ 1187 0038 00000000 		.4byte	.LFB68
+ 1188 003c 44000000 		.4byte	.LFE68-.LFB68
+ 1189 0040 00000000 		.4byte	0
+ 1190 0044 00000000 		.4byte	0
+ 1191              		.section	.debug_ranges,"",%progbits
+ 1192              	.Ldebug_ranges0:
+ 1193 0000 00000000 		.4byte	.LFB63
+ 1194 0004 22000000 		.4byte	.LFE63
+ 1195 0008 00000000 		.4byte	.LFB64
+ 1196 000c 12000000 		.4byte	.LFE64
+ 1197 0010 00000000 		.4byte	.LFB65
+ 1198 0014 4A000000 		.4byte	.LFE65
+ 1199 0018 00000000 		.4byte	.LFB66
+ 1200 001c 46000000 		.4byte	.LFE66
+ 1201 0020 00000000 		.4byte	.LFB67
+ 1202 0024 0C000000 		.4byte	.LFE67
+ 1203 0028 00000000 		.4byte	.LFB68
+ 1204 002c 44000000 		.4byte	.LFE68
+ 1205 0030 00000000 		.4byte	0
+ 1206 0034 00000000 		.4byte	0
+ 1207              		.section	.debug_line,"",%progbits
+ 1208              	.Ldebug_line0:
+ 1209 0000 ED010000 		.section	.debug_str,"MS",%progbits,1
+ 1209      02006A01 
+ 1209      00000201 
+ 1209      FB0E0D00 
+ 1209      01010101 
+ 1210              	.LASF29:
+ 1211 0000 6D61784C 		.ascii	"maxLength\000"
+ 1211      656E6774 
+ 1211      6800
+ 1212              	.LASF33:
+ 1213 000a 51496861 		.ascii	"QIhandle\000"
+ 1213      6E646C65 
+ 1213      00
+ 1214              	.LASF9:
+ 1215 0013 5F5F696E 		.ascii	"__int32_t\000"
+ 1215      7433325F 
+ 1215      7400
+ 1216              	.LASF14:
+ 1217 001d 646F7562 		.ascii	"double\000"
+ 1217      6C6500
+ 1218              	.LASF11:
+ 1219 0024 75696E74 		.ascii	"uint8\000"
+ 1219      3800
+ 1220              	.LASF28:
+ 1221 002a 72656172 		.ascii	"rear\000"
+ 1221      00
+ 1222              	.LASF26:
+ 1223 002f 636C6561 		.ascii	"clearBuffer\000"
+ 1223      72427566 
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccQluXJ0.s 			page 24
 
 
- 1300 0158 00000000 		.4byte	0
- 1301              	.LLST7:
- 1302 015c 08000000 		.4byte	.LVL22
- 1303 0160 0B000000 		.4byte	.LVL23-1
- 1304 0164 0800     		.2byte	0x8
- 1305 0166 75       		.byte	0x75
- 1306 0167 00       		.sleb128 0
- 1307 0168 33       		.byte	0x33
- 1308 0169 24       		.byte	0x24
- 1309 016a 70       		.byte	0x70
- 1310 016b 00       		.sleb128 0
- 1311 016c 22       		.byte	0x22
- 1312 016d 9F       		.byte	0x9f
- 1313 016e 0B000000 		.4byte	.LVL23-1
- 1314 0172 4C000000 		.4byte	.LVL27
- 1315 0176 0800     		.2byte	0x8
- 1316 0178 75       		.byte	0x75
- 1317 0179 00       		.sleb128 0
- 1318 017a 33       		.byte	0x33
- 1319 017b 24       		.byte	0x24
- 1320 017c 74       		.byte	0x74
- 1321 017d 00       		.sleb128 0
- 1322 017e 22       		.byte	0x22
- 1323 017f 9F       		.byte	0x9f
- 1324 0180 00000000 		.4byte	0
- 1325 0184 00000000 		.4byte	0
- 1326              	.LLST8:
- 1327 0188 00000000 		.4byte	.LVL28
- 1328 018c 06000000 		.4byte	.LVL29
- 1329 0190 0100     		.2byte	0x1
- 1330 0192 50       		.byte	0x50
- 1331 0193 06000000 		.4byte	.LVL29
- 1332 0197 3A000000 		.4byte	.LVL31
- 1333 019b 0100     		.2byte	0x1
- 1334 019d 54       		.byte	0x54
- 1335 019e 3A000000 		.4byte	.LVL31
- 1336 01a2 54000000 		.4byte	.LFE68
- 1337 01a6 0400     		.2byte	0x4
- 1338 01a8 F3       		.byte	0xf3
- 1339 01a9 01       		.uleb128 0x1
- 1340 01aa 50       		.byte	0x50
- 1341 01ab 9F       		.byte	0x9f
- 1342 01ac 00000000 		.4byte	0
- 1343 01b0 00000000 		.4byte	0
- 1344              		.section	.debug_aranges,"",%progbits
- 1345 0000 44000000 		.4byte	0x44
- 1346 0004 0200     		.2byte	0x2
- 1347 0006 00000000 		.4byte	.Ldebug_info0
- 1348 000a 04       		.byte	0x4
- 1349 000b 00       		.byte	0
- 1350 000c 0000     		.2byte	0
- 1351 000e 0000     		.2byte	0
- 1352 0010 00000000 		.4byte	.LFB64
- 1353 0014 12000000 		.4byte	.LFE64-.LFB64
- 1354 0018 00000000 		.4byte	.LFB67
- 1355 001c 0C000000 		.4byte	.LFE67-.LFB67
- 1356 0020 00000000 		.4byte	.LFB63
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 27
+ 1223      66657200 
+ 1224              	.LASF24:
+ 1225 003b 69734675 		.ascii	"isFull\000"
+ 1225      6C6C00
+ 1226              	.LASF13:
+ 1227 0042 666C6F61 		.ascii	"float\000"
+ 1227      7400
+ 1228              	.LASF30:
+ 1229 0048 63697263 		.ascii	"circ_ptr\000"
+ 1229      5F707472 
+ 1229      00
+ 1230              	.LASF23:
+ 1231 0051 70757368 		.ascii	"push\000"
+ 1231      00
+ 1232              	.LASF1:
+ 1233 0056 756E7369 		.ascii	"unsigned char\000"
+ 1233      676E6564 
+ 1233      20636861 
+ 1233      7200
+ 1234              	.LASF35:
+ 1235 0064 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1235      43313120 
+ 1235      352E342E 
+ 1235      31203230 
+ 1235      31363036 
+ 1236 0097 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1236      20726576 
+ 1236      6973696F 
+ 1236      6E203233 
+ 1236      37373135 
+ 1237 00ca 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1237      66756E63 
+ 1237      74696F6E 
+ 1237      2D736563 
+ 1237      74696F6E 
+ 1238              	.LASF19:
+ 1239 00f2 70617261 		.ascii	"param\000"
+ 1239      6D00
+ 1240              	.LASF3:
+ 1241 00f8 73686F72 		.ascii	"short unsigned int\000"
+ 1241      7420756E 
+ 1241      7369676E 
+ 1241      65642069 
+ 1241      6E7400
+ 1242              	.LASF27:
+ 1243 010b 66726F6E 		.ascii	"front\000"
+ 1243      7400
+ 1244              	.LASF38:
+ 1245 0111 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1245      52784275 
+ 1245      66666572 
+ 1245      00
+ 1246              	.LASF20:
+ 1247 011e 71756575 		.ascii	"queueElement\000"
+ 1247      65456C65 
+ 1247      6D656E74 
+ 1247      00
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccQluXJ0.s 			page 25
 
 
- 1357 0024 30000000 		.4byte	.LFE63-.LFB63
- 1358 0028 00000000 		.4byte	.LFB65
- 1359 002c 60000000 		.4byte	.LFE65-.LFB65
- 1360 0030 00000000 		.4byte	.LFB66
- 1361 0034 50000000 		.4byte	.LFE66-.LFB66
- 1362 0038 00000000 		.4byte	.LFB68
- 1363 003c 54000000 		.4byte	.LFE68-.LFB68
- 1364 0040 00000000 		.4byte	0
- 1365 0044 00000000 		.4byte	0
- 1366              		.section	.debug_ranges,"",%progbits
- 1367              	.Ldebug_ranges0:
- 1368 0000 00000000 		.4byte	.LFB64
- 1369 0004 12000000 		.4byte	.LFE64
- 1370 0008 00000000 		.4byte	.LFB67
- 1371 000c 0C000000 		.4byte	.LFE67
- 1372 0010 00000000 		.4byte	.LFB63
- 1373 0014 30000000 		.4byte	.LFE63
- 1374 0018 00000000 		.4byte	.LFB65
- 1375 001c 60000000 		.4byte	.LFE65
- 1376 0020 00000000 		.4byte	.LFB66
- 1377 0024 50000000 		.4byte	.LFE66
- 1378 0028 00000000 		.4byte	.LFB68
- 1379 002c 54000000 		.4byte	.LFE68
- 1380 0030 00000000 		.4byte	0
- 1381 0034 00000000 		.4byte	0
- 1382              		.section	.debug_line,"",%progbits
- 1383              	.Ldebug_line0:
- 1384 0000 FE010000 		.section	.debug_str,"MS",%progbits,1
- 1384      02007601 
- 1384      00000201 
- 1384      FB0E0D00 
- 1384      01010101 
- 1385              	.LASF29:
- 1386 0000 6D61784C 		.ascii	"maxLength\000"
- 1386      656E6774 
- 1386      6800
- 1387              	.LASF33:
- 1388 000a 51496861 		.ascii	"QIhandle\000"
- 1388      6E646C65 
- 1388      00
- 1389              	.LASF9:
- 1390 0013 5F5F696E 		.ascii	"__int32_t\000"
- 1390      7433325F 
- 1390      7400
- 1391              	.LASF14:
- 1392 001d 646F7562 		.ascii	"double\000"
- 1392      6C6500
- 1393              	.LASF11:
- 1394 0024 75696E74 		.ascii	"uint8\000"
- 1394      3800
- 1395              	.LASF28:
- 1396 002a 72656172 		.ascii	"rear\000"
- 1396      00
- 1397              	.LASF26:
- 1398 002f 636C6561 		.ascii	"clearBuffer\000"
- 1398      72427566 
- 1398      66657200 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 28
+ 1248              	.LASF5:
+ 1249 012b 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1249      20756E73 
+ 1249      69676E65 
+ 1249      6420696E 
+ 1249      7400
+ 1250              	.LASF12:
+ 1251 013d 696E7438 		.ascii	"int8\000"
+ 1251      00
+ 1252              	.LASF8:
+ 1253 0142 756E7369 		.ascii	"unsigned int\000"
+ 1253      676E6564 
+ 1253      20696E74 
+ 1253      00
+ 1254              	.LASF21:
+ 1255 014f 43697263 		.ascii	"CircBuf\000"
+ 1255      42756600 
+ 1256              	.LASF7:
+ 1257 0157 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1257      206C6F6E 
+ 1257      6720756E 
+ 1257      7369676E 
+ 1257      65642069 
+ 1258              	.LASF37:
+ 1259 016e 443A5C4F 		.ascii	"D:\\OneDrive - Aarhus Universitet\\Aarhus Universit"
+ 1259      6E654472 
+ 1259      69766520 
+ 1259      2D204161 
+ 1259      72687573 
+ 1260 019f 65745C45 		.ascii	"et\\E3\\E3PRJ\\I3E3PRJ_Repo\\PSoCcontroller\\PSoCco"
+ 1260      335C4533 
+ 1260      50524A5C 
+ 1260      49334533 
+ 1260      50524A5F 
+ 1261 01cd 6E74726F 		.ascii	"ntroller.cydsn\000"
+ 1261      6C6C6572 
+ 1261      2E637964 
+ 1261      736E00
+ 1262              	.LASF36:
+ 1263 01dc 43697263 		.ascii	"CircularBuffer.c\000"
+ 1263      756C6172 
+ 1263      42756666 
+ 1263      65722E63 
+ 1263      00
+ 1264              	.LASF10:
+ 1265 01ed 696E7433 		.ascii	"int32_t\000"
+ 1265      325F7400 
+ 1266              	.LASF17:
+ 1267 01f5 73697A65 		.ascii	"sizetype\000"
+ 1267      74797065 
+ 1267      00
+ 1268              	.LASF31:
+ 1269 01fe 6E657746 		.ascii	"newFuncPtr\000"
+ 1269      756E6350 
+ 1269      747200
+ 1270              	.LASF6:
+ 1271 0209 6C6F6E67 		.ascii	"long long int\000"
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccQluXJ0.s 			page 26
 
 
- 1399              	.LASF24:
- 1400 003b 69734675 		.ascii	"isFull\000"
- 1400      6C6C00
- 1401              	.LASF13:
- 1402 0042 666C6F61 		.ascii	"float\000"
- 1402      7400
- 1403              	.LASF30:
- 1404 0048 63697263 		.ascii	"circ_ptr\000"
- 1404      5F707472 
- 1404      00
- 1405              	.LASF23:
- 1406 0051 70757368 		.ascii	"push\000"
- 1406      00
- 1407              	.LASF1:
- 1408 0056 756E7369 		.ascii	"unsigned char\000"
- 1408      676E6564 
- 1408      20636861 
- 1408      7200
- 1409              	.LASF35:
- 1410 0064 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1410      43313120 
- 1410      352E342E 
- 1410      31203230 
- 1410      31363036 
- 1411 0097 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 1411      20726576 
- 1411      6973696F 
- 1411      6E203233 
- 1411      37373135 
- 1412 00ca 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1412      66756E63 
- 1412      74696F6E 
- 1412      2D736563 
- 1412      74696F6E 
- 1413              	.LASF19:
- 1414 00f2 70617261 		.ascii	"param\000"
- 1414      6D00
- 1415              	.LASF3:
- 1416 00f8 73686F72 		.ascii	"short unsigned int\000"
- 1416      7420756E 
- 1416      7369676E 
- 1416      65642069 
- 1416      6E7400
- 1417              	.LASF27:
- 1418 010b 66726F6E 		.ascii	"front\000"
- 1418      7400
- 1419              	.LASF38:
- 1420 0111 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 1420      52784275 
- 1420      66666572 
- 1420      00
- 1421              	.LASF20:
- 1422 011e 71756575 		.ascii	"queueElement\000"
- 1422      65456C65 
- 1422      6D656E74 
- 1422      00
- 1423              	.LASF5:
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 29
-
-
- 1424 012b 6C6F6E67 		.ascii	"long unsigned int\000"
- 1424      20756E73 
- 1424      69676E65 
- 1424      6420696E 
- 1424      7400
- 1425              	.LASF12:
- 1426 013d 696E7438 		.ascii	"int8\000"
- 1426      00
- 1427              	.LASF8:
- 1428 0142 756E7369 		.ascii	"unsigned int\000"
- 1428      676E6564 
- 1428      20696E74 
- 1428      00
- 1429              	.LASF21:
- 1430 014f 43697263 		.ascii	"CircBuf\000"
- 1430      42756600 
- 1431              	.LASF7:
- 1432 0157 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1432      206C6F6E 
- 1432      6720756E 
- 1432      7369676E 
- 1432      65642069 
- 1433              	.LASF37:
- 1434 016e 443A5C4F 		.ascii	"D:\\OneDrive - Aarhus Universitet\\Aarhus Universit"
- 1434      6E654472 
- 1434      69766520 
- 1434      2D204161 
- 1434      72687573 
- 1435 019f 65745C45 		.ascii	"et\\E3\\E3PRJ\\I3E3PRJ_Repo\\PSoCcontroller\\PSoCco"
- 1435      335C4533 
- 1435      50524A5C 
- 1435      49334533 
- 1435      50524A5F 
- 1436 01cd 6E74726F 		.ascii	"ntroller.cydsn\000"
- 1436      6C6C6572 
- 1436      2E637964 
- 1436      736E00
- 1437              	.LASF36:
- 1438 01dc 43697263 		.ascii	"CircularBuffer.c\000"
- 1438      756C6172 
- 1438      42756666 
- 1438      65722E63 
- 1438      00
- 1439              	.LASF10:
- 1440 01ed 696E7433 		.ascii	"int32_t\000"
- 1440      325F7400 
- 1441              	.LASF17:
- 1442 01f5 73697A65 		.ascii	"sizetype\000"
- 1442      74797065 
- 1442      00
- 1443              	.LASF31:
- 1444 01fe 6E657746 		.ascii	"newFuncPtr\000"
- 1444      756E6350 
- 1444      747200
- 1445              	.LASF6:
- 1446 0209 6C6F6E67 		.ascii	"long long int\000"
- 1446      206C6F6E 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccBNyjE1.s 			page 30
-
-
- 1446      6720696E 
- 1446      7400
- 1447              	.LASF15:
- 1448 0217 63686172 		.ascii	"char\000"
- 1448      00
- 1449              	.LASF25:
- 1450 021c 6973456D 		.ascii	"isEmpty\000"
- 1450      70747900 
- 1451              	.LASF2:
- 1452 0224 73686F72 		.ascii	"short int\000"
- 1452      7420696E 
- 1452      7400
- 1453              	.LASF18:
- 1454 022e 66756E63 		.ascii	"funcPtr\000"
- 1454      50747200 
- 1455              	.LASF22:
- 1456 0236 71756575 		.ascii	"queueItem\000"
- 1456      65497465 
- 1456      6D00
- 1457              	.LASF4:
- 1458 0240 6C6F6E67 		.ascii	"long int\000"
- 1458      20696E74 
- 1458      00
- 1459              	.LASF16:
- 1460 0249 6C6F6E67 		.ascii	"long double\000"
- 1460      20646F75 
- 1460      626C6500 
- 1461              	.LASF34:
- 1462 0255 696E6974 		.ascii	"initCircbuf\000"
- 1462      43697263 
- 1462      62756600 
- 1463              	.LASF0:
- 1464 0261 7369676E 		.ascii	"signed char\000"
- 1464      65642063 
- 1464      68617200 
- 1465              	.LASF32:
- 1466 026d 6E657750 		.ascii	"newParam\000"
- 1466      6172616D 
- 1466      00
- 1467              	.LASF39:
- 1468 0276 55415254 		.ascii	"UART_1_PutString\000"
- 1468      5F315F50 
- 1468      75745374 
- 1468      72696E67 
- 1468      00
- 1469              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1271      206C6F6E 
+ 1271      6720696E 
+ 1271      7400
+ 1272              	.LASF15:
+ 1273 0217 63686172 		.ascii	"char\000"
+ 1273      00
+ 1274              	.LASF25:
+ 1275 021c 6973456D 		.ascii	"isEmpty\000"
+ 1275      70747900 
+ 1276              	.LASF2:
+ 1277 0224 73686F72 		.ascii	"short int\000"
+ 1277      7420696E 
+ 1277      7400
+ 1278              	.LASF18:
+ 1279 022e 66756E63 		.ascii	"funcPtr\000"
+ 1279      50747200 
+ 1280              	.LASF22:
+ 1281 0236 71756575 		.ascii	"queueItem\000"
+ 1281      65497465 
+ 1281      6D00
+ 1282              	.LASF4:
+ 1283 0240 6C6F6E67 		.ascii	"long int\000"
+ 1283      20696E74 
+ 1283      00
+ 1284              	.LASF16:
+ 1285 0249 6C6F6E67 		.ascii	"long double\000"
+ 1285      20646F75 
+ 1285      626C6500 
+ 1286              	.LASF34:
+ 1287 0255 696E6974 		.ascii	"initCircbuf\000"
+ 1287      43697263 
+ 1287      62756600 
+ 1288              	.LASF0:
+ 1289 0261 7369676E 		.ascii	"signed char\000"
+ 1289      65642063 
+ 1289      68617200 
+ 1290              	.LASF32:
+ 1291 026d 6E657750 		.ascii	"newParam\000"
+ 1291      6172616D 
+ 1291      00
+ 1292              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

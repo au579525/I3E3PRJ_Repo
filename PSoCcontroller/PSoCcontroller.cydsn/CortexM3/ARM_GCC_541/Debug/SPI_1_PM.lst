@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 1
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccq2dHYb.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 1
   28:Generated_Source\PSoC5/SPI_1_PM.c **** * Function Name: SPI_1_SaveConfig
   29:Generated_Source\PSoC5/SPI_1_PM.c **** ********************************************************************************
   30:Generated_Source\PSoC5/SPI_1_PM.c **** *
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 2
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccq2dHYb.s 			page 2
 
 
   31:Generated_Source\PSoC5/SPI_1_PM.c **** * Summary:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 1
   50 0000 7047     		bx	lr
   51              		.cfi_endproc
   52              	.LFE1:
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 3
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccq2dHYb.s 			page 3
 
 
   53              		.size	SPI_1_RestoreConfig, .-SPI_1_RestoreConfig
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 1
   77 000c 0122     		movs	r2, #1
   78 000e 054B     		ldr	r3, .L7+4
   79 0010 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 4
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccq2dHYb.s 			page 4
 
 
   80 0012 02E0     		b	.L5
@@ -202,7 +202,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 1
   91              	.L8:
   92              		.align	2
   93              	.L7:
-  94 0020 96640040 		.word	1073767574
+  94 0020 98650040 		.word	1073767832
   95 0024 00000000 		.word	.LANCHOR0
   96              		.cfi_endproc
   97              	.LFE2:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 1
  120:Generated_Source\PSoC5/SPI_1_PM.c **** *  zero.
  121:Generated_Source\PSoC5/SPI_1_PM.c **** *  SPI_1_txBufferRead - modified every function call - resets to
  122:Generated_Source\PSoC5/SPI_1_PM.c **** *  zero.
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 5
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccq2dHYb.s 			page 5
 
 
  123:Generated_Source\PSoC5/SPI_1_PM.c **** *  SPI_1_rxBufferWrite - modified every function call - resets to
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 1
  131              		.cfi_endproc
  132              	.LFE3:
  133              		.size	SPI_1_Wakeup, .-SPI_1_Wakeup
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 6
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccq2dHYb.s 			page 6
 
 
  134              		.data
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 1
  188 0056 02       		.uleb128 0x2
  189 0057 08       		.byte	0x8
  190 0058 07       		.byte	0x7
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 7
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccq2dHYb.s 			page 7
 
 
  191 0059 5A010000 		.4byte	.LASF7
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 1
  245 00c4 03       		.byte	0x3
  246 00c5 3C       		.byte	0x3c
  247 00c6 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 8
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccq2dHYb.s 			page 8
 
 
  248 00ca 01       		.byte	0x1
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 1
  302 0145 01       		.byte	0x1
  303 0146 14       		.byte	0x14
  304 0147 CC000000 		.4byte	0xcc
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 9
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccq2dHYb.s 			page 9
 
 
  305 014b 05       		.uleb128 0x5
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 1
  359 0021 0B       		.uleb128 0xb
  360 0022 0B       		.uleb128 0xb
  361 0023 3E       		.uleb128 0x3e
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 10
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccq2dHYb.s 			page 10
 
 
  362 0024 0B       		.uleb128 0xb
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 1
  416 005a 16       		.uleb128 0x16
  417 005b 00       		.byte	0
  418 005c 03       		.uleb128 0x3
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 11
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccq2dHYb.s 			page 11
 
 
  419 005d 0E       		.uleb128 0xe
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 1
  473 0095 13       		.uleb128 0x13
  474 0096 00       		.byte	0
  475 0097 00       		.byte	0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 12
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccq2dHYb.s 			page 12
 
 
  476 0098 0B       		.uleb128 0xb
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 1
  530 0020 00000000 		.4byte	.LFB2
  531 0024 28000000 		.4byte	.LFE2-.LFB2
  532 0028 00000000 		.4byte	.LFB3
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 13
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccq2dHYb.s 			page 13
 
 
  533 002c 18000000 		.4byte	.LFE3-.LFB3
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 1
  564      31203230 
  564      31363036 
  565 0082 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 14
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccq2dHYb.s 			page 14
 
 
  565      20726576 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 1
  586      7369676E 
  586      65642069 
  587              	.LASF23:
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 15
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccq2dHYb.s 			page 15
 
 
  588 0171 5350495F 		.ascii	"SPI_1_Stop\000"
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 1
  609              	.LASF14:
  610 024a 6C6F6E67 		.ascii	"long double\000"
  610      20646F75 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccohq4Ek.s 			page 16
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccq2dHYb.s 			page 16
 
 
  610      626C6500 

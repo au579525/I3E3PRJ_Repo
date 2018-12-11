@@ -1,0 +1,1806 @@
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"SonarDriver.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.Sonar_Start,"ax",%progbits
+  20              		.align	2
+  21              		.global	Sonar_Start
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	Sonar_Start, %function
+  25              	Sonar_Start:
+  26              	.LFB64:
+  27              		.file 1 "SonarDriver.c"
+   1:SonarDriver.c **** #include "SonarDriver.h"
+   2:SonarDriver.c **** 
+   3:SonarDriver.c **** void Sonar_Start(){
+  28              		.loc 1 3 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 08B5     		push	{r3, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+   4:SonarDriver.c ****     Trigger_1_Write(0);
+  36              		.loc 1 4 0
+  37 0002 0020     		movs	r0, #0
+  38 0004 FFF7FEFF 		bl	Trigger_1_Write
+  39              	.LVL0:
+   5:SonarDriver.c ****     Trigger_2_Write(0);
+  40              		.loc 1 5 0
+  41 0008 0020     		movs	r0, #0
+  42 000a FFF7FEFF 		bl	Trigger_2_Write
+  43              	.LVL1:
+   6:SonarDriver.c ****     sonarTimerDone = 0;
+  44              		.loc 1 6 0
+  45 000e 0022     		movs	r2, #0
+  46 0010 024B     		ldr	r3, .L3
+  47 0012 1A70     		strb	r2, [r3]
+   7:SonarDriver.c ****     Timer_Sonar_Start();
+  48              		.loc 1 7 0
+  49 0014 FFF7FEFF 		bl	Timer_Sonar_Start
+  50              	.LVL2:
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 2
+
+
+  51 0018 08BD     		pop	{r3, pc}
+  52              	.L4:
+  53 001a 00BF     		.align	2
+  54              	.L3:
+  55 001c 00000000 		.word	sonarTimerDone
+  56              		.cfi_endproc
+  57              	.LFE64:
+  58              		.size	Sonar_Start, .-Sonar_Start
+  59              		.global	__aeabi_ui2d
+  60              		.global	__aeabi_dsub
+  61              		.global	__aeabi_ddiv
+  62              		.global	__aeabi_dcmplt
+  63              		.global	__aeabi_dcmpgt
+  64              		.global	__aeabi_dcmpeq
+  65              		.global	__aeabi_dadd
+  66              		.global	__aeabi_dmul
+  67              		.section	.text.Sonar_GetPosition,"ax",%progbits
+  68              		.align	2
+  69              		.global	Sonar_GetPosition
+  70              		.thumb
+  71              		.thumb_func
+  72              		.type	Sonar_GetPosition, %function
+  73              	Sonar_GetPosition:
+  74              	.LFB65:
+   8:SonarDriver.c **** }
+   9:SonarDriver.c **** 
+  10:SonarDriver.c **** struct position Sonar_GetPosition(){
+  75              		.loc 1 10 0
+  76              		.cfi_startproc
+  77              		@ args = 0, pretend = 0, frame = 16
+  78              		@ frame_needed = 0, uses_anonymous_args = 0
+  79              	.LVL3:
+  80 0000 2DE97043 		push	{r4, r5, r6, r8, r9, lr}
+  81              		.cfi_def_cfa_offset 24
+  82              		.cfi_offset 4, -24
+  83              		.cfi_offset 5, -20
+  84              		.cfi_offset 6, -16
+  85              		.cfi_offset 8, -12
+  86              		.cfi_offset 9, -8
+  87              		.cfi_offset 14, -4
+  88 0004 84B0     		sub	sp, sp, #16
+  89              		.cfi_def_cfa_offset 40
+  90 0006 0646     		mov	r6, r0
+  11:SonarDriver.c ****         Trigger_1_Write(1);
+  91              		.loc 1 11 0
+  92 0008 0120     		movs	r0, #1
+  93              	.LVL4:
+  94 000a FFF7FEFF 		bl	Trigger_1_Write
+  95              	.LVL5:
+  12:SonarDriver.c ****         CyDelayUs(10);
+  96              		.loc 1 12 0
+  97 000e 0A20     		movs	r0, #10
+  98 0010 FFF7FEFF 		bl	CyDelayUs
+  99              	.LVL6:
+  13:SonarDriver.c ****         Trigger_1_Write(0);
+ 100              		.loc 1 13 0
+ 101 0014 0020     		movs	r0, #0
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 3
+
+
+ 102 0016 FFF7FEFF 		bl	Trigger_1_Write
+ 103              	.LVL7:
+ 104              	.L6:
+  14:SonarDriver.c ****         
+  15:SonarDriver.c ****         while(Echo_1_Read() != 1){}
+ 105              		.loc 1 15 0 discriminator 1
+ 106 001a FFF7FEFF 		bl	Echo_1_Read
+ 107              	.LVL8:
+ 108 001e 0128     		cmp	r0, #1
+ 109 0020 FBD1     		bne	.L6
+  16:SonarDriver.c ****        
+  17:SonarDriver.c ****         Timer_Sonar_WriteCounter(16777215);
+ 110              		.loc 1 17 0
+ 111 0022 6FF07F40 		mvn	r0, #-16777216
+ 112 0026 FFF7FEFF 		bl	Timer_Sonar_WriteCounter
+ 113              	.LVL9:
+ 114              	.L7:
+  18:SonarDriver.c ****         while(Echo_1_Read() == 1){}
+ 115              		.loc 1 18 0 discriminator 1
+ 116 002a FFF7FEFF 		bl	Echo_1_Read
+ 117              	.LVL10:
+ 118 002e 0128     		cmp	r0, #1
+ 119 0030 FBD0     		beq	.L7
+  19:SonarDriver.c ****         
+  20:SonarDriver.c ****         uint32_t timervaerdi = Timer_Sonar_ReadCounter();
+ 120              		.loc 1 20 0
+ 121 0032 FFF7FEFF 		bl	Timer_Sonar_ReadCounter
+ 122              	.LVL11:
+  21:SonarDriver.c ****     
+  22:SonarDriver.c ****         double time = ((double)16777215.0 - (double)timervaerdi)/(double)24.0;
+ 123              		.loc 1 22 0
+ 124 0036 FFF7FEFF 		bl	__aeabi_ui2d
+ 125              	.LVL12:
+ 126 003a 0246     		mov	r2, r0
+ 127 003c 0B46     		mov	r3, r1
+ 128 003e 4FF06040 		mov	r0, #-536870912
+ 129 0042 7449     		ldr	r1, .L33
+ 130 0044 FFF7FEFF 		bl	__aeabi_dsub
+ 131              	.LVL13:
+ 132 0048 0022     		movs	r2, #0
+ 133 004a 734B     		ldr	r3, .L33+4
+ 134 004c FFF7FEFF 		bl	__aeabi_ddiv
+ 135              	.LVL14:
+  23:SonarDriver.c ****         double distance_sonar_1 = time/58.0;
+ 136              		.loc 1 23 0
+ 137 0050 0022     		movs	r2, #0
+ 138 0052 724B     		ldr	r3, .L33+8
+ 139 0054 FFF7FEFF 		bl	__aeabi_ddiv
+ 140              	.LVL15:
+ 141 0058 0446     		mov	r4, r0
+ 142 005a 0D46     		mov	r5, r1
+ 143              	.LVL16:
+  24:SonarDriver.c ****          //double distance = (time * 340.0)/2; 
+  25:SonarDriver.c ****    
+  26:SonarDriver.c ****         UART_1_PutString("read 1 done \n\r");
+ 144              		.loc 1 26 0
+ 145 005c 7048     		ldr	r0, .L33+12
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 4
+
+
+ 146 005e FFF7FEFF 		bl	UART_1_PutString
+ 147              	.LVL17:
+  27:SonarDriver.c ****         //Delay between readings:
+  28:SonarDriver.c ****         CyDelay(60);
+ 148              		.loc 1 28 0
+ 149 0062 3C20     		movs	r0, #60
+ 150 0064 FFF7FEFF 		bl	CyDelay
+ 151              	.LVL18:
+  29:SonarDriver.c ****         
+  30:SonarDriver.c ****         //Sonar 2 reading:
+  31:SonarDriver.c ****         Trigger_2_Write(1);
+ 152              		.loc 1 31 0
+ 153 0068 0120     		movs	r0, #1
+ 154 006a FFF7FEFF 		bl	Trigger_2_Write
+ 155              	.LVL19:
+  32:SonarDriver.c ****         CyDelayUs(10);
+ 156              		.loc 1 32 0
+ 157 006e 0A20     		movs	r0, #10
+ 158 0070 FFF7FEFF 		bl	CyDelayUs
+ 159              	.LVL20:
+  33:SonarDriver.c ****         Trigger_2_Write(0);
+ 160              		.loc 1 33 0
+ 161 0074 0020     		movs	r0, #0
+ 162 0076 FFF7FEFF 		bl	Trigger_2_Write
+ 163              	.LVL21:
+ 164              	.L8:
+  34:SonarDriver.c ****         
+  35:SonarDriver.c ****         while(Echo_2_Read() != 1){}
+ 165              		.loc 1 35 0 discriminator 1
+ 166 007a FFF7FEFF 		bl	Echo_2_Read
+ 167              	.LVL22:
+ 168 007e 0128     		cmp	r0, #1
+ 169 0080 FBD1     		bne	.L8
+  36:SonarDriver.c ****         Timer_Sonar_WriteCounter(16777215);
+ 170              		.loc 1 36 0
+ 171 0082 6FF07F40 		mvn	r0, #-16777216
+ 172 0086 FFF7FEFF 		bl	Timer_Sonar_WriteCounter
+ 173              	.LVL23:
+ 174              	.L9:
+  37:SonarDriver.c ****         while(Echo_2_Read() == 1){}
+ 175              		.loc 1 37 0 discriminator 1
+ 176 008a FFF7FEFF 		bl	Echo_2_Read
+ 177              	.LVL24:
+ 178 008e 0128     		cmp	r0, #1
+ 179 0090 FBD0     		beq	.L9
+  38:SonarDriver.c ****         
+  39:SonarDriver.c ****         timervaerdi = Timer_Sonar_ReadCounter();
+ 180              		.loc 1 39 0
+ 181 0092 FFF7FEFF 		bl	Timer_Sonar_ReadCounter
+ 182              	.LVL25:
+  40:SonarDriver.c ****     
+  41:SonarDriver.c ****         double timeus = ((double)16777215.0 - (double)timervaerdi)/(double)24.0;
+ 183              		.loc 1 41 0
+ 184 0096 FFF7FEFF 		bl	__aeabi_ui2d
+ 185              	.LVL26:
+ 186 009a 0246     		mov	r2, r0
+ 187 009c 0B46     		mov	r3, r1
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 5
+
+
+ 188 009e 4FF06040 		mov	r0, #-536870912
+ 189 00a2 5C49     		ldr	r1, .L33
+ 190 00a4 FFF7FEFF 		bl	__aeabi_dsub
+ 191              	.LVL27:
+ 192 00a8 0022     		movs	r2, #0
+ 193 00aa 5B4B     		ldr	r3, .L33+4
+ 194 00ac FFF7FEFF 		bl	__aeabi_ddiv
+ 195              	.LVL28:
+  42:SonarDriver.c ****         double distance_sonar_2 = timeus/58.0;
+ 196              		.loc 1 42 0
+ 197 00b0 0022     		movs	r2, #0
+ 198 00b2 5A4B     		ldr	r3, .L33+8
+ 199 00b4 FFF7FEFF 		bl	__aeabi_ddiv
+ 200              	.LVL29:
+ 201 00b8 8046     		mov	r8, r0
+ 202 00ba 8946     		mov	r9, r1
+ 203              	.LVL30:
+  43:SonarDriver.c ****          //double distance = (time * 340.0)/2; 
+  44:SonarDriver.c ****         
+  45:SonarDriver.c ****         UART_1_PutString("read 2 done \n\r");
+ 204              		.loc 1 45 0
+ 205 00bc 5948     		ldr	r0, .L33+16
+ 206 00be FFF7FEFF 		bl	UART_1_PutString
+ 207              	.LVL31:
+  46:SonarDriver.c ****         if(distance_sonar_1 < 2.5 || distance_sonar_1 > 55){
+ 208              		.loc 1 46 0
+ 209 00c2 0022     		movs	r2, #0
+ 210 00c4 584B     		ldr	r3, .L33+20
+ 211 00c6 2046     		mov	r0, r4
+ 212 00c8 2946     		mov	r1, r5
+ 213 00ca FFF7FEFF 		bl	__aeabi_dcmplt
+ 214              	.LVL32:
+ 215 00ce 38B9     		cbnz	r0, .L22
+ 216              		.loc 1 46 0 is_stmt 0 discriminator 1
+ 217 00d0 0022     		movs	r2, #0
+ 218 00d2 564B     		ldr	r3, .L33+24
+ 219 00d4 2046     		mov	r0, r4
+ 220 00d6 2946     		mov	r1, r5
+ 221 00d8 FFF7FEFF 		bl	__aeabi_dcmpgt
+ 222              	.LVL33:
+ 223 00dc 18B9     		cbnz	r0, .L23
+ 224 00de 04E0     		b	.L10
+ 225              	.L22:
+  47:SonarDriver.c ****             //Pigeon not detected
+  48:SonarDriver.c ****             distance_sonar_1 = 0;
+ 226              		.loc 1 48 0 is_stmt 1
+ 227 00e0 0024     		movs	r4, #0
+ 228              	.LVL34:
+ 229 00e2 0025     		movs	r5, #0
+ 230 00e4 01E0     		b	.L10
+ 231              	.LVL35:
+ 232              	.L23:
+ 233 00e6 0024     		movs	r4, #0
+ 234              	.LVL36:
+ 235 00e8 0025     		movs	r5, #0
+ 236              	.L10:
+ 237              	.LVL37:
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 6
+
+
+  49:SonarDriver.c ****         }
+  50:SonarDriver.c ****             
+  51:SonarDriver.c ****         if(distance_sonar_2 < 2.5 || distance_sonar_2 > 55){
+ 238              		.loc 1 51 0
+ 239 00ea 0022     		movs	r2, #0
+ 240 00ec 4E4B     		ldr	r3, .L33+20
+ 241 00ee 4046     		mov	r0, r8
+ 242 00f0 4946     		mov	r1, r9
+ 243 00f2 FFF7FEFF 		bl	__aeabi_dcmplt
+ 244              	.LVL38:
+ 245 00f6 38B9     		cbnz	r0, .L24
+ 246              		.loc 1 51 0 is_stmt 0 discriminator 1
+ 247 00f8 0022     		movs	r2, #0
+ 248 00fa 4C4B     		ldr	r3, .L33+24
+ 249 00fc 4046     		mov	r0, r8
+ 250 00fe 4946     		mov	r1, r9
+ 251 0100 FFF7FEFF 		bl	__aeabi_dcmpgt
+ 252              	.LVL39:
+ 253 0104 28B9     		cbnz	r0, .L25
+ 254 0106 08E0     		b	.L11
+ 255              	.L24:
+  52:SonarDriver.c ****             //Pigeon not detected
+  53:SonarDriver.c ****             distance_sonar_2 = 0;
+ 256              		.loc 1 53 0 is_stmt 1
+ 257 0108 4FF00008 		mov	r8, #0
+ 258              	.LVL40:
+ 259 010c 4FF00009 		mov	r9, #0
+ 260 0110 03E0     		b	.L11
+ 261              	.LVL41:
+ 262              	.L25:
+ 263 0112 4FF00008 		mov	r8, #0
+ 264              	.LVL42:
+ 265 0116 4FF00009 		mov	r9, #0
+ 266              	.L11:
+ 267              	.LVL43:
+  54:SonarDriver.c ****         }
+  55:SonarDriver.c ****    
+  56:SonarDriver.c ****         if (distance_sonar_1 !=0 && distance_sonar_2 != 0){
+ 268              		.loc 1 56 0
+ 269 011a 0022     		movs	r2, #0
+ 270 011c 0023     		movs	r3, #0
+ 271 011e 2046     		mov	r0, r4
+ 272 0120 2946     		mov	r1, r5
+ 273 0122 FFF7FEFF 		bl	__aeabi_dcmpeq
+ 274              	.LVL44:
+ 275 0126 08BB     		cbnz	r0, .L12
+ 276              		.loc 1 56 0 is_stmt 0 discriminator 1
+ 277 0128 0022     		movs	r2, #0
+ 278 012a 0023     		movs	r3, #0
+ 279 012c 4046     		mov	r0, r8
+ 280 012e 4946     		mov	r1, r9
+ 281 0130 FFF7FEFF 		bl	__aeabi_dcmpeq
+ 282              	.LVL45:
+ 283 0134 D0B9     		cbnz	r0, .L12
+ 284              	.LVL46:
+ 285              	.LBB2:
+  57:SonarDriver.c ****                 
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 7
+
+
+  58:SonarDriver.c ****                 uint8_t width = 2; //Both Sonars detect pigeon, so assumed to be in position 2 of 3
+  59:SonarDriver.c ****                 //Average distance is calculated
+  60:SonarDriver.c ****                 double calculated_distance = ((distance_sonar_1+distance_sonar_2)/2)-5;
+ 286              		.loc 1 60 0 is_stmt 1
+ 287 0136 4246     		mov	r2, r8
+ 288 0138 4B46     		mov	r3, r9
+ 289 013a 2046     		mov	r0, r4
+ 290 013c 2946     		mov	r1, r5
+ 291 013e FFF7FEFF 		bl	__aeabi_dadd
+ 292              	.LVL47:
+ 293 0142 0022     		movs	r2, #0
+ 294 0144 3A4B     		ldr	r3, .L33+28
+ 295 0146 FFF7FEFF 		bl	__aeabi_dmul
+ 296              	.LVL48:
+ 297 014a 0022     		movs	r2, #0
+ 298 014c 394B     		ldr	r3, .L33+32
+ 299 014e FFF7FEFF 		bl	__aeabi_dsub
+ 300              	.LVL49:
+  61:SonarDriver.c ****                 
+  62:SonarDriver.c ****                 //Struct holding, pigeon detected positive, width, and distance.  
+  63:SonarDriver.c ****                 struct position p = {1,width,calculated_distance};
+ 301              		.loc 1 63 0
+ 302 0152 0123     		movs	r3, #1
+ 303 0154 8DF80030 		strb	r3, [sp]
+ 304 0158 0223     		movs	r3, #2
+ 305 015a 0193     		str	r3, [sp, #4]
+ 306 015c CDE90201 		strd	r0, [sp, #8]
+  64:SonarDriver.c ****                 return  p; 
+ 307              		.loc 1 64 0
+ 308 0160 04AB     		add	r3, sp, #16
+ 309 0162 13E90F00 		ldmdb	r3, {r0, r1, r2, r3}
+ 310              	.LVL50:
+ 311 0166 86E80F00 		stmia	r6, {r0, r1, r2, r3}
+ 312 016a 4EE0     		b	.L5
+ 313              	.LVL51:
+ 314              	.L12:
+ 315              	.LBE2:
+  65:SonarDriver.c ****             }
+  66:SonarDriver.c ****         else if(distance_sonar_1 !=0 && distance_sonar_2 == 0){
+ 316              		.loc 1 66 0
+ 317 016c 0022     		movs	r2, #0
+ 318 016e 0023     		movs	r3, #0
+ 319 0170 2046     		mov	r0, r4
+ 320 0172 2946     		mov	r1, r5
+ 321 0174 FFF7FEFF 		bl	__aeabi_dcmpeq
+ 322              	.LVL52:
+ 323 0178 C8B9     		cbnz	r0, .L16
+ 324              		.loc 1 66 0 is_stmt 0 discriminator 1
+ 325 017a 0022     		movs	r2, #0
+ 326 017c 0023     		movs	r3, #0
+ 327 017e 4046     		mov	r0, r8
+ 328 0180 4946     		mov	r1, r9
+ 329 0182 FFF7FEFF 		bl	__aeabi_dcmpeq
+ 330              	.LVL53:
+ 331 0186 90B1     		cbz	r0, .L16
+ 332              	.LVL54:
+ 333              	.LBB3:
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 8
+
+
+  67:SonarDriver.c ****                  uint8_t width = 3; //Only Sonar 1 detects pigeon, so assumed to be in position 3 o
+  68:SonarDriver.c ****                
+  69:SonarDriver.c ****                 
+  70:SonarDriver.c ****                 //Struct holding, pigeon detected positive, width, and distance.  
+  71:SonarDriver.c ****                 struct position p = {1,width,distance_sonar_1-5};
+ 334              		.loc 1 71 0 is_stmt 1
+ 335 0188 0123     		movs	r3, #1
+ 336 018a 8DF80030 		strb	r3, [sp]
+ 337 018e 0323     		movs	r3, #3
+ 338 0190 0193     		str	r3, [sp, #4]
+ 339 0192 0022     		movs	r2, #0
+ 340 0194 274B     		ldr	r3, .L33+32
+ 341 0196 2046     		mov	r0, r4
+ 342 0198 2946     		mov	r1, r5
+ 343 019a FFF7FEFF 		bl	__aeabi_dsub
+ 344              	.LVL55:
+ 345 019e CDE90201 		strd	r0, [sp, #8]
+  72:SonarDriver.c ****                 return  p;         
+ 346              		.loc 1 72 0
+ 347 01a2 04AB     		add	r3, sp, #16
+ 348 01a4 13E90F00 		ldmdb	r3, {r0, r1, r2, r3}
+ 349 01a8 86E80F00 		stmia	r6, {r0, r1, r2, r3}
+ 350 01ac 2DE0     		b	.L5
+ 351              	.LVL56:
+ 352              	.L16:
+ 353              	.LBE3:
+  73:SonarDriver.c ****         }
+  74:SonarDriver.c ****          else if(distance_sonar_1 ==0 && distance_sonar_2 != 0){
+ 354              		.loc 1 74 0
+ 355 01ae 0022     		movs	r2, #0
+ 356 01b0 0023     		movs	r3, #0
+ 357 01b2 2046     		mov	r0, r4
+ 358 01b4 2946     		mov	r1, r5
+ 359 01b6 FFF7FEFF 		bl	__aeabi_dcmpeq
+ 360              	.LVL57:
+ 361 01ba C8B1     		cbz	r0, .L19
+ 362              		.loc 1 74 0 is_stmt 0 discriminator 1
+ 363 01bc 0022     		movs	r2, #0
+ 364 01be 0023     		movs	r3, #0
+ 365 01c0 4046     		mov	r0, r8
+ 366 01c2 4946     		mov	r1, r9
+ 367 01c4 FFF7FEFF 		bl	__aeabi_dcmpeq
+ 368              	.LVL58:
+ 369 01c8 90B9     		cbnz	r0, .L19
+ 370              	.LVL59:
+ 371              	.LBB4:
+  75:SonarDriver.c ****                  uint8_t width = 1; //Only Sonar 1 detects pigeon, so assumed to be in position 1 o
+  76:SonarDriver.c ****                
+  77:SonarDriver.c ****                 //Struct holding, pigeon detected positive, width, and distance.  
+  78:SonarDriver.c ****                 struct position p = {1,width,distance_sonar_2-2};
+ 372              		.loc 1 78 0 is_stmt 1
+ 373 01ca 0123     		movs	r3, #1
+ 374 01cc 8DF80030 		strb	r3, [sp]
+ 375 01d0 0193     		str	r3, [sp, #4]
+ 376 01d2 0022     		movs	r2, #0
+ 377 01d4 4FF08043 		mov	r3, #1073741824
+ 378 01d8 4046     		mov	r0, r8
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 9
+
+
+ 379 01da 4946     		mov	r1, r9
+ 380 01dc FFF7FEFF 		bl	__aeabi_dsub
+ 381              	.LVL60:
+ 382 01e0 CDE90201 		strd	r0, [sp, #8]
+  79:SonarDriver.c ****                 return  p;         
+ 383              		.loc 1 79 0
+ 384 01e4 04AB     		add	r3, sp, #16
+ 385 01e6 13E90F00 		ldmdb	r3, {r0, r1, r2, r3}
+ 386 01ea 86E80F00 		stmia	r6, {r0, r1, r2, r3}
+ 387 01ee 0CE0     		b	.L5
+ 388              	.LVL61:
+ 389              	.L19:
+ 390              	.LBE4:
+ 391              	.LBB5:
+  80:SonarDriver.c ****         }
+  81:SonarDriver.c ****         else {
+  82:SonarDriver.c ****             //Pigeon Not detected. An empty struct is returned
+  83:SonarDriver.c ****             
+  84:SonarDriver.c ****                 //Struct holding, pigeon detected positive, width, and distance.  
+  85:SonarDriver.c ****                 struct position p = {0,0,0};
+ 392              		.loc 1 85 0
+ 393 01f0 0023     		movs	r3, #0
+ 394 01f2 8DF80030 		strb	r3, [sp]
+ 395 01f6 0193     		str	r3, [sp, #4]
+ 396 01f8 0022     		movs	r2, #0
+ 397 01fa 0023     		movs	r3, #0
+ 398 01fc CDE90223 		strd	r2, [sp, #8]
+  86:SonarDriver.c ****                 return  p;   
+ 399              		.loc 1 86 0
+ 400 0200 04AB     		add	r3, sp, #16
+ 401 0202 13E90F00 		ldmdb	r3, {r0, r1, r2, r3}
+ 402 0206 86E80F00 		stmia	r6, {r0, r1, r2, r3}
+ 403              	.L5:
+ 404              	.LBE5:
+  87:SonarDriver.c ****         }
+  88:SonarDriver.c ****     
+  89:SonarDriver.c **** }
+ 405              		.loc 1 89 0
+ 406 020a 3046     		mov	r0, r6
+ 407 020c 04B0     		add	sp, sp, #16
+ 408              		.cfi_def_cfa_offset 24
+ 409              		@ sp needed
+ 410 020e BDE87083 		pop	{r4, r5, r6, r8, r9, pc}
+ 411              	.LVL62:
+ 412              	.L34:
+ 413 0212 00BF     		.align	2
+ 414              	.L33:
+ 415 0214 FFFF6F41 		.word	1097859071
+ 416 0218 00003840 		.word	1077411840
+ 417 021c 00004D40 		.word	1078788096
+ 418 0220 00000000 		.word	.LC0
+ 419 0224 10000000 		.word	.LC1
+ 420 0228 00000440 		.word	1074003968
+ 421 022c 00804B40 		.word	1078689792
+ 422 0230 0000E03F 		.word	1071644672
+ 423 0234 00001440 		.word	1075052544
+ 424              		.cfi_endproc
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 10
+
+
+ 425              	.LFE65:
+ 426              		.size	Sonar_GetPosition, .-Sonar_GetPosition
+ 427              		.comm	sonarTimerDone,1,1
+ 428              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 429              		.align	2
+ 430              	.LC0:
+ 431 0000 72656164 		.ascii	"read 1 done \012\015\000"
+ 431      20312064 
+ 431      6F6E6520 
+ 431      0A0D00
+ 432 000f 00       		.space	1
+ 433              	.LC1:
+ 434 0010 72656164 		.ascii	"read 2 done \012\015\000"
+ 434      20322064 
+ 434      6F6E6520 
+ 434      0A0D00
+ 435              		.text
+ 436              	.Letext0:
+ 437              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 438              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 439              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 440              		.file 5 "SonarDriver.h"
+ 441              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
+ 442              		.file 7 "Generated_Source\\PSoC5/Trigger_1.h"
+ 443              		.file 8 "Generated_Source\\PSoC5/Trigger_2.h"
+ 444              		.file 9 "Generated_Source\\PSoC5/Timer_Sonar.h"
+ 445              		.file 10 "Generated_Source\\PSoC5/CyLib.h"
+ 446              		.file 11 "Generated_Source\\PSoC5/Echo_1.h"
+ 447              		.file 12 "Generated_Source\\PSoC5/UART_1.h"
+ 448              		.file 13 "Generated_Source\\PSoC5/Echo_2.h"
+ 449              		.section	.debug_info,"",%progbits
+ 450              	.Ldebug_info0:
+ 451 0000 FC030000 		.4byte	0x3fc
+ 452 0004 0400     		.2byte	0x4
+ 453 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 454 000a 04       		.byte	0x4
+ 455 000b 01       		.uleb128 0x1
+ 456 000c 75000000 		.4byte	.LASF42
+ 457 0010 0C       		.byte	0xc
+ 458 0011 F5020000 		.4byte	.LASF43
+ 459 0015 1A020000 		.4byte	.LASF44
+ 460 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 461 001d 00000000 		.4byte	0
+ 462 0021 00000000 		.4byte	.Ldebug_line0
+ 463 0025 02       		.uleb128 0x2
+ 464 0026 01       		.byte	0x1
+ 465 0027 06       		.byte	0x6
+ 466 0028 03030000 		.4byte	.LASF0
+ 467 002c 03       		.uleb128 0x3
+ 468 002d 14000000 		.4byte	.LASF4
+ 469 0031 02       		.byte	0x2
+ 470 0032 1D       		.byte	0x1d
+ 471 0033 37000000 		.4byte	0x37
+ 472 0037 02       		.uleb128 0x2
+ 473 0038 01       		.byte	0x1
+ 474 0039 08       		.byte	0x8
+ 475 003a 67000000 		.4byte	.LASF1
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 11
+
+
+ 476 003e 02       		.uleb128 0x2
+ 477 003f 02       		.byte	0x2
+ 478 0040 05       		.byte	0x5
+ 479 0041 D0020000 		.4byte	.LASF2
+ 480 0045 02       		.uleb128 0x2
+ 481 0046 02       		.byte	0x2
+ 482 0047 07       		.byte	0x7
+ 483 0048 27010000 		.4byte	.LASF3
+ 484 004c 03       		.uleb128 0x3
+ 485 004d 2A000000 		.4byte	.LASF5
+ 486 0051 02       		.byte	0x2
+ 487 0052 3F       		.byte	0x3f
+ 488 0053 57000000 		.4byte	0x57
+ 489 0057 02       		.uleb128 0x2
+ 490 0058 04       		.byte	0x4
+ 491 0059 05       		.byte	0x5
+ 492 005a 40000000 		.4byte	.LASF6
+ 493 005e 03       		.uleb128 0x3
+ 494 005f B1010000 		.4byte	.LASF7
+ 495 0063 02       		.byte	0x2
+ 496 0064 41       		.byte	0x41
+ 497 0065 69000000 		.4byte	0x69
+ 498 0069 02       		.uleb128 0x2
+ 499 006a 04       		.byte	0x4
+ 500 006b 07       		.byte	0x7
+ 501 006c 15010000 		.4byte	.LASF8
+ 502 0070 02       		.uleb128 0x2
+ 503 0071 08       		.byte	0x8
+ 504 0072 05       		.byte	0x5
+ 505 0073 B7020000 		.4byte	.LASF9
+ 506 0077 02       		.uleb128 0x2
+ 507 0078 08       		.byte	0x8
+ 508 0079 07       		.byte	0x7
+ 509 007a FB010000 		.4byte	.LASF10
+ 510 007e 04       		.uleb128 0x4
+ 511 007f 04       		.byte	0x4
+ 512 0080 05       		.byte	0x5
+ 513 0081 696E7400 		.ascii	"int\000"
+ 514 0085 02       		.uleb128 0x2
+ 515 0086 04       		.byte	0x4
+ 516 0087 07       		.byte	0x7
+ 517 0088 DE010000 		.4byte	.LASF11
+ 518 008c 02       		.uleb128 0x2
+ 519 008d 08       		.byte	0x8
+ 520 008e 04       		.byte	0x4
+ 521 008f 99020000 		.4byte	.LASF12
+ 522 0093 02       		.uleb128 0x2
+ 523 0094 04       		.byte	0x4
+ 524 0095 07       		.byte	0x7
+ 525 0096 A5020000 		.4byte	.LASF13
+ 526 009a 02       		.uleb128 0x2
+ 527 009b 01       		.byte	0x1
+ 528 009c 08       		.byte	0x8
+ 529 009d C5020000 		.4byte	.LASF14
+ 530 00a1 03       		.uleb128 0x3
+ 531 00a2 12020000 		.4byte	.LASF15
+ 532 00a6 03       		.byte	0x3
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 12
+
+
+ 533 00a7 18       		.byte	0x18
+ 534 00a8 2C000000 		.4byte	0x2c
+ 535 00ac 03       		.uleb128 0x3
+ 536 00ad 50000000 		.4byte	.LASF16
+ 537 00b1 03       		.byte	0x3
+ 538 00b2 2C       		.byte	0x2c
+ 539 00b3 4C000000 		.4byte	0x4c
+ 540 00b7 03       		.uleb128 0x3
+ 541 00b8 E0020000 		.4byte	.LASF17
+ 542 00bc 03       		.byte	0x3
+ 543 00bd 30       		.byte	0x30
+ 544 00be 5E000000 		.4byte	0x5e
+ 545 00c2 05       		.uleb128 0x5
+ 546 00c3 DA020000 		.4byte	.LASF18
+ 547 00c7 04       		.byte	0x4
+ 548 00c8 E401     		.2byte	0x1e4
+ 549 00ca 37000000 		.4byte	0x37
+ 550 00ce 02       		.uleb128 0x2
+ 551 00cf 04       		.byte	0x4
+ 552 00d0 04       		.byte	0x4
+ 553 00d1 61000000 		.4byte	.LASF19
+ 554 00d5 02       		.uleb128 0x2
+ 555 00d6 08       		.byte	0x8
+ 556 00d7 04       		.byte	0x4
+ 557 00d8 9A010000 		.4byte	.LASF20
+ 558 00dc 06       		.uleb128 0x6
+ 559 00dd C6010000 		.4byte	.LASF45
+ 560 00e1 10       		.byte	0x10
+ 561 00e2 05       		.byte	0x5
+ 562 00e3 15       		.byte	0x15
+ 563 00e4 0D010000 		.4byte	0x10d
+ 564 00e8 07       		.uleb128 0x7
+ 565 00e9 AE020000 		.4byte	.LASF21
+ 566 00ed 05       		.byte	0x5
+ 567 00ee 16       		.byte	0x16
+ 568 00ef A1000000 		.4byte	0xa1
+ 569 00f3 00       		.byte	0
+ 570 00f4 07       		.uleb128 0x7
+ 571 00f5 CA020000 		.4byte	.LASF22
+ 572 00f9 05       		.byte	0x5
+ 573 00fa 17       		.byte	0x17
+ 574 00fb 7E000000 		.4byte	0x7e
+ 575 00ff 04       		.byte	0x4
+ 576 0100 07       		.uleb128 0x7
+ 577 0101 58000000 		.4byte	.LASF23
+ 578 0105 05       		.byte	0x5
+ 579 0106 18       		.byte	0x18
+ 580 0107 D5000000 		.4byte	0xd5
+ 581 010b 08       		.byte	0x8
+ 582 010c 00       		.byte	0
+ 583 010d 08       		.uleb128 0x8
+ 584 010e 34000000 		.4byte	.LASF46
+ 585 0112 01       		.byte	0x1
+ 586 0113 03       		.byte	0x3
+ 587 0114 00000000 		.4byte	.LFB64
+ 588 0118 20000000 		.4byte	.LFE64-.LFB64
+ 589 011c 01       		.uleb128 0x1
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 13
+
+
+ 590 011d 9C       		.byte	0x9c
+ 591 011e 52010000 		.4byte	0x152
+ 592 0122 09       		.uleb128 0x9
+ 593 0123 08000000 		.4byte	.LVL0
+ 594 0127 91030000 		.4byte	0x391
+ 595 012b 35010000 		.4byte	0x135
+ 596 012f 0A       		.uleb128 0xa
+ 597 0130 01       		.uleb128 0x1
+ 598 0131 50       		.byte	0x50
+ 599 0132 01       		.uleb128 0x1
+ 600 0133 30       		.byte	0x30
+ 601 0134 00       		.byte	0
+ 602 0135 09       		.uleb128 0x9
+ 603 0136 0E000000 		.4byte	.LVL1
+ 604 013a 9C030000 		.4byte	0x39c
+ 605 013e 48010000 		.4byte	0x148
+ 606 0142 0A       		.uleb128 0xa
+ 607 0143 01       		.uleb128 0x1
+ 608 0144 50       		.byte	0x50
+ 609 0145 01       		.uleb128 0x1
+ 610 0146 30       		.byte	0x30
+ 611 0147 00       		.byte	0
+ 612 0148 0B       		.uleb128 0xb
+ 613 0149 18000000 		.4byte	.LVL2
+ 614 014d A7030000 		.4byte	0x3a7
+ 615 0151 00       		.byte	0
+ 616 0152 0C       		.uleb128 0xc
+ 617 0153 28030000 		.4byte	.LASF47
+ 618 0157 01       		.byte	0x1
+ 619 0158 0A       		.byte	0xa
+ 620 0159 DC000000 		.4byte	0xdc
+ 621 015d 00000000 		.4byte	.LFB65
+ 622 0161 38020000 		.4byte	.LFE65-.LFB65
+ 623 0165 01       		.uleb128 0x1
+ 624 0166 9C       		.byte	0x9c
+ 625 0167 6F030000 		.4byte	0x36f
+ 626 016b 0D       		.uleb128 0xd
+ 627 016c 88020000 		.4byte	.LASF24
+ 628 0170 01       		.byte	0x1
+ 629 0171 14       		.byte	0x14
+ 630 0172 B7000000 		.4byte	0xb7
+ 631 0176 00000000 		.4byte	.LLST0
+ 632 017a 0D       		.uleb128 0xd
+ 633 017b 94020000 		.4byte	.LASF25
+ 634 017f 01       		.byte	0x1
+ 635 0180 16       		.byte	0x16
+ 636 0181 D5000000 		.4byte	0xd5
+ 637 0185 1E000000 		.4byte	.LLST1
+ 638 0189 0D       		.uleb128 0xd
+ 639 018a 3A010000 		.4byte	.LASF26
+ 640 018e 01       		.byte	0x1
+ 641 018f 17       		.byte	0x17
+ 642 0190 D5000000 		.4byte	0xd5
+ 643 0194 36000000 		.4byte	.LLST2
+ 644 0198 0D       		.uleb128 0xd
+ 645 0199 49000000 		.4byte	.LASF27
+ 646 019d 01       		.byte	0x1
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 14
+
+
+ 647 019e 29       		.byte	0x29
+ 648 019f D5000000 		.4byte	0xd5
+ 649 01a3 6E000000 		.4byte	.LLST3
+ 650 01a7 0D       		.uleb128 0xd
+ 651 01a8 4B010000 		.4byte	.LASF28
+ 652 01ac 01       		.byte	0x1
+ 653 01ad 2A       		.byte	0x2a
+ 654 01ae D5000000 		.4byte	0xd5
+ 655 01b2 86000000 		.4byte	.LLST4
+ 656 01b6 0E       		.uleb128 0xe
+ 657 01b7 36010000 		.4byte	.LBB2
+ 658 01bb 36000000 		.4byte	.LBE2-.LBB2
+ 659 01bf EE010000 		.4byte	0x1ee
+ 660 01c3 0D       		.uleb128 0xd
+ 661 01c4 CA020000 		.4byte	.LASF22
+ 662 01c8 01       		.byte	0x1
+ 663 01c9 3A       		.byte	0x3a
+ 664 01ca A1000000 		.4byte	0xa1
+ 665 01ce BE000000 		.4byte	.LLST5
+ 666 01d2 0D       		.uleb128 0xd
+ 667 01d3 00000000 		.4byte	.LASF29
+ 668 01d7 01       		.byte	0x1
+ 669 01d8 3C       		.byte	0x3c
+ 670 01d9 D5000000 		.4byte	0xd5
+ 671 01dd D2000000 		.4byte	.LLST6
+ 672 01e1 0F       		.uleb128 0xf
+ 673 01e2 7000     		.ascii	"p\000"
+ 674 01e4 01       		.byte	0x1
+ 675 01e5 3F       		.byte	0x3f
+ 676 01e6 DC000000 		.4byte	0xdc
+ 677 01ea 02       		.uleb128 0x2
+ 678 01eb 91       		.byte	0x91
+ 679 01ec 58       		.sleb128 -40
+ 680 01ed 00       		.byte	0
+ 681 01ee 0E       		.uleb128 0xe
+ 682 01ef 88010000 		.4byte	.LBB3
+ 683 01f3 26000000 		.4byte	.LBE3-.LBB3
+ 684 01f7 17020000 		.4byte	0x217
+ 685 01fb 0D       		.uleb128 0xd
+ 686 01fc CA020000 		.4byte	.LASF22
+ 687 0200 01       		.byte	0x1
+ 688 0201 43       		.byte	0x43
+ 689 0202 A1000000 		.4byte	0xa1
+ 690 0206 F6000000 		.4byte	.LLST7
+ 691 020a 0F       		.uleb128 0xf
+ 692 020b 7000     		.ascii	"p\000"
+ 693 020d 01       		.byte	0x1
+ 694 020e 47       		.byte	0x47
+ 695 020f DC000000 		.4byte	0xdc
+ 696 0213 02       		.uleb128 0x2
+ 697 0214 91       		.byte	0x91
+ 698 0215 58       		.sleb128 -40
+ 699 0216 00       		.byte	0
+ 700 0217 0E       		.uleb128 0xe
+ 701 0218 CA010000 		.4byte	.LBB4
+ 702 021c 26000000 		.4byte	.LBE4-.LBB4
+ 703 0220 40020000 		.4byte	0x240
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 15
+
+
+ 704 0224 0D       		.uleb128 0xd
+ 705 0225 CA020000 		.4byte	.LASF22
+ 706 0229 01       		.byte	0x1
+ 707 022a 4B       		.byte	0x4b
+ 708 022b A1000000 		.4byte	0xa1
+ 709 022f 0A010000 		.4byte	.LLST8
+ 710 0233 0F       		.uleb128 0xf
+ 711 0234 7000     		.ascii	"p\000"
+ 712 0236 01       		.byte	0x1
+ 713 0237 4E       		.byte	0x4e
+ 714 0238 DC000000 		.4byte	0xdc
+ 715 023c 02       		.uleb128 0x2
+ 716 023d 91       		.byte	0x91
+ 717 023e 58       		.sleb128 -40
+ 718 023f 00       		.byte	0
+ 719 0240 0E       		.uleb128 0xe
+ 720 0241 F0010000 		.4byte	.LBB5
+ 721 0245 1A000000 		.4byte	.LBE5-.LBB5
+ 722 0249 5A020000 		.4byte	0x25a
+ 723 024d 0F       		.uleb128 0xf
+ 724 024e 7000     		.ascii	"p\000"
+ 725 0250 01       		.byte	0x1
+ 726 0251 55       		.byte	0x55
+ 727 0252 DC000000 		.4byte	0xdc
+ 728 0256 02       		.uleb128 0x2
+ 729 0257 91       		.byte	0x91
+ 730 0258 58       		.sleb128 -40
+ 731 0259 00       		.byte	0
+ 732 025a 09       		.uleb128 0x9
+ 733 025b 0E000000 		.4byte	.LVL5
+ 734 025f 91030000 		.4byte	0x391
+ 735 0263 6D020000 		.4byte	0x26d
+ 736 0267 0A       		.uleb128 0xa
+ 737 0268 01       		.uleb128 0x1
+ 738 0269 50       		.byte	0x50
+ 739 026a 01       		.uleb128 0x1
+ 740 026b 31       		.byte	0x31
+ 741 026c 00       		.byte	0
+ 742 026d 09       		.uleb128 0x9
+ 743 026e 14000000 		.4byte	.LVL6
+ 744 0272 B2030000 		.4byte	0x3b2
+ 745 0276 80020000 		.4byte	0x280
+ 746 027a 0A       		.uleb128 0xa
+ 747 027b 01       		.uleb128 0x1
+ 748 027c 50       		.byte	0x50
+ 749 027d 01       		.uleb128 0x1
+ 750 027e 3A       		.byte	0x3a
+ 751 027f 00       		.byte	0
+ 752 0280 09       		.uleb128 0x9
+ 753 0281 1A000000 		.4byte	.LVL7
+ 754 0285 91030000 		.4byte	0x391
+ 755 0289 93020000 		.4byte	0x293
+ 756 028d 0A       		.uleb128 0xa
+ 757 028e 01       		.uleb128 0x1
+ 758 028f 50       		.byte	0x50
+ 759 0290 01       		.uleb128 0x1
+ 760 0291 30       		.byte	0x30
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 16
+
+
+ 761 0292 00       		.byte	0
+ 762 0293 0B       		.uleb128 0xb
+ 763 0294 1E000000 		.4byte	.LVL8
+ 764 0298 BD030000 		.4byte	0x3bd
+ 765 029c 09       		.uleb128 0x9
+ 766 029d 2A000000 		.4byte	.LVL9
+ 767 02a1 C8030000 		.4byte	0x3c8
+ 768 02a5 B3020000 		.4byte	0x2b3
+ 769 02a9 0A       		.uleb128 0xa
+ 770 02aa 01       		.uleb128 0x1
+ 771 02ab 50       		.byte	0x50
+ 772 02ac 05       		.uleb128 0x5
+ 773 02ad 0C       		.byte	0xc
+ 774 02ae FFFFFF00 		.4byte	0xffffff
+ 775 02b2 00       		.byte	0
+ 776 02b3 0B       		.uleb128 0xb
+ 777 02b4 2E000000 		.4byte	.LVL10
+ 778 02b8 BD030000 		.4byte	0x3bd
+ 779 02bc 0B       		.uleb128 0xb
+ 780 02bd 36000000 		.4byte	.LVL11
+ 781 02c1 D3030000 		.4byte	0x3d3
+ 782 02c5 09       		.uleb128 0x9
+ 783 02c6 62000000 		.4byte	.LVL17
+ 784 02ca DE030000 		.4byte	0x3de
+ 785 02ce DC020000 		.4byte	0x2dc
+ 786 02d2 0A       		.uleb128 0xa
+ 787 02d3 01       		.uleb128 0x1
+ 788 02d4 50       		.byte	0x50
+ 789 02d5 05       		.uleb128 0x5
+ 790 02d6 03       		.byte	0x3
+ 791 02d7 00000000 		.4byte	.LC0
+ 792 02db 00       		.byte	0
+ 793 02dc 09       		.uleb128 0x9
+ 794 02dd 68000000 		.4byte	.LVL18
+ 795 02e1 E9030000 		.4byte	0x3e9
+ 796 02e5 F0020000 		.4byte	0x2f0
+ 797 02e9 0A       		.uleb128 0xa
+ 798 02ea 01       		.uleb128 0x1
+ 799 02eb 50       		.byte	0x50
+ 800 02ec 02       		.uleb128 0x2
+ 801 02ed 08       		.byte	0x8
+ 802 02ee 3C       		.byte	0x3c
+ 803 02ef 00       		.byte	0
+ 804 02f0 09       		.uleb128 0x9
+ 805 02f1 6E000000 		.4byte	.LVL19
+ 806 02f5 9C030000 		.4byte	0x39c
+ 807 02f9 03030000 		.4byte	0x303
+ 808 02fd 0A       		.uleb128 0xa
+ 809 02fe 01       		.uleb128 0x1
+ 810 02ff 50       		.byte	0x50
+ 811 0300 01       		.uleb128 0x1
+ 812 0301 31       		.byte	0x31
+ 813 0302 00       		.byte	0
+ 814 0303 09       		.uleb128 0x9
+ 815 0304 74000000 		.4byte	.LVL20
+ 816 0308 B2030000 		.4byte	0x3b2
+ 817 030c 16030000 		.4byte	0x316
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 17
+
+
+ 818 0310 0A       		.uleb128 0xa
+ 819 0311 01       		.uleb128 0x1
+ 820 0312 50       		.byte	0x50
+ 821 0313 01       		.uleb128 0x1
+ 822 0314 3A       		.byte	0x3a
+ 823 0315 00       		.byte	0
+ 824 0316 09       		.uleb128 0x9
+ 825 0317 7A000000 		.4byte	.LVL21
+ 826 031b 9C030000 		.4byte	0x39c
+ 827 031f 29030000 		.4byte	0x329
+ 828 0323 0A       		.uleb128 0xa
+ 829 0324 01       		.uleb128 0x1
+ 830 0325 50       		.byte	0x50
+ 831 0326 01       		.uleb128 0x1
+ 832 0327 30       		.byte	0x30
+ 833 0328 00       		.byte	0
+ 834 0329 0B       		.uleb128 0xb
+ 835 032a 7E000000 		.4byte	.LVL22
+ 836 032e F4030000 		.4byte	0x3f4
+ 837 0332 09       		.uleb128 0x9
+ 838 0333 8A000000 		.4byte	.LVL23
+ 839 0337 C8030000 		.4byte	0x3c8
+ 840 033b 49030000 		.4byte	0x349
+ 841 033f 0A       		.uleb128 0xa
+ 842 0340 01       		.uleb128 0x1
+ 843 0341 50       		.byte	0x50
+ 844 0342 05       		.uleb128 0x5
+ 845 0343 0C       		.byte	0xc
+ 846 0344 FFFFFF00 		.4byte	0xffffff
+ 847 0348 00       		.byte	0
+ 848 0349 0B       		.uleb128 0xb
+ 849 034a 8E000000 		.4byte	.LVL24
+ 850 034e F4030000 		.4byte	0x3f4
+ 851 0352 0B       		.uleb128 0xb
+ 852 0353 96000000 		.4byte	.LVL25
+ 853 0357 D3030000 		.4byte	0x3d3
+ 854 035b 10       		.uleb128 0x10
+ 855 035c C2000000 		.4byte	.LVL31
+ 856 0360 DE030000 		.4byte	0x3de
+ 857 0364 0A       		.uleb128 0xa
+ 858 0365 01       		.uleb128 0x1
+ 859 0366 50       		.byte	0x50
+ 860 0367 05       		.uleb128 0x5
+ 861 0368 03       		.byte	0x3
+ 862 0369 10000000 		.4byte	.LC1
+ 863 036d 00       		.byte	0
+ 864 036e 00       		.byte	0
+ 865 036f 11       		.uleb128 0x11
+ 866 0370 5C010000 		.4byte	.LASF30
+ 867 0374 06       		.byte	0x6
+ 868 0375 1207     		.2byte	0x712
+ 869 0377 7B030000 		.4byte	0x37b
+ 870 037b 12       		.uleb128 0x12
+ 871 037c AC000000 		.4byte	0xac
+ 872 0380 13       		.uleb128 0x13
+ 873 0381 CF010000 		.4byte	.LASF31
+ 874 0385 05       		.byte	0x5
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 18
+
+
+ 875 0386 1C       		.byte	0x1c
+ 876 0387 C2000000 		.4byte	0xc2
+ 877 038b 05       		.uleb128 0x5
+ 878 038c 03       		.byte	0x3
+ 879 038d 00000000 		.4byte	sonarTimerDone
+ 880 0391 14       		.uleb128 0x14
+ 881 0392 A1010000 		.4byte	.LASF32
+ 882 0396 A1010000 		.4byte	.LASF32
+ 883 039a 07       		.byte	0x7
+ 884 039b 26       		.byte	0x26
+ 885 039c 14       		.uleb128 0x14
+ 886 039d EB010000 		.4byte	.LASF33
+ 887 03a1 EB010000 		.4byte	.LASF33
+ 888 03a5 08       		.byte	0x8
+ 889 03a6 26       		.byte	0x26
+ 890 03a7 14       		.uleb128 0x14
+ 891 03a8 03010000 		.4byte	.LASF34
+ 892 03ac 03010000 		.4byte	.LASF34
+ 893 03b0 09       		.byte	0x9
+ 894 03b1 5A       		.byte	0x5a
+ 895 03b2 14       		.uleb128 0x14
+ 896 03b3 BC010000 		.4byte	.LASF35
+ 897 03b7 BC010000 		.4byte	.LASF35
+ 898 03bb 0A       		.byte	0xa
+ 899 03bc 77       		.byte	0x77
+ 900 03bd 14       		.uleb128 0x14
+ 901 03be 1E000000 		.4byte	.LASF36
+ 902 03c2 1E000000 		.4byte	.LASF36
+ 903 03c6 0B       		.byte	0xb
+ 904 03c7 29       		.byte	0x29
+ 905 03c8 14       		.uleb128 0x14
+ 906 03c9 69010000 		.4byte	.LASF37
+ 907 03cd 69010000 		.4byte	.LASF37
+ 908 03d1 09       		.byte	0x9
+ 909 03d2 6A       		.byte	0x6a
+ 910 03d3 14       		.uleb128 0x14
+ 911 03d4 82010000 		.4byte	.LASF38
+ 912 03d8 82010000 		.4byte	.LASF38
+ 913 03dc 09       		.byte	0x9
+ 914 03dd 69       		.byte	0x69
+ 915 03de 14       		.uleb128 0x14
+ 916 03df 0F030000 		.4byte	.LASF39
+ 917 03e3 0F030000 		.4byte	.LASF39
+ 918 03e7 0C       		.byte	0xc
+ 919 03e8 8B       		.byte	0x8b
+ 920 03e9 14       		.uleb128 0x14
+ 921 03ea 20030000 		.4byte	.LASF40
+ 922 03ee 20030000 		.4byte	.LASF40
+ 923 03f2 0A       		.byte	0xa
+ 924 03f3 76       		.byte	0x76
+ 925 03f4 14       		.uleb128 0x14
+ 926 03f5 E9020000 		.4byte	.LASF41
+ 927 03f9 E9020000 		.4byte	.LASF41
+ 928 03fd 0D       		.byte	0xd
+ 929 03fe 29       		.byte	0x29
+ 930 03ff 00       		.byte	0
+ 931              		.section	.debug_abbrev,"",%progbits
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 19
+
+
+ 932              	.Ldebug_abbrev0:
+ 933 0000 01       		.uleb128 0x1
+ 934 0001 11       		.uleb128 0x11
+ 935 0002 01       		.byte	0x1
+ 936 0003 25       		.uleb128 0x25
+ 937 0004 0E       		.uleb128 0xe
+ 938 0005 13       		.uleb128 0x13
+ 939 0006 0B       		.uleb128 0xb
+ 940 0007 03       		.uleb128 0x3
+ 941 0008 0E       		.uleb128 0xe
+ 942 0009 1B       		.uleb128 0x1b
+ 943 000a 0E       		.uleb128 0xe
+ 944 000b 55       		.uleb128 0x55
+ 945 000c 17       		.uleb128 0x17
+ 946 000d 11       		.uleb128 0x11
+ 947 000e 01       		.uleb128 0x1
+ 948 000f 10       		.uleb128 0x10
+ 949 0010 17       		.uleb128 0x17
+ 950 0011 00       		.byte	0
+ 951 0012 00       		.byte	0
+ 952 0013 02       		.uleb128 0x2
+ 953 0014 24       		.uleb128 0x24
+ 954 0015 00       		.byte	0
+ 955 0016 0B       		.uleb128 0xb
+ 956 0017 0B       		.uleb128 0xb
+ 957 0018 3E       		.uleb128 0x3e
+ 958 0019 0B       		.uleb128 0xb
+ 959 001a 03       		.uleb128 0x3
+ 960 001b 0E       		.uleb128 0xe
+ 961 001c 00       		.byte	0
+ 962 001d 00       		.byte	0
+ 963 001e 03       		.uleb128 0x3
+ 964 001f 16       		.uleb128 0x16
+ 965 0020 00       		.byte	0
+ 966 0021 03       		.uleb128 0x3
+ 967 0022 0E       		.uleb128 0xe
+ 968 0023 3A       		.uleb128 0x3a
+ 969 0024 0B       		.uleb128 0xb
+ 970 0025 3B       		.uleb128 0x3b
+ 971 0026 0B       		.uleb128 0xb
+ 972 0027 49       		.uleb128 0x49
+ 973 0028 13       		.uleb128 0x13
+ 974 0029 00       		.byte	0
+ 975 002a 00       		.byte	0
+ 976 002b 04       		.uleb128 0x4
+ 977 002c 24       		.uleb128 0x24
+ 978 002d 00       		.byte	0
+ 979 002e 0B       		.uleb128 0xb
+ 980 002f 0B       		.uleb128 0xb
+ 981 0030 3E       		.uleb128 0x3e
+ 982 0031 0B       		.uleb128 0xb
+ 983 0032 03       		.uleb128 0x3
+ 984 0033 08       		.uleb128 0x8
+ 985 0034 00       		.byte	0
+ 986 0035 00       		.byte	0
+ 987 0036 05       		.uleb128 0x5
+ 988 0037 16       		.uleb128 0x16
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 20
+
+
+ 989 0038 00       		.byte	0
+ 990 0039 03       		.uleb128 0x3
+ 991 003a 0E       		.uleb128 0xe
+ 992 003b 3A       		.uleb128 0x3a
+ 993 003c 0B       		.uleb128 0xb
+ 994 003d 3B       		.uleb128 0x3b
+ 995 003e 05       		.uleb128 0x5
+ 996 003f 49       		.uleb128 0x49
+ 997 0040 13       		.uleb128 0x13
+ 998 0041 00       		.byte	0
+ 999 0042 00       		.byte	0
+ 1000 0043 06       		.uleb128 0x6
+ 1001 0044 13       		.uleb128 0x13
+ 1002 0045 01       		.byte	0x1
+ 1003 0046 03       		.uleb128 0x3
+ 1004 0047 0E       		.uleb128 0xe
+ 1005 0048 0B       		.uleb128 0xb
+ 1006 0049 0B       		.uleb128 0xb
+ 1007 004a 3A       		.uleb128 0x3a
+ 1008 004b 0B       		.uleb128 0xb
+ 1009 004c 3B       		.uleb128 0x3b
+ 1010 004d 0B       		.uleb128 0xb
+ 1011 004e 01       		.uleb128 0x1
+ 1012 004f 13       		.uleb128 0x13
+ 1013 0050 00       		.byte	0
+ 1014 0051 00       		.byte	0
+ 1015 0052 07       		.uleb128 0x7
+ 1016 0053 0D       		.uleb128 0xd
+ 1017 0054 00       		.byte	0
+ 1018 0055 03       		.uleb128 0x3
+ 1019 0056 0E       		.uleb128 0xe
+ 1020 0057 3A       		.uleb128 0x3a
+ 1021 0058 0B       		.uleb128 0xb
+ 1022 0059 3B       		.uleb128 0x3b
+ 1023 005a 0B       		.uleb128 0xb
+ 1024 005b 49       		.uleb128 0x49
+ 1025 005c 13       		.uleb128 0x13
+ 1026 005d 38       		.uleb128 0x38
+ 1027 005e 0B       		.uleb128 0xb
+ 1028 005f 00       		.byte	0
+ 1029 0060 00       		.byte	0
+ 1030 0061 08       		.uleb128 0x8
+ 1031 0062 2E       		.uleb128 0x2e
+ 1032 0063 01       		.byte	0x1
+ 1033 0064 3F       		.uleb128 0x3f
+ 1034 0065 19       		.uleb128 0x19
+ 1035 0066 03       		.uleb128 0x3
+ 1036 0067 0E       		.uleb128 0xe
+ 1037 0068 3A       		.uleb128 0x3a
+ 1038 0069 0B       		.uleb128 0xb
+ 1039 006a 3B       		.uleb128 0x3b
+ 1040 006b 0B       		.uleb128 0xb
+ 1041 006c 11       		.uleb128 0x11
+ 1042 006d 01       		.uleb128 0x1
+ 1043 006e 12       		.uleb128 0x12
+ 1044 006f 06       		.uleb128 0x6
+ 1045 0070 40       		.uleb128 0x40
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 21
+
+
+ 1046 0071 18       		.uleb128 0x18
+ 1047 0072 9742     		.uleb128 0x2117
+ 1048 0074 19       		.uleb128 0x19
+ 1049 0075 01       		.uleb128 0x1
+ 1050 0076 13       		.uleb128 0x13
+ 1051 0077 00       		.byte	0
+ 1052 0078 00       		.byte	0
+ 1053 0079 09       		.uleb128 0x9
+ 1054 007a 898201   		.uleb128 0x4109
+ 1055 007d 01       		.byte	0x1
+ 1056 007e 11       		.uleb128 0x11
+ 1057 007f 01       		.uleb128 0x1
+ 1058 0080 31       		.uleb128 0x31
+ 1059 0081 13       		.uleb128 0x13
+ 1060 0082 01       		.uleb128 0x1
+ 1061 0083 13       		.uleb128 0x13
+ 1062 0084 00       		.byte	0
+ 1063 0085 00       		.byte	0
+ 1064 0086 0A       		.uleb128 0xa
+ 1065 0087 8A8201   		.uleb128 0x410a
+ 1066 008a 00       		.byte	0
+ 1067 008b 02       		.uleb128 0x2
+ 1068 008c 18       		.uleb128 0x18
+ 1069 008d 9142     		.uleb128 0x2111
+ 1070 008f 18       		.uleb128 0x18
+ 1071 0090 00       		.byte	0
+ 1072 0091 00       		.byte	0
+ 1073 0092 0B       		.uleb128 0xb
+ 1074 0093 898201   		.uleb128 0x4109
+ 1075 0096 00       		.byte	0
+ 1076 0097 11       		.uleb128 0x11
+ 1077 0098 01       		.uleb128 0x1
+ 1078 0099 31       		.uleb128 0x31
+ 1079 009a 13       		.uleb128 0x13
+ 1080 009b 00       		.byte	0
+ 1081 009c 00       		.byte	0
+ 1082 009d 0C       		.uleb128 0xc
+ 1083 009e 2E       		.uleb128 0x2e
+ 1084 009f 01       		.byte	0x1
+ 1085 00a0 3F       		.uleb128 0x3f
+ 1086 00a1 19       		.uleb128 0x19
+ 1087 00a2 03       		.uleb128 0x3
+ 1088 00a3 0E       		.uleb128 0xe
+ 1089 00a4 3A       		.uleb128 0x3a
+ 1090 00a5 0B       		.uleb128 0xb
+ 1091 00a6 3B       		.uleb128 0x3b
+ 1092 00a7 0B       		.uleb128 0xb
+ 1093 00a8 49       		.uleb128 0x49
+ 1094 00a9 13       		.uleb128 0x13
+ 1095 00aa 11       		.uleb128 0x11
+ 1096 00ab 01       		.uleb128 0x1
+ 1097 00ac 12       		.uleb128 0x12
+ 1098 00ad 06       		.uleb128 0x6
+ 1099 00ae 40       		.uleb128 0x40
+ 1100 00af 18       		.uleb128 0x18
+ 1101 00b0 9642     		.uleb128 0x2116
+ 1102 00b2 19       		.uleb128 0x19
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 22
+
+
+ 1103 00b3 01       		.uleb128 0x1
+ 1104 00b4 13       		.uleb128 0x13
+ 1105 00b5 00       		.byte	0
+ 1106 00b6 00       		.byte	0
+ 1107 00b7 0D       		.uleb128 0xd
+ 1108 00b8 34       		.uleb128 0x34
+ 1109 00b9 00       		.byte	0
+ 1110 00ba 03       		.uleb128 0x3
+ 1111 00bb 0E       		.uleb128 0xe
+ 1112 00bc 3A       		.uleb128 0x3a
+ 1113 00bd 0B       		.uleb128 0xb
+ 1114 00be 3B       		.uleb128 0x3b
+ 1115 00bf 0B       		.uleb128 0xb
+ 1116 00c0 49       		.uleb128 0x49
+ 1117 00c1 13       		.uleb128 0x13
+ 1118 00c2 02       		.uleb128 0x2
+ 1119 00c3 17       		.uleb128 0x17
+ 1120 00c4 00       		.byte	0
+ 1121 00c5 00       		.byte	0
+ 1122 00c6 0E       		.uleb128 0xe
+ 1123 00c7 0B       		.uleb128 0xb
+ 1124 00c8 01       		.byte	0x1
+ 1125 00c9 11       		.uleb128 0x11
+ 1126 00ca 01       		.uleb128 0x1
+ 1127 00cb 12       		.uleb128 0x12
+ 1128 00cc 06       		.uleb128 0x6
+ 1129 00cd 01       		.uleb128 0x1
+ 1130 00ce 13       		.uleb128 0x13
+ 1131 00cf 00       		.byte	0
+ 1132 00d0 00       		.byte	0
+ 1133 00d1 0F       		.uleb128 0xf
+ 1134 00d2 34       		.uleb128 0x34
+ 1135 00d3 00       		.byte	0
+ 1136 00d4 03       		.uleb128 0x3
+ 1137 00d5 08       		.uleb128 0x8
+ 1138 00d6 3A       		.uleb128 0x3a
+ 1139 00d7 0B       		.uleb128 0xb
+ 1140 00d8 3B       		.uleb128 0x3b
+ 1141 00d9 0B       		.uleb128 0xb
+ 1142 00da 49       		.uleb128 0x49
+ 1143 00db 13       		.uleb128 0x13
+ 1144 00dc 02       		.uleb128 0x2
+ 1145 00dd 18       		.uleb128 0x18
+ 1146 00de 00       		.byte	0
+ 1147 00df 00       		.byte	0
+ 1148 00e0 10       		.uleb128 0x10
+ 1149 00e1 898201   		.uleb128 0x4109
+ 1150 00e4 01       		.byte	0x1
+ 1151 00e5 11       		.uleb128 0x11
+ 1152 00e6 01       		.uleb128 0x1
+ 1153 00e7 31       		.uleb128 0x31
+ 1154 00e8 13       		.uleb128 0x13
+ 1155 00e9 00       		.byte	0
+ 1156 00ea 00       		.byte	0
+ 1157 00eb 11       		.uleb128 0x11
+ 1158 00ec 34       		.uleb128 0x34
+ 1159 00ed 00       		.byte	0
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 23
+
+
+ 1160 00ee 03       		.uleb128 0x3
+ 1161 00ef 0E       		.uleb128 0xe
+ 1162 00f0 3A       		.uleb128 0x3a
+ 1163 00f1 0B       		.uleb128 0xb
+ 1164 00f2 3B       		.uleb128 0x3b
+ 1165 00f3 05       		.uleb128 0x5
+ 1166 00f4 49       		.uleb128 0x49
+ 1167 00f5 13       		.uleb128 0x13
+ 1168 00f6 3F       		.uleb128 0x3f
+ 1169 00f7 19       		.uleb128 0x19
+ 1170 00f8 3C       		.uleb128 0x3c
+ 1171 00f9 19       		.uleb128 0x19
+ 1172 00fa 00       		.byte	0
+ 1173 00fb 00       		.byte	0
+ 1174 00fc 12       		.uleb128 0x12
+ 1175 00fd 35       		.uleb128 0x35
+ 1176 00fe 00       		.byte	0
+ 1177 00ff 49       		.uleb128 0x49
+ 1178 0100 13       		.uleb128 0x13
+ 1179 0101 00       		.byte	0
+ 1180 0102 00       		.byte	0
+ 1181 0103 13       		.uleb128 0x13
+ 1182 0104 34       		.uleb128 0x34
+ 1183 0105 00       		.byte	0
+ 1184 0106 03       		.uleb128 0x3
+ 1185 0107 0E       		.uleb128 0xe
+ 1186 0108 3A       		.uleb128 0x3a
+ 1187 0109 0B       		.uleb128 0xb
+ 1188 010a 3B       		.uleb128 0x3b
+ 1189 010b 0B       		.uleb128 0xb
+ 1190 010c 49       		.uleb128 0x49
+ 1191 010d 13       		.uleb128 0x13
+ 1192 010e 3F       		.uleb128 0x3f
+ 1193 010f 19       		.uleb128 0x19
+ 1194 0110 02       		.uleb128 0x2
+ 1195 0111 18       		.uleb128 0x18
+ 1196 0112 00       		.byte	0
+ 1197 0113 00       		.byte	0
+ 1198 0114 14       		.uleb128 0x14
+ 1199 0115 2E       		.uleb128 0x2e
+ 1200 0116 00       		.byte	0
+ 1201 0117 3F       		.uleb128 0x3f
+ 1202 0118 19       		.uleb128 0x19
+ 1203 0119 3C       		.uleb128 0x3c
+ 1204 011a 19       		.uleb128 0x19
+ 1205 011b 6E       		.uleb128 0x6e
+ 1206 011c 0E       		.uleb128 0xe
+ 1207 011d 03       		.uleb128 0x3
+ 1208 011e 0E       		.uleb128 0xe
+ 1209 011f 3A       		.uleb128 0x3a
+ 1210 0120 0B       		.uleb128 0xb
+ 1211 0121 3B       		.uleb128 0x3b
+ 1212 0122 0B       		.uleb128 0xb
+ 1213 0123 00       		.byte	0
+ 1214 0124 00       		.byte	0
+ 1215 0125 00       		.byte	0
+ 1216              		.section	.debug_loc,"",%progbits
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 24
+
+
+ 1217              	.Ldebug_loc0:
+ 1218              	.LLST0:
+ 1219 0000 36000000 		.4byte	.LVL11
+ 1220 0004 39000000 		.4byte	.LVL12-1
+ 1221 0008 0100     		.2byte	0x1
+ 1222 000a 50       		.byte	0x50
+ 1223 000b 96000000 		.4byte	.LVL25
+ 1224 000f 99000000 		.4byte	.LVL26-1
+ 1225 0013 0100     		.2byte	0x1
+ 1226 0015 50       		.byte	0x50
+ 1227 0016 00000000 		.4byte	0
+ 1228 001a 00000000 		.4byte	0
+ 1229              	.LLST1:
+ 1230 001e 50000000 		.4byte	.LVL14
+ 1231 0022 57000000 		.4byte	.LVL15-1
+ 1232 0026 0600     		.2byte	0x6
+ 1233 0028 50       		.byte	0x50
+ 1234 0029 93       		.byte	0x93
+ 1235 002a 04       		.uleb128 0x4
+ 1236 002b 51       		.byte	0x51
+ 1237 002c 93       		.byte	0x93
+ 1238 002d 04       		.uleb128 0x4
+ 1239 002e 00000000 		.4byte	0
+ 1240 0032 00000000 		.4byte	0
+ 1241              	.LLST2:
+ 1242 0036 5C000000 		.4byte	.LVL16
+ 1243 003a E2000000 		.4byte	.LVL34
+ 1244 003e 0600     		.2byte	0x6
+ 1245 0040 54       		.byte	0x54
+ 1246 0041 93       		.byte	0x93
+ 1247 0042 04       		.uleb128 0x4
+ 1248 0043 55       		.byte	0x55
+ 1249 0044 93       		.byte	0x93
+ 1250 0045 04       		.uleb128 0x4
+ 1251 0046 E6000000 		.4byte	.LVL35
+ 1252 004a E8000000 		.4byte	.LVL36
+ 1253 004e 0600     		.2byte	0x6
+ 1254 0050 54       		.byte	0x54
+ 1255 0051 93       		.byte	0x93
+ 1256 0052 04       		.uleb128 0x4
+ 1257 0053 55       		.byte	0x55
+ 1258 0054 93       		.byte	0x93
+ 1259 0055 04       		.uleb128 0x4
+ 1260 0056 EA000000 		.4byte	.LVL37
+ 1261 005a 12020000 		.4byte	.LVL62
+ 1262 005e 0600     		.2byte	0x6
+ 1263 0060 54       		.byte	0x54
+ 1264 0061 93       		.byte	0x93
+ 1265 0062 04       		.uleb128 0x4
+ 1266 0063 55       		.byte	0x55
+ 1267 0064 93       		.byte	0x93
+ 1268 0065 04       		.uleb128 0x4
+ 1269 0066 00000000 		.4byte	0
+ 1270 006a 00000000 		.4byte	0
+ 1271              	.LLST3:
+ 1272 006e B0000000 		.4byte	.LVL28
+ 1273 0072 B7000000 		.4byte	.LVL29-1
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 25
+
+
+ 1274 0076 0600     		.2byte	0x6
+ 1275 0078 50       		.byte	0x50
+ 1276 0079 93       		.byte	0x93
+ 1277 007a 04       		.uleb128 0x4
+ 1278 007b 51       		.byte	0x51
+ 1279 007c 93       		.byte	0x93
+ 1280 007d 04       		.uleb128 0x4
+ 1281 007e 00000000 		.4byte	0
+ 1282 0082 00000000 		.4byte	0
+ 1283              	.LLST4:
+ 1284 0086 BC000000 		.4byte	.LVL30
+ 1285 008a 0C010000 		.4byte	.LVL40
+ 1286 008e 0600     		.2byte	0x6
+ 1287 0090 58       		.byte	0x58
+ 1288 0091 93       		.byte	0x93
+ 1289 0092 04       		.uleb128 0x4
+ 1290 0093 59       		.byte	0x59
+ 1291 0094 93       		.byte	0x93
+ 1292 0095 04       		.uleb128 0x4
+ 1293 0096 12010000 		.4byte	.LVL41
+ 1294 009a 16010000 		.4byte	.LVL42
+ 1295 009e 0600     		.2byte	0x6
+ 1296 00a0 58       		.byte	0x58
+ 1297 00a1 93       		.byte	0x93
+ 1298 00a2 04       		.uleb128 0x4
+ 1299 00a3 59       		.byte	0x59
+ 1300 00a4 93       		.byte	0x93
+ 1301 00a5 04       		.uleb128 0x4
+ 1302 00a6 1A010000 		.4byte	.LVL43
+ 1303 00aa 12020000 		.4byte	.LVL62
+ 1304 00ae 0600     		.2byte	0x6
+ 1305 00b0 58       		.byte	0x58
+ 1306 00b1 93       		.byte	0x93
+ 1307 00b2 04       		.uleb128 0x4
+ 1308 00b3 59       		.byte	0x59
+ 1309 00b4 93       		.byte	0x93
+ 1310 00b5 04       		.uleb128 0x4
+ 1311 00b6 00000000 		.4byte	0
+ 1312 00ba 00000000 		.4byte	0
+ 1313              	.LLST5:
+ 1314 00be 36010000 		.4byte	.LVL46
+ 1315 00c2 6C010000 		.4byte	.LVL51
+ 1316 00c6 0200     		.2byte	0x2
+ 1317 00c8 32       		.byte	0x32
+ 1318 00c9 9F       		.byte	0x9f
+ 1319 00ca 00000000 		.4byte	0
+ 1320 00ce 00000000 		.4byte	0
+ 1321              	.LLST6:
+ 1322 00d2 52010000 		.4byte	.LVL49
+ 1323 00d6 66010000 		.4byte	.LVL50
+ 1324 00da 0600     		.2byte	0x6
+ 1325 00dc 50       		.byte	0x50
+ 1326 00dd 93       		.byte	0x93
+ 1327 00de 04       		.uleb128 0x4
+ 1328 00df 51       		.byte	0x51
+ 1329 00e0 93       		.byte	0x93
+ 1330 00e1 04       		.uleb128 0x4
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 26
+
+
+ 1331 00e2 66010000 		.4byte	.LVL50
+ 1332 00e6 6C010000 		.4byte	.LVL51
+ 1333 00ea 0200     		.2byte	0x2
+ 1334 00ec 91       		.byte	0x91
+ 1335 00ed 60       		.sleb128 -32
+ 1336 00ee 00000000 		.4byte	0
+ 1337 00f2 00000000 		.4byte	0
+ 1338              	.LLST7:
+ 1339 00f6 88010000 		.4byte	.LVL54
+ 1340 00fa AE010000 		.4byte	.LVL56
+ 1341 00fe 0200     		.2byte	0x2
+ 1342 0100 33       		.byte	0x33
+ 1343 0101 9F       		.byte	0x9f
+ 1344 0102 00000000 		.4byte	0
+ 1345 0106 00000000 		.4byte	0
+ 1346              	.LLST8:
+ 1347 010a CA010000 		.4byte	.LVL59
+ 1348 010e F0010000 		.4byte	.LVL61
+ 1349 0112 0200     		.2byte	0x2
+ 1350 0114 31       		.byte	0x31
+ 1351 0115 9F       		.byte	0x9f
+ 1352 0116 00000000 		.4byte	0
+ 1353 011a 00000000 		.4byte	0
+ 1354              		.section	.debug_aranges,"",%progbits
+ 1355 0000 24000000 		.4byte	0x24
+ 1356 0004 0200     		.2byte	0x2
+ 1357 0006 00000000 		.4byte	.Ldebug_info0
+ 1358 000a 04       		.byte	0x4
+ 1359 000b 00       		.byte	0
+ 1360 000c 0000     		.2byte	0
+ 1361 000e 0000     		.2byte	0
+ 1362 0010 00000000 		.4byte	.LFB64
+ 1363 0014 20000000 		.4byte	.LFE64-.LFB64
+ 1364 0018 00000000 		.4byte	.LFB65
+ 1365 001c 38020000 		.4byte	.LFE65-.LFB65
+ 1366 0020 00000000 		.4byte	0
+ 1367 0024 00000000 		.4byte	0
+ 1368              		.section	.debug_ranges,"",%progbits
+ 1369              	.Ldebug_ranges0:
+ 1370 0000 00000000 		.4byte	.LFB64
+ 1371 0004 20000000 		.4byte	.LFE64
+ 1372 0008 00000000 		.4byte	.LFB65
+ 1373 000c 38020000 		.4byte	.LFE65
+ 1374 0010 00000000 		.4byte	0
+ 1375 0014 00000000 		.4byte	0
+ 1376              		.section	.debug_line,"",%progbits
+ 1377              	.Ldebug_line0:
+ 1378 0000 41020000 		.section	.debug_str,"MS",%progbits,1
+ 1378      0200C201 
+ 1378      00000201 
+ 1378      FB0E0D00 
+ 1378      01010101 
+ 1379              	.LASF29:
+ 1380 0000 63616C63 		.ascii	"calculated_distance\000"
+ 1380      756C6174 
+ 1380      65645F64 
+ 1380      69737461 
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 27
+
+
+ 1380      6E636500 
+ 1381              	.LASF4:
+ 1382 0014 5F5F7569 		.ascii	"__uint8_t\000"
+ 1382      6E74385F 
+ 1382      7400
+ 1383              	.LASF36:
+ 1384 001e 4563686F 		.ascii	"Echo_1_Read\000"
+ 1384      5F315F52 
+ 1384      65616400 
+ 1385              	.LASF5:
+ 1386 002a 5F5F696E 		.ascii	"__int32_t\000"
+ 1386      7433325F 
+ 1386      7400
+ 1387              	.LASF46:
+ 1388 0034 536F6E61 		.ascii	"Sonar_Start\000"
+ 1388      725F5374 
+ 1388      61727400 
+ 1389              	.LASF6:
+ 1390 0040 6C6F6E67 		.ascii	"long int\000"
+ 1390      20696E74 
+ 1390      00
+ 1391              	.LASF27:
+ 1392 0049 74696D65 		.ascii	"timeus\000"
+ 1392      757300
+ 1393              	.LASF16:
+ 1394 0050 696E7433 		.ascii	"int32_t\000"
+ 1394      325F7400 
+ 1395              	.LASF23:
+ 1396 0058 64697374 		.ascii	"distance\000"
+ 1396      616E6365 
+ 1396      00
+ 1397              	.LASF19:
+ 1398 0061 666C6F61 		.ascii	"float\000"
+ 1398      7400
+ 1399              	.LASF1:
+ 1400 0067 756E7369 		.ascii	"unsigned char\000"
+ 1400      676E6564 
+ 1400      20636861 
+ 1400      7200
+ 1401              	.LASF42:
+ 1402 0075 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1402      43313120 
+ 1402      352E342E 
+ 1402      31203230 
+ 1402      31363036 
+ 1403 00a8 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1403      20726576 
+ 1403      6973696F 
+ 1403      6E203233 
+ 1403      37373135 
+ 1404 00db 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1404      66756E63 
+ 1404      74696F6E 
+ 1404      2D736563 
+ 1404      74696F6E 
+ 1405              	.LASF34:
+ 1406 0103 54696D65 		.ascii	"Timer_Sonar_Start\000"
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 28
+
+
+ 1406      725F536F 
+ 1406      6E61725F 
+ 1406      53746172 
+ 1406      7400
+ 1407              	.LASF8:
+ 1408 0115 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1408      20756E73 
+ 1408      69676E65 
+ 1408      6420696E 
+ 1408      7400
+ 1409              	.LASF3:
+ 1410 0127 73686F72 		.ascii	"short unsigned int\000"
+ 1410      7420756E 
+ 1410      7369676E 
+ 1410      65642069 
+ 1410      6E7400
+ 1411              	.LASF26:
+ 1412 013a 64697374 		.ascii	"distance_sonar_1\000"
+ 1412      616E6365 
+ 1412      5F736F6E 
+ 1412      61725F31 
+ 1412      00
+ 1413              	.LASF28:
+ 1414 014b 64697374 		.ascii	"distance_sonar_2\000"
+ 1414      616E6365 
+ 1414      5F736F6E 
+ 1414      61725F32 
+ 1414      00
+ 1415              	.LASF30:
+ 1416 015c 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1416      52784275 
+ 1416      66666572 
+ 1416      00
+ 1417              	.LASF37:
+ 1418 0169 54696D65 		.ascii	"Timer_Sonar_WriteCounter\000"
+ 1418      725F536F 
+ 1418      6E61725F 
+ 1418      57726974 
+ 1418      65436F75 
+ 1419              	.LASF38:
+ 1420 0182 54696D65 		.ascii	"Timer_Sonar_ReadCounter\000"
+ 1420      725F536F 
+ 1420      6E61725F 
+ 1420      52656164 
+ 1420      436F756E 
+ 1421              	.LASF20:
+ 1422 019a 646F7562 		.ascii	"double\000"
+ 1422      6C6500
+ 1423              	.LASF32:
+ 1424 01a1 54726967 		.ascii	"Trigger_1_Write\000"
+ 1424      6765725F 
+ 1424      315F5772 
+ 1424      69746500 
+ 1425              	.LASF7:
+ 1426 01b1 5F5F7569 		.ascii	"__uint32_t\000"
+ 1426      6E743332 
+ 1426      5F7400
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 29
+
+
+ 1427              	.LASF35:
+ 1428 01bc 43794465 		.ascii	"CyDelayUs\000"
+ 1428      6C617955 
+ 1428      7300
+ 1429              	.LASF45:
+ 1430 01c6 706F7369 		.ascii	"position\000"
+ 1430      74696F6E 
+ 1430      00
+ 1431              	.LASF31:
+ 1432 01cf 736F6E61 		.ascii	"sonarTimerDone\000"
+ 1432      7254696D 
+ 1432      6572446F 
+ 1432      6E6500
+ 1433              	.LASF11:
+ 1434 01de 756E7369 		.ascii	"unsigned int\000"
+ 1434      676E6564 
+ 1434      20696E74 
+ 1434      00
+ 1435              	.LASF33:
+ 1436 01eb 54726967 		.ascii	"Trigger_2_Write\000"
+ 1436      6765725F 
+ 1436      325F5772 
+ 1436      69746500 
+ 1437              	.LASF10:
+ 1438 01fb 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1438      206C6F6E 
+ 1438      6720756E 
+ 1438      7369676E 
+ 1438      65642069 
+ 1439              	.LASF15:
+ 1440 0212 75696E74 		.ascii	"uint8_t\000"
+ 1440      385F7400 
+ 1441              	.LASF44:
+ 1442 021a 443A5C4F 		.ascii	"D:\\OneDrive - Aarhus Universitet\\Aarhus Universit"
+ 1442      6E654472 
+ 1442      69766520 
+ 1442      2D204161 
+ 1442      72687573 
+ 1443 024b 65745C45 		.ascii	"et\\E3\\E3PRJ\\I3E3PRJ_Repo\\PSoCcontroller\\PSoCco"
+ 1443      335C4533 
+ 1443      50524A5C 
+ 1443      49334533 
+ 1443      50524A5F 
+ 1444 0279 6E74726F 		.ascii	"ntroller.cydsn\000"
+ 1444      6C6C6572 
+ 1444      2E637964 
+ 1444      736E00
+ 1445              	.LASF24:
+ 1446 0288 74696D65 		.ascii	"timervaerdi\000"
+ 1446      72766165 
+ 1446      72646900 
+ 1447              	.LASF25:
+ 1448 0294 74696D65 		.ascii	"time\000"
+ 1448      00
+ 1449              	.LASF12:
+ 1450 0299 6C6F6E67 		.ascii	"long double\000"
+ 1450      20646F75 
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 30
+
+
+ 1450      626C6500 
+ 1451              	.LASF13:
+ 1452 02a5 73697A65 		.ascii	"sizetype\000"
+ 1452      74797065 
+ 1452      00
+ 1453              	.LASF21:
+ 1454 02ae 64657465 		.ascii	"detected\000"
+ 1454      63746564 
+ 1454      00
+ 1455              	.LASF9:
+ 1456 02b7 6C6F6E67 		.ascii	"long long int\000"
+ 1456      206C6F6E 
+ 1456      6720696E 
+ 1456      7400
+ 1457              	.LASF14:
+ 1458 02c5 63686172 		.ascii	"char\000"
+ 1458      00
+ 1459              	.LASF22:
+ 1460 02ca 77696474 		.ascii	"width\000"
+ 1460      6800
+ 1461              	.LASF2:
+ 1462 02d0 73686F72 		.ascii	"short int\000"
+ 1462      7420696E 
+ 1462      7400
+ 1463              	.LASF18:
+ 1464 02da 75696E74 		.ascii	"uint8\000"
+ 1464      3800
+ 1465              	.LASF17:
+ 1466 02e0 75696E74 		.ascii	"uint32_t\000"
+ 1466      33325F74 
+ 1466      00
+ 1467              	.LASF41:
+ 1468 02e9 4563686F 		.ascii	"Echo_2_Read\000"
+ 1468      5F325F52 
+ 1468      65616400 
+ 1469              	.LASF43:
+ 1470 02f5 536F6E61 		.ascii	"SonarDriver.c\000"
+ 1470      72447269 
+ 1470      7665722E 
+ 1470      6300
+ 1471              	.LASF0:
+ 1472 0303 7369676E 		.ascii	"signed char\000"
+ 1472      65642063 
+ 1472      68617200 
+ 1473              	.LASF39:
+ 1474 030f 55415254 		.ascii	"UART_1_PutString\000"
+ 1474      5F315F50 
+ 1474      75745374 
+ 1474      72696E67 
+ 1474      00
+ 1475              	.LASF40:
+ 1476 0320 43794465 		.ascii	"CyDelay\000"
+ 1476      6C617900 
+ 1477              	.LASF47:
+ 1478 0328 536F6E61 		.ascii	"Sonar_GetPosition\000"
+ 1478      725F4765 
+ 1478      74506F73 
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc8NRnLj.s 			page 31
+
+
+ 1478      6974696F 
+ 1478      6E00
+ 1479              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

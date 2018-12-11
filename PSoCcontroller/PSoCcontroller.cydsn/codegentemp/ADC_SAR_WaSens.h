@@ -167,11 +167,11 @@ extern volatile int16 ADC_SAR_WaSens_shift;
 #define ADC_SAR_WaSens_DEFAULT_RESOLUTION     (12u)   /* ADC resolution selected with parameters.*/
 #define ADC_SAR_WaSens_DEFAULT_CONV_MODE      (0u)        /* Default conversion method */
 #define ADC_SAR_WaSens_DEFAULT_INTERNAL_CLK   (1u)             /* Default clock selection */
-#define ADC_SAR_WaSens_DEFAULT_REFERENCE      (1u)         /* Default reference */
+#define ADC_SAR_WaSens_DEFAULT_REFERENCE      (0u)         /* Default reference */
 #define ADC_SAR_WaSens_DEFAULT_RANGE          (1u)       /* ADC Input Range selection */
-#define ADC_SAR_WaSens_CLOCK_FREQUENCY        (12000006u)   /* Clock frequency */
-#define ADC_SAR_WaSens_NOMINAL_CLOCK_FREQ     (12000000)  /* Nominal Clock Frequency */
-#define ADC_SAR_WaSens_HIGH_POWER_PULSE       (0u)        /* Not zero when clock pulse > 50 ns */
+#define ADC_SAR_WaSens_CLOCK_FREQUENCY        (1600000u)   /* Clock frequency */
+#define ADC_SAR_WaSens_NOMINAL_CLOCK_FREQ     (1600000)  /* Nominal Clock Frequency */
+#define ADC_SAR_WaSens_HIGH_POWER_PULSE       (1u)        /* Not zero when clock pulse > 50 ns */
 #define ADC_SAR_WaSens_IRQ_REMOVE             (0u)                /* Removes internal interrupt */
 
 /* Use VDDA voltage define directly from cyfitter.h when VDDA reference has been used */
@@ -198,7 +198,7 @@ extern volatile int16 ADC_SAR_WaSens_shift;
                                                                                        ADC_SAR_WaSens__MINPOWER))
 /* Constant for a global usage */
 /* Number of additional clocks for sampling data*/
-#define ADC_SAR_WaSens_SAMPLE_PRECHARGE       (6u)
+#define ADC_SAR_WaSens_SAMPLE_PRECHARGE       (4u)
 
 
 /***************************************

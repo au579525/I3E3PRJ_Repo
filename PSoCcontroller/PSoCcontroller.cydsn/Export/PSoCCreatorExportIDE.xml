@@ -42,6 +42,9 @@
           <File BuildType="BUILD" Toolchain="">MotorDriverX.c</File>
           <File BuildType="BUILD" Toolchain="">MotorDriverY.c</File>
           <File BuildType="BUILD" Toolchain="">SPI_driver_PSoC.c</File>
+          <File BuildType="BUILD" Toolchain="">WaterPump.c</File>
+          <File BuildType="BUILD" Toolchain="">SonarDriver.c</File>
+          <File BuildType="BUILD" Toolchain="">WaterSensor.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">SonarDriver.h</File>
           <File BuildType="BUILD" Toolchain="">WaterPump.h</File>
@@ -51,6 +54,7 @@
           <File BuildType="BUILD" Toolchain="">MotorDriverX.h</File>
           <File BuildType="BUILD" Toolchain="">MotorDriverY.h</File>
           <File BuildType="BUILD" Toolchain="">SPI_driver_PSoC.h</File>
+          <File BuildType="BUILD" Toolchain="">PSoCcontroller.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\Generated_Source\PSoC5">
@@ -146,9 +150,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_Moisture_IRQ.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_Moisture_theACLK.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_Moisture_theACLK.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_Moisture_Bypass_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_Moisture_Bypass.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_Moisture_Bypass.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Moisture_Analog_Input_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Moisture_Analog_Input.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Moisture_Analog_Input.h</File>
@@ -194,8 +195,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_PWM_WaSens_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_PWM_WaSens.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_PWM_WaSens.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_3.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_3.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_ADC_WaSens_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_ADC_WaSens.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_ADC_WaSens.h</File>
@@ -206,9 +205,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_SAR_WaSens_IRQ.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_SAR_WaSens_theACLK.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_SAR_WaSens_theACLK.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_SAR_WaSens_Bypass_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_SAR_WaSens_Bypass.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_SAR_WaSens_Bypass.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_Low_WL_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_Low_WL.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_Low_WL.h</File>
@@ -240,6 +236,9 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPI_read_req.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPI_1_IntClock.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPI_1_IntClock.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_2_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_2.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="D:\OneDrive - Aarhus Universitet\Aarhus Universitet\E3\E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\Export\ARM_GCC_Generic">

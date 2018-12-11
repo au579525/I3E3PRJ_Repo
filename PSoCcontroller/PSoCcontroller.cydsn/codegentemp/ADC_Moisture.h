@@ -167,11 +167,11 @@ extern volatile int16 ADC_Moisture_shift;
 #define ADC_Moisture_DEFAULT_RESOLUTION     (12u)   /* ADC resolution selected with parameters.*/
 #define ADC_Moisture_DEFAULT_CONV_MODE      (0u)        /* Default conversion method */
 #define ADC_Moisture_DEFAULT_INTERNAL_CLK   (1u)             /* Default clock selection */
-#define ADC_Moisture_DEFAULT_REFERENCE      (1u)         /* Default reference */
+#define ADC_Moisture_DEFAULT_REFERENCE      (0u)         /* Default reference */
 #define ADC_Moisture_DEFAULT_RANGE          (1u)       /* ADC Input Range selection */
-#define ADC_Moisture_CLOCK_FREQUENCY        (12000006u)   /* Clock frequency */
-#define ADC_Moisture_NOMINAL_CLOCK_FREQ     (12000000)  /* Nominal Clock Frequency */
-#define ADC_Moisture_HIGH_POWER_PULSE       (0u)        /* Not zero when clock pulse > 50 ns */
+#define ADC_Moisture_CLOCK_FREQUENCY        (1600000u)   /* Clock frequency */
+#define ADC_Moisture_NOMINAL_CLOCK_FREQ     (1600000)  /* Nominal Clock Frequency */
+#define ADC_Moisture_HIGH_POWER_PULSE       (1u)        /* Not zero when clock pulse > 50 ns */
 #define ADC_Moisture_IRQ_REMOVE             (0u)                /* Removes internal interrupt */
 
 /* Use VDDA voltage define directly from cyfitter.h when VDDA reference has been used */
@@ -198,7 +198,7 @@ extern volatile int16 ADC_Moisture_shift;
                                                                                        ADC_Moisture__MINPOWER))
 /* Constant for a global usage */
 /* Number of additional clocks for sampling data*/
-#define ADC_Moisture_SAMPLE_PRECHARGE       (6u)
+#define ADC_Moisture_SAMPLE_PRECHARGE       (4u)
 
 
 /***************************************

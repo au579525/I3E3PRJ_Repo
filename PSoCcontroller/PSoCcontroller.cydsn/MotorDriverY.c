@@ -35,8 +35,6 @@ void rotateClockwiseY() {
     }
     moveStepY();
     ++stepperPositionY;
-    
-    UART_1_PutString("Rotated clockwise once\n\r");
 }
 
 void rotateCounterClockwiseY() {
@@ -70,15 +68,16 @@ void moveStepY() {
 }
 
 void moveDegreesY(int deg) { //Positivt antal grader skrives hvis armen skal køre med uret og negativt gradtal skrives hvis den skal køre mod uret
-//    UART_1_PutString("Starting moveDegreesY function...\n\r");
     // OBS! Y-stepper er gearet forkert! 0.9 grader pr. full step, ikke 1.8 som der står i databladet
     float round1 = deg / 0.9; //Grader divideret med stepvinkel = antal steps der skal køres
     int steps = (int)round(round1); //Afrund antallet af steps
     
     if(steps < 0) {
+        if (stepperPositionY+steps < MAX_STEPS_Y) { //limit to max number of steps
+            steps = MAX_STEPS_Y-stepperPositionY;
+        }
         for(int i = 0; i > steps; i--) {
             Timer_StepperY_Start();
-            UART_1_PutString("Starting timer\n\r");
             while(timerDoneFlagY == 0); //wait here
             rotateCounterClockwiseY();
             timerDoneFlagY = 0;
@@ -86,7 +85,7 @@ void moveDegreesY(int deg) { //Positivt antal grader skrives hvis armen skal kø
     }
     else if(steps > 0) {
         if(steps >= (stepperPositionY * -1)) {    //Hvis antallet af steps der skal køres tilbage er mere end vi kan køre, før proben rammes
-            UART_1_PutString("Moving too far dude\n\r");
+            resetPositionY(); //move to zero position
         }
         else {
             for(int i = 0; i < steps; i++) {
@@ -107,7 +106,4 @@ void resetPositionY() {
         timerDoneFlagY = 0;
     }
     stepperPositionY = 0;
-    UART_1_PutString("Stepper reset\n\r");
 }
-
-/* [] END OF FILE */

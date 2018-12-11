@@ -17,7 +17,7 @@
     #include <math.h>
     #include "MotorDriverX.h"
 
-    #define MAX_STEPS_Y 200 //180 degrees (stepper is geared wrong)
+    #define MAX_STEPS_Y -200 //-180 degrees (stepper is geared wrong at 0.9deg)
 
     int stepperPositionY;
     uint8 timerDoneFlagY;

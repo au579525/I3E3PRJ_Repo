@@ -1,0 +1,635 @@
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccLY0sei.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"WaterPump.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.initWaterPump,"ax",%progbits
+  20              		.align	2
+  21              		.global	initWaterPump
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	initWaterPump, %function
+  25              	initWaterPump:
+  26              	.LFB63:
+  27              		.file 1 "WaterPump.c"
+   1:WaterPump.c   ****     #include "WaterPump.h"
+   2:WaterPump.c   ****     
+   3:WaterPump.c   ****     void initWaterPump(void) {
+  28              		.loc 1 3 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 08B5     		push	{r3, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+   4:WaterPump.c   ****         Pin_WaterPump_Write(0);
+  36              		.loc 1 4 0
+  37 0002 0020     		movs	r0, #0
+  38 0004 FFF7FEFF 		bl	Pin_WaterPump_Write
+  39              	.LVL0:
+  40 0008 08BD     		pop	{r3, pc}
+  41              		.cfi_endproc
+  42              	.LFE63:
+  43              		.size	initWaterPump, .-initWaterPump
+  44 000a 00BF     		.section	.text.WaterPump_fireWater,"ax",%progbits
+  45              		.align	2
+  46              		.global	WaterPump_fireWater
+  47              		.thumb
+  48              		.thumb_func
+  49              		.type	WaterPump_fireWater, %function
+  50              	WaterPump_fireWater:
+  51              	.LFB64:
+   5:WaterPump.c   ****     }
+   6:WaterPump.c   **** 
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccLY0sei.s 			page 2
+
+
+   7:WaterPump.c   ****     void WaterPump_fireWater(int x) {
+  52              		.loc 1 7 0
+  53              		.cfi_startproc
+  54              		@ args = 0, pretend = 0, frame = 0
+  55              		@ frame_needed = 0, uses_anonymous_args = 0
+  56              	.LVL1:
+  57 0000 08B5     		push	{r3, lr}
+  58              		.cfi_def_cfa_offset 8
+  59              		.cfi_offset 3, -8
+  60              		.cfi_offset 14, -4
+   8:WaterPump.c   ****         if (x == 0) {
+  61              		.loc 1 8 0
+  62 0002 10B9     		cbnz	r0, .L4
+   9:WaterPump.c   ****             Pin_WaterPump_Write(0);
+  63              		.loc 1 9 0
+  64 0004 FFF7FEFF 		bl	Pin_WaterPump_Write
+  65              	.LVL2:
+  66 0008 08BD     		pop	{r3, pc}
+  67              	.LVL3:
+  68              	.L4:
+  10:WaterPump.c   ****         }
+  11:WaterPump.c   ****         else if (x == 1) {
+  69              		.loc 1 11 0
+  70 000a 0128     		cmp	r0, #1
+  71 000c 02D1     		bne	.L3
+  12:WaterPump.c   ****             Pin_WaterPump_Write(1);
+  72              		.loc 1 12 0
+  73 000e 0120     		movs	r0, #1
+  74              	.LVL4:
+  75 0010 FFF7FEFF 		bl	Pin_WaterPump_Write
+  76              	.LVL5:
+  77              	.L3:
+  78 0014 08BD     		pop	{r3, pc}
+  79              		.cfi_endproc
+  80              	.LFE64:
+  81              		.size	WaterPump_fireWater, .-WaterPump_fireWater
+  82 0016 00BF     		.text
+  83              	.Letext0:
+  84              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+  85              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+  86              		.file 4 "Generated_Source\\PSoC5/core_cm3.h"
+  87              		.file 5 "Generated_Source\\PSoC5/Pin_WaterPump.h"
+  88              		.section	.debug_info,"",%progbits
+  89              	.Ldebug_info0:
+  90 0000 29010000 		.4byte	0x129
+  91 0004 0400     		.2byte	0x4
+  92 0006 00000000 		.4byte	.Ldebug_abbrev0
+  93 000a 04       		.byte	0x4
+  94 000b 01       		.uleb128 0x1
+  95 000c 3A000000 		.4byte	.LASF18
+  96 0010 0C       		.byte	0xc
+  97 0011 2E000000 		.4byte	.LASF19
+  98 0015 12010000 		.4byte	.LASF20
+  99 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 100 001d 00000000 		.4byte	0
+ 101 0021 00000000 		.4byte	.Ldebug_line0
+ 102 0025 02       		.uleb128 0x2
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccLY0sei.s 			page 3
+
+
+ 103 0026 01       		.byte	0x1
+ 104 0027 06       		.byte	0x6
+ 105 0028 C5010000 		.4byte	.LASF0
+ 106 002c 02       		.uleb128 0x2
+ 107 002d 01       		.byte	0x1
+ 108 002e 08       		.byte	0x8
+ 109 002f F1000000 		.4byte	.LASF1
+ 110 0033 02       		.uleb128 0x2
+ 111 0034 02       		.byte	0x2
+ 112 0035 05       		.byte	0x5
+ 113 0036 ED010000 		.4byte	.LASF2
+ 114 003a 02       		.uleb128 0x2
+ 115 003b 02       		.byte	0x2
+ 116 003c 07       		.byte	0x7
+ 117 003d 0E000000 		.4byte	.LASF3
+ 118 0041 03       		.uleb128 0x3
+ 119 0042 DD010000 		.4byte	.LASF9
+ 120 0046 02       		.byte	0x2
+ 121 0047 3F       		.byte	0x3f
+ 122 0048 4C000000 		.4byte	0x4c
+ 123 004c 02       		.uleb128 0x2
+ 124 004d 04       		.byte	0x4
+ 125 004e 05       		.byte	0x5
+ 126 004f 80010000 		.4byte	.LASF4
+ 127 0053 02       		.uleb128 0x2
+ 128 0054 04       		.byte	0x4
+ 129 0055 07       		.byte	0x7
+ 130 0056 C8000000 		.4byte	.LASF5
+ 131 005a 02       		.uleb128 0x2
+ 132 005b 08       		.byte	0x8
+ 133 005c 05       		.byte	0x5
+ 134 005d 00000000 		.4byte	.LASF6
+ 135 0061 02       		.uleb128 0x2
+ 136 0062 08       		.byte	0x8
+ 137 0063 07       		.byte	0x7
+ 138 0064 DA000000 		.4byte	.LASF7
+ 139 0068 04       		.uleb128 0x4
+ 140 0069 04       		.byte	0x4
+ 141 006a 05       		.byte	0x5
+ 142 006b 696E7400 		.ascii	"int\000"
+ 143 006f 02       		.uleb128 0x2
+ 144 0070 04       		.byte	0x4
+ 145 0071 07       		.byte	0x7
+ 146 0072 21000000 		.4byte	.LASF8
+ 147 0076 03       		.uleb128 0x3
+ 148 0077 F7010000 		.4byte	.LASF10
+ 149 007b 03       		.byte	0x3
+ 150 007c 2C       		.byte	0x2c
+ 151 007d 41000000 		.4byte	0x41
+ 152 0081 02       		.uleb128 0x2
+ 153 0082 04       		.byte	0x4
+ 154 0083 04       		.byte	0x4
+ 155 0084 E7010000 		.4byte	.LASF11
+ 156 0088 02       		.uleb128 0x2
+ 157 0089 08       		.byte	0x8
+ 158 008a 04       		.byte	0x4
+ 159 008b B1010000 		.4byte	.LASF12
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccLY0sei.s 			page 4
+
+
+ 160 008f 02       		.uleb128 0x2
+ 161 0090 01       		.byte	0x1
+ 162 0091 08       		.byte	0x8
+ 163 0092 0D010000 		.4byte	.LASF13
+ 164 0096 02       		.uleb128 0x2
+ 165 0097 08       		.byte	0x8
+ 166 0098 04       		.byte	0x4
+ 167 0099 D1010000 		.4byte	.LASF14
+ 168 009d 02       		.uleb128 0x2
+ 169 009e 04       		.byte	0x4
+ 170 009f 07       		.byte	0x7
+ 171 00a0 FF010000 		.4byte	.LASF15
+ 172 00a4 05       		.uleb128 0x5
+ 173 00a5 FF000000 		.4byte	.LASF16
+ 174 00a9 01       		.byte	0x1
+ 175 00aa 03       		.byte	0x3
+ 176 00ab 00000000 		.4byte	.LFB63
+ 177 00af 0A000000 		.4byte	.LFE63-.LFB63
+ 178 00b3 01       		.uleb128 0x1
+ 179 00b4 9C       		.byte	0x9c
+ 180 00b5 C9000000 		.4byte	0xc9
+ 181 00b9 06       		.uleb128 0x6
+ 182 00ba 08000000 		.4byte	.LVL0
+ 183 00be 21010000 		.4byte	0x121
+ 184 00c2 07       		.uleb128 0x7
+ 185 00c3 01       		.uleb128 0x1
+ 186 00c4 50       		.byte	0x50
+ 187 00c5 01       		.uleb128 0x1
+ 188 00c6 30       		.byte	0x30
+ 189 00c7 00       		.byte	0
+ 190 00c8 00       		.byte	0
+ 191 00c9 05       		.uleb128 0x5
+ 192 00ca 9D010000 		.4byte	.LASF17
+ 193 00ce 01       		.byte	0x1
+ 194 00cf 07       		.byte	0x7
+ 195 00d0 00000000 		.4byte	.LFB64
+ 196 00d4 16000000 		.4byte	.LFE64-.LFB64
+ 197 00d8 01       		.uleb128 0x1
+ 198 00d9 9C       		.byte	0x9c
+ 199 00da 10010000 		.4byte	0x110
+ 200 00de 08       		.uleb128 0x8
+ 201 00df 7800     		.ascii	"x\000"
+ 202 00e1 01       		.byte	0x1
+ 203 00e2 07       		.byte	0x7
+ 204 00e3 68000000 		.4byte	0x68
+ 205 00e7 00000000 		.4byte	.LLST0
+ 206 00eb 09       		.uleb128 0x9
+ 207 00ec 08000000 		.4byte	.LVL2
+ 208 00f0 21010000 		.4byte	0x121
+ 209 00f4 00010000 		.4byte	0x100
+ 210 00f8 07       		.uleb128 0x7
+ 211 00f9 01       		.uleb128 0x1
+ 212 00fa 50       		.byte	0x50
+ 213 00fb 03       		.uleb128 0x3
+ 214 00fc F3       		.byte	0xf3
+ 215 00fd 01       		.uleb128 0x1
+ 216 00fe 50       		.byte	0x50
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccLY0sei.s 			page 5
+
+
+ 217 00ff 00       		.byte	0
+ 218 0100 06       		.uleb128 0x6
+ 219 0101 14000000 		.4byte	.LVL5
+ 220 0105 21010000 		.4byte	0x121
+ 221 0109 07       		.uleb128 0x7
+ 222 010a 01       		.uleb128 0x1
+ 223 010b 50       		.byte	0x50
+ 224 010c 01       		.uleb128 0x1
+ 225 010d 31       		.byte	0x31
+ 226 010e 00       		.byte	0
+ 227 010f 00       		.byte	0
+ 228 0110 0A       		.uleb128 0xa
+ 229 0111 B8010000 		.4byte	.LASF21
+ 230 0115 04       		.byte	0x4
+ 231 0116 1207     		.2byte	0x712
+ 232 0118 1C010000 		.4byte	0x11c
+ 233 011c 0B       		.uleb128 0xb
+ 234 011d 76000000 		.4byte	0x76
+ 235 0121 0C       		.uleb128 0xc
+ 236 0122 89010000 		.4byte	.LASF22
+ 237 0126 89010000 		.4byte	.LASF22
+ 238 012a 05       		.byte	0x5
+ 239 012b 26       		.byte	0x26
+ 240 012c 00       		.byte	0
+ 241              		.section	.debug_abbrev,"",%progbits
+ 242              	.Ldebug_abbrev0:
+ 243 0000 01       		.uleb128 0x1
+ 244 0001 11       		.uleb128 0x11
+ 245 0002 01       		.byte	0x1
+ 246 0003 25       		.uleb128 0x25
+ 247 0004 0E       		.uleb128 0xe
+ 248 0005 13       		.uleb128 0x13
+ 249 0006 0B       		.uleb128 0xb
+ 250 0007 03       		.uleb128 0x3
+ 251 0008 0E       		.uleb128 0xe
+ 252 0009 1B       		.uleb128 0x1b
+ 253 000a 0E       		.uleb128 0xe
+ 254 000b 55       		.uleb128 0x55
+ 255 000c 17       		.uleb128 0x17
+ 256 000d 11       		.uleb128 0x11
+ 257 000e 01       		.uleb128 0x1
+ 258 000f 10       		.uleb128 0x10
+ 259 0010 17       		.uleb128 0x17
+ 260 0011 00       		.byte	0
+ 261 0012 00       		.byte	0
+ 262 0013 02       		.uleb128 0x2
+ 263 0014 24       		.uleb128 0x24
+ 264 0015 00       		.byte	0
+ 265 0016 0B       		.uleb128 0xb
+ 266 0017 0B       		.uleb128 0xb
+ 267 0018 3E       		.uleb128 0x3e
+ 268 0019 0B       		.uleb128 0xb
+ 269 001a 03       		.uleb128 0x3
+ 270 001b 0E       		.uleb128 0xe
+ 271 001c 00       		.byte	0
+ 272 001d 00       		.byte	0
+ 273 001e 03       		.uleb128 0x3
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccLY0sei.s 			page 6
+
+
+ 274 001f 16       		.uleb128 0x16
+ 275 0020 00       		.byte	0
+ 276 0021 03       		.uleb128 0x3
+ 277 0022 0E       		.uleb128 0xe
+ 278 0023 3A       		.uleb128 0x3a
+ 279 0024 0B       		.uleb128 0xb
+ 280 0025 3B       		.uleb128 0x3b
+ 281 0026 0B       		.uleb128 0xb
+ 282 0027 49       		.uleb128 0x49
+ 283 0028 13       		.uleb128 0x13
+ 284 0029 00       		.byte	0
+ 285 002a 00       		.byte	0
+ 286 002b 04       		.uleb128 0x4
+ 287 002c 24       		.uleb128 0x24
+ 288 002d 00       		.byte	0
+ 289 002e 0B       		.uleb128 0xb
+ 290 002f 0B       		.uleb128 0xb
+ 291 0030 3E       		.uleb128 0x3e
+ 292 0031 0B       		.uleb128 0xb
+ 293 0032 03       		.uleb128 0x3
+ 294 0033 08       		.uleb128 0x8
+ 295 0034 00       		.byte	0
+ 296 0035 00       		.byte	0
+ 297 0036 05       		.uleb128 0x5
+ 298 0037 2E       		.uleb128 0x2e
+ 299 0038 01       		.byte	0x1
+ 300 0039 3F       		.uleb128 0x3f
+ 301 003a 19       		.uleb128 0x19
+ 302 003b 03       		.uleb128 0x3
+ 303 003c 0E       		.uleb128 0xe
+ 304 003d 3A       		.uleb128 0x3a
+ 305 003e 0B       		.uleb128 0xb
+ 306 003f 3B       		.uleb128 0x3b
+ 307 0040 0B       		.uleb128 0xb
+ 308 0041 27       		.uleb128 0x27
+ 309 0042 19       		.uleb128 0x19
+ 310 0043 11       		.uleb128 0x11
+ 311 0044 01       		.uleb128 0x1
+ 312 0045 12       		.uleb128 0x12
+ 313 0046 06       		.uleb128 0x6
+ 314 0047 40       		.uleb128 0x40
+ 315 0048 18       		.uleb128 0x18
+ 316 0049 9742     		.uleb128 0x2117
+ 317 004b 19       		.uleb128 0x19
+ 318 004c 01       		.uleb128 0x1
+ 319 004d 13       		.uleb128 0x13
+ 320 004e 00       		.byte	0
+ 321 004f 00       		.byte	0
+ 322 0050 06       		.uleb128 0x6
+ 323 0051 898201   		.uleb128 0x4109
+ 324 0054 01       		.byte	0x1
+ 325 0055 11       		.uleb128 0x11
+ 326 0056 01       		.uleb128 0x1
+ 327 0057 31       		.uleb128 0x31
+ 328 0058 13       		.uleb128 0x13
+ 329 0059 00       		.byte	0
+ 330 005a 00       		.byte	0
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccLY0sei.s 			page 7
+
+
+ 331 005b 07       		.uleb128 0x7
+ 332 005c 8A8201   		.uleb128 0x410a
+ 333 005f 00       		.byte	0
+ 334 0060 02       		.uleb128 0x2
+ 335 0061 18       		.uleb128 0x18
+ 336 0062 9142     		.uleb128 0x2111
+ 337 0064 18       		.uleb128 0x18
+ 338 0065 00       		.byte	0
+ 339 0066 00       		.byte	0
+ 340 0067 08       		.uleb128 0x8
+ 341 0068 05       		.uleb128 0x5
+ 342 0069 00       		.byte	0
+ 343 006a 03       		.uleb128 0x3
+ 344 006b 08       		.uleb128 0x8
+ 345 006c 3A       		.uleb128 0x3a
+ 346 006d 0B       		.uleb128 0xb
+ 347 006e 3B       		.uleb128 0x3b
+ 348 006f 0B       		.uleb128 0xb
+ 349 0070 49       		.uleb128 0x49
+ 350 0071 13       		.uleb128 0x13
+ 351 0072 02       		.uleb128 0x2
+ 352 0073 17       		.uleb128 0x17
+ 353 0074 00       		.byte	0
+ 354 0075 00       		.byte	0
+ 355 0076 09       		.uleb128 0x9
+ 356 0077 898201   		.uleb128 0x4109
+ 357 007a 01       		.byte	0x1
+ 358 007b 11       		.uleb128 0x11
+ 359 007c 01       		.uleb128 0x1
+ 360 007d 31       		.uleb128 0x31
+ 361 007e 13       		.uleb128 0x13
+ 362 007f 01       		.uleb128 0x1
+ 363 0080 13       		.uleb128 0x13
+ 364 0081 00       		.byte	0
+ 365 0082 00       		.byte	0
+ 366 0083 0A       		.uleb128 0xa
+ 367 0084 34       		.uleb128 0x34
+ 368 0085 00       		.byte	0
+ 369 0086 03       		.uleb128 0x3
+ 370 0087 0E       		.uleb128 0xe
+ 371 0088 3A       		.uleb128 0x3a
+ 372 0089 0B       		.uleb128 0xb
+ 373 008a 3B       		.uleb128 0x3b
+ 374 008b 05       		.uleb128 0x5
+ 375 008c 49       		.uleb128 0x49
+ 376 008d 13       		.uleb128 0x13
+ 377 008e 3F       		.uleb128 0x3f
+ 378 008f 19       		.uleb128 0x19
+ 379 0090 3C       		.uleb128 0x3c
+ 380 0091 19       		.uleb128 0x19
+ 381 0092 00       		.byte	0
+ 382 0093 00       		.byte	0
+ 383 0094 0B       		.uleb128 0xb
+ 384 0095 35       		.uleb128 0x35
+ 385 0096 00       		.byte	0
+ 386 0097 49       		.uleb128 0x49
+ 387 0098 13       		.uleb128 0x13
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccLY0sei.s 			page 8
+
+
+ 388 0099 00       		.byte	0
+ 389 009a 00       		.byte	0
+ 390 009b 0C       		.uleb128 0xc
+ 391 009c 2E       		.uleb128 0x2e
+ 392 009d 00       		.byte	0
+ 393 009e 3F       		.uleb128 0x3f
+ 394 009f 19       		.uleb128 0x19
+ 395 00a0 3C       		.uleb128 0x3c
+ 396 00a1 19       		.uleb128 0x19
+ 397 00a2 6E       		.uleb128 0x6e
+ 398 00a3 0E       		.uleb128 0xe
+ 399 00a4 03       		.uleb128 0x3
+ 400 00a5 0E       		.uleb128 0xe
+ 401 00a6 3A       		.uleb128 0x3a
+ 402 00a7 0B       		.uleb128 0xb
+ 403 00a8 3B       		.uleb128 0x3b
+ 404 00a9 0B       		.uleb128 0xb
+ 405 00aa 00       		.byte	0
+ 406 00ab 00       		.byte	0
+ 407 00ac 00       		.byte	0
+ 408              		.section	.debug_loc,"",%progbits
+ 409              	.Ldebug_loc0:
+ 410              	.LLST0:
+ 411 0000 00000000 		.4byte	.LVL1
+ 412 0004 07000000 		.4byte	.LVL2-1
+ 413 0008 0100     		.2byte	0x1
+ 414 000a 50       		.byte	0x50
+ 415 000b 07000000 		.4byte	.LVL2-1
+ 416 000f 0A000000 		.4byte	.LVL3
+ 417 0013 0400     		.2byte	0x4
+ 418 0015 F3       		.byte	0xf3
+ 419 0016 01       		.uleb128 0x1
+ 420 0017 50       		.byte	0x50
+ 421 0018 9F       		.byte	0x9f
+ 422 0019 0A000000 		.4byte	.LVL3
+ 423 001d 10000000 		.4byte	.LVL4
+ 424 0021 0100     		.2byte	0x1
+ 425 0023 50       		.byte	0x50
+ 426 0024 10000000 		.4byte	.LVL4
+ 427 0028 16000000 		.4byte	.LFE64
+ 428 002c 0400     		.2byte	0x4
+ 429 002e F3       		.byte	0xf3
+ 430 002f 01       		.uleb128 0x1
+ 431 0030 50       		.byte	0x50
+ 432 0031 9F       		.byte	0x9f
+ 433 0032 00000000 		.4byte	0
+ 434 0036 00000000 		.4byte	0
+ 435              		.section	.debug_aranges,"",%progbits
+ 436 0000 24000000 		.4byte	0x24
+ 437 0004 0200     		.2byte	0x2
+ 438 0006 00000000 		.4byte	.Ldebug_info0
+ 439 000a 04       		.byte	0x4
+ 440 000b 00       		.byte	0
+ 441 000c 0000     		.2byte	0
+ 442 000e 0000     		.2byte	0
+ 443 0010 00000000 		.4byte	.LFB63
+ 444 0014 0A000000 		.4byte	.LFE63-.LFB63
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccLY0sei.s 			page 9
+
+
+ 445 0018 00000000 		.4byte	.LFB64
+ 446 001c 16000000 		.4byte	.LFE64-.LFB64
+ 447 0020 00000000 		.4byte	0
+ 448 0024 00000000 		.4byte	0
+ 449              		.section	.debug_ranges,"",%progbits
+ 450              	.Ldebug_ranges0:
+ 451 0000 00000000 		.4byte	.LFB63
+ 452 0004 0A000000 		.4byte	.LFE63
+ 453 0008 00000000 		.4byte	.LFB64
+ 454 000c 16000000 		.4byte	.LFE64
+ 455 0010 00000000 		.4byte	0
+ 456 0014 00000000 		.4byte	0
+ 457              		.section	.debug_line,"",%progbits
+ 458              	.Ldebug_line0:
+ 459 0000 7C010000 		.section	.debug_str,"MS",%progbits,1
+ 459      02005701 
+ 459      00000201 
+ 459      FB0E0D00 
+ 459      01010101 
+ 460              	.LASF6:
+ 461 0000 6C6F6E67 		.ascii	"long long int\000"
+ 461      206C6F6E 
+ 461      6720696E 
+ 461      7400
+ 462              	.LASF3:
+ 463 000e 73686F72 		.ascii	"short unsigned int\000"
+ 463      7420756E 
+ 463      7369676E 
+ 463      65642069 
+ 463      6E7400
+ 464              	.LASF8:
+ 465 0021 756E7369 		.ascii	"unsigned int\000"
+ 465      676E6564 
+ 465      20696E74 
+ 465      00
+ 466              	.LASF19:
+ 467 002e 57617465 		.ascii	"WaterPump.c\000"
+ 467      7250756D 
+ 467      702E6300 
+ 468              	.LASF18:
+ 469 003a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 469      43313120 
+ 469      352E342E 
+ 469      31203230 
+ 469      31363036 
+ 470 006d 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 470      20726576 
+ 470      6973696F 
+ 470      6E203233 
+ 470      37373135 
+ 471 00a0 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 471      66756E63 
+ 471      74696F6E 
+ 471      2D736563 
+ 471      74696F6E 
+ 472              	.LASF5:
+ 473 00c8 6C6F6E67 		.ascii	"long unsigned int\000"
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccLY0sei.s 			page 10
+
+
+ 473      20756E73 
+ 473      69676E65 
+ 473      6420696E 
+ 473      7400
+ 474              	.LASF7:
+ 475 00da 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 475      206C6F6E 
+ 475      6720756E 
+ 475      7369676E 
+ 475      65642069 
+ 476              	.LASF1:
+ 477 00f1 756E7369 		.ascii	"unsigned char\000"
+ 477      676E6564 
+ 477      20636861 
+ 477      7200
+ 478              	.LASF16:
+ 479 00ff 696E6974 		.ascii	"initWaterPump\000"
+ 479      57617465 
+ 479      7250756D 
+ 479      7000
+ 480              	.LASF13:
+ 481 010d 63686172 		.ascii	"char\000"
+ 481      00
+ 482              	.LASF20:
+ 483 0112 443A5C4F 		.ascii	"D:\\OneDrive - Aarhus Universitet\\Aarhus Universit"
+ 483      6E654472 
+ 483      69766520 
+ 483      2D204161 
+ 483      72687573 
+ 484 0143 65745C45 		.ascii	"et\\E3\\E3PRJ\\I3E3PRJ_Repo\\PSoCcontroller\\PSoCco"
+ 484      335C4533 
+ 484      50524A5C 
+ 484      49334533 
+ 484      50524A5F 
+ 485 0171 6E74726F 		.ascii	"ntroller.cydsn\000"
+ 485      6C6C6572 
+ 485      2E637964 
+ 485      736E00
+ 486              	.LASF4:
+ 487 0180 6C6F6E67 		.ascii	"long int\000"
+ 487      20696E74 
+ 487      00
+ 488              	.LASF22:
+ 489 0189 50696E5F 		.ascii	"Pin_WaterPump_Write\000"
+ 489      57617465 
+ 489      7250756D 
+ 489      705F5772 
+ 489      69746500 
+ 490              	.LASF17:
+ 491 019d 57617465 		.ascii	"WaterPump_fireWater\000"
+ 491      7250756D 
+ 491      705F6669 
+ 491      72655761 
+ 491      74657200 
+ 492              	.LASF12:
+ 493 01b1 646F7562 		.ascii	"double\000"
+ 493      6C6500
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccLY0sei.s 			page 11
+
+
+ 494              	.LASF21:
+ 495 01b8 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 495      52784275 
+ 495      66666572 
+ 495      00
+ 496              	.LASF0:
+ 497 01c5 7369676E 		.ascii	"signed char\000"
+ 497      65642063 
+ 497      68617200 
+ 498              	.LASF14:
+ 499 01d1 6C6F6E67 		.ascii	"long double\000"
+ 499      20646F75 
+ 499      626C6500 
+ 500              	.LASF9:
+ 501 01dd 5F5F696E 		.ascii	"__int32_t\000"
+ 501      7433325F 
+ 501      7400
+ 502              	.LASF11:
+ 503 01e7 666C6F61 		.ascii	"float\000"
+ 503      7400
+ 504              	.LASF2:
+ 505 01ed 73686F72 		.ascii	"short int\000"
+ 505      7420696E 
+ 505      7400
+ 506              	.LASF10:
+ 507 01f7 696E7433 		.ascii	"int32_t\000"
+ 507      325F7400 
+ 508              	.LASF15:
+ 509 01ff 73697A65 		.ascii	"sizetype\000"
+ 509      74797065 
+ 509      00
+ 510              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

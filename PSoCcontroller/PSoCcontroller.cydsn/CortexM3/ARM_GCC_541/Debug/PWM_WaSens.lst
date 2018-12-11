@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
   28:Generated_Source\PSoC5/PWM_WaSens.c ****     #error PWM_v3_30 detected with a constant 0 for the enable or \
   29:Generated_Source\PSoC5/PWM_WaSens.c ****          constant 1 for reset. This will prevent the component from operating.
   30:Generated_Source\PSoC5/PWM_WaSens.c **** #endif /* PWM_WaSens_PWMUDB_genblk1_ctrlreg__REMOVED */
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 2
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 2
 
 
   31:Generated_Source\PSoC5/PWM_WaSens.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
   85:Generated_Source\PSoC5/PWM_WaSens.c **** {
   86:Generated_Source\PSoC5/PWM_WaSens.c ****     #if (PWM_WaSens_UsingFixedFunction || PWM_WaSens_UseControl)
   87:Generated_Source\PSoC5/PWM_WaSens.c ****         uint8 ctrl;
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 3
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 3
 
 
   88:Generated_Source\PSoC5/PWM_WaSens.c ****     #endif /* (PWM_WaSens_UsingFixedFunction || PWM_WaSens_UseControl) */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  142:Generated_Source\PSoC5/PWM_WaSens.c ****             PWM_WaSens_WriteCompare2(PWM_WaSens_INIT_COMPARE_VALUE2);
  143:Generated_Source\PSoC5/PWM_WaSens.c ****         #endif /* (PWM_WaSens_UseOneCompareMode) */
  144:Generated_Source\PSoC5/PWM_WaSens.c **** 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 4
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 4
 
 
  145:Generated_Source\PSoC5/PWM_WaSens.c ****         #if (PWM_WaSens_KillModeMinTime)
@@ -238,13 +238,25 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  199:Generated_Source\PSoC5/PWM_WaSens.c **** void PWM_WaSens_Enable(void) 
  200:Generated_Source\PSoC5/PWM_WaSens.c **** {
   28              		.loc 1 200 0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 5
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 5
 
 
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 0
   31              		@ frame_needed = 0, uses_anonymous_args = 0
   32              		@ link register save eliminated.
+  33 0000 7047     		bx	lr
+  34              		.cfi_endproc
+  35              	.LFE2:
+  36              		.size	PWM_WaSens_Enable, .-PWM_WaSens_Enable
+  37 0002 00BF     		.section	.text.PWM_WaSens_Stop,"ax",%progbits
+  38              		.align	2
+  39              		.global	PWM_WaSens_Stop
+  40              		.thumb
+  41              		.thumb_func
+  42              		.type	PWM_WaSens_Stop, %function
+  43              	PWM_WaSens_Stop:
+  44              	.LFB3:
  201:Generated_Source\PSoC5/PWM_WaSens.c ****     /* Globally Enable the Fixed Function Block chosen */
  202:Generated_Source\PSoC5/PWM_WaSens.c ****     #if (PWM_WaSens_UsingFixedFunction)
  203:Generated_Source\PSoC5/PWM_WaSens.c ****         PWM_WaSens_GLOBAL_ENABLE |= PWM_WaSens_BLOCK_EN_MASK;
@@ -254,27 +266,6 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  207:Generated_Source\PSoC5/PWM_WaSens.c ****     /* Enable the PWM from the control register  */
  208:Generated_Source\PSoC5/PWM_WaSens.c ****     #if (PWM_WaSens_UseControl || PWM_WaSens_UsingFixedFunction)
  209:Generated_Source\PSoC5/PWM_WaSens.c ****         PWM_WaSens_CONTROL |= PWM_WaSens_CTRL_ENABLE;
-  33              		.loc 1 209 0
-  34 0000 024A     		ldr	r2, .L2
-  35 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
-  36 0004 43F08003 		orr	r3, r3, #128
-  37 0008 1370     		strb	r3, [r2]
-  38 000a 7047     		bx	lr
-  39              	.L3:
-  40              		.align	2
-  41              	.L2:
-  42 000c 73640040 		.word	1073767539
-  43              		.cfi_endproc
-  44              	.LFE2:
-  45              		.size	PWM_WaSens_Enable, .-PWM_WaSens_Enable
-  46              		.section	.text.PWM_WaSens_Stop,"ax",%progbits
-  47              		.align	2
-  48              		.global	PWM_WaSens_Stop
-  49              		.thumb
-  50              		.thumb_func
-  51              		.type	PWM_WaSens_Stop, %function
-  52              	PWM_WaSens_Stop:
-  53              	.LFB3:
  210:Generated_Source\PSoC5/PWM_WaSens.c ****     #endif /* (PWM_WaSens_UseControl || PWM_WaSens_UsingFixedFunction) */
  211:Generated_Source\PSoC5/PWM_WaSens.c **** }
  212:Generated_Source\PSoC5/PWM_WaSens.c **** 
@@ -298,39 +289,30 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  230:Generated_Source\PSoC5/PWM_WaSens.c **** *  has no effect on the operation of the PWM
  231:Generated_Source\PSoC5/PWM_WaSens.c **** *
  232:Generated_Source\PSoC5/PWM_WaSens.c **** *******************************************************************************/
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 6
-
-
  233:Generated_Source\PSoC5/PWM_WaSens.c **** void PWM_WaSens_Stop(void) 
  234:Generated_Source\PSoC5/PWM_WaSens.c **** {
-  54              		.loc 1 234 0
-  55              		.cfi_startproc
-  56              		@ args = 0, pretend = 0, frame = 0
-  57              		@ frame_needed = 0, uses_anonymous_args = 0
-  58              		@ link register save eliminated.
+  45              		.loc 1 234 0
+  46              		.cfi_startproc
+  47              		@ args = 0, pretend = 0, frame = 0
+  48              		@ frame_needed = 0, uses_anonymous_args = 0
+  49              		@ link register save eliminated.
+  50 0000 7047     		bx	lr
+  51              		.cfi_endproc
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 6
+
+
+  52              	.LFE3:
+  53              		.size	PWM_WaSens_Stop, .-PWM_WaSens_Stop
+  54 0002 00BF     		.section	.text.PWM_WaSens_WriteCounter,"ax",%progbits
+  55              		.align	2
+  56              		.global	PWM_WaSens_WriteCounter
+  57              		.thumb
+  58              		.thumb_func
+  59              		.type	PWM_WaSens_WriteCounter, %function
+  60              	PWM_WaSens_WriteCounter:
+  61              	.LFB4:
  235:Generated_Source\PSoC5/PWM_WaSens.c ****     #if (PWM_WaSens_UseControl || PWM_WaSens_UsingFixedFunction)
  236:Generated_Source\PSoC5/PWM_WaSens.c ****         PWM_WaSens_CONTROL &= ((uint8)(~PWM_WaSens_CTRL_ENABLE));
-  59              		.loc 1 236 0
-  60 0000 024A     		ldr	r2, .L5
-  61 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
-  62 0004 03F07F03 		and	r3, r3, #127
-  63 0008 1370     		strb	r3, [r2]
-  64 000a 7047     		bx	lr
-  65              	.L6:
-  66              		.align	2
-  67              	.L5:
-  68 000c 73640040 		.word	1073767539
-  69              		.cfi_endproc
-  70              	.LFE3:
-  71              		.size	PWM_WaSens_Stop, .-PWM_WaSens_Stop
-  72              		.section	.text.PWM_WaSens_WriteCounter,"ax",%progbits
-  73              		.align	2
-  74              		.global	PWM_WaSens_WriteCounter
-  75              		.thumb
-  76              		.thumb_func
-  77              		.type	PWM_WaSens_WriteCounter, %function
-  78              	PWM_WaSens_WriteCounter:
-  79              	.LFB4:
  237:Generated_Source\PSoC5/PWM_WaSens.c ****     #endif /* (PWM_WaSens_UseControl || PWM_WaSens_UsingFixedFunction) */
  238:Generated_Source\PSoC5/PWM_WaSens.c **** 
  239:Generated_Source\PSoC5/PWM_WaSens.c ****     /* Globally disable the Fixed Function Block chosen */
@@ -358,9 +340,6 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  261:Generated_Source\PSoC5/PWM_WaSens.c ****         *
  262:Generated_Source\PSoC5/PWM_WaSens.c ****         * Return:
  263:Generated_Source\PSoC5/PWM_WaSens.c ****         *  None
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 7
-
-
  264:Generated_Source\PSoC5/PWM_WaSens.c ****         *
  265:Generated_Source\PSoC5/PWM_WaSens.c ****         *******************************************************************************/
  266:Generated_Source\PSoC5/PWM_WaSens.c ****         void PWM_WaSens_SetCompareMode(uint8 comparemode) 
@@ -379,6 +358,9 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  279:Generated_Source\PSoC5/PWM_WaSens.c ****             #elif (PWM_WaSens_UseControl)
  280:Generated_Source\PSoC5/PWM_WaSens.c **** 
  281:Generated_Source\PSoC5/PWM_WaSens.c ****                 #if(0 != PWM_WaSens_CTRL_CMPMODE1_SHIFT)
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 7
+
+
  282:Generated_Source\PSoC5/PWM_WaSens.c ****                     uint8 comparemode1masked = ((uint8)((uint8)comparemode << PWM_WaSens_CTRL_CMPMO
  283:Generated_Source\PSoC5/PWM_WaSens.c ****                                                 PWM_WaSens_CTRL_CMPMODE1_MASK;
  284:Generated_Source\PSoC5/PWM_WaSens.c ****                 #else
@@ -418,9 +400,6 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  318:Generated_Source\PSoC5/PWM_WaSens.c ****         * Parameters:
  319:Generated_Source\PSoC5/PWM_WaSens.c ****         *  comparemode:  The new compare mode for the PWM output. Use the compare types
  320:Generated_Source\PSoC5/PWM_WaSens.c ****         *                defined in the H file as input arguments.
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 8
-
-
  321:Generated_Source\PSoC5/PWM_WaSens.c ****         *
  322:Generated_Source\PSoC5/PWM_WaSens.c ****         * Return:
  323:Generated_Source\PSoC5/PWM_WaSens.c ****         *  None
@@ -439,6 +418,9 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  336:Generated_Source\PSoC5/PWM_WaSens.c ****                 PWM_WaSens_CONTROL &= ((uint8)(~PWM_WaSens_CTRL_CMPMODE1_MASK)); /*Clear existing m
  337:Generated_Source\PSoC5/PWM_WaSens.c ****                 PWM_WaSens_CONTROL |= comparemodemasked;
  338:Generated_Source\PSoC5/PWM_WaSens.c ****             #endif /* (PWM_WaSens_UseControl) */
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 8
+
+
  339:Generated_Source\PSoC5/PWM_WaSens.c ****         }
  340:Generated_Source\PSoC5/PWM_WaSens.c ****     #endif /* PWM_WaSens_CompareMode1SW */
  341:Generated_Source\PSoC5/PWM_WaSens.c **** 
@@ -478,9 +460,6 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  375:Generated_Source\PSoC5/PWM_WaSens.c ****     #endif /*PWM_WaSens_CompareMode2SW */
  376:Generated_Source\PSoC5/PWM_WaSens.c **** 
  377:Generated_Source\PSoC5/PWM_WaSens.c **** #endif /* UseOneCompareMode */
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 9
-
-
  378:Generated_Source\PSoC5/PWM_WaSens.c **** 
  379:Generated_Source\PSoC5/PWM_WaSens.c **** 
  380:Generated_Source\PSoC5/PWM_WaSens.c **** #if (!PWM_WaSens_UsingFixedFunction)
@@ -499,6 +478,9 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  393:Generated_Source\PSoC5/PWM_WaSens.c ****     * Parameters:
  394:Generated_Source\PSoC5/PWM_WaSens.c ****     *  counter:  The period new period counter value.
  395:Generated_Source\PSoC5/PWM_WaSens.c ****     *
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 9
+
+
  396:Generated_Source\PSoC5/PWM_WaSens.c ****     * Return:
  397:Generated_Source\PSoC5/PWM_WaSens.c ****     *  None
  398:Generated_Source\PSoC5/PWM_WaSens.c ****     *
@@ -509,38 +491,35 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  403:Generated_Source\PSoC5/PWM_WaSens.c ****     void PWM_WaSens_WriteCounter(uint8 counter) \
  404:Generated_Source\PSoC5/PWM_WaSens.c ****                                        
  405:Generated_Source\PSoC5/PWM_WaSens.c ****     {
-  80              		.loc 1 405 0
-  81              		.cfi_startproc
-  82              		@ args = 0, pretend = 0, frame = 0
-  83              		@ frame_needed = 0, uses_anonymous_args = 0
-  84              		@ link register save eliminated.
-  85              	.LVL0:
+  62              		.loc 1 405 0
+  63              		.cfi_startproc
+  64              		@ args = 0, pretend = 0, frame = 0
+  65              		@ frame_needed = 0, uses_anonymous_args = 0
+  66              		@ link register save eliminated.
+  67              	.LVL0:
  406:Generated_Source\PSoC5/PWM_WaSens.c ****         CY_SET_REG8(PWM_WaSens_COUNTER_LSB_PTR, counter);
-  86              		.loc 1 406 0
-  87 0000 014B     		ldr	r3, .L8
-  88 0002 1870     		strb	r0, [r3]
-  89 0004 7047     		bx	lr
-  90              	.L9:
-  91 0006 00BF     		.align	2
-  92              	.L8:
-  93 0008 03640040 		.word	1073767427
-  94              		.cfi_endproc
-  95              	.LFE4:
-  96              		.size	PWM_WaSens_WriteCounter, .-PWM_WaSens_WriteCounter
-  97              		.section	.text.PWM_WaSens_ReadCounter,"ax",%progbits
-  98              		.align	2
-  99              		.global	PWM_WaSens_ReadCounter
- 100              		.thumb
- 101              		.thumb_func
- 102              		.type	PWM_WaSens_ReadCounter, %function
- 103              	PWM_WaSens_ReadCounter:
- 104              	.LFB5:
+  68              		.loc 1 406 0
+  69 0000 014B     		ldr	r3, .L4
+  70 0002 1870     		strb	r0, [r3]
+  71 0004 7047     		bx	lr
+  72              	.L5:
+  73 0006 00BF     		.align	2
+  74              	.L4:
+  75 0008 06640040 		.word	1073767430
+  76              		.cfi_endproc
+  77              	.LFE4:
+  78              		.size	PWM_WaSens_WriteCounter, .-PWM_WaSens_WriteCounter
+  79              		.section	.text.PWM_WaSens_ReadCounter,"ax",%progbits
+  80              		.align	2
+  81              		.global	PWM_WaSens_ReadCounter
+  82              		.thumb
+  83              		.thumb_func
+  84              		.type	PWM_WaSens_ReadCounter, %function
+  85              	PWM_WaSens_ReadCounter:
+  86              	.LFB5:
  407:Generated_Source\PSoC5/PWM_WaSens.c ****     }
  408:Generated_Source\PSoC5/PWM_WaSens.c **** 
  409:Generated_Source\PSoC5/PWM_WaSens.c **** 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 10
-
-
  410:Generated_Source\PSoC5/PWM_WaSens.c ****     /*******************************************************************************
  411:Generated_Source\PSoC5/PWM_WaSens.c ****     * Function Name: PWM_WaSens_ReadCounter
  412:Generated_Source\PSoC5/PWM_WaSens.c ****     ********************************************************************************
@@ -558,49 +537,49 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  424:Generated_Source\PSoC5/PWM_WaSens.c ****     *******************************************************************************/
  425:Generated_Source\PSoC5/PWM_WaSens.c ****     uint8 PWM_WaSens_ReadCounter(void) 
  426:Generated_Source\PSoC5/PWM_WaSens.c ****     {
- 105              		.loc 1 426 0
- 106              		.cfi_startproc
- 107              		@ args = 0, pretend = 0, frame = 0
- 108              		@ frame_needed = 0, uses_anonymous_args = 0
- 109              		@ link register save eliminated.
+  87              		.loc 1 426 0
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 10
+
+
+  88              		.cfi_startproc
+  89              		@ args = 0, pretend = 0, frame = 0
+  90              		@ frame_needed = 0, uses_anonymous_args = 0
+  91              		@ link register save eliminated.
  427:Generated_Source\PSoC5/PWM_WaSens.c ****         /* Force capture by reading Accumulator */
  428:Generated_Source\PSoC5/PWM_WaSens.c ****         /* Must first do a software capture to be able to read the counter */
  429:Generated_Source\PSoC5/PWM_WaSens.c ****         /* It is up to the user code to make sure there isn't already captured data in the FIFO */
  430:Generated_Source\PSoC5/PWM_WaSens.c ****           (void)CY_GET_REG8(PWM_WaSens_COUNTERCAP_LSB_PTR_8BIT);
- 110              		.loc 1 430 0
- 111 0000 024B     		ldr	r3, .L11
- 112 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  92              		.loc 1 430 0
+  93 0000 024B     		ldr	r3, .L7
+  94 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  431:Generated_Source\PSoC5/PWM_WaSens.c **** 
  432:Generated_Source\PSoC5/PWM_WaSens.c ****         /* Read the data from the FIFO */
  433:Generated_Source\PSoC5/PWM_WaSens.c ****         return (CY_GET_REG8(PWM_WaSens_CAPTURE_LSB_PTR));
- 113              		.loc 1 433 0
- 114 0004 024B     		ldr	r3, .L11+4
- 115 0006 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+  95              		.loc 1 433 0
+  96 0004 024B     		ldr	r3, .L7+4
+  97 0006 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
  434:Generated_Source\PSoC5/PWM_WaSens.c ****     }
- 116              		.loc 1 434 0
- 117 0008 7047     		bx	lr
- 118              	.L12:
- 119 000a 00BF     		.align	2
- 120              	.L11:
- 121 000c 13640040 		.word	1073767443
- 122 0010 53640040 		.word	1073767507
- 123              		.cfi_endproc
- 124              	.LFE5:
- 125              		.size	PWM_WaSens_ReadCounter, .-PWM_WaSens_ReadCounter
- 126              		.section	.text.PWM_WaSens_WritePeriod,"ax",%progbits
- 127              		.align	2
- 128              		.global	PWM_WaSens_WritePeriod
- 129              		.thumb
- 130              		.thumb_func
- 131              		.type	PWM_WaSens_WritePeriod, %function
- 132              	PWM_WaSens_WritePeriod:
- 133              	.LFB7:
+  98              		.loc 1 434 0
+  99 0008 7047     		bx	lr
+ 100              	.L8:
+ 101 000a 00BF     		.align	2
+ 102              	.L7:
+ 103 000c 16640040 		.word	1073767446
+ 104 0010 56640040 		.word	1073767510
+ 105              		.cfi_endproc
+ 106              	.LFE5:
+ 107              		.size	PWM_WaSens_ReadCounter, .-PWM_WaSens_ReadCounter
+ 108              		.section	.text.PWM_WaSens_WritePeriod,"ax",%progbits
+ 109              		.align	2
+ 110              		.global	PWM_WaSens_WritePeriod
+ 111              		.thumb
+ 112              		.thumb_func
+ 113              		.type	PWM_WaSens_WritePeriod, %function
+ 114              	PWM_WaSens_WritePeriod:
+ 115              	.LFB7:
  435:Generated_Source\PSoC5/PWM_WaSens.c **** 
  436:Generated_Source\PSoC5/PWM_WaSens.c ****     #if (PWM_WaSens_UseStatus)
  437:Generated_Source\PSoC5/PWM_WaSens.c **** 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 11
-
-
  438:Generated_Source\PSoC5/PWM_WaSens.c **** 
  439:Generated_Source\PSoC5/PWM_WaSens.c ****         /*******************************************************************************
  440:Generated_Source\PSoC5/PWM_WaSens.c ****         * Function Name: PWM_WaSens_ClearFIFO
@@ -619,6 +598,9 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  453:Generated_Source\PSoC5/PWM_WaSens.c ****         void PWM_WaSens_ClearFIFO(void) 
  454:Generated_Source\PSoC5/PWM_WaSens.c ****         {
  455:Generated_Source\PSoC5/PWM_WaSens.c ****             while(0u != (PWM_WaSens_ReadStatusRegister() & PWM_WaSens_STATUS_FIFONEMPTY))
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 11
+
+
  456:Generated_Source\PSoC5/PWM_WaSens.c ****             {
  457:Generated_Source\PSoC5/PWM_WaSens.c ****                 (void)PWM_WaSens_ReadCapture();
  458:Generated_Source\PSoC5/PWM_WaSens.c ****             }
@@ -647,38 +629,38 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  481:Generated_Source\PSoC5/PWM_WaSens.c **** *******************************************************************************/
  482:Generated_Source\PSoC5/PWM_WaSens.c **** void PWM_WaSens_WritePeriod(uint8 period) 
  483:Generated_Source\PSoC5/PWM_WaSens.c **** {
- 134              		.loc 1 483 0
- 135              		.cfi_startproc
- 136              		@ args = 0, pretend = 0, frame = 0
- 137              		@ frame_needed = 0, uses_anonymous_args = 0
- 138              		@ link register save eliminated.
- 139              	.LVL1:
+ 116              		.loc 1 483 0
+ 117              		.cfi_startproc
+ 118              		@ args = 0, pretend = 0, frame = 0
+ 119              		@ frame_needed = 0, uses_anonymous_args = 0
+ 120              		@ link register save eliminated.
+ 121              	.LVL1:
  484:Generated_Source\PSoC5/PWM_WaSens.c ****     #if(PWM_WaSens_UsingFixedFunction)
  485:Generated_Source\PSoC5/PWM_WaSens.c ****         CY_SET_REG16(PWM_WaSens_PERIOD_LSB_PTR, (uint16)period);
  486:Generated_Source\PSoC5/PWM_WaSens.c ****     #else
  487:Generated_Source\PSoC5/PWM_WaSens.c ****         CY_SET_REG8(PWM_WaSens_PERIOD_LSB_PTR, period);
- 140              		.loc 1 487 0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 12
+ 122              		.loc 1 487 0
+ 123 0000 014B     		ldr	r3, .L10
+ 124 0002 1870     		strb	r0, [r3]
+ 125 0004 7047     		bx	lr
+ 126              	.L11:
+ 127 0006 00BF     		.align	2
+ 128              	.L10:
+ 129 0008 46640040 		.word	1073767494
+ 130              		.cfi_endproc
+ 131              	.LFE7:
+ 132              		.size	PWM_WaSens_WritePeriod, .-PWM_WaSens_WritePeriod
+ 133              		.section	.text.PWM_WaSens_WriteCompare,"ax",%progbits
+ 134              		.align	2
+ 135              		.global	PWM_WaSens_WriteCompare
+ 136              		.thumb
+ 137              		.thumb_func
+ 138              		.type	PWM_WaSens_WriteCompare, %function
+ 139              	PWM_WaSens_WriteCompare:
+ 140              	.LFB8:
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 12
 
 
- 141 0000 014B     		ldr	r3, .L14
- 142 0002 1870     		strb	r0, [r3]
- 143 0004 7047     		bx	lr
- 144              	.L15:
- 145 0006 00BF     		.align	2
- 146              	.L14:
- 147 0008 43640040 		.word	1073767491
- 148              		.cfi_endproc
- 149              	.LFE7:
- 150              		.size	PWM_WaSens_WritePeriod, .-PWM_WaSens_WritePeriod
- 151              		.section	.text.PWM_WaSens_WriteCompare,"ax",%progbits
- 152              		.align	2
- 153              		.global	PWM_WaSens_WriteCompare
- 154              		.thumb
- 155              		.thumb_func
- 156              		.type	PWM_WaSens_WriteCompare, %function
- 157              	PWM_WaSens_WriteCompare:
- 158              	.LFB8:
  488:Generated_Source\PSoC5/PWM_WaSens.c ****     #endif /* (PWM_WaSens_UsingFixedFunction) */
  489:Generated_Source\PSoC5/PWM_WaSens.c **** }
  490:Generated_Source\PSoC5/PWM_WaSens.c **** 
@@ -710,38 +692,38 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  516:Generated_Source\PSoC5/PWM_WaSens.c ****     void PWM_WaSens_WriteCompare(uint8 compare) \
  517:Generated_Source\PSoC5/PWM_WaSens.c ****                                        
  518:Generated_Source\PSoC5/PWM_WaSens.c ****     {
- 159              		.loc 1 518 0
- 160              		.cfi_startproc
- 161              		@ args = 0, pretend = 0, frame = 0
- 162              		@ frame_needed = 0, uses_anonymous_args = 0
- 163              		@ link register save eliminated.
- 164              	.LVL2:
+ 141              		.loc 1 518 0
+ 142              		.cfi_startproc
+ 143              		@ args = 0, pretend = 0, frame = 0
+ 144              		@ frame_needed = 0, uses_anonymous_args = 0
+ 145              		@ link register save eliminated.
+ 146              	.LVL2:
  519:Generated_Source\PSoC5/PWM_WaSens.c ****         #if(PWM_WaSens_UsingFixedFunction)
  520:Generated_Source\PSoC5/PWM_WaSens.c ****             CY_SET_REG16(PWM_WaSens_COMPARE1_LSB_PTR, (uint16)compare);
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 13
-
-
  521:Generated_Source\PSoC5/PWM_WaSens.c ****         #else
  522:Generated_Source\PSoC5/PWM_WaSens.c ****             CY_SET_REG8(PWM_WaSens_COMPARE1_LSB_PTR, compare);
- 165              		.loc 1 522 0
- 166 0000 014B     		ldr	r3, .L17
- 167 0002 1870     		strb	r0, [r3]
- 168 0004 7047     		bx	lr
- 169              	.L18:
- 170 0006 00BF     		.align	2
- 171              	.L17:
- 172 0008 23640040 		.word	1073767459
- 173              		.cfi_endproc
- 174              	.LFE8:
- 175              		.size	PWM_WaSens_WriteCompare, .-PWM_WaSens_WriteCompare
- 176              		.section	.text.PWM_WaSens_SetInterruptMode,"ax",%progbits
- 177              		.align	2
- 178              		.global	PWM_WaSens_SetInterruptMode
- 179              		.thumb
- 180              		.thumb_func
- 181              		.type	PWM_WaSens_SetInterruptMode, %function
- 182              	PWM_WaSens_SetInterruptMode:
- 183              	.LFB9:
+ 147              		.loc 1 522 0
+ 148 0000 014B     		ldr	r3, .L13
+ 149 0002 1870     		strb	r0, [r3]
+ 150 0004 7047     		bx	lr
+ 151              	.L14:
+ 152 0006 00BF     		.align	2
+ 153              	.L13:
+ 154 0008 26640040 		.word	1073767462
+ 155              		.cfi_endproc
+ 156              	.LFE8:
+ 157              		.size	PWM_WaSens_WriteCompare, .-PWM_WaSens_WriteCompare
+ 158              		.section	.text.PWM_WaSens_SetInterruptMode,"ax",%progbits
+ 159              		.align	2
+ 160              		.global	PWM_WaSens_SetInterruptMode
+ 161              		.thumb
+ 162              		.thumb_func
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 13
+
+
+ 163              		.type	PWM_WaSens_SetInterruptMode, %function
+ 164              	PWM_WaSens_SetInterruptMode:
+ 165              	.LFB9:
  523:Generated_Source\PSoC5/PWM_WaSens.c ****         #endif /* (PWM_WaSens_UsingFixedFunction) */
  524:Generated_Source\PSoC5/PWM_WaSens.c **** 
  525:Generated_Source\PSoC5/PWM_WaSens.c ****         #if (PWM_WaSens_PWMMode == PWM_WaSens__B_PWM__DITHER)
@@ -778,9 +760,6 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  556:Generated_Source\PSoC5/PWM_WaSens.c ****                                         
  557:Generated_Source\PSoC5/PWM_WaSens.c ****     {
  558:Generated_Source\PSoC5/PWM_WaSens.c ****         #if(PWM_WaSens_UsingFixedFunction)
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 14
-
-
  559:Generated_Source\PSoC5/PWM_WaSens.c ****             CY_SET_REG16(PWM_WaSens_COMPARE1_LSB_PTR, (uint16)compare);
  560:Generated_Source\PSoC5/PWM_WaSens.c ****         #else
  561:Generated_Source\PSoC5/PWM_WaSens.c ****             CY_SET_REG8(PWM_WaSens_COMPARE1_LSB_PTR, compare);
@@ -799,6 +778,9 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  574:Generated_Source\PSoC5/PWM_WaSens.c ****     *  less than or less than or equal to the compare register, depending on the
  575:Generated_Source\PSoC5/PWM_WaSens.c ****     *  mode.
  576:Generated_Source\PSoC5/PWM_WaSens.c ****     *
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 14
+
+
  577:Generated_Source\PSoC5/PWM_WaSens.c ****     * Parameters:
  578:Generated_Source\PSoC5/PWM_WaSens.c ****     *  compare:  New compare value.
  579:Generated_Source\PSoC5/PWM_WaSens.c ****     *
@@ -838,9 +820,6 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  613:Generated_Source\PSoC5/PWM_WaSens.c ****     {
  614:Generated_Source\PSoC5/PWM_WaSens.c ****         /* If using the Dead Band 1-255 mode then just write the register */
  615:Generated_Source\PSoC5/PWM_WaSens.c ****         #if(!PWM_WaSens_DeadBand2_4)
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 15
-
-
  616:Generated_Source\PSoC5/PWM_WaSens.c ****             CY_SET_REG8(PWM_WaSens_DEADBAND_COUNT_PTR, deadtime);
  617:Generated_Source\PSoC5/PWM_WaSens.c ****         #else
  618:Generated_Source\PSoC5/PWM_WaSens.c ****             /* Otherwise the data has to be masked and offset */
@@ -859,6 +838,9 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  631:Generated_Source\PSoC5/PWM_WaSens.c ****     }
  632:Generated_Source\PSoC5/PWM_WaSens.c **** 
  633:Generated_Source\PSoC5/PWM_WaSens.c **** 
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 15
+
+
  634:Generated_Source\PSoC5/PWM_WaSens.c ****     /*******************************************************************************
  635:Generated_Source\PSoC5/PWM_WaSens.c ****     * Function Name: PWM_WaSens_ReadDeadTime
  636:Generated_Source\PSoC5/PWM_WaSens.c ****     ********************************************************************************
@@ -898,9 +880,6 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  670:Generated_Source\PSoC5/PWM_WaSens.c ****     * Function Name: PWM_WaSens_SetInterruptMode
  671:Generated_Source\PSoC5/PWM_WaSens.c ****     ********************************************************************************
  672:Generated_Source\PSoC5/PWM_WaSens.c ****     *
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 16
-
-
  673:Generated_Source\PSoC5/PWM_WaSens.c ****     * Summary:
  674:Generated_Source\PSoC5/PWM_WaSens.c ****     *  This function configures the interrupts mask control of theinterrupt
  675:Generated_Source\PSoC5/PWM_WaSens.c ****     *  source status register.
@@ -914,32 +893,35 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  683:Generated_Source\PSoC5/PWM_WaSens.c ****     *******************************************************************************/
  684:Generated_Source\PSoC5/PWM_WaSens.c ****     void PWM_WaSens_SetInterruptMode(uint8 interruptMode) 
  685:Generated_Source\PSoC5/PWM_WaSens.c ****     {
- 184              		.loc 1 685 0
- 185              		.cfi_startproc
- 186              		@ args = 0, pretend = 0, frame = 0
- 187              		@ frame_needed = 0, uses_anonymous_args = 0
- 188              		@ link register save eliminated.
- 189              	.LVL3:
+ 166              		.loc 1 685 0
+ 167              		.cfi_startproc
+ 168              		@ args = 0, pretend = 0, frame = 0
+ 169              		@ frame_needed = 0, uses_anonymous_args = 0
+ 170              		@ link register save eliminated.
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 16
+
+
+ 171              	.LVL3:
  686:Generated_Source\PSoC5/PWM_WaSens.c ****         CY_SET_REG8(PWM_WaSens_STATUS_MASK_PTR, interruptMode);
- 190              		.loc 1 686 0
- 191 0000 014B     		ldr	r3, .L20
- 192 0002 1870     		strb	r0, [r3]
- 193 0004 7047     		bx	lr
- 194              	.L21:
- 195 0006 00BF     		.align	2
- 196              	.L20:
- 197 0008 83640040 		.word	1073767555
- 198              		.cfi_endproc
- 199              	.LFE9:
- 200              		.size	PWM_WaSens_SetInterruptMode, .-PWM_WaSens_SetInterruptMode
- 201              		.section	.text.PWM_WaSens_ReadStatusRegister,"ax",%progbits
- 202              		.align	2
- 203              		.global	PWM_WaSens_ReadStatusRegister
- 204              		.thumb
- 205              		.thumb_func
- 206              		.type	PWM_WaSens_ReadStatusRegister, %function
- 207              	PWM_WaSens_ReadStatusRegister:
- 208              	.LFB10:
+ 172              		.loc 1 686 0
+ 173 0000 014B     		ldr	r3, .L16
+ 174 0002 1870     		strb	r0, [r3]
+ 175 0004 7047     		bx	lr
+ 176              	.L17:
+ 177 0006 00BF     		.align	2
+ 178              	.L16:
+ 179 0008 86640040 		.word	1073767558
+ 180              		.cfi_endproc
+ 181              	.LFE9:
+ 182              		.size	PWM_WaSens_SetInterruptMode, .-PWM_WaSens_SetInterruptMode
+ 183              		.section	.text.PWM_WaSens_ReadStatusRegister,"ax",%progbits
+ 184              		.align	2
+ 185              		.global	PWM_WaSens_ReadStatusRegister
+ 186              		.thumb
+ 187              		.thumb_func
+ 188              		.type	PWM_WaSens_ReadStatusRegister, %function
+ 189              	PWM_WaSens_ReadStatusRegister:
+ 190              	.LFB10:
  687:Generated_Source\PSoC5/PWM_WaSens.c ****     }
  688:Generated_Source\PSoC5/PWM_WaSens.c **** 
  689:Generated_Source\PSoC5/PWM_WaSens.c **** 
@@ -958,9 +940,6 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  702:Generated_Source\PSoC5/PWM_WaSens.c ****     *  [7:6] : Unused(0)
  703:Generated_Source\PSoC5/PWM_WaSens.c ****     *  [5]   : Kill event output
  704:Generated_Source\PSoC5/PWM_WaSens.c ****     *  [4]   : FIFO not empty
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 17
-
-
  705:Generated_Source\PSoC5/PWM_WaSens.c ****     *  [3]   : FIFO full
  706:Generated_Source\PSoC5/PWM_WaSens.c ****     *  [2]   : Terminal count
  707:Generated_Source\PSoC5/PWM_WaSens.c ****     *  [1]   : Compare output 2
@@ -969,33 +948,36 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  710:Generated_Source\PSoC5/PWM_WaSens.c ****     *******************************************************************************/
  711:Generated_Source\PSoC5/PWM_WaSens.c ****     uint8 PWM_WaSens_ReadStatusRegister(void) 
  712:Generated_Source\PSoC5/PWM_WaSens.c ****     {
- 209              		.loc 1 712 0
- 210              		.cfi_startproc
- 211              		@ args = 0, pretend = 0, frame = 0
- 212              		@ frame_needed = 0, uses_anonymous_args = 0
- 213              		@ link register save eliminated.
+ 191              		.loc 1 712 0
+ 192              		.cfi_startproc
+ 193              		@ args = 0, pretend = 0, frame = 0
+ 194              		@ frame_needed = 0, uses_anonymous_args = 0
+ 195              		@ link register save eliminated.
  713:Generated_Source\PSoC5/PWM_WaSens.c ****         return (CY_GET_REG8(PWM_WaSens_STATUS_PTR));
- 214              		.loc 1 713 0
- 215 0000 014B     		ldr	r3, .L23
- 216 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 196              		.loc 1 713 0
+ 197 0000 014B     		ldr	r3, .L19
+ 198 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
  714:Generated_Source\PSoC5/PWM_WaSens.c ****     }
- 217              		.loc 1 714 0
- 218 0004 7047     		bx	lr
- 219              	.L24:
- 220 0006 00BF     		.align	2
- 221              	.L23:
- 222 0008 63640040 		.word	1073767523
- 223              		.cfi_endproc
- 224              	.LFE10:
- 225              		.size	PWM_WaSens_ReadStatusRegister, .-PWM_WaSens_ReadStatusRegister
- 226              		.section	.text.PWM_WaSens_ReadControlRegister,"ax",%progbits
- 227              		.align	2
- 228              		.global	PWM_WaSens_ReadControlRegister
- 229              		.thumb
- 230              		.thumb_func
- 231              		.type	PWM_WaSens_ReadControlRegister, %function
- 232              	PWM_WaSens_ReadControlRegister:
- 233              	.LFB11:
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 17
+
+
+ 199              		.loc 1 714 0
+ 200 0004 7047     		bx	lr
+ 201              	.L20:
+ 202 0006 00BF     		.align	2
+ 203              	.L19:
+ 204 0008 66640040 		.word	1073767526
+ 205              		.cfi_endproc
+ 206              	.LFE10:
+ 207              		.size	PWM_WaSens_ReadStatusRegister, .-PWM_WaSens_ReadStatusRegister
+ 208              		.section	.text.PWM_WaSens_ReadCapture,"ax",%progbits
+ 209              		.align	2
+ 210              		.global	PWM_WaSens_ReadCapture
+ 211              		.thumb
+ 212              		.thumb_func
+ 213              		.type	PWM_WaSens_ReadCapture, %function
+ 214              	PWM_WaSens_ReadCapture:
+ 215              	.LFB11:
  715:Generated_Source\PSoC5/PWM_WaSens.c **** 
  716:Generated_Source\PSoC5/PWM_WaSens.c **** #endif /* (PWM_WaSens_UseStatus || PWM_WaSens_UsingFixedFunction) */
  717:Generated_Source\PSoC5/PWM_WaSens.c **** 
@@ -1018,42 +1000,13 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  734:Generated_Source\PSoC5/PWM_WaSens.c ****     *  uint8 : Current control register value
  735:Generated_Source\PSoC5/PWM_WaSens.c ****     *
  736:Generated_Source\PSoC5/PWM_WaSens.c ****     *******************************************************************************/
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 18
-
-
  737:Generated_Source\PSoC5/PWM_WaSens.c ****     uint8 PWM_WaSens_ReadControlRegister(void) 
  738:Generated_Source\PSoC5/PWM_WaSens.c ****     {
- 234              		.loc 1 738 0
- 235              		.cfi_startproc
- 236              		@ args = 0, pretend = 0, frame = 0
- 237              		@ frame_needed = 0, uses_anonymous_args = 0
- 238              		@ link register save eliminated.
  739:Generated_Source\PSoC5/PWM_WaSens.c ****         uint8 result;
  740:Generated_Source\PSoC5/PWM_WaSens.c **** 
  741:Generated_Source\PSoC5/PWM_WaSens.c ****         result = CY_GET_REG8(PWM_WaSens_CONTROL_PTR);
- 239              		.loc 1 741 0
- 240 0000 014B     		ldr	r3, .L26
- 241 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
- 242              	.LVL4:
  742:Generated_Source\PSoC5/PWM_WaSens.c ****         return (result);
  743:Generated_Source\PSoC5/PWM_WaSens.c ****     }
- 243              		.loc 1 743 0
- 244 0004 7047     		bx	lr
- 245              	.L27:
- 246 0006 00BF     		.align	2
- 247              	.L26:
- 248 0008 73640040 		.word	1073767539
- 249              		.cfi_endproc
- 250              	.LFE11:
- 251              		.size	PWM_WaSens_ReadControlRegister, .-PWM_WaSens_ReadControlRegister
- 252              		.section	.text.PWM_WaSens_WriteControlRegister,"ax",%progbits
- 253              		.align	2
- 254              		.global	PWM_WaSens_WriteControlRegister
- 255              		.thumb
- 256              		.thumb_func
- 257              		.type	PWM_WaSens_WriteControlRegister, %function
- 258              	PWM_WaSens_WriteControlRegister:
- 259              	.LFB12:
  744:Generated_Source\PSoC5/PWM_WaSens.c **** 
  745:Generated_Source\PSoC5/PWM_WaSens.c **** 
  746:Generated_Source\PSoC5/PWM_WaSens.c ****     /*******************************************************************************
@@ -1065,6 +1018,9 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  752:Generated_Source\PSoC5/PWM_WaSens.c ****     *  the control register is not removed.
  753:Generated_Source\PSoC5/PWM_WaSens.c ****     *
  754:Generated_Source\PSoC5/PWM_WaSens.c ****     * Parameters:
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 18
+
+
  755:Generated_Source\PSoC5/PWM_WaSens.c ****     *  uint8 control: Control register bit field, The status register bits are:
  756:Generated_Source\PSoC5/PWM_WaSens.c ****     *  [7]   : PWM Enable
  757:Generated_Source\PSoC5/PWM_WaSens.c ****     *  [6]   : Reset
@@ -1077,35 +1033,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  764:Generated_Source\PSoC5/PWM_WaSens.c ****     *******************************************************************************/
  765:Generated_Source\PSoC5/PWM_WaSens.c ****     void PWM_WaSens_WriteControlRegister(uint8 control) 
  766:Generated_Source\PSoC5/PWM_WaSens.c ****     {
- 260              		.loc 1 766 0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 19
-
-
- 261              		.cfi_startproc
- 262              		@ args = 0, pretend = 0, frame = 0
- 263              		@ frame_needed = 0, uses_anonymous_args = 0
- 264              		@ link register save eliminated.
- 265              	.LVL5:
  767:Generated_Source\PSoC5/PWM_WaSens.c ****         CY_SET_REG8(PWM_WaSens_CONTROL_PTR, control);
- 266              		.loc 1 767 0
- 267 0000 014B     		ldr	r3, .L29
- 268 0002 1870     		strb	r0, [r3]
- 269 0004 7047     		bx	lr
- 270              	.L30:
- 271 0006 00BF     		.align	2
- 272              	.L29:
- 273 0008 73640040 		.word	1073767539
- 274              		.cfi_endproc
- 275              	.LFE12:
- 276              		.size	PWM_WaSens_WriteControlRegister, .-PWM_WaSens_WriteControlRegister
- 277              		.section	.text.PWM_WaSens_ReadCapture,"ax",%progbits
- 278              		.align	2
- 279              		.global	PWM_WaSens_ReadCapture
- 280              		.thumb
- 281              		.thumb_func
- 282              		.type	PWM_WaSens_ReadCapture, %function
- 283              	PWM_WaSens_ReadCapture:
- 284              	.LFB13:
  768:Generated_Source\PSoC5/PWM_WaSens.c ****     }
  769:Generated_Source\PSoC5/PWM_WaSens.c **** 
  770:Generated_Source\PSoC5/PWM_WaSens.c **** #endif /* (PWM_WaSens_UseControl) */
@@ -1130,207 +1058,188 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  789:Generated_Source\PSoC5/PWM_WaSens.c ****     *******************************************************************************/
  790:Generated_Source\PSoC5/PWM_WaSens.c ****     uint8 PWM_WaSens_ReadCapture(void) 
  791:Generated_Source\PSoC5/PWM_WaSens.c ****     {
- 285              		.loc 1 791 0
- 286              		.cfi_startproc
- 287              		@ args = 0, pretend = 0, frame = 0
- 288              		@ frame_needed = 0, uses_anonymous_args = 0
- 289              		@ link register save eliminated.
+ 216              		.loc 1 791 0
+ 217              		.cfi_startproc
+ 218              		@ args = 0, pretend = 0, frame = 0
+ 219              		@ frame_needed = 0, uses_anonymous_args = 0
+ 220              		@ link register save eliminated.
  792:Generated_Source\PSoC5/PWM_WaSens.c ****         return (CY_GET_REG8(PWM_WaSens_CAPTURE_LSB_PTR));
- 290              		.loc 1 792 0
- 291 0000 014B     		ldr	r3, .L32
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 20
-
-
- 292 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 221              		.loc 1 792 0
+ 222 0000 014B     		ldr	r3, .L22
+ 223 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
  793:Generated_Source\PSoC5/PWM_WaSens.c ****     }
- 293              		.loc 1 793 0
- 294 0004 7047     		bx	lr
- 295              	.L33:
- 296 0006 00BF     		.align	2
- 297              	.L32:
- 298 0008 53640040 		.word	1073767507
- 299              		.cfi_endproc
- 300              	.LFE13:
- 301              		.size	PWM_WaSens_ReadCapture, .-PWM_WaSens_ReadCapture
- 302              		.section	.text.PWM_WaSens_ClearFIFO,"ax",%progbits
- 303              		.align	2
- 304              		.global	PWM_WaSens_ClearFIFO
- 305              		.thumb
- 306              		.thumb_func
- 307              		.type	PWM_WaSens_ClearFIFO, %function
- 308              	PWM_WaSens_ClearFIFO:
- 309              	.LFB6:
+ 224              		.loc 1 793 0
+ 225 0004 7047     		bx	lr
+ 226              	.L23:
+ 227 0006 00BF     		.align	2
+ 228              	.L22:
+ 229 0008 56640040 		.word	1073767510
+ 230              		.cfi_endproc
+ 231              	.LFE11:
+ 232              		.size	PWM_WaSens_ReadCapture, .-PWM_WaSens_ReadCapture
+ 233              		.section	.text.PWM_WaSens_ClearFIFO,"ax",%progbits
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 19
+
+
+ 234              		.align	2
+ 235              		.global	PWM_WaSens_ClearFIFO
+ 236              		.thumb
+ 237              		.thumb_func
+ 238              		.type	PWM_WaSens_ClearFIFO, %function
+ 239              	PWM_WaSens_ClearFIFO:
+ 240              	.LFB6:
  454:Generated_Source\PSoC5/PWM_WaSens.c ****             while(0u != (PWM_WaSens_ReadStatusRegister() & PWM_WaSens_STATUS_FIFONEMPTY))
- 310              		.loc 1 454 0
- 311              		.cfi_startproc
- 312              		@ args = 0, pretend = 0, frame = 0
- 313              		@ frame_needed = 0, uses_anonymous_args = 0
- 314 0000 08B5     		push	{r3, lr}
- 315              		.cfi_def_cfa_offset 8
- 316              		.cfi_offset 3, -8
- 317              		.cfi_offset 14, -4
+ 241              		.loc 1 454 0
+ 242              		.cfi_startproc
+ 243              		@ args = 0, pretend = 0, frame = 0
+ 244              		@ frame_needed = 0, uses_anonymous_args = 0
+ 245 0000 08B5     		push	{r3, lr}
+ 246              		.cfi_def_cfa_offset 8
+ 247              		.cfi_offset 3, -8
+ 248              		.cfi_offset 14, -4
  455:Generated_Source\PSoC5/PWM_WaSens.c ****             {
- 318              		.loc 1 455 0
- 319 0002 01E0     		b	.L35
- 320              	.L36:
+ 249              		.loc 1 455 0
+ 250 0002 01E0     		b	.L25
+ 251              	.L26:
  457:Generated_Source\PSoC5/PWM_WaSens.c ****             }
- 321              		.loc 1 457 0
- 322 0004 FFF7FEFF 		bl	PWM_WaSens_ReadCapture
- 323              	.LVL6:
- 324              	.L35:
+ 252              		.loc 1 457 0
+ 253 0004 FFF7FEFF 		bl	PWM_WaSens_ReadCapture
+ 254              	.LVL4:
+ 255              	.L25:
  455:Generated_Source\PSoC5/PWM_WaSens.c ****             {
- 325              		.loc 1 455 0
- 326 0008 FFF7FEFF 		bl	PWM_WaSens_ReadStatusRegister
- 327              	.LVL7:
- 328 000c 10F0100F 		tst	r0, #16
- 329 0010 F8D1     		bne	.L36
+ 256              		.loc 1 455 0
+ 257 0008 FFF7FEFF 		bl	PWM_WaSens_ReadStatusRegister
+ 258              	.LVL5:
+ 259 000c 10F0100F 		tst	r0, #16
+ 260 0010 F8D1     		bne	.L26
  459:Generated_Source\PSoC5/PWM_WaSens.c **** 
- 330              		.loc 1 459 0
- 331 0012 08BD     		pop	{r3, pc}
- 332              		.cfi_endproc
- 333              	.LFE6:
- 334              		.size	PWM_WaSens_ClearFIFO, .-PWM_WaSens_ClearFIFO
- 335              		.section	.text.PWM_WaSens_Init,"ax",%progbits
- 336              		.align	2
- 337              		.global	PWM_WaSens_Init
- 338              		.thumb
- 339              		.thumb_func
- 340              		.type	PWM_WaSens_Init, %function
- 341              	PWM_WaSens_Init:
- 342              	.LFB1:
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 21
-
-
+ 261              		.loc 1 459 0
+ 262 0012 08BD     		pop	{r3, pc}
+ 263              		.cfi_endproc
+ 264              	.LFE6:
+ 265              		.size	PWM_WaSens_ClearFIFO, .-PWM_WaSens_ClearFIFO
+ 266              		.section	.text.PWM_WaSens_Init,"ax",%progbits
+ 267              		.align	2
+ 268              		.global	PWM_WaSens_Init
+ 269              		.thumb
+ 270              		.thumb_func
+ 271              		.type	PWM_WaSens_Init, %function
+ 272              	PWM_WaSens_Init:
+ 273              	.LFB1:
   85:Generated_Source\PSoC5/PWM_WaSens.c ****     #if (PWM_WaSens_UsingFixedFunction || PWM_WaSens_UseControl)
- 343              		.loc 1 85 0
- 344              		.cfi_startproc
- 345              		@ args = 0, pretend = 0, frame = 0
- 346              		@ frame_needed = 0, uses_anonymous_args = 0
- 347 0000 10B5     		push	{r4, lr}
- 348              		.cfi_def_cfa_offset 8
- 349              		.cfi_offset 4, -8
- 350              		.cfi_offset 14, -4
- 117:Generated_Source\PSoC5/PWM_WaSens.c ****                 ((uint8)(~PWM_WaSens_CTRL_CMPMODE1_MASK));
- 351              		.loc 1 117 0
- 352 0002 114A     		ldr	r2, .L40
- 353 0004 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 354 0006 03F0C003 		and	r3, r3, #192
- 355              	.LVL8:
- 119:Generated_Source\PSoC5/PWM_WaSens.c ****                                    PWM_WaSens_DEFAULT_COMPARE1_MODE;
- 356              		.loc 1 119 0
- 357 000a 43F00903 		orr	r3, r3, #9
- 358              	.LVL9:
- 359 000e 1370     		strb	r3, [r2]
+ 274              		.loc 1 85 0
+ 275              		.cfi_startproc
+ 276              		@ args = 0, pretend = 0, frame = 0
+ 277              		@ frame_needed = 0, uses_anonymous_args = 0
+ 278 0000 10B5     		push	{r4, lr}
+ 279              		.cfi_def_cfa_offset 8
+ 280              		.cfi_offset 4, -8
+ 281              		.cfi_offset 14, -4
  126:Generated_Source\PSoC5/PWM_WaSens.c ****         #else /* (PWM_WaSens_Resolution == 16)*/
- 360              		.loc 1 126 0
- 361 0010 0E4C     		ldr	r4, .L40+4
- 362 0012 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
- 363 0014 43F00103 		orr	r3, r3, #1
- 364 0018 2370     		strb	r3, [r4]
+ 282              		.loc 1 126 0
+ 283 0002 0E4C     		ldr	r4, .L30
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 20
+
+
+ 284 0004 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 285 0006 43F00103 		orr	r3, r3, #1
+ 286 000a 2370     		strb	r3, [r4]
  133:Generated_Source\PSoC5/PWM_WaSens.c ****     #endif /* (!PWM_WaSens_UsingFixedFunction) */
- 365              		.loc 1 133 0
- 366 001a 7020     		movs	r0, #112
- 367 001c FFF7FEFF 		bl	PWM_WaSens_WriteCounter
- 368              	.LVL10:
+ 287              		.loc 1 133 0
+ 288 000c 7D20     		movs	r0, #125
+ 289 000e FFF7FEFF 		bl	PWM_WaSens_WriteCounter
+ 290              	.LVL6:
  136:Generated_Source\PSoC5/PWM_WaSens.c **** 
- 369              		.loc 1 136 0
- 370 0020 7020     		movs	r0, #112
- 371 0022 FFF7FEFF 		bl	PWM_WaSens_WritePeriod
- 372              	.LVL11:
+ 291              		.loc 1 136 0
+ 292 0012 7D20     		movs	r0, #125
+ 293 0014 FFF7FEFF 		bl	PWM_WaSens_WritePeriod
+ 294              	.LVL7:
  139:Generated_Source\PSoC5/PWM_WaSens.c ****         #else
- 373              		.loc 1 139 0
- 374 0026 3320     		movs	r0, #51
- 375 0028 FFF7FEFF 		bl	PWM_WaSens_WriteCompare
- 376              	.LVL12:
+ 295              		.loc 1 139 0
+ 296 0018 3E20     		movs	r0, #62
+ 297 001a FFF7FEFF 		bl	PWM_WaSens_WriteCompare
+ 298              	.LVL8:
  154:Generated_Source\PSoC5/PWM_WaSens.c ****     #endif /* (PWM_WaSens_UseStatus || PWM_WaSens_UsingFixedFunction) */
- 377              		.loc 1 154 0
- 378 002c 0020     		movs	r0, #0
- 379 002e FFF7FEFF 		bl	PWM_WaSens_SetInterruptMode
- 380              	.LVL13:
+ 299              		.loc 1 154 0
+ 300 001e 0020     		movs	r0, #0
+ 301 0020 FFF7FEFF 		bl	PWM_WaSens_SetInterruptMode
+ 302              	.LVL9:
  167:Generated_Source\PSoC5/PWM_WaSens.c ****             /* Use the interrupt output of the status register for IRQ output */
- 381              		.loc 1 167 0
- 382 0032 FFF7FEFF 		bl	CyEnterCriticalSection
- 383              	.LVL14:
+ 303              		.loc 1 167 0
+ 304 0024 FFF7FEFF 		bl	CyEnterCriticalSection
+ 305              	.LVL10:
  169:Generated_Source\PSoC5/PWM_WaSens.c **** 
- 384              		.loc 1 169 0
- 385 0036 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
- 386 0038 43F01003 		orr	r3, r3, #16
- 387 003c 2370     		strb	r3, [r4]
+ 306              		.loc 1 169 0
+ 307 0028 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 308 002a 43F01003 		orr	r3, r3, #16
+ 309 002e 2370     		strb	r3, [r4]
  172:Generated_Source\PSoC5/PWM_WaSens.c **** 
- 388              		.loc 1 172 0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 22
-
-
- 389 003e FFF7FEFF 		bl	CyExitCriticalSection
- 390              	.LVL15:
+ 310              		.loc 1 172 0
+ 311 0030 FFF7FEFF 		bl	CyExitCriticalSection
+ 312              	.LVL11:
  176:Generated_Source\PSoC5/PWM_WaSens.c ****         #endif /* (PWM_WaSens_UseStatus) */
- 391              		.loc 1 176 0
- 392 0042 FFF7FEFF 		bl	PWM_WaSens_ClearFIFO
- 393              	.LVL16:
- 394 0046 10BD     		pop	{r4, pc}
- 395              	.L41:
- 396              		.align	2
- 397              	.L40:
- 398 0048 73640040 		.word	1073767539
- 399 004c 93640040 		.word	1073767571
- 400              		.cfi_endproc
- 401              	.LFE1:
- 402              		.size	PWM_WaSens_Init, .-PWM_WaSens_Init
- 403              		.section	.text.PWM_WaSens_Start,"ax",%progbits
- 404              		.align	2
- 405              		.global	PWM_WaSens_Start
- 406              		.thumb
- 407              		.thumb_func
- 408              		.type	PWM_WaSens_Start, %function
- 409              	PWM_WaSens_Start:
- 410              	.LFB0:
+ 313              		.loc 1 176 0
+ 314 0034 FFF7FEFF 		bl	PWM_WaSens_ClearFIFO
+ 315              	.LVL12:
+ 316 0038 10BD     		pop	{r4, pc}
+ 317              	.L31:
+ 318 003a 00BF     		.align	2
+ 319              	.L30:
+ 320 003c 96640040 		.word	1073767574
+ 321              		.cfi_endproc
+ 322              	.LFE1:
+ 323              		.size	PWM_WaSens_Init, .-PWM_WaSens_Init
+ 324              		.section	.text.PWM_WaSens_Start,"ax",%progbits
+ 325              		.align	2
+ 326              		.global	PWM_WaSens_Start
+ 327              		.thumb
+ 328              		.thumb_func
+ 329              		.type	PWM_WaSens_Start, %function
+ 330              	PWM_WaSens_Start:
+ 331              	.LFB0:
   56:Generated_Source\PSoC5/PWM_WaSens.c ****     /* If not Initialized then initialize all required hardware and software */
- 411              		.loc 1 56 0
- 412              		.cfi_startproc
- 413              		@ args = 0, pretend = 0, frame = 0
- 414              		@ frame_needed = 0, uses_anonymous_args = 0
- 415 0000 08B5     		push	{r3, lr}
- 416              		.cfi_def_cfa_offset 8
- 417              		.cfi_offset 3, -8
- 418              		.cfi_offset 14, -4
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 21
+
+
+ 332              		.loc 1 56 0
+ 333              		.cfi_startproc
+ 334              		@ args = 0, pretend = 0, frame = 0
+ 335              		@ frame_needed = 0, uses_anonymous_args = 0
+ 336 0000 08B5     		push	{r3, lr}
+ 337              		.cfi_def_cfa_offset 8
+ 338              		.cfi_offset 3, -8
+ 339              		.cfi_offset 14, -4
   58:Generated_Source\PSoC5/PWM_WaSens.c ****     {
- 419              		.loc 1 58 0
- 420 0002 054B     		ldr	r3, .L45
- 421 0004 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 422 0006 23B9     		cbnz	r3, .L43
+ 340              		.loc 1 58 0
+ 341 0002 044B     		ldr	r3, .L35
+ 342 0004 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 343 0006 23B9     		cbnz	r3, .L32
   60:Generated_Source\PSoC5/PWM_WaSens.c ****         PWM_WaSens_initVar = 1u;
- 423              		.loc 1 60 0
- 424 0008 FFF7FEFF 		bl	PWM_WaSens_Init
- 425              	.LVL17:
+ 344              		.loc 1 60 0
+ 345 0008 FFF7FEFF 		bl	PWM_WaSens_Init
+ 346              	.LVL13:
   61:Generated_Source\PSoC5/PWM_WaSens.c ****     }
- 426              		.loc 1 61 0
- 427 000c 0122     		movs	r2, #1
- 428 000e 024B     		ldr	r3, .L45
- 429 0010 1A70     		strb	r2, [r3]
- 430              	.L43:
-  63:Generated_Source\PSoC5/PWM_WaSens.c **** 
- 431              		.loc 1 63 0
- 432 0012 FFF7FEFF 		bl	PWM_WaSens_Enable
- 433              	.LVL18:
- 434 0016 08BD     		pop	{r3, pc}
- 435              	.L46:
- 436              		.align	2
- 437              	.L45:
- 438 0018 00000000 		.word	.LANCHOR0
- 439              		.cfi_endproc
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 23
-
-
- 440              	.LFE0:
- 441              		.size	PWM_WaSens_Start, .-PWM_WaSens_Start
- 442              		.section	.text.PWM_WaSens_ReadCompare,"ax",%progbits
- 443              		.align	2
- 444              		.global	PWM_WaSens_ReadCompare
- 445              		.thumb
- 446              		.thumb_func
- 447              		.type	PWM_WaSens_ReadCompare, %function
- 448              	PWM_WaSens_ReadCompare:
- 449              	.LFB14:
+ 347              		.loc 1 61 0
+ 348 000c 0122     		movs	r2, #1
+ 349 000e 014B     		ldr	r3, .L35
+ 350 0010 1A70     		strb	r2, [r3]
+ 351              	.L32:
+ 352 0012 08BD     		pop	{r3, pc}
+ 353              	.L36:
+ 354              		.align	2
+ 355              	.L35:
+ 356 0014 00000000 		.word	.LANCHOR0
+ 357              		.cfi_endproc
+ 358              	.LFE0:
+ 359              		.size	PWM_WaSens_Start, .-PWM_WaSens_Start
+ 360              		.section	.text.PWM_WaSens_ReadCompare,"ax",%progbits
+ 361              		.align	2
+ 362              		.global	PWM_WaSens_ReadCompare
+ 363              		.thumb
+ 364              		.thumb_func
+ 365              		.type	PWM_WaSens_ReadCompare, %function
+ 366              	PWM_WaSens_ReadCompare:
+ 367              	.LFB12:
  794:Generated_Source\PSoC5/PWM_WaSens.c **** 
  795:Generated_Source\PSoC5/PWM_WaSens.c **** #endif /* (!PWM_WaSens_UsingFixedFunction) */
  796:Generated_Source\PSoC5/PWM_WaSens.c **** 
@@ -1349,46 +1258,46 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  809:Generated_Source\PSoC5/PWM_WaSens.c ****     * Parameters:
  810:Generated_Source\PSoC5/PWM_WaSens.c ****     *  None
  811:Generated_Source\PSoC5/PWM_WaSens.c ****     *
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 22
+
+
  812:Generated_Source\PSoC5/PWM_WaSens.c ****     * Return:
  813:Generated_Source\PSoC5/PWM_WaSens.c ****     *  uint8/uint16: Current compare value
  814:Generated_Source\PSoC5/PWM_WaSens.c ****     *
  815:Generated_Source\PSoC5/PWM_WaSens.c ****     *******************************************************************************/
  816:Generated_Source\PSoC5/PWM_WaSens.c ****     uint8 PWM_WaSens_ReadCompare(void) 
  817:Generated_Source\PSoC5/PWM_WaSens.c ****     {
- 450              		.loc 1 817 0
- 451              		.cfi_startproc
- 452              		@ args = 0, pretend = 0, frame = 0
- 453              		@ frame_needed = 0, uses_anonymous_args = 0
- 454              		@ link register save eliminated.
+ 368              		.loc 1 817 0
+ 369              		.cfi_startproc
+ 370              		@ args = 0, pretend = 0, frame = 0
+ 371              		@ frame_needed = 0, uses_anonymous_args = 0
+ 372              		@ link register save eliminated.
  818:Generated_Source\PSoC5/PWM_WaSens.c ****         #if(PWM_WaSens_UsingFixedFunction)
  819:Generated_Source\PSoC5/PWM_WaSens.c ****             return ((uint8)CY_GET_REG16(PWM_WaSens_COMPARE1_LSB_PTR));
  820:Generated_Source\PSoC5/PWM_WaSens.c ****         #else
  821:Generated_Source\PSoC5/PWM_WaSens.c ****             return (CY_GET_REG8(PWM_WaSens_COMPARE1_LSB_PTR));
- 455              		.loc 1 821 0
- 456 0000 014B     		ldr	r3, .L48
- 457 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 373              		.loc 1 821 0
+ 374 0000 014B     		ldr	r3, .L38
+ 375 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
  822:Generated_Source\PSoC5/PWM_WaSens.c ****         #endif /* (PWM_WaSens_UsingFixedFunction) */
  823:Generated_Source\PSoC5/PWM_WaSens.c ****     }
- 458              		.loc 1 823 0
- 459 0004 7047     		bx	lr
- 460              	.L49:
- 461 0006 00BF     		.align	2
- 462              	.L48:
- 463 0008 23640040 		.word	1073767459
- 464              		.cfi_endproc
- 465              	.LFE14:
- 466              		.size	PWM_WaSens_ReadCompare, .-PWM_WaSens_ReadCompare
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 24
-
-
- 467              		.section	.text.PWM_WaSens_ReadPeriod,"ax",%progbits
- 468              		.align	2
- 469              		.global	PWM_WaSens_ReadPeriod
- 470              		.thumb
- 471              		.thumb_func
- 472              		.type	PWM_WaSens_ReadPeriod, %function
- 473              	PWM_WaSens_ReadPeriod:
- 474              	.LFB15:
+ 376              		.loc 1 823 0
+ 377 0004 7047     		bx	lr
+ 378              	.L39:
+ 379 0006 00BF     		.align	2
+ 380              	.L38:
+ 381 0008 26640040 		.word	1073767462
+ 382              		.cfi_endproc
+ 383              	.LFE12:
+ 384              		.size	PWM_WaSens_ReadCompare, .-PWM_WaSens_ReadCompare
+ 385              		.section	.text.PWM_WaSens_ReadPeriod,"ax",%progbits
+ 386              		.align	2
+ 387              		.global	PWM_WaSens_ReadPeriod
+ 388              		.thumb
+ 389              		.thumb_func
+ 390              		.type	PWM_WaSens_ReadPeriod, %function
+ 391              	PWM_WaSens_ReadPeriod:
+ 392              	.LFB13:
  824:Generated_Source\PSoC5/PWM_WaSens.c **** 
  825:Generated_Source\PSoC5/PWM_WaSens.c **** #else
  826:Generated_Source\PSoC5/PWM_WaSens.c **** 
@@ -1409,6 +1318,9 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  841:Generated_Source\PSoC5/PWM_WaSens.c ****     *******************************************************************************/
  842:Generated_Source\PSoC5/PWM_WaSens.c ****     uint8 PWM_WaSens_ReadCompare1(void) 
  843:Generated_Source\PSoC5/PWM_WaSens.c ****     {
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 23
+
+
  844:Generated_Source\PSoC5/PWM_WaSens.c ****         return (CY_GET_REG8(PWM_WaSens_COMPARE1_LSB_PTR));
  845:Generated_Source\PSoC5/PWM_WaSens.c ****     }
  846:Generated_Source\PSoC5/PWM_WaSens.c **** 
@@ -1438,9 +1350,6 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  870:Generated_Source\PSoC5/PWM_WaSens.c **** /*******************************************************************************
  871:Generated_Source\PSoC5/PWM_WaSens.c **** * Function Name: PWM_WaSens_ReadPeriod
  872:Generated_Source\PSoC5/PWM_WaSens.c **** ********************************************************************************
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 25
-
-
  873:Generated_Source\PSoC5/PWM_WaSens.c **** *
  874:Generated_Source\PSoC5/PWM_WaSens.c **** * Summary:
  875:Generated_Source\PSoC5/PWM_WaSens.c **** *  Reads the period value used by the PWM hardware.
@@ -1454,1111 +1363,986 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 1
  883:Generated_Source\PSoC5/PWM_WaSens.c **** *******************************************************************************/
  884:Generated_Source\PSoC5/PWM_WaSens.c **** uint8 PWM_WaSens_ReadPeriod(void) 
  885:Generated_Source\PSoC5/PWM_WaSens.c **** {
- 475              		.loc 1 885 0
- 476              		.cfi_startproc
- 477              		@ args = 0, pretend = 0, frame = 0
- 478              		@ frame_needed = 0, uses_anonymous_args = 0
- 479              		@ link register save eliminated.
+ 393              		.loc 1 885 0
+ 394              		.cfi_startproc
+ 395              		@ args = 0, pretend = 0, frame = 0
+ 396              		@ frame_needed = 0, uses_anonymous_args = 0
+ 397              		@ link register save eliminated.
  886:Generated_Source\PSoC5/PWM_WaSens.c ****     #if(PWM_WaSens_UsingFixedFunction)
  887:Generated_Source\PSoC5/PWM_WaSens.c ****         return ((uint8)CY_GET_REG16(PWM_WaSens_PERIOD_LSB_PTR));
  888:Generated_Source\PSoC5/PWM_WaSens.c ****     #else
  889:Generated_Source\PSoC5/PWM_WaSens.c ****         return (CY_GET_REG8(PWM_WaSens_PERIOD_LSB_PTR));
- 480              		.loc 1 889 0
- 481 0000 014B     		ldr	r3, .L51
- 482 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 398              		.loc 1 889 0
+ 399 0000 014B     		ldr	r3, .L41
+ 400 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
  890:Generated_Source\PSoC5/PWM_WaSens.c ****     #endif /* (PWM_WaSens_UsingFixedFunction) */
  891:Generated_Source\PSoC5/PWM_WaSens.c **** }
- 483              		.loc 1 891 0
- 484 0004 7047     		bx	lr
- 485              	.L52:
- 486 0006 00BF     		.align	2
- 487              	.L51:
- 488 0008 43640040 		.word	1073767491
- 489              		.cfi_endproc
- 490              	.LFE15:
- 491              		.size	PWM_WaSens_ReadPeriod, .-PWM_WaSens_ReadPeriod
- 492              		.global	PWM_WaSens_initVar
- 493              		.bss
- 494              		.set	.LANCHOR0,. + 0
- 495              		.type	PWM_WaSens_initVar, %object
- 496              		.size	PWM_WaSens_initVar, 1
- 497              	PWM_WaSens_initVar:
- 498 0000 00       		.space	1
- 499              		.text
- 500              	.Letext0:
- 501              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
- 502              		.file 3 "Generated_Source\\PSoC5\\CyLib.h"
- 503              		.section	.debug_info,"",%progbits
- 504              	.Ldebug_info0:
- 505 0000 30030000 		.4byte	0x330
- 506 0004 0400     		.2byte	0x4
- 507 0006 00000000 		.4byte	.Ldebug_abbrev0
- 508 000a 04       		.byte	0x4
- 509 000b 01       		.uleb128 0x1
- 510 000c E9000000 		.4byte	.LASF41
- 511 0010 0C       		.byte	0xc
- 512 0011 37000000 		.4byte	.LASF42
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 26
+ 401              		.loc 1 891 0
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 24
 
 
- 513 0015 27020000 		.4byte	.LASF43
- 514 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 515 001d 00000000 		.4byte	0
- 516 0021 00000000 		.4byte	.Ldebug_line0
- 517 0025 02       		.uleb128 0x2
- 518 0026 01       		.byte	0x1
- 519 0027 06       		.byte	0x6
- 520 0028 98030000 		.4byte	.LASF0
- 521 002c 02       		.uleb128 0x2
- 522 002d 01       		.byte	0x1
- 523 002e 08       		.byte	0x8
- 524 002f DB000000 		.4byte	.LASF1
- 525 0033 02       		.uleb128 0x2
- 526 0034 02       		.byte	0x2
- 527 0035 05       		.byte	0x5
- 528 0036 3F030000 		.4byte	.LASF2
- 529 003a 02       		.uleb128 0x2
- 530 003b 02       		.byte	0x2
- 531 003c 07       		.byte	0x7
- 532 003d 62000000 		.4byte	.LASF3
- 533 0041 02       		.uleb128 0x2
- 534 0042 04       		.byte	0x4
- 535 0043 05       		.byte	0x5
- 536 0044 5F030000 		.4byte	.LASF4
- 537 0048 02       		.uleb128 0x2
- 538 0049 04       		.byte	0x4
- 539 004a 07       		.byte	0x7
- 540 004b 7C010000 		.4byte	.LASF5
- 541 004f 02       		.uleb128 0x2
- 542 0050 08       		.byte	0x8
- 543 0051 05       		.byte	0x5
- 544 0052 DD020000 		.4byte	.LASF6
- 545 0056 02       		.uleb128 0x2
- 546 0057 08       		.byte	0x8
- 547 0058 07       		.byte	0x7
- 548 0059 10020000 		.4byte	.LASF7
- 549 005d 03       		.uleb128 0x3
- 550 005e 04       		.byte	0x4
- 551 005f 05       		.byte	0x5
- 552 0060 696E7400 		.ascii	"int\000"
- 553 0064 02       		.uleb128 0x2
- 554 0065 04       		.byte	0x4
- 555 0066 07       		.byte	0x7
- 556 0067 03020000 		.4byte	.LASF8
- 557 006b 04       		.uleb128 0x4
- 558 006c 8E010000 		.4byte	.LASF12
- 559 0070 02       		.byte	0x2
- 560 0071 E401     		.2byte	0x1e4
- 561 0073 2C000000 		.4byte	0x2c
- 562 0077 02       		.uleb128 0x2
- 563 0078 04       		.byte	0x4
- 564 0079 04       		.byte	0x4
- 565 007a BF000000 		.4byte	.LASF9
- 566 007e 02       		.uleb128 0x2
- 567 007f 08       		.byte	0x8
- 568 0080 04       		.byte	0x4
- 569 0081 A4010000 		.4byte	.LASF10
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 27
+ 402 0004 7047     		bx	lr
+ 403              	.L42:
+ 404 0006 00BF     		.align	2
+ 405              	.L41:
+ 406 0008 46640040 		.word	1073767494
+ 407              		.cfi_endproc
+ 408              	.LFE13:
+ 409              		.size	PWM_WaSens_ReadPeriod, .-PWM_WaSens_ReadPeriod
+ 410              		.global	PWM_WaSens_initVar
+ 411              		.bss
+ 412              		.set	.LANCHOR0,. + 0
+ 413              		.type	PWM_WaSens_initVar, %object
+ 414              		.size	PWM_WaSens_initVar, 1
+ 415              	PWM_WaSens_initVar:
+ 416 0000 00       		.space	1
+ 417              		.text
+ 418              	.Letext0:
+ 419              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 420              		.file 3 "Generated_Source\\PSoC5\\CyLib.h"
+ 421              		.section	.debug_info,"",%progbits
+ 422              	.Ldebug_info0:
+ 423 0000 CA020000 		.4byte	0x2ca
+ 424 0004 0400     		.2byte	0x4
+ 425 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 426 000a 04       		.byte	0x4
+ 427 000b 01       		.uleb128 0x1
+ 428 000c C2000000 		.4byte	.LASF36
+ 429 0010 0C       		.byte	0xc
+ 430 0011 10000000 		.4byte	.LASF37
+ 431 0015 F8010000 		.4byte	.LASF38
+ 432 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 433 001d 00000000 		.4byte	0
+ 434 0021 00000000 		.4byte	.Ldebug_line0
+ 435 0025 02       		.uleb128 0x2
+ 436 0026 01       		.byte	0x1
+ 437 0027 06       		.byte	0x6
+ 438 0028 64030000 		.4byte	.LASF0
+ 439 002c 02       		.uleb128 0x2
+ 440 002d 01       		.byte	0x1
+ 441 002e 08       		.byte	0x8
+ 442 002f B4000000 		.4byte	.LASF1
+ 443 0033 02       		.uleb128 0x2
+ 444 0034 02       		.byte	0x2
+ 445 0035 05       		.byte	0x5
+ 446 0036 0B030000 		.4byte	.LASF2
+ 447 003a 02       		.uleb128 0x2
+ 448 003b 02       		.byte	0x2
+ 449 003c 07       		.byte	0x7
+ 450 003d 3B000000 		.4byte	.LASF3
+ 451 0041 02       		.uleb128 0x2
+ 452 0042 04       		.byte	0x4
+ 453 0043 05       		.byte	0x5
+ 454 0044 2B030000 		.4byte	.LASF4
+ 455 0048 02       		.uleb128 0x2
+ 456 0049 04       		.byte	0x4
+ 457 004a 07       		.byte	0x7
+ 458 004b 55010000 		.4byte	.LASF5
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 25
 
 
- 570 0085 02       		.uleb128 0x2
- 571 0086 01       		.byte	0x1
- 572 0087 08       		.byte	0x8
- 573 0088 68030000 		.4byte	.LASF11
- 574 008c 04       		.uleb128 0x4
- 575 008d 77010000 		.4byte	.LASF13
- 576 0091 02       		.byte	0x2
- 577 0092 8E02     		.2byte	0x28e
- 578 0094 98000000 		.4byte	0x98
- 579 0098 05       		.uleb128 0x5
- 580 0099 6B000000 		.4byte	0x6b
- 581 009d 02       		.uleb128 0x2
- 582 009e 08       		.byte	0x8
- 583 009f 04       		.byte	0x4
- 584 00a0 B8020000 		.4byte	.LASF14
- 585 00a4 02       		.uleb128 0x2
- 586 00a5 04       		.byte	0x4
- 587 00a6 07       		.byte	0x7
- 588 00a7 C4020000 		.4byte	.LASF15
- 589 00ab 06       		.uleb128 0x6
- 590 00ac AB010000 		.4byte	.LASF16
- 591 00b0 01       		.byte	0x1
- 592 00b1 C7       		.byte	0xc7
- 593 00b2 00000000 		.4byte	.LFB2
- 594 00b6 10000000 		.4byte	.LFE2-.LFB2
- 595 00ba 01       		.uleb128 0x1
- 596 00bb 9C       		.byte	0x9c
- 597 00bc 06       		.uleb128 0x6
- 598 00bd 20000000 		.4byte	.LASF17
- 599 00c1 01       		.byte	0x1
- 600 00c2 E9       		.byte	0xe9
- 601 00c3 00000000 		.4byte	.LFB3
- 602 00c7 10000000 		.4byte	.LFE3-.LFB3
- 603 00cb 01       		.uleb128 0x1
- 604 00cc 9C       		.byte	0x9c
- 605 00cd 07       		.uleb128 0x7
- 606 00ce 80030000 		.4byte	.LASF18
- 607 00d2 01       		.byte	0x1
- 608 00d3 9301     		.2byte	0x193
- 609 00d5 00000000 		.4byte	.LFB4
- 610 00d9 0C000000 		.4byte	.LFE4-.LFB4
- 611 00dd 01       		.uleb128 0x1
- 612 00de 9C       		.byte	0x9c
- 613 00df F2000000 		.4byte	0xf2
- 614 00e3 08       		.uleb128 0x8
- 615 00e4 9C010000 		.4byte	.LASF20
- 616 00e8 01       		.byte	0x1
- 617 00e9 9301     		.2byte	0x193
- 618 00eb 6B000000 		.4byte	0x6b
- 619 00ef 01       		.uleb128 0x1
- 620 00f0 50       		.byte	0x50
- 621 00f1 00       		.byte	0
- 622 00f2 09       		.uleb128 0x9
- 623 00f3 BD010000 		.4byte	.LASF26
- 624 00f7 01       		.byte	0x1
- 625 00f8 A901     		.2byte	0x1a9
- 626 00fa 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 28
+ 459 004f 02       		.uleb128 0x2
+ 460 0050 08       		.byte	0x8
+ 461 0051 05       		.byte	0x5
+ 462 0052 A9020000 		.4byte	.LASF6
+ 463 0056 02       		.uleb128 0x2
+ 464 0057 08       		.byte	0x8
+ 465 0058 07       		.byte	0x7
+ 466 0059 E1010000 		.4byte	.LASF7
+ 467 005d 03       		.uleb128 0x3
+ 468 005e 04       		.byte	0x4
+ 469 005f 05       		.byte	0x5
+ 470 0060 696E7400 		.ascii	"int\000"
+ 471 0064 02       		.uleb128 0x2
+ 472 0065 04       		.byte	0x4
+ 473 0066 07       		.byte	0x7
+ 474 0067 D4010000 		.4byte	.LASF8
+ 475 006b 04       		.uleb128 0x4
+ 476 006c 67010000 		.4byte	.LASF12
+ 477 0070 02       		.byte	0x2
+ 478 0071 E401     		.2byte	0x1e4
+ 479 0073 2C000000 		.4byte	0x2c
+ 480 0077 02       		.uleb128 0x2
+ 481 0078 04       		.byte	0x4
+ 482 0079 04       		.byte	0x4
+ 483 007a 98000000 		.4byte	.LASF9
+ 484 007e 02       		.uleb128 0x2
+ 485 007f 08       		.byte	0x8
+ 486 0080 04       		.byte	0x4
+ 487 0081 75010000 		.4byte	.LASF10
+ 488 0085 02       		.uleb128 0x2
+ 489 0086 01       		.byte	0x1
+ 490 0087 08       		.byte	0x8
+ 491 0088 34030000 		.4byte	.LASF11
+ 492 008c 04       		.uleb128 0x4
+ 493 008d 50010000 		.4byte	.LASF13
+ 494 0091 02       		.byte	0x2
+ 495 0092 8E02     		.2byte	0x28e
+ 496 0094 98000000 		.4byte	0x98
+ 497 0098 05       		.uleb128 0x5
+ 498 0099 6B000000 		.4byte	0x6b
+ 499 009d 02       		.uleb128 0x2
+ 500 009e 08       		.byte	0x8
+ 501 009f 04       		.byte	0x4
+ 502 00a0 84020000 		.4byte	.LASF14
+ 503 00a4 02       		.uleb128 0x2
+ 504 00a5 04       		.byte	0x4
+ 505 00a6 07       		.byte	0x7
+ 506 00a7 90020000 		.4byte	.LASF15
+ 507 00ab 06       		.uleb128 0x6
+ 508 00ac 7C010000 		.4byte	.LASF16
+ 509 00b0 01       		.byte	0x1
+ 510 00b1 C7       		.byte	0xc7
+ 511 00b2 00000000 		.4byte	.LFB2
+ 512 00b6 02000000 		.4byte	.LFE2-.LFB2
+ 513 00ba 01       		.uleb128 0x1
+ 514 00bb 9C       		.byte	0x9c
+ 515 00bc 06       		.uleb128 0x6
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 26
 
 
- 627 00fe 00000000 		.4byte	.LFB5
- 628 0102 14000000 		.4byte	.LFE5-.LFB5
- 629 0106 01       		.uleb128 0x1
- 630 0107 9C       		.byte	0x9c
- 631 0108 07       		.uleb128 0x7
- 632 0109 EB020000 		.4byte	.LASF19
- 633 010d 01       		.byte	0x1
- 634 010e E201     		.2byte	0x1e2
- 635 0110 00000000 		.4byte	.LFB7
- 636 0114 0C000000 		.4byte	.LFE7-.LFB7
- 637 0118 01       		.uleb128 0x1
- 638 0119 9C       		.byte	0x9c
- 639 011a 2D010000 		.4byte	0x12d
- 640 011e 08       		.uleb128 0x8
- 641 011f 5B000000 		.4byte	.LASF21
- 642 0123 01       		.byte	0x1
- 643 0124 E201     		.2byte	0x1e2
- 644 0126 6B000000 		.4byte	0x6b
- 645 012a 01       		.uleb128 0x1
- 646 012b 50       		.byte	0x50
- 647 012c 00       		.byte	0
- 648 012d 07       		.uleb128 0x7
- 649 012e D4010000 		.4byte	.LASF22
- 650 0132 01       		.byte	0x1
- 651 0133 0402     		.2byte	0x204
- 652 0135 00000000 		.4byte	.LFB8
- 653 0139 0C000000 		.4byte	.LFE8-.LFB8
- 654 013d 01       		.uleb128 0x1
- 655 013e 9C       		.byte	0x9c
- 656 013f 52010000 		.4byte	0x152
- 657 0143 08       		.uleb128 0x8
- 658 0144 A4030000 		.4byte	.LASF23
- 659 0148 01       		.byte	0x1
- 660 0149 0402     		.2byte	0x204
- 661 014b 6B000000 		.4byte	0x6b
- 662 014f 01       		.uleb128 0x1
- 663 0150 50       		.byte	0x50
- 664 0151 00       		.byte	0
- 665 0152 07       		.uleb128 0x7
- 666 0153 75000000 		.4byte	.LASF24
- 667 0157 01       		.byte	0x1
- 668 0158 AC02     		.2byte	0x2ac
- 669 015a 00000000 		.4byte	.LFB9
- 670 015e 0C000000 		.4byte	.LFE9-.LFB9
- 671 0162 01       		.uleb128 0x1
- 672 0163 9C       		.byte	0x9c
- 673 0164 77010000 		.4byte	0x177
- 674 0168 08       		.uleb128 0x8
- 675 0169 02030000 		.4byte	.LASF25
- 676 016d 01       		.byte	0x1
- 677 016e AC02     		.2byte	0x2ac
- 678 0170 6B000000 		.4byte	0x6b
- 679 0174 01       		.uleb128 0x1
- 680 0175 50       		.byte	0x50
- 681 0176 00       		.byte	0
- 682 0177 09       		.uleb128 0x9
- 683 0178 95020000 		.4byte	.LASF27
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 29
+ 516 00bd 00000000 		.4byte	.LASF17
+ 517 00c1 01       		.byte	0x1
+ 518 00c2 E9       		.byte	0xe9
+ 519 00c3 00000000 		.4byte	.LFB3
+ 520 00c7 02000000 		.4byte	.LFE3-.LFB3
+ 521 00cb 01       		.uleb128 0x1
+ 522 00cc 9C       		.byte	0x9c
+ 523 00cd 07       		.uleb128 0x7
+ 524 00ce 4C030000 		.4byte	.LASF18
+ 525 00d2 01       		.byte	0x1
+ 526 00d3 9301     		.2byte	0x193
+ 527 00d5 00000000 		.4byte	.LFB4
+ 528 00d9 0C000000 		.4byte	.LFE4-.LFB4
+ 529 00dd 01       		.uleb128 0x1
+ 530 00de 9C       		.byte	0x9c
+ 531 00df F2000000 		.4byte	0xf2
+ 532 00e3 08       		.uleb128 0x8
+ 533 00e4 6D010000 		.4byte	.LASF20
+ 534 00e8 01       		.byte	0x1
+ 535 00e9 9301     		.2byte	0x193
+ 536 00eb 6B000000 		.4byte	0x6b
+ 537 00ef 01       		.uleb128 0x1
+ 538 00f0 50       		.byte	0x50
+ 539 00f1 00       		.byte	0
+ 540 00f2 09       		.uleb128 0x9
+ 541 00f3 8E010000 		.4byte	.LASF26
+ 542 00f7 01       		.byte	0x1
+ 543 00f8 A901     		.2byte	0x1a9
+ 544 00fa 6B000000 		.4byte	0x6b
+ 545 00fe 00000000 		.4byte	.LFB5
+ 546 0102 14000000 		.4byte	.LFE5-.LFB5
+ 547 0106 01       		.uleb128 0x1
+ 548 0107 9C       		.byte	0x9c
+ 549 0108 07       		.uleb128 0x7
+ 550 0109 B7020000 		.4byte	.LASF19
+ 551 010d 01       		.byte	0x1
+ 552 010e E201     		.2byte	0x1e2
+ 553 0110 00000000 		.4byte	.LFB7
+ 554 0114 0C000000 		.4byte	.LFE7-.LFB7
+ 555 0118 01       		.uleb128 0x1
+ 556 0119 9C       		.byte	0x9c
+ 557 011a 2D010000 		.4byte	0x12d
+ 558 011e 08       		.uleb128 0x8
+ 559 011f 34000000 		.4byte	.LASF21
+ 560 0123 01       		.byte	0x1
+ 561 0124 E201     		.2byte	0x1e2
+ 562 0126 6B000000 		.4byte	0x6b
+ 563 012a 01       		.uleb128 0x1
+ 564 012b 50       		.byte	0x50
+ 565 012c 00       		.byte	0
+ 566 012d 07       		.uleb128 0x7
+ 567 012e A5010000 		.4byte	.LASF22
+ 568 0132 01       		.byte	0x1
+ 569 0133 0402     		.2byte	0x204
+ 570 0135 00000000 		.4byte	.LFB8
+ 571 0139 0C000000 		.4byte	.LFE8-.LFB8
+ 572 013d 01       		.uleb128 0x1
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 27
 
 
- 684 017c 01       		.byte	0x1
- 685 017d C702     		.2byte	0x2c7
- 686 017f 6B000000 		.4byte	0x6b
- 687 0183 00000000 		.4byte	.LFB10
- 688 0187 0C000000 		.4byte	.LFE10-.LFB10
- 689 018b 01       		.uleb128 0x1
- 690 018c 9C       		.byte	0x9c
- 691 018d 0A       		.uleb128 0xa
- 692 018e BD030000 		.4byte	.LASF44
- 693 0192 01       		.byte	0x1
- 694 0193 E102     		.2byte	0x2e1
- 695 0195 6B000000 		.4byte	0x6b
- 696 0199 00000000 		.4byte	.LFB11
- 697 019d 0C000000 		.4byte	.LFE11-.LFB11
- 698 01a1 01       		.uleb128 0x1
- 699 01a2 9C       		.byte	0x9c
- 700 01a3 B6010000 		.4byte	0x1b6
- 701 01a7 0B       		.uleb128 0xb
- 702 01a8 30000000 		.4byte	.LASF33
- 703 01ac 01       		.byte	0x1
- 704 01ad E302     		.2byte	0x2e3
- 705 01af 6B000000 		.4byte	0x6b
- 706 01b3 01       		.uleb128 0x1
- 707 01b4 50       		.byte	0x50
- 708 01b5 00       		.byte	0
- 709 01b6 07       		.uleb128 0x7
- 710 01b7 00000000 		.4byte	.LASF28
- 711 01bb 01       		.byte	0x1
- 712 01bc FD02     		.2byte	0x2fd
- 713 01be 00000000 		.4byte	.LFB12
- 714 01c2 0C000000 		.4byte	.LFE12-.LFB12
- 715 01c6 01       		.uleb128 0x1
- 716 01c7 9C       		.byte	0x9c
- 717 01c8 DB010000 		.4byte	0x1db
- 718 01cc 08       		.uleb128 0x8
- 719 01cd 94010000 		.4byte	.LASF29
- 720 01d1 01       		.byte	0x1
- 721 01d2 FD02     		.2byte	0x2fd
- 722 01d4 6B000000 		.4byte	0x6b
- 723 01d8 01       		.uleb128 0x1
- 724 01d9 50       		.byte	0x50
- 725 01da 00       		.byte	0
- 726 01db 09       		.uleb128 0x9
- 727 01dc A8000000 		.4byte	.LASF30
- 728 01e0 01       		.byte	0x1
- 729 01e1 1603     		.2byte	0x316
- 730 01e3 6B000000 		.4byte	0x6b
- 731 01e7 00000000 		.4byte	.LFB13
- 732 01eb 0C000000 		.4byte	.LFE13-.LFB13
- 733 01ef 01       		.uleb128 0x1
- 734 01f0 9C       		.byte	0x9c
- 735 01f1 07       		.uleb128 0x7
- 736 01f2 10030000 		.4byte	.LASF31
- 737 01f6 01       		.byte	0x1
- 738 01f7 C501     		.2byte	0x1c5
- 739 01f9 00000000 		.4byte	.LFB6
- 740 01fd 14000000 		.4byte	.LFE6-.LFB6
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 30
+ 573 013e 9C       		.byte	0x9c
+ 574 013f 52010000 		.4byte	0x152
+ 575 0143 08       		.uleb128 0x8
+ 576 0144 70030000 		.4byte	.LASF23
+ 577 0148 01       		.byte	0x1
+ 578 0149 0402     		.2byte	0x204
+ 579 014b 6B000000 		.4byte	0x6b
+ 580 014f 01       		.uleb128 0x1
+ 581 0150 50       		.byte	0x50
+ 582 0151 00       		.byte	0
+ 583 0152 07       		.uleb128 0x7
+ 584 0153 4E000000 		.4byte	.LASF24
+ 585 0157 01       		.byte	0x1
+ 586 0158 AC02     		.2byte	0x2ac
+ 587 015a 00000000 		.4byte	.LFB9
+ 588 015e 0C000000 		.4byte	.LFE9-.LFB9
+ 589 0162 01       		.uleb128 0x1
+ 590 0163 9C       		.byte	0x9c
+ 591 0164 77010000 		.4byte	0x177
+ 592 0168 08       		.uleb128 0x8
+ 593 0169 CE020000 		.4byte	.LASF25
+ 594 016d 01       		.byte	0x1
+ 595 016e AC02     		.2byte	0x2ac
+ 596 0170 6B000000 		.4byte	0x6b
+ 597 0174 01       		.uleb128 0x1
+ 598 0175 50       		.byte	0x50
+ 599 0176 00       		.byte	0
+ 600 0177 09       		.uleb128 0x9
+ 601 0178 66020000 		.4byte	.LASF27
+ 602 017c 01       		.byte	0x1
+ 603 017d C702     		.2byte	0x2c7
+ 604 017f 6B000000 		.4byte	0x6b
+ 605 0183 00000000 		.4byte	.LFB10
+ 606 0187 0C000000 		.4byte	.LFE10-.LFB10
+ 607 018b 01       		.uleb128 0x1
+ 608 018c 9C       		.byte	0x9c
+ 609 018d 09       		.uleb128 0x9
+ 610 018e 81000000 		.4byte	.LASF28
+ 611 0192 01       		.byte	0x1
+ 612 0193 1603     		.2byte	0x316
+ 613 0195 6B000000 		.4byte	0x6b
+ 614 0199 00000000 		.4byte	.LFB11
+ 615 019d 0C000000 		.4byte	.LFE11-.LFB11
+ 616 01a1 01       		.uleb128 0x1
+ 617 01a2 9C       		.byte	0x9c
+ 618 01a3 07       		.uleb128 0x7
+ 619 01a4 DC020000 		.4byte	.LASF29
+ 620 01a8 01       		.byte	0x1
+ 621 01a9 C501     		.2byte	0x1c5
+ 622 01ab 00000000 		.4byte	.LFB6
+ 623 01af 14000000 		.4byte	.LFE6-.LFB6
+ 624 01b3 01       		.uleb128 0x1
+ 625 01b4 9C       		.byte	0x9c
+ 626 01b5 CC010000 		.4byte	0x1cc
+ 627 01b9 0A       		.uleb128 0xa
+ 628 01ba 08000000 		.4byte	.LVL4
+ 629 01be 8D010000 		.4byte	0x18d
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 28
 
 
- 741 0201 01       		.uleb128 0x1
- 742 0202 9C       		.byte	0x9c
- 743 0203 1A020000 		.4byte	0x21a
- 744 0207 0C       		.uleb128 0xc
- 745 0208 08000000 		.4byte	.LVL6
- 746 020c DB010000 		.4byte	0x1db
- 747 0210 0C       		.uleb128 0xc
- 748 0211 0C000000 		.4byte	.LVL7
- 749 0215 77010000 		.4byte	0x177
- 750 0219 00       		.byte	0
- 751 021a 0D       		.uleb128 0xd
- 752 021b CD020000 		.4byte	.LASF32
- 753 021f 01       		.byte	0x1
- 754 0220 54       		.byte	0x54
- 755 0221 00000000 		.4byte	.LFB1
- 756 0225 50000000 		.4byte	.LFE1-.LFB1
- 757 0229 01       		.uleb128 0x1
- 758 022a 9C       		.byte	0x9c
- 759 022b B8020000 		.4byte	0x2b8
- 760 022f 0E       		.uleb128 0xe
- 761 0230 B3020000 		.4byte	.LASF34
- 762 0234 01       		.byte	0x1
- 763 0235 57       		.byte	0x57
- 764 0236 6B000000 		.4byte	0x6b
- 765 023a 00000000 		.4byte	.LLST0
- 766 023e 0E       		.uleb128 0xe
- 767 023f 25030000 		.4byte	.LASF35
- 768 0243 01       		.byte	0x1
- 769 0244 5D       		.byte	0x5d
- 770 0245 6B000000 		.4byte	0x6b
- 771 0249 13000000 		.4byte	.LLST1
- 772 024d 0F       		.uleb128 0xf
- 773 024e 20000000 		.4byte	.LVL10
- 774 0252 CD000000 		.4byte	0xcd
- 775 0256 61020000 		.4byte	0x261
- 776 025a 10       		.uleb128 0x10
- 777 025b 01       		.uleb128 0x1
- 778 025c 50       		.byte	0x50
- 779 025d 02       		.uleb128 0x2
- 780 025e 08       		.byte	0x8
- 781 025f 70       		.byte	0x70
- 782 0260 00       		.byte	0
- 783 0261 0F       		.uleb128 0xf
- 784 0262 26000000 		.4byte	.LVL11
- 785 0266 08010000 		.4byte	0x108
- 786 026a 75020000 		.4byte	0x275
- 787 026e 10       		.uleb128 0x10
- 788 026f 01       		.uleb128 0x1
- 789 0270 50       		.byte	0x50
- 790 0271 02       		.uleb128 0x2
- 791 0272 08       		.byte	0x8
- 792 0273 70       		.byte	0x70
- 793 0274 00       		.byte	0
- 794 0275 0F       		.uleb128 0xf
- 795 0276 2C000000 		.4byte	.LVL12
- 796 027a 2D010000 		.4byte	0x12d
- 797 027e 89020000 		.4byte	0x289
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 31
+ 630 01c2 0A       		.uleb128 0xa
+ 631 01c3 0C000000 		.4byte	.LVL5
+ 632 01c7 77010000 		.4byte	0x177
+ 633 01cb 00       		.byte	0
+ 634 01cc 0B       		.uleb128 0xb
+ 635 01cd 99020000 		.4byte	.LASF30
+ 636 01d1 01       		.byte	0x1
+ 637 01d2 54       		.byte	0x54
+ 638 01d3 00000000 		.4byte	.LFB1
+ 639 01d7 40000000 		.4byte	.LFE1-.LFB1
+ 640 01db 01       		.uleb128 0x1
+ 641 01dc 9C       		.byte	0x9c
+ 642 01dd 5B020000 		.4byte	0x25b
+ 643 01e1 0C       		.uleb128 0xc
+ 644 01e2 F1020000 		.4byte	.LASF39
+ 645 01e6 01       		.byte	0x1
+ 646 01e7 5D       		.byte	0x5d
+ 647 01e8 6B000000 		.4byte	0x6b
+ 648 01ec 00000000 		.4byte	.LLST0
+ 649 01f0 0D       		.uleb128 0xd
+ 650 01f1 12000000 		.4byte	.LVL6
+ 651 01f5 CD000000 		.4byte	0xcd
+ 652 01f9 04020000 		.4byte	0x204
+ 653 01fd 0E       		.uleb128 0xe
+ 654 01fe 01       		.uleb128 0x1
+ 655 01ff 50       		.byte	0x50
+ 656 0200 02       		.uleb128 0x2
+ 657 0201 08       		.byte	0x8
+ 658 0202 7D       		.byte	0x7d
+ 659 0203 00       		.byte	0
+ 660 0204 0D       		.uleb128 0xd
+ 661 0205 18000000 		.4byte	.LVL7
+ 662 0209 08010000 		.4byte	0x108
+ 663 020d 18020000 		.4byte	0x218
+ 664 0211 0E       		.uleb128 0xe
+ 665 0212 01       		.uleb128 0x1
+ 666 0213 50       		.byte	0x50
+ 667 0214 02       		.uleb128 0x2
+ 668 0215 08       		.byte	0x8
+ 669 0216 7D       		.byte	0x7d
+ 670 0217 00       		.byte	0
+ 671 0218 0D       		.uleb128 0xd
+ 672 0219 1E000000 		.4byte	.LVL8
+ 673 021d 2D010000 		.4byte	0x12d
+ 674 0221 2C020000 		.4byte	0x22c
+ 675 0225 0E       		.uleb128 0xe
+ 676 0226 01       		.uleb128 0x1
+ 677 0227 50       		.byte	0x50
+ 678 0228 02       		.uleb128 0x2
+ 679 0229 08       		.byte	0x8
+ 680 022a 3E       		.byte	0x3e
+ 681 022b 00       		.byte	0
+ 682 022c 0D       		.uleb128 0xd
+ 683 022d 24000000 		.4byte	.LVL9
+ 684 0231 52010000 		.4byte	0x152
+ 685 0235 3F020000 		.4byte	0x23f
+ 686 0239 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 29
 
 
- 798 0282 10       		.uleb128 0x10
- 799 0283 01       		.uleb128 0x1
- 800 0284 50       		.byte	0x50
- 801 0285 02       		.uleb128 0x2
- 802 0286 08       		.byte	0x8
- 803 0287 33       		.byte	0x33
- 804 0288 00       		.byte	0
- 805 0289 0F       		.uleb128 0xf
- 806 028a 32000000 		.4byte	.LVL13
- 807 028e 52010000 		.4byte	0x152
- 808 0292 9C020000 		.4byte	0x29c
- 809 0296 10       		.uleb128 0x10
- 810 0297 01       		.uleb128 0x1
- 811 0298 50       		.byte	0x50
- 812 0299 01       		.uleb128 0x1
- 813 029a 30       		.byte	0x30
- 814 029b 00       		.byte	0
- 815 029c 0C       		.uleb128 0xc
- 816 029d 36000000 		.4byte	.LVL14
- 817 02a1 1D030000 		.4byte	0x31d
- 818 02a5 0C       		.uleb128 0xc
- 819 02a6 42000000 		.4byte	.LVL15
- 820 02aa 28030000 		.4byte	0x328
- 821 02ae 0C       		.uleb128 0xc
- 822 02af 46000000 		.4byte	.LVL16
- 823 02b3 F1010000 		.4byte	0x1f1
- 824 02b7 00       		.byte	0
- 825 02b8 0D       		.uleb128 0xd
- 826 02b9 AC030000 		.4byte	.LASF36
- 827 02bd 01       		.byte	0x1
- 828 02be 37       		.byte	0x37
- 829 02bf 00000000 		.4byte	.LFB0
- 830 02c3 1C000000 		.4byte	.LFE0-.LFB0
- 831 02c7 01       		.uleb128 0x1
- 832 02c8 9C       		.byte	0x9c
- 833 02c9 E0020000 		.4byte	0x2e0
- 834 02cd 0C       		.uleb128 0xc
- 835 02ce 0C000000 		.4byte	.LVL17
- 836 02d2 1A020000 		.4byte	0x21a
- 837 02d6 0C       		.uleb128 0xc
- 838 02d7 16000000 		.4byte	.LVL18
- 839 02db AB000000 		.4byte	0xab
- 840 02df 00       		.byte	0
- 841 02e0 09       		.uleb128 0x9
- 842 02e1 91000000 		.4byte	.LASF37
- 843 02e5 01       		.byte	0x1
- 844 02e6 3003     		.2byte	0x330
- 845 02e8 6B000000 		.4byte	0x6b
- 846 02ec 00000000 		.4byte	.LFB14
- 847 02f0 0C000000 		.4byte	.LFE14-.LFB14
- 848 02f4 01       		.uleb128 0x1
- 849 02f5 9C       		.byte	0x9c
- 850 02f6 09       		.uleb128 0x9
- 851 02f7 C5000000 		.4byte	.LASF38
- 852 02fb 01       		.byte	0x1
- 853 02fc 7403     		.2byte	0x374
- 854 02fe 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 32
+ 687 023a 01       		.uleb128 0x1
+ 688 023b 50       		.byte	0x50
+ 689 023c 01       		.uleb128 0x1
+ 690 023d 30       		.byte	0x30
+ 691 023e 00       		.byte	0
+ 692 023f 0A       		.uleb128 0xa
+ 693 0240 28000000 		.4byte	.LVL10
+ 694 0244 B7020000 		.4byte	0x2b7
+ 695 0248 0A       		.uleb128 0xa
+ 696 0249 34000000 		.4byte	.LVL11
+ 697 024d C2020000 		.4byte	0x2c2
+ 698 0251 0A       		.uleb128 0xa
+ 699 0252 38000000 		.4byte	.LVL12
+ 700 0256 A3010000 		.4byte	0x1a3
+ 701 025a 00       		.byte	0
+ 702 025b 0B       		.uleb128 0xb
+ 703 025c 78030000 		.4byte	.LASF31
+ 704 0260 01       		.byte	0x1
+ 705 0261 37       		.byte	0x37
+ 706 0262 00000000 		.4byte	.LFB0
+ 707 0266 18000000 		.4byte	.LFE0-.LFB0
+ 708 026a 01       		.uleb128 0x1
+ 709 026b 9C       		.byte	0x9c
+ 710 026c 7A020000 		.4byte	0x27a
+ 711 0270 0A       		.uleb128 0xa
+ 712 0271 0C000000 		.4byte	.LVL13
+ 713 0275 CC010000 		.4byte	0x1cc
+ 714 0279 00       		.byte	0
+ 715 027a 09       		.uleb128 0x9
+ 716 027b 6A000000 		.4byte	.LASF32
+ 717 027f 01       		.byte	0x1
+ 718 0280 3003     		.2byte	0x330
+ 719 0282 6B000000 		.4byte	0x6b
+ 720 0286 00000000 		.4byte	.LFB12
+ 721 028a 0C000000 		.4byte	.LFE12-.LFB12
+ 722 028e 01       		.uleb128 0x1
+ 723 028f 9C       		.byte	0x9c
+ 724 0290 09       		.uleb128 0x9
+ 725 0291 9E000000 		.4byte	.LASF33
+ 726 0295 01       		.byte	0x1
+ 727 0296 7403     		.2byte	0x374
+ 728 0298 6B000000 		.4byte	0x6b
+ 729 029c 00000000 		.4byte	.LFB13
+ 730 02a0 0C000000 		.4byte	.LFE13-.LFB13
+ 731 02a4 01       		.uleb128 0x1
+ 732 02a5 9C       		.byte	0x9c
+ 733 02a6 0F       		.uleb128 0xf
+ 734 02a7 39030000 		.4byte	.LASF40
+ 735 02ab 01       		.byte	0x1
+ 736 02ac 20       		.byte	0x20
+ 737 02ad 6B000000 		.4byte	0x6b
+ 738 02b1 05       		.uleb128 0x5
+ 739 02b2 03       		.byte	0x3
+ 740 02b3 00000000 		.4byte	PWM_WaSens_initVar
+ 741 02b7 10       		.uleb128 0x10
+ 742 02b8 BD010000 		.4byte	.LASF34
+ 743 02bc BD010000 		.4byte	.LASF34
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 30
 
 
- 855 0302 00000000 		.4byte	.LFB15
- 856 0306 0C000000 		.4byte	.LFE15-.LFB15
- 857 030a 01       		.uleb128 0x1
- 858 030b 9C       		.byte	0x9c
- 859 030c 11       		.uleb128 0x11
- 860 030d 6D030000 		.4byte	.LASF45
- 861 0311 01       		.byte	0x1
- 862 0312 20       		.byte	0x20
- 863 0313 6B000000 		.4byte	0x6b
- 864 0317 05       		.uleb128 0x5
- 865 0318 03       		.byte	0x3
- 866 0319 00000000 		.4byte	PWM_WaSens_initVar
- 867 031d 12       		.uleb128 0x12
- 868 031e EC010000 		.4byte	.LASF39
- 869 0322 EC010000 		.4byte	.LASF39
- 870 0326 03       		.byte	0x3
- 871 0327 7D       		.byte	0x7d
- 872 0328 12       		.uleb128 0x12
- 873 0329 49030000 		.4byte	.LASF40
- 874 032d 49030000 		.4byte	.LASF40
- 875 0331 03       		.byte	0x3
- 876 0332 7E       		.byte	0x7e
- 877 0333 00       		.byte	0
- 878              		.section	.debug_abbrev,"",%progbits
- 879              	.Ldebug_abbrev0:
- 880 0000 01       		.uleb128 0x1
- 881 0001 11       		.uleb128 0x11
- 882 0002 01       		.byte	0x1
- 883 0003 25       		.uleb128 0x25
- 884 0004 0E       		.uleb128 0xe
- 885 0005 13       		.uleb128 0x13
- 886 0006 0B       		.uleb128 0xb
- 887 0007 03       		.uleb128 0x3
- 888 0008 0E       		.uleb128 0xe
- 889 0009 1B       		.uleb128 0x1b
- 890 000a 0E       		.uleb128 0xe
- 891 000b 55       		.uleb128 0x55
- 892 000c 17       		.uleb128 0x17
- 893 000d 11       		.uleb128 0x11
- 894 000e 01       		.uleb128 0x1
- 895 000f 10       		.uleb128 0x10
- 896 0010 17       		.uleb128 0x17
- 897 0011 00       		.byte	0
- 898 0012 00       		.byte	0
- 899 0013 02       		.uleb128 0x2
- 900 0014 24       		.uleb128 0x24
- 901 0015 00       		.byte	0
- 902 0016 0B       		.uleb128 0xb
- 903 0017 0B       		.uleb128 0xb
- 904 0018 3E       		.uleb128 0x3e
- 905 0019 0B       		.uleb128 0xb
- 906 001a 03       		.uleb128 0x3
- 907 001b 0E       		.uleb128 0xe
- 908 001c 00       		.byte	0
- 909 001d 00       		.byte	0
- 910 001e 03       		.uleb128 0x3
- 911 001f 24       		.uleb128 0x24
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 33
+ 744 02c0 03       		.byte	0x3
+ 745 02c1 7D       		.byte	0x7d
+ 746 02c2 10       		.uleb128 0x10
+ 747 02c3 15030000 		.4byte	.LASF35
+ 748 02c7 15030000 		.4byte	.LASF35
+ 749 02cb 03       		.byte	0x3
+ 750 02cc 7E       		.byte	0x7e
+ 751 02cd 00       		.byte	0
+ 752              		.section	.debug_abbrev,"",%progbits
+ 753              	.Ldebug_abbrev0:
+ 754 0000 01       		.uleb128 0x1
+ 755 0001 11       		.uleb128 0x11
+ 756 0002 01       		.byte	0x1
+ 757 0003 25       		.uleb128 0x25
+ 758 0004 0E       		.uleb128 0xe
+ 759 0005 13       		.uleb128 0x13
+ 760 0006 0B       		.uleb128 0xb
+ 761 0007 03       		.uleb128 0x3
+ 762 0008 0E       		.uleb128 0xe
+ 763 0009 1B       		.uleb128 0x1b
+ 764 000a 0E       		.uleb128 0xe
+ 765 000b 55       		.uleb128 0x55
+ 766 000c 17       		.uleb128 0x17
+ 767 000d 11       		.uleb128 0x11
+ 768 000e 01       		.uleb128 0x1
+ 769 000f 10       		.uleb128 0x10
+ 770 0010 17       		.uleb128 0x17
+ 771 0011 00       		.byte	0
+ 772 0012 00       		.byte	0
+ 773 0013 02       		.uleb128 0x2
+ 774 0014 24       		.uleb128 0x24
+ 775 0015 00       		.byte	0
+ 776 0016 0B       		.uleb128 0xb
+ 777 0017 0B       		.uleb128 0xb
+ 778 0018 3E       		.uleb128 0x3e
+ 779 0019 0B       		.uleb128 0xb
+ 780 001a 03       		.uleb128 0x3
+ 781 001b 0E       		.uleb128 0xe
+ 782 001c 00       		.byte	0
+ 783 001d 00       		.byte	0
+ 784 001e 03       		.uleb128 0x3
+ 785 001f 24       		.uleb128 0x24
+ 786 0020 00       		.byte	0
+ 787 0021 0B       		.uleb128 0xb
+ 788 0022 0B       		.uleb128 0xb
+ 789 0023 3E       		.uleb128 0x3e
+ 790 0024 0B       		.uleb128 0xb
+ 791 0025 03       		.uleb128 0x3
+ 792 0026 08       		.uleb128 0x8
+ 793 0027 00       		.byte	0
+ 794 0028 00       		.byte	0
+ 795 0029 04       		.uleb128 0x4
+ 796 002a 16       		.uleb128 0x16
+ 797 002b 00       		.byte	0
+ 798 002c 03       		.uleb128 0x3
+ 799 002d 0E       		.uleb128 0xe
+ 800 002e 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 31
 
 
- 912 0020 00       		.byte	0
- 913 0021 0B       		.uleb128 0xb
- 914 0022 0B       		.uleb128 0xb
- 915 0023 3E       		.uleb128 0x3e
- 916 0024 0B       		.uleb128 0xb
- 917 0025 03       		.uleb128 0x3
- 918 0026 08       		.uleb128 0x8
- 919 0027 00       		.byte	0
- 920 0028 00       		.byte	0
- 921 0029 04       		.uleb128 0x4
- 922 002a 16       		.uleb128 0x16
- 923 002b 00       		.byte	0
- 924 002c 03       		.uleb128 0x3
- 925 002d 0E       		.uleb128 0xe
- 926 002e 3A       		.uleb128 0x3a
- 927 002f 0B       		.uleb128 0xb
- 928 0030 3B       		.uleb128 0x3b
- 929 0031 05       		.uleb128 0x5
- 930 0032 49       		.uleb128 0x49
- 931 0033 13       		.uleb128 0x13
- 932 0034 00       		.byte	0
- 933 0035 00       		.byte	0
- 934 0036 05       		.uleb128 0x5
- 935 0037 35       		.uleb128 0x35
- 936 0038 00       		.byte	0
- 937 0039 49       		.uleb128 0x49
- 938 003a 13       		.uleb128 0x13
- 939 003b 00       		.byte	0
- 940 003c 00       		.byte	0
- 941 003d 06       		.uleb128 0x6
- 942 003e 2E       		.uleb128 0x2e
- 943 003f 00       		.byte	0
- 944 0040 3F       		.uleb128 0x3f
- 945 0041 19       		.uleb128 0x19
- 946 0042 03       		.uleb128 0x3
- 947 0043 0E       		.uleb128 0xe
- 948 0044 3A       		.uleb128 0x3a
- 949 0045 0B       		.uleb128 0xb
- 950 0046 3B       		.uleb128 0x3b
- 951 0047 0B       		.uleb128 0xb
- 952 0048 27       		.uleb128 0x27
- 953 0049 19       		.uleb128 0x19
- 954 004a 11       		.uleb128 0x11
- 955 004b 01       		.uleb128 0x1
- 956 004c 12       		.uleb128 0x12
- 957 004d 06       		.uleb128 0x6
- 958 004e 40       		.uleb128 0x40
- 959 004f 18       		.uleb128 0x18
- 960 0050 9742     		.uleb128 0x2117
- 961 0052 19       		.uleb128 0x19
- 962 0053 00       		.byte	0
- 963 0054 00       		.byte	0
- 964 0055 07       		.uleb128 0x7
- 965 0056 2E       		.uleb128 0x2e
- 966 0057 01       		.byte	0x1
- 967 0058 3F       		.uleb128 0x3f
- 968 0059 19       		.uleb128 0x19
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 34
+ 801 002f 0B       		.uleb128 0xb
+ 802 0030 3B       		.uleb128 0x3b
+ 803 0031 05       		.uleb128 0x5
+ 804 0032 49       		.uleb128 0x49
+ 805 0033 13       		.uleb128 0x13
+ 806 0034 00       		.byte	0
+ 807 0035 00       		.byte	0
+ 808 0036 05       		.uleb128 0x5
+ 809 0037 35       		.uleb128 0x35
+ 810 0038 00       		.byte	0
+ 811 0039 49       		.uleb128 0x49
+ 812 003a 13       		.uleb128 0x13
+ 813 003b 00       		.byte	0
+ 814 003c 00       		.byte	0
+ 815 003d 06       		.uleb128 0x6
+ 816 003e 2E       		.uleb128 0x2e
+ 817 003f 00       		.byte	0
+ 818 0040 3F       		.uleb128 0x3f
+ 819 0041 19       		.uleb128 0x19
+ 820 0042 03       		.uleb128 0x3
+ 821 0043 0E       		.uleb128 0xe
+ 822 0044 3A       		.uleb128 0x3a
+ 823 0045 0B       		.uleb128 0xb
+ 824 0046 3B       		.uleb128 0x3b
+ 825 0047 0B       		.uleb128 0xb
+ 826 0048 27       		.uleb128 0x27
+ 827 0049 19       		.uleb128 0x19
+ 828 004a 11       		.uleb128 0x11
+ 829 004b 01       		.uleb128 0x1
+ 830 004c 12       		.uleb128 0x12
+ 831 004d 06       		.uleb128 0x6
+ 832 004e 40       		.uleb128 0x40
+ 833 004f 18       		.uleb128 0x18
+ 834 0050 9742     		.uleb128 0x2117
+ 835 0052 19       		.uleb128 0x19
+ 836 0053 00       		.byte	0
+ 837 0054 00       		.byte	0
+ 838 0055 07       		.uleb128 0x7
+ 839 0056 2E       		.uleb128 0x2e
+ 840 0057 01       		.byte	0x1
+ 841 0058 3F       		.uleb128 0x3f
+ 842 0059 19       		.uleb128 0x19
+ 843 005a 03       		.uleb128 0x3
+ 844 005b 0E       		.uleb128 0xe
+ 845 005c 3A       		.uleb128 0x3a
+ 846 005d 0B       		.uleb128 0xb
+ 847 005e 3B       		.uleb128 0x3b
+ 848 005f 05       		.uleb128 0x5
+ 849 0060 27       		.uleb128 0x27
+ 850 0061 19       		.uleb128 0x19
+ 851 0062 11       		.uleb128 0x11
+ 852 0063 01       		.uleb128 0x1
+ 853 0064 12       		.uleb128 0x12
+ 854 0065 06       		.uleb128 0x6
+ 855 0066 40       		.uleb128 0x40
+ 856 0067 18       		.uleb128 0x18
+ 857 0068 9742     		.uleb128 0x2117
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 32
 
 
- 969 005a 03       		.uleb128 0x3
- 970 005b 0E       		.uleb128 0xe
- 971 005c 3A       		.uleb128 0x3a
- 972 005d 0B       		.uleb128 0xb
- 973 005e 3B       		.uleb128 0x3b
- 974 005f 05       		.uleb128 0x5
- 975 0060 27       		.uleb128 0x27
- 976 0061 19       		.uleb128 0x19
- 977 0062 11       		.uleb128 0x11
- 978 0063 01       		.uleb128 0x1
- 979 0064 12       		.uleb128 0x12
- 980 0065 06       		.uleb128 0x6
- 981 0066 40       		.uleb128 0x40
- 982 0067 18       		.uleb128 0x18
- 983 0068 9742     		.uleb128 0x2117
- 984 006a 19       		.uleb128 0x19
- 985 006b 01       		.uleb128 0x1
- 986 006c 13       		.uleb128 0x13
- 987 006d 00       		.byte	0
- 988 006e 00       		.byte	0
- 989 006f 08       		.uleb128 0x8
- 990 0070 05       		.uleb128 0x5
- 991 0071 00       		.byte	0
- 992 0072 03       		.uleb128 0x3
- 993 0073 0E       		.uleb128 0xe
- 994 0074 3A       		.uleb128 0x3a
- 995 0075 0B       		.uleb128 0xb
- 996 0076 3B       		.uleb128 0x3b
- 997 0077 05       		.uleb128 0x5
- 998 0078 49       		.uleb128 0x49
- 999 0079 13       		.uleb128 0x13
- 1000 007a 02       		.uleb128 0x2
- 1001 007b 18       		.uleb128 0x18
- 1002 007c 00       		.byte	0
- 1003 007d 00       		.byte	0
- 1004 007e 09       		.uleb128 0x9
- 1005 007f 2E       		.uleb128 0x2e
- 1006 0080 00       		.byte	0
- 1007 0081 3F       		.uleb128 0x3f
- 1008 0082 19       		.uleb128 0x19
- 1009 0083 03       		.uleb128 0x3
- 1010 0084 0E       		.uleb128 0xe
- 1011 0085 3A       		.uleb128 0x3a
- 1012 0086 0B       		.uleb128 0xb
- 1013 0087 3B       		.uleb128 0x3b
- 1014 0088 05       		.uleb128 0x5
- 1015 0089 27       		.uleb128 0x27
- 1016 008a 19       		.uleb128 0x19
- 1017 008b 49       		.uleb128 0x49
- 1018 008c 13       		.uleb128 0x13
- 1019 008d 11       		.uleb128 0x11
- 1020 008e 01       		.uleb128 0x1
- 1021 008f 12       		.uleb128 0x12
- 1022 0090 06       		.uleb128 0x6
- 1023 0091 40       		.uleb128 0x40
- 1024 0092 18       		.uleb128 0x18
- 1025 0093 9742     		.uleb128 0x2117
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 35
+ 858 006a 19       		.uleb128 0x19
+ 859 006b 01       		.uleb128 0x1
+ 860 006c 13       		.uleb128 0x13
+ 861 006d 00       		.byte	0
+ 862 006e 00       		.byte	0
+ 863 006f 08       		.uleb128 0x8
+ 864 0070 05       		.uleb128 0x5
+ 865 0071 00       		.byte	0
+ 866 0072 03       		.uleb128 0x3
+ 867 0073 0E       		.uleb128 0xe
+ 868 0074 3A       		.uleb128 0x3a
+ 869 0075 0B       		.uleb128 0xb
+ 870 0076 3B       		.uleb128 0x3b
+ 871 0077 05       		.uleb128 0x5
+ 872 0078 49       		.uleb128 0x49
+ 873 0079 13       		.uleb128 0x13
+ 874 007a 02       		.uleb128 0x2
+ 875 007b 18       		.uleb128 0x18
+ 876 007c 00       		.byte	0
+ 877 007d 00       		.byte	0
+ 878 007e 09       		.uleb128 0x9
+ 879 007f 2E       		.uleb128 0x2e
+ 880 0080 00       		.byte	0
+ 881 0081 3F       		.uleb128 0x3f
+ 882 0082 19       		.uleb128 0x19
+ 883 0083 03       		.uleb128 0x3
+ 884 0084 0E       		.uleb128 0xe
+ 885 0085 3A       		.uleb128 0x3a
+ 886 0086 0B       		.uleb128 0xb
+ 887 0087 3B       		.uleb128 0x3b
+ 888 0088 05       		.uleb128 0x5
+ 889 0089 27       		.uleb128 0x27
+ 890 008a 19       		.uleb128 0x19
+ 891 008b 49       		.uleb128 0x49
+ 892 008c 13       		.uleb128 0x13
+ 893 008d 11       		.uleb128 0x11
+ 894 008e 01       		.uleb128 0x1
+ 895 008f 12       		.uleb128 0x12
+ 896 0090 06       		.uleb128 0x6
+ 897 0091 40       		.uleb128 0x40
+ 898 0092 18       		.uleb128 0x18
+ 899 0093 9742     		.uleb128 0x2117
+ 900 0095 19       		.uleb128 0x19
+ 901 0096 00       		.byte	0
+ 902 0097 00       		.byte	0
+ 903 0098 0A       		.uleb128 0xa
+ 904 0099 898201   		.uleb128 0x4109
+ 905 009c 00       		.byte	0
+ 906 009d 11       		.uleb128 0x11
+ 907 009e 01       		.uleb128 0x1
+ 908 009f 31       		.uleb128 0x31
+ 909 00a0 13       		.uleb128 0x13
+ 910 00a1 00       		.byte	0
+ 911 00a2 00       		.byte	0
+ 912 00a3 0B       		.uleb128 0xb
+ 913 00a4 2E       		.uleb128 0x2e
+ 914 00a5 01       		.byte	0x1
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 33
 
 
- 1026 0095 19       		.uleb128 0x19
- 1027 0096 00       		.byte	0
- 1028 0097 00       		.byte	0
- 1029 0098 0A       		.uleb128 0xa
- 1030 0099 2E       		.uleb128 0x2e
- 1031 009a 01       		.byte	0x1
- 1032 009b 3F       		.uleb128 0x3f
- 1033 009c 19       		.uleb128 0x19
- 1034 009d 03       		.uleb128 0x3
- 1035 009e 0E       		.uleb128 0xe
- 1036 009f 3A       		.uleb128 0x3a
- 1037 00a0 0B       		.uleb128 0xb
- 1038 00a1 3B       		.uleb128 0x3b
- 1039 00a2 05       		.uleb128 0x5
- 1040 00a3 27       		.uleb128 0x27
- 1041 00a4 19       		.uleb128 0x19
- 1042 00a5 49       		.uleb128 0x49
- 1043 00a6 13       		.uleb128 0x13
- 1044 00a7 11       		.uleb128 0x11
- 1045 00a8 01       		.uleb128 0x1
- 1046 00a9 12       		.uleb128 0x12
- 1047 00aa 06       		.uleb128 0x6
- 1048 00ab 40       		.uleb128 0x40
- 1049 00ac 18       		.uleb128 0x18
- 1050 00ad 9742     		.uleb128 0x2117
- 1051 00af 19       		.uleb128 0x19
- 1052 00b0 01       		.uleb128 0x1
- 1053 00b1 13       		.uleb128 0x13
- 1054 00b2 00       		.byte	0
- 1055 00b3 00       		.byte	0
- 1056 00b4 0B       		.uleb128 0xb
- 1057 00b5 34       		.uleb128 0x34
- 1058 00b6 00       		.byte	0
- 1059 00b7 03       		.uleb128 0x3
- 1060 00b8 0E       		.uleb128 0xe
- 1061 00b9 3A       		.uleb128 0x3a
- 1062 00ba 0B       		.uleb128 0xb
- 1063 00bb 3B       		.uleb128 0x3b
- 1064 00bc 05       		.uleb128 0x5
- 1065 00bd 49       		.uleb128 0x49
- 1066 00be 13       		.uleb128 0x13
- 1067 00bf 02       		.uleb128 0x2
- 1068 00c0 18       		.uleb128 0x18
- 1069 00c1 00       		.byte	0
- 1070 00c2 00       		.byte	0
- 1071 00c3 0C       		.uleb128 0xc
- 1072 00c4 898201   		.uleb128 0x4109
- 1073 00c7 00       		.byte	0
- 1074 00c8 11       		.uleb128 0x11
- 1075 00c9 01       		.uleb128 0x1
- 1076 00ca 31       		.uleb128 0x31
- 1077 00cb 13       		.uleb128 0x13
- 1078 00cc 00       		.byte	0
- 1079 00cd 00       		.byte	0
- 1080 00ce 0D       		.uleb128 0xd
- 1081 00cf 2E       		.uleb128 0x2e
- 1082 00d0 01       		.byte	0x1
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 36
+ 915 00a6 3F       		.uleb128 0x3f
+ 916 00a7 19       		.uleb128 0x19
+ 917 00a8 03       		.uleb128 0x3
+ 918 00a9 0E       		.uleb128 0xe
+ 919 00aa 3A       		.uleb128 0x3a
+ 920 00ab 0B       		.uleb128 0xb
+ 921 00ac 3B       		.uleb128 0x3b
+ 922 00ad 0B       		.uleb128 0xb
+ 923 00ae 27       		.uleb128 0x27
+ 924 00af 19       		.uleb128 0x19
+ 925 00b0 11       		.uleb128 0x11
+ 926 00b1 01       		.uleb128 0x1
+ 927 00b2 12       		.uleb128 0x12
+ 928 00b3 06       		.uleb128 0x6
+ 929 00b4 40       		.uleb128 0x40
+ 930 00b5 18       		.uleb128 0x18
+ 931 00b6 9742     		.uleb128 0x2117
+ 932 00b8 19       		.uleb128 0x19
+ 933 00b9 01       		.uleb128 0x1
+ 934 00ba 13       		.uleb128 0x13
+ 935 00bb 00       		.byte	0
+ 936 00bc 00       		.byte	0
+ 937 00bd 0C       		.uleb128 0xc
+ 938 00be 34       		.uleb128 0x34
+ 939 00bf 00       		.byte	0
+ 940 00c0 03       		.uleb128 0x3
+ 941 00c1 0E       		.uleb128 0xe
+ 942 00c2 3A       		.uleb128 0x3a
+ 943 00c3 0B       		.uleb128 0xb
+ 944 00c4 3B       		.uleb128 0x3b
+ 945 00c5 0B       		.uleb128 0xb
+ 946 00c6 49       		.uleb128 0x49
+ 947 00c7 13       		.uleb128 0x13
+ 948 00c8 02       		.uleb128 0x2
+ 949 00c9 17       		.uleb128 0x17
+ 950 00ca 00       		.byte	0
+ 951 00cb 00       		.byte	0
+ 952 00cc 0D       		.uleb128 0xd
+ 953 00cd 898201   		.uleb128 0x4109
+ 954 00d0 01       		.byte	0x1
+ 955 00d1 11       		.uleb128 0x11
+ 956 00d2 01       		.uleb128 0x1
+ 957 00d3 31       		.uleb128 0x31
+ 958 00d4 13       		.uleb128 0x13
+ 959 00d5 01       		.uleb128 0x1
+ 960 00d6 13       		.uleb128 0x13
+ 961 00d7 00       		.byte	0
+ 962 00d8 00       		.byte	0
+ 963 00d9 0E       		.uleb128 0xe
+ 964 00da 8A8201   		.uleb128 0x410a
+ 965 00dd 00       		.byte	0
+ 966 00de 02       		.uleb128 0x2
+ 967 00df 18       		.uleb128 0x18
+ 968 00e0 9142     		.uleb128 0x2111
+ 969 00e2 18       		.uleb128 0x18
+ 970 00e3 00       		.byte	0
+ 971 00e4 00       		.byte	0
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 34
 
 
- 1083 00d1 3F       		.uleb128 0x3f
- 1084 00d2 19       		.uleb128 0x19
- 1085 00d3 03       		.uleb128 0x3
- 1086 00d4 0E       		.uleb128 0xe
- 1087 00d5 3A       		.uleb128 0x3a
- 1088 00d6 0B       		.uleb128 0xb
- 1089 00d7 3B       		.uleb128 0x3b
- 1090 00d8 0B       		.uleb128 0xb
- 1091 00d9 27       		.uleb128 0x27
- 1092 00da 19       		.uleb128 0x19
- 1093 00db 11       		.uleb128 0x11
- 1094 00dc 01       		.uleb128 0x1
- 1095 00dd 12       		.uleb128 0x12
- 1096 00de 06       		.uleb128 0x6
- 1097 00df 40       		.uleb128 0x40
- 1098 00e0 18       		.uleb128 0x18
- 1099 00e1 9742     		.uleb128 0x2117
- 1100 00e3 19       		.uleb128 0x19
- 1101 00e4 01       		.uleb128 0x1
- 1102 00e5 13       		.uleb128 0x13
- 1103 00e6 00       		.byte	0
- 1104 00e7 00       		.byte	0
- 1105 00e8 0E       		.uleb128 0xe
- 1106 00e9 34       		.uleb128 0x34
- 1107 00ea 00       		.byte	0
- 1108 00eb 03       		.uleb128 0x3
- 1109 00ec 0E       		.uleb128 0xe
- 1110 00ed 3A       		.uleb128 0x3a
- 1111 00ee 0B       		.uleb128 0xb
- 1112 00ef 3B       		.uleb128 0x3b
- 1113 00f0 0B       		.uleb128 0xb
- 1114 00f1 49       		.uleb128 0x49
- 1115 00f2 13       		.uleb128 0x13
- 1116 00f3 02       		.uleb128 0x2
- 1117 00f4 17       		.uleb128 0x17
- 1118 00f5 00       		.byte	0
- 1119 00f6 00       		.byte	0
- 1120 00f7 0F       		.uleb128 0xf
- 1121 00f8 898201   		.uleb128 0x4109
- 1122 00fb 01       		.byte	0x1
- 1123 00fc 11       		.uleb128 0x11
- 1124 00fd 01       		.uleb128 0x1
- 1125 00fe 31       		.uleb128 0x31
- 1126 00ff 13       		.uleb128 0x13
- 1127 0100 01       		.uleb128 0x1
- 1128 0101 13       		.uleb128 0x13
- 1129 0102 00       		.byte	0
- 1130 0103 00       		.byte	0
- 1131 0104 10       		.uleb128 0x10
- 1132 0105 8A8201   		.uleb128 0x410a
- 1133 0108 00       		.byte	0
- 1134 0109 02       		.uleb128 0x2
- 1135 010a 18       		.uleb128 0x18
- 1136 010b 9142     		.uleb128 0x2111
- 1137 010d 18       		.uleb128 0x18
- 1138 010e 00       		.byte	0
- 1139 010f 00       		.byte	0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 37
+ 972 00e5 0F       		.uleb128 0xf
+ 973 00e6 34       		.uleb128 0x34
+ 974 00e7 00       		.byte	0
+ 975 00e8 03       		.uleb128 0x3
+ 976 00e9 0E       		.uleb128 0xe
+ 977 00ea 3A       		.uleb128 0x3a
+ 978 00eb 0B       		.uleb128 0xb
+ 979 00ec 3B       		.uleb128 0x3b
+ 980 00ed 0B       		.uleb128 0xb
+ 981 00ee 49       		.uleb128 0x49
+ 982 00ef 13       		.uleb128 0x13
+ 983 00f0 3F       		.uleb128 0x3f
+ 984 00f1 19       		.uleb128 0x19
+ 985 00f2 02       		.uleb128 0x2
+ 986 00f3 18       		.uleb128 0x18
+ 987 00f4 00       		.byte	0
+ 988 00f5 00       		.byte	0
+ 989 00f6 10       		.uleb128 0x10
+ 990 00f7 2E       		.uleb128 0x2e
+ 991 00f8 00       		.byte	0
+ 992 00f9 3F       		.uleb128 0x3f
+ 993 00fa 19       		.uleb128 0x19
+ 994 00fb 3C       		.uleb128 0x3c
+ 995 00fc 19       		.uleb128 0x19
+ 996 00fd 6E       		.uleb128 0x6e
+ 997 00fe 0E       		.uleb128 0xe
+ 998 00ff 03       		.uleb128 0x3
+ 999 0100 0E       		.uleb128 0xe
+ 1000 0101 3A       		.uleb128 0x3a
+ 1001 0102 0B       		.uleb128 0xb
+ 1002 0103 3B       		.uleb128 0x3b
+ 1003 0104 0B       		.uleb128 0xb
+ 1004 0105 00       		.byte	0
+ 1005 0106 00       		.byte	0
+ 1006 0107 00       		.byte	0
+ 1007              		.section	.debug_loc,"",%progbits
+ 1008              	.Ldebug_loc0:
+ 1009              	.LLST0:
+ 1010 0000 28000000 		.4byte	.LVL10
+ 1011 0004 33000000 		.4byte	.LVL11-1
+ 1012 0008 0100     		.2byte	0x1
+ 1013 000a 50       		.byte	0x50
+ 1014 000b 00000000 		.4byte	0
+ 1015 000f 00000000 		.4byte	0
+ 1016              		.section	.debug_aranges,"",%progbits
+ 1017 0000 84000000 		.4byte	0x84
+ 1018 0004 0200     		.2byte	0x2
+ 1019 0006 00000000 		.4byte	.Ldebug_info0
+ 1020 000a 04       		.byte	0x4
+ 1021 000b 00       		.byte	0
+ 1022 000c 0000     		.2byte	0
+ 1023 000e 0000     		.2byte	0
+ 1024 0010 00000000 		.4byte	.LFB2
+ 1025 0014 02000000 		.4byte	.LFE2-.LFB2
+ 1026 0018 00000000 		.4byte	.LFB3
+ 1027 001c 02000000 		.4byte	.LFE3-.LFB3
+ 1028 0020 00000000 		.4byte	.LFB4
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 35
 
 
- 1140 0110 11       		.uleb128 0x11
- 1141 0111 34       		.uleb128 0x34
- 1142 0112 00       		.byte	0
- 1143 0113 03       		.uleb128 0x3
- 1144 0114 0E       		.uleb128 0xe
- 1145 0115 3A       		.uleb128 0x3a
- 1146 0116 0B       		.uleb128 0xb
- 1147 0117 3B       		.uleb128 0x3b
- 1148 0118 0B       		.uleb128 0xb
- 1149 0119 49       		.uleb128 0x49
- 1150 011a 13       		.uleb128 0x13
- 1151 011b 3F       		.uleb128 0x3f
- 1152 011c 19       		.uleb128 0x19
- 1153 011d 02       		.uleb128 0x2
- 1154 011e 18       		.uleb128 0x18
- 1155 011f 00       		.byte	0
- 1156 0120 00       		.byte	0
- 1157 0121 12       		.uleb128 0x12
- 1158 0122 2E       		.uleb128 0x2e
- 1159 0123 00       		.byte	0
- 1160 0124 3F       		.uleb128 0x3f
- 1161 0125 19       		.uleb128 0x19
- 1162 0126 3C       		.uleb128 0x3c
- 1163 0127 19       		.uleb128 0x19
- 1164 0128 6E       		.uleb128 0x6e
- 1165 0129 0E       		.uleb128 0xe
- 1166 012a 03       		.uleb128 0x3
- 1167 012b 0E       		.uleb128 0xe
- 1168 012c 3A       		.uleb128 0x3a
- 1169 012d 0B       		.uleb128 0xb
- 1170 012e 3B       		.uleb128 0x3b
- 1171 012f 0B       		.uleb128 0xb
- 1172 0130 00       		.byte	0
- 1173 0131 00       		.byte	0
- 1174 0132 00       		.byte	0
- 1175              		.section	.debug_loc,"",%progbits
- 1176              	.Ldebug_loc0:
- 1177              	.LLST0:
- 1178 0000 0A000000 		.4byte	.LVL8
- 1179 0004 0E000000 		.4byte	.LVL9
- 1180 0008 0100     		.2byte	0x1
- 1181 000a 53       		.byte	0x53
- 1182 000b 00000000 		.4byte	0
- 1183 000f 00000000 		.4byte	0
- 1184              	.LLST1:
- 1185 0013 36000000 		.4byte	.LVL14
- 1186 0017 41000000 		.4byte	.LVL15-1
- 1187 001b 0100     		.2byte	0x1
- 1188 001d 50       		.byte	0x50
- 1189 001e 00000000 		.4byte	0
- 1190 0022 00000000 		.4byte	0
- 1191              		.section	.debug_aranges,"",%progbits
- 1192 0000 94000000 		.4byte	0x94
- 1193 0004 0200     		.2byte	0x2
- 1194 0006 00000000 		.4byte	.Ldebug_info0
- 1195 000a 04       		.byte	0x4
- 1196 000b 00       		.byte	0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 38
+ 1029 0024 0C000000 		.4byte	.LFE4-.LFB4
+ 1030 0028 00000000 		.4byte	.LFB5
+ 1031 002c 14000000 		.4byte	.LFE5-.LFB5
+ 1032 0030 00000000 		.4byte	.LFB7
+ 1033 0034 0C000000 		.4byte	.LFE7-.LFB7
+ 1034 0038 00000000 		.4byte	.LFB8
+ 1035 003c 0C000000 		.4byte	.LFE8-.LFB8
+ 1036 0040 00000000 		.4byte	.LFB9
+ 1037 0044 0C000000 		.4byte	.LFE9-.LFB9
+ 1038 0048 00000000 		.4byte	.LFB10
+ 1039 004c 0C000000 		.4byte	.LFE10-.LFB10
+ 1040 0050 00000000 		.4byte	.LFB11
+ 1041 0054 0C000000 		.4byte	.LFE11-.LFB11
+ 1042 0058 00000000 		.4byte	.LFB6
+ 1043 005c 14000000 		.4byte	.LFE6-.LFB6
+ 1044 0060 00000000 		.4byte	.LFB1
+ 1045 0064 40000000 		.4byte	.LFE1-.LFB1
+ 1046 0068 00000000 		.4byte	.LFB0
+ 1047 006c 18000000 		.4byte	.LFE0-.LFB0
+ 1048 0070 00000000 		.4byte	.LFB12
+ 1049 0074 0C000000 		.4byte	.LFE12-.LFB12
+ 1050 0078 00000000 		.4byte	.LFB13
+ 1051 007c 0C000000 		.4byte	.LFE13-.LFB13
+ 1052 0080 00000000 		.4byte	0
+ 1053 0084 00000000 		.4byte	0
+ 1054              		.section	.debug_ranges,"",%progbits
+ 1055              	.Ldebug_ranges0:
+ 1056 0000 00000000 		.4byte	.LFB2
+ 1057 0004 02000000 		.4byte	.LFE2
+ 1058 0008 00000000 		.4byte	.LFB3
+ 1059 000c 02000000 		.4byte	.LFE3
+ 1060 0010 00000000 		.4byte	.LFB4
+ 1061 0014 0C000000 		.4byte	.LFE4
+ 1062 0018 00000000 		.4byte	.LFB5
+ 1063 001c 14000000 		.4byte	.LFE5
+ 1064 0020 00000000 		.4byte	.LFB7
+ 1065 0024 0C000000 		.4byte	.LFE7
+ 1066 0028 00000000 		.4byte	.LFB8
+ 1067 002c 0C000000 		.4byte	.LFE8
+ 1068 0030 00000000 		.4byte	.LFB9
+ 1069 0034 0C000000 		.4byte	.LFE9
+ 1070 0038 00000000 		.4byte	.LFB10
+ 1071 003c 0C000000 		.4byte	.LFE10
+ 1072 0040 00000000 		.4byte	.LFB11
+ 1073 0044 0C000000 		.4byte	.LFE11
+ 1074 0048 00000000 		.4byte	.LFB6
+ 1075 004c 14000000 		.4byte	.LFE6
+ 1076 0050 00000000 		.4byte	.LFB1
+ 1077 0054 40000000 		.4byte	.LFE1
+ 1078 0058 00000000 		.4byte	.LFB0
+ 1079 005c 18000000 		.4byte	.LFE0
+ 1080 0060 00000000 		.4byte	.LFB12
+ 1081 0064 0C000000 		.4byte	.LFE12
+ 1082 0068 00000000 		.4byte	.LFB13
+ 1083 006c 0C000000 		.4byte	.LFE13
+ 1084 0070 00000000 		.4byte	0
+ 1085 0074 00000000 		.4byte	0
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 36
 
 
- 1197 000c 0000     		.2byte	0
- 1198 000e 0000     		.2byte	0
- 1199 0010 00000000 		.4byte	.LFB2
- 1200 0014 10000000 		.4byte	.LFE2-.LFB2
- 1201 0018 00000000 		.4byte	.LFB3
- 1202 001c 10000000 		.4byte	.LFE3-.LFB3
- 1203 0020 00000000 		.4byte	.LFB4
- 1204 0024 0C000000 		.4byte	.LFE4-.LFB4
- 1205 0028 00000000 		.4byte	.LFB5
- 1206 002c 14000000 		.4byte	.LFE5-.LFB5
- 1207 0030 00000000 		.4byte	.LFB7
- 1208 0034 0C000000 		.4byte	.LFE7-.LFB7
- 1209 0038 00000000 		.4byte	.LFB8
- 1210 003c 0C000000 		.4byte	.LFE8-.LFB8
- 1211 0040 00000000 		.4byte	.LFB9
- 1212 0044 0C000000 		.4byte	.LFE9-.LFB9
- 1213 0048 00000000 		.4byte	.LFB10
- 1214 004c 0C000000 		.4byte	.LFE10-.LFB10
- 1215 0050 00000000 		.4byte	.LFB11
- 1216 0054 0C000000 		.4byte	.LFE11-.LFB11
- 1217 0058 00000000 		.4byte	.LFB12
- 1218 005c 0C000000 		.4byte	.LFE12-.LFB12
- 1219 0060 00000000 		.4byte	.LFB13
- 1220 0064 0C000000 		.4byte	.LFE13-.LFB13
- 1221 0068 00000000 		.4byte	.LFB6
- 1222 006c 14000000 		.4byte	.LFE6-.LFB6
- 1223 0070 00000000 		.4byte	.LFB1
- 1224 0074 50000000 		.4byte	.LFE1-.LFB1
- 1225 0078 00000000 		.4byte	.LFB0
- 1226 007c 1C000000 		.4byte	.LFE0-.LFB0
- 1227 0080 00000000 		.4byte	.LFB14
- 1228 0084 0C000000 		.4byte	.LFE14-.LFB14
- 1229 0088 00000000 		.4byte	.LFB15
- 1230 008c 0C000000 		.4byte	.LFE15-.LFB15
- 1231 0090 00000000 		.4byte	0
- 1232 0094 00000000 		.4byte	0
- 1233              		.section	.debug_ranges,"",%progbits
- 1234              	.Ldebug_ranges0:
- 1235 0000 00000000 		.4byte	.LFB2
- 1236 0004 10000000 		.4byte	.LFE2
- 1237 0008 00000000 		.4byte	.LFB3
- 1238 000c 10000000 		.4byte	.LFE3
- 1239 0010 00000000 		.4byte	.LFB4
- 1240 0014 0C000000 		.4byte	.LFE4
- 1241 0018 00000000 		.4byte	.LFB5
- 1242 001c 14000000 		.4byte	.LFE5
- 1243 0020 00000000 		.4byte	.LFB7
- 1244 0024 0C000000 		.4byte	.LFE7
- 1245 0028 00000000 		.4byte	.LFB8
- 1246 002c 0C000000 		.4byte	.LFE8
- 1247 0030 00000000 		.4byte	.LFB9
- 1248 0034 0C000000 		.4byte	.LFE9
- 1249 0038 00000000 		.4byte	.LFB10
- 1250 003c 0C000000 		.4byte	.LFE10
- 1251 0040 00000000 		.4byte	.LFB11
- 1252 0044 0C000000 		.4byte	.LFE11
- 1253 0048 00000000 		.4byte	.LFB12
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 39
+ 1086              		.section	.debug_line,"",%progbits
+ 1087              	.Ldebug_line0:
+ 1088 0000 5C010000 		.section	.debug_str,"MS",%progbits,1
+ 1088      02005200 
+ 1088      00000201 
+ 1088      FB0E0D00 
+ 1088      01010101 
+ 1089              	.LASF17:
+ 1090 0000 50574D5F 		.ascii	"PWM_WaSens_Stop\000"
+ 1090      57615365 
+ 1090      6E735F53 
+ 1090      746F7000 
+ 1091              	.LASF37:
+ 1092 0010 47656E65 		.ascii	"Generated_Source\\PSoC5\\PWM_WaSens.c\000"
+ 1092      72617465 
+ 1092      645F536F 
+ 1092      75726365 
+ 1092      5C50536F 
+ 1093              	.LASF21:
+ 1094 0034 70657269 		.ascii	"period\000"
+ 1094      6F6400
+ 1095              	.LASF3:
+ 1096 003b 73686F72 		.ascii	"short unsigned int\000"
+ 1096      7420756E 
+ 1096      7369676E 
+ 1096      65642069 
+ 1096      6E7400
+ 1097              	.LASF24:
+ 1098 004e 50574D5F 		.ascii	"PWM_WaSens_SetInterruptMode\000"
+ 1098      57615365 
+ 1098      6E735F53 
+ 1098      6574496E 
+ 1098      74657272 
+ 1099              	.LASF32:
+ 1100 006a 50574D5F 		.ascii	"PWM_WaSens_ReadCompare\000"
+ 1100      57615365 
+ 1100      6E735F52 
+ 1100      65616443 
+ 1100      6F6D7061 
+ 1101              	.LASF28:
+ 1102 0081 50574D5F 		.ascii	"PWM_WaSens_ReadCapture\000"
+ 1102      57615365 
+ 1102      6E735F52 
+ 1102      65616443 
+ 1102      61707475 
+ 1103              	.LASF9:
+ 1104 0098 666C6F61 		.ascii	"float\000"
+ 1104      7400
+ 1105              	.LASF33:
+ 1106 009e 50574D5F 		.ascii	"PWM_WaSens_ReadPeriod\000"
+ 1106      57615365 
+ 1106      6E735F52 
+ 1106      65616450 
+ 1106      6572696F 
+ 1107              	.LASF1:
+ 1108 00b4 756E7369 		.ascii	"unsigned char\000"
+ 1108      676E6564 
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 37
 
 
- 1254 004c 0C000000 		.4byte	.LFE12
- 1255 0050 00000000 		.4byte	.LFB13
- 1256 0054 0C000000 		.4byte	.LFE13
- 1257 0058 00000000 		.4byte	.LFB6
- 1258 005c 14000000 		.4byte	.LFE6
- 1259 0060 00000000 		.4byte	.LFB1
- 1260 0064 50000000 		.4byte	.LFE1
- 1261 0068 00000000 		.4byte	.LFB0
- 1262 006c 1C000000 		.4byte	.LFE0
- 1263 0070 00000000 		.4byte	.LFB14
- 1264 0074 0C000000 		.4byte	.LFE14
- 1265 0078 00000000 		.4byte	.LFB15
- 1266 007c 0C000000 		.4byte	.LFE15
- 1267 0080 00000000 		.4byte	0
- 1268 0084 00000000 		.4byte	0
- 1269              		.section	.debug_line,"",%progbits
- 1270              	.Ldebug_line0:
- 1271 0000 86010000 		.section	.debug_str,"MS",%progbits,1
- 1271      02005200 
- 1271      00000201 
- 1271      FB0E0D00 
- 1271      01010101 
- 1272              	.LASF28:
- 1273 0000 50574D5F 		.ascii	"PWM_WaSens_WriteControlRegister\000"
- 1273      57615365 
- 1273      6E735F57 
- 1273      72697465 
- 1273      436F6E74 
- 1274              	.LASF17:
- 1275 0020 50574D5F 		.ascii	"PWM_WaSens_Stop\000"
- 1275      57615365 
- 1275      6E735F53 
- 1275      746F7000 
- 1276              	.LASF33:
- 1277 0030 72657375 		.ascii	"result\000"
- 1277      6C7400
- 1278              	.LASF42:
- 1279 0037 47656E65 		.ascii	"Generated_Source\\PSoC5\\PWM_WaSens.c\000"
- 1279      72617465 
- 1279      645F536F 
- 1279      75726365 
- 1279      5C50536F 
- 1280              	.LASF21:
- 1281 005b 70657269 		.ascii	"period\000"
- 1281      6F6400
- 1282              	.LASF3:
- 1283 0062 73686F72 		.ascii	"short unsigned int\000"
- 1283      7420756E 
- 1283      7369676E 
- 1283      65642069 
- 1283      6E7400
- 1284              	.LASF24:
- 1285 0075 50574D5F 		.ascii	"PWM_WaSens_SetInterruptMode\000"
- 1285      57615365 
- 1285      6E735F53 
- 1285      6574496E 
- 1285      74657272 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 40
+ 1108      20636861 
+ 1108      7200
+ 1109              	.LASF36:
+ 1110 00c2 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1110      43313120 
+ 1110      352E342E 
+ 1110      31203230 
+ 1110      31363036 
+ 1111 00f5 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1111      20726576 
+ 1111      6973696F 
+ 1111      6E203233 
+ 1111      37373135 
+ 1112 0128 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1112      66756E63 
+ 1112      74696F6E 
+ 1112      2D736563 
+ 1112      74696F6E 
+ 1113              	.LASF13:
+ 1114 0150 72656738 		.ascii	"reg8\000"
+ 1114      00
+ 1115              	.LASF5:
+ 1116 0155 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1116      20756E73 
+ 1116      69676E65 
+ 1116      6420696E 
+ 1116      7400
+ 1117              	.LASF12:
+ 1118 0167 75696E74 		.ascii	"uint8\000"
+ 1118      3800
+ 1119              	.LASF20:
+ 1120 016d 636F756E 		.ascii	"counter\000"
+ 1120      74657200 
+ 1121              	.LASF10:
+ 1122 0175 646F7562 		.ascii	"double\000"
+ 1122      6C6500
+ 1123              	.LASF16:
+ 1124 017c 50574D5F 		.ascii	"PWM_WaSens_Enable\000"
+ 1124      57615365 
+ 1124      6E735F45 
+ 1124      6E61626C 
+ 1124      6500
+ 1125              	.LASF26:
+ 1126 018e 50574D5F 		.ascii	"PWM_WaSens_ReadCounter\000"
+ 1126      57615365 
+ 1126      6E735F52 
+ 1126      65616443 
+ 1126      6F756E74 
+ 1127              	.LASF22:
+ 1128 01a5 50574D5F 		.ascii	"PWM_WaSens_WriteCompare\000"
+ 1128      57615365 
+ 1128      6E735F57 
+ 1128      72697465 
+ 1128      436F6D70 
+ 1129              	.LASF34:
+ 1130 01bd 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1130      74657243 
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 38
 
 
- 1286              	.LASF37:
- 1287 0091 50574D5F 		.ascii	"PWM_WaSens_ReadCompare\000"
- 1287      57615365 
- 1287      6E735F52 
- 1287      65616443 
- 1287      6F6D7061 
- 1288              	.LASF30:
- 1289 00a8 50574D5F 		.ascii	"PWM_WaSens_ReadCapture\000"
- 1289      57615365 
- 1289      6E735F52 
- 1289      65616443 
- 1289      61707475 
- 1290              	.LASF9:
- 1291 00bf 666C6F61 		.ascii	"float\000"
- 1291      7400
- 1292              	.LASF38:
- 1293 00c5 50574D5F 		.ascii	"PWM_WaSens_ReadPeriod\000"
- 1293      57615365 
- 1293      6E735F52 
- 1293      65616450 
- 1293      6572696F 
- 1294              	.LASF1:
- 1295 00db 756E7369 		.ascii	"unsigned char\000"
- 1295      676E6564 
- 1295      20636861 
- 1295      7200
- 1296              	.LASF41:
- 1297 00e9 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1297      43313120 
- 1297      352E342E 
- 1297      31203230 
- 1297      31363036 
- 1298 011c 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 1298      20726576 
- 1298      6973696F 
- 1298      6E203233 
- 1298      37373135 
- 1299 014f 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1299      66756E63 
- 1299      74696F6E 
- 1299      2D736563 
- 1299      74696F6E 
- 1300              	.LASF13:
- 1301 0177 72656738 		.ascii	"reg8\000"
- 1301      00
- 1302              	.LASF5:
- 1303 017c 6C6F6E67 		.ascii	"long unsigned int\000"
- 1303      20756E73 
- 1303      69676E65 
- 1303      6420696E 
- 1303      7400
- 1304              	.LASF12:
- 1305 018e 75696E74 		.ascii	"uint8\000"
- 1305      3800
- 1306              	.LASF29:
- 1307 0194 636F6E74 		.ascii	"control\000"
- 1307      726F6C00 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 41
+ 1130      72697469 
+ 1130      63616C53 
+ 1130      65637469 
+ 1131              	.LASF8:
+ 1132 01d4 756E7369 		.ascii	"unsigned int\000"
+ 1132      676E6564 
+ 1132      20696E74 
+ 1132      00
+ 1133              	.LASF7:
+ 1134 01e1 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1134      206C6F6E 
+ 1134      6720756E 
+ 1134      7369676E 
+ 1134      65642069 
+ 1135              	.LASF38:
+ 1136 01f8 443A5C4F 		.ascii	"D:\\OneDrive - Aarhus Universitet\\Aarhus Universit"
+ 1136      6E654472 
+ 1136      69766520 
+ 1136      2D204161 
+ 1136      72687573 
+ 1137 0229 65745C45 		.ascii	"et\\E3\\E3PRJ\\I3E3PRJ_Repo\\PSoCcontroller\\PSoCco"
+ 1137      335C4533 
+ 1137      50524A5C 
+ 1137      49334533 
+ 1137      50524A5F 
+ 1138 0257 6E74726F 		.ascii	"ntroller.cydsn\000"
+ 1138      6C6C6572 
+ 1138      2E637964 
+ 1138      736E00
+ 1139              	.LASF27:
+ 1140 0266 50574D5F 		.ascii	"PWM_WaSens_ReadStatusRegister\000"
+ 1140      57615365 
+ 1140      6E735F52 
+ 1140      65616453 
+ 1140      74617475 
+ 1141              	.LASF14:
+ 1142 0284 6C6F6E67 		.ascii	"long double\000"
+ 1142      20646F75 
+ 1142      626C6500 
+ 1143              	.LASF15:
+ 1144 0290 73697A65 		.ascii	"sizetype\000"
+ 1144      74797065 
+ 1144      00
+ 1145              	.LASF30:
+ 1146 0299 50574D5F 		.ascii	"PWM_WaSens_Init\000"
+ 1146      57615365 
+ 1146      6E735F49 
+ 1146      6E697400 
+ 1147              	.LASF6:
+ 1148 02a9 6C6F6E67 		.ascii	"long long int\000"
+ 1148      206C6F6E 
+ 1148      6720696E 
+ 1148      7400
+ 1149              	.LASF19:
+ 1150 02b7 50574D5F 		.ascii	"PWM_WaSens_WritePeriod\000"
+ 1150      57615365 
+ 1150      6E735F57 
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 39
 
 
- 1308              	.LASF20:
- 1309 019c 636F756E 		.ascii	"counter\000"
- 1309      74657200 
- 1310              	.LASF10:
- 1311 01a4 646F7562 		.ascii	"double\000"
- 1311      6C6500
- 1312              	.LASF16:
- 1313 01ab 50574D5F 		.ascii	"PWM_WaSens_Enable\000"
- 1313      57615365 
- 1313      6E735F45 
- 1313      6E61626C 
- 1313      6500
- 1314              	.LASF26:
- 1315 01bd 50574D5F 		.ascii	"PWM_WaSens_ReadCounter\000"
- 1315      57615365 
- 1315      6E735F52 
- 1315      65616443 
- 1315      6F756E74 
- 1316              	.LASF22:
- 1317 01d4 50574D5F 		.ascii	"PWM_WaSens_WriteCompare\000"
- 1317      57615365 
- 1317      6E735F57 
- 1317      72697465 
- 1317      436F6D70 
- 1318              	.LASF39:
- 1319 01ec 4379456E 		.ascii	"CyEnterCriticalSection\000"
- 1319      74657243 
- 1319      72697469 
- 1319      63616C53 
- 1319      65637469 
- 1320              	.LASF8:
- 1321 0203 756E7369 		.ascii	"unsigned int\000"
- 1321      676E6564 
- 1321      20696E74 
- 1321      00
- 1322              	.LASF7:
- 1323 0210 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1323      206C6F6E 
- 1323      6720756E 
- 1323      7369676E 
- 1323      65642069 
- 1324              	.LASF43:
- 1325 0227 443A5C4F 		.ascii	"D:\\OneDrive - Aarhus Universitet\\Aarhus Universit"
- 1325      6E654472 
- 1325      69766520 
- 1325      2D204161 
- 1325      72687573 
- 1326 0258 65745C45 		.ascii	"et\\E3\\E3PRJ\\I3E3PRJ_Repo\\PSoCcontroller\\PSoCco"
- 1326      335C4533 
- 1326      50524A5C 
- 1326      49334533 
- 1326      50524A5F 
- 1327 0286 6E74726F 		.ascii	"ntroller.cydsn\000"
- 1327      6C6C6572 
- 1327      2E637964 
- 1327      736E00
- 1328              	.LASF27:
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 42
+ 1150      72697465 
+ 1150      50657269 
+ 1151              	.LASF25:
+ 1152 02ce 696E7465 		.ascii	"interruptMode\000"
+ 1152      72727570 
+ 1152      744D6F64 
+ 1152      6500
+ 1153              	.LASF29:
+ 1154 02dc 50574D5F 		.ascii	"PWM_WaSens_ClearFIFO\000"
+ 1154      57615365 
+ 1154      6E735F43 
+ 1154      6C656172 
+ 1154      4649464F 
+ 1155              	.LASF39:
+ 1156 02f1 50574D5F 		.ascii	"PWM_WaSens_interruptState\000"
+ 1156      57615365 
+ 1156      6E735F69 
+ 1156      6E746572 
+ 1156      72757074 
+ 1157              	.LASF2:
+ 1158 030b 73686F72 		.ascii	"short int\000"
+ 1158      7420696E 
+ 1158      7400
+ 1159              	.LASF35:
+ 1160 0315 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1160      69744372 
+ 1160      69746963 
+ 1160      616C5365 
+ 1160      6374696F 
+ 1161              	.LASF4:
+ 1162 032b 6C6F6E67 		.ascii	"long int\000"
+ 1162      20696E74 
+ 1162      00
+ 1163              	.LASF11:
+ 1164 0334 63686172 		.ascii	"char\000"
+ 1164      00
+ 1165              	.LASF40:
+ 1166 0339 50574D5F 		.ascii	"PWM_WaSens_initVar\000"
+ 1166      57615365 
+ 1166      6E735F69 
+ 1166      6E697456 
+ 1166      617200
+ 1167              	.LASF18:
+ 1168 034c 50574D5F 		.ascii	"PWM_WaSens_WriteCounter\000"
+ 1168      57615365 
+ 1168      6E735F57 
+ 1168      72697465 
+ 1168      436F756E 
+ 1169              	.LASF0:
+ 1170 0364 7369676E 		.ascii	"signed char\000"
+ 1170      65642063 
+ 1170      68617200 
+ 1171              	.LASF23:
+ 1172 0370 636F6D70 		.ascii	"compare\000"
+ 1172      61726500 
+ 1173              	.LASF31:
+ 1174 0378 50574D5F 		.ascii	"PWM_WaSens_Start\000"
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cckSATur.s 			page 40
 
 
- 1329 0295 50574D5F 		.ascii	"PWM_WaSens_ReadStatusRegister\000"
- 1329      57615365 
- 1329      6E735F52 
- 1329      65616453 
- 1329      74617475 
- 1330              	.LASF34:
- 1331 02b3 6374726C 		.ascii	"ctrl\000"
- 1331      00
- 1332              	.LASF14:
- 1333 02b8 6C6F6E67 		.ascii	"long double\000"
- 1333      20646F75 
- 1333      626C6500 
- 1334              	.LASF15:
- 1335 02c4 73697A65 		.ascii	"sizetype\000"
- 1335      74797065 
- 1335      00
- 1336              	.LASF32:
- 1337 02cd 50574D5F 		.ascii	"PWM_WaSens_Init\000"
- 1337      57615365 
- 1337      6E735F49 
- 1337      6E697400 
- 1338              	.LASF6:
- 1339 02dd 6C6F6E67 		.ascii	"long long int\000"
- 1339      206C6F6E 
- 1339      6720696E 
- 1339      7400
- 1340              	.LASF19:
- 1341 02eb 50574D5F 		.ascii	"PWM_WaSens_WritePeriod\000"
- 1341      57615365 
- 1341      6E735F57 
- 1341      72697465 
- 1341      50657269 
- 1342              	.LASF25:
- 1343 0302 696E7465 		.ascii	"interruptMode\000"
- 1343      72727570 
- 1343      744D6F64 
- 1343      6500
- 1344              	.LASF31:
- 1345 0310 50574D5F 		.ascii	"PWM_WaSens_ClearFIFO\000"
- 1345      57615365 
- 1345      6E735F43 
- 1345      6C656172 
- 1345      4649464F 
- 1346              	.LASF35:
- 1347 0325 50574D5F 		.ascii	"PWM_WaSens_interruptState\000"
- 1347      57615365 
- 1347      6E735F69 
- 1347      6E746572 
- 1347      72757074 
- 1348              	.LASF2:
- 1349 033f 73686F72 		.ascii	"short int\000"
- 1349      7420696E 
- 1349      7400
- 1350              	.LASF40:
- 1351 0349 43794578 		.ascii	"CyExitCriticalSection\000"
- 1351      69744372 
- 1351      69746963 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccKpuchU.s 			page 43
-
-
- 1351      616C5365 
- 1351      6374696F 
- 1352              	.LASF4:
- 1353 035f 6C6F6E67 		.ascii	"long int\000"
- 1353      20696E74 
- 1353      00
- 1354              	.LASF11:
- 1355 0368 63686172 		.ascii	"char\000"
- 1355      00
- 1356              	.LASF45:
- 1357 036d 50574D5F 		.ascii	"PWM_WaSens_initVar\000"
- 1357      57615365 
- 1357      6E735F69 
- 1357      6E697456 
- 1357      617200
- 1358              	.LASF18:
- 1359 0380 50574D5F 		.ascii	"PWM_WaSens_WriteCounter\000"
- 1359      57615365 
- 1359      6E735F57 
- 1359      72697465 
- 1359      436F756E 
- 1360              	.LASF0:
- 1361 0398 7369676E 		.ascii	"signed char\000"
- 1361      65642063 
- 1361      68617200 
- 1362              	.LASF23:
- 1363 03a4 636F6D70 		.ascii	"compare\000"
- 1363      61726500 
- 1364              	.LASF36:
- 1365 03ac 50574D5F 		.ascii	"PWM_WaSens_Start\000"
- 1365      57615365 
- 1365      6E735F53 
- 1365      74617274 
- 1365      00
- 1366              	.LASF44:
- 1367 03bd 50574D5F 		.ascii	"PWM_WaSens_ReadControlRegister\000"
- 1367      57615365 
- 1367      6E735F52 
- 1367      65616443 
- 1367      6F6E7472 
- 1368              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1174      57615365 
+ 1174      6E735F53 
+ 1174      74617274 
+ 1174      00
+ 1175              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -45,14 +45,14 @@ extern uint8 PWM_WaSens_initVar;
 #endif /* !defined(PWM_WaSens_PWMUDB_genblk8_stsreg__REMOVED) */
 
 #if !defined(PWM_WaSens_PWMUDB_genblk1_ctrlreg__REMOVED)
-    #define PWM_WaSens_UseControl                 (1u)
+    #define PWM_WaSens_UseControl                 (0u)
 #else
     #define PWM_WaSens_UseControl                 (0u)
 #endif /* !defined(PWM_WaSens_PWMUDB_genblk1_ctrlreg__REMOVED) */
 
 #define PWM_WaSens_UseOneCompareMode              (1u)
 #define PWM_WaSens_MinimumKillTime                (1u)
-#define PWM_WaSens_EnableMode                     (0u)
+#define PWM_WaSens_EnableMode                     (1u)
 
 #define PWM_WaSens_CompareMode1SW                 (0u)
 #define PWM_WaSens_CompareMode2SW                 (0u)
@@ -226,8 +226,8 @@ void PWM_WaSens_RestoreConfig(void) ;
 /***************************************
 *         Initialization Values
 **************************************/
-#define PWM_WaSens_INIT_PERIOD_VALUE          (112u)
-#define PWM_WaSens_INIT_COMPARE_VALUE1        (51u)
+#define PWM_WaSens_INIT_PERIOD_VALUE          (125u)
+#define PWM_WaSens_INIT_COMPARE_VALUE1        (62u)
 #define PWM_WaSens_INIT_COMPARE_VALUE2        (63u)
 #define PWM_WaSens_INIT_INTERRUPTS_MODE       (uint8)(((uint8)(0u <<   \
                                                     PWM_WaSens_STATUS_TC_INT_EN_MASK_SHIFT)) | \

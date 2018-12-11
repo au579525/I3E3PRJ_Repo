@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
   28:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** 
   29:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** 
   30:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** /*******************************************************************************
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 2
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 2
 
 
   31:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** * Function Name: ADC_SAR_WaSens_theACLK_Start
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
   54:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** * Function Name: ADC_SAR_WaSens_theACLK_Stop
   55:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** ********************************************************************************
   56:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** *
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 3
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 3
 
 
   57:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** * Summary:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
   80:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** 
   81:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** 
   82:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** /*******************************************************************************
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 4
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 4
 
 
   83:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** * Function Name: ADC_SAR_WaSens_theACLK_StopBlock
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  115:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c ****         CLK_DIST_AMASK = 0x00u;
  116:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** #endif /* ADC_SAR_WaSens_theACLK__CFG3 */
  117:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 5
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 5
 
 
  118:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c ****         /* Clear mask of bus clock. */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  136:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c ****         CY_SET_REG16(ADC_SAR_WaSens_theACLK_DIV_PTR, oldDivider);
  148              		.loc 1 136 0
  149 0058 03F20313 		addw	r3, r3, #259
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 6
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 6
 
 
  150 005c 1A80     		strh	r2, [r3]	@ movhi
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  160:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c ****     {
  161:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c ****         ADC_SAR_WaSens_theACLK_CLKSTBY &= (uint8)(~ADC_SAR_WaSens_theACLK_CLKSTBY_MASK);
  181              		.loc 1 161 0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 7
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 7
 
 
  182 0002 064A     		ldr	r2, .L15
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  189:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** * Returns:
  190:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** *  None
  191:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** *
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 8
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 8
 
 
  192:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** *******************************************************************************/
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  246:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c ****                     CY_SET_REG16(CYREG_CLKDIST_WRK0, oldDivider);
  247:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c ****                     CLK_DIST_LD = CYCLK_LD_DISABLE|CYCLK_LD_SYNC_EN|CYCLK_LD_LOAD;
  248:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 9
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 9
 
 
  249:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c ****                     /* Wait for clock to be disabled */
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  213              		@ link register save eliminated.
  299:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c ****     return CY_GET_REG16(ADC_SAR_WaSens_theACLK_DIV_PTR);
  214              		.loc 1 299 0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 10
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 10
 
 
  215 0000 014B     		ldr	r3, .L18
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  235              		.loc 1 333 0
  236              		.cfi_startproc
  237              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 11
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 11
 
 
  238              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  362:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** *
  363:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** * Returns:
  364:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** *  None
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 12
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 12
 
 
  365:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** *
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  388:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** uint8 ADC_SAR_WaSens_theACLK_GetModeRegister(void) 
  389:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** {
  295              		.loc 1 389 0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 13
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 13
 
 
  296              		.cfi_startproc
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  419:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** void ADC_SAR_WaSens_theACLK_SetSourceRegister(uint8 clkSource) 
  420:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** {
  421:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c ****     uint16 currDiv = ADC_SAR_WaSens_theACLK_GetDividerRegister();
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 14
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 14
 
 
  422:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c ****     uint8 oldSrc = ADC_SAR_WaSens_theACLK_GetSourceRegister();
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  329              		.loc 1 467 0
  330 0004 00F00700 		and	r0, r0, #7
  331 0008 7047     		bx	lr
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 15
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 15
 
 
  332              	.L31:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  379              		.loc 1 205 0 is_stmt 0 discriminator 1
  380 0020 00B1     		cbz	r0, .L35
  205:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c ****         {
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 16
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 16
 
 
  381              		.loc 1 205 0 discriminator 2
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  425              		.loc 1 240 0
  426 0058 0839     		subs	r1, r1, #8
  427 005a 0B78     		ldrb	r3, [r1]	@ zero_extendqisi2
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 17
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 17
 
 
  428 005c 03F07F03 		and	r3, r3, #127
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  472              	.LVL18:
  473 00a4 00E0     		b	.L41
  474              	.LVL19:
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 18
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 18
 
 
  475              	.L43:
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  524              		@ frame_needed = 0, uses_anonymous_args = 0
  525              	.LVL23:
  526 0000 38B5     		push	{r3, r4, r5, lr}
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 19
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 19
 
 
  527              		.cfi_def_cfa_offset 16
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  569 0032 094A     		ldr	r2, .L52
  570 0034 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
  438:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c ****             (ADC_SAR_WaSens_theACLK_MOD_SRC & (uint8)(~ADC_SAR_WaSens_theACLK_SRC_SEL_MSK)) | clkSo
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 20
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 20
 
 
  571              		.loc 1 438 0
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  484:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** *   clkPhase must be from 1 to 11 inclusive. Other values, including 0,
  485:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** *   disable the clock. clkPhase = 1 produces a 0ns delay and clkPhase = 11 
  486:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** *   produces a 10ns delay.
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 21
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 21
 
 
  487:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** *
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  514:Generated_Source\PSoC5/ADC_SAR_WaSens_theACLK.c **** {
  633              		.loc 1 514 0
  634              		.cfi_startproc
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 22
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 22
 
 
  635              		@ args = 0, pretend = 0, frame = 0
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  687 0044 B1010000 		.4byte	.LASF4
  688 0048 02       		.uleb128 0x2
  689 0049 04       		.byte	0x4
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 23
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 23
 
 
  690 004a 07       		.byte	0x7
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  744 00ba 06       		.uleb128 0x6
  745 00bb F3010000 		.4byte	.LASF16
  746 00bf 01       		.byte	0x1
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 24
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 24
 
 
  747 00c0 2D       		.byte	0x2d
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  801 0136 77000000 		.4byte	0x77
  802 013a 00000000 		.4byte	.LFB5
  803 013e 0C000000 		.4byte	.LFE5-.LFB5
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 25
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 25
 
 
  804 0142 01       		.uleb128 0x1
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  858 01c3 01       		.byte	0x1
  859 01c4 C1       		.byte	0xc1
  860 01c5 00000000 		.4byte	.LFB4
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 26
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 26
 
 
  861 01c9 DC000000 		.4byte	.LFE4-.LFB4
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  915 024b A301     		.2byte	0x1a3
  916 024d 6B000000 		.4byte	0x6b
  917 0251 F4000000 		.4byte	.LLST7
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 27
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 27
 
 
  918 0255 11       		.uleb128 0x11
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  972 0006 0B       		.uleb128 0xb
  973 0007 03       		.uleb128 0x3
  974 0008 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 28
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 28
 
 
  975 0009 1B       		.uleb128 0x1b
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  1029 003f 00       		.byte	0
  1030 0040 3F       		.uleb128 0x3f
  1031 0041 19       		.uleb128 0x19
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 29
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 29
 
 
  1032 0042 03       		.uleb128 0x3
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  1086 007a 00       		.byte	0
  1087 007b 03       		.uleb128 0x3
  1088 007c 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 30
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 30
 
 
  1089 007d 3A       		.uleb128 0x3a
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  1143 00b4 19       		.uleb128 0x19
  1144 00b5 03       		.uleb128 0x3
  1145 00b6 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 31
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 31
 
 
  1146 00b7 3A       		.uleb128 0x3a
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  1200 00ee 0B       		.uleb128 0xb
  1201 00ef 3B       		.uleb128 0x3b
  1202 00f0 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 32
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 32
 
 
  1203 00f1 49       		.uleb128 0x49
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  1257 000f 00000000 		.4byte	0
  1258              	.LLST1:
  1259 0013 00000000 		.4byte	.LVL3
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 33
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 33
 
 
  1260 0017 08000000 		.4byte	.LVL4
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  1314              	.LLST5:
  1315 0097 1E000000 		.4byte	.LVL11
  1316 009b 2C000000 		.4byte	.LVL12
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 34
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 34
 
 
  1317 009f 0100     		.2byte	0x1
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  1371 012c 04000000 		.4byte	.LVL31
  1372 0130 0100     		.2byte	0x1
  1373 0132 50       		.byte	0x50
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 35
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 35
 
 
  1374 0133 04000000 		.4byte	.LVL31
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  1428 001c 20000000 		.4byte	.LFE3
  1429 0020 00000000 		.4byte	.LFB5
  1430 0024 0C000000 		.4byte	.LFE5
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 36
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 36
 
 
  1431 0028 00000000 		.4byte	.LFB6
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  1464      335C4533 
  1464      50524A5C 
  1464      49334533 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 37
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 37
 
 
  1464      50524A5F 
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  1489 01a5 6D6F6465 		.ascii	"modeBitMask\000"
  1489      4269744D 
  1489      61736B00 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 38
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 38
 
 
  1490              	.LASF4:
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  1511      68654143 
  1512              	.LASF3:
  1513 0291 73686F72 		.ascii	"short unsigned int\000"
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 39
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 39
 
 
  1513      7420756E 
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 1
  1537      352E342E 
  1537      31203230 
  1537      31363036 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccK4qPAa.s 			page 40
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc9ZzjHq.s 			page 40
 
 
  1538 03a2 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
