@@ -23,7 +23,7 @@ public:
 private:
     void htmlhead();
     void header();
-    void settings(string, bool);
+    void settings(string);
     void manual(bool show);
     void log(vector<string>);
     void waterlvl(string);

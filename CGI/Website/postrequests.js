@@ -17,18 +17,7 @@ function changesysmode() {
 	xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	xhttp.send("sysmode=" + e.options[e.selectedIndex].value);
 }
-function changewatermode(mode){
-	var xhttp;
-	xhttp=new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-			serverresponse(this);
-		}
-	};
-	xhttp.open("POST", "index.cgi", true);
-	xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	xhttp.send("watermode=" + mode);
-}
+
 function manualcontrol(control){
 	var xhttp;
 	xhttp=new XMLHttpRequest();

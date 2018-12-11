@@ -10,9 +10,9 @@ using namespace std;
 class Fileaccess {
 public:
   Fileaccess();
+  void reset();
   void set_mode(string);
   void set_waterlvl(int);
-  void set_AutomaticWatering_mode();
   void log(string);
   vector<string> getQueue();
 private:

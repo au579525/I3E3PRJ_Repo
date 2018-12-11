@@ -30,9 +30,6 @@ void spi_req_function::run(){
       case 'b':
         fileac->log("due detekteret");
         break;
-      case 'c':
-        fileac->log("lavt vand");
-        break;
       case 'd':
         fileac->log("vand tømt");
         break;
@@ -49,7 +46,10 @@ void spi_req_function::run(){
         fileac->log(output.str());
         fileac->set_waterlvl(level);
         break;
-
+      case 'c':
+        fileac->log("System reset");
+        fileac->reset();
+        break;
       default:
         fileac->log("message from PSoC was misunderstood");
         output << data;
@@ -90,10 +90,10 @@ void spi_req_function::run(){
               mode.SPI_Set_PowerSaving_mode();
               fileac->set_mode("powersaving");
             }
-          }
-          else if (string(*it).find("watermode") != std::string::npos) {
-            mode.SPI_Set_AutomaticWatering_mode();
-            fileac->set_AutomaticWatering_mode();
+            else if (string(*it).find("watering") != std::string::npos) {
+              mode.SPI_Set_PowerSaving_mode();
+              fileac->set_mode("powersaving");
+            }
           }
           else if (string(*it).find("manualcontrol") != std::string::npos){
             if(string(*it).find("up") != std::string::npos){

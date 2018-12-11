@@ -13,10 +13,8 @@ class fileaccess
 public:
     fileaccess();
     string getsysmode();
-    bool getwatermode();
     vector<string> getlog();
     void setsysmode(string);
-    void setwatermode(bool);
     void manualcontrol(string);
     string getwaterlvl();
 private:

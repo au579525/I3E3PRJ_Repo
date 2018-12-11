@@ -34,22 +34,6 @@ string fileaccess::getsysmode()
     }
 }
 
-bool fileaccess::getwatermode()
-{
-    //open file and read wateringmode
-    string line;
-    ifstream file;
-    file.open(path + "watermode");
-    if(file.is_open()){
-        getline(file, line);
-        if(line == "enabled"){
-            return true;
-        }
-
-    }
-    return false;
-}
-
 vector<string> fileaccess::getlog()
 {
     //open file and read log
@@ -71,21 +55,6 @@ void fileaccess::setsysmode(string mode)
     file.open(path + "queue", ios::app);
     if(file.is_open()){
         file << endl << "systemmode " << mode;
-    }
-}
-
-void fileaccess::setwatermode(bool mode)
-{
-    //open file and write to queue to change wateringmode
-    ofstream file;
-    file.open(path + "queue", ios::app);
-    if(file.is_open()){
-        if(mode){
-            file << endl << "watermode enabled";
-        }
-        else{
-            file << endl << "watermode disabled";
-        }
     }
 }
 
