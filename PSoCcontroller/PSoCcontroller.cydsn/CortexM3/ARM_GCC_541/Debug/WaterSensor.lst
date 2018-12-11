@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccYounfA.s 			page 1
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccFyS4MY.s 			page 1
 
 
    1              		.syntax unified
@@ -31,7 +31,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccYounfA.s 			page 1
    1:WaterSensor.c **** 
    2:WaterSensor.c **** 
    3:WaterSensor.c **** #include "WaterSensor.h"
-   4:WaterSensor.c **** 
+   4:WaterSensor.c **** #include "PSoCcontroller.h"
    5:WaterSensor.c **** void WaSensInit()
    6:WaterSensor.c **** {
   28              		.loc 1 6 0
@@ -46,47 +46,44 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccYounfA.s 			page 1
   36              		.loc 1 7 0
   37 0002 FFF7FEFF 		bl	ADC_SAR_WaSens_Start
   38              	.LVL0:
-   8:WaterSensor.c ****     PWM_WaSens_Start();
-  39              		.loc 1 8 0
-  40 0006 FFF7FEFF 		bl	PWM_WaSens_Start
-  41              	.LVL1:
-  42 000a 08BD     		pop	{r3, pc}
-  43              		.cfi_endproc
-  44              	.LFE64:
-  45              		.size	WaSensInit, .-WaSensInit
-  46              		.global	__aeabi_i2d
-  47              		.global	__aeabi_dmul
-  48              		.global	__aeabi_dadd
-  49              		.global	__aeabi_d2uiz
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccYounfA.s 			page 2
+  39 0006 08BD     		pop	{r3, pc}
+  40              		.cfi_endproc
+  41              	.LFE64:
+  42              		.size	WaSensInit, .-WaSensInit
+  43              		.global	__aeabi_i2d
+  44              		.global	__aeabi_dmul
+  45              		.global	__aeabi_dadd
+  46              		.global	__aeabi_d2uiz
+  47              		.section	.text.WaSensMeasure,"ax",%progbits
+  48              		.align	2
+  49              		.global	WaSensMeasure
+  50              		.thumb
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccFyS4MY.s 			page 2
 
 
-  50              		.section	.text.WaSensMeasure,"ax",%progbits
-  51              		.align	2
-  52              		.global	WaSensMeasure
-  53              		.thumb
-  54              		.thumb_func
-  55              		.type	WaSensMeasure, %function
-  56              	WaSensMeasure:
-  57              	.LFB65:
+  51              		.thumb_func
+  52              		.type	WaSensMeasure, %function
+  53              	WaSensMeasure:
+  54              	.LFB65:
+   8:WaterSensor.c ****     //PWM_WaSens_Start();
    9:WaterSensor.c **** }
   10:WaterSensor.c **** 
   11:WaterSensor.c **** int WaSensMeasure()
   12:WaterSensor.c **** {
-  58              		.loc 1 12 0
-  59              		.cfi_startproc
-  60              		@ args = 0, pretend = 0, frame = 0
-  61              		@ frame_needed = 0, uses_anonymous_args = 0
-  62 0000 D0B5     		push	{r4, r6, r7, lr}
-  63              		.cfi_def_cfa_offset 16
-  64              		.cfi_offset 4, -16
-  65              		.cfi_offset 6, -12
-  66              		.cfi_offset 7, -8
-  67              		.cfi_offset 14, -4
+  55              		.loc 1 12 0
+  56              		.cfi_startproc
+  57              		@ args = 0, pretend = 0, frame = 0
+  58              		@ frame_needed = 0, uses_anonymous_args = 0
+  59 0000 D0B5     		push	{r4, r6, r7, lr}
+  60              		.cfi_def_cfa_offset 16
+  61              		.cfi_offset 4, -16
+  62              		.cfi_offset 6, -12
+  63              		.cfi_offset 7, -8
+  64              		.cfi_offset 14, -4
   13:WaterSensor.c ****     ADC_SAR_WaSens_StartConvert();
-  68              		.loc 1 13 0
-  69 0002 FFF7FEFF 		bl	ADC_SAR_WaSens_StartConvert
-  70              	.LVL2:
+  65              		.loc 1 13 0
+  66 0002 FFF7FEFF 		bl	ADC_SAR_WaSens_StartConvert
+  67              	.LVL1:
   14:WaterSensor.c ****     // OBS - værdier skal omkalibreres når kredsløb er færdigt
   15:WaterSensor.c ****     double Factor1 = 0.0002783;
   16:WaterSensor.c ****     double Factor2 = -2.486;
@@ -95,877 +92,1299 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccYounfA.s 			page 1
   19:WaterSensor.c ****     uint16_t result2;
   20:WaterSensor.c **** 
   21:WaterSensor.c ****     if (ADC_SAR_WaSens_IsEndConversion(ADC_SAR_WaSens_WAIT_FOR_RESULT))
-  71              		.loc 1 21 0
-  72 0006 0020     		movs	r0, #0
-  73 0008 FFF7FEFF 		bl	ADC_SAR_WaSens_IsEndConversion
-  74              	.LVL3:
-  75 000c C0B3     		cbz	r0, .L7
+  68              		.loc 1 21 0
+  69 0006 0020     		movs	r0, #0
+  70 0008 FFF7FEFF 		bl	ADC_SAR_WaSens_IsEndConversion
+  71              	.LVL2:
+  72 000c 48B3     		cbz	r0, .L6
   22:WaterSensor.c ****         {
   23:WaterSensor.c ****             result = ADC_SAR_WaSens_GetResult16(); //ADC ukonverteret resultat
-  76              		.loc 1 23 0
-  77 000e FFF7FEFF 		bl	ADC_SAR_WaSens_GetResult16
-  78              	.LVL4:
-  79 0012 84B2     		uxth	r4, r0
-  80              	.LVL5:
+  73              		.loc 1 23 0
+  74 000e FFF7FEFF 		bl	ADC_SAR_WaSens_GetResult16
+  75              	.LVL3:
+  76 0012 84B2     		uxth	r4, r0
+  77              	.LVL4:
   24:WaterSensor.c **** //            char msg[256];
   25:WaterSensor.c **** //            snprintf(msg, sizeof(msg), "ADC result: %d\n\r", result);
   26:WaterSensor.c **** //            UART_1_PutStringConst(msg);
   27:WaterSensor.c ****             if(result < 3920) //Skal vandbeholderen fyldes...
-  81              		.loc 1 27 0
-  82 0014 B4F5756F 		cmp	r4, #3920
-  83 0018 27D2     		bcs	.L5
+  78              		.loc 1 27 0
+  79 0014 B4F5756F 		cmp	r4, #3920
+  80 0018 21D2     		bcs	.L7
   28:WaterSensor.c ****             {
   29:WaterSensor.c ****                 result2 = (result*result*Factor1) + (result*Factor2) + Offset1; //Resultat konverte
-  84              		.loc 1 29 0
-  85 001a 04FB04F0 		mul	r0, r4, r4
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccYounfA.s 			page 3
+  81              		.loc 1 29 0
+  82 001a 04FB04F0 		mul	r0, r4, r4
+  83 001e FFF7FEFF 		bl	__aeabi_i2d
+  84              	.LVL5:
+  85 0022 11A3     		adr	r3, .L9
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccFyS4MY.s 			page 3
 
 
-  86 001e FFF7FEFF 		bl	__aeabi_i2d
-  87              	.LVL6:
-  88 0022 19A3     		adr	r3, .L10
-  89 0024 D3E90023 		ldrd	r2, [r3]
-  90 0028 FFF7FEFF 		bl	__aeabi_dmul
-  91              	.LVL7:
-  92 002c 0646     		mov	r6, r0
-  93 002e 0F46     		mov	r7, r1
-  94 0030 2046     		mov	r0, r4
-  95 0032 FFF7FEFF 		bl	__aeabi_i2d
-  96              	.LVL8:
-  97 0036 16A3     		adr	r3, .L10+8
-  98 0038 D3E90023 		ldrd	r2, [r3]
-  99 003c FFF7FEFF 		bl	__aeabi_dmul
- 100              	.LVL9:
- 101 0040 0246     		mov	r2, r0
- 102 0042 0B46     		mov	r3, r1
- 103 0044 3046     		mov	r0, r6
- 104 0046 3946     		mov	r1, r7
- 105 0048 FFF7FEFF 		bl	__aeabi_dadd
- 106              	.LVL10:
- 107 004c 12A3     		adr	r3, .L10+16
- 108 004e D3E90023 		ldrd	r2, [r3]
- 109 0052 FFF7FEFF 		bl	__aeabi_dadd
- 110              	.LVL11:
- 111 0056 FFF7FEFF 		bl	__aeabi_d2uiz
- 112              	.LVL12:
- 113 005a 84B2     		uxth	r4, r0
- 114              	.LVL13:
-  30:WaterSensor.c ****                 if(Pin_Low_WL_Read())
- 115              		.loc 1 30 0
- 116 005c FFF7FEFF 		bl	Pin_Low_WL_Read
- 117              	.LVL14:
- 118 0060 60B1     		cbz	r0, .L6
-  31:WaterSensor.c ****                 {
-  32:WaterSensor.c ****                     Pin_Low_WL_Write(0);
- 119              		.loc 1 32 0
- 120 0062 0020     		movs	r0, #0
- 121 0064 FFF7FEFF 		bl	Pin_Low_WL_Write
- 122              	.LVL15:
- 123 0068 08E0     		b	.L6
- 124              	.LVL16:
- 125              	.L5:
-  33:WaterSensor.c ****                 }
+  86 0024 D3E90023 		ldrd	r2, [r3]
+  87 0028 FFF7FEFF 		bl	__aeabi_dmul
+  88              	.LVL6:
+  89 002c 0646     		mov	r6, r0
+  90 002e 0F46     		mov	r7, r1
+  91 0030 2046     		mov	r0, r4
+  92 0032 FFF7FEFF 		bl	__aeabi_i2d
+  93              	.LVL7:
+  94 0036 0EA3     		adr	r3, .L9+8
+  95 0038 D3E90023 		ldrd	r2, [r3]
+  96 003c FFF7FEFF 		bl	__aeabi_dmul
+  97              	.LVL8:
+  98 0040 0246     		mov	r2, r0
+  99 0042 0B46     		mov	r3, r1
+ 100 0044 3046     		mov	r0, r6
+ 101 0046 3946     		mov	r1, r7
+ 102 0048 FFF7FEFF 		bl	__aeabi_dadd
+ 103              	.LVL9:
+ 104 004c 0AA3     		adr	r3, .L9+16
+ 105 004e D3E90023 		ldrd	r2, [r3]
+ 106 0052 FFF7FEFF 		bl	__aeabi_dadd
+ 107              	.LVL10:
+ 108 0056 FFF7FEFF 		bl	__aeabi_d2uiz
+ 109              	.LVL11:
+ 110 005a 80B2     		uxth	r0, r0
+ 111              	.LVL12:
+ 112 005c D0BD     		pop	{r4, r6, r7, pc}
+ 113              	.LVL13:
+ 114              	.L7:
+  30:WaterSensor.c **** //                if(Pin_Low_WL_Read())
+  31:WaterSensor.c **** //                {
+  32:WaterSensor.c **** //                    Pin_Low_WL_Write(0);
+  33:WaterSensor.c **** //                }
   34:WaterSensor.c ****             }
   35:WaterSensor.c ****             else //Ellers
   36:WaterSensor.c ****             {
   37:WaterSensor.c ****                 result2 = 0; //Resultat konverteres til mL
-  38:WaterSensor.c ****                 if(!Pin_Low_WL_Read())
- 126              		.loc 1 38 0
- 127 006a FFF7FEFF 		bl	Pin_Low_WL_Read
- 128              	.LVL17:
- 129 006e 20B9     		cbnz	r0, .L8
-  39:WaterSensor.c ****                 {
-  40:WaterSensor.c ****                     Pin_Low_WL_Write(1);
- 130              		.loc 1 40 0
- 131 0070 0120     		movs	r0, #1
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccYounfA.s 			page 4
-
-
- 132 0072 FFF7FEFF 		bl	Pin_Low_WL_Write
- 133              	.LVL18:
-  37:WaterSensor.c ****                 if(!Pin_Low_WL_Read())
- 134              		.loc 1 37 0
- 135 0076 0024     		movs	r4, #0
- 136              	.LVL19:
- 137 0078 00E0     		b	.L6
- 138              	.LVL20:
- 139              	.L8:
- 140 007a 0024     		movs	r4, #0
- 141              	.LVL21:
- 142              	.L6:
-  41:WaterSensor.c ****                 }
+ 115              		.loc 1 37 0
+ 116 005e 0020     		movs	r0, #0
+ 117              	.LVL14:
+  38:WaterSensor.c **** //                if(!Pin_Low_WL_Read())
+  39:WaterSensor.c **** //                {
+  40:WaterSensor.c **** //                    Pin_Low_WL_Write(1);
+  41:WaterSensor.c **** //                }
   42:WaterSensor.c ****             }
   43:WaterSensor.c ****             return result2;
- 143              		.loc 1 43 0
- 144 007c 2046     		mov	r0, r4
- 145 007e D0BD     		pop	{r4, r6, r7, pc}
- 146              	.LVL22:
- 147              	.L7:
+ 118              		.loc 1 43 0
+ 119 0060 D0BD     		pop	{r4, r6, r7, pc}
+ 120              	.LVL15:
+ 121              	.L6:
   44:WaterSensor.c ****         }
   45:WaterSensor.c ****     else
   46:WaterSensor.c ****         return 0;
- 148              		.loc 1 46 0
- 149 0080 0020     		movs	r0, #0
+ 122              		.loc 1 46 0
+ 123 0062 0020     		movs	r0, #0
   47:WaterSensor.c **** }...
- 150              		.loc 1 47 0
- 151 0082 D0BD     		pop	{r4, r6, r7, pc}
- 152              	.L11:
- 153 0084 AFF30080 		.align	3
- 154              	.L10:
- 155 0088 58930266 		.word	1711444824
- 156 008c 193D323F 		.word	1060257049
- 157 0090 17D9CEF7 		.word	-137438953
- 158 0094 53E303C0 		.word	-1073487021
- 159 0098 00000000 		.word	0
- 160 009c 0033B640 		.word	1085682432
- 161              		.cfi_endproc
- 162              	.LFE65:
- 163              		.size	WaSensMeasure, .-WaSensMeasure
- 164              		.text
- 165              	.Letext0:
- 166              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 167              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 168              		.file 4 "Generated_Source\\PSoC5/ADC_SAR_WaSens.h"
- 169              		.file 5 "Generated_Source\\PSoC5/PWM_WaSens.h"
- 170              		.file 6 "Generated_Source\\PSoC5/Pin_Low_WL.h"
- 171              		.file 7 "Generated_Source\\PSoC5/core_cm3.h"
- 172              		.section	.debug_info,"",%progbits
- 173              	.Ldebug_info0:
- 174 0000 0A020000 		.4byte	0x20a
- 175 0004 0400     		.2byte	0x4
- 176 0006 00000000 		.4byte	.Ldebug_abbrev0
- 177 000a 04       		.byte	0x4
- 178 000b 01       		.uleb128 0x1
- 179 000c 77000000 		.4byte	.LASF30
- 180 0010 0C       		.byte	0xc
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccYounfA.s 			page 5
+ 124              		.loc 1 47 0
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccFyS4MY.s 			page 4
 
 
- 181 0011 08000000 		.4byte	.LASF31
- 182 0015 B3010000 		.4byte	.LASF32
- 183 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 184 001d 00000000 		.4byte	0
- 185 0021 00000000 		.4byte	.Ldebug_line0
- 186 0025 02       		.uleb128 0x2
- 187 0026 01       		.byte	0x1
- 188 0027 06       		.byte	0x6
- 189 0028 9D020000 		.4byte	.LASF0
- 190 002c 02       		.uleb128 0x2
- 191 002d 01       		.byte	0x1
- 192 002e 08       		.byte	0x8
- 193 002f 37010000 		.4byte	.LASF1
- 194 0033 02       		.uleb128 0x2
- 195 0034 02       		.byte	0x2
- 196 0035 05       		.byte	0x5
- 197 0036 63020000 		.4byte	.LASF2
- 198 003a 03       		.uleb128 0x3
- 199 003b 6D020000 		.4byte	.LASF4
- 200 003f 02       		.byte	0x2
- 201 0040 2B       		.byte	0x2b
- 202 0041 45000000 		.4byte	0x45
- 203 0045 02       		.uleb128 0x2
- 204 0046 02       		.byte	0x2
- 205 0047 07       		.byte	0x7
- 206 0048 17010000 		.4byte	.LASF3
- 207 004c 03       		.uleb128 0x3
- 208 004d 16000000 		.4byte	.LASF5
- 209 0051 02       		.byte	0x2
- 210 0052 3F       		.byte	0x3f
- 211 0053 57000000 		.4byte	0x57
- 212 0057 02       		.uleb128 0x2
- 213 0058 04       		.byte	0x4
- 214 0059 05       		.byte	0x5
- 215 005a 88020000 		.4byte	.LASF6
- 216 005e 02       		.uleb128 0x2
- 217 005f 04       		.byte	0x4
- 218 0060 07       		.byte	0x7
- 219 0061 05010000 		.4byte	.LASF7
- 220 0065 02       		.uleb128 0x2
- 221 0066 08       		.byte	0x8
- 222 0067 05       		.byte	0x5
- 223 0068 47020000 		.4byte	.LASF8
- 224 006c 02       		.uleb128 0x2
- 225 006d 08       		.byte	0x8
- 226 006e 07       		.byte	0x7
- 227 006f 7A010000 		.4byte	.LASF9
- 228 0073 04       		.uleb128 0x4
- 229 0074 04       		.byte	0x4
- 230 0075 05       		.byte	0x5
- 231 0076 696E7400 		.ascii	"int\000"
- 232 007a 02       		.uleb128 0x2
- 233 007b 04       		.byte	0x4
- 234 007c 07       		.byte	0x7
- 235 007d 6D010000 		.4byte	.LASF10
- 236 0081 03       		.uleb128 0x3
- 237 0082 5A020000 		.4byte	.LASF11
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccYounfA.s 			page 6
+ 125 0064 D0BD     		pop	{r4, r6, r7, pc}
+ 126              	.L10:
+ 127 0066 00BF     		.align	3
+ 128              	.L9:
+ 129 0068 58930266 		.word	1711444824
+ 130 006c 193D323F 		.word	1060257049
+ 131 0070 17D9CEF7 		.word	-137438953
+ 132 0074 53E303C0 		.word	-1073487021
+ 133 0078 00000000 		.word	0
+ 134 007c 0033B640 		.word	1085682432
+ 135              		.cfi_endproc
+ 136              	.LFE65:
+ 137              		.size	WaSensMeasure, .-WaSensMeasure
+ 138              		.comm	currentState,4,4
+ 139              		.comm	circBuf,184,4
+ 140              		.comm	pigeonPosition,16,8
+ 141              		.comm	noWater,4,4
+ 142              		.comm	mode,1,1
+ 143              		.comm	sonarTimerDone,1,1
+ 144              		.text
+ 145              	.Letext0:
+ 146              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 147              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 148              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 149              		.file 5 "CircularBuffer.h"
+ 150              		.file 6 "SonarDriver.h"
+ 151              		.file 7 "Generated_Source\\PSoC5/core_cm3.h"
+ 152              		.file 8 "PSoCcontroller.h"
+ 153              		.file 9 "Generated_Source\\PSoC5/ADC_SAR_WaSens.h"
+ 154              		.section	.debug_info,"",%progbits
+ 155              	.Ldebug_info0:
+ 156 0000 73030000 		.4byte	0x373
+ 157 0004 0400     		.2byte	0x4
+ 158 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 159 000a 04       		.byte	0x4
+ 160 000b 01       		.uleb128 0x1
+ 161 000c 2B030000 		.4byte	.LASF59
+ 162 0010 0C       		.byte	0xc
+ 163 0011 1D010000 		.4byte	.LASF60
+ 164 0015 5F000000 		.4byte	.LASF61
+ 165 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 166 001d 00000000 		.4byte	0
+ 167 0021 00000000 		.4byte	.Ldebug_line0
+ 168 0025 02       		.uleb128 0x2
+ 169 0026 01       		.byte	0x1
+ 170 0027 06       		.byte	0x6
+ 171 0028 2B010000 		.4byte	.LASF0
+ 172 002c 03       		.uleb128 0x3
+ 173 002d 85010000 		.4byte	.LASF3
+ 174 0031 02       		.byte	0x2
+ 175 0032 1D       		.byte	0x1d
+ 176 0033 37000000 		.4byte	0x37
+ 177 0037 02       		.uleb128 0x2
+ 178 0038 01       		.byte	0x1
+ 179 0039 08       		.byte	0x8
+ 180 003a 8F010000 		.4byte	.LASF1
+ 181 003e 02       		.uleb128 0x2
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccFyS4MY.s 			page 5
 
 
- 238 0086 03       		.byte	0x3
- 239 0087 24       		.byte	0x24
- 240 0088 3A000000 		.4byte	0x3a
- 241 008c 03       		.uleb128 0x3
- 242 008d 21020000 		.4byte	.LASF12
- 243 0091 03       		.byte	0x3
- 244 0092 2C       		.byte	0x2c
- 245 0093 4C000000 		.4byte	0x4c
- 246 0097 02       		.uleb128 0x2
- 247 0098 04       		.byte	0x4
- 248 0099 04       		.byte	0x4
- 249 009a 69000000 		.4byte	.LASF13
- 250 009e 02       		.uleb128 0x2
- 251 009f 08       		.byte	0x8
- 252 00a0 04       		.byte	0x4
- 253 00a1 55010000 		.4byte	.LASF14
- 254 00a5 02       		.uleb128 0x2
- 255 00a6 01       		.byte	0x1
- 256 00a7 08       		.byte	0x8
- 257 00a8 55020000 		.4byte	.LASF15
- 258 00ac 02       		.uleb128 0x2
- 259 00ad 08       		.byte	0x8
- 260 00ae 04       		.byte	0x4
- 261 00af 91020000 		.4byte	.LASF16
- 262 00b3 02       		.uleb128 0x2
- 263 00b4 04       		.byte	0x4
- 264 00b5 07       		.byte	0x7
- 265 00b6 29020000 		.4byte	.LASF17
- 266 00ba 05       		.uleb128 0x5
- 267 00bb BA020000 		.4byte	.LASF33
- 268 00bf 01       		.byte	0x1
- 269 00c0 05       		.byte	0x5
- 270 00c1 00000000 		.4byte	.LFB64
- 271 00c5 0C000000 		.4byte	.LFE64-.LFB64
- 272 00c9 01       		.uleb128 0x1
- 273 00ca 9C       		.byte	0x9c
- 274 00cb E2000000 		.4byte	0xe2
- 275 00cf 06       		.uleb128 0x6
- 276 00d0 06000000 		.4byte	.LVL0
- 277 00d4 C0010000 		.4byte	0x1c0
- 278 00d8 06       		.uleb128 0x6
- 279 00d9 0A000000 		.4byte	.LVL1
- 280 00dd CB010000 		.4byte	0x1cb
- 281 00e1 00       		.byte	0
- 282 00e2 07       		.uleb128 0x7
- 283 00e3 20000000 		.4byte	.LASF34
- 284 00e7 01       		.byte	0x1
- 285 00e8 0B       		.byte	0xb
- 286 00e9 73000000 		.4byte	0x73
- 287 00ed 00000000 		.4byte	.LFB65
- 288 00f1 A0000000 		.4byte	.LFE65-.LFB65
- 289 00f5 01       		.uleb128 0x1
- 290 00f6 9C       		.byte	0x9c
- 291 00f7 AF010000 		.4byte	0x1af
- 292 00fb 08       		.uleb128 0x8
- 293 00fc 78020000 		.4byte	.LASF18
- 294 0100 01       		.byte	0x1
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccYounfA.s 			page 7
+ 182 003f 02       		.byte	0x2
+ 183 0040 05       		.byte	0x5
+ 184 0041 2C000000 		.4byte	.LASF2
+ 185 0045 03       		.uleb128 0x3
+ 186 0046 D2000000 		.4byte	.LASF4
+ 187 004a 02       		.byte	0x2
+ 188 004b 2B       		.byte	0x2b
+ 189 004c 50000000 		.4byte	0x50
+ 190 0050 02       		.uleb128 0x2
+ 191 0051 02       		.byte	0x2
+ 192 0052 07       		.byte	0x7
+ 193 0053 5B020000 		.4byte	.LASF5
+ 194 0057 03       		.uleb128 0x3
+ 195 0058 DF020000 		.4byte	.LASF6
+ 196 005c 02       		.byte	0x2
+ 197 005d 3F       		.byte	0x3f
+ 198 005e 62000000 		.4byte	0x62
+ 199 0062 02       		.uleb128 0x2
+ 200 0063 04       		.byte	0x4
+ 201 0064 05       		.byte	0x5
+ 202 0065 6B010000 		.4byte	.LASF7
+ 203 0069 02       		.uleb128 0x2
+ 204 006a 04       		.byte	0x4
+ 205 006b 07       		.byte	0x7
+ 206 006c C6020000 		.4byte	.LASF8
+ 207 0070 02       		.uleb128 0x2
+ 208 0071 08       		.byte	0x8
+ 209 0072 05       		.byte	0x5
+ 210 0073 43010000 		.4byte	.LASF9
+ 211 0077 02       		.uleb128 0x2
+ 212 0078 08       		.byte	0x8
+ 213 0079 07       		.byte	0x7
+ 214 007a FF010000 		.4byte	.LASF10
+ 215 007e 04       		.uleb128 0x4
+ 216 007f 04       		.byte	0x4
+ 217 0080 05       		.byte	0x5
+ 218 0081 696E7400 		.ascii	"int\000"
+ 219 0085 02       		.uleb128 0x2
+ 220 0086 04       		.byte	0x4
+ 221 0087 07       		.byte	0x7
+ 222 0088 16020000 		.4byte	.LASF11
+ 223 008c 03       		.uleb128 0x3
+ 224 008d F2000000 		.4byte	.LASF12
+ 225 0091 03       		.byte	0x3
+ 226 0092 18       		.byte	0x18
+ 227 0093 2C000000 		.4byte	0x2c
+ 228 0097 03       		.uleb128 0x3
+ 229 0098 31020000 		.4byte	.LASF13
+ 230 009c 03       		.byte	0x3
+ 231 009d 24       		.byte	0x24
+ 232 009e 45000000 		.4byte	0x45
+ 233 00a2 03       		.uleb128 0x3
+ 234 00a3 8C020000 		.4byte	.LASF14
+ 235 00a7 03       		.byte	0x3
+ 236 00a8 2C       		.byte	0x2c
+ 237 00a9 57000000 		.4byte	0x57
+ 238 00ad 05       		.uleb128 0x5
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccFyS4MY.s 			page 6
 
 
- 295 0101 0F       		.byte	0xf
- 296 0102 9E000000 		.4byte	0x9e
- 297 0106 08       		.byte	0x8
- 298 0107 58930266 		.4byte	0x66029358
- 299 010b 193D323F 		.4byte	0x3f323d19
- 300 010f 08       		.uleb128 0x8
- 301 0110 80020000 		.4byte	.LASF19
- 302 0114 01       		.byte	0x1
- 303 0115 10       		.byte	0x10
- 304 0116 9E000000 		.4byte	0x9e
- 305 011a 08       		.byte	0x8
- 306 011b 17D9CEF7 		.4byte	0xf7ced917
- 307 011f 53E303C0 		.4byte	0xc003e353
- 308 0123 08       		.uleb128 0x8
- 309 0124 6F000000 		.4byte	.LASF20
- 310 0128 01       		.byte	0x1
- 311 0129 11       		.byte	0x11
- 312 012a 9E000000 		.4byte	0x9e
- 313 012e 08       		.byte	0x8
- 314 012f 00000000 		.4byte	0
- 315 0133 0033B640 		.4byte	0x40b63300
- 316 0137 09       		.uleb128 0x9
- 317 0138 91010000 		.4byte	.LASF21
- 318 013c 01       		.byte	0x1
- 319 013d 12       		.byte	0x12
- 320 013e 81000000 		.4byte	0x81
- 321 0142 00000000 		.4byte	.LLST0
- 322 0146 09       		.uleb128 0x9
- 323 0147 00000000 		.4byte	.LASF22
- 324 014b 01       		.byte	0x1
- 325 014c 13       		.byte	0x13
- 326 014d 81000000 		.4byte	0x81
- 327 0151 29000000 		.4byte	.LLST1
- 328 0155 06       		.uleb128 0x6
- 329 0156 06000000 		.4byte	.LVL2
- 330 015a D6010000 		.4byte	0x1d6
- 331 015e 0A       		.uleb128 0xa
- 332 015f 0C000000 		.4byte	.LVL3
- 333 0163 E1010000 		.4byte	0x1e1
- 334 0167 71010000 		.4byte	0x171
- 335 016b 0B       		.uleb128 0xb
- 336 016c 01       		.uleb128 0x1
- 337 016d 50       		.byte	0x50
- 338 016e 01       		.uleb128 0x1
- 339 016f 30       		.byte	0x30
- 340 0170 00       		.byte	0
- 341 0171 06       		.uleb128 0x6
- 342 0172 12000000 		.4byte	.LVL4
- 343 0176 EC010000 		.4byte	0x1ec
- 344 017a 06       		.uleb128 0x6
- 345 017b 60000000 		.4byte	.LVL14
- 346 017f F7010000 		.4byte	0x1f7
- 347 0183 0A       		.uleb128 0xa
- 348 0184 68000000 		.4byte	.LVL15
- 349 0188 02020000 		.4byte	0x202
- 350 018c 96010000 		.4byte	0x196
- 351 0190 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccYounfA.s 			page 8
+ 239 00ae 05010000 		.4byte	.LASF15
+ 240 00b2 04       		.byte	0x4
+ 241 00b3 E401     		.2byte	0x1e4
+ 242 00b5 37000000 		.4byte	0x37
+ 243 00b9 05       		.uleb128 0x5
+ 244 00ba 57010000 		.4byte	.LASF16
+ 245 00be 04       		.byte	0x4
+ 246 00bf E701     		.2byte	0x1e7
+ 247 00c1 25000000 		.4byte	0x25
+ 248 00c5 02       		.uleb128 0x2
+ 249 00c6 04       		.byte	0x4
+ 250 00c7 04       		.byte	0x4
+ 251 00c8 3D010000 		.4byte	.LASF17
+ 252 00cc 02       		.uleb128 0x2
+ 253 00cd 08       		.byte	0x8
+ 254 00ce 04       		.byte	0x4
+ 255 00cf D8020000 		.4byte	.LASF18
+ 256 00d3 02       		.uleb128 0x2
+ 257 00d4 01       		.byte	0x1
+ 258 00d5 08       		.byte	0x8
+ 259 00d6 7E020000 		.4byte	.LASF19
+ 260 00da 06       		.uleb128 0x6
+ 261 00db 04       		.byte	0x4
+ 262 00dc E0000000 		.4byte	0xe0
+ 263 00e0 07       		.uleb128 0x7
+ 264 00e1 02       		.uleb128 0x2
+ 265 00e2 08       		.byte	0x8
+ 266 00e3 04       		.byte	0x4
+ 267 00e4 B9010000 		.4byte	.LASF20
+ 268 00e8 02       		.uleb128 0x2
+ 269 00e9 04       		.byte	0x4
+ 270 00ea 07       		.byte	0x7
+ 271 00eb 3E000000 		.4byte	.LASF21
+ 272 00ef 08       		.uleb128 0x8
+ 273 00f0 E9020000 		.4byte	.LASF24
+ 274 00f4 08       		.byte	0x8
+ 275 00f5 05       		.byte	0x5
+ 276 00f6 10       		.byte	0x10
+ 277 00f7 14010000 		.4byte	0x114
+ 278 00fb 09       		.uleb128 0x9
+ 279 00fc B9030000 		.4byte	.LASF22
+ 280 0100 05       		.byte	0x5
+ 281 0101 11       		.byte	0x11
+ 282 0102 1B010000 		.4byte	0x11b
+ 283 0106 00       		.byte	0
+ 284 0107 09       		.uleb128 0x9
+ 285 0108 3A020000 		.4byte	.LASF23
+ 286 010c 05       		.byte	0x5
+ 287 010d 12       		.byte	0x12
+ 288 010e 7E000000 		.4byte	0x7e
+ 289 0112 04       		.byte	0x4
+ 290 0113 00       		.byte	0
+ 291 0114 0A       		.uleb128 0xa
+ 292 0115 1B010000 		.4byte	0x11b
+ 293 0119 0B       		.uleb128 0xb
+ 294 011a 00       		.byte	0
+ 295 011b 06       		.uleb128 0x6
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccFyS4MY.s 			page 7
 
 
- 352 0191 01       		.uleb128 0x1
- 353 0192 50       		.byte	0x50
- 354 0193 01       		.uleb128 0x1
- 355 0194 30       		.byte	0x30
- 356 0195 00       		.byte	0
- 357 0196 06       		.uleb128 0x6
- 358 0197 6E000000 		.4byte	.LVL17
- 359 019b F7010000 		.4byte	0x1f7
- 360 019f 0C       		.uleb128 0xc
- 361 01a0 76000000 		.4byte	.LVL18
- 362 01a4 02020000 		.4byte	0x202
- 363 01a8 0B       		.uleb128 0xb
- 364 01a9 01       		.uleb128 0x1
- 365 01aa 50       		.byte	0x50
- 366 01ab 01       		.uleb128 0x1
- 367 01ac 31       		.byte	0x31
- 368 01ad 00       		.byte	0
- 369 01ae 00       		.byte	0
- 370 01af 0D       		.uleb128 0xd
- 371 01b0 2A010000 		.4byte	.LASF35
- 372 01b4 07       		.byte	0x7
- 373 01b5 1207     		.2byte	0x712
- 374 01b7 BB010000 		.4byte	0x1bb
- 375 01bb 0E       		.uleb128 0xe
- 376 01bc 8C000000 		.4byte	0x8c
- 377 01c0 0F       		.uleb128 0xf
- 378 01c1 32020000 		.4byte	.LASF23
- 379 01c5 32020000 		.4byte	.LASF23
- 380 01c9 04       		.byte	0x4
- 381 01ca 34       		.byte	0x34
- 382 01cb 0F       		.uleb128 0xf
- 383 01cc A9020000 		.4byte	.LASF24
- 384 01d0 A9020000 		.4byte	.LASF24
- 385 01d4 05       		.byte	0x5
- 386 01d5 92       		.byte	0x92
- 387 01d6 0F       		.uleb128 0xf
- 388 01d7 2E000000 		.4byte	.LASF25
- 389 01db 2E000000 		.4byte	.LASF25
- 390 01df 04       		.byte	0x4
- 391 01e0 D1       		.byte	0xd1
- 392 01e1 0F       		.uleb128 0xf
- 393 01e2 4A000000 		.4byte	.LASF26
- 394 01e6 4A000000 		.4byte	.LASF26
- 395 01ea 04       		.byte	0x4
- 396 01eb 39       		.byte	0x39
- 397 01ec 0F       		.uleb128 0xf
- 398 01ed 98010000 		.4byte	.LASF27
- 399 01f1 98010000 		.4byte	.LASF27
- 400 01f5 04       		.byte	0x4
- 401 01f6 3B       		.byte	0x3b
- 402 01f7 0F       		.uleb128 0xf
- 403 01f8 45010000 		.4byte	.LASF28
- 404 01fc 45010000 		.4byte	.LASF28
- 405 0200 06       		.byte	0x6
- 406 0201 29       		.byte	0x29
- 407 0202 0F       		.uleb128 0xf
- 408 0203 5C010000 		.4byte	.LASF29
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccYounfA.s 			page 9
+ 296 011c 04       		.byte	0x4
+ 297 011d 14010000 		.4byte	0x114
+ 298 0121 08       		.uleb128 0x8
+ 299 0122 36000000 		.4byte	.LASF25
+ 300 0126 B8       		.byte	0xb8
+ 301 0127 05       		.byte	0x5
+ 302 0128 15       		.byte	0x15
+ 303 0129 9A010000 		.4byte	0x19a
+ 304 012d 09       		.uleb128 0x9
+ 305 012e A5020000 		.4byte	.LASF26
+ 306 0132 05       		.byte	0x5
+ 307 0133 16       		.byte	0x16
+ 308 0134 9A010000 		.4byte	0x19a
+ 309 0138 00       		.byte	0
+ 310 0139 0C       		.uleb128 0xc
+ 311 013a 706F7000 		.ascii	"pop\000"
+ 312 013e 05       		.byte	0x5
+ 313 013f 17       		.byte	0x17
+ 314 0140 1B010000 		.4byte	0x11b
+ 315 0144 A0       		.byte	0xa0
+ 316 0145 09       		.uleb128 0x9
+ 317 0146 0B010000 		.4byte	.LASF27
+ 318 014a 05       		.byte	0x5
+ 319 014b 18       		.byte	0x18
+ 320 014c 1B010000 		.4byte	0x11b
+ 321 0150 A4       		.byte	0xa4
+ 322 0151 09       		.uleb128 0x9
+ 323 0152 25000000 		.4byte	.LASF28
+ 324 0156 05       		.byte	0x5
+ 325 0157 19       		.byte	0x19
+ 326 0158 B5010000 		.4byte	0x1b5
+ 327 015c A8       		.byte	0xa8
+ 328 015d 09       		.uleb128 0x9
+ 329 015e 6E020000 		.4byte	.LASF29
+ 330 0162 05       		.byte	0x5
+ 331 0163 1A       		.byte	0x1a
+ 332 0164 B5010000 		.4byte	0x1b5
+ 333 0168 AC       		.byte	0xac
+ 334 0169 09       		.uleb128 0x9
+ 335 016a 79010000 		.4byte	.LASF30
+ 336 016e 05       		.byte	0x5
+ 337 016f 1B       		.byte	0x1b
+ 338 0170 1B010000 		.4byte	0x11b
+ 339 0174 B0       		.byte	0xb0
+ 340 0175 09       		.uleb128 0x9
+ 341 0176 51010000 		.4byte	.LASF31
+ 342 017a 05       		.byte	0x5
+ 343 017b 1C       		.byte	0x1c
+ 344 017c B9000000 		.4byte	0xb9
+ 345 0180 B4       		.byte	0xb4
+ 346 0181 09       		.uleb128 0x9
+ 347 0182 74010000 		.4byte	.LASF32
+ 348 0186 05       		.byte	0x5
+ 349 0187 1D       		.byte	0x1d
+ 350 0188 B9000000 		.4byte	0xb9
+ 351 018c B5       		.byte	0xb5
+ 352 018d 09       		.uleb128 0x9
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccFyS4MY.s 			page 8
 
 
- 409 0207 5C010000 		.4byte	.LASF29
- 410 020b 06       		.byte	0x6
- 411 020c 26       		.byte	0x26
- 412 020d 00       		.byte	0
- 413              		.section	.debug_abbrev,"",%progbits
- 414              	.Ldebug_abbrev0:
- 415 0000 01       		.uleb128 0x1
- 416 0001 11       		.uleb128 0x11
- 417 0002 01       		.byte	0x1
- 418 0003 25       		.uleb128 0x25
- 419 0004 0E       		.uleb128 0xe
- 420 0005 13       		.uleb128 0x13
- 421 0006 0B       		.uleb128 0xb
- 422 0007 03       		.uleb128 0x3
- 423 0008 0E       		.uleb128 0xe
- 424 0009 1B       		.uleb128 0x1b
- 425 000a 0E       		.uleb128 0xe
- 426 000b 55       		.uleb128 0x55
- 427 000c 17       		.uleb128 0x17
- 428 000d 11       		.uleb128 0x11
- 429 000e 01       		.uleb128 0x1
- 430 000f 10       		.uleb128 0x10
- 431 0010 17       		.uleb128 0x17
- 432 0011 00       		.byte	0
- 433 0012 00       		.byte	0
- 434 0013 02       		.uleb128 0x2
- 435 0014 24       		.uleb128 0x24
- 436 0015 00       		.byte	0
- 437 0016 0B       		.uleb128 0xb
- 438 0017 0B       		.uleb128 0xb
- 439 0018 3E       		.uleb128 0x3e
- 440 0019 0B       		.uleb128 0xb
- 441 001a 03       		.uleb128 0x3
- 442 001b 0E       		.uleb128 0xe
- 443 001c 00       		.byte	0
- 444 001d 00       		.byte	0
- 445 001e 03       		.uleb128 0x3
- 446 001f 16       		.uleb128 0x16
- 447 0020 00       		.byte	0
- 448 0021 03       		.uleb128 0x3
- 449 0022 0E       		.uleb128 0xe
- 450 0023 3A       		.uleb128 0x3a
- 451 0024 0B       		.uleb128 0xb
- 452 0025 3B       		.uleb128 0x3b
- 453 0026 0B       		.uleb128 0xb
- 454 0027 49       		.uleb128 0x49
- 455 0028 13       		.uleb128 0x13
- 456 0029 00       		.byte	0
- 457 002a 00       		.byte	0
- 458 002b 04       		.uleb128 0x4
- 459 002c 24       		.uleb128 0x24
- 460 002d 00       		.byte	0
- 461 002e 0B       		.uleb128 0xb
- 462 002f 0B       		.uleb128 0xb
- 463 0030 3E       		.uleb128 0x3e
- 464 0031 0B       		.uleb128 0xb
- 465 0032 03       		.uleb128 0x3
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccYounfA.s 			page 10
+ 353 018e F6020000 		.4byte	.LASF33
+ 354 0192 05       		.byte	0x5
+ 355 0193 1E       		.byte	0x1e
+ 356 0194 AD000000 		.4byte	0xad
+ 357 0198 B6       		.byte	0xb6
+ 358 0199 00       		.byte	0
+ 359 019a 0D       		.uleb128 0xd
+ 360 019b EF000000 		.4byte	0xef
+ 361 019f AA010000 		.4byte	0x1aa
+ 362 01a3 0E       		.uleb128 0xe
+ 363 01a4 E8000000 		.4byte	0xe8
+ 364 01a8 13       		.byte	0x13
+ 365 01a9 00       		.byte	0
+ 366 01aa 0F       		.uleb128 0xf
+ 367 01ab AD000000 		.4byte	0xad
+ 368 01af B5010000 		.4byte	0x1b5
+ 369 01b3 0B       		.uleb128 0xb
+ 370 01b4 00       		.byte	0
+ 371 01b5 06       		.uleb128 0x6
+ 372 01b6 04       		.byte	0x4
+ 373 01b7 AA010000 		.4byte	0x1aa
+ 374 01bb 08       		.uleb128 0x8
+ 375 01bc 15030000 		.4byte	.LASF34
+ 376 01c0 10       		.byte	0x10
+ 377 01c1 06       		.byte	0x6
+ 378 01c2 15       		.byte	0x15
+ 379 01c3 EC010000 		.4byte	0x1ec
+ 380 01c7 09       		.uleb128 0x9
+ 381 01c8 14000000 		.4byte	.LASF35
+ 382 01cc 06       		.byte	0x6
+ 383 01cd 16       		.byte	0x16
+ 384 01ce 8C000000 		.4byte	0x8c
+ 385 01d2 00       		.byte	0
+ 386 01d3 09       		.uleb128 0x9
+ 387 01d4 37010000 		.4byte	.LASF36
+ 388 01d8 06       		.byte	0x6
+ 389 01d9 17       		.byte	0x17
+ 390 01da 7E000000 		.4byte	0x7e
+ 391 01de 04       		.byte	0x4
+ 392 01df 09       		.uleb128 0x9
+ 393 01e0 83020000 		.4byte	.LASF37
+ 394 01e4 06       		.byte	0x6
+ 395 01e5 18       		.byte	0x18
+ 396 01e6 CC000000 		.4byte	0xcc
+ 397 01ea 08       		.byte	0x8
+ 398 01eb 00       		.byte	0
+ 399 01ec 10       		.uleb128 0x10
+ 400 01ed 00030000 		.4byte	.LASF62
+ 401 01f1 01       		.byte	0x1
+ 402 01f2 37000000 		.4byte	0x37
+ 403 01f6 08       		.byte	0x8
+ 404 01f7 14       		.byte	0x14
+ 405 01f8 1B020000 		.4byte	0x21b
+ 406 01fc 11       		.uleb128 0x11
+ 407 01fd 47000000 		.4byte	.LASF38
+ 408 0201 00       		.byte	0
+ 409 0202 11       		.uleb128 0x11
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccFyS4MY.s 			page 9
 
 
- 466 0033 08       		.uleb128 0x8
- 467 0034 00       		.byte	0
- 468 0035 00       		.byte	0
- 469 0036 05       		.uleb128 0x5
- 470 0037 2E       		.uleb128 0x2e
- 471 0038 01       		.byte	0x1
- 472 0039 3F       		.uleb128 0x3f
- 473 003a 19       		.uleb128 0x19
- 474 003b 03       		.uleb128 0x3
- 475 003c 0E       		.uleb128 0xe
- 476 003d 3A       		.uleb128 0x3a
- 477 003e 0B       		.uleb128 0xb
- 478 003f 3B       		.uleb128 0x3b
- 479 0040 0B       		.uleb128 0xb
- 480 0041 11       		.uleb128 0x11
- 481 0042 01       		.uleb128 0x1
- 482 0043 12       		.uleb128 0x12
- 483 0044 06       		.uleb128 0x6
- 484 0045 40       		.uleb128 0x40
- 485 0046 18       		.uleb128 0x18
- 486 0047 9742     		.uleb128 0x2117
- 487 0049 19       		.uleb128 0x19
- 488 004a 01       		.uleb128 0x1
- 489 004b 13       		.uleb128 0x13
- 490 004c 00       		.byte	0
- 491 004d 00       		.byte	0
- 492 004e 06       		.uleb128 0x6
- 493 004f 898201   		.uleb128 0x4109
- 494 0052 00       		.byte	0
- 495 0053 11       		.uleb128 0x11
- 496 0054 01       		.uleb128 0x1
- 497 0055 31       		.uleb128 0x31
- 498 0056 13       		.uleb128 0x13
- 499 0057 00       		.byte	0
- 500 0058 00       		.byte	0
- 501 0059 07       		.uleb128 0x7
- 502 005a 2E       		.uleb128 0x2e
- 503 005b 01       		.byte	0x1
- 504 005c 3F       		.uleb128 0x3f
- 505 005d 19       		.uleb128 0x19
- 506 005e 03       		.uleb128 0x3
- 507 005f 0E       		.uleb128 0xe
- 508 0060 3A       		.uleb128 0x3a
- 509 0061 0B       		.uleb128 0xb
- 510 0062 3B       		.uleb128 0x3b
- 511 0063 0B       		.uleb128 0xb
- 512 0064 49       		.uleb128 0x49
- 513 0065 13       		.uleb128 0x13
- 514 0066 11       		.uleb128 0x11
- 515 0067 01       		.uleb128 0x1
- 516 0068 12       		.uleb128 0x12
- 517 0069 06       		.uleb128 0x6
- 518 006a 40       		.uleb128 0x40
- 519 006b 18       		.uleb128 0x18
- 520 006c 9642     		.uleb128 0x2116
- 521 006e 19       		.uleb128 0x19
- 522 006f 01       		.uleb128 0x1
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccYounfA.s 			page 11
+ 410 0203 94020000 		.4byte	.LASF39
+ 411 0207 01       		.byte	0x1
+ 412 0208 11       		.uleb128 0x11
+ 413 0209 53000000 		.4byte	.LASF40
+ 414 020d 02       		.byte	0x2
+ 415 020e 11       		.uleb128 0x11
+ 416 020f CD010000 		.4byte	.LASF41
+ 417 0213 03       		.byte	0x3
+ 418 0214 11       		.uleb128 0x11
+ 419 0215 07000000 		.4byte	.LASF42
+ 420 0219 04       		.byte	0x4
+ 421 021a 00       		.byte	0
+ 422 021b 12       		.uleb128 0x12
+ 423 021c FA000000 		.4byte	.LASF63
+ 424 0220 01       		.byte	0x1
+ 425 0221 05       		.byte	0x5
+ 426 0222 00000000 		.4byte	.LFB64
+ 427 0226 08000000 		.4byte	.LFE64-.LFB64
+ 428 022a 01       		.uleb128 0x1
+ 429 022b 9C       		.byte	0x9c
+ 430 022c 3A020000 		.4byte	0x23a
+ 431 0230 13       		.uleb128 0x13
+ 432 0231 06000000 		.4byte	.LVL0
+ 433 0235 4A030000 		.4byte	0x34a
+ 434 0239 00       		.byte	0
+ 435 023a 14       		.uleb128 0x14
+ 436 023b 23020000 		.4byte	.LASF64
+ 437 023f 01       		.byte	0x1
+ 438 0240 0B       		.byte	0xb
+ 439 0241 7E000000 		.4byte	0x7e
+ 440 0245 00000000 		.4byte	.LFB65
+ 441 0249 80000000 		.4byte	.LFE65-.LFB65
+ 442 024d 01       		.uleb128 0x1
+ 443 024e 9C       		.byte	0x9c
+ 444 024f D3020000 		.4byte	0x2d3
+ 445 0253 15       		.uleb128 0x15
+ 446 0254 05030000 		.4byte	.LASF43
+ 447 0258 01       		.byte	0x1
+ 448 0259 0F       		.byte	0xf
+ 449 025a CC000000 		.4byte	0xcc
+ 450 025e 08       		.byte	0x8
+ 451 025f 58930266 		.4byte	0x66029358
+ 452 0263 193D323F 		.4byte	0x3f323d19
+ 453 0267 15       		.uleb128 0x15
+ 454 0268 0D030000 		.4byte	.LASF44
+ 455 026c 01       		.byte	0x1
+ 456 026d 10       		.byte	0x10
+ 457 026e CC000000 		.4byte	0xcc
+ 458 0272 08       		.byte	0x8
+ 459 0273 17D9CEF7 		.4byte	0xf7ced917
+ 460 0277 53E303C0 		.4byte	0xc003e353
+ 461 027b 15       		.uleb128 0x15
+ 462 027c BE020000 		.4byte	.LASF45
+ 463 0280 01       		.byte	0x1
+ 464 0281 11       		.byte	0x11
+ 465 0282 CC000000 		.4byte	0xcc
+ 466 0286 08       		.byte	0x8
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccFyS4MY.s 			page 10
 
 
- 523 0070 13       		.uleb128 0x13
- 524 0071 00       		.byte	0
- 525 0072 00       		.byte	0
- 526 0073 08       		.uleb128 0x8
- 527 0074 34       		.uleb128 0x34
- 528 0075 00       		.byte	0
- 529 0076 03       		.uleb128 0x3
- 530 0077 0E       		.uleb128 0xe
- 531 0078 3A       		.uleb128 0x3a
- 532 0079 0B       		.uleb128 0xb
- 533 007a 3B       		.uleb128 0x3b
- 534 007b 0B       		.uleb128 0xb
- 535 007c 49       		.uleb128 0x49
- 536 007d 13       		.uleb128 0x13
- 537 007e 1C       		.uleb128 0x1c
- 538 007f 0A       		.uleb128 0xa
- 539 0080 00       		.byte	0
- 540 0081 00       		.byte	0
- 541 0082 09       		.uleb128 0x9
- 542 0083 34       		.uleb128 0x34
- 543 0084 00       		.byte	0
- 544 0085 03       		.uleb128 0x3
- 545 0086 0E       		.uleb128 0xe
- 546 0087 3A       		.uleb128 0x3a
- 547 0088 0B       		.uleb128 0xb
- 548 0089 3B       		.uleb128 0x3b
- 549 008a 0B       		.uleb128 0xb
- 550 008b 49       		.uleb128 0x49
- 551 008c 13       		.uleb128 0x13
- 552 008d 02       		.uleb128 0x2
- 553 008e 17       		.uleb128 0x17
- 554 008f 00       		.byte	0
- 555 0090 00       		.byte	0
- 556 0091 0A       		.uleb128 0xa
- 557 0092 898201   		.uleb128 0x4109
- 558 0095 01       		.byte	0x1
- 559 0096 11       		.uleb128 0x11
- 560 0097 01       		.uleb128 0x1
- 561 0098 31       		.uleb128 0x31
- 562 0099 13       		.uleb128 0x13
- 563 009a 01       		.uleb128 0x1
- 564 009b 13       		.uleb128 0x13
- 565 009c 00       		.byte	0
- 566 009d 00       		.byte	0
- 567 009e 0B       		.uleb128 0xb
- 568 009f 8A8201   		.uleb128 0x410a
- 569 00a2 00       		.byte	0
- 570 00a3 02       		.uleb128 0x2
- 571 00a4 18       		.uleb128 0x18
- 572 00a5 9142     		.uleb128 0x2111
- 573 00a7 18       		.uleb128 0x18
- 574 00a8 00       		.byte	0
- 575 00a9 00       		.byte	0
- 576 00aa 0C       		.uleb128 0xc
- 577 00ab 898201   		.uleb128 0x4109
- 578 00ae 01       		.byte	0x1
- 579 00af 11       		.uleb128 0x11
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccYounfA.s 			page 12
+ 467 0287 00000000 		.4byte	0
+ 468 028b 0033B640 		.4byte	0x40b63300
+ 469 028f 16       		.uleb128 0x16
+ 470 0290 00000000 		.4byte	.LASF46
+ 471 0294 01       		.byte	0x1
+ 472 0295 12       		.byte	0x12
+ 473 0296 97000000 		.4byte	0x97
+ 474 029a 00000000 		.4byte	.LLST0
+ 475 029e 16       		.uleb128 0x16
+ 476 029f C5010000 		.4byte	.LASF47
+ 477 02a3 01       		.byte	0x1
+ 478 02a4 13       		.byte	0x13
+ 479 02a5 97000000 		.4byte	0x97
+ 480 02a9 13000000 		.4byte	.LLST1
+ 481 02ad 13       		.uleb128 0x13
+ 482 02ae 06000000 		.4byte	.LVL1
+ 483 02b2 55030000 		.4byte	0x355
+ 484 02b6 17       		.uleb128 0x17
+ 485 02b7 0C000000 		.4byte	.LVL2
+ 486 02bb 60030000 		.4byte	0x360
+ 487 02bf C9020000 		.4byte	0x2c9
+ 488 02c3 18       		.uleb128 0x18
+ 489 02c4 01       		.uleb128 0x1
+ 490 02c5 50       		.byte	0x50
+ 491 02c6 01       		.uleb128 0x1
+ 492 02c7 30       		.byte	0x30
+ 493 02c8 00       		.byte	0
+ 494 02c9 13       		.uleb128 0x13
+ 495 02ca 12000000 		.4byte	.LVL3
+ 496 02ce 6B030000 		.4byte	0x36b
+ 497 02d2 00       		.byte	0
+ 498 02d3 19       		.uleb128 0x19
+ 499 02d4 1E030000 		.4byte	.LASF48
+ 500 02d8 07       		.byte	0x7
+ 501 02d9 1207     		.2byte	0x712
+ 502 02db DF020000 		.4byte	0x2df
+ 503 02df 1A       		.uleb128 0x1a
+ 504 02e0 A2000000 		.4byte	0xa2
+ 505 02e4 1B       		.uleb128 0x1b
+ 506 02e5 AF020000 		.4byte	.LASF49
+ 507 02e9 06       		.byte	0x6
+ 508 02ea 1C       		.byte	0x1c
+ 509 02eb AD000000 		.4byte	0xad
+ 510 02ef 05       		.uleb128 0x5
+ 511 02f0 03       		.byte	0x3
+ 512 02f1 00000000 		.4byte	sonarTimerDone
+ 513 02f5 1B       		.uleb128 0x1b
+ 514 02f6 CD000000 		.4byte	.LASF50
+ 515 02fa 08       		.byte	0x8
+ 516 02fb 18       		.byte	0x18
+ 517 02fc EC010000 		.4byte	0x1ec
+ 518 0300 05       		.uleb128 0x5
+ 519 0301 03       		.byte	0x3
+ 520 0302 00000000 		.4byte	mode
+ 521 0306 1B       		.uleb128 0x1b
+ 522 0307 1D000000 		.4byte	.LASF51
+ 523 030b 08       		.byte	0x8
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccFyS4MY.s 			page 11
 
 
- 580 00b0 01       		.uleb128 0x1
- 581 00b1 31       		.uleb128 0x31
- 582 00b2 13       		.uleb128 0x13
- 583 00b3 00       		.byte	0
- 584 00b4 00       		.byte	0
- 585 00b5 0D       		.uleb128 0xd
- 586 00b6 34       		.uleb128 0x34
- 587 00b7 00       		.byte	0
- 588 00b8 03       		.uleb128 0x3
- 589 00b9 0E       		.uleb128 0xe
- 590 00ba 3A       		.uleb128 0x3a
- 591 00bb 0B       		.uleb128 0xb
- 592 00bc 3B       		.uleb128 0x3b
- 593 00bd 05       		.uleb128 0x5
- 594 00be 49       		.uleb128 0x49
- 595 00bf 13       		.uleb128 0x13
- 596 00c0 3F       		.uleb128 0x3f
- 597 00c1 19       		.uleb128 0x19
- 598 00c2 3C       		.uleb128 0x3c
- 599 00c3 19       		.uleb128 0x19
- 600 00c4 00       		.byte	0
- 601 00c5 00       		.byte	0
- 602 00c6 0E       		.uleb128 0xe
- 603 00c7 35       		.uleb128 0x35
- 604 00c8 00       		.byte	0
- 605 00c9 49       		.uleb128 0x49
- 606 00ca 13       		.uleb128 0x13
- 607 00cb 00       		.byte	0
- 608 00cc 00       		.byte	0
- 609 00cd 0F       		.uleb128 0xf
- 610 00ce 2E       		.uleb128 0x2e
- 611 00cf 00       		.byte	0
- 612 00d0 3F       		.uleb128 0x3f
- 613 00d1 19       		.uleb128 0x19
- 614 00d2 3C       		.uleb128 0x3c
- 615 00d3 19       		.uleb128 0x19
- 616 00d4 6E       		.uleb128 0x6e
- 617 00d5 0E       		.uleb128 0xe
- 618 00d6 03       		.uleb128 0x3
- 619 00d7 0E       		.uleb128 0xe
- 620 00d8 3A       		.uleb128 0x3a
- 621 00d9 0B       		.uleb128 0xb
- 622 00da 3B       		.uleb128 0x3b
- 623 00db 0B       		.uleb128 0xb
- 624 00dc 00       		.byte	0
- 625 00dd 00       		.byte	0
- 626 00de 00       		.byte	0
- 627              		.section	.debug_loc,"",%progbits
- 628              	.Ldebug_loc0:
- 629              	.LLST0:
- 630 0000 14000000 		.4byte	.LVL5
- 631 0004 5C000000 		.4byte	.LVL13
- 632 0008 0100     		.2byte	0x1
- 633 000a 54       		.byte	0x54
- 634 000b 6A000000 		.4byte	.LVL16
- 635 000f 78000000 		.4byte	.LVL19
- 636 0013 0100     		.2byte	0x1
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccYounfA.s 			page 13
+ 524 030c 1A       		.byte	0x1a
+ 525 030d 7E000000 		.4byte	0x7e
+ 526 0311 05       		.uleb128 0x5
+ 527 0312 03       		.byte	0x3
+ 528 0313 00000000 		.4byte	noWater
+ 529 0317 1B       		.uleb128 0x1b
+ 530 0318 5C010000 		.4byte	.LASF52
+ 531 031c 08       		.byte	0x8
+ 532 031d 1C       		.byte	0x1c
+ 533 031e BB010000 		.4byte	0x1bb
+ 534 0322 05       		.uleb128 0x5
+ 535 0323 03       		.byte	0x3
+ 536 0324 00000000 		.4byte	pigeonPosition
+ 537 0328 1B       		.uleb128 0x1b
+ 538 0329 76020000 		.4byte	.LASF53
+ 539 032d 08       		.byte	0x8
+ 540 032e 1D       		.byte	0x1d
+ 541 032f 21010000 		.4byte	0x121
+ 542 0333 05       		.uleb128 0x5
+ 543 0334 03       		.byte	0x3
+ 544 0335 00000000 		.4byte	circBuf
+ 545 0339 1B       		.uleb128 0x1b
+ 546 033a 10010000 		.4byte	.LASF54
+ 547 033e 08       		.byte	0x8
+ 548 033f 22       		.byte	0x22
+ 549 0340 DA000000 		.4byte	0xda
+ 550 0344 05       		.uleb128 0x5
+ 551 0345 03       		.byte	0x3
+ 552 0346 00000000 		.4byte	currentState
+ 553 034a 1C       		.uleb128 0x1c
+ 554 034b DD000000 		.4byte	.LASF55
+ 555 034f DD000000 		.4byte	.LASF55
+ 556 0353 09       		.byte	0x9
+ 557 0354 34       		.byte	0x34
+ 558 0355 1C       		.uleb128 0x1c
+ 559 0356 9D010000 		.4byte	.LASF56
+ 560 035a 9D010000 		.4byte	.LASF56
+ 561 035e 09       		.byte	0x9
+ 562 035f D1       		.byte	0xd1
+ 563 0360 1C       		.uleb128 0x1c
+ 564 0361 E0010000 		.4byte	.LASF57
+ 565 0365 E0010000 		.4byte	.LASF57
+ 566 0369 09       		.byte	0x9
+ 567 036a 39       		.byte	0x39
+ 568 036b 1C       		.uleb128 0x1c
+ 569 036c 40020000 		.4byte	.LASF58
+ 570 0370 40020000 		.4byte	.LASF58
+ 571 0374 09       		.byte	0x9
+ 572 0375 3B       		.byte	0x3b
+ 573 0376 00       		.byte	0
+ 574              		.section	.debug_abbrev,"",%progbits
+ 575              	.Ldebug_abbrev0:
+ 576 0000 01       		.uleb128 0x1
+ 577 0001 11       		.uleb128 0x11
+ 578 0002 01       		.byte	0x1
+ 579 0003 25       		.uleb128 0x25
+ 580 0004 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccFyS4MY.s 			page 12
 
 
- 637 0015 54       		.byte	0x54
- 638 0016 7A000000 		.4byte	.LVL20
- 639 001a 7C000000 		.4byte	.LVL21
- 640 001e 0100     		.2byte	0x1
- 641 0020 54       		.byte	0x54
- 642 0021 00000000 		.4byte	0
- 643 0025 00000000 		.4byte	0
- 644              	.LLST1:
- 645 0029 5C000000 		.4byte	.LVL13
- 646 002d 6A000000 		.4byte	.LVL16
- 647 0031 0100     		.2byte	0x1
- 648 0033 54       		.byte	0x54
- 649 0034 6A000000 		.4byte	.LVL16
- 650 0038 7C000000 		.4byte	.LVL21
- 651 003c 0200     		.2byte	0x2
- 652 003e 30       		.byte	0x30
- 653 003f 9F       		.byte	0x9f
- 654 0040 7C000000 		.4byte	.LVL21
- 655 0044 80000000 		.4byte	.LVL22
- 656 0048 0100     		.2byte	0x1
- 657 004a 54       		.byte	0x54
- 658 004b 00000000 		.4byte	0
- 659 004f 00000000 		.4byte	0
- 660              		.section	.debug_aranges,"",%progbits
- 661 0000 24000000 		.4byte	0x24
- 662 0004 0200     		.2byte	0x2
- 663 0006 00000000 		.4byte	.Ldebug_info0
- 664 000a 04       		.byte	0x4
- 665 000b 00       		.byte	0
- 666 000c 0000     		.2byte	0
- 667 000e 0000     		.2byte	0
- 668 0010 00000000 		.4byte	.LFB64
- 669 0014 0C000000 		.4byte	.LFE64-.LFB64
- 670 0018 00000000 		.4byte	.LFB65
- 671 001c A0000000 		.4byte	.LFE65-.LFB65
- 672 0020 00000000 		.4byte	0
- 673 0024 00000000 		.4byte	0
- 674              		.section	.debug_ranges,"",%progbits
- 675              	.Ldebug_ranges0:
- 676 0000 00000000 		.4byte	.LFB64
- 677 0004 0C000000 		.4byte	.LFE64
- 678 0008 00000000 		.4byte	.LFB65
- 679 000c A0000000 		.4byte	.LFE65
- 680 0010 00000000 		.4byte	0
- 681 0014 00000000 		.4byte	0
- 682              		.section	.debug_line,"",%progbits
- 683              	.Ldebug_line0:
- 684 0000 AC010000 		.section	.debug_str,"MS",%progbits,1
- 684      02007A01 
- 684      00000201 
- 684      FB0E0D00 
- 684      01010101 
- 685              	.LASF22:
- 686 0000 72657375 		.ascii	"result2\000"
- 686      6C743200 
- 687              	.LASF31:
- 688 0008 57617465 		.ascii	"WaterSensor.c\000"
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccYounfA.s 			page 14
+ 581 0005 13       		.uleb128 0x13
+ 582 0006 0B       		.uleb128 0xb
+ 583 0007 03       		.uleb128 0x3
+ 584 0008 0E       		.uleb128 0xe
+ 585 0009 1B       		.uleb128 0x1b
+ 586 000a 0E       		.uleb128 0xe
+ 587 000b 55       		.uleb128 0x55
+ 588 000c 17       		.uleb128 0x17
+ 589 000d 11       		.uleb128 0x11
+ 590 000e 01       		.uleb128 0x1
+ 591 000f 10       		.uleb128 0x10
+ 592 0010 17       		.uleb128 0x17
+ 593 0011 00       		.byte	0
+ 594 0012 00       		.byte	0
+ 595 0013 02       		.uleb128 0x2
+ 596 0014 24       		.uleb128 0x24
+ 597 0015 00       		.byte	0
+ 598 0016 0B       		.uleb128 0xb
+ 599 0017 0B       		.uleb128 0xb
+ 600 0018 3E       		.uleb128 0x3e
+ 601 0019 0B       		.uleb128 0xb
+ 602 001a 03       		.uleb128 0x3
+ 603 001b 0E       		.uleb128 0xe
+ 604 001c 00       		.byte	0
+ 605 001d 00       		.byte	0
+ 606 001e 03       		.uleb128 0x3
+ 607 001f 16       		.uleb128 0x16
+ 608 0020 00       		.byte	0
+ 609 0021 03       		.uleb128 0x3
+ 610 0022 0E       		.uleb128 0xe
+ 611 0023 3A       		.uleb128 0x3a
+ 612 0024 0B       		.uleb128 0xb
+ 613 0025 3B       		.uleb128 0x3b
+ 614 0026 0B       		.uleb128 0xb
+ 615 0027 49       		.uleb128 0x49
+ 616 0028 13       		.uleb128 0x13
+ 617 0029 00       		.byte	0
+ 618 002a 00       		.byte	0
+ 619 002b 04       		.uleb128 0x4
+ 620 002c 24       		.uleb128 0x24
+ 621 002d 00       		.byte	0
+ 622 002e 0B       		.uleb128 0xb
+ 623 002f 0B       		.uleb128 0xb
+ 624 0030 3E       		.uleb128 0x3e
+ 625 0031 0B       		.uleb128 0xb
+ 626 0032 03       		.uleb128 0x3
+ 627 0033 08       		.uleb128 0x8
+ 628 0034 00       		.byte	0
+ 629 0035 00       		.byte	0
+ 630 0036 05       		.uleb128 0x5
+ 631 0037 16       		.uleb128 0x16
+ 632 0038 00       		.byte	0
+ 633 0039 03       		.uleb128 0x3
+ 634 003a 0E       		.uleb128 0xe
+ 635 003b 3A       		.uleb128 0x3a
+ 636 003c 0B       		.uleb128 0xb
+ 637 003d 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccFyS4MY.s 			page 13
 
 
- 688      7253656E 
- 688      736F722E 
- 688      6300
- 689              	.LASF5:
- 690 0016 5F5F696E 		.ascii	"__int32_t\000"
- 690      7433325F 
- 690      7400
- 691              	.LASF34:
- 692 0020 57615365 		.ascii	"WaSensMeasure\000"
- 692      6E734D65 
- 692      61737572 
- 692      6500
- 693              	.LASF25:
- 694 002e 4144435F 		.ascii	"ADC_SAR_WaSens_StartConvert\000"
- 694      5341525F 
- 694      57615365 
- 694      6E735F53 
- 694      74617274 
- 695              	.LASF26:
- 696 004a 4144435F 		.ascii	"ADC_SAR_WaSens_IsEndConversion\000"
- 696      5341525F 
- 696      57615365 
- 696      6E735F49 
- 696      73456E64 
- 697              	.LASF13:
- 698 0069 666C6F61 		.ascii	"float\000"
- 698      7400
- 699              	.LASF20:
- 700 006f 4F666673 		.ascii	"Offset1\000"
- 700      65743100 
- 701              	.LASF30:
- 702 0077 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 702      43313120 
- 702      352E342E 
- 702      31203230 
- 702      31363036 
- 703 00aa 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 703      20726576 
- 703      6973696F 
- 703      6E203233 
- 703      37373135 
- 704 00dd 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 704      66756E63 
- 704      74696F6E 
- 704      2D736563 
- 704      74696F6E 
- 705              	.LASF7:
- 706 0105 6C6F6E67 		.ascii	"long unsigned int\000"
- 706      20756E73 
- 706      69676E65 
- 706      6420696E 
- 706      7400
- 707              	.LASF3:
- 708 0117 73686F72 		.ascii	"short unsigned int\000"
- 708      7420756E 
- 708      7369676E 
- 708      65642069 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccYounfA.s 			page 15
+ 638 003e 05       		.uleb128 0x5
+ 639 003f 49       		.uleb128 0x49
+ 640 0040 13       		.uleb128 0x13
+ 641 0041 00       		.byte	0
+ 642 0042 00       		.byte	0
+ 643 0043 06       		.uleb128 0x6
+ 644 0044 0F       		.uleb128 0xf
+ 645 0045 00       		.byte	0
+ 646 0046 0B       		.uleb128 0xb
+ 647 0047 0B       		.uleb128 0xb
+ 648 0048 49       		.uleb128 0x49
+ 649 0049 13       		.uleb128 0x13
+ 650 004a 00       		.byte	0
+ 651 004b 00       		.byte	0
+ 652 004c 07       		.uleb128 0x7
+ 653 004d 15       		.uleb128 0x15
+ 654 004e 00       		.byte	0
+ 655 004f 27       		.uleb128 0x27
+ 656 0050 19       		.uleb128 0x19
+ 657 0051 00       		.byte	0
+ 658 0052 00       		.byte	0
+ 659 0053 08       		.uleb128 0x8
+ 660 0054 13       		.uleb128 0x13
+ 661 0055 01       		.byte	0x1
+ 662 0056 03       		.uleb128 0x3
+ 663 0057 0E       		.uleb128 0xe
+ 664 0058 0B       		.uleb128 0xb
+ 665 0059 0B       		.uleb128 0xb
+ 666 005a 3A       		.uleb128 0x3a
+ 667 005b 0B       		.uleb128 0xb
+ 668 005c 3B       		.uleb128 0x3b
+ 669 005d 0B       		.uleb128 0xb
+ 670 005e 01       		.uleb128 0x1
+ 671 005f 13       		.uleb128 0x13
+ 672 0060 00       		.byte	0
+ 673 0061 00       		.byte	0
+ 674 0062 09       		.uleb128 0x9
+ 675 0063 0D       		.uleb128 0xd
+ 676 0064 00       		.byte	0
+ 677 0065 03       		.uleb128 0x3
+ 678 0066 0E       		.uleb128 0xe
+ 679 0067 3A       		.uleb128 0x3a
+ 680 0068 0B       		.uleb128 0xb
+ 681 0069 3B       		.uleb128 0x3b
+ 682 006a 0B       		.uleb128 0xb
+ 683 006b 49       		.uleb128 0x49
+ 684 006c 13       		.uleb128 0x13
+ 685 006d 38       		.uleb128 0x38
+ 686 006e 0B       		.uleb128 0xb
+ 687 006f 00       		.byte	0
+ 688 0070 00       		.byte	0
+ 689 0071 0A       		.uleb128 0xa
+ 690 0072 15       		.uleb128 0x15
+ 691 0073 01       		.byte	0x1
+ 692 0074 01       		.uleb128 0x1
+ 693 0075 13       		.uleb128 0x13
+ 694 0076 00       		.byte	0
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccFyS4MY.s 			page 14
 
 
- 708      6E7400
- 709              	.LASF35:
- 710 012a 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 710      52784275 
- 710      66666572 
- 710      00
- 711              	.LASF1:
- 712 0137 756E7369 		.ascii	"unsigned char\000"
- 712      676E6564 
- 712      20636861 
- 712      7200
- 713              	.LASF28:
- 714 0145 50696E5F 		.ascii	"Pin_Low_WL_Read\000"
- 714      4C6F775F 
- 714      574C5F52 
- 714      65616400 
- 715              	.LASF14:
- 716 0155 646F7562 		.ascii	"double\000"
- 716      6C6500
- 717              	.LASF29:
- 718 015c 50696E5F 		.ascii	"Pin_Low_WL_Write\000"
- 718      4C6F775F 
- 718      574C5F57 
- 718      72697465 
- 718      00
- 719              	.LASF10:
- 720 016d 756E7369 		.ascii	"unsigned int\000"
- 720      676E6564 
- 720      20696E74 
- 720      00
- 721              	.LASF9:
- 722 017a 6C6F6E67 		.ascii	"long long unsigned int\000"
- 722      206C6F6E 
- 722      6720756E 
- 722      7369676E 
- 722      65642069 
- 723              	.LASF21:
- 724 0191 72657375 		.ascii	"result\000"
- 724      6C7400
- 725              	.LASF27:
- 726 0198 4144435F 		.ascii	"ADC_SAR_WaSens_GetResult16\000"
- 726      5341525F 
- 726      57615365 
- 726      6E735F47 
- 726      65745265 
- 727              	.LASF32:
- 728 01b3 443A5C4F 		.ascii	"D:\\OneDrive - Aarhus Universitet\\Aarhus Universit"
- 728      6E654472 
- 728      69766520 
- 728      2D204161 
- 728      72687573 
- 729 01e4 65745C45 		.ascii	"et\\E3\\E3PRJ\\I3E3PRJ_Repo\\PSoCcontroller\\PSoCco"
- 729      335C4533 
- 729      50524A5C 
- 729      49334533 
- 729      50524A5F 
- 730 0212 6E74726F 		.ascii	"ntroller.cydsn\000"
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccYounfA.s 			page 16
+ 695 0077 00       		.byte	0
+ 696 0078 0B       		.uleb128 0xb
+ 697 0079 18       		.uleb128 0x18
+ 698 007a 00       		.byte	0
+ 699 007b 00       		.byte	0
+ 700 007c 00       		.byte	0
+ 701 007d 0C       		.uleb128 0xc
+ 702 007e 0D       		.uleb128 0xd
+ 703 007f 00       		.byte	0
+ 704 0080 03       		.uleb128 0x3
+ 705 0081 08       		.uleb128 0x8
+ 706 0082 3A       		.uleb128 0x3a
+ 707 0083 0B       		.uleb128 0xb
+ 708 0084 3B       		.uleb128 0x3b
+ 709 0085 0B       		.uleb128 0xb
+ 710 0086 49       		.uleb128 0x49
+ 711 0087 13       		.uleb128 0x13
+ 712 0088 38       		.uleb128 0x38
+ 713 0089 0B       		.uleb128 0xb
+ 714 008a 00       		.byte	0
+ 715 008b 00       		.byte	0
+ 716 008c 0D       		.uleb128 0xd
+ 717 008d 01       		.uleb128 0x1
+ 718 008e 01       		.byte	0x1
+ 719 008f 49       		.uleb128 0x49
+ 720 0090 13       		.uleb128 0x13
+ 721 0091 01       		.uleb128 0x1
+ 722 0092 13       		.uleb128 0x13
+ 723 0093 00       		.byte	0
+ 724 0094 00       		.byte	0
+ 725 0095 0E       		.uleb128 0xe
+ 726 0096 21       		.uleb128 0x21
+ 727 0097 00       		.byte	0
+ 728 0098 49       		.uleb128 0x49
+ 729 0099 13       		.uleb128 0x13
+ 730 009a 2F       		.uleb128 0x2f
+ 731 009b 0B       		.uleb128 0xb
+ 732 009c 00       		.byte	0
+ 733 009d 00       		.byte	0
+ 734 009e 0F       		.uleb128 0xf
+ 735 009f 15       		.uleb128 0x15
+ 736 00a0 01       		.byte	0x1
+ 737 00a1 49       		.uleb128 0x49
+ 738 00a2 13       		.uleb128 0x13
+ 739 00a3 01       		.uleb128 0x1
+ 740 00a4 13       		.uleb128 0x13
+ 741 00a5 00       		.byte	0
+ 742 00a6 00       		.byte	0
+ 743 00a7 10       		.uleb128 0x10
+ 744 00a8 04       		.uleb128 0x4
+ 745 00a9 01       		.byte	0x1
+ 746 00aa 03       		.uleb128 0x3
+ 747 00ab 0E       		.uleb128 0xe
+ 748 00ac 0B       		.uleb128 0xb
+ 749 00ad 0B       		.uleb128 0xb
+ 750 00ae 49       		.uleb128 0x49
+ 751 00af 13       		.uleb128 0x13
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccFyS4MY.s 			page 15
 
 
- 730      6C6C6572 
- 730      2E637964 
- 730      736E00
- 731              	.LASF12:
- 732 0221 696E7433 		.ascii	"int32_t\000"
- 732      325F7400 
- 733              	.LASF17:
- 734 0229 73697A65 		.ascii	"sizetype\000"
- 734      74797065 
- 734      00
- 735              	.LASF23:
- 736 0232 4144435F 		.ascii	"ADC_SAR_WaSens_Start\000"
- 736      5341525F 
- 736      57615365 
- 736      6E735F53 
- 736      74617274 
- 737              	.LASF8:
- 738 0247 6C6F6E67 		.ascii	"long long int\000"
- 738      206C6F6E 
- 738      6720696E 
- 738      7400
- 739              	.LASF15:
- 740 0255 63686172 		.ascii	"char\000"
- 740      00
- 741              	.LASF11:
- 742 025a 75696E74 		.ascii	"uint16_t\000"
- 742      31365F74 
- 742      00
- 743              	.LASF2:
- 744 0263 73686F72 		.ascii	"short int\000"
- 744      7420696E 
- 744      7400
- 745              	.LASF4:
- 746 026d 5F5F7569 		.ascii	"__uint16_t\000"
- 746      6E743136 
- 746      5F7400
- 747              	.LASF18:
- 748 0278 46616374 		.ascii	"Factor1\000"
- 748      6F723100 
- 749              	.LASF19:
- 750 0280 46616374 		.ascii	"Factor2\000"
- 750      6F723200 
- 751              	.LASF6:
- 752 0288 6C6F6E67 		.ascii	"long int\000"
- 752      20696E74 
- 752      00
- 753              	.LASF16:
- 754 0291 6C6F6E67 		.ascii	"long double\000"
- 754      20646F75 
- 754      626C6500 
- 755              	.LASF0:
- 756 029d 7369676E 		.ascii	"signed char\000"
- 756      65642063 
- 756      68617200 
- 757              	.LASF24:
- 758 02a9 50574D5F 		.ascii	"PWM_WaSens_Start\000"
- 758      57615365 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccYounfA.s 			page 17
+ 752 00b0 3A       		.uleb128 0x3a
+ 753 00b1 0B       		.uleb128 0xb
+ 754 00b2 3B       		.uleb128 0x3b
+ 755 00b3 0B       		.uleb128 0xb
+ 756 00b4 01       		.uleb128 0x1
+ 757 00b5 13       		.uleb128 0x13
+ 758 00b6 00       		.byte	0
+ 759 00b7 00       		.byte	0
+ 760 00b8 11       		.uleb128 0x11
+ 761 00b9 28       		.uleb128 0x28
+ 762 00ba 00       		.byte	0
+ 763 00bb 03       		.uleb128 0x3
+ 764 00bc 0E       		.uleb128 0xe
+ 765 00bd 1C       		.uleb128 0x1c
+ 766 00be 0B       		.uleb128 0xb
+ 767 00bf 00       		.byte	0
+ 768 00c0 00       		.byte	0
+ 769 00c1 12       		.uleb128 0x12
+ 770 00c2 2E       		.uleb128 0x2e
+ 771 00c3 01       		.byte	0x1
+ 772 00c4 3F       		.uleb128 0x3f
+ 773 00c5 19       		.uleb128 0x19
+ 774 00c6 03       		.uleb128 0x3
+ 775 00c7 0E       		.uleb128 0xe
+ 776 00c8 3A       		.uleb128 0x3a
+ 777 00c9 0B       		.uleb128 0xb
+ 778 00ca 3B       		.uleb128 0x3b
+ 779 00cb 0B       		.uleb128 0xb
+ 780 00cc 11       		.uleb128 0x11
+ 781 00cd 01       		.uleb128 0x1
+ 782 00ce 12       		.uleb128 0x12
+ 783 00cf 06       		.uleb128 0x6
+ 784 00d0 40       		.uleb128 0x40
+ 785 00d1 18       		.uleb128 0x18
+ 786 00d2 9742     		.uleb128 0x2117
+ 787 00d4 19       		.uleb128 0x19
+ 788 00d5 01       		.uleb128 0x1
+ 789 00d6 13       		.uleb128 0x13
+ 790 00d7 00       		.byte	0
+ 791 00d8 00       		.byte	0
+ 792 00d9 13       		.uleb128 0x13
+ 793 00da 898201   		.uleb128 0x4109
+ 794 00dd 00       		.byte	0
+ 795 00de 11       		.uleb128 0x11
+ 796 00df 01       		.uleb128 0x1
+ 797 00e0 31       		.uleb128 0x31
+ 798 00e1 13       		.uleb128 0x13
+ 799 00e2 00       		.byte	0
+ 800 00e3 00       		.byte	0
+ 801 00e4 14       		.uleb128 0x14
+ 802 00e5 2E       		.uleb128 0x2e
+ 803 00e6 01       		.byte	0x1
+ 804 00e7 3F       		.uleb128 0x3f
+ 805 00e8 19       		.uleb128 0x19
+ 806 00e9 03       		.uleb128 0x3
+ 807 00ea 0E       		.uleb128 0xe
+ 808 00eb 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccFyS4MY.s 			page 16
 
 
- 758      6E735F53 
- 758      74617274 
- 758      00
- 759              	.LASF33:
- 760 02ba 57615365 		.ascii	"WaSensInit\000"
- 760      6E73496E 
- 760      697400
- 761              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 809 00ec 0B       		.uleb128 0xb
+ 810 00ed 3B       		.uleb128 0x3b
+ 811 00ee 0B       		.uleb128 0xb
+ 812 00ef 49       		.uleb128 0x49
+ 813 00f0 13       		.uleb128 0x13
+ 814 00f1 11       		.uleb128 0x11
+ 815 00f2 01       		.uleb128 0x1
+ 816 00f3 12       		.uleb128 0x12
+ 817 00f4 06       		.uleb128 0x6
+ 818 00f5 40       		.uleb128 0x40
+ 819 00f6 18       		.uleb128 0x18
+ 820 00f7 9642     		.uleb128 0x2116
+ 821 00f9 19       		.uleb128 0x19
+ 822 00fa 01       		.uleb128 0x1
+ 823 00fb 13       		.uleb128 0x13
+ 824 00fc 00       		.byte	0
+ 825 00fd 00       		.byte	0
+ 826 00fe 15       		.uleb128 0x15
+ 827 00ff 34       		.uleb128 0x34
+ 828 0100 00       		.byte	0
+ 829 0101 03       		.uleb128 0x3
+ 830 0102 0E       		.uleb128 0xe
+ 831 0103 3A       		.uleb128 0x3a
+ 832 0104 0B       		.uleb128 0xb
+ 833 0105 3B       		.uleb128 0x3b
+ 834 0106 0B       		.uleb128 0xb
+ 835 0107 49       		.uleb128 0x49
+ 836 0108 13       		.uleb128 0x13
+ 837 0109 1C       		.uleb128 0x1c
+ 838 010a 0A       		.uleb128 0xa
+ 839 010b 00       		.byte	0
+ 840 010c 00       		.byte	0
+ 841 010d 16       		.uleb128 0x16
+ 842 010e 34       		.uleb128 0x34
+ 843 010f 00       		.byte	0
+ 844 0110 03       		.uleb128 0x3
+ 845 0111 0E       		.uleb128 0xe
+ 846 0112 3A       		.uleb128 0x3a
+ 847 0113 0B       		.uleb128 0xb
+ 848 0114 3B       		.uleb128 0x3b
+ 849 0115 0B       		.uleb128 0xb
+ 850 0116 49       		.uleb128 0x49
+ 851 0117 13       		.uleb128 0x13
+ 852 0118 02       		.uleb128 0x2
+ 853 0119 17       		.uleb128 0x17
+ 854 011a 00       		.byte	0
+ 855 011b 00       		.byte	0
+ 856 011c 17       		.uleb128 0x17
+ 857 011d 898201   		.uleb128 0x4109
+ 858 0120 01       		.byte	0x1
+ 859 0121 11       		.uleb128 0x11
+ 860 0122 01       		.uleb128 0x1
+ 861 0123 31       		.uleb128 0x31
+ 862 0124 13       		.uleb128 0x13
+ 863 0125 01       		.uleb128 0x1
+ 864 0126 13       		.uleb128 0x13
+ 865 0127 00       		.byte	0
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccFyS4MY.s 			page 17
+
+
+ 866 0128 00       		.byte	0
+ 867 0129 18       		.uleb128 0x18
+ 868 012a 8A8201   		.uleb128 0x410a
+ 869 012d 00       		.byte	0
+ 870 012e 02       		.uleb128 0x2
+ 871 012f 18       		.uleb128 0x18
+ 872 0130 9142     		.uleb128 0x2111
+ 873 0132 18       		.uleb128 0x18
+ 874 0133 00       		.byte	0
+ 875 0134 00       		.byte	0
+ 876 0135 19       		.uleb128 0x19
+ 877 0136 34       		.uleb128 0x34
+ 878 0137 00       		.byte	0
+ 879 0138 03       		.uleb128 0x3
+ 880 0139 0E       		.uleb128 0xe
+ 881 013a 3A       		.uleb128 0x3a
+ 882 013b 0B       		.uleb128 0xb
+ 883 013c 3B       		.uleb128 0x3b
+ 884 013d 05       		.uleb128 0x5
+ 885 013e 49       		.uleb128 0x49
+ 886 013f 13       		.uleb128 0x13
+ 887 0140 3F       		.uleb128 0x3f
+ 888 0141 19       		.uleb128 0x19
+ 889 0142 3C       		.uleb128 0x3c
+ 890 0143 19       		.uleb128 0x19
+ 891 0144 00       		.byte	0
+ 892 0145 00       		.byte	0
+ 893 0146 1A       		.uleb128 0x1a
+ 894 0147 35       		.uleb128 0x35
+ 895 0148 00       		.byte	0
+ 896 0149 49       		.uleb128 0x49
+ 897 014a 13       		.uleb128 0x13
+ 898 014b 00       		.byte	0
+ 899 014c 00       		.byte	0
+ 900 014d 1B       		.uleb128 0x1b
+ 901 014e 34       		.uleb128 0x34
+ 902 014f 00       		.byte	0
+ 903 0150 03       		.uleb128 0x3
+ 904 0151 0E       		.uleb128 0xe
+ 905 0152 3A       		.uleb128 0x3a
+ 906 0153 0B       		.uleb128 0xb
+ 907 0154 3B       		.uleb128 0x3b
+ 908 0155 0B       		.uleb128 0xb
+ 909 0156 49       		.uleb128 0x49
+ 910 0157 13       		.uleb128 0x13
+ 911 0158 3F       		.uleb128 0x3f
+ 912 0159 19       		.uleb128 0x19
+ 913 015a 02       		.uleb128 0x2
+ 914 015b 18       		.uleb128 0x18
+ 915 015c 00       		.byte	0
+ 916 015d 00       		.byte	0
+ 917 015e 1C       		.uleb128 0x1c
+ 918 015f 2E       		.uleb128 0x2e
+ 919 0160 00       		.byte	0
+ 920 0161 3F       		.uleb128 0x3f
+ 921 0162 19       		.uleb128 0x19
+ 922 0163 3C       		.uleb128 0x3c
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccFyS4MY.s 			page 18
+
+
+ 923 0164 19       		.uleb128 0x19
+ 924 0165 6E       		.uleb128 0x6e
+ 925 0166 0E       		.uleb128 0xe
+ 926 0167 03       		.uleb128 0x3
+ 927 0168 0E       		.uleb128 0xe
+ 928 0169 3A       		.uleb128 0x3a
+ 929 016a 0B       		.uleb128 0xb
+ 930 016b 3B       		.uleb128 0x3b
+ 931 016c 0B       		.uleb128 0xb
+ 932 016d 00       		.byte	0
+ 933 016e 00       		.byte	0
+ 934 016f 00       		.byte	0
+ 935              		.section	.debug_loc,"",%progbits
+ 936              	.Ldebug_loc0:
+ 937              	.LLST0:
+ 938 0000 14000000 		.4byte	.LVL4
+ 939 0004 62000000 		.4byte	.LVL15
+ 940 0008 0100     		.2byte	0x1
+ 941 000a 54       		.byte	0x54
+ 942 000b 00000000 		.4byte	0
+ 943 000f 00000000 		.4byte	0
+ 944              	.LLST1:
+ 945 0013 5C000000 		.4byte	.LVL12
+ 946 0017 5E000000 		.4byte	.LVL13
+ 947 001b 0100     		.2byte	0x1
+ 948 001d 50       		.byte	0x50
+ 949 001e 60000000 		.4byte	.LVL14
+ 950 0022 62000000 		.4byte	.LVL15
+ 951 0026 0100     		.2byte	0x1
+ 952 0028 50       		.byte	0x50
+ 953 0029 00000000 		.4byte	0
+ 954 002d 00000000 		.4byte	0
+ 955              		.section	.debug_aranges,"",%progbits
+ 956 0000 24000000 		.4byte	0x24
+ 957 0004 0200     		.2byte	0x2
+ 958 0006 00000000 		.4byte	.Ldebug_info0
+ 959 000a 04       		.byte	0x4
+ 960 000b 00       		.byte	0
+ 961 000c 0000     		.2byte	0
+ 962 000e 0000     		.2byte	0
+ 963 0010 00000000 		.4byte	.LFB64
+ 964 0014 08000000 		.4byte	.LFE64-.LFB64
+ 965 0018 00000000 		.4byte	.LFB65
+ 966 001c 80000000 		.4byte	.LFE65-.LFB65
+ 967 0020 00000000 		.4byte	0
+ 968 0024 00000000 		.4byte	0
+ 969              		.section	.debug_ranges,"",%progbits
+ 970              	.Ldebug_ranges0:
+ 971 0000 00000000 		.4byte	.LFB64
+ 972 0004 08000000 		.4byte	.LFE64
+ 973 0008 00000000 		.4byte	.LFB65
+ 974 000c 80000000 		.4byte	.LFE65
+ 975 0010 00000000 		.4byte	0
+ 976 0014 00000000 		.4byte	0
+ 977              		.section	.debug_line,"",%progbits
+ 978              	.Ldebug_line0:
+ 979 0000 CE010000 		.section	.debug_str,"MS",%progbits,1
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccFyS4MY.s 			page 19
+
+
+ 979      0200A001 
+ 979      00000201 
+ 979      FB0E0D00 
+ 979      01010101 
+ 980              	.LASF46:
+ 981 0000 72657375 		.ascii	"result\000"
+ 981      6C7400
+ 982              	.LASF42:
+ 983 0007 5354414E 		.ascii	"STANDBY_MODE\000"
+ 983      4442595F 
+ 983      4D4F4445 
+ 983      00
+ 984              	.LASF35:
+ 985 0014 64657465 		.ascii	"detected\000"
+ 985      63746564 
+ 985      00
+ 986              	.LASF51:
+ 987 001d 6E6F5761 		.ascii	"noWater\000"
+ 987      74657200 
+ 988              	.LASF28:
+ 989 0025 69734675 		.ascii	"isFull\000"
+ 989      6C6C00
+ 990              	.LASF2:
+ 991 002c 73686F72 		.ascii	"short int\000"
+ 991      7420696E 
+ 991      7400
+ 992              	.LASF25:
+ 993 0036 43697263 		.ascii	"CircBuf\000"
+ 993      42756600 
+ 994              	.LASF21:
+ 995 003e 73697A65 		.ascii	"sizetype\000"
+ 995      74797065 
+ 995      00
+ 996              	.LASF38:
+ 997 0047 4E4F524D 		.ascii	"NORMAL_MODE\000"
+ 997      414C5F4D 
+ 997      4F444500 
+ 998              	.LASF40:
+ 999 0053 4D414E55 		.ascii	"MANUAL_MODE\000"
+ 999      414C5F4D 
+ 999      4F444500 
+ 1000              	.LASF61:
+ 1001 005f 443A5C4F 		.ascii	"D:\\OneDrive - Aarhus Universitet\\Aarhus Universit"
+ 1001      6E654472 
+ 1001      69766520 
+ 1001      2D204161 
+ 1001      72687573 
+ 1002 0090 65745C45 		.ascii	"et\\E3\\E3PRJ\\I3E3PRJ_Repo\\PSoCcontroller\\PSoCco"
+ 1002      335C4533 
+ 1002      50524A5C 
+ 1002      49334533 
+ 1002      50524A5F 
+ 1003 00be 6E74726F 		.ascii	"ntroller.cydsn\000"
+ 1003      6C6C6572 
+ 1003      2E637964 
+ 1003      736E00
+ 1004              	.LASF50:
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccFyS4MY.s 			page 20
+
+
+ 1005 00cd 6D6F6465 		.ascii	"mode\000"
+ 1005      00
+ 1006              	.LASF4:
+ 1007 00d2 5F5F7569 		.ascii	"__uint16_t\000"
+ 1007      6E743136 
+ 1007      5F7400
+ 1008              	.LASF55:
+ 1009 00dd 4144435F 		.ascii	"ADC_SAR_WaSens_Start\000"
+ 1009      5341525F 
+ 1009      57615365 
+ 1009      6E735F53 
+ 1009      74617274 
+ 1010              	.LASF12:
+ 1011 00f2 75696E74 		.ascii	"uint8_t\000"
+ 1011      385F7400 
+ 1012              	.LASF63:
+ 1013 00fa 57615365 		.ascii	"WaSensInit\000"
+ 1013      6E73496E 
+ 1013      697400
+ 1014              	.LASF15:
+ 1015 0105 75696E74 		.ascii	"uint8\000"
+ 1015      3800
+ 1016              	.LASF27:
+ 1017 010b 70757368 		.ascii	"push\000"
+ 1017      00
+ 1018              	.LASF54:
+ 1019 0110 63757272 		.ascii	"currentState\000"
+ 1019      656E7453 
+ 1019      74617465 
+ 1019      00
+ 1020              	.LASF60:
+ 1021 011d 57617465 		.ascii	"WaterSensor.c\000"
+ 1021      7253656E 
+ 1021      736F722E 
+ 1021      6300
+ 1022              	.LASF0:
+ 1023 012b 7369676E 		.ascii	"signed char\000"
+ 1023      65642063 
+ 1023      68617200 
+ 1024              	.LASF36:
+ 1025 0137 77696474 		.ascii	"width\000"
+ 1025      6800
+ 1026              	.LASF17:
+ 1027 013d 666C6F61 		.ascii	"float\000"
+ 1027      7400
+ 1028              	.LASF9:
+ 1029 0143 6C6F6E67 		.ascii	"long long int\000"
+ 1029      206C6F6E 
+ 1029      6720696E 
+ 1029      7400
+ 1030              	.LASF31:
+ 1031 0151 66726F6E 		.ascii	"front\000"
+ 1031      7400
+ 1032              	.LASF16:
+ 1033 0157 696E7438 		.ascii	"int8\000"
+ 1033      00
+ 1034              	.LASF52:
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccFyS4MY.s 			page 21
+
+
+ 1035 015c 70696765 		.ascii	"pigeonPosition\000"
+ 1035      6F6E506F 
+ 1035      73697469 
+ 1035      6F6E00
+ 1036              	.LASF7:
+ 1037 016b 6C6F6E67 		.ascii	"long int\000"
+ 1037      20696E74 
+ 1037      00
+ 1038              	.LASF32:
+ 1039 0174 72656172 		.ascii	"rear\000"
+ 1039      00
+ 1040              	.LASF30:
+ 1041 0179 636C6561 		.ascii	"clearBuffer\000"
+ 1041      72427566 
+ 1041      66657200 
+ 1042              	.LASF3:
+ 1043 0185 5F5F7569 		.ascii	"__uint8_t\000"
+ 1043      6E74385F 
+ 1043      7400
+ 1044              	.LASF1:
+ 1045 018f 756E7369 		.ascii	"unsigned char\000"
+ 1045      676E6564 
+ 1045      20636861 
+ 1045      7200
+ 1046              	.LASF56:
+ 1047 019d 4144435F 		.ascii	"ADC_SAR_WaSens_StartConvert\000"
+ 1047      5341525F 
+ 1047      57615365 
+ 1047      6E735F53 
+ 1047      74617274 
+ 1048              	.LASF20:
+ 1049 01b9 6C6F6E67 		.ascii	"long double\000"
+ 1049      20646F75 
+ 1049      626C6500 
+ 1050              	.LASF47:
+ 1051 01c5 72657375 		.ascii	"result2\000"
+ 1051      6C743200 
+ 1052              	.LASF41:
+ 1053 01cd 4155544F 		.ascii	"AUTOMATISK_VANDING\000"
+ 1053      4D415449 
+ 1053      534B5F56 
+ 1053      414E4449 
+ 1053      4E4700
+ 1054              	.LASF57:
+ 1055 01e0 4144435F 		.ascii	"ADC_SAR_WaSens_IsEndConversion\000"
+ 1055      5341525F 
+ 1055      57615365 
+ 1055      6E735F49 
+ 1055      73456E64 
+ 1056              	.LASF10:
+ 1057 01ff 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1057      206C6F6E 
+ 1057      6720756E 
+ 1057      7369676E 
+ 1057      65642069 
+ 1058              	.LASF11:
+ 1059 0216 756E7369 		.ascii	"unsigned int\000"
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccFyS4MY.s 			page 22
+
+
+ 1059      676E6564 
+ 1059      20696E74 
+ 1059      00
+ 1060              	.LASF64:
+ 1061 0223 57615365 		.ascii	"WaSensMeasure\000"
+ 1061      6E734D65 
+ 1061      61737572 
+ 1061      6500
+ 1062              	.LASF13:
+ 1063 0231 75696E74 		.ascii	"uint16_t\000"
+ 1063      31365F74 
+ 1063      00
+ 1064              	.LASF23:
+ 1065 023a 70617261 		.ascii	"param\000"
+ 1065      6D00
+ 1066              	.LASF58:
+ 1067 0240 4144435F 		.ascii	"ADC_SAR_WaSens_GetResult16\000"
+ 1067      5341525F 
+ 1067      57615365 
+ 1067      6E735F47 
+ 1067      65745265 
+ 1068              	.LASF5:
+ 1069 025b 73686F72 		.ascii	"short unsigned int\000"
+ 1069      7420756E 
+ 1069      7369676E 
+ 1069      65642069 
+ 1069      6E7400
+ 1070              	.LASF29:
+ 1071 026e 6973456D 		.ascii	"isEmpty\000"
+ 1071      70747900 
+ 1072              	.LASF53:
+ 1073 0276 63697263 		.ascii	"circBuf\000"
+ 1073      42756600 
+ 1074              	.LASF19:
+ 1075 027e 63686172 		.ascii	"char\000"
+ 1075      00
+ 1076              	.LASF37:
+ 1077 0283 64697374 		.ascii	"distance\000"
+ 1077      616E6365 
+ 1077      00
+ 1078              	.LASF14:
+ 1079 028c 696E7433 		.ascii	"int32_t\000"
+ 1079      325F7400 
+ 1080              	.LASF39:
+ 1081 0294 504F5745 		.ascii	"POWERSAVING_MODE\000"
+ 1081      52534156 
+ 1081      494E475F 
+ 1081      4D4F4445 
+ 1081      00
+ 1082              	.LASF26:
+ 1083 02a5 71756575 		.ascii	"queueItem\000"
+ 1083      65497465 
+ 1083      6D00
+ 1084              	.LASF49:
+ 1085 02af 736F6E61 		.ascii	"sonarTimerDone\000"
+ 1085      7254696D 
+ 1085      6572446F 
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccFyS4MY.s 			page 23
+
+
+ 1085      6E6500
+ 1086              	.LASF45:
+ 1087 02be 4F666673 		.ascii	"Offset1\000"
+ 1087      65743100 
+ 1088              	.LASF8:
+ 1089 02c6 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1089      20756E73 
+ 1089      69676E65 
+ 1089      6420696E 
+ 1089      7400
+ 1090              	.LASF18:
+ 1091 02d8 646F7562 		.ascii	"double\000"
+ 1091      6C6500
+ 1092              	.LASF6:
+ 1093 02df 5F5F696E 		.ascii	"__int32_t\000"
+ 1093      7433325F 
+ 1093      7400
+ 1094              	.LASF24:
+ 1095 02e9 71756575 		.ascii	"queueElement\000"
+ 1095      65456C65 
+ 1095      6D656E74 
+ 1095      00
+ 1096              	.LASF33:
+ 1097 02f6 6D61784C 		.ascii	"maxLength\000"
+ 1097      656E6774 
+ 1097      6800
+ 1098              	.LASF62:
+ 1099 0300 4D6F6465 		.ascii	"Mode\000"
+ 1099      00
+ 1100              	.LASF43:
+ 1101 0305 46616374 		.ascii	"Factor1\000"
+ 1101      6F723100 
+ 1102              	.LASF44:
+ 1103 030d 46616374 		.ascii	"Factor2\000"
+ 1103      6F723200 
+ 1104              	.LASF34:
+ 1105 0315 706F7369 		.ascii	"position\000"
+ 1105      74696F6E 
+ 1105      00
+ 1106              	.LASF48:
+ 1107 031e 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1107      52784275 
+ 1107      66666572 
+ 1107      00
+ 1108              	.LASF59:
+ 1109 032b 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1109      43313120 
+ 1109      352E342E 
+ 1109      31203230 
+ 1109      31363036 
+ 1110 035e 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1110      20726576 
+ 1110      6973696F 
+ 1110      6E203233 
+ 1110      37373135 
+ 1111 0391 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1111      66756E63 
+ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccFyS4MY.s 			page 24
+
+
+ 1111      74696F6E 
+ 1111      2D736563 
+ 1111      74696F6E 
+ 1112              	.LASF22:
+ 1113 03b9 66756E63 		.ascii	"funcPtr\000"
+ 1113      50747200 
+ 1114              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

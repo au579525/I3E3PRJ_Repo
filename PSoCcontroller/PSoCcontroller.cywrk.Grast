@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSoCcontroller\PSoCcontroller\Source Files\MotorDriverY.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>PSoCcontroller</v>
 <v>PSoCcontroller\PSoCcontroller</v>
@@ -53,6 +53,13 @@
 <v>PSoCcontroller\PSoCcontroller\Generated_Source\PSoC5</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
+<v>PSoCcontroller</v>
+<v>PSoCcontroller\PSoCcontroller</v>
+<v>PSoCcontroller\PSoCcontroller\TopDesign</v>
+<v>PSoCcontroller\PSoCcontroller\PSoCcontroller.cydwr</v>
+<v>PSoCcontroller\PSoCcontroller\PSoCcontroller.cydwr\Pins</v>
+<v>PSoCcontroller\PSoCcontroller\PSoCcontroller.cydwr\Analog</v>
+<v>PSoCcontroller\PSoCcontroller\PSoCcontroller.cydwr\Clocks</v>
 <v>PSoCcontroller\PSoCcontroller\PSoCcontroller.cydwr\Interrupts</v>
 <v>PSoCcontroller\PSoCcontroller\PSoCcontroller.cydwr\DMA</v>
 <v>PSoCcontroller\PSoCcontroller\PSoCcontroller.cydwr\System</v>
@@ -76,14 +83,6 @@
 <v>PSoCcontroller\PSoCcontroller\Source Files\MoistureSensor.c</v>
 <v>PSoCcontroller\PSoCcontroller\Source Files\MotorDriverX.c</v>
 <v>PSoCcontroller\PSoCcontroller\Source Files\MotorDriverY.c</v>
-<v>PSoCcontroller\PSoCcontroller\Source Files\SonarDriver.c</v>
-<v>PSoCcontroller\PSoCcontroller\Source Files\SPI_driver_PSoC.c</v>
-<v>PSoCcontroller\PSoCcontroller\Source Files\WaterPump.c</v>
-<v>PSoCcontroller\PSoCcontroller\Source Files\WaterSensor.c</v>
-<v>PSoCcontroller\PSoCcontroller\Generated_Source</v>
-<v>PSoCcontroller\PSoCcontroller\Generated_Source\PSoC5</v>
-<v>PSoCcontroller\PSoCcontroller\Generated_Source\PSoC5\ADC_Moisture</v>
-<v>PSoCcontroller\PSoCcontroller\Generated_Source\PSoC5\ADC_Moisture_IRQ</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -290,7 +289,20 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs />
+<OpenDocs>
+<name v=".\PSoCcontroller.cydsn\PSoCcontroller.cydwr" />
+<name v=".\PSoCcontroller.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\PSoCcontroller.cydsn\MotorDriverY.h" />
+<name v=".\PSoCcontroller.cydsn\MotorDriverX.h" />
+<name v=".\PSoCcontroller.cydsn\MotorDriverY.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="972, 553" SelectedTabbedMdiWindow="f4f4772b-39d3-4478-bf25-29c6b47d3a64"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f2ae7cbd-5cb5-4420-a51e-8f3c92b94859" /><DocumentWindow Key="C:\Users\Grast\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\PSoCcontroller.cydwr" Guid="1be57ebd-88e2-41ac-a6e1-ef0f6801f3f4" /><DocumentWindow Key="C:\Users\Grast\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\TopDesign\TopDesign.cysch" Guid="f4f4772b-39d3-4478-bf25-29c6b47d3a64" /><DocumentWindow Key="C:\Users\Grast\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\MotorDriverY.h" Guid="dabd4b1b-c428-41ad-9cc8-647a385788fd" /><DocumentWindow Key="C:\Users\Grast\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\MotorDriverX.h" Guid="36f0f0c6-210f-4fab-a902-9d16de843909" /><DocumentWindow Key="C:\Users\Grast\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\MotorDriverY.c" Guid="2799cd74-4b4f-433a-9bc0-8755d9913f80" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

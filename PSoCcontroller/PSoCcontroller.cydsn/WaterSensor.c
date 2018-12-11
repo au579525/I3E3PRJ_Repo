@@ -1,11 +1,11 @@
 
 
 #include "WaterSensor.h"
-
+#include "PSoCcontroller.h"
 void WaSensInit()
 {
     ADC_SAR_WaSens_Start();
-    PWM_WaSens_Start();
+    //PWM_WaSens_Start();
 }
 
 int WaSensMeasure()
@@ -27,18 +27,18 @@ int WaSensMeasure()
             if(result < 3920) //Skal vandbeholderen fyldes...
             {
                 result2 = (result*result*Factor1) + (result*Factor2) + Offset1; //Resultat konverteres til mL
-                if(Pin_Low_WL_Read())
-                {
-                    Pin_Low_WL_Write(0);
-                }
+//                if(Pin_Low_WL_Read())
+//                {
+//                    Pin_Low_WL_Write(0);
+//                }
             }
             else //Ellers
             {
                 result2 = 0; //Resultat konverteres til mL
-                if(!Pin_Low_WL_Read())
-                {
-                    Pin_Low_WL_Write(1);
-                }
+//                if(!Pin_Low_WL_Read())
+//                {
+//                    Pin_Low_WL_Write(1);
+//                }
             }
             return result2;
         }

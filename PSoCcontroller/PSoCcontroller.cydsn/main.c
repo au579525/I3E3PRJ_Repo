@@ -56,7 +56,8 @@ int main(void)
         if(noWater == TRUE) {
             WaterPump_fireWater(FALSE);
             SPI_send_waterlevel(0);
-            //setMode(STANDBY_MODE);
+            Pin_Low_WL_Write(1);
+            setMode(STANDBY_MODE);
         }
         
         if (SPI_recieved_flag == 1) {
@@ -175,6 +176,7 @@ void checkForPigeonAndShoot(void) {
     
     if (pigeonPosition.detected == 1) {
         SPI_send_pigeon_detected(); //log
+        SPI_send_waterlevel(WaSensMeasure());
         while(pigeonPosition.detected == 1) { //if pigeon detected...
             
             int targetX, targetY; //assign target X position
@@ -207,7 +209,7 @@ void checkForPigeonAndShoot(void) {
                     round(detectedPosition.distance)-5 < round(pigeonPosition.distance)) { //fire while pigeon hasn't 
                 if (noWater == FALSE)
                     WaterPump_fireWater(TRUE);
-                else {
+                else if (noWater == TRUE) {
                     WaterPump_fireWater(FALSE);
                 }    
                 pigeonPosition = Sonar_GetPosition(); //renew position
@@ -217,13 +219,13 @@ void checkForPigeonAndShoot(void) {
         }
         SPI_send_pigeon_shot_position((char)detectedPosition.width, (char) round(detectedPosition.distance));
     }
-    WaterPump_fireWater(FALSE);
+    exit_noWater:
+        WaterPump_fireWater(FALSE);
 }
 
 // ===================== STATE FUNCTIONS =========================================
 void normalMode(void) {
     checkForPigeonAndShoot();
-    SPI_send_waterlevel(WaSensMeasure());
     
     Delay_Timer_Stop();
     Delay_Timer_WritePeriod(DELAY_NORMAL_MODE_MS); //set period
