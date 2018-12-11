@@ -10,8 +10,9 @@ htmlpage::htmlpage(fileaccess *sysdata)
     htmlhead();
     cout << "<body>"<< endl;
     header();
+    waterlvl(sysdata->getwaterlvl());
     //check if system is in manual code
-    settings(sysmode, sysdata->getwatermode());
+    settings(sysmode);
     if(sysmode == "manual"){
         manual(true);
     }
@@ -25,7 +26,26 @@ htmlpage::htmlpage(fileaccess *sysdata)
     cout << "</html>" << endl;
 }
 
-void htmlpage::settings(string sysmode, bool watermode){
+void htmlpage::waterlvl(string lvl){
+    cout << "<div class=\"clear content\">" << endl;
+    cout << "<div class=\"waterlvl clear \">" << endl;
+    cout << "<h2 class=\"content-header\">Water level</h2>" << endl;
+    cout << "<h3 id=\"waterlvl\">" << endl;
+    if(lvl == "0"){
+        cout << "System in standby mode because of low water level!" << endl;
+    }
+    else{
+        cout << "There are approximately " << lvl << " mL water in the tank";
+    }
+    cout << "</h3>" << endl;
+    cout << "<div class=\"waterlvltxt\">" << endl;
+    cout << "If the water level gets below 200 ml the system automatically goes into standby mode" << endl;
+    cout << "</div>" << endl;
+    cout << "</div>" << endl;
+    cout << "</div>" << endl;
+}
+
+void htmlpage::settings(string sysmode){
     cout << "<div class=\"clear content\">" << endl;
     cout << "<div class=\"settings clear\">" << endl;
     cout << "<h2 class=\"content-header\">Settings</h2>" << endl;
@@ -40,42 +60,39 @@ void htmlpage::settings(string sysmode, bool watermode){
         cout << "<option value=\"manual\">Manual</option>" << endl;
         cout << "<option value=\"powersaving\">Powersaving</option>" << endl;
         cout << "<option value=\"standby\">Standby</option>" << endl;
+        cout << "<option value=\"watering\">Watering</option>" << endl;
     }
     else if(sysmode == "manual"){
         cout << "<option value=\"normal\">Normal</option>" << endl;
         cout << "<option value=\"manual\" selected>Manual</option>" << endl;
         cout << "<option value=\"powersaving\">Powersaving</option>" << endl;
         cout << "<option value=\"standby\">Standby</option>" << endl;
+        cout << "<option value=\"watering\">Watering</option>" << endl;
     }
     else if(sysmode == "powersaving"){
         cout << "<option value=\"normal\">Normal</option>" << endl;
         cout << "<option value=\"manual\">Manual</option>" << endl;
         cout << "<option value=\"powersaving\" selected>Powersaving</option>" << endl;
         cout << "<option value=\"standby\">Standby</option>" << endl;
+        cout << "<option value=\"watering\">Watering</option>" << endl;
     }
     else if(sysmode == "standby"){
         cout << "<option value=\"normal\">Normal</option>" << endl;
         cout << "<option value=\"manual\" selected>Manual</option>" << endl;
         cout << "<option value=\"powersaving\">Powersaving</option>" << endl;
         cout << "<option value=\"standby\" selected>Standby</option>" << endl;
+        cout << "<option value=\"watering\">Watering</option>" << endl;
+    }
+    else if(sysmode == "watering"){
+        cout << "<option value=\"normal\">Normal</option>" << endl;
+        cout << "<option value=\"manual\" selected>Manual</option>" << endl;
+        cout << "<option value=\"powersaving\">Powersaving</option>" << endl;
+        cout << "<option value=\"standby\" selected>Standby</option>" << endl;
+        cout << "<option value=\"watering\" selected>Watering</option>" << endl;
     }
     cout << "</select>" << endl;
     cout << "</div>" << endl;
     cout << "<button class=\"select-menu-save\" onclick=\"changesysmode()\">Save</button>" << endl;
-    cout << "</div>" << endl;
-    cout << "</div>" << endl;
-    cout << "<div class=\"section clear\">" << endl;
-    cout << "<h3>Automatic watering</h3>" << endl;
-    cout << "<div class=\"clear\" id=\"water-mode-button\">" << endl;
-    //check watermode
-    if(watermode){
-        cout << "<button class=\"btn active true\" onclick=\"changewatermode('enable')\">Enable</button>" << endl;
-        cout << "<button class=\"btn false\" onclick=\"changewatermode('disable')\">Disable</button>" << endl;
-    }
-    else{
-        cout << "<button class=\"btn true\" onclick=\"changewatermode('enable')\">Enable</button>" << endl;
-        cout << "<button class=\"btn active false\" onclick=\"changewatermode('disable')\">Disable</button>" << endl;
-    }
     cout << "</div>" << endl;
     cout << "</div>" << endl;
     cout << "</div>" << endl;

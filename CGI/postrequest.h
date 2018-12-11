@@ -26,6 +26,7 @@ private:
     void sysmode(string mode);
     void watermode(string mode);
     void manualctl(string control);
+    void waterlvl();
     fileaccess *file;
 };
 

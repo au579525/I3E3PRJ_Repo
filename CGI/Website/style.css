@@ -23,6 +23,8 @@ body {
 	background-color: #313131;
 	max-width: 1000px;
 	margin-bottom: 20px;
+    color: white;
+	text-align: center;
 }
 
 header {
@@ -43,11 +45,6 @@ header div {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-}
-
-.settings, .log, .manual-control {
-	color: white;
-	text-align: center;
 }
 
 .section {
@@ -226,6 +223,10 @@ button::-moz-focus-inner {
 	margin-bottom: 20px;
 }
 
+.low {
+    background-color: red;
+}
+
 .fas{
 	color: white;
 	font-size: 20px;
@@ -239,7 +240,7 @@ button::-moz-focus-inner {
   display: inline-block;
 }
 
-.instruct-text {
+.instruct-text, .waterlvltxt {
 	margin: 20px
 }
 
