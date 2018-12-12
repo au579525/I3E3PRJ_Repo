@@ -107,7 +107,7 @@ struct position GetPigeonPos(){
                  uint8_t width = 1; //Only Sonar 1 detects pigeon, so assumed to be in position 1 of 3.
                
                 //Struct holding, pigeon detected positive, width, and distance.  
-                struct position p = {1,width,distance_sonar_2-2};
+                struct position p = {1,width,distance_sonar_2-5};
                 return  p;         
         }
         else {

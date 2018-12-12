@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
   28:Generated_Source\PSoC5/Timer_Sonar.c **** 
   29:Generated_Source\PSoC5/Timer_Sonar.c **** /*******************************************************************************
   30:Generated_Source\PSoC5/Timer_Sonar.c **** * Function Name: Timer_Sonar_Init
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 2
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 2
 
 
   31:Generated_Source\PSoC5/Timer_Sonar.c **** ********************************************************************************
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
   85:Generated_Source\PSoC5/Timer_Sonar.c ****             #if (CY_PSOC5A)
   86:Generated_Source\PSoC5/Timer_Sonar.c ****                 /* Set the default Run Mode of the Timer to Continuous */
   87:Generated_Source\PSoC5/Timer_Sonar.c ****                 Timer_Sonar_CONTROL2 |= Timer_Sonar_CTRL_MODE_PULSEWIDTH;
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 3
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 3
 
 
   88:Generated_Source\PSoC5/Timer_Sonar.c ****             #endif /* Set Continuous Run Mode in CONTROL2 for PSoC5A */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  142:Generated_Source\PSoC5/Timer_Sonar.c ****         Timer_Sonar_interruptState = CyEnterCriticalSection();
  143:Generated_Source\PSoC5/Timer_Sonar.c **** 
  144:Generated_Source\PSoC5/Timer_Sonar.c ****         /* Use the interrupt output of the status register for IRQ output */
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 4
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 4
 
 
  145:Generated_Source\PSoC5/Timer_Sonar.c ****         Timer_Sonar_STATUS_AUX_CTRL |= Timer_Sonar_STATUS_ACTL_INT_EN_MASK;
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
   36 0004 43F08003 		orr	r3, r3, #128
   37 0008 1370     		strb	r3, [r2]
   38 000a 7047     		bx	lr
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 5
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 5
 
 
   39              	.L3:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  230:Generated_Source\PSoC5/Timer_Sonar.c **** * Function Name: Timer_Sonar_Stop
  231:Generated_Source\PSoC5/Timer_Sonar.c **** ********************************************************************************
  232:Generated_Source\PSoC5/Timer_Sonar.c **** *
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 6
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 6
 
 
  233:Generated_Source\PSoC5/Timer_Sonar.c **** * Summary:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  261:Generated_Source\PSoC5/Timer_Sonar.c **** 
  262:Generated_Source\PSoC5/Timer_Sonar.c **** /*******************************************************************************
  263:Generated_Source\PSoC5/Timer_Sonar.c **** * Function Name: Timer_Sonar_SetInterruptMode
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 7
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 7
 
 
  264:Generated_Source\PSoC5/Timer_Sonar.c **** ********************************************************************************
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  293:Generated_Source\PSoC5/Timer_Sonar.c **** *  void
  294:Generated_Source\PSoC5/Timer_Sonar.c **** *
  295:Generated_Source\PSoC5/Timer_Sonar.c **** * Return:
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 8
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 8
 
 
  296:Generated_Source\PSoC5/Timer_Sonar.c **** *  void
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  326:Generated_Source\PSoC5/Timer_Sonar.c **** * Return:
  327:Generated_Source\PSoC5/Timer_Sonar.c **** *  The contents of the status register
  328:Generated_Source\PSoC5/Timer_Sonar.c **** *
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 9
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 9
 
 
  329:Generated_Source\PSoC5/Timer_Sonar.c **** * Side Effects:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  154              		.loc 1 357 0
  155              		.cfi_startproc
  156              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 10
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 10
 
 
  157              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  186 0000 014B     		ldr	r3, .L20
  187 0002 1870     		strb	r0, [r3]
  188 0004 7047     		bx	lr
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 11
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 11
 
 
  189              	.L21:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  213 0004 20F07F40 		bic	r0, r0, #-16777216
  214 0008 7047     		bx	lr
  215              	.L24:
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 12
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 12
 
 
  216 000a 00BF     		.align	2
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  245 000a 08BD     		pop	{r3, pc}
  246              	.L28:
  247              		.align	2
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 13
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 13
 
 
  248              	.L27:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  276              		.cfi_endproc
  277              	.LFE11:
  278              		.size	Timer_Sonar_ReadCapture, .-Timer_Sonar_ReadCapture
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 14
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 14
 
 
  279              		.section	.text.Timer_Sonar_WriteCounter,"ax",%progbits
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  307              		.cfi_endproc
  308              	.LFE12:
  309              		.size	Timer_Sonar_WriteCounter, .-Timer_Sonar_WriteCounter
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 15
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 15
 
 
  310              		.section	.text.Timer_Sonar_ReadCounter,"ax",%progbits
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  525:Generated_Source\PSoC5/Timer_Sonar.c **** }
  329              		.loc 1 525 0
  330 0008 20F07F40 		bic	r0, r0, #-16777216
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 16
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 16
 
 
  331 000c 7047     		bx	lr
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  563:Generated_Source\PSoC5/Timer_Sonar.c **** *  void
  564:Generated_Source\PSoC5/Timer_Sonar.c **** *
  565:Generated_Source\PSoC5/Timer_Sonar.c **** *******************************************************************************/
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 17
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 17
 
 
  566:Generated_Source\PSoC5/Timer_Sonar.c **** void Timer_Sonar_SetCaptureMode(uint8 captureMode) 
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  620:Generated_Source\PSoC5/Timer_Sonar.c **** 
  621:Generated_Source\PSoC5/Timer_Sonar.c **** #if (Timer_Sonar_EnableTriggerMode)
  622:Generated_Source\PSoC5/Timer_Sonar.c **** 
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 18
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 18
 
 
  623:Generated_Source\PSoC5/Timer_Sonar.c **** 
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  677:Generated_Source\PSoC5/Timer_Sonar.c **** *
  678:Generated_Source\PSoC5/Timer_Sonar.c **** * Parameters:
  679:Generated_Source\PSoC5/Timer_Sonar.c **** *  interruptCount:  A value between 0 and 3 is valid.  If the value is 0, then
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 19
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 19
 
 
  680:Generated_Source\PSoC5/Timer_Sonar.c **** *                   an interrupt will occur each time a capture occurs.
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  734:Generated_Source\PSoC5/Timer_Sonar.c **** *
  735:Generated_Source\PSoC5/Timer_Sonar.c **** * Parameters:
  736:Generated_Source\PSoC5/Timer_Sonar.c **** *  void
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 20
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 20
 
 
  737:Generated_Source\PSoC5/Timer_Sonar.c **** *
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  368              		.loc 1 769 0
  369 0012 08BD     		pop	{r3, pc}
  370              		.cfi_endproc
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 21
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 21
 
 
  371              	.LFE14:
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  417              		.align	2
  418              	.L45:
  419 0030 96650040 		.word	1073767830
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 22
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 22
 
 
  420              		.cfi_endproc
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  469              		.text
  470              	.Letext0:
  471              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 23
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 23
 
 
  472              		.file 3 "Generated_Source\\PSoC5\\CyLib.h"
@@ -1332,14 +1332,14 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  480 000c AF000000 		.4byte	.LASF40
  481 0010 0C       		.byte	0xc
  482 0011 57000000 		.4byte	.LASF41
- 483 0015 11020000 		.4byte	.LASF42
+ 483 0015 F5010000 		.4byte	.LASF42
  484 0019 00000000 		.4byte	.Ldebug_ranges0+0
  485 001d 00000000 		.4byte	0
  486 0021 00000000 		.4byte	.Ldebug_line0
  487 0025 02       		.uleb128 0x2
  488 0026 01       		.byte	0x1
  489 0027 06       		.byte	0x6
- 490 0028 BF030000 		.4byte	.LASF0
+ 490 0028 BA030000 		.4byte	.LASF0
  491 002c 02       		.uleb128 0x2
  492 002d 01       		.byte	0x1
  493 002e 08       		.byte	0x8
@@ -1347,15 +1347,15 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  495 0033 02       		.uleb128 0x2
  496 0034 02       		.byte	0x2
  497 0035 05       		.byte	0x5
- 498 0036 67030000 		.4byte	.LASF2
+ 498 0036 62030000 		.4byte	.LASF2
  499 003a 02       		.uleb128 0x2
  500 003b 02       		.byte	0x2
  501 003c 07       		.byte	0x7
- 502 003d CB030000 		.4byte	.LASF3
+ 502 003d C6030000 		.4byte	.LASF3
  503 0041 02       		.uleb128 0x2
  504 0042 04       		.byte	0x4
  505 0043 05       		.byte	0x5
- 506 0044 8E030000 		.4byte	.LASF4
+ 506 0044 89030000 		.4byte	.LASF4
  507 0048 02       		.uleb128 0x2
  508 0049 04       		.byte	0x4
  509 004a 07       		.byte	0x7
@@ -1363,7 +1363,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  511 004f 02       		.uleb128 0x2
  512 0050 08       		.byte	0x8
  513 0051 05       		.byte	0x5
- 514 0052 40030000 		.4byte	.LASF6
+ 514 0052 3B030000 		.4byte	.LASF6
  515 0056 02       		.uleb128 0x2
  516 0057 08       		.byte	0x8
  517 0058 07       		.byte	0x7
@@ -1375,17 +1375,17 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  523 0064 02       		.uleb128 0x2
  524 0065 04       		.byte	0x4
  525 0066 07       		.byte	0x7
- 526 0067 9D020000 		.4byte	.LASF8
+ 526 0067 98020000 		.4byte	.LASF8
  527 006b 04       		.uleb128 0x4
  528 006c 66010000 		.4byte	.LASF9
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 24
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 24
 
 
  529 0070 02       		.byte	0x2
  530 0071 E401     		.2byte	0x1e4
  531 0073 2C000000 		.4byte	0x2c
  532 0077 04       		.uleb128 0x4
- 533 0078 7F020000 		.4byte	.LASF10
+ 533 0078 7A020000 		.4byte	.LASF10
  534 007c 02       		.byte	0x2
  535 007d E601     		.2byte	0x1e6
  536 007f 48000000 		.4byte	0x48
@@ -1400,7 +1400,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  545 0091 02       		.uleb128 0x2
  546 0092 01       		.byte	0x1
  547 0093 08       		.byte	0x8
- 548 0094 97030000 		.4byte	.LASF13
+ 548 0094 92030000 		.4byte	.LASF13
  549 0098 04       		.uleb128 0x4
  550 0099 4F010000 		.4byte	.LASF14
  551 009d 02       		.byte	0x2
@@ -1418,13 +1418,13 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  563 00ba 02       		.uleb128 0x2
  564 00bb 08       		.byte	0x8
  565 00bc 04       		.byte	0x4
- 566 00bd B3030000 		.4byte	.LASF16
+ 566 00bd AE030000 		.4byte	.LASF16
  567 00c1 02       		.uleb128 0x2
  568 00c2 04       		.byte	0x4
  569 00c3 07       		.byte	0x7
- 570 00c4 26030000 		.4byte	.LASF17
+ 570 00c4 21030000 		.4byte	.LASF17
  571 00c8 06       		.uleb128 0x6
- 572 00c9 AA020000 		.4byte	.LASF18
+ 572 00c9 A5020000 		.4byte	.LASF18
  573 00cd 01       		.byte	0x1
  574 00ce B4       		.byte	0xb4
  575 00cf 00000000 		.4byte	.LFB1
@@ -1438,12 +1438,12 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  583 00e0 00000000 		.4byte	.LFB3
  584 00e4 10000000 		.4byte	.LFE3-.LFB3
  585 00e8 01       		.uleb128 0x1
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 25
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 25
 
 
  586 00e9 9C       		.byte	0x9c
  587 00ea 07       		.uleb128 0x7
- 588 00eb 71030000 		.4byte	.LASF23
+ 588 00eb 6C030000 		.4byte	.LASF23
  589 00ef 01       		.byte	0x1
  590 00f0 1701     		.2byte	0x117
  591 00f2 00000000 		.4byte	.LFB4
@@ -1452,7 +1452,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  594 00fb 9C       		.byte	0x9c
  595 00fc 0F010000 		.4byte	0x10f
  596 0100 08       		.uleb128 0x8
- 597 0101 4E030000 		.4byte	.LASF25
+ 597 0101 49030000 		.4byte	.LASF25
  598 0105 01       		.byte	0x1
  599 0106 1701     		.2byte	0x117
  600 0108 6B000000 		.4byte	0x6b
@@ -1460,7 +1460,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  602 010d 50       		.byte	0x50
  603 010e 00       		.byte	0
  604 010f 09       		.uleb128 0x9
- 605 0110 F5010000 		.4byte	.LASF20
+ 605 0110 5E020000 		.4byte	.LASF20
  606 0114 01       		.byte	0x1
  607 0115 2E01     		.2byte	0x12e
  608 0117 00000000 		.4byte	.LFB5
@@ -1477,7 +1477,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  619 0135 01       		.uleb128 0x1
  620 0136 9C       		.byte	0x9c
  621 0137 0A       		.uleb128 0xa
- 622 0138 06030000 		.4byte	.LASF22
+ 622 0138 01030000 		.4byte	.LASF22
  623 013c 01       		.byte	0x1
  624 013d 6401     		.2byte	0x164
  625 013f 6B000000 		.4byte	0x6b
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  640 0164 6C010000 		.4byte	.LASF26
  641 0168 01       		.byte	0x1
  642 0169 7B01     		.2byte	0x17b
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 26
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 26
 
 
  643 016b 6B000000 		.4byte	0x6b
@@ -1506,7 +1506,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  645 0170 50       		.byte	0x50
  646 0171 00       		.byte	0
  647 0172 0A       		.uleb128 0xa
- 648 0173 9C030000 		.4byte	.LASF27
+ 648 0173 97030000 		.4byte	.LASF27
  649 0177 01       		.byte	0x1
  650 0178 9501     		.2byte	0x195
  651 017a 77000000 		.4byte	0x77
@@ -1515,7 +1515,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  654 0186 01       		.uleb128 0x1
  655 0187 9C       		.byte	0x9c
  656 0188 07       		.uleb128 0x7
- 657 0189 EE020000 		.4byte	.LASF28
+ 657 0189 E9020000 		.4byte	.LASF28
  658 018d 01       		.byte	0x1
  659 018e AF01     		.2byte	0x1af
  660 0190 00000000 		.4byte	.LFB10
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  697 01de 9C       		.byte	0x9c
  698 01df 07       		.uleb128 0x7
  699 01e0 A9010000 		.4byte	.LASF31
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 27
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 27
 
 
  700 01e4 01       		.byte	0x1
@@ -1618,10 +1618,10 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  754 025a 21010000 		.4byte	0x121
  755 025e 00       		.byte	0
  756 025f 0F       		.uleb128 0xf
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 28
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 28
 
 
- 757 0260 2F030000 		.4byte	.LASF35
+ 757 0260 2A030000 		.4byte	.LASF35
  758 0264 01       		.byte	0x1
  759 0265 2B       		.byte	0x2b
  760 0266 00000000 		.4byte	.LFB0
@@ -1630,7 +1630,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  763 026f 9C       		.byte	0x9c
  764 0270 DC020000 		.4byte	0x2dc
  765 0274 10       		.uleb128 0x10
- 766 0275 D3020000 		.4byte	.LASF43
+ 766 0275 CE020000 		.4byte	.LASF43
  767 0279 01       		.byte	0x1
  768 027a 2F       		.byte	0x2f
  769 027b 6B000000 		.4byte	0x6b
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  811 02db 00       		.byte	0
  812 02dc 0F       		.uleb128 0xf
  813 02dd 3D010000 		.4byte	.LASF36
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 29
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 29
 
 
  814 02e1 01       		.byte	0x1
@@ -1704,18 +1704,18 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  834 0310 03       		.byte	0x3
  835 0311 00000000 		.4byte	Timer_Sonar_initVar
  836 0315 13       		.uleb128 0x13
- 837 0316 5C030000 		.4byte	.LASF37
- 838 031a 5C030000 		.4byte	.LASF37
+ 837 0316 57030000 		.4byte	.LASF37
+ 838 031a 57030000 		.4byte	.LASF37
  839 031e 02       		.byte	0x2
  840 031f 2702     		.2byte	0x227
  841 0321 14       		.uleb128 0x14
- 842 0322 86020000 		.4byte	.LASF38
- 843 0326 86020000 		.4byte	.LASF38
+ 842 0322 81020000 		.4byte	.LASF38
+ 843 0326 81020000 		.4byte	.LASF38
  844 032a 03       		.byte	0x3
  845 032b 7D       		.byte	0x7d
  846 032c 14       		.uleb128 0x14
- 847 032d BD020000 		.4byte	.LASF39
- 848 0331 BD020000 		.4byte	.LASF39
+ 847 032d B8020000 		.4byte	.LASF39
+ 848 0331 B8020000 		.4byte	.LASF39
  849 0335 03       		.byte	0x3
  850 0336 7E       		.byte	0x7e
  851 0337 00       		.byte	0
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  868 000e 01       		.uleb128 0x1
  869 000f 10       		.uleb128 0x10
  870 0010 17       		.uleb128 0x17
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 30
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 30
 
 
  871 0011 00       		.byte	0
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  925 0047 0B       		.uleb128 0xb
  926 0048 27       		.uleb128 0x27
  927 0049 19       		.uleb128 0x19
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 31
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 31
 
 
  928 004a 11       		.uleb128 0x11
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  982 0082 19       		.uleb128 0x19
  983 0083 03       		.uleb128 0x3
  984 0084 0E       		.uleb128 0xe
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 32
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 32
 
 
  985 0085 3A       		.uleb128 0x3a
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  1039 00bd 00       		.byte	0
  1040 00be 00       		.byte	0
  1041 00bf 0C       		.uleb128 0xc
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 33
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 33
 
 
  1042 00c0 898201   		.uleb128 0x4109
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  1096 00fe 03       		.uleb128 0x3
  1097 00ff 0E       		.uleb128 0xe
  1098 0100 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 34
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 34
 
 
  1099 0101 0B       		.uleb128 0xb
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  1153 0139 14       		.uleb128 0x14
  1154 013a 2E       		.uleb128 0x2e
  1155 013b 00       		.byte	0
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 35
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 35
 
 
  1156 013c 3F       		.uleb128 0x3f
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  1210 0058 16000000 		.4byte	.LVL12
  1211 005c 23000000 		.4byte	.LVL13-1
  1212 0060 0100     		.2byte	0x1
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 36
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 36
 
 
  1213 0062 50       		.byte	0x50
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  1267 0024 0C000000 		.4byte	.LFE6
  1268 0028 00000000 		.4byte	.LFB7
  1269 002c 0C000000 		.4byte	.LFE7
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 37
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 37
 
 
  1270 0030 00000000 		.4byte	.LFB8
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  1304      645F536F 
  1304      75726365 
  1304      5C50536F 
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 38
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 38
 
 
  1305              	.LASF11:
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  1327              	.LASF21:
  1328 0174 54696D65 		.ascii	"Timer_Sonar_ReadStatusRegister\000"
  1328      725F536F 
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 39
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 39
 
 
  1328      6E61725F 
@@ -2311,134 +2311,133 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 1
  1337              	.LASF12:
  1338 01ee 646F7562 		.ascii	"double\000"
  1338      6C6500
- 1339              	.LASF20:
- 1340 01f5 54696D65 		.ascii	"Timer_Sonar_SoftwareCapture\000"
- 1340      725F536F 
- 1340      6E61725F 
- 1340      536F6674 
- 1340      77617265 
- 1341              	.LASF42:
- 1342 0211 433A5C55 		.ascii	"C:\\Users\\midtg\\OneDrive - Aarhus universitet\\3."
- 1342      73657273 
- 1342      5C6D6964 
- 1342      74675C4F 
- 1342      6E654472 
- 1343 0240 2073656D 		.ascii	" semester\\Projekt\\Sonar_test\\Workspace01\\Sonar_"
- 1343      65737465 
- 1343      725C5072 
- 1343      6F6A656B 
- 1343      745C536F 
- 1344 026f 66756E63 		.ascii	"functions.cydsn\000"
- 1344      74696F6E 
- 1344      732E6379 
- 1344      64736E00 
+ 1339              	.LASF42:
+ 1340 01f5 433A5C55 		.ascii	"C:\\Users\\midtg\\Documents\\GitHub\\I3E3PRJ_Repo\\"
+ 1340      73657273 
+ 1340      5C6D6964 
+ 1340      74675C44 
+ 1340      6F63756D 
+ 1341 0222 41646469 		.ascii	"Additional_PSoC_projects\\Sonar_Driver\\Sonar_funct"
+ 1341      74696F6E 
+ 1341      616C5F50 
+ 1341      536F435F 
+ 1341      70726F6A 
+ 1342 0253 696F6E73 		.ascii	"ions.cydsn\000"
+ 1342      2E637964 
+ 1342      736E00
+ 1343              	.LASF20:
+ 1344 025e 54696D65 		.ascii	"Timer_Sonar_SoftwareCapture\000"
+ 1344      725F536F 
+ 1344      6E61725F 
+ 1344      536F6674 
+ 1344      77617265 
  1345              	.LASF10:
- 1346 027f 75696E74 		.ascii	"uint32\000"
+ 1346 027a 75696E74 		.ascii	"uint32\000"
  1346      333200
  1347              	.LASF38:
- 1348 0286 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1348 0281 4379456E 		.ascii	"CyEnterCriticalSection\000"
  1348      74657243 
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 40
-
-
  1348      72697469 
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 40
+
+
  1348      63616C53 
  1348      65637469 
  1349              	.LASF8:
- 1350 029d 756E7369 		.ascii	"unsigned int\000"
+ 1350 0298 756E7369 		.ascii	"unsigned int\000"
  1350      676E6564 
  1350      20696E74 
  1350      00
  1351              	.LASF18:
- 1352 02aa 54696D65 		.ascii	"Timer_Sonar_Enable\000"
+ 1352 02a5 54696D65 		.ascii	"Timer_Sonar_Enable\000"
  1352      725F536F 
  1352      6E61725F 
  1352      456E6162 
  1352      6C6500
  1353              	.LASF39:
- 1354 02bd 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1354 02b8 43794578 		.ascii	"CyExitCriticalSection\000"
  1354      69744372 
  1354      69746963 
  1354      616C5365 
  1354      6374696F 
  1355              	.LASF43:
- 1356 02d3 54696D65 		.ascii	"Timer_Sonar_interruptState\000"
+ 1356 02ce 54696D65 		.ascii	"Timer_Sonar_interruptState\000"
  1356      725F536F 
  1356      6E61725F 
  1356      696E7465 
  1356      72727570 
  1357              	.LASF28:
- 1358 02ee 54696D65 		.ascii	"Timer_Sonar_WritePeriod\000"
+ 1358 02e9 54696D65 		.ascii	"Timer_Sonar_WritePeriod\000"
  1358      725F536F 
  1358      6E61725F 
  1358      57726974 
  1358      65506572 
  1359              	.LASF22:
- 1360 0306 54696D65 		.ascii	"Timer_Sonar_ReadControlRegister\000"
+ 1360 0301 54696D65 		.ascii	"Timer_Sonar_ReadControlRegister\000"
  1360      725F536F 
  1360      6E61725F 
  1360      52656164 
  1360      436F6E74 
  1361              	.LASF17:
- 1362 0326 73697A65 		.ascii	"sizetype\000"
+ 1362 0321 73697A65 		.ascii	"sizetype\000"
  1362      74797065 
  1362      00
  1363              	.LASF35:
- 1364 032f 54696D65 		.ascii	"Timer_Sonar_Init\000"
+ 1364 032a 54696D65 		.ascii	"Timer_Sonar_Init\000"
  1364      725F536F 
  1364      6E61725F 
  1364      496E6974 
  1364      00
  1365              	.LASF6:
- 1366 0340 6C6F6E67 		.ascii	"long long int\000"
+ 1366 033b 6C6F6E67 		.ascii	"long long int\000"
  1366      206C6F6E 
  1366      6720696E 
  1366      7400
  1367              	.LASF25:
- 1368 034e 696E7465 		.ascii	"interruptMode\000"
+ 1368 0349 696E7465 		.ascii	"interruptMode\000"
  1368      72727570 
  1368      744D6F64 
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc7QPKKD.s 			page 41
-
-
  1368      6500
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccO01EQr.s 			page 41
+
+
  1369              	.LASF37:
- 1370 035c 43795365 		.ascii	"CySetReg24\000"
+ 1370 0357 43795365 		.ascii	"CySetReg24\000"
  1370      74526567 
  1370      323400
  1371              	.LASF2:
- 1372 0367 73686F72 		.ascii	"short int\000"
+ 1372 0362 73686F72 		.ascii	"short int\000"
  1372      7420696E 
  1372      7400
  1373              	.LASF23:
- 1374 0371 54696D65 		.ascii	"Timer_Sonar_SetInterruptMode\000"
+ 1374 036c 54696D65 		.ascii	"Timer_Sonar_SetInterruptMode\000"
  1374      725F536F 
  1374      6E61725F 
  1374      53657449 
  1374      6E746572 
  1375              	.LASF4:
- 1376 038e 6C6F6E67 		.ascii	"long int\000"
+ 1376 0389 6C6F6E67 		.ascii	"long int\000"
  1376      20696E74 
  1376      00
  1377              	.LASF13:
- 1378 0397 63686172 		.ascii	"char\000"
+ 1378 0392 63686172 		.ascii	"char\000"
  1378      00
  1379              	.LASF27:
- 1380 039c 54696D65 		.ascii	"Timer_Sonar_ReadPeriod\000"
+ 1380 0397 54696D65 		.ascii	"Timer_Sonar_ReadPeriod\000"
  1380      725F536F 
  1380      6E61725F 
  1380      52656164 
  1380      50657269 
  1381              	.LASF16:
- 1382 03b3 6C6F6E67 		.ascii	"long double\000"
+ 1382 03ae 6C6F6E67 		.ascii	"long double\000"
  1382      20646F75 
  1382      626C6500 
  1383              	.LASF0:
- 1384 03bf 7369676E 		.ascii	"signed char\000"
+ 1384 03ba 7369676E 		.ascii	"signed char\000"
  1384      65642063 
  1384      68617200 
  1385              	.LASF3:
- 1386 03cb 73686F72 		.ascii	"short unsigned int\000"
+ 1386 03c6 73686F72 		.ascii	"short unsigned int\000"
  1386      7420756E 
  1386      7369676E 
  1386      65642069 

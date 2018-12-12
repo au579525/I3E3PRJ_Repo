@@ -2,7 +2,7 @@
 --	Conversion of Sonar_functions.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Tue Nov 13 23:02:01 2018
+--	Thu Dec 06 13:50:59 2018
 --
 
 USE cypress.cypress.all;

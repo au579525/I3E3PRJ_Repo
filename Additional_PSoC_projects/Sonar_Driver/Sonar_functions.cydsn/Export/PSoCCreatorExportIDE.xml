@@ -25,7 +25,7 @@
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
   </Toolchains>
-  <Project Name="Sonar_functions" Path="C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn" Version="5.70" Type="Normal">
+  <Project Name="Sonar_functions" Path="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn" Version="5.70" Type="Normal">
     <CMSIS_SVD_File>Sonar_functions.svd</CMSIS_SVD_File>
     <Datasheet />
     <LinkerFiles>
@@ -34,15 +34,15 @@
       <LinkerFile Toolchain="ARM IAR Generic">.\Generated_Source\PSoC5\Cm3Iar.icf</LinkerFile>
     </LinkerFiles>
     <Folders>
-      <Folder BuildType="STRICT" Path="C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn">
-        <Files Root="C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn">
+        <Files Root="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn">
           <File BuildType="BUILD" Toolchain="">main.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">SonarDriver.h</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn\Generated_Source\PSoC5">
-        <Files Root="C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn\Generated_Source\PSoC5">
+        <Files Root="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn">
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cyfitter_cfg.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cyfitter_cfg.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cymetadata.c</File>
@@ -120,50 +120,50 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Trigger_2.h</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn\Export\ARM_GCC_Generic">
-        <Files Root="C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn\Export\ARM_GCC_Generic">
+        <Files Root="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn">
           <File BuildType="BUILD" Toolchain="ARM GCC Generic">.\Export\ARM_GCC_Generic\CyComponentLibrary.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn\Export\ARM_MDK_Generic">
-        <Files Root="C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn\Export\ARM_MDK_Generic">
+        <Files Root="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn">
           <File BuildType="BUILD" Toolchain="ARM MDK Generic">.\Export\ARM_MDK_Generic\CyComponentLibrary.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn\Export\ARM_IAR_Generic">
-        <Files Root="C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn\Export\ARM_IAR_Generic">
+        <Files Root="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn">
           <File BuildType="BUILD" Toolchain="ARM IAR Generic">.\Export\ARM_IAR_Generic\CyComponentLibrary.a</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">
-        <Files Root="C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn" />
+        <Files Root="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_441">
-        <Files Root="C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn" />
+        <Files Root="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_473">
-        <Files Root="C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn" />
+        <Files Root="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051_Keil_952">
-        <Files Root="C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn" />
+        <Files Root="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051">
-        <Files Root="C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn" />
+        <Files Root="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0">
-        <Files Root="C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn" />
+        <Files Root="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0p">
-        <Files Root="C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn" />
+        <Files Root="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM3">
-        <Files Root="C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn" />
+        <Files Root="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM4">
-        <Files Root="C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn" />
+        <Files Root="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM7">
-        <Files Root="C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn" />
+        <Files Root="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn" />
       </Folder>
     </Folders>
   </Project>

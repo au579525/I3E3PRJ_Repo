@@ -735,12 +735,12 @@ END GROUP
                 0x00000001                ASSERT ((((appl_start + .) <= 0x10000) || 0x1), DMA Init must be within the first 64k of flash)
  *(.text .text.* .gnu.linkonce.t.*)
  .text          0x00000028       0x5c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
- .text.Sonar_Start
+ .text.SonarDriverStart
                 0x00000084       0x14 .\CortexM3\ARM_GCC_541\Debug\main.o
-                0x00000084                Sonar_Start
- .text.Sonar_GetPosition
+                0x00000084                SonarDriverStart
+ .text.GetPigeonPos
                 0x00000098      0x224 .\CortexM3\ARM_GCC_541\Debug\main.o
-                0x00000098                Sonar_GetPosition
+                0x00000098                GetPigeonPos
  .text.main     0x000002bc       0x80 .\CortexM3\ARM_GCC_541\Debug\main.o
                 0x000002bc                main
  .text.handleByteReceived
@@ -1316,7 +1316,7 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x4e3a
+.debug_info     0x00000000     0x4e35
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x5a8 .\CortexM3\ARM_GCC_541\Debug\main.o
  .debug_info    0x000005a8      0x5a8 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
@@ -1332,10 +1332,10 @@ END GROUP
  .debug_info    0x00003b7d      0x338 .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(Timer_Sonar.o)
  .debug_info    0x00003eb5      0x11f .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(Trigger_1.o)
  .debug_info    0x00003fd4      0x11f .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(Trigger_2.o)
- .debug_info    0x000040f3       0xbc .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(CyBootAsmGnu.o)
- .debug_info    0x000041af      0x64d .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(CyFlash.o)
- .debug_info    0x000047fc      0x550 .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(CySpc.o)
- .debug_info    0x00004d4c       0xee .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(cyutils.o)
+ .debug_info    0x000040f3       0xb7 .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(CyBootAsmGnu.o)
+ .debug_info    0x000041aa      0x64d .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(CyFlash.o)
+ .debug_info    0x000047f7      0x550 .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(CySpc.o)
+ .debug_info    0x00004d47       0xee .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(cyutils.o)
 
 .debug_abbrev   0x00000000     0x1565
  *(.debug_abbrev)
@@ -1422,42 +1422,42 @@ END GROUP
  .debug_frame   0x00001d04       0x5c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-reent.o)
  .debug_frame   0x00001d60       0x20 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-msizer.o)
 
-.debug_str      0x00000000     0x1dcd
+.debug_str      0x00000000     0x1dd4
  *(.debug_str)
- .debug_str     0x00000000      0x37d .\CortexM3\ARM_GCC_541\Debug\main.o
-                                0x3eb (size before relaxing)
- .debug_str     0x0000037d      0x1bc .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
-                                0x370 (size before relaxing)
- .debug_str     0x00000539       0x75 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
-                                0x210 (size before relaxing)
- .debug_str     0x000005ae      0x144 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
-                                0x336 (size before relaxing)
- .debug_str     0x000006f2      0x2b8 .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(UART_1.o)
-                                0x4df (size before relaxing)
- .debug_str     0x000009aa      0x18c .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(UART_RX_interrupt.o)
-                                0x37a (size before relaxing)
- .debug_str     0x00000b36      0x19d .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(UART_1_IntClock.o)
-                                0x37a (size before relaxing)
- .debug_str     0x00000cd3      0x7e8 .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(CyLib.o)
-                                0xa73 (size before relaxing)
- .debug_str     0x000014bb      0x365 .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(cyPm.o)
-                                0x75f (size before relaxing)
- .debug_str     0x00001820       0x5f .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(Echo_1.o)
-                                0x213 (size before relaxing)
- .debug_str     0x0000187f       0x54 .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(Echo_2.o)
-                                0x213 (size before relaxing)
- .debug_str     0x000018d3      0x1a7 .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(Timer_Sonar.o)
-                                0x3de (size before relaxing)
- .debug_str     0x00001a7a       0x5f .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(Trigger_1.o)
-                                0x222 (size before relaxing)
- .debug_str     0x00001ad9       0x5f .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(Trigger_2.o)
-                                0x222 (size before relaxing)
- .debug_str     0x00001b38      0x1bb .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(CyFlash.o)
-                                0x3ec (size before relaxing)
- .debug_str     0x00001cf3       0xac .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(CySpc.o)
-                                0x364 (size before relaxing)
- .debug_str     0x00001d9f       0x2e .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(cyutils.o)
-                                0x1de (size before relaxing)
+ .debug_str     0x00000000      0x384 .\CortexM3\ARM_GCC_541\Debug\main.o
+                                0x3e6 (size before relaxing)
+ .debug_str     0x00000384      0x1bc .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                                0x36b (size before relaxing)
+ .debug_str     0x00000540       0x75 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+                                0x20b (size before relaxing)
+ .debug_str     0x000005b5      0x144 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                                0x331 (size before relaxing)
+ .debug_str     0x000006f9      0x2b8 .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(UART_1.o)
+                                0x4da (size before relaxing)
+ .debug_str     0x000009b1      0x18c .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(UART_RX_interrupt.o)
+                                0x375 (size before relaxing)
+ .debug_str     0x00000b3d      0x19d .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(UART_1_IntClock.o)
+                                0x375 (size before relaxing)
+ .debug_str     0x00000cda      0x7e8 .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(CyLib.o)
+                                0xa6e (size before relaxing)
+ .debug_str     0x000014c2      0x365 .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(cyPm.o)
+                                0x75a (size before relaxing)
+ .debug_str     0x00001827       0x5f .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(Echo_1.o)
+                                0x20e (size before relaxing)
+ .debug_str     0x00001886       0x54 .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(Echo_2.o)
+                                0x20e (size before relaxing)
+ .debug_str     0x000018da      0x1a7 .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(Timer_Sonar.o)
+                                0x3d9 (size before relaxing)
+ .debug_str     0x00001a81       0x5f .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(Trigger_1.o)
+                                0x21d (size before relaxing)
+ .debug_str     0x00001ae0       0x5f .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(Trigger_2.o)
+                                0x21d (size before relaxing)
+ .debug_str     0x00001b3f      0x1bb .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(CyFlash.o)
+                                0x3e7 (size before relaxing)
+ .debug_str     0x00001cfa       0xac .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(CySpc.o)
+                                0x35f (size before relaxing)
+ .debug_str     0x00001da6       0x2e .\CortexM3\ARM_GCC_541\Debug\Sonar_functions.a(cyutils.o)
+                                0x1d9 (size before relaxing)
 
 .debug_loc      0x00000000     0x2135
  *(.debug_loc)
@@ -1649,4 +1649,4 @@ END GROUP
 
 /DISCARD/
  *(.note.GNU-stack)
-OUTPUT(C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn\CortexM3\ARM_GCC_541\Debug\Sonar_functions.elf elf32-littlearm)
+OUTPUT(C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn\CortexM3\ARM_GCC_541\Debug\Sonar_functions.elf elf32-littlearm)

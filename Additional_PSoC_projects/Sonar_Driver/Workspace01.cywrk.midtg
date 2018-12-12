@@ -221,6 +221,9 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\Sonar_functions.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Sonar_functions.cydsn\Sonar_functions.cydwr" />
+<name v=".\Sonar_functions.cydsn\main.c" />
+<name v=".\Sonar_functions.cydsn\SonarDriver.h" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -228,7 +231,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1014, 505" SelectedTabbedMdiWindow="ba2b751d-27b8-4812-83f8-1d834406b771"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="15b2d77c-e46b-4b02-a1f5-ff19d8507aaa" /><DocumentWindow Key="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn\TopDesign\TopDesign.cysch" Guid="ba2b751d-27b8-4812-83f8-1d834406b771" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1014, 499" SelectedTabbedMdiWindow="ba2b751d-27b8-4812-83f8-1d834406b771"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="15b2d77c-e46b-4b02-a1f5-ff19d8507aaa" /><DocumentWindow Key="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn\TopDesign\TopDesign.cysch" Guid="ba2b751d-27b8-4812-83f8-1d834406b771" /><DocumentWindow Key="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn\Sonar_functions.cydwr" Guid="34187143-b7f8-4f21-93d5-9e1ef016c8b9" /><DocumentWindow Key="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn\main.c" Guid="92ed66a9-1b1c-46f4-8737-ba705c58774f" /><DocumentWindow Key="C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn\SonarDriver.h" Guid="502469a0-1aa1-40b2-8972-d1fa077cf7d9" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

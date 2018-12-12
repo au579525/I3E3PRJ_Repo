@@ -1,5 +1,5 @@
--- Project:   C:\Users\midtg\OneDrive - Aarhus universitet\3. semester\Projekt\Sonar_test\Workspace01\Sonar_functions.cydsn\Sonar_functions.cyprj
--- Generated: 11/13/2018 23:02:05
+-- Project:   C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\Additional_PSoC_projects\Sonar_Driver\Sonar_functions.cydsn\Sonar_functions.cyprj
+-- Generated: 12/06/2018 13:51:04
 -- PSoC Creator  4.2
 
 ENTITY Sonar_functions IS
