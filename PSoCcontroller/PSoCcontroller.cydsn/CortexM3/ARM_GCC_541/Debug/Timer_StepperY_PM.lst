@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccJTarAX.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
   28:Generated_Source\PSoC5/Timer_StepperY_PM.c **** * Summary:
   29:Generated_Source\PSoC5/Timer_StepperY_PM.c **** *     Save the current user configuration
   30:Generated_Source\PSoC5/Timer_StepperY_PM.c **** *
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 2
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccJTarAX.s 			page 2
 
 
   31:Generated_Source\PSoC5/Timer_StepperY_PM.c **** * Parameters:
@@ -110,7 +110,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
   51              		.align	2
   52              	.L3:
   53 0018 00000000 		.word	.LANCHOR0
-  54 001c 87650040 		.word	1073767815
+  54 001c 89640040 		.word	1073767561
   55              		.cfi_endproc
   56              	.LFE0:
   57              		.size	Timer_StepperY_SaveConfig, .-Timer_StepperY_SaveConfig
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
   59              		.align	2
   60              		.global	Timer_StepperY_RestoreConfig
   61              		.thumb
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 3
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccJTarAX.s 			page 3
 
 
   62              		.thumb_func
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
   87:Generated_Source\PSoC5/Timer_StepperY_PM.c ****         #if(!Timer_StepperY_UDB_CONTROL_REG_REMOVED)
   88:Generated_Source\PSoC5/Timer_StepperY_PM.c ****             Timer_StepperY_WriteControlRegister(Timer_StepperY_backup.TimerControlRegister);
   83              		.loc 1 88 0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 4
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccJTarAX.s 			page 4
 
 
   84 0010 6079     		ldrb	r0, [r4, #5]	@ zero_extendqisi2
@@ -189,7 +189,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
   89              		.align	2
   90              	.L7:
   91 0018 00000000 		.word	.LANCHOR0
-  92 001c 87650040 		.word	1073767815
+  92 001c 89640040 		.word	1073767561
   93              		.cfi_endproc
   94              	.LFE1:
   95              		.size	Timer_StepperY_RestoreConfig, .-Timer_StepperY_RestoreConfig
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
  115:Generated_Source\PSoC5/Timer_StepperY_PM.c ****         /* Save Counter's enable state */
  116:Generated_Source\PSoC5/Timer_StepperY_PM.c ****         if(Timer_StepperY_CTRL_ENABLE == (Timer_StepperY_CONTROL & Timer_StepperY_CTRL_ENABLE))
  112              		.loc 1 116 0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 5
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccJTarAX.s 			page 5
 
 
  113 0002 084B     		ldr	r3, .L13
@@ -278,7 +278,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
  135              	.L14:
  136              		.align	2
  137              	.L13:
- 138 0024 76650040 		.word	1073767798
+ 138 0024 79640040 		.word	1073767545
  139 0028 00000000 		.word	.LANCHOR0
  140              		.cfi_endproc
  141              	.LFE2:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
  133:Generated_Source\PSoC5/Timer_StepperY_PM.c **** * Function Name: Timer_StepperY_Wakeup
  134:Generated_Source\PSoC5/Timer_StepperY_PM.c **** ********************************************************************************
  135:Generated_Source\PSoC5/Timer_StepperY_PM.c **** *
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 6
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccJTarAX.s 			page 6
 
 
  136:Generated_Source\PSoC5/Timer_StepperY_PM.c **** * Summary:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
  184              	Timer_StepperY_backup:
  185 0000 00000000 		.space	6
  185      0000
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 7
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccJTarAX.s 			page 7
 
 
  186              		.text
@@ -374,15 +374,15 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
  196 000b 01       		.uleb128 0x1
  197 000c B9000000 		.4byte	.LASF32
  198 0010 0C       		.byte	0xc
- 199 0011 2F020000 		.4byte	.LASF33
- 200 0015 C1010000 		.4byte	.LASF34
+ 199 0011 12020000 		.4byte	.LASF33
+ 200 0015 88010000 		.4byte	.LASF34
  201 0019 00000000 		.4byte	.Ldebug_ranges0+0
  202 001d 00000000 		.4byte	0
  203 0021 00000000 		.4byte	.Ldebug_line0
  204 0025 02       		.uleb128 0x2
  205 0026 01       		.byte	0x1
  206 0027 06       		.byte	0x6
- 207 0028 18030000 		.4byte	.LASF0
+ 207 0028 FB020000 		.4byte	.LASF0
  208 002c 02       		.uleb128 0x2
  209 002d 01       		.byte	0x1
  210 002e 08       		.byte	0x8
@@ -390,7 +390,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
  212 0033 02       		.uleb128 0x2
  213 0034 02       		.byte	0x2
  214 0035 05       		.byte	0x5
- 215 0036 B5020000 		.4byte	.LASF2
+ 215 0036 98020000 		.4byte	.LASF2
  216 003a 02       		.uleb128 0x2
  217 003b 02       		.byte	0x2
  218 003c 07       		.byte	0x7
@@ -398,7 +398,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
  220 0041 02       		.uleb128 0x2
  221 0042 04       		.byte	0x4
  222 0043 05       		.byte	0x5
- 223 0044 E9020000 		.4byte	.LASF4
+ 223 0044 CC020000 		.4byte	.LASF4
  224 0048 02       		.uleb128 0x2
  225 0049 04       		.byte	0x4
  226 004a 07       		.byte	0x7
@@ -406,11 +406,11 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
  228 004f 02       		.uleb128 0x2
  229 0050 08       		.byte	0x8
  230 0051 05       		.byte	0x5
- 231 0052 86020000 		.4byte	.LASF6
+ 231 0052 69020000 		.4byte	.LASF6
  232 0056 02       		.uleb128 0x2
  233 0057 08       		.byte	0x8
  234 0058 07       		.byte	0x7
- 235 0059 95010000 		.4byte	.LASF7
+ 235 0059 E6010000 		.4byte	.LASF7
  236 005d 03       		.uleb128 0x3
  237 005e 04       		.byte	0x4
  238 005f 05       		.byte	0x5
@@ -418,10 +418,10 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
  240 0064 02       		.uleb128 0x2
  241 0065 04       		.byte	0x4
  242 0066 07       		.byte	0x7
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 8
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccJTarAX.s 			page 8
 
 
- 243 0067 88010000 		.4byte	.LASF8
+ 243 0067 D9010000 		.4byte	.LASF8
  244 006b 04       		.uleb128 0x4
  245 006c 5E010000 		.4byte	.LASF9
  246 0070 02       		.byte	0x2
@@ -443,7 +443,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
  262 0091 02       		.uleb128 0x2
  263 0092 01       		.byte	0x1
  264 0093 08       		.byte	0x8
- 265 0094 94020000 		.4byte	.LASF13
+ 265 0094 77020000 		.4byte	.LASF13
  266 0098 04       		.uleb128 0x4
  267 0099 47010000 		.4byte	.LASF14
  268 009d 02       		.byte	0x2
@@ -454,11 +454,11 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
  273 00a9 02       		.uleb128 0x2
  274 00aa 08       		.byte	0x8
  275 00ab 04       		.byte	0x4
- 276 00ac F2020000 		.4byte	.LASF15
+ 276 00ac D5020000 		.4byte	.LASF15
  277 00b0 02       		.uleb128 0x2
  278 00b1 04       		.byte	0x4
  279 00b2 07       		.byte	0x7
- 280 00b3 5A020000 		.4byte	.LASF16
+ 280 00b3 3D020000 		.4byte	.LASF16
  281 00b7 06       		.uleb128 0x6
  282 00b8 06       		.byte	0x6
  283 00b9 03       		.byte	0x3
@@ -477,8 +477,8 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
  296 00d2 77000000 		.4byte	0x77
  297 00d6 02       		.byte	0x2
  298 00d7 07       		.uleb128 0x7
- 299 00d8 3A030000 		.4byte	.LASF19
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 9
+ 299 00d8 1D030000 		.4byte	.LASF19
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccJTarAX.s 			page 9
 
 
  300 00dc 03       		.byte	0x3
@@ -486,7 +486,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
  302 00de 6B000000 		.4byte	0x6b
  303 00e2 04       		.byte	0x4
  304 00e3 07       		.uleb128 0x7
- 305 00e4 4D030000 		.4byte	.LASF20
+ 305 00e4 30030000 		.4byte	.LASF20
  306 00e8 03       		.byte	0x3
  307 00e9 4F       		.byte	0x4f
  308 00ea 6B000000 		.4byte	0x6b
@@ -498,7 +498,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
  314 00f6 53       		.byte	0x53
  315 00f7 B7000000 		.4byte	0xb7
  316 00fb 09       		.uleb128 0x9
- 317 00fc FE020000 		.4byte	.LASF22
+ 317 00fc E1020000 		.4byte	.LASF22
  318 0100 01       		.byte	0x1
  319 0101 2B       		.byte	0x2b
  320 0102 00000000 		.4byte	.LFB0
@@ -530,7 +530,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
  346 0146 CD010000 		.4byte	0x1cd
  347 014a 00       		.byte	0
  348 014b 09       		.uleb128 0x9
- 349 014c AC010000 		.4byte	.LASF24
+ 349 014c FD010000 		.4byte	.LASF24
  350 0150 01       		.byte	0x1
  351 0151 70       		.byte	0x70
  352 0152 00000000 		.4byte	.LFB2
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
  354 015a 01       		.uleb128 0x1
  355 015b 9C       		.byte	0x9c
  356 015c 73010000 		.4byte	0x173
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 10
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccJTarAX.s 			page 10
 
 
  357 0160 0A       		.uleb128 0xa
@@ -565,7 +565,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
  378 0196 E3010000 		.4byte	0x1e3
  379 019a 00       		.byte	0
  380 019b 0B       		.uleb128 0xb
- 381 019c 24030000 		.4byte	.LASF35
+ 381 019c 07030000 		.4byte	.LASF35
  382 01a0 01       		.byte	0x1
  383 01a1 15       		.byte	0x15
  384 01a2 F0000000 		.4byte	0xf0
@@ -578,13 +578,13 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
  391 01b5 03       		.byte	0x3
  392 01b6 69       		.byte	0x69
  393 01b7 0C       		.uleb128 0xc
- 394 01b8 63020000 		.4byte	.LASF27
- 395 01bc 63020000 		.4byte	.LASF27
+ 394 01b8 46020000 		.4byte	.LASF27
+ 395 01bc 46020000 		.4byte	.LASF27
  396 01c0 03       		.byte	0x3
  397 01c1 63       		.byte	0x63
  398 01c2 0C       		.uleb128 0xc
- 399 01c3 99020000 		.4byte	.LASF28
- 400 01c7 99020000 		.4byte	.LASF28
+ 399 01c3 7C020000 		.4byte	.LASF28
+ 400 01c7 7C020000 		.4byte	.LASF28
  401 01cb 03       		.byte	0x3
  402 01cc 6A       		.byte	0x6a
  403 01cd 0C       		.uleb128 0xc
@@ -593,16 +593,16 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
  406 01d6 03       		.byte	0x3
  407 01d7 64       		.byte	0x64
  408 01d8 0C       		.uleb128 0xc
- 409 01d9 D5020000 		.4byte	.LASF30
- 410 01dd D5020000 		.4byte	.LASF30
+ 409 01d9 B8020000 		.4byte	.LASF30
+ 410 01dd B8020000 		.4byte	.LASF30
  411 01e1 03       		.byte	0x3
  412 01e2 5B       		.byte	0x5b
  413 01e3 0C       		.uleb128 0xc
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 11
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccJTarAX.s 			page 11
 
 
- 414 01e4 BF020000 		.4byte	.LASF31
- 415 01e8 BF020000 		.4byte	.LASF31
+ 414 01e4 A2020000 		.4byte	.LASF31
+ 415 01e8 A2020000 		.4byte	.LASF31
  416 01ec 03       		.byte	0x3
  417 01ed 8B       		.byte	0x8b
  418 01ee 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
  468 002f 0B       		.uleb128 0xb
  469 0030 3B       		.uleb128 0x3b
  470 0031 05       		.uleb128 0x5
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 12
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccJTarAX.s 			page 12
 
 
  471 0032 49       		.uleb128 0x49
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
  525 0068 01       		.byte	0x1
  526 0069 3F       		.uleb128 0x3f
  527 006a 19       		.uleb128 0x19
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 13
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccJTarAX.s 			page 13
 
 
  528 006b 03       		.uleb128 0x3
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
  582 00a4 0E       		.uleb128 0xe
  583 00a5 3A       		.uleb128 0x3a
  584 00a6 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 14
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccJTarAX.s 			page 14
 
 
  585 00a7 3B       		.uleb128 0x3b
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
  627              	.LASF23:
  628 002c 54696D65 		.ascii	"Timer_StepperY_RestoreConfig\000"
  628      725F5374 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 15
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccJTarAX.s 			page 15
 
 
  628      65707065 
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
  648      20756E73 
  648      69676E65 
  648      6420696E 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 16
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccJTarAX.s 			page 16
 
 
  648      7400
@@ -917,124 +917,120 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 1
  656      65707065 
  656      72595F57 
  656      616B6575 
- 657              	.LASF8:
- 658 0188 756E7369 		.ascii	"unsigned int\000"
- 658      676E6564 
- 658      20696E74 
- 658      00
- 659              	.LASF7:
- 660 0195 6C6F6E67 		.ascii	"long long unsigned int\000"
- 660      206C6F6E 
- 660      6720756E 
- 660      7369676E 
- 660      65642069 
- 661              	.LASF24:
- 662 01ac 54696D65 		.ascii	"Timer_StepperY_Sleep\000"
- 662      725F5374 
- 662      65707065 
- 662      72595F53 
- 662      6C656570 
- 663              	.LASF34:
- 664 01c1 443A5C4F 		.ascii	"D:\\OneDrive - Aarhus Universitet\\Aarhus Universit"
- 664      6E654472 
- 664      69766520 
- 664      2D204161 
- 664      72687573 
- 665 01f2 65745C45 		.ascii	"et\\E3\\E3PRJ\\I3E3PRJ_Repo\\PSoCcontroller\\PSoCco"
- 665      335C4533 
- 665      50524A5C 
- 665      49334533 
- 665      50524A5F 
- 666 0220 6E74726F 		.ascii	"ntroller.cydsn\000"
- 666      6C6C6572 
- 666      2E637964 
- 666      736E00
- 667              	.LASF33:
- 668 022f 47656E65 		.ascii	"Generated_Source\\PSoC5\\Timer_StepperY_PM.c\000"
- 668      72617465 
- 668      645F536F 
- 668      75726365 
- 668      5C50536F 
- 669              	.LASF16:
- 670 025a 73697A65 		.ascii	"sizetype\000"
- 670      74797065 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 17
+ 657              	.LASF34:
+ 658 0188 433A5C55 		.ascii	"C:\\Users\\midtg\\Documents\\GitHub\\I3E3PRJ_Repo\\"
+ 658      73657273 
+ 658      5C6D6964 
+ 658      74675C44 
+ 658      6F63756D 
+ 659 01b5 50536F43 		.ascii	"PSoCcontroller\\PSoCcontroller.cydsn\000"
+ 659      636F6E74 
+ 659      726F6C6C 
+ 659      65725C50 
+ 659      536F4363 
+ 660              	.LASF8:
+ 661 01d9 756E7369 		.ascii	"unsigned int\000"
+ 661      676E6564 
+ 661      20696E74 
+ 661      00
+ 662              	.LASF7:
+ 663 01e6 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 663      206C6F6E 
+ 663      6720756E 
+ 663      7369676E 
+ 663      65642069 
+ 664              	.LASF24:
+ 665 01fd 54696D65 		.ascii	"Timer_StepperY_Sleep\000"
+ 665      725F5374 
+ 665      65707065 
+ 665      72595F53 
+ 665      6C656570 
+ 666              	.LASF33:
+ 667 0212 47656E65 		.ascii	"Generated_Source\\PSoC5\\Timer_StepperY_PM.c\000"
+ 667      72617465 
+ 667      645F536F 
+ 667      75726365 
+ 667      5C50536F 
+ 668              	.LASF16:
+ 669 023d 73697A65 		.ascii	"sizetype\000"
+ 669      74797065 
+ 669      00
+ 670              	.LASF27:
+ 671 0246 54696D65 		.ascii	"Timer_StepperY_ReadControlRegister\000"
+ 671      725F5374 
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccJTarAX.s 			page 17
 
 
- 670      00
- 671              	.LASF27:
- 672 0263 54696D65 		.ascii	"Timer_StepperY_ReadControlRegister\000"
- 672      725F5374 
- 672      65707065 
- 672      72595F52 
- 672      65616443 
- 673              	.LASF6:
- 674 0286 6C6F6E67 		.ascii	"long long int\000"
- 674      206C6F6E 
- 674      6720696E 
- 674      7400
- 675              	.LASF13:
- 676 0294 63686172 		.ascii	"char\000"
- 676      00
- 677              	.LASF28:
- 678 0299 54696D65 		.ascii	"Timer_StepperY_WriteCounter\000"
- 678      725F5374 
- 678      65707065 
- 678      72595F57 
- 678      72697465 
- 679              	.LASF2:
- 680 02b5 73686F72 		.ascii	"short int\000"
- 680      7420696E 
- 680      7400
- 681              	.LASF31:
- 682 02bf 54696D65 		.ascii	"Timer_StepperY_Enable\000"
- 682      725F5374 
- 682      65707065 
- 682      72595F45 
- 682      6E61626C 
- 683              	.LASF30:
- 684 02d5 54696D65 		.ascii	"Timer_StepperY_Stop\000"
- 684      725F5374 
- 684      65707065 
- 684      72595F53 
- 684      746F7000 
- 685              	.LASF4:
- 686 02e9 6C6F6E67 		.ascii	"long int\000"
- 686      20696E74 
- 686      00
- 687              	.LASF15:
- 688 02f2 6C6F6E67 		.ascii	"long double\000"
- 688      20646F75 
- 688      626C6500 
- 689              	.LASF22:
- 690 02fe 54696D65 		.ascii	"Timer_StepperY_SaveConfig\000"
- 690      725F5374 
- 690      65707065 
- 690      72595F53 
- 690      61766543 
- 691              	.LASF0:
- 692 0318 7369676E 		.ascii	"signed char\000"
- 692      65642063 
- 692      68617200 
- 693              	.LASF35:
- 694 0324 54696D65 		.ascii	"Timer_StepperY_backup\000"
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccEf0uQE.s 			page 18
+ 671      65707065 
+ 671      72595F52 
+ 671      65616443 
+ 672              	.LASF6:
+ 673 0269 6C6F6E67 		.ascii	"long long int\000"
+ 673      206C6F6E 
+ 673      6720696E 
+ 673      7400
+ 674              	.LASF13:
+ 675 0277 63686172 		.ascii	"char\000"
+ 675      00
+ 676              	.LASF28:
+ 677 027c 54696D65 		.ascii	"Timer_StepperY_WriteCounter\000"
+ 677      725F5374 
+ 677      65707065 
+ 677      72595F57 
+ 677      72697465 
+ 678              	.LASF2:
+ 679 0298 73686F72 		.ascii	"short int\000"
+ 679      7420696E 
+ 679      7400
+ 680              	.LASF31:
+ 681 02a2 54696D65 		.ascii	"Timer_StepperY_Enable\000"
+ 681      725F5374 
+ 681      65707065 
+ 681      72595F45 
+ 681      6E61626C 
+ 682              	.LASF30:
+ 683 02b8 54696D65 		.ascii	"Timer_StepperY_Stop\000"
+ 683      725F5374 
+ 683      65707065 
+ 683      72595F53 
+ 683      746F7000 
+ 684              	.LASF4:
+ 685 02cc 6C6F6E67 		.ascii	"long int\000"
+ 685      20696E74 
+ 685      00
+ 686              	.LASF15:
+ 687 02d5 6C6F6E67 		.ascii	"long double\000"
+ 687      20646F75 
+ 687      626C6500 
+ 688              	.LASF22:
+ 689 02e1 54696D65 		.ascii	"Timer_StepperY_SaveConfig\000"
+ 689      725F5374 
+ 689      65707065 
+ 689      72595F53 
+ 689      61766543 
+ 690              	.LASF0:
+ 691 02fb 7369676E 		.ascii	"signed char\000"
+ 691      65642063 
+ 691      68617200 
+ 692              	.LASF35:
+ 693 0307 54696D65 		.ascii	"Timer_StepperY_backup\000"
+ 693      725F5374 
+ 693      65707065 
+ 693      72595F62 
+ 693      61636B75 
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccJTarAX.s 			page 18
 
 
- 694      725F5374 
- 694      65707065 
- 694      72595F62 
- 694      61636B75 
- 695              	.LASF19:
- 696 033a 496E7465 		.ascii	"InterruptMaskValue\000"
- 696      72727570 
- 696      744D6173 
- 696      6B56616C 
- 696      756500
- 697              	.LASF20:
- 698 034d 54696D65 		.ascii	"TimerControlRegister\000"
- 698      72436F6E 
- 698      74726F6C 
- 698      52656769 
- 698      73746572 
- 699              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 694              	.LASF19:
+ 695 031d 496E7465 		.ascii	"InterruptMaskValue\000"
+ 695      72727570 
+ 695      744D6173 
+ 695      6B56616C 
+ 695      756500
+ 696              	.LASF20:
+ 697 0330 54696D65 		.ascii	"TimerControlRegister\000"
+ 697      72436F6E 
+ 697      74726F6C 
+ 697      52656769 
+ 697      73746572 
+ 698              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

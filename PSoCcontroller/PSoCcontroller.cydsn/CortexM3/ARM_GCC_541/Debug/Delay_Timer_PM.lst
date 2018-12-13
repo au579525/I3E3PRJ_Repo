@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccNy1eYx.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
   28:Generated_Source\PSoC5/Delay_Timer_PM.c **** * Summary:
   29:Generated_Source\PSoC5/Delay_Timer_PM.c **** *     Save the current user configuration
   30:Generated_Source\PSoC5/Delay_Timer_PM.c **** *
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 2
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccNy1eYx.s 			page 2
 
 
   31:Generated_Source\PSoC5/Delay_Timer_PM.c **** * Parameters:
@@ -110,7 +110,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
   51              		.align	2
   52              	.L3:
   53 0018 00000000 		.word	.LANCHOR0
-  54 001c 85640040 		.word	1073767557
+  54 001c 8D640040 		.word	1073767565
   55              		.cfi_endproc
   56              	.LFE0:
   57              		.size	Delay_Timer_SaveConfig, .-Delay_Timer_SaveConfig
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
   59              		.align	2
   60              		.global	Delay_Timer_RestoreConfig
   61              		.thumb
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 3
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccNy1eYx.s 			page 3
 
 
   62              		.thumb_func
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
   87:Generated_Source\PSoC5/Delay_Timer_PM.c ****         #if(!Delay_Timer_UDB_CONTROL_REG_REMOVED)
   88:Generated_Source\PSoC5/Delay_Timer_PM.c ****             Delay_Timer_WriteControlRegister(Delay_Timer_backup.TimerControlRegister);
   83              		.loc 1 88 0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 4
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccNy1eYx.s 			page 4
 
 
   84 0010 6079     		ldrb	r0, [r4, #5]	@ zero_extendqisi2
@@ -189,7 +189,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
   89              		.align	2
   90              	.L7:
   91 0018 00000000 		.word	.LANCHOR0
-  92 001c 85640040 		.word	1073767557
+  92 001c 8D640040 		.word	1073767565
   93              		.cfi_endproc
   94              	.LFE1:
   95              		.size	Delay_Timer_RestoreConfig, .-Delay_Timer_RestoreConfig
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
  115:Generated_Source\PSoC5/Delay_Timer_PM.c ****         /* Save Counter's enable state */
  116:Generated_Source\PSoC5/Delay_Timer_PM.c ****         if(Delay_Timer_CTRL_ENABLE == (Delay_Timer_CONTROL & Delay_Timer_CTRL_ENABLE))
  112              		.loc 1 116 0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 5
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccNy1eYx.s 			page 5
 
 
  113 0002 084B     		ldr	r3, .L13
@@ -278,7 +278,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
  135              	.L14:
  136              		.align	2
  137              	.L13:
- 138 0024 74640040 		.word	1073767540
+ 138 0024 7D640040 		.word	1073767549
  139 0028 00000000 		.word	.LANCHOR0
  140              		.cfi_endproc
  141              	.LFE2:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
  133:Generated_Source\PSoC5/Delay_Timer_PM.c **** * Function Name: Delay_Timer_Wakeup
  134:Generated_Source\PSoC5/Delay_Timer_PM.c **** ********************************************************************************
  135:Generated_Source\PSoC5/Delay_Timer_PM.c **** *
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 6
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccNy1eYx.s 			page 6
 
 
  136:Generated_Source\PSoC5/Delay_Timer_PM.c **** * Summary:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
  184              	Delay_Timer_backup:
  185 0000 00000000 		.space	6
  185      0000
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 7
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccNy1eYx.s 			page 7
 
 
  186              		.text
@@ -375,14 +375,14 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
  197 000c B4000000 		.4byte	.LASF32
  198 0010 0C       		.byte	0xc
  199 0011 5F010000 		.4byte	.LASF33
- 200 0015 20020000 		.4byte	.LASF34
+ 200 0015 CF010000 		.4byte	.LASF34
  201 0019 00000000 		.4byte	.Ldebug_ranges0+0
  202 001d 00000000 		.4byte	0
  203 0021 00000000 		.4byte	.Ldebug_line0
  204 0025 02       		.uleb128 0x2
  205 0026 01       		.byte	0x1
  206 0027 06       		.byte	0x6
- 207 0028 DB020000 		.4byte	.LASF0
+ 207 0028 BE020000 		.4byte	.LASF0
  208 002c 02       		.uleb128 0x2
  209 002d 01       		.byte	0x1
  210 002e 08       		.byte	0x8
@@ -390,7 +390,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
  212 0033 02       		.uleb128 0x2
  213 0034 02       		.byte	0x2
  214 0035 05       		.byte	0x5
- 215 0036 BC020000 		.4byte	.LASF2
+ 215 0036 9F020000 		.4byte	.LASF2
  216 003a 02       		.uleb128 0x2
  217 003b 02       		.byte	0x2
  218 003c 07       		.byte	0x7
@@ -398,7 +398,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
  220 0041 02       		.uleb128 0x2
  221 0042 04       		.byte	0x4
  222 0043 05       		.byte	0x5
- 223 0044 C6020000 		.4byte	.LASF4
+ 223 0044 A9020000 		.4byte	.LASF4
  224 0048 02       		.uleb128 0x2
  225 0049 04       		.byte	0x4
  226 004a 07       		.byte	0x7
@@ -406,11 +406,11 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
  228 004f 02       		.uleb128 0x2
  229 0050 08       		.byte	0x8
  230 0051 05       		.byte	0x5
- 231 0052 A9020000 		.4byte	.LASF6
+ 231 0052 8C020000 		.4byte	.LASF6
  232 0056 02       		.uleb128 0x2
  233 0057 08       		.byte	0x8
  234 0058 07       		.byte	0x7
- 235 0059 F6010000 		.4byte	.LASF7
+ 235 0059 47020000 		.4byte	.LASF7
  236 005d 03       		.uleb128 0x3
  237 005e 04       		.byte	0x4
  238 005f 05       		.byte	0x5
@@ -418,10 +418,10 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
  240 0064 02       		.uleb128 0x2
  241 0065 04       		.byte	0x4
  242 0066 07       		.byte	0x7
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 8
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccNy1eYx.s 			page 8
 
 
- 243 0067 CF010000 		.4byte	.LASF8
+ 243 0067 20020000 		.4byte	.LASF8
  244 006b 04       		.uleb128 0x4
  245 006c 59010000 		.4byte	.LASF9
  246 0070 02       		.byte	0x2
@@ -443,7 +443,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
  262 0091 02       		.uleb128 0x2
  263 0092 01       		.byte	0x1
  264 0093 08       		.byte	0x8
- 265 0094 B7020000 		.4byte	.LASF13
+ 265 0094 9A020000 		.4byte	.LASF13
  266 0098 04       		.uleb128 0x4
  267 0099 42010000 		.4byte	.LASF14
  268 009d 02       		.byte	0x2
@@ -454,11 +454,11 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
  273 00a9 02       		.uleb128 0x2
  274 00aa 08       		.byte	0x8
  275 00ab 04       		.byte	0x4
- 276 00ac CF020000 		.4byte	.LASF15
+ 276 00ac B2020000 		.4byte	.LASF15
  277 00b0 02       		.uleb128 0x2
  278 00b1 04       		.byte	0x4
  279 00b2 07       		.byte	0x7
- 280 00b3 A0020000 		.4byte	.LASF16
+ 280 00b3 83020000 		.4byte	.LASF16
  281 00b7 06       		.uleb128 0x6
  282 00b8 06       		.byte	0x6
  283 00b9 03       		.byte	0x3
@@ -477,8 +477,8 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
  296 00d2 77000000 		.4byte	0x77
  297 00d6 02       		.byte	0x2
  298 00d7 07       		.uleb128 0x7
- 299 00d8 13030000 		.4byte	.LASF19
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 9
+ 299 00d8 F6020000 		.4byte	.LASF19
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccNy1eYx.s 			page 9
 
 
  300 00dc 03       		.byte	0x3
@@ -486,14 +486,14 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
  302 00de 6B000000 		.4byte	0x6b
  303 00e2 04       		.byte	0x4
  304 00e3 07       		.uleb128 0x7
- 305 00e4 26030000 		.4byte	.LASF20
+ 305 00e4 09030000 		.4byte	.LASF20
  306 00e8 03       		.byte	0x3
  307 00e9 4F       		.byte	0x4f
  308 00ea 6B000000 		.4byte	0x6b
  309 00ee 05       		.byte	0x5
  310 00ef 00       		.byte	0
  311 00f0 08       		.uleb128 0x8
- 312 00f1 FA020000 		.4byte	.LASF21
+ 312 00f1 DD020000 		.4byte	.LASF21
  313 00f5 03       		.byte	0x3
  314 00f6 53       		.byte	0x53
  315 00f7 B7000000 		.4byte	0xb7
@@ -514,7 +514,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
  330 011e B7010000 		.4byte	0x1b7
  331 0122 00       		.byte	0
  332 0123 09       		.uleb128 0x9
- 333 0124 DC010000 		.4byte	.LASF23
+ 333 0124 2D020000 		.4byte	.LASF23
  334 0128 01       		.byte	0x1
  335 0129 4D       		.byte	0x4d
  336 012a 00000000 		.4byte	.LFB1
@@ -530,7 +530,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
  346 0146 CD010000 		.4byte	0x1cd
  347 014a 00       		.byte	0
  348 014b 09       		.uleb128 0x9
- 349 014c 8E020000 		.4byte	.LASF24
+ 349 014c 71020000 		.4byte	.LASF24
  350 0150 01       		.byte	0x1
  351 0151 70       		.byte	0x70
  352 0152 00000000 		.4byte	.LFB2
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
  354 015a 01       		.uleb128 0x1
  355 015b 9C       		.byte	0x9c
  356 015c 73010000 		.4byte	0x173
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 10
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccNy1eYx.s 			page 10
 
 
  357 0160 0A       		.uleb128 0xa
@@ -565,7 +565,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
  378 0196 E3010000 		.4byte	0x1e3
  379 019a 00       		.byte	0
  380 019b 0B       		.uleb128 0xb
- 381 019c E7020000 		.4byte	.LASF35
+ 381 019c CA020000 		.4byte	.LASF35
  382 01a0 01       		.byte	0x1
  383 01a1 15       		.byte	0x15
  384 01a2 F0000000 		.4byte	0xf0
@@ -598,11 +598,11 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
  411 01e1 03       		.byte	0x3
  412 01e2 5B       		.byte	0x5b
  413 01e3 0C       		.uleb128 0xc
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 11
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccNy1eYx.s 			page 11
 
 
- 414 01e4 0D020000 		.4byte	.LASF31
- 415 01e8 0D020000 		.4byte	.LASF31
+ 414 01e4 5E020000 		.4byte	.LASF31
+ 415 01e8 5E020000 		.4byte	.LASF31
  416 01ec 03       		.byte	0x3
  417 01ed 8B       		.byte	0x8b
  418 01ee 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
  468 002f 0B       		.uleb128 0xb
  469 0030 3B       		.uleb128 0x3b
  470 0031 05       		.uleb128 0x5
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 12
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccNy1eYx.s 			page 12
 
 
  471 0032 49       		.uleb128 0x49
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
  525 0068 01       		.byte	0x1
  526 0069 3F       		.uleb128 0x3f
  527 006a 19       		.uleb128 0x19
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 13
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccNy1eYx.s 			page 13
 
 
  528 006b 03       		.uleb128 0x3
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
  582 00a4 0E       		.uleb128 0xe
  583 00a5 3A       		.uleb128 0x3a
  584 00a6 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 14
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccNy1eYx.s 			page 14
 
 
  585 00a7 3B       		.uleb128 0x3b
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
  627              	.LASF30:
  628 0029 44656C61 		.ascii	"Delay_Timer_Stop\000"
  628      795F5469 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 15
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccNy1eYx.s 			page 15
 
 
  628      6D65725F 
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
  646      74696F6E 
  647              	.LASF14:
  648 0142 72656738 		.ascii	"reg8\000"
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 16
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccNy1eYx.s 			page 16
 
 
  648      00
@@ -935,106 +935,102 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 1
  662      6D65725F 
  662      57726974 
  662      65436F75 
- 663              	.LASF8:
- 664 01cf 756E7369 		.ascii	"unsigned int\000"
- 664      676E6564 
- 664      20696E74 
- 664      00
- 665              	.LASF23:
- 666 01dc 44656C61 		.ascii	"Delay_Timer_RestoreConfig\000"
- 666      795F5469 
- 666      6D65725F 
- 666      52657374 
- 666      6F726543 
- 667              	.LASF7:
- 668 01f6 6C6F6E67 		.ascii	"long long unsigned int\000"
- 668      206C6F6E 
- 668      6720756E 
- 668      7369676E 
- 668      65642069 
- 669              	.LASF31:
- 670 020d 44656C61 		.ascii	"Delay_Timer_Enable\000"
- 670      795F5469 
- 670      6D65725F 
- 670      456E6162 
- 670      6C6500
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 17
+ 663              	.LASF34:
+ 664 01cf 433A5C55 		.ascii	"C:\\Users\\midtg\\Documents\\GitHub\\I3E3PRJ_Repo\\"
+ 664      73657273 
+ 664      5C6D6964 
+ 664      74675C44 
+ 664      6F63756D 
+ 665 01fc 50536F43 		.ascii	"PSoCcontroller\\PSoCcontroller.cydsn\000"
+ 665      636F6E74 
+ 665      726F6C6C 
+ 665      65725C50 
+ 665      536F4363 
+ 666              	.LASF8:
+ 667 0220 756E7369 		.ascii	"unsigned int\000"
+ 667      676E6564 
+ 667      20696E74 
+ 667      00
+ 668              	.LASF23:
+ 669 022d 44656C61 		.ascii	"Delay_Timer_RestoreConfig\000"
+ 669      795F5469 
+ 669      6D65725F 
+ 669      52657374 
+ 669      6F726543 
+ 670              	.LASF7:
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccNy1eYx.s 			page 17
 
 
- 671              	.LASF34:
- 672 0220 443A5C4F 		.ascii	"D:\\OneDrive - Aarhus Universitet\\Aarhus Universit"
- 672      6E654472 
- 672      69766520 
- 672      2D204161 
- 672      72687573 
- 673 0251 65745C45 		.ascii	"et\\E3\\E3PRJ\\I3E3PRJ_Repo\\PSoCcontroller\\PSoCco"
- 673      335C4533 
- 673      50524A5C 
- 673      49334533 
- 673      50524A5F 
- 674 027f 6E74726F 		.ascii	"ntroller.cydsn\000"
- 674      6C6C6572 
- 674      2E637964 
- 674      736E00
- 675              	.LASF24:
- 676 028e 44656C61 		.ascii	"Delay_Timer_Sleep\000"
- 676      795F5469 
- 676      6D65725F 
- 676      536C6565 
- 676      7000
- 677              	.LASF16:
- 678 02a0 73697A65 		.ascii	"sizetype\000"
- 678      74797065 
- 678      00
- 679              	.LASF6:
- 680 02a9 6C6F6E67 		.ascii	"long long int\000"
- 680      206C6F6E 
- 680      6720696E 
- 680      7400
- 681              	.LASF13:
- 682 02b7 63686172 		.ascii	"char\000"
- 682      00
- 683              	.LASF2:
- 684 02bc 73686F72 		.ascii	"short int\000"
- 684      7420696E 
- 684      7400
- 685              	.LASF4:
- 686 02c6 6C6F6E67 		.ascii	"long int\000"
- 686      20696E74 
- 686      00
- 687              	.LASF15:
- 688 02cf 6C6F6E67 		.ascii	"long double\000"
- 688      20646F75 
- 688      626C6500 
- 689              	.LASF0:
- 690 02db 7369676E 		.ascii	"signed char\000"
- 690      65642063 
- 690      68617200 
- 691              	.LASF35:
- 692 02e7 44656C61 		.ascii	"Delay_Timer_backup\000"
- 692      795F5469 
- 692      6D65725F 
- 692      6261636B 
- 692      757000
- 693              	.LASF21:
- 694 02fa 44656C61 		.ascii	"Delay_Timer_backupStruct\000"
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cc7fgCmb.s 			page 18
+ 671 0247 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 671      206C6F6E 
+ 671      6720756E 
+ 671      7369676E 
+ 671      65642069 
+ 672              	.LASF31:
+ 673 025e 44656C61 		.ascii	"Delay_Timer_Enable\000"
+ 673      795F5469 
+ 673      6D65725F 
+ 673      456E6162 
+ 673      6C6500
+ 674              	.LASF24:
+ 675 0271 44656C61 		.ascii	"Delay_Timer_Sleep\000"
+ 675      795F5469 
+ 675      6D65725F 
+ 675      536C6565 
+ 675      7000
+ 676              	.LASF16:
+ 677 0283 73697A65 		.ascii	"sizetype\000"
+ 677      74797065 
+ 677      00
+ 678              	.LASF6:
+ 679 028c 6C6F6E67 		.ascii	"long long int\000"
+ 679      206C6F6E 
+ 679      6720696E 
+ 679      7400
+ 680              	.LASF13:
+ 681 029a 63686172 		.ascii	"char\000"
+ 681      00
+ 682              	.LASF2:
+ 683 029f 73686F72 		.ascii	"short int\000"
+ 683      7420696E 
+ 683      7400
+ 684              	.LASF4:
+ 685 02a9 6C6F6E67 		.ascii	"long int\000"
+ 685      20696E74 
+ 685      00
+ 686              	.LASF15:
+ 687 02b2 6C6F6E67 		.ascii	"long double\000"
+ 687      20646F75 
+ 687      626C6500 
+ 688              	.LASF0:
+ 689 02be 7369676E 		.ascii	"signed char\000"
+ 689      65642063 
+ 689      68617200 
+ 690              	.LASF35:
+ 691 02ca 44656C61 		.ascii	"Delay_Timer_backup\000"
+ 691      795F5469 
+ 691      6D65725F 
+ 691      6261636B 
+ 691      757000
+ 692              	.LASF21:
+ 693 02dd 44656C61 		.ascii	"Delay_Timer_backupStruct\000"
+ 693      795F5469 
+ 693      6D65725F 
+ 693      6261636B 
+ 693      75705374 
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccNy1eYx.s 			page 18
 
 
- 694      795F5469 
- 694      6D65725F 
- 694      6261636B 
- 694      75705374 
- 695              	.LASF19:
- 696 0313 496E7465 		.ascii	"InterruptMaskValue\000"
- 696      72727570 
- 696      744D6173 
- 696      6B56616C 
- 696      756500
- 697              	.LASF20:
- 698 0326 54696D65 		.ascii	"TimerControlRegister\000"
- 698      72436F6E 
- 698      74726F6C 
- 698      52656769 
- 698      73746572 
- 699              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 694              	.LASF19:
+ 695 02f6 496E7465 		.ascii	"InterruptMaskValue\000"
+ 695      72727570 
+ 695      744D6173 
+ 695      6B56616C 
+ 695      756500
+ 696              	.LASF20:
+ 697 0309 54696D65 		.ascii	"TimerControlRegister\000"
+ 697      72436F6E 
+ 697      74726F6C 
+ 697      52656769 
+ 697      73746572 
+ 698              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

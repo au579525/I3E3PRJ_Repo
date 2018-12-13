@@ -271,6 +271,7 @@
       <Data key="9bfd57f6-97a9-4661-8028-8d925fabfe1a" value="Slave_clk" />
       <Data key="9d936231-9718-4d96-86dc-f2b151a9d077/16a808f6-2e13-45b9-bce0-b001c8655113" value="ADC_SAR_WaSens_Bypass" />
       <Data key="11eccb95-eecf-48c3-9764-c925c8170114" value="Pin_WaterPump" />
+      <Data key="23b924c0-be73-4362-a4a8-df9ce4ffc7bd" value="Pin_2" />
       <Data key="89adcf46-424b-439a-84de-980d862d0314" value="Pin_Low_WL" />
       <Data key="89b4142f-bc3b-445f-a880-5e6a7a21e10d" value="Pin_X1" />
       <Data key="500fe15a-f51b-497f-b4ce-870b9a120654" value="Pin_ADC_WaSens" />
@@ -3528,6 +3529,11 @@
         <Data key="Port Format" value="12,6" />
       </Group>
     </Group>
+    <Group key="77715107-f8d5-47e5-a629-0fb83101ac6b">
+      <Group key="0">
+        <Data key="Port Format" value="1,5" />
+      </Group>
+    </Group>
     <Group key="acdd65e5-91f6-4876-ab16-d3371edd2dea">
       <Group key="0">
         <Data key="Port Format" value="0,5" />
@@ -3577,10 +3583,8 @@
       <Group key="4fa2a486-75d9-4aee-aa28-10753a015f29">
         <Data key="0" value="131885845738109145" />
       </Group>
-      <Group key="77715107-f8d5-47e5-a629-0fb83101ac6b">
-        <Data key="0" value="131886591640311688" />
-      </Group>
     </Group>
+    <Group key="Unlocked Pins" />
   </Group>
   <Group key="PlaceDir">
     <Data key="count" value="0" />

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 1
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5iwwuC.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 1
   28:Generated_Source\PSoC5/Pin_Low_WL.c **** *
   29:Generated_Source\PSoC5/Pin_Low_WL.c **** * \brief Writes the value to the physical port (data output register), masking
   30:Generated_Source\PSoC5/Pin_Low_WL.c **** *  and shifting the bits appropriately. 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 2
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5iwwuC.s 			page 2
 
 
   31:Generated_Source\PSoC5/Pin_Low_WL.c **** *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 1
   52              		.size	Pin_Low_WL_Write, .-Pin_Low_WL_Write
   53              		.section	.text.Pin_Low_WL_SetDriveMode,"ax",%progbits
   54              		.align	2
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 3
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5iwwuC.s 			page 3
 
 
   55              		.global	Pin_Low_WL_SetDriveMode
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 1
   77 0012 00BF     		.align	2
   78              	.L5:
   79 0014 1F500040 		.word	1073762335
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 4
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5iwwuC.s 			page 4
 
 
   80              		.cfi_endproc
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 1
  110              		.align	2
  111              		.global	Pin_Low_WL_ReadDataReg
  112              		.thumb
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 5
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5iwwuC.s 			page 5
 
 
  113              		.thumb_func
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 1
  139              	.Ldebug_info0:
  140 0000 1B010000 		.4byte	0x11b
  141 0004 0400     		.2byte	0x4
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 6
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5iwwuC.s 			page 6
 
 
  142 0006 00000000 		.4byte	.Ldebug_abbrev0
@@ -306,15 +306,15 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 1
  144 000b 01       		.uleb128 0x1
  145 000c 54000000 		.4byte	.LASF20
  146 0010 0C       		.byte	0xc
- 147 0011 E8010000 		.4byte	.LASF21
- 148 0015 62010000 		.4byte	.LASF22
+ 147 0011 CB010000 		.4byte	.LASF21
+ 148 0015 3E010000 		.4byte	.LASF22
  149 0019 00000000 		.4byte	.Ldebug_ranges0+0
  150 001d 00000000 		.4byte	0
  151 0021 00000000 		.4byte	.Ldebug_line0
  152 0025 02       		.uleb128 0x2
  153 0026 01       		.byte	0x1
  154 0027 06       		.byte	0x6
- 155 0028 1B020000 		.4byte	.LASF0
+ 155 0028 FE010000 		.4byte	.LASF0
  156 002c 02       		.uleb128 0x2
  157 002d 01       		.byte	0x1
  158 002e 08       		.byte	0x8
@@ -330,7 +330,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 1
  168 0041 02       		.uleb128 0x2
  169 0042 04       		.byte	0x4
  170 0043 05       		.byte	0x5
- 171 0044 12020000 		.4byte	.LASF4
+ 171 0044 F5010000 		.4byte	.LASF4
  172 0048 02       		.uleb128 0x2
  173 0049 04       		.byte	0x4
  174 004a 07       		.byte	0x7
@@ -338,11 +338,11 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 1
  176 004f 02       		.uleb128 0x2
  177 0050 08       		.byte	0x8
  178 0051 05       		.byte	0x5
- 179 0052 D5010000 		.4byte	.LASF6
+ 179 0052 B8010000 		.4byte	.LASF6
  180 0056 02       		.uleb128 0x2
  181 0057 08       		.byte	0x8
  182 0058 07       		.byte	0x7
- 183 0059 4B010000 		.4byte	.LASF7
+ 183 0059 9C010000 		.4byte	.LASF7
  184 005d 03       		.uleb128 0x3
  185 005e 04       		.byte	0x4
  186 005f 05       		.byte	0x5
@@ -350,15 +350,15 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 1
  188 0064 02       		.uleb128 0x2
  189 0065 04       		.byte	0x4
  190 0066 07       		.byte	0x7
- 191 0067 3E010000 		.4byte	.LASF8
+ 191 0067 8F010000 		.4byte	.LASF8
  192 006b 04       		.uleb128 0x4
- 193 006c 0C020000 		.4byte	.LASF12
+ 193 006c EF010000 		.4byte	.LASF12
  194 0070 02       		.byte	0x2
  195 0071 E401     		.2byte	0x1e4
  196 0073 2C000000 		.4byte	0x2c
  197 0077 02       		.uleb128 0x2
  198 0078 04       		.byte	0x4
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 7
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5iwwuC.s 			page 7
 
 
  199 0079 04       		.byte	0x4
@@ -370,7 +370,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 1
  205 0085 02       		.uleb128 0x2
  206 0086 01       		.byte	0x1
  207 0087 08       		.byte	0x8
- 208 0088 E3010000 		.4byte	.LASF11
+ 208 0088 C6010000 		.4byte	.LASF11
  209 008c 04       		.uleb128 0x4
  210 008d E2000000 		.4byte	.LASF13
  211 0091 02       		.byte	0x2
@@ -411,14 +411,14 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 1
  246 00df 9C       		.byte	0x9c
  247 00e0 F4000000 		.4byte	0xf4
  248 00e4 07       		.uleb128 0x7
- 249 00e5 D0010000 		.4byte	.LASF17
+ 249 00e5 B3010000 		.4byte	.LASF17
  250 00e9 01       		.byte	0x1
  251 00ea 5A       		.byte	0x5a
  252 00eb 6B000000 		.4byte	0x6b
  253 00ef 21000000 		.4byte	.LLST1
  254 00f3 00       		.byte	0
  255 00f4 09       		.uleb128 0x9
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 8
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5iwwuC.s 			page 8
 
 
  256 00f5 1D010000 		.4byte	.LASF18
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 1
  310 0022 0B       		.uleb128 0xb
  311 0023 3E       		.uleb128 0x3e
  312 0024 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 9
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5iwwuC.s 			page 9
 
 
  313 0025 03       		.uleb128 0x3
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 1
  367 005c 3A       		.uleb128 0x3a
  368 005d 0B       		.uleb128 0xb
  369 005e 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 10
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5iwwuC.s 			page 10
 
 
  370 005f 0B       		.uleb128 0xb
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 1
  424 000a 50       		.byte	0x50
  425 000b 0A000000 		.4byte	.LVL2
  426 000f 18000000 		.4byte	.LFE0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 11
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5iwwuC.s 			page 11
 
 
  427 0013 0400     		.2byte	0x4
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 1
  480      02004700 
  480      00000201 
  480      FB0E0D00 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 12
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5iwwuC.s 			page 12
 
 
  480      01010101 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 1
  502 00f9 73686F72 		.ascii	"short unsigned int\000"
  502      7420756E 
  502      7369676E 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 13
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5iwwuC.s 			page 13
 
 
  502      65642069 
@@ -741,61 +741,57 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 1
  510 0134 73686F72 		.ascii	"short int\000"
  510      7420696E 
  510      7400
- 511              	.LASF8:
- 512 013e 756E7369 		.ascii	"unsigned int\000"
- 512      676E6564 
- 512      20696E74 
- 512      00
- 513              	.LASF7:
- 514 014b 6C6F6E67 		.ascii	"long long unsigned int\000"
- 514      206C6F6E 
- 514      6720756E 
- 514      7369676E 
- 514      65642069 
- 515              	.LASF22:
- 516 0162 443A5C4F 		.ascii	"D:\\OneDrive - Aarhus Universitet\\Aarhus Universit"
- 516      6E654472 
- 516      69766520 
- 516      2D204161 
- 516      72687573 
- 517 0193 65745C45 		.ascii	"et\\E3\\E3PRJ\\I3E3PRJ_Repo\\PSoCcontroller\\PSoCco"
- 517      335C4533 
- 517      50524A5C 
- 517      49334533 
- 517      50524A5F 
- 518 01c1 6E74726F 		.ascii	"ntroller.cydsn\000"
- 518      6C6C6572 
- 518      2E637964 
- 518      736E00
- 519              	.LASF17:
- 520 01d0 6D6F6465 		.ascii	"mode\000"
- 520      00
- 521              	.LASF6:
- 522 01d5 6C6F6E67 		.ascii	"long long int\000"
- 522      206C6F6E 
- 522      6720696E 
- 522      7400
- 523              	.LASF11:
- 524 01e3 63686172 		.ascii	"char\000"
- 524      00
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\cct20XXI.s 			page 14
+ 511              	.LASF22:
+ 512 013e 433A5C55 		.ascii	"C:\\Users\\midtg\\Documents\\GitHub\\I3E3PRJ_Repo\\"
+ 512      73657273 
+ 512      5C6D6964 
+ 512      74675C44 
+ 512      6F63756D 
+ 513 016b 50536F43 		.ascii	"PSoCcontroller\\PSoCcontroller.cydsn\000"
+ 513      636F6E74 
+ 513      726F6C6C 
+ 513      65725C50 
+ 513      536F4363 
+ 514              	.LASF8:
+ 515 018f 756E7369 		.ascii	"unsigned int\000"
+ 515      676E6564 
+ 515      20696E74 
+ 515      00
+ 516              	.LASF7:
+ 517 019c 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 517      206C6F6E 
+ 517      6720756E 
+ 517      7369676E 
+ 517      65642069 
+ 518              	.LASF17:
+ 519 01b3 6D6F6465 		.ascii	"mode\000"
+ 519      00
+ 520              	.LASF6:
+ 521 01b8 6C6F6E67 		.ascii	"long long int\000"
+ 521      206C6F6E 
+ 521      6720696E 
+ 521      7400
+ 522              	.LASF11:
+ 523 01c6 63686172 		.ascii	"char\000"
+ 523      00
+ 524              	.LASF21:
+ 525 01cb 47656E65 		.ascii	"Generated_Source\\PSoC5\\Pin_Low_WL.c\000"
+ 525      72617465 
+ 525      645F536F 
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5iwwuC.s 			page 14
 
 
- 525              	.LASF21:
- 526 01e8 47656E65 		.ascii	"Generated_Source\\PSoC5\\Pin_Low_WL.c\000"
- 526      72617465 
- 526      645F536F 
- 526      75726365 
- 526      5C50536F 
- 527              	.LASF12:
- 528 020c 75696E74 		.ascii	"uint8\000"
- 528      3800
- 529              	.LASF4:
- 530 0212 6C6F6E67 		.ascii	"long int\000"
- 530      20696E74 
- 530      00
- 531              	.LASF0:
- 532 021b 7369676E 		.ascii	"signed char\000"
- 532      65642063 
- 532      68617200 
- 533              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 525      75726365 
+ 525      5C50536F 
+ 526              	.LASF12:
+ 527 01ef 75696E74 		.ascii	"uint8\000"
+ 527      3800
+ 528              	.LASF4:
+ 529 01f5 6C6F6E67 		.ascii	"long int\000"
+ 529      20696E74 
+ 529      00
+ 530              	.LASF0:
+ 531 01fe 7369676E 		.ascii	"signed char\000"
+ 531      65642063 
+ 531      68617200 
+ 532              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

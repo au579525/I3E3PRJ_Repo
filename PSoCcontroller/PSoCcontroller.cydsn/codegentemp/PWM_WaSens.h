@@ -45,14 +45,14 @@ extern uint8 PWM_WaSens_initVar;
 #endif /* !defined(PWM_WaSens_PWMUDB_genblk8_stsreg__REMOVED) */
 
 #if !defined(PWM_WaSens_PWMUDB_genblk1_ctrlreg__REMOVED)
-    #define PWM_WaSens_UseControl                 (0u)
+    #define PWM_WaSens_UseControl                 (1u)
 #else
     #define PWM_WaSens_UseControl                 (0u)
 #endif /* !defined(PWM_WaSens_PWMUDB_genblk1_ctrlreg__REMOVED) */
 
 #define PWM_WaSens_UseOneCompareMode              (1u)
 #define PWM_WaSens_MinimumKillTime                (1u)
-#define PWM_WaSens_EnableMode                     (1u)
+#define PWM_WaSens_EnableMode                     (0u)
 
 #define PWM_WaSens_CompareMode1SW                 (0u)
 #define PWM_WaSens_CompareMode2SW                 (0u)

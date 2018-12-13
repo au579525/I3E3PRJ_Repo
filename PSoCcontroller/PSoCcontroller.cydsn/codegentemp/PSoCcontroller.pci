@@ -1,5 +1,5 @@
 # PSoCcontroller
-# 2018-12-11 16:10:59Z
+# 2018-12-13 03:48:23Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -13,7 +13,7 @@ set_io "Echo_1(0)" iocell 3 3
 set_io "Echo_2(0)" iocell 3 4
 set_io "Rx_1(0)" iocell 12 6
 set_io "Tx_1(0)" iocell 12 7
-set_io "Moisture_Analog_Input(0)" iocell 0 2
+set_io "Moisture_Analog_Input(0)" iocell 1 5
 set_io "Pin_Low_WL(0)" iocell 3 7
 set_io "Pin_X1(0)" iocell 2 7
 set_io "Pin_X2(0)" iocell 2 6
@@ -30,5 +30,5 @@ set_io "Slave_mosi(0)" iocell 0 0
 set_io "Slave_clk(0)" iocell 0 6
 set_io "ss(0)" iocell 0 1
 set_io "SPI_read_req(0)" iocell 0 7
-set_location "\ADC_Moisture:ADC_SAR\" sarcell -1 -1 0
-set_location "\ADC_SAR_WaSens:ADC_SAR\" sarcell -1 -1 1
+set_location "\ADC_Moisture:ADC_SAR\" sarcell -1 -1 1
+set_location "\ADC_SAR_WaSens:ADC_SAR\" sarcell -1 -1 0
