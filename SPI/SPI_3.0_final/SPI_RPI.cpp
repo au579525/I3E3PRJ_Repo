@@ -92,8 +92,9 @@ void spi_req_function::run(){
             }
             else if (string(*it).find("watering") != std::string::npos) {
               mode.SPI_Set_PowerSaving_mode();
-              fileac->set_mode("powersaving");
+              fileac->set_mode("watering");
             }
+
           }
           else if (string(*it).find("manualcontrol") != std::string::npos){
             if(string(*it).find("up") != std::string::npos){
