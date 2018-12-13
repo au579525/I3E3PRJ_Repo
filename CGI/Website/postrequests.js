@@ -68,5 +68,6 @@ function serverresponse(xhttp) {
 	else{
 		confirm(xhttp.responseText);
 	}
+	document.location.reload(true);
 }
 setInterval(getwaterlvl, 60000);
