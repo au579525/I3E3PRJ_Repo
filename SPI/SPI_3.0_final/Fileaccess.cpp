@@ -20,33 +20,16 @@ Fileaccess::Fileaccess(){
 }
 
 void Fileaccess::reset(){
-  ifstream mode;
-  ifstream log;
-  ifstream queue;
-  ifstream waterLevel;
-  mode.open(path + "systemmode");
-  if(!mode.is_open()){
-    ofstream modew;
-    modew.open(path + "systemmode", ios::trunc);
-    modew << "normal";
-  }
-  log.open(path + "log");
-  if(!log.is_open()){
-    ofstream logw;
-    logw.open(path + "log", ios::trunc);
-  }
-  queue.open(path + "queue");
-  if(!queue.is_open()){
-    ofstream queuew;
-    queuew.open(path + "queue", ios::trunc);
-  }
-  //new block 10-12
-  waterLevel.open(path + "waterlevel");
-  if(!waterLevel.is_open ()){
-    ofstream waterLevelw;
-    waterLevelw.open(path + "waterlevel", ios::trunc);
-    waterLevelw << "1";
-  }
+  ofstream mode;
+  ofstream log;
+  ofstream queue;
+  ofstream waterLevel;
+  mode.open(path + "systemmode", ios::trunc);
+  mode << "normal";
+  log.open(path + "log", ios::trunc);
+  queue.open(path + "queue", ios::trunc);
+  waterLevel.open(path + "waterlevel", ios::trunc);
+  waterLevel << "1";
 }
 
 void Fileaccess::set_waterlvl(int lvl){

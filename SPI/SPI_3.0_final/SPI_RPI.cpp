@@ -115,6 +115,8 @@ void spi_req_function::run(){
             else if (string(*it).find("shoot") != std::string::npos) {
               mode.SPI_start_shooting();
               fileac->log("Manual: shoot");
+              osapi::sleep(1500);
+              mode.SPI_stop_shooting();
             }
           }
         }
