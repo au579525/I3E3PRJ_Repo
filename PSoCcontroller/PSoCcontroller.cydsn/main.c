@@ -271,7 +271,7 @@ void automatiskVanding(void) {
         moveDegreesX(165-stepperPositionX); //move to middle left side
         moveDegreesY(-180-stepperPositionY); //move down to bottom
         moveDegreesX(165-stepperPositionX);//move to bottom right side
-        WaterPump_fireWater(FALSE);//stop firing
+        WaterPump_fireWater(FALSE);//stop firingvoid SPI_send_flowers_watered(){
     }
 }
 
