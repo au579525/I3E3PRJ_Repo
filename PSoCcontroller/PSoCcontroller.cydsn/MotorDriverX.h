@@ -18,6 +18,7 @@
     #include <math.h>
 
     #define MAX_STEPS_X 100 //180 degrees
+    #define OFFSET_X 28
 
     enum state {NORTH, EAST, SOUTH, WEST};  //Steppermotorcoils 4 positioner
 

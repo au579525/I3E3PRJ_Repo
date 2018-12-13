@@ -8,7 +8,7 @@
     #define FALSE 0
     #define WATER_THRESHOLD_NO_WATER 0
     #define WATER_THRESHOLD_LOW_WATER 0
-    #define MOISTURE_THRESHOLD 3000
+    #define MOISTURE_THRESHOLD 3500
     #define DELAY_NORMAL_MODE_MS 3000 //should be 3000
     #define DELAY_POWERSAVING_MODE_MS 60000 //should be 60000
 

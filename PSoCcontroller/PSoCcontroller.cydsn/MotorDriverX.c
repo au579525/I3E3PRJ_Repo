@@ -13,6 +13,7 @@ void initStepperX() {
     timerDoneFlagX = 0;
     
     resetPositionX();
+    moveDegreesX(90+OFFSET_X);
 }
 
 void rotateClockwiseX() {

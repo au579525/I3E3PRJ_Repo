@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 1
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUIV7CS.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 1
   28:Generated_Source\PSoC5/Pin_X1.c **** *
   29:Generated_Source\PSoC5/Pin_X1.c **** * \brief Writes the value to the physical port (data output register), masking
   30:Generated_Source\PSoC5/Pin_X1.c **** *  and shifting the bits appropriately. 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 2
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUIV7CS.s 			page 2
 
 
   31:Generated_Source\PSoC5/Pin_X1.c **** *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 1
   52              		.size	Pin_X1_Write, .-Pin_X1_Write
   53              		.section	.text.Pin_X1_SetDriveMode,"ax",%progbits
   54              		.align	2
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 3
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUIV7CS.s 			page 3
 
 
   55              		.global	Pin_X1_SetDriveMode
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 1
   77 0012 00BF     		.align	2
   78              	.L5:
   79 0014 17500040 		.word	1073762327
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 4
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUIV7CS.s 			page 4
 
 
   80              		.cfi_endproc
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 1
  110              		.align	2
  111              		.global	Pin_X1_ReadDataReg
  112              		.thumb
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 5
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUIV7CS.s 			page 5
 
 
  113              		.thumb_func
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 1
  139              	.Ldebug_info0:
  140 0000 1B010000 		.4byte	0x11b
  141 0004 0400     		.2byte	0x4
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 6
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUIV7CS.s 			page 6
 
 
  142 0006 00000000 		.4byte	.Ldebug_abbrev0
@@ -306,15 +306,15 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 1
  144 000b 01       		.uleb128 0x1
  145 000c 25000000 		.4byte	.LASF20
  146 0010 0C       		.byte	0xc
- 147 0011 F3010000 		.4byte	.LASF21
- 148 0015 35010000 		.4byte	.LASF22
+ 147 0011 D6010000 		.4byte	.LASF21
+ 148 0015 FD000000 		.4byte	.LASF22
  149 0019 00000000 		.4byte	.Ldebug_ranges0+0
  150 001d 00000000 		.4byte	0
  151 0021 00000000 		.4byte	.Ldebug_line0
  152 0025 02       		.uleb128 0x2
  153 0026 01       		.byte	0x1
  154 0027 06       		.byte	0x6
- 155 0028 E7010000 		.4byte	.LASF0
+ 155 0028 CA010000 		.4byte	.LASF0
  156 002c 02       		.uleb128 0x2
  157 002d 01       		.byte	0x1
  158 002e 08       		.byte	0x8
@@ -322,7 +322,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 1
  160 0033 02       		.uleb128 0x2
  161 0034 02       		.byte	0x2
  162 0035 05       		.byte	0x5
- 163 0036 BB010000 		.4byte	.LASF2
+ 163 0036 9E010000 		.4byte	.LASF2
  164 003a 02       		.uleb128 0x2
  165 003b 02       		.byte	0x2
  166 003c 07       		.byte	0x7
@@ -330,7 +330,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 1
  168 0041 02       		.uleb128 0x2
  169 0042 04       		.byte	0x4
  170 0043 05       		.byte	0x5
- 171 0044 CB010000 		.4byte	.LASF4
+ 171 0044 AE010000 		.4byte	.LASF4
  172 0048 02       		.uleb128 0x2
  173 0049 04       		.byte	0x4
  174 004a 07       		.byte	0x7
@@ -338,11 +338,11 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 1
  176 004f 02       		.uleb128 0x2
  177 0050 08       		.byte	0x8
  178 0051 05       		.byte	0x5
- 179 0052 A8010000 		.4byte	.LASF6
+ 179 0052 8B010000 		.4byte	.LASF6
  180 0056 02       		.uleb128 0x2
  181 0057 08       		.byte	0x8
  182 0058 07       		.byte	0x7
- 183 0059 0A010000 		.4byte	.LASF7
+ 183 0059 5B010000 		.4byte	.LASF7
  184 005d 03       		.uleb128 0x3
  185 005e 04       		.byte	0x4
  186 005f 05       		.byte	0x5
@@ -350,15 +350,15 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 1
  188 0064 02       		.uleb128 0x2
  189 0065 04       		.byte	0x4
  190 0066 07       		.byte	0x7
- 191 0067 FD000000 		.4byte	.LASF8
+ 191 0067 4E010000 		.4byte	.LASF8
  192 006b 04       		.uleb128 0x4
- 193 006c C5010000 		.4byte	.LASF12
+ 193 006c A8010000 		.4byte	.LASF12
  194 0070 02       		.byte	0x2
  195 0071 E401     		.2byte	0x1e4
  196 0073 2C000000 		.4byte	0x2c
  197 0077 02       		.uleb128 0x2
  198 0078 04       		.byte	0x4
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 7
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUIV7CS.s 			page 7
 
 
  199 0079 04       		.byte	0x4
@@ -370,7 +370,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 1
  205 0085 02       		.uleb128 0x2
  206 0086 01       		.byte	0x1
  207 0087 08       		.byte	0x8
- 208 0088 B6010000 		.4byte	.LASF11
+ 208 0088 99010000 		.4byte	.LASF11
  209 008c 04       		.uleb128 0x4
  210 008d B3000000 		.4byte	.LASF13
  211 0091 02       		.byte	0x2
@@ -402,7 +402,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 1
  237 00cd 53       		.byte	0x53
  238 00ce 00       		.byte	0
  239 00cf 06       		.uleb128 0x6
- 240 00d0 21010000 		.4byte	.LASF15
+ 240 00d0 72010000 		.4byte	.LASF15
  241 00d4 01       		.byte	0x1
  242 00d5 5A       		.byte	0x5a
  243 00d6 00000000 		.4byte	.LFB1
@@ -411,14 +411,14 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 1
  246 00df 9C       		.byte	0x9c
  247 00e0 F4000000 		.4byte	0xf4
  248 00e4 07       		.uleb128 0x7
- 249 00e5 A3010000 		.4byte	.LASF17
+ 249 00e5 86010000 		.4byte	.LASF17
  250 00e9 01       		.byte	0x1
  251 00ea 5A       		.byte	0x5a
  252 00eb 6B000000 		.4byte	0x6b
  253 00ef 21000000 		.4byte	.LLST1
  254 00f3 00       		.byte	0
  255 00f4 09       		.uleb128 0x9
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 8
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUIV7CS.s 			page 8
 
 
  256 00f5 F1000000 		.4byte	.LASF18
@@ -430,7 +430,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 1
  262 0107 01       		.uleb128 0x1
  263 0108 9C       		.byte	0x9c
  264 0109 09       		.uleb128 0x9
- 265 010a D4010000 		.4byte	.LASF19
+ 265 010a B7010000 		.4byte	.LASF19
  266 010e 01       		.byte	0x1
  267 010f 8D       		.byte	0x8d
  268 0110 6B000000 		.4byte	0x6b
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 1
  310 0022 0B       		.uleb128 0xb
  311 0023 3E       		.uleb128 0x3e
  312 0024 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 9
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUIV7CS.s 			page 9
 
 
  313 0025 03       		.uleb128 0x3
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 1
  367 005c 3A       		.uleb128 0x3a
  368 005d 0B       		.uleb128 0xb
  369 005e 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 10
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUIV7CS.s 			page 10
 
 
  370 005f 0B       		.uleb128 0xb
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 1
  424 000a 50       		.byte	0x50
  425 000b 0A000000 		.4byte	.LVL2
  426 000f 18000000 		.4byte	.LFE0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 11
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUIV7CS.s 			page 11
 
 
  427 0013 0400     		.2byte	0x4
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 1
  480      02004300 
  480      00000201 
  480      FB0E0D00 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 12
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUIV7CS.s 			page 12
 
 
  480      01010101 
@@ -718,82 +718,78 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 1
  502      00
  503              	.LASF18:
  504 00f1 50696E5F 		.ascii	"Pin_X1_Read\000"
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 13
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUIV7CS.s 			page 13
 
 
  504      58315F52 
  504      65616400 
- 505              	.LASF8:
- 506 00fd 756E7369 		.ascii	"unsigned int\000"
- 506      676E6564 
- 506      20696E74 
- 506      00
- 507              	.LASF7:
- 508 010a 6C6F6E67 		.ascii	"long long unsigned int\000"
- 508      206C6F6E 
- 508      6720756E 
- 508      7369676E 
- 508      65642069 
- 509              	.LASF15:
- 510 0121 50696E5F 		.ascii	"Pin_X1_SetDriveMode\000"
- 510      58315F53 
- 510      65744472 
- 510      6976654D 
- 510      6F646500 
- 511              	.LASF22:
- 512 0135 443A5C4F 		.ascii	"D:\\OneDrive - Aarhus Universitet\\Aarhus Universit"
- 512      6E654472 
- 512      69766520 
- 512      2D204161 
- 512      72687573 
- 513 0166 65745C45 		.ascii	"et\\E3\\E3PRJ\\I3E3PRJ_Repo\\PSoCcontroller\\PSoCco"
- 513      335C4533 
- 513      50524A5C 
- 513      49334533 
- 513      50524A5F 
- 514 0194 6E74726F 		.ascii	"ntroller.cydsn\000"
- 514      6C6C6572 
- 514      2E637964 
- 514      736E00
- 515              	.LASF17:
- 516 01a3 6D6F6465 		.ascii	"mode\000"
- 516      00
- 517              	.LASF6:
- 518 01a8 6C6F6E67 		.ascii	"long long int\000"
- 518      206C6F6E 
- 518      6720696E 
- 518      7400
- 519              	.LASF11:
- 520 01b6 63686172 		.ascii	"char\000"
- 520      00
- 521              	.LASF2:
- 522 01bb 73686F72 		.ascii	"short int\000"
- 522      7420696E 
- 522      7400
- 523              	.LASF12:
- 524 01c5 75696E74 		.ascii	"uint8\000"
- 524      3800
- 525              	.LASF4:
- 526 01cb 6C6F6E67 		.ascii	"long int\000"
- 526      20696E74 
- 526      00
- 527              	.LASF19:
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccWOPRN8.s 			page 14
+ 505              	.LASF22:
+ 506 00fd 433A5C55 		.ascii	"C:\\Users\\midtg\\Documents\\GitHub\\I3E3PRJ_Repo\\"
+ 506      73657273 
+ 506      5C6D6964 
+ 506      74675C44 
+ 506      6F63756D 
+ 507 012a 50536F43 		.ascii	"PSoCcontroller\\PSoCcontroller.cydsn\000"
+ 507      636F6E74 
+ 507      726F6C6C 
+ 507      65725C50 
+ 507      536F4363 
+ 508              	.LASF8:
+ 509 014e 756E7369 		.ascii	"unsigned int\000"
+ 509      676E6564 
+ 509      20696E74 
+ 509      00
+ 510              	.LASF7:
+ 511 015b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 511      206C6F6E 
+ 511      6720756E 
+ 511      7369676E 
+ 511      65642069 
+ 512              	.LASF15:
+ 513 0172 50696E5F 		.ascii	"Pin_X1_SetDriveMode\000"
+ 513      58315F53 
+ 513      65744472 
+ 513      6976654D 
+ 513      6F646500 
+ 514              	.LASF17:
+ 515 0186 6D6F6465 		.ascii	"mode\000"
+ 515      00
+ 516              	.LASF6:
+ 517 018b 6C6F6E67 		.ascii	"long long int\000"
+ 517      206C6F6E 
+ 517      6720696E 
+ 517      7400
+ 518              	.LASF11:
+ 519 0199 63686172 		.ascii	"char\000"
+ 519      00
+ 520              	.LASF2:
+ 521 019e 73686F72 		.ascii	"short int\000"
+ 521      7420696E 
+ 521      7400
+ 522              	.LASF12:
+ 523 01a8 75696E74 		.ascii	"uint8\000"
+ 523      3800
+ 524              	.LASF4:
+ 525 01ae 6C6F6E67 		.ascii	"long int\000"
+ 525      20696E74 
+ 525      00
+ 526              	.LASF19:
+ 527 01b7 50696E5F 		.ascii	"Pin_X1_ReadDataReg\000"
+ 527      58315F52 
+ 527      65616444 
+ 527      61746152 
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUIV7CS.s 			page 14
 
 
- 528 01d4 50696E5F 		.ascii	"Pin_X1_ReadDataReg\000"
- 528      58315F52 
- 528      65616444 
- 528      61746152 
- 528      656700
- 529              	.LASF0:
- 530 01e7 7369676E 		.ascii	"signed char\000"
- 530      65642063 
- 530      68617200 
- 531              	.LASF21:
- 532 01f3 47656E65 		.ascii	"Generated_Source\\PSoC5\\Pin_X1.c\000"
- 532      72617465 
- 532      645F536F 
- 532      75726365 
- 532      5C50536F 
- 533              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 527      656700
+ 528              	.LASF0:
+ 529 01ca 7369676E 		.ascii	"signed char\000"
+ 529      65642063 
+ 529      68617200 
+ 530              	.LASF21:
+ 531 01d6 47656E65 		.ascii	"Generated_Source\\PSoC5\\Pin_X1.c\000"
+ 531      72617465 
+ 531      645F536F 
+ 531      75726365 
+ 531      5C50536F 
+ 532              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

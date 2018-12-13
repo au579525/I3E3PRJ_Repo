@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
   20:SPI_driver_PSoC.c ****     SPI_recieved_flag = 0;
   36              		.loc 1 20 0
   37 0002 0024     		movs	r4, #0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 2
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 2
 
 
   38 0004 054B     		ldr	r3, .L3
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
   81 0008 0120     		movs	r0, #1
   82 000a FFF7FEFF 		bl	SPI_read_req_Write
   83              	.LVL4:
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 3
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 3
 
 
   32:SPI_driver_PSoC.c ****             
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  121 000e 0120     		movs	r0, #1
  122 0010 FFF7FEFF 		bl	CyDelayUs
  123              	.LVL9:
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 4
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 4
 
 
   49:SPI_driver_PSoC.c ****             
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  163              	.LVL14:
  164 001a 08BD     		pop	{r3, pc}
  165              		.cfi_endproc
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 5
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 5
 
 
  166              	.LFE67:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  208              		.thumb_func
  209              		.type	SPI_send_pigeon_shot_position, %function
  210              	SPI_send_pigeon_shot_position:
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 6
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 6
 
 
  211              	.LFB69:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  248 0026 FFF7FEFF 		bl	SPI_1_WriteTxDataZero
  249              	.LVL26:
   93:SPI_driver_PSoC.c ****             
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 7
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 7
 
 
   94:SPI_driver_PSoC.c ****             SPI_read_req_Write(1);
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  285              	.LVL35:
  286 0060 38BD     		pop	{r3, r4, r5, pc}
  287              		.cfi_endproc
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 8
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 8
 
 
  288              	.LFE69:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  126:SPI_driver_PSoC.c ****             
  127:SPI_driver_PSoC.c ****             SPI_1_WriteTxDataZero(waterlevel);
  329              		.loc 1 127 0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 9
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 9
 
 
  330 0022 2046     		mov	r0, r4
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  373              		.loc 1 138 0
  374 0008 374C     		ldr	r4, .L32+4
  375 000a 2078     		ldrb	r0, [r4]	@ zero_extendqisi2
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 10
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 10
 
 
  376 000c FFF7FEFF 		bl	UART_1_PutChar
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  419              	.LVL53:
  150:SPI_driver_PSoC.c ****             break;
  420              		.loc 1 150 0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 11
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 11
 
 
  421 0044 4AE0     		b	.L18
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  461 0080 9847     		blx	r3
  462              	.LVL57:
  463 0082 2BE0     		b	.L18
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 12
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 12
 
 
  464              	.L27:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  503 00c4 9847     		blx	r3
  504              	.LVL60:
  505 00c6 09E0     		b	.L18
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 13
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 13
 
 
  506              	.L30:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  548              		.comm	pigeonPosition,16,8
  549              		.comm	noWater,4,4
  550              		.comm	mode,1,1
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 14
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 14
 
 
  551              		.comm	sonarTimerDone,1,1
@@ -818,9 +818,9 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  581 0006 00000000 		.4byte	.Ldebug_abbrev0
  582 000a 04       		.byte	0x4
  583 000b 01       		.uleb128 0x1
- 584 000c 64040000 		.4byte	.LASF82
+ 584 000c 47040000 		.4byte	.LASF82
  585 0010 0C       		.byte	0xc
- 586 0011 58010000 		.4byte	.LASF83
+ 586 0011 3B010000 		.4byte	.LASF83
  587 0015 E5000000 		.4byte	.LASF84
  588 0019 00000000 		.4byte	.Ldebug_ranges0+0
  589 001d 00000000 		.4byte	0
@@ -828,17 +828,17 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  591 0025 02       		.uleb128 0x2
  592 0026 01       		.byte	0x1
  593 0027 06       		.byte	0x6
- 594 0028 72020000 		.4byte	.LASF0
+ 594 0028 55020000 		.4byte	.LASF0
  595 002c 03       		.uleb128 0x3
- 596 002d 20020000 		.4byte	.LASF4
+ 596 002d 03020000 		.4byte	.LASF4
  597 0031 02       		.byte	0x2
  598 0032 1D       		.byte	0x1d
  599 0033 37000000 		.4byte	0x37
  600 0037 02       		.uleb128 0x2
  601 0038 01       		.byte	0x1
  602 0039 08       		.byte	0x8
- 603 003a 46020000 		.4byte	.LASF1
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 15
+ 603 003a 29020000 		.4byte	.LASF1
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 15
 
 
  604 003e 02       		.uleb128 0x2
@@ -848,28 +848,28 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  608 0045 02       		.uleb128 0x2
  609 0046 02       		.byte	0x2
  610 0047 07       		.byte	0x7
- 611 0048 DC020000 		.4byte	.LASF3
+ 611 0048 BF020000 		.4byte	.LASF3
  612 004c 03       		.uleb128 0x3
- 613 004d F6030000 		.4byte	.LASF5
+ 613 004d D9030000 		.4byte	.LASF5
  614 0051 02       		.byte	0x2
  615 0052 3F       		.byte	0x3f
  616 0053 57000000 		.4byte	0x57
  617 0057 02       		.uleb128 0x2
  618 0058 04       		.byte	0x4
  619 0059 05       		.byte	0x5
- 620 005a 12020000 		.4byte	.LASF6
+ 620 005a F5010000 		.4byte	.LASF6
  621 005e 02       		.uleb128 0x2
  622 005f 04       		.byte	0x4
  623 0060 07       		.byte	0x7
- 624 0061 AC030000 		.4byte	.LASF7
+ 624 0061 8F030000 		.4byte	.LASF7
  625 0065 02       		.uleb128 0x2
  626 0066 08       		.byte	0x8
  627 0067 05       		.byte	0x5
- 628 0068 EA010000 		.4byte	.LASF8
+ 628 0068 CD010000 		.4byte	.LASF8
  629 006c 02       		.uleb128 0x2
  630 006d 08       		.byte	0x8
  631 006e 07       		.byte	0x7
- 632 006f 7E020000 		.4byte	.LASF9
+ 632 006f 61020000 		.4byte	.LASF9
  633 0073 04       		.uleb128 0x4
  634 0074 04       		.byte	0x4
  635 0075 05       		.byte	0x5
@@ -877,11 +877,11 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  637 007a 02       		.uleb128 0x2
  638 007b 04       		.byte	0x4
  639 007c 07       		.byte	0x7
- 640 007d A6020000 		.4byte	.LASF10
+ 640 007d 89020000 		.4byte	.LASF10
  641 0081 02       		.uleb128 0x2
  642 0082 08       		.byte	0x8
  643 0083 04       		.byte	0x4
- 644 0084 30020000 		.4byte	.LASF11
+ 644 0084 13020000 		.4byte	.LASF11
  645 0088 02       		.uleb128 0x2
  646 0089 04       		.byte	0x4
  647 008a 07       		.byte	0x7
@@ -893,52 +893,52 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  653 0096 02       		.uleb128 0x2
  654 0097 01       		.byte	0x1
  655 0098 08       		.byte	0x8
- 656 0099 FF020000 		.4byte	.LASF13
+ 656 0099 E2020000 		.4byte	.LASF13
  657 009d 03       		.uleb128 0x3
- 658 009e 91010000 		.4byte	.LASF14
+ 658 009e 74010000 		.4byte	.LASF14
  659 00a2 03       		.byte	0x3
  660 00a3 18       		.byte	0x18
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 16
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 16
 
 
  661 00a4 2C000000 		.4byte	0x2c
  662 00a8 03       		.uleb128 0x3
- 663 00a9 2F030000 		.4byte	.LASF15
+ 663 00a9 12030000 		.4byte	.LASF15
  664 00ad 03       		.byte	0x3
  665 00ae 2C       		.byte	0x2c
  666 00af 4C000000 		.4byte	0x4c
  667 00b3 07       		.uleb128 0x7
- 668 00b4 99010000 		.4byte	.LASF16
+ 668 00b4 7C010000 		.4byte	.LASF16
  669 00b8 04       		.byte	0x4
  670 00b9 E401     		.2byte	0x1e4
  671 00bb 37000000 		.4byte	0x37
  672 00bf 07       		.uleb128 0x7
- 673 00c0 FE010000 		.4byte	.LASF17
+ 673 00c0 E1010000 		.4byte	.LASF17
  674 00c4 04       		.byte	0x4
  675 00c5 E701     		.2byte	0x1e7
  676 00c7 25000000 		.4byte	0x25
  677 00cb 02       		.uleb128 0x2
  678 00cc 04       		.byte	0x4
  679 00cd 04       		.byte	0x4
- 680 00ce E4010000 		.4byte	.LASF18
+ 680 00ce C7010000 		.4byte	.LASF18
  681 00d2 02       		.uleb128 0x2
  682 00d3 08       		.byte	0x8
  683 00d4 04       		.byte	0x4
- 684 00d5 BE030000 		.4byte	.LASF19
+ 684 00d5 A1030000 		.4byte	.LASF19
  685 00d9 08       		.uleb128 0x8
- 686 00da 00040000 		.4byte	.LASF22
+ 686 00da E3030000 		.4byte	.LASF22
  687 00de 08       		.byte	0x8
  688 00df 05       		.byte	0x5
  689 00e0 10       		.byte	0x10
  690 00e1 FE000000 		.4byte	0xfe
  691 00e5 09       		.uleb128 0x9
- 692 00e6 3A040000 		.4byte	.LASF20
+ 692 00e6 1D040000 		.4byte	.LASF20
  693 00ea 05       		.byte	0x5
  694 00eb 11       		.byte	0x11
  695 00ec 05010000 		.4byte	0x105
  696 00f0 00       		.byte	0
  697 00f1 09       		.uleb128 0x9
- 698 00f2 CE020000 		.4byte	.LASF21
+ 698 00f2 B1020000 		.4byte	.LASF21
  699 00f6 05       		.byte	0x5
  700 00f7 12       		.byte	0x12
  701 00f8 73000000 		.4byte	0x73
@@ -952,16 +952,16 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  709 0106 04       		.byte	0x4
  710 0107 FE000000 		.4byte	0xfe
  711 010b 08       		.uleb128 0x8
- 712 010c B1010000 		.4byte	.LASF23
+ 712 010c 94010000 		.4byte	.LASF23
  713 0110 B8       		.byte	0xb8
  714 0111 05       		.byte	0x5
  715 0112 15       		.byte	0x15
  716 0113 84010000 		.4byte	0x184
  717 0117 09       		.uleb128 0x9
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 17
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 17
 
 
- 718 0118 81030000 		.4byte	.LASF24
+ 718 0118 64030000 		.4byte	.LASF24
  719 011c 05       		.byte	0x5
  720 011d 16       		.byte	0x16
  721 011e 84010000 		.4byte	0x184
@@ -973,43 +973,43 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  727 012a 05010000 		.4byte	0x105
  728 012e A0       		.byte	0xa0
  729 012f 09       		.uleb128 0x9
- 730 0130 9F010000 		.4byte	.LASF25
+ 730 0130 82010000 		.4byte	.LASF25
  731 0134 05       		.byte	0x5
  732 0135 18       		.byte	0x18
  733 0136 05010000 		.4byte	0x105
  734 013a A4       		.byte	0xa4
  735 013b 09       		.uleb128 0x9
- 736 013c 7A030000 		.4byte	.LASF26
+ 736 013c 5D030000 		.4byte	.LASF26
  737 0140 05       		.byte	0x5
  738 0141 19       		.byte	0x19
  739 0142 9F010000 		.4byte	0x19f
  740 0146 A8       		.byte	0xa8
  741 0147 09       		.uleb128 0x9
- 742 0148 EF020000 		.4byte	.LASF27
+ 742 0148 D2020000 		.4byte	.LASF27
  743 014c 05       		.byte	0x5
  744 014d 1A       		.byte	0x1a
  745 014e 9F010000 		.4byte	0x19f
  746 0152 AC       		.byte	0xac
  747 0153 09       		.uleb128 0x9
- 748 0154 42040000 		.4byte	.LASF28
+ 748 0154 25040000 		.4byte	.LASF28
  749 0158 05       		.byte	0x5
  750 0159 1B       		.byte	0x1b
  751 015a 05010000 		.4byte	0x105
  752 015e B0       		.byte	0xb0
  753 015f 09       		.uleb128 0x9
- 754 0160 F8010000 		.4byte	.LASF29
+ 754 0160 DB010000 		.4byte	.LASF29
  755 0164 05       		.byte	0x5
  756 0165 1C       		.byte	0x1c
  757 0166 BF000000 		.4byte	0xbf
  758 016a B4       		.byte	0xb4
  759 016b 09       		.uleb128 0x9
- 760 016c 1B020000 		.4byte	.LASF30
+ 760 016c FE010000 		.4byte	.LASF30
  761 0170 05       		.byte	0x5
  762 0171 1D       		.byte	0x1d
  763 0172 BF000000 		.4byte	0xbf
  764 0176 B5       		.byte	0xb5
  765 0177 09       		.uleb128 0x9
- 766 0178 0D040000 		.4byte	.LASF31
+ 766 0178 F0030000 		.4byte	.LASF31
  767 017c 05       		.byte	0x5
  768 017d 1E       		.byte	0x1e
  769 017e B3000000 		.4byte	0xb3
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  772 0184 0D       		.uleb128 0xd
  773 0185 D9000000 		.4byte	0xd9
  774 0189 94010000 		.4byte	0x194
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 18
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 18
 
 
  775 018d 0E       		.uleb128 0xe
@@ -1034,25 +1034,25 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  785 01a0 04       		.byte	0x4
  786 01a1 94010000 		.4byte	0x194
  787 01a5 08       		.uleb128 0x8
- 788 01a6 4E040000 		.4byte	.LASF32
+ 788 01a6 31040000 		.4byte	.LASF32
  789 01aa 10       		.byte	0x10
  790 01ab 06       		.byte	0x6
  791 01ac 15       		.byte	0x15
  792 01ad D6010000 		.4byte	0x1d6
  793 01b1 09       		.uleb128 0x9
- 794 01b2 88010000 		.4byte	.LASF33
+ 794 01b2 6B010000 		.4byte	.LASF33
  795 01b6 06       		.byte	0x6
  796 01b7 16       		.byte	0x16
  797 01b8 9D000000 		.4byte	0x9d
  798 01bc 00       		.byte	0
  799 01bd 09       		.uleb128 0x9
- 800 01be D2010000 		.4byte	.LASF34
+ 800 01be B5010000 		.4byte	.LASF34
  801 01c2 06       		.byte	0x6
  802 01c3 17       		.byte	0x17
  803 01c4 73000000 		.4byte	0x73
  804 01c8 04       		.byte	0x4
  805 01c9 09       		.uleb128 0x9
- 806 01ca 04030000 		.4byte	.LASF35
+ 806 01ca E7020000 		.4byte	.LASF35
  807 01ce 06       		.byte	0x6
  808 01cf 18       		.byte	0x18
  809 01d0 D2000000 		.4byte	0xd2
@@ -1066,42 +1066,42 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  817 01e1 14       		.byte	0x14
  818 01e2 05020000 		.4byte	0x205
  819 01e6 11       		.uleb128 0x11
- 820 01e7 B3020000 		.4byte	.LASF36
+ 820 01e7 96020000 		.4byte	.LASF36
  821 01eb 00       		.byte	0
  822 01ec 11       		.uleb128 0x11
- 823 01ed 37030000 		.4byte	.LASF37
+ 823 01ed 1A030000 		.4byte	.LASF37
  824 01f1 01       		.byte	0x1
  825 01f2 11       		.uleb128 0x11
- 826 01f3 EA030000 		.4byte	.LASF38
+ 826 01f3 CD030000 		.4byte	.LASF38
  827 01f7 02       		.byte	0x2
  828 01f8 11       		.uleb128 0x11
- 829 01f9 54020000 		.4byte	.LASF39
+ 829 01f9 37020000 		.4byte	.LASF39
  830 01fd 03       		.byte	0x3
  831 01fe 11       		.uleb128 0x11
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 19
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 19
 
 
  832 01ff 4F000000 		.4byte	.LASF40
  833 0203 04       		.byte	0x4
  834 0204 00       		.byte	0
  835 0205 10       		.uleb128 0x10
- 836 0206 2A020000 		.4byte	.LASF42
+ 836 0206 0D020000 		.4byte	.LASF42
  837 020a 01       		.byte	0x1
  838 020b 37000000 		.4byte	0x37
  839 020f 08       		.byte	0x8
- 840 0210 16       		.byte	0x16
+ 840 0210 17       		.byte	0x17
  841 0211 2E020000 		.4byte	0x22e
  842 0215 11       		.uleb128 0x11
  843 0216 8A000000 		.4byte	.LASF43
  844 021a 00       		.byte	0
  845 021b 11       		.uleb128 0x11
- 846 021c 6D020000 		.4byte	.LASF44
+ 846 021c 50020000 		.4byte	.LASF44
  847 0220 01       		.byte	0x1
  848 0221 11       		.uleb128 0x11
- 849 0222 67020000 		.4byte	.LASF45
+ 849 0222 4A020000 		.4byte	.LASF45
  850 0226 02       		.byte	0x2
  851 0227 11       		.uleb128 0x11
- 852 0228 8B030000 		.4byte	.LASF46
+ 852 0228 6E030000 		.4byte	.LASF46
  853 022c 03       		.byte	0x3
  854 022d 00       		.byte	0
  855 022e 12       		.uleb128 0x12
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  886 0271 1C000000 		.4byte	.LFE65-.LFB65
  887 0275 01       		.uleb128 0x1
  888 0276 9C       		.byte	0x9c
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 20
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 20
 
 
  889 0277 C5020000 		.4byte	0x2c5
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  943 02e3 EE020000 		.4byte	0x2ee
  944 02e7 15       		.uleb128 0x15
  945 02e8 01       		.uleb128 0x1
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 21
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 21
 
 
  946 02e9 50       		.byte	0x50
@@ -1237,7 +1237,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  979 0322 00       		.byte	0
  980 0323 00       		.byte	0
  981 0324 12       		.uleb128 0x12
- 982 0325 1A030000 		.4byte	.LASF50
+ 982 0325 FD020000 		.4byte	.LASF50
  983 0329 01       		.byte	0x1
  984 032a 36       		.byte	0x36
  985 032b 00000000 		.4byte	.LFB67
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1000 034c 00       		.byte	0
  1001 034d 16       		.uleb128 0x16
  1002 034e 0E000000 		.4byte	.LVL12
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 22
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 22
 
 
  1003 0352 62080000 		.4byte	0x862
@@ -1290,7 +1290,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1029 0381 00       		.byte	0
  1030 0382 00       		.byte	0
  1031 0383 12       		.uleb128 0x12
- 1032 0384 B9010000 		.4byte	.LASF51
+ 1032 0384 9C010000 		.4byte	.LASF51
  1033 0388 01       		.byte	0x1
  1034 0389 42       		.byte	0x42
  1035 038a 00000000 		.4byte	.LFB68
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1057 03bb 50       		.byte	0x50
  1058 03bc 01       		.uleb128 0x1
  1059 03bd 31       		.byte	0x31
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 23
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 23
 
 
  1060 03be 00       		.byte	0
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1114 042a 12000000 		.4byte	.LVL22
  1115 042e 62080000 		.4byte	0x862
  1116 0432 3C040000 		.4byte	0x43c
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 24
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 24
 
 
  1117 0436 15       		.uleb128 0x15
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1171 0499 01       		.uleb128 0x1
  1172 049a 31       		.byte	0x31
  1173 049b 00       		.byte	0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 25
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 25
 
 
  1174 049c 16       		.uleb128 0x16
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1228 0505 0F050000 		.4byte	0x50f
  1229 0509 15       		.uleb128 0x15
  1230 050a 01       		.uleb128 0x1
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 26
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 26
 
 
  1231 050b 50       		.byte	0x50
@@ -1535,7 +1535,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1262 0542 9C       		.byte	0x9c
  1263 0543 13060000 		.4byte	0x613
  1264 0547 18       		.uleb128 0x18
- 1265 0548 6F030000 		.4byte	.LASF56
+ 1265 0548 52030000 		.4byte	.LASF56
  1266 054c 01       		.byte	0x1
  1267 054d 75       		.byte	0x75
  1268 054e B3000000 		.4byte	0xb3
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1285 0577 15       		.uleb128 0x15
  1286 0578 01       		.uleb128 0x1
  1287 0579 50       		.byte	0x50
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 27
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 27
 
 
  1288 057a 01       		.uleb128 0x1
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1342 05dd 16       		.uleb128 0x16
  1343 05de 34000000 		.4byte	.LVL45
  1344 05e2 78080000 		.4byte	0x878
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 28
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 28
 
 
  1345 05e6 F0050000 		.4byte	0x5f0
@@ -1649,7 +1649,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1370 0611 00       		.byte	0
  1371 0612 00       		.byte	0
  1372 0613 12       		.uleb128 0x12
- 1373 0614 D6030000 		.4byte	.LASF57
+ 1373 0614 B9030000 		.4byte	.LASF57
  1374 0618 01       		.byte	0x1
  1375 0619 88       		.byte	0x88
  1376 061a 00000000 		.4byte	.LFB71
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1399 0655 15       		.uleb128 0x15
  1400 0656 01       		.uleb128 0x1
  1401 0657 50       		.byte	0x50
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 29
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 29
 
 
  1402 0658 05       		.uleb128 0x5
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1456 06be 19       		.uleb128 0x19
  1457 06bf 6C000000 		.4byte	.LVL56
  1458 06c3 D7060000 		.4byte	0x6d7
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 30
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 30
 
 
  1459 06c7 15       		.uleb128 0x15
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1513 071b 52       		.byte	0x52
  1514 071c 02       		.uleb128 0x2
  1515 071d 09       		.byte	0x9
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 31
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 31
 
 
  1516 071e FB       		.byte	0xfb
@@ -1834,7 +1834,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1546 074b 00       		.byte	0
  1547 074c 00       		.byte	0
  1548 074d 1B       		.uleb128 0x1b
- 1549 074e 57040000 		.4byte	.LASF58
+ 1549 074e 3A040000 		.4byte	.LASF58
  1550 0752 09       		.byte	0x9
  1551 0753 1207     		.2byte	0x712
  1552 0755 59070000 		.4byte	0x759
@@ -1849,7 +1849,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1561 076a 03       		.byte	0x3
  1562 076b 00000000 		.4byte	SPI_recieved_flag
  1563 076f 1D       		.uleb128 0x1d
- 1564 0770 0D030000 		.4byte	.LASF60
+ 1564 0770 F0020000 		.4byte	.LASF60
  1565 0774 0A       		.byte	0xa
  1566 0775 1C       		.byte	0x1c
  1567 0776 96000000 		.4byte	0x96
@@ -1857,8 +1857,8 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1569 077b 03       		.byte	0x3
  1570 077c 00000000 		.4byte	SPI_recieved
  1571 0780 1D       		.uleb128 0x1d
- 1572 0781 BF020000 		.4byte	.LASF61
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 32
+ 1572 0781 A2020000 		.4byte	.LASF61
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 32
 
 
  1573 0785 06       		.byte	0x6
@@ -1868,7 +1868,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1577 078c 03       		.byte	0x3
  1578 078d 00000000 		.4byte	sonarTimerDone
  1579 0791 1D       		.uleb128 0x1d
- 1580 0792 53010000 		.4byte	.LASF62
+ 1580 0792 36010000 		.4byte	.LASF62
  1581 0796 07       		.byte	0x7
  1582 0797 18       		.byte	0x18
  1583 0798 D6010000 		.4byte	0x1d6
@@ -1884,7 +1884,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1593 07ae 03       		.byte	0x3
  1594 07af 00000000 		.4byte	noWater
  1595 07b3 1D       		.uleb128 0x1d
- 1596 07b4 03020000 		.4byte	.LASF64
+ 1596 07b4 E6010000 		.4byte	.LASF64
  1597 07b8 07       		.byte	0x7
  1598 07b9 1C       		.byte	0x1c
  1599 07ba A5010000 		.4byte	0x1a5
@@ -1892,7 +1892,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1601 07bf 03       		.byte	0x3
  1602 07c0 00000000 		.4byte	pigeonPosition
  1603 07c4 1D       		.uleb128 0x1d
- 1604 07c5 F7020000 		.4byte	.LASF65
+ 1604 07c5 DA020000 		.4byte	.LASF65
  1605 07c9 07       		.byte	0x7
  1606 07ca 1D       		.byte	0x1d
  1607 07cb 0B010000 		.4byte	0x10b
@@ -1900,7 +1900,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1609 07d0 03       		.byte	0x3
  1610 07d1 00000000 		.4byte	circBuf
  1611 07d5 1D       		.uleb128 0x1d
- 1612 07d6 A4010000 		.4byte	.LASF66
+ 1612 07d6 87010000 		.4byte	.LASF66
  1613 07da 07       		.byte	0x7
  1614 07db 22       		.byte	0x22
  1615 07dc 8F000000 		.4byte	0x8f
@@ -1908,92 +1908,92 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1617 07e1 03       		.byte	0x3
  1618 07e2 00000000 		.4byte	currentState
  1619 07e6 1D       		.uleb128 0x1d
- 1620 07e7 48030000 		.4byte	.LASF67
+ 1620 07e7 2B030000 		.4byte	.LASF67
  1621 07eb 08       		.byte	0x8
- 1622 07ec 18       		.byte	0x18
+ 1622 07ec 19       		.byte	0x19
  1623 07ed 73000000 		.4byte	0x73
  1624 07f1 05       		.uleb128 0x5
  1625 07f2 03       		.byte	0x3
  1626 07f3 00000000 		.4byte	stepperPositionX
  1627 07f7 1D       		.uleb128 0x1d
- 1628 07f8 6A010000 		.4byte	.LASF68
+ 1628 07f8 4D010000 		.4byte	.LASF68
  1629 07fc 08       		.byte	0x8
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 33
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 33
 
 
- 1630 07fd 19       		.byte	0x19
+ 1630 07fd 1A       		.byte	0x1a
  1631 07fe B3000000 		.4byte	0xb3
  1632 0802 05       		.uleb128 0x5
  1633 0803 03       		.byte	0x3
  1634 0804 00000000 		.4byte	timerDoneFlagX
  1635 0808 1D       		.uleb128 0x1d
- 1636 0809 90030000 		.4byte	.LASF69
+ 1636 0809 73030000 		.4byte	.LASF69
  1637 080d 08       		.byte	0x8
- 1638 080e 1A       		.byte	0x1a
+ 1638 080e 1B       		.byte	0x1b
  1639 080f 05020000 		.4byte	0x205
  1640 0813 05       		.uleb128 0x5
  1641 0814 03       		.byte	0x3
  1642 0815 00000000 		.4byte	stepperStateX
  1643 0819 1D       		.uleb128 0x1d
- 1644 081a 95020000 		.4byte	.LASF70
+ 1644 081a 78020000 		.4byte	.LASF70
  1645 081e 0B       		.byte	0xb
- 1646 081f 16       		.byte	0x16
+ 1646 081f 17       		.byte	0x17
  1647 0820 73000000 		.4byte	0x73
  1648 0824 05       		.uleb128 0x5
  1649 0825 03       		.byte	0x3
  1650 0826 00000000 		.4byte	stepperPositionY
  1651 082a 1D       		.uleb128 0x1d
- 1652 082b 79010000 		.4byte	.LASF71
+ 1652 082b 5C010000 		.4byte	.LASF71
  1653 082f 0B       		.byte	0xb
- 1654 0830 17       		.byte	0x17
+ 1654 0830 18       		.byte	0x18
  1655 0831 B3000000 		.4byte	0xb3
  1656 0835 05       		.uleb128 0x5
  1657 0836 03       		.byte	0x3
  1658 0837 00000000 		.4byte	timerDoneFlagY
  1659 083b 1D       		.uleb128 0x1d
- 1660 083c 9E030000 		.4byte	.LASF72
+ 1660 083c 81030000 		.4byte	.LASF72
  1661 0840 0B       		.byte	0xb
- 1662 0841 18       		.byte	0x18
+ 1662 0841 19       		.byte	0x19
  1663 0842 05020000 		.4byte	0x205
  1664 0846 05       		.uleb128 0x5
  1665 0847 03       		.byte	0x3
  1666 0848 00000000 		.4byte	stepperStateY
  1667 084c 1E       		.uleb128 0x1e
- 1668 084d 2A040000 		.4byte	.LASF73
- 1669 0851 2A040000 		.4byte	.LASF73
+ 1668 084d 0D040000 		.4byte	.LASF73
+ 1669 0851 0D040000 		.4byte	.LASF73
  1670 0855 0C       		.byte	0xc
  1671 0856 18       		.byte	0x18
  1672 0857 1E       		.uleb128 0x1e
- 1673 0858 D8010000 		.4byte	.LASF74
- 1674 085c D8010000 		.4byte	.LASF74
+ 1673 0858 BB010000 		.4byte	.LASF74
+ 1674 085c BB010000 		.4byte	.LASF74
  1675 0860 0D       		.byte	0xd
  1676 0861 46       		.byte	0x46
  1677 0862 1E       		.uleb128 0x1e
- 1678 0863 17040000 		.4byte	.LASF75
- 1679 0867 17040000 		.4byte	.LASF75
+ 1678 0863 FA030000 		.4byte	.LASF75
+ 1679 0867 FA030000 		.4byte	.LASF75
  1680 086b 0E       		.byte	0xe
  1681 086c 26       		.byte	0x26
  1682 086d 1E       		.uleb128 0x1e
- 1683 086e 59030000 		.4byte	.LASF76
- 1684 0872 59030000 		.4byte	.LASF76
+ 1683 086e 3C030000 		.4byte	.LASF76
+ 1684 0872 3C030000 		.4byte	.LASF76
  1685 0876 0D       		.byte	0xd
  1686 0877 53       		.byte	0x53
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 34
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 34
 
 
  1687 0878 1E       		.uleb128 0x1e
- 1688 0879 3C020000 		.4byte	.LASF77
- 1689 087d 3C020000 		.4byte	.LASF77
+ 1688 0879 1F020000 		.4byte	.LASF77
+ 1689 087d 1F020000 		.4byte	.LASF77
  1690 0881 0F       		.byte	0xf
  1691 0882 77       		.byte	0x77
  1692 0883 1E       		.uleb128 0x1e
- 1693 0884 F2040000 		.4byte	.LASF78
- 1694 0888 F2040000 		.4byte	.LASF78
+ 1693 0884 D5040000 		.4byte	.LASF78
+ 1694 0888 D5040000 		.4byte	.LASF78
  1695 088c 0F       		.byte	0xf
  1696 088d 76       		.byte	0x76
  1697 088e 1E       		.uleb128 0x1e
- 1698 088f C5030000 		.4byte	.LASF79
- 1699 0893 C5030000 		.4byte	.LASF79
+ 1698 088f A8030000 		.4byte	.LASF79
+ 1699 0893 A8030000 		.4byte	.LASF79
  1700 0897 10       		.byte	0x10
  1701 0898 8B       		.byte	0x8b
  1702 0899 1E       		.uleb128 0x1e
@@ -2002,8 +2002,8 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1705 08a2 10       		.byte	0x10
  1706 08a3 8A       		.byte	0x8a
  1707 08a4 1E       		.uleb128 0x1e
- 1708 08a5 D4020000 		.4byte	.LASF81
- 1709 08a9 D4020000 		.4byte	.LASF81
+ 1708 08a5 B7020000 		.4byte	.LASF81
+ 1709 08a9 B7020000 		.4byte	.LASF81
  1710 08ad 07       		.byte	0x7
  1711 08ae 1F       		.byte	0x1f
  1712 08af 00       		.byte	0
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1741 001a 03       		.uleb128 0x3
  1742 001b 0E       		.uleb128 0xe
  1743 001c 00       		.byte	0
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 35
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 35
 
 
  1744 001d 00       		.byte	0
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1798 0053 08       		.uleb128 0x8
  1799 0054 13       		.uleb128 0x13
  1800 0055 01       		.byte	0x1
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 36
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 36
 
 
  1801 0056 03       		.uleb128 0x3
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1855 008c 0D       		.uleb128 0xd
  1856 008d 01       		.uleb128 0x1
  1857 008e 01       		.byte	0x1
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 37
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 37
 
 
  1858 008f 49       		.uleb128 0x49
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1912 00c5 19       		.uleb128 0x19
  1913 00c6 03       		.uleb128 0x3
  1914 00c7 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 38
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 38
 
 
  1915 00c8 3A       		.uleb128 0x3a
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  1969 0108 17       		.uleb128 0x17
  1970 0109 2E       		.uleb128 0x2e
  1971 010a 01       		.byte	0x1
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 39
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 39
 
 
  1972 010b 3F       		.uleb128 0x3f
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  2026 0146 34       		.uleb128 0x34
  2027 0147 00       		.byte	0
  2028 0148 03       		.uleb128 0x3
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 40
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 40
 
 
  2029 0149 0E       		.uleb128 0xe
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  2083 017f 00       		.byte	0
  2084              		.section	.debug_loc,"",%progbits
  2085              	.Ldebug_loc0:
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 41
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 41
 
 
  2086              	.LLST0:
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  2140 0020 00000000 		.4byte	.LFB66
  2141 0024 1C000000 		.4byte	.LFE66-.LFB66
  2142 0028 00000000 		.4byte	.LFB67
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 42
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 42
 
 
  2143 002c 1C000000 		.4byte	.LFE67-.LFB67
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  2182      6574546F 
  2182      44656661 
  2183              	.LASF40:
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 43
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 43
 
 
  2184 004f 5354414E 		.ascii	"STANDBY_MODE\000"
@@ -2576,342 +2576,338 @@ ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 1
  2206      696F6E5F 
  2206      7900
  2207              	.LASF84:
- 2208 00e5 443A5C4F 		.ascii	"D:\\OneDrive - Aarhus Universitet\\Aarhus Universit"
- 2208      6E654472 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 44
+ 2208 00e5 433A5C55 		.ascii	"C:\\Users\\midtg\\Documents\\GitHub\\I3E3PRJ_Repo\\"
+ 2208      73657273 
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 44
 
 
- 2208      69766520 
- 2208      2D204161 
- 2208      72687573 
- 2209 0116 65745C45 		.ascii	"et\\E3\\E3PRJ\\I3E3PRJ_Repo\\PSoCcontroller\\PSoCco"
- 2209      335C4533 
- 2209      50524A5C 
- 2209      49334533 
- 2209      50524A5F 
- 2210 0144 6E74726F 		.ascii	"ntroller.cydsn\000"
- 2210      6C6C6572 
- 2210      2E637964 
- 2210      736E00
- 2211              	.LASF62:
- 2212 0153 6D6F6465 		.ascii	"mode\000"
- 2212      00
- 2213              	.LASF83:
- 2214 0158 5350495F 		.ascii	"SPI_driver_PSoC.c\000"
- 2214      64726976 
- 2214      65725F50 
- 2214      536F432E 
- 2214      6300
- 2215              	.LASF68:
- 2216 016a 74696D65 		.ascii	"timerDoneFlagX\000"
- 2216      72446F6E 
- 2216      65466C61 
- 2216      675800
- 2217              	.LASF71:
- 2218 0179 74696D65 		.ascii	"timerDoneFlagY\000"
- 2218      72446F6E 
- 2218      65466C61 
- 2218      675900
- 2219              	.LASF33:
- 2220 0188 64657465 		.ascii	"detected\000"
- 2220      63746564 
- 2220      00
- 2221              	.LASF14:
- 2222 0191 75696E74 		.ascii	"uint8_t\000"
- 2222      385F7400 
- 2223              	.LASF16:
- 2224 0199 75696E74 		.ascii	"uint8\000"
- 2224      3800
- 2225              	.LASF25:
- 2226 019f 70757368 		.ascii	"push\000"
- 2226      00
- 2227              	.LASF66:
- 2228 01a4 63757272 		.ascii	"currentState\000"
- 2228      656E7453 
- 2228      74617465 
- 2228      00
- 2229              	.LASF23:
- 2230 01b1 43697263 		.ascii	"CircBuf\000"
- 2230      42756600 
- 2231              	.LASF51:
- 2232 01b9 5350495F 		.ascii	"SPI_send_flowers_watered\000"
- 2232      73656E64 
- 2232      5F666C6F 
- 2232      77657273 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 45
+ 2208      5C6D6964 
+ 2208      74675C44 
+ 2208      6F63756D 
+ 2209 0112 50536F43 		.ascii	"PSoCcontroller\\PSoCcontroller.cydsn\000"
+ 2209      636F6E74 
+ 2209      726F6C6C 
+ 2209      65725C50 
+ 2209      536F4363 
+ 2210              	.LASF62:
+ 2211 0136 6D6F6465 		.ascii	"mode\000"
+ 2211      00
+ 2212              	.LASF83:
+ 2213 013b 5350495F 		.ascii	"SPI_driver_PSoC.c\000"
+ 2213      64726976 
+ 2213      65725F50 
+ 2213      536F432E 
+ 2213      6300
+ 2214              	.LASF68:
+ 2215 014d 74696D65 		.ascii	"timerDoneFlagX\000"
+ 2215      72446F6E 
+ 2215      65466C61 
+ 2215      675800
+ 2216              	.LASF71:
+ 2217 015c 74696D65 		.ascii	"timerDoneFlagY\000"
+ 2217      72446F6E 
+ 2217      65466C61 
+ 2217      675900
+ 2218              	.LASF33:
+ 2219 016b 64657465 		.ascii	"detected\000"
+ 2219      63746564 
+ 2219      00
+ 2220              	.LASF14:
+ 2221 0174 75696E74 		.ascii	"uint8_t\000"
+ 2221      385F7400 
+ 2222              	.LASF16:
+ 2223 017c 75696E74 		.ascii	"uint8\000"
+ 2223      3800
+ 2224              	.LASF25:
+ 2225 0182 70757368 		.ascii	"push\000"
+ 2225      00
+ 2226              	.LASF66:
+ 2227 0187 63757272 		.ascii	"currentState\000"
+ 2227      656E7453 
+ 2227      74617465 
+ 2227      00
+ 2228              	.LASF23:
+ 2229 0194 43697263 		.ascii	"CircBuf\000"
+ 2229      42756600 
+ 2230              	.LASF51:
+ 2231 019c 5350495F 		.ascii	"SPI_send_flowers_watered\000"
+ 2231      73656E64 
+ 2231      5F666C6F 
+ 2231      77657273 
+ 2231      5F776174 
+ 2232              	.LASF34:
+ 2233 01b5 77696474 		.ascii	"width\000"
+ 2233      6800
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 45
 
 
- 2232      5F776174 
- 2233              	.LASF34:
- 2234 01d2 77696474 		.ascii	"width\000"
- 2234      6800
- 2235              	.LASF74:
- 2236 01d8 5350495F 		.ascii	"SPI_1_Start\000"
- 2236      315F5374 
- 2236      61727400 
- 2237              	.LASF18:
- 2238 01e4 666C6F61 		.ascii	"float\000"
- 2238      7400
- 2239              	.LASF8:
- 2240 01ea 6C6F6E67 		.ascii	"long long int\000"
- 2240      206C6F6E 
- 2240      6720696E 
- 2240      7400
- 2241              	.LASF29:
- 2242 01f8 66726F6E 		.ascii	"front\000"
- 2242      7400
- 2243              	.LASF17:
- 2244 01fe 696E7438 		.ascii	"int8\000"
- 2244      00
- 2245              	.LASF64:
- 2246 0203 70696765 		.ascii	"pigeonPosition\000"
- 2246      6F6E506F 
- 2246      73697469 
- 2246      6F6E00
- 2247              	.LASF6:
- 2248 0212 6C6F6E67 		.ascii	"long int\000"
- 2248      20696E74 
- 2248      00
- 2249              	.LASF30:
- 2250 021b 72656172 		.ascii	"rear\000"
- 2250      00
- 2251              	.LASF4:
- 2252 0220 5F5F7569 		.ascii	"__uint8_t\000"
- 2252      6E74385F 
- 2252      7400
- 2253              	.LASF42:
- 2254 022a 73746174 		.ascii	"state\000"
- 2254      6500
- 2255              	.LASF11:
- 2256 0230 6C6F6E67 		.ascii	"long double\000"
- 2256      20646F75 
- 2256      626C6500 
- 2257              	.LASF77:
- 2258 023c 43794465 		.ascii	"CyDelayUs\000"
- 2258      6C617955 
- 2258      7300
- 2259              	.LASF1:
- 2260 0246 756E7369 		.ascii	"unsigned char\000"
- 2260      676E6564 
- 2260      20636861 
- 2260      7200
- 2261              	.LASF39:
- 2262 0254 4155544F 		.ascii	"AUTOMATISK_VANDING\000"
- 2262      4D415449 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 46
+ 2234              	.LASF74:
+ 2235 01bb 5350495F 		.ascii	"SPI_1_Start\000"
+ 2235      315F5374 
+ 2235      61727400 
+ 2236              	.LASF18:
+ 2237 01c7 666C6F61 		.ascii	"float\000"
+ 2237      7400
+ 2238              	.LASF8:
+ 2239 01cd 6C6F6E67 		.ascii	"long long int\000"
+ 2239      206C6F6E 
+ 2239      6720696E 
+ 2239      7400
+ 2240              	.LASF29:
+ 2241 01db 66726F6E 		.ascii	"front\000"
+ 2241      7400
+ 2242              	.LASF17:
+ 2243 01e1 696E7438 		.ascii	"int8\000"
+ 2243      00
+ 2244              	.LASF64:
+ 2245 01e6 70696765 		.ascii	"pigeonPosition\000"
+ 2245      6F6E506F 
+ 2245      73697469 
+ 2245      6F6E00
+ 2246              	.LASF6:
+ 2247 01f5 6C6F6E67 		.ascii	"long int\000"
+ 2247      20696E74 
+ 2247      00
+ 2248              	.LASF30:
+ 2249 01fe 72656172 		.ascii	"rear\000"
+ 2249      00
+ 2250              	.LASF4:
+ 2251 0203 5F5F7569 		.ascii	"__uint8_t\000"
+ 2251      6E74385F 
+ 2251      7400
+ 2252              	.LASF42:
+ 2253 020d 73746174 		.ascii	"state\000"
+ 2253      6500
+ 2254              	.LASF11:
+ 2255 0213 6C6F6E67 		.ascii	"long double\000"
+ 2255      20646F75 
+ 2255      626C6500 
+ 2256              	.LASF77:
+ 2257 021f 43794465 		.ascii	"CyDelayUs\000"
+ 2257      6C617955 
+ 2257      7300
+ 2258              	.LASF1:
+ 2259 0229 756E7369 		.ascii	"unsigned char\000"
+ 2259      676E6564 
+ 2259      20636861 
+ 2259      7200
+ 2260              	.LASF39:
+ 2261 0237 4155544F 		.ascii	"AUTOMATISK_VANDING\000"
+ 2261      4D415449 
+ 2261      534B5F56 
+ 2261      414E4449 
+ 2261      4E4700
+ 2262              	.LASF45:
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 46
 
 
- 2262      534B5F56 
- 2262      414E4449 
- 2262      4E4700
- 2263              	.LASF45:
- 2264 0267 534F5554 		.ascii	"SOUTH\000"
- 2264      4800
- 2265              	.LASF44:
- 2266 026d 45415354 		.ascii	"EAST\000"
- 2266      00
- 2267              	.LASF0:
- 2268 0272 7369676E 		.ascii	"signed char\000"
- 2268      65642063 
- 2268      68617200 
- 2269              	.LASF9:
- 2270 027e 6C6F6E67 		.ascii	"long long unsigned int\000"
- 2270      206C6F6E 
- 2270      6720756E 
- 2270      7369676E 
- 2270      65642069 
- 2271              	.LASF70:
- 2272 0295 73746570 		.ascii	"stepperPositionY\000"
- 2272      70657250 
- 2272      6F736974 
- 2272      696F6E59 
- 2272      00
- 2273              	.LASF10:
- 2274 02a6 756E7369 		.ascii	"unsigned int\000"
- 2274      676E6564 
- 2274      20696E74 
- 2274      00
- 2275              	.LASF36:
- 2276 02b3 4E4F524D 		.ascii	"NORMAL_MODE\000"
- 2276      414C5F4D 
- 2276      4F444500 
- 2277              	.LASF61:
- 2278 02bf 736F6E61 		.ascii	"sonarTimerDone\000"
- 2278      7254696D 
- 2278      6572446F 
- 2278      6E6500
- 2279              	.LASF21:
- 2280 02ce 70617261 		.ascii	"param\000"
- 2280      6D00
- 2281              	.LASF81:
- 2282 02d4 7365744D 		.ascii	"setMode\000"
- 2282      6F646500 
- 2283              	.LASF3:
- 2284 02dc 73686F72 		.ascii	"short unsigned int\000"
- 2284      7420756E 
- 2284      7369676E 
- 2284      65642069 
- 2284      6E7400
- 2285              	.LASF27:
- 2286 02ef 6973456D 		.ascii	"isEmpty\000"
- 2286      70747900 
- 2287              	.LASF65:
- 2288 02f7 63697263 		.ascii	"circBuf\000"
- 2288      42756600 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 47
+ 2263 024a 534F5554 		.ascii	"SOUTH\000"
+ 2263      4800
+ 2264              	.LASF44:
+ 2265 0250 45415354 		.ascii	"EAST\000"
+ 2265      00
+ 2266              	.LASF0:
+ 2267 0255 7369676E 		.ascii	"signed char\000"
+ 2267      65642063 
+ 2267      68617200 
+ 2268              	.LASF9:
+ 2269 0261 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2269      206C6F6E 
+ 2269      6720756E 
+ 2269      7369676E 
+ 2269      65642069 
+ 2270              	.LASF70:
+ 2271 0278 73746570 		.ascii	"stepperPositionY\000"
+ 2271      70657250 
+ 2271      6F736974 
+ 2271      696F6E59 
+ 2271      00
+ 2272              	.LASF10:
+ 2273 0289 756E7369 		.ascii	"unsigned int\000"
+ 2273      676E6564 
+ 2273      20696E74 
+ 2273      00
+ 2274              	.LASF36:
+ 2275 0296 4E4F524D 		.ascii	"NORMAL_MODE\000"
+ 2275      414C5F4D 
+ 2275      4F444500 
+ 2276              	.LASF61:
+ 2277 02a2 736F6E61 		.ascii	"sonarTimerDone\000"
+ 2277      7254696D 
+ 2277      6572446F 
+ 2277      6E6500
+ 2278              	.LASF21:
+ 2279 02b1 70617261 		.ascii	"param\000"
+ 2279      6D00
+ 2280              	.LASF81:
+ 2281 02b7 7365744D 		.ascii	"setMode\000"
+ 2281      6F646500 
+ 2282              	.LASF3:
+ 2283 02bf 73686F72 		.ascii	"short unsigned int\000"
+ 2283      7420756E 
+ 2283      7369676E 
+ 2283      65642069 
+ 2283      6E7400
+ 2284              	.LASF27:
+ 2285 02d2 6973456D 		.ascii	"isEmpty\000"
+ 2285      70747900 
+ 2286              	.LASF65:
+ 2287 02da 63697263 		.ascii	"circBuf\000"
+ 2287      42756600 
+ 2288              	.LASF13:
+ 2289 02e2 63686172 		.ascii	"char\000"
+ 2289      00
+ 2290              	.LASF35:
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 47
 
 
- 2289              	.LASF13:
- 2290 02ff 63686172 		.ascii	"char\000"
- 2290      00
- 2291              	.LASF35:
- 2292 0304 64697374 		.ascii	"distance\000"
- 2292      616E6365 
- 2292      00
- 2293              	.LASF60:
- 2294 030d 5350495F 		.ascii	"SPI_recieved\000"
- 2294      72656369 
- 2294      65766564 
- 2294      00
- 2295              	.LASF50:
- 2296 031a 5350495F 		.ascii	"SPI_send_water_empty\000"
- 2296      73656E64 
- 2296      5F776174 
- 2296      65725F65 
- 2296      6D707479 
- 2297              	.LASF15:
- 2298 032f 696E7433 		.ascii	"int32_t\000"
- 2298      325F7400 
- 2299              	.LASF37:
- 2300 0337 504F5745 		.ascii	"POWERSAVING_MODE\000"
- 2300      52534156 
- 2300      494E475F 
- 2300      4D4F4445 
- 2300      00
- 2301              	.LASF67:
- 2302 0348 73746570 		.ascii	"stepperPositionX\000"
- 2302      70657250 
- 2302      6F736974 
- 2302      696F6E58 
- 2302      00
- 2303              	.LASF76:
- 2304 0359 5350495F 		.ascii	"SPI_1_WriteTxDataZero\000"
- 2304      315F5772 
- 2304      69746554 
- 2304      78446174 
- 2304      615A6572 
- 2305              	.LASF56:
- 2306 036f 77617465 		.ascii	"waterlevel\000"
- 2306      726C6576 
- 2306      656C00
- 2307              	.LASF26:
- 2308 037a 69734675 		.ascii	"isFull\000"
- 2308      6C6C00
- 2309              	.LASF24:
- 2310 0381 71756575 		.ascii	"queueItem\000"
- 2310      65497465 
- 2310      6D00
- 2311              	.LASF46:
- 2312 038b 57455354 		.ascii	"WEST\000"
- 2312      00
- 2313              	.LASF69:
- 2314 0390 73746570 		.ascii	"stepperStateX\000"
- 2314      70657253 
- 2314      74617465 
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 48
+ 2291 02e7 64697374 		.ascii	"distance\000"
+ 2291      616E6365 
+ 2291      00
+ 2292              	.LASF60:
+ 2293 02f0 5350495F 		.ascii	"SPI_recieved\000"
+ 2293      72656369 
+ 2293      65766564 
+ 2293      00
+ 2294              	.LASF50:
+ 2295 02fd 5350495F 		.ascii	"SPI_send_water_empty\000"
+ 2295      73656E64 
+ 2295      5F776174 
+ 2295      65725F65 
+ 2295      6D707479 
+ 2296              	.LASF15:
+ 2297 0312 696E7433 		.ascii	"int32_t\000"
+ 2297      325F7400 
+ 2298              	.LASF37:
+ 2299 031a 504F5745 		.ascii	"POWERSAVING_MODE\000"
+ 2299      52534156 
+ 2299      494E475F 
+ 2299      4D4F4445 
+ 2299      00
+ 2300              	.LASF67:
+ 2301 032b 73746570 		.ascii	"stepperPositionX\000"
+ 2301      70657250 
+ 2301      6F736974 
+ 2301      696F6E58 
+ 2301      00
+ 2302              	.LASF76:
+ 2303 033c 5350495F 		.ascii	"SPI_1_WriteTxDataZero\000"
+ 2303      315F5772 
+ 2303      69746554 
+ 2303      78446174 
+ 2303      615A6572 
+ 2304              	.LASF56:
+ 2305 0352 77617465 		.ascii	"waterlevel\000"
+ 2305      726C6576 
+ 2305      656C00
+ 2306              	.LASF26:
+ 2307 035d 69734675 		.ascii	"isFull\000"
+ 2307      6C6C00
+ 2308              	.LASF24:
+ 2309 0364 71756575 		.ascii	"queueItem\000"
+ 2309      65497465 
+ 2309      6D00
+ 2310              	.LASF46:
+ 2311 036e 57455354 		.ascii	"WEST\000"
+ 2311      00
+ 2312              	.LASF69:
+ 2313 0373 73746570 		.ascii	"stepperStateX\000"
+ 2313      70657253 
+ 2313      74617465 
+ 2313      5800
+ 2314              	.LASF72:
+ 2315 0381 73746570 		.ascii	"stepperStateY\000"
+ 2315      70657253 
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 48
 
 
- 2314      5800
- 2315              	.LASF72:
- 2316 039e 73746570 		.ascii	"stepperStateY\000"
- 2316      70657253 
- 2316      74617465 
- 2316      5900
- 2317              	.LASF7:
- 2318 03ac 6C6F6E67 		.ascii	"long unsigned int\000"
- 2318      20756E73 
- 2318      69676E65 
- 2318      6420696E 
- 2318      7400
- 2319              	.LASF19:
- 2320 03be 646F7562 		.ascii	"double\000"
- 2320      6C6500
- 2321              	.LASF79:
- 2322 03c5 55415254 		.ascii	"UART_1_PutString\000"
- 2322      5F315F50 
- 2322      75745374 
- 2322      72696E67 
- 2322      00
- 2323              	.LASF57:
- 2324 03d6 48616E64 		.ascii	"Handle_SPI_recieved\000"
- 2324      6C655F53 
- 2324      50495F72 
- 2324      65636965 
- 2324      76656400 
- 2325              	.LASF38:
- 2326 03ea 4D414E55 		.ascii	"MANUAL_MODE\000"
- 2326      414C5F4D 
- 2326      4F444500 
- 2327              	.LASF5:
- 2328 03f6 5F5F696E 		.ascii	"__int32_t\000"
- 2328      7433325F 
- 2328      7400
- 2329              	.LASF22:
- 2330 0400 71756575 		.ascii	"queueElement\000"
- 2330      65456C65 
- 2330      6D656E74 
- 2330      00
- 2331              	.LASF31:
- 2332 040d 6D61784C 		.ascii	"maxLength\000"
- 2332      656E6774 
- 2332      6800
- 2333              	.LASF75:
- 2334 0417 5350495F 		.ascii	"SPI_read_req_Write\000"
- 2334      72656164 
- 2334      5F726571 
- 2334      5F577269 
- 2334      746500
- 2335              	.LASF73:
- 2336 042a 5350495F 		.ascii	"SPI_ISR_StartEx\000"
- 2336      4953525F 
- 2336      53746172 
- 2336      74457800 
- 2337              	.LASF20:
- 2338 043a 66756E63 		.ascii	"funcPtr\000"
-ARM GAS  C:\Users\Lasse\AppData\Local\Temp\ccfGG0GZ.s 			page 49
+ 2315      74617465 
+ 2315      5900
+ 2316              	.LASF7:
+ 2317 038f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2317      20756E73 
+ 2317      69676E65 
+ 2317      6420696E 
+ 2317      7400
+ 2318              	.LASF19:
+ 2319 03a1 646F7562 		.ascii	"double\000"
+ 2319      6C6500
+ 2320              	.LASF79:
+ 2321 03a8 55415254 		.ascii	"UART_1_PutString\000"
+ 2321      5F315F50 
+ 2321      75745374 
+ 2321      72696E67 
+ 2321      00
+ 2322              	.LASF57:
+ 2323 03b9 48616E64 		.ascii	"Handle_SPI_recieved\000"
+ 2323      6C655F53 
+ 2323      50495F72 
+ 2323      65636965 
+ 2323      76656400 
+ 2324              	.LASF38:
+ 2325 03cd 4D414E55 		.ascii	"MANUAL_MODE\000"
+ 2325      414C5F4D 
+ 2325      4F444500 
+ 2326              	.LASF5:
+ 2327 03d9 5F5F696E 		.ascii	"__int32_t\000"
+ 2327      7433325F 
+ 2327      7400
+ 2328              	.LASF22:
+ 2329 03e3 71756575 		.ascii	"queueElement\000"
+ 2329      65456C65 
+ 2329      6D656E74 
+ 2329      00
+ 2330              	.LASF31:
+ 2331 03f0 6D61784C 		.ascii	"maxLength\000"
+ 2331      656E6774 
+ 2331      6800
+ 2332              	.LASF75:
+ 2333 03fa 5350495F 		.ascii	"SPI_read_req_Write\000"
+ 2333      72656164 
+ 2333      5F726571 
+ 2333      5F577269 
+ 2333      746500
+ 2334              	.LASF73:
+ 2335 040d 5350495F 		.ascii	"SPI_ISR_StartEx\000"
+ 2335      4953525F 
+ 2335      53746172 
+ 2335      74457800 
+ 2336              	.LASF20:
+ 2337 041d 66756E63 		.ascii	"funcPtr\000"
+ 2337      50747200 
+ 2338              	.LASF28:
+ 2339 0425 636C6561 		.ascii	"clearBuffer\000"
+ 2339      72427566 
+ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccUGhfEO.s 			page 49
 
 
- 2338      50747200 
- 2339              	.LASF28:
- 2340 0442 636C6561 		.ascii	"clearBuffer\000"
- 2340      72427566 
- 2340      66657200 
- 2341              	.LASF32:
- 2342 044e 706F7369 		.ascii	"position\000"
- 2342      74696F6E 
- 2342      00
- 2343              	.LASF58:
- 2344 0457 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 2344      52784275 
- 2344      66666572 
- 2344      00
- 2345              	.LASF82:
- 2346 0464 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 2346      43313120 
- 2346      352E342E 
- 2346      31203230 
- 2346      31363036 
- 2347 0497 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 2347      20726576 
- 2347      6973696F 
- 2347      6E203233 
- 2347      37373135 
- 2348 04ca 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 2348      66756E63 
- 2348      74696F6E 
- 2348      2D736563 
- 2348      74696F6E 
- 2349              	.LASF78:
- 2350 04f2 43794465 		.ascii	"CyDelay\000"
- 2350      6C617900 
- 2351              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 2339      66657200 
+ 2340              	.LASF32:
+ 2341 0431 706F7369 		.ascii	"position\000"
+ 2341      74696F6E 
+ 2341      00
+ 2342              	.LASF58:
+ 2343 043a 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 2343      52784275 
+ 2343      66666572 
+ 2343      00
+ 2344              	.LASF82:
+ 2345 0447 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2345      43313120 
+ 2345      352E342E 
+ 2345      31203230 
+ 2345      31363036 
+ 2346 047a 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 2346      20726576 
+ 2346      6973696F 
+ 2346      6E203233 
+ 2346      37373135 
+ 2347 04ad 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2347      66756E63 
+ 2347      74696F6E 
+ 2347      2D736563 
+ 2347      74696F6E 
+ 2348              	.LASF78:
+ 2349 04d5 43794465 		.ascii	"CyDelay\000"
+ 2349      6C617900 
+ 2350              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

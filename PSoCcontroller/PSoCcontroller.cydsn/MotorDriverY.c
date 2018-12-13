@@ -24,6 +24,7 @@ void initStepperY() {
     timerDoneFlagY = 0;
     
     resetPositionY();
+    moveDegreesY(-90-OFFSET_Y);
 }
 
 void rotateClockwiseY() {
@@ -69,7 +70,7 @@ void moveStepY() {
 
 void moveDegreesY(int deg) { //Positivt antal grader skrives hvis armen skal køre med uret og negativt gradtal skrives hvis den skal køre mod uret
     // OBS! Y-stepper er gearet forkert! 0.9 grader pr. full step, ikke 1.8 som der står i databladet
-    float round1 = deg / 0.9; //Grader divideret med stepvinkel = antal steps der skal køres
+    float round1 = deg / 1.8; //Grader divideret med stepvinkel = antal steps der skal køres
     int steps = (int)round(round1); //Afrund antallet af steps
     
     if(steps < 0) {

@@ -35,9 +35,9 @@ int main(void)
     
     // ~~~~~~~~~~~~ INITIALIZATION ~~~~~~~~~~~~~~~~
     
-    noWater = FALSE;
     
-    ISR_WaterLevel_StartEx( WaterLevelISRhandler ); //DONT LEAVE FLOATING!!! WILL CAUSE INTERRUPT
+    
+    //ISR_WaterLevel_StartEx( WaterLevelISRhandler ); //DONT LEAVE FLOATING!!! WILL CAUSE INTERRUPT
     ISR_delay_StartEx( DelayTimerInterrupt );
     initStepperX();
     initStepperY();
@@ -49,22 +49,27 @@ int main(void)
     SPI_start();
     
     SPI_send_resetToDefault();
-    
+    CyDelay(1);
     setMode(NORMAL_MODE); //default initial state
-    
+    noWater = FALSE;
     while(1) {
-        if(noWater == TRUE) {
-            WaterPump_fireWater(FALSE);
-            SPI_send_waterlevel(0);
-            Pin_Low_WL_Write(1);
-            setMode(STANDBY_MODE);
-        }
+//        if(Pin_ISR_WaSens_Read() == 1){//noWater == TRUE) {
+//            WaterPump_fireWater(FALSE);
+//            SPI_send_waterlevel(0);
+//            Pin_Low_WL_Write(1);
+//            setMode(STANDBY_MODE);
+//        }
+//        else {
+//            noWater = FALSE;
+//            Pin_Low_WL_Write(0);
+//        }
         
         if (SPI_recieved_flag == 1) {
             Handle_SPI_recieved();
         }
         
         currentState();
+        
     }
 }
 
@@ -140,7 +145,7 @@ CY_ISR( DelayTimerInterrupt ) {
 }
 
 CY_ISR( WaterLevelISRhandler ) {
-    noWater = TRUE;
+    noWater = TRUE;   
 }
 
 CY_ISR( stepperX_interrupt_handler ){
@@ -182,23 +187,25 @@ void checkForPigeonAndShoot(void) {
             int targetX, targetY; //assign target X position
             switch(pigeonPosition.width){
                 case 1:
-                    targetX = 0;
+                    targetX = (90-35) + pigeonPosition.distance/3;
                     break;
                 case 2:
-                    targetX = 15;
+                    targetX = (90-30);
                     break;
                 case 3:
-                    targetX = 30;
+                    targetX = (90-25) - pigeonPosition.distance/3;
                     break;
                 default: break;
             }
             
             if (pigeonPosition.distance < 20) { //assign target Y position
-                targetY = -180;
+                targetY = -90;
             } else if (pigeonPosition.distance > 20 && pigeonPosition.distance < 40) {
-                targetY = -150;
+                targetY = -80;
             } else if (pigeonPosition.distance > 40) {
-                targetY = -120;   
+                targetY = -70;   
+            } else {
+                targetY = stepperPositionY;
             }
             
             moveDegreesX(targetX - stepperPositionX); //move steppers...
@@ -214,13 +221,15 @@ void checkForPigeonAndShoot(void) {
                 }    
                 pigeonPosition = Sonar_GetPosition(); //renew position
             }
+                   
                     
             pigeonPosition = Sonar_GetPosition(); //renew position
         }
         SPI_send_pigeon_shot_position((char)detectedPosition.width, (char) round(detectedPosition.distance));
-    }
-    exit_noWater:
         WaterPump_fireWater(FALSE);
+    }
+    //exit_noWater:
+       // WaterPump_fireWater(FALSE);
 }
 
 // ===================== STATE FUNCTIONS =========================================
