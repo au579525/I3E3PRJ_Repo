@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 1
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cczHsYPQ.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 1
   28:Generated_Source\PSoC5/ADC_Moisture_PM.c **** 
   29:Generated_Source\PSoC5/ADC_Moisture_PM.c **** 
   30:Generated_Source\PSoC5/ADC_Moisture_PM.c **** /*******************************************************************************
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 2
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cczHsYPQ.s 			page 2
 
 
   31:Generated_Source\PSoC5/ADC_Moisture_PM.c **** * Function Name: ADC_Moisture_SaveConfig
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 1
   47              		@ args = 0, pretend = 0, frame = 0
   48              		@ frame_needed = 0, uses_anonymous_args = 0
   49              		@ link register save eliminated.
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 3
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cczHsYPQ.s 			page 3
 
 
   50 0000 7047     		bx	lr
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 1
   94:Generated_Source\PSoC5/ADC_Moisture_PM.c ****         if((ADC_Moisture_SAR_CSR0_REG & ADC_Moisture_SAR_SOF_START_CONV) != 0u)
   76              		.loc 1 94 0
   77 000c 0A4B     		ldr	r3, .L9+4
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 4
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cczHsYPQ.s 			page 4
 
 
   78 000e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 1
  108:Generated_Source\PSoC5/ADC_Moisture_PM.c **** }
  109:Generated_Source\PSoC5/ADC_Moisture_PM.c **** 
  110:Generated_Source\PSoC5/ADC_Moisture_PM.c **** 
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 5
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cczHsYPQ.s 			page 5
 
 
  111:Generated_Source\PSoC5/ADC_Moisture_PM.c **** /*******************************************************************************
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 1
  143 001a 08BD     		pop	{r3, pc}
  144              	.L15:
  145              		.align	2
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 6
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cczHsYPQ.s 			page 6
 
 
  146              	.L14:
@@ -326,15 +326,15 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 1
  168 000b 01       		.uleb128 0x1
  169 000c 4F000000 		.4byte	.LASF22
  170 0010 0C       		.byte	0xc
- 171 0011 DB010000 		.4byte	.LASF23
- 172 0015 3C010000 		.4byte	.LASF24
+ 171 0011 FF010000 		.4byte	.LASF23
+ 172 0015 60010000 		.4byte	.LASF24
  173 0019 00000000 		.4byte	.Ldebug_ranges0+0
  174 001d 00000000 		.4byte	0
  175 0021 00000000 		.4byte	.Ldebug_line0
  176 0025 02       		.uleb128 0x2
  177 0026 01       		.byte	0x1
  178 0027 06       		.byte	0x6
- 179 0028 72020000 		.4byte	.LASF0
+ 179 0028 96020000 		.4byte	.LASF0
  180 002c 02       		.uleb128 0x2
  181 002d 01       		.byte	0x1
  182 002e 08       		.byte	0x8
@@ -342,7 +342,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 1
  184 0033 02       		.uleb128 0x2
  185 0034 02       		.byte	0x2
  186 0035 05       		.byte	0x5
- 187 0036 4D020000 		.4byte	.LASF2
+ 187 0036 71020000 		.4byte	.LASF2
  188 003a 02       		.uleb128 0x2
  189 003b 02       		.byte	0x2
  190 003c 07       		.byte	0x7
@@ -350,7 +350,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 1
  192 0041 02       		.uleb128 0x2
  193 0042 04       		.byte	0x4
  194 0043 05       		.byte	0x5
- 195 0044 5D020000 		.4byte	.LASF4
+ 195 0044 81020000 		.4byte	.LASF4
  196 0048 02       		.uleb128 0x2
  197 0049 04       		.byte	0x4
  198 004a 07       		.byte	0x7
@@ -358,14 +358,14 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 1
  200 004f 02       		.uleb128 0x2
  201 0050 08       		.byte	0x8
  202 0051 05       		.byte	0x5
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 7
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cczHsYPQ.s 			page 7
 
 
- 203 0052 1F020000 		.4byte	.LASF6
+ 203 0052 43020000 		.4byte	.LASF6
  204 0056 02       		.uleb128 0x2
  205 0057 08       		.byte	0x8
  206 0058 07       		.byte	0x7
- 207 0059 9A010000 		.4byte	.LASF7
+ 207 0059 49010000 		.4byte	.LASF7
  208 005d 03       		.uleb128 0x3
  209 005e 04       		.byte	0x4
  210 005f 05       		.byte	0x5
@@ -373,9 +373,9 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 1
  212 0064 02       		.uleb128 0x2
  213 0065 04       		.byte	0x4
  214 0066 07       		.byte	0x7
- 215 0067 8D010000 		.4byte	.LASF8
+ 215 0067 3C010000 		.4byte	.LASF8
  216 006b 04       		.uleb128 0x4
- 217 006c 57020000 		.4byte	.LASF12
+ 217 006c 7B020000 		.4byte	.LASF12
  218 0070 02       		.byte	0x2
  219 0071 E401     		.2byte	0x1e4
  220 0073 2C000000 		.4byte	0x2c
@@ -390,7 +390,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 1
  229 0085 02       		.uleb128 0x2
  230 0086 01       		.byte	0x1
  231 0087 08       		.byte	0x8
- 232 0088 2D020000 		.4byte	.LASF11
+ 232 0088 51020000 		.4byte	.LASF11
  233 008c 04       		.uleb128 0x4
  234 008d DD000000 		.4byte	.LASF13
  235 0091 02       		.byte	0x2
@@ -404,21 +404,21 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 1
  243 00a0 2A       		.byte	0x2a
  244 00a1 B2000000 		.4byte	0xb2
  245 00a5 07       		.uleb128 0x7
- 246 00a6 66020000 		.4byte	.LASF25
+ 246 00a6 8A020000 		.4byte	.LASF25
  247 00aa 03       		.byte	0x3
  248 00ab 2C       		.byte	0x2c
  249 00ac 6B000000 		.4byte	0x6b
  250 00b0 00       		.byte	0
  251 00b1 00       		.byte	0
  252 00b2 08       		.uleb128 0x8
- 253 00b3 04020000 		.4byte	.LASF14
+ 253 00b3 28020000 		.4byte	.LASF14
  254 00b7 03       		.byte	0x3
  255 00b8 2D       		.byte	0x2d
  256 00b9 9D000000 		.4byte	0x9d
  257 00bd 09       		.uleb128 0x9
- 258 00be B1010000 		.4byte	.LASF15
+ 258 00be D5010000 		.4byte	.LASF15
  259 00c2 01       		.byte	0x1
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 8
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cczHsYPQ.s 			page 8
 
 
  260 00c3 2C       		.byte	0x2c
@@ -427,7 +427,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 1
  263 00cc 01       		.uleb128 0x1
  264 00cd 9C       		.byte	0x9c
  265 00ce 09       		.uleb128 0x9
- 266 00cf 32020000 		.4byte	.LASF16
+ 266 00cf 56020000 		.4byte	.LASF16
  267 00d3 01       		.byte	0x1
  268 00d4 40       		.byte	0x40
  269 00d5 00000000 		.4byte	.LFB1
@@ -472,13 +472,13 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 1
  308 0132 03       		.byte	0x3
  309 0133 00000000 		.4byte	ADC_Moisture_backup
  310 0137 0D       		.uleb128 0xd
- 311 0138 C9010000 		.4byte	.LASF19
- 312 013c C9010000 		.4byte	.LASF19
+ 311 0138 ED010000 		.4byte	.LASF19
+ 312 013c ED010000 		.4byte	.LASF19
  313 0140 03       		.byte	0x3
  314 0141 35       		.byte	0x35
  315 0142 0D       		.uleb128 0xd
  316 0143 00000000 		.4byte	.LASF20
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 9
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cczHsYPQ.s 			page 9
 
 
  317 0147 00000000 		.4byte	.LASF20
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 1
  371 002b 00       		.byte	0
  372 002c 03       		.uleb128 0x3
  373 002d 0E       		.uleb128 0xe
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 10
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cczHsYPQ.s 			page 10
 
 
  374 002e 3A       		.uleb128 0x3a
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 1
  428 0064 00       		.byte	0
  429 0065 00       		.byte	0
  430 0066 09       		.uleb128 0x9
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 11
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cczHsYPQ.s 			page 11
 
 
  431 0067 2E       		.uleb128 0x2e
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 1
  485 00a1 00       		.byte	0
  486 00a2 00       		.byte	0
  487 00a3 0C       		.uleb128 0xc
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 12
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cczHsYPQ.s 			page 12
 
 
  488 00a4 34       		.uleb128 0x34
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 1
  542 0008 00000000 		.4byte	.LFB1
  543 000c 02000000 		.4byte	.LFE1
  544 0010 00000000 		.4byte	.LFB2
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 13
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cczHsYPQ.s 			page 13
 
 
  545 0014 40000000 		.4byte	.LFE2
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 1
  567              	.LASF13:
  568 00dd 72656738 		.ascii	"reg8\000"
  568      00
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 14
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cczHsYPQ.s 			page 14
 
 
  569              	.LASF5:
@@ -808,86 +808,91 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 1
  578      74757265 
  578      5F537461 
  578      7274436F 
- 579              	.LASF24:
- 580 013c 433A5C55 		.ascii	"C:\\Users\\midtg\\Documents\\GitHub\\I3E3PRJ_Repo\\"
- 580      73657273 
- 580      5C6D6964 
- 580      74675C44 
- 580      6F63756D 
- 581 0169 50536F43 		.ascii	"PSoCcontroller\\PSoCcontroller.cydsn\000"
- 581      636F6E74 
- 581      726F6C6C 
- 581      65725C50 
- 581      536F4363 
- 582              	.LASF8:
- 583 018d 756E7369 		.ascii	"unsigned int\000"
- 583      676E6564 
- 583      20696E74 
- 583      00
- 584              	.LASF7:
- 585 019a 6C6F6E67 		.ascii	"long long unsigned int\000"
- 585      206C6F6E 
- 585      6720756E 
- 585      7369676E 
- 585      65642069 
- 586              	.LASF15:
- 587 01b1 4144435F 		.ascii	"ADC_Moisture_SaveConfig\000"
- 587      4D6F6973 
- 587      74757265 
- 587      5F536176 
- 587      65436F6E 
- 588              	.LASF19:
- 589 01c9 4144435F 		.ascii	"ADC_Moisture_Stop\000"
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cclhoBdH.s 			page 15
+ 579              	.LASF8:
+ 580 013c 756E7369 		.ascii	"unsigned int\000"
+ 580      676E6564 
+ 580      20696E74 
+ 580      00
+ 581              	.LASF7:
+ 582 0149 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 582      206C6F6E 
+ 582      6720756E 
+ 582      7369676E 
+ 582      65642069 
+ 583              	.LASF24:
+ 584 0160 433A5C55 		.ascii	"C:\\Users\\jens1\\Aarhus universitet\\Lasse Bygum H"
+ 584      73657273 
+ 584      5C6A656E 
+ 584      73315C41 
+ 584      61726875 
+ 585 018f 65726F6C 		.ascii	"erold Krarup - E3PRJ\\I3E3PRJ_Repo\\PSoCcontroller\\"
+ 585      64204B72 
+ 585      61727570 
+ 585      202D2045 
+ 585      3350524A 
+ 586 01c0 50536F43 		.ascii	"PSoCcontroller.cydsn\000"
+ 586      636F6E74 
+ 586      726F6C6C 
+ 586      65722E63 
+ 586      7964736E 
+ 587              	.LASF15:
+ 588 01d5 4144435F 		.ascii	"ADC_Moisture_SaveConfig\000"
+ 588      4D6F6973 
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cczHsYPQ.s 			page 15
 
 
- 589      4D6F6973 
- 589      74757265 
- 589      5F53746F 
- 589      7000
- 590              	.LASF23:
- 591 01db 47656E65 		.ascii	"Generated_Source\\PSoC5\\ADC_Moisture_PM.c\000"
- 591      72617465 
- 591      645F536F 
- 591      75726365 
- 591      5C50536F 
- 592              	.LASF14:
- 593 0204 4144435F 		.ascii	"ADC_Moisture_BACKUP_STRUCT\000"
- 593      4D6F6973 
- 593      74757265 
- 593      5F424143 
- 593      4B55505F 
- 594              	.LASF6:
- 595 021f 6C6F6E67 		.ascii	"long long int\000"
- 595      206C6F6E 
- 595      6720696E 
- 595      7400
- 596              	.LASF11:
- 597 022d 63686172 		.ascii	"char\000"
- 597      00
- 598              	.LASF16:
- 599 0232 4144435F 		.ascii	"ADC_Moisture_RestoreConfig\000"
- 599      4D6F6973 
- 599      74757265 
- 599      5F526573 
- 599      746F7265 
- 600              	.LASF2:
- 601 024d 73686F72 		.ascii	"short int\000"
- 601      7420696E 
- 601      7400
- 602              	.LASF12:
- 603 0257 75696E74 		.ascii	"uint8\000"
- 603      3800
- 604              	.LASF4:
- 605 025d 6C6F6E67 		.ascii	"long int\000"
- 605      20696E74 
- 605      00
- 606              	.LASF25:
- 607 0266 656E6162 		.ascii	"enableState\000"
- 607      6C655374 
- 607      61746500 
- 608              	.LASF0:
- 609 0272 7369676E 		.ascii	"signed char\000"
- 609      65642063 
- 609      68617200 
- 610              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 588      74757265 
+ 588      5F536176 
+ 588      65436F6E 
+ 589              	.LASF19:
+ 590 01ed 4144435F 		.ascii	"ADC_Moisture_Stop\000"
+ 590      4D6F6973 
+ 590      74757265 
+ 590      5F53746F 
+ 590      7000
+ 591              	.LASF23:
+ 592 01ff 47656E65 		.ascii	"Generated_Source\\PSoC5\\ADC_Moisture_PM.c\000"
+ 592      72617465 
+ 592      645F536F 
+ 592      75726365 
+ 592      5C50536F 
+ 593              	.LASF14:
+ 594 0228 4144435F 		.ascii	"ADC_Moisture_BACKUP_STRUCT\000"
+ 594      4D6F6973 
+ 594      74757265 
+ 594      5F424143 
+ 594      4B55505F 
+ 595              	.LASF6:
+ 596 0243 6C6F6E67 		.ascii	"long long int\000"
+ 596      206C6F6E 
+ 596      6720696E 
+ 596      7400
+ 597              	.LASF11:
+ 598 0251 63686172 		.ascii	"char\000"
+ 598      00
+ 599              	.LASF16:
+ 600 0256 4144435F 		.ascii	"ADC_Moisture_RestoreConfig\000"
+ 600      4D6F6973 
+ 600      74757265 
+ 600      5F526573 
+ 600      746F7265 
+ 601              	.LASF2:
+ 602 0271 73686F72 		.ascii	"short int\000"
+ 602      7420696E 
+ 602      7400
+ 603              	.LASF12:
+ 604 027b 75696E74 		.ascii	"uint8\000"
+ 604      3800
+ 605              	.LASF4:
+ 606 0281 6C6F6E67 		.ascii	"long int\000"
+ 606      20696E74 
+ 606      00
+ 607              	.LASF25:
+ 608 028a 656E6162 		.ascii	"enableState\000"
+ 608      6C655374 
+ 608      61746500 
+ 609              	.LASF0:
+ 610 0296 7369676E 		.ascii	"signed char\000"
+ 610      65642063 
+ 610      68617200 
+ 611              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

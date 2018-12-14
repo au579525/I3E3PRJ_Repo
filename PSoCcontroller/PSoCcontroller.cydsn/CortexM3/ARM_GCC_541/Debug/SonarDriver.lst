@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
   48              		.loc 1 7 0
   49 0014 FFF7FEFF 		bl	Timer_Sonar_Start
   50              	.LVL2:
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 2
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 2
 
 
   51 0018 08BD     		pop	{r3, pc}
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
   13:SonarDriver.c ****         Trigger_1_Write(0);
  100              		.loc 1 13 0
  101 0014 0020     		movs	r0, #0
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 3
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 3
 
 
  102 0016 FFF7FEFF 		bl	Trigger_1_Write
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
   26:SonarDriver.c ****         UART_1_PutString("read 1 done \n\r");
  144              		.loc 1 26 0
  145 005c 7048     		ldr	r0, .L33+12
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 4
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 4
 
 
  146 005e FFF7FEFF 		bl	UART_1_PutString
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  185              	.LVL26:
  186 009a 0246     		mov	r2, r0
  187 009c 0B46     		mov	r3, r1
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 5
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 5
 
 
  188 009e 4FF06040 		mov	r0, #-536870912
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  235 00e8 0025     		movs	r5, #0
  236              	.L10:
  237              	.LVL37:
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 6
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 6
 
 
   49:SonarDriver.c ****         }
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  284              	.LVL46:
  285              	.LBB2:
   57:SonarDriver.c ****                 
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 7
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 7
 
 
   58:SonarDriver.c ****                 uint8_t width = 2; //Both Sonars detect pigeon, so assumed to be in position 2 of 3
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  331 0186 90B1     		cbz	r0, .L16
  332              	.LVL54:
  333              	.LBB3:
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 8
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 8
 
 
   67:SonarDriver.c ****                  uint8_t width = 3; //Only Sonar 1 detects pigeon, so assumed to be in position 3 o
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  376 01d2 0022     		movs	r2, #0
  377 01d4 4FF08043 		mov	r3, #1073741824
  378 01d8 4046     		mov	r0, r8
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 9
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 9
 
 
  379 01da 4946     		mov	r1, r9
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  422 0230 0000E03F 		.word	1071644672
  423 0234 00001440 		.word	1075052544
  424              		.cfi_endproc
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 10
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 10
 
 
  425              	.LFE65:
@@ -580,15 +580,15 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  455 000b 01       		.uleb128 0x1
  456 000c 75000000 		.4byte	.LASF42
  457 0010 0C       		.byte	0xc
- 458 0011 D8020000 		.4byte	.LASF43
- 459 0015 CF010000 		.4byte	.LASF44
+ 458 0011 FC020000 		.4byte	.LASF43
+ 459 0015 1A020000 		.4byte	.LASF44
  460 0019 00000000 		.4byte	.Ldebug_ranges0+0
  461 001d 00000000 		.4byte	0
  462 0021 00000000 		.4byte	.Ldebug_line0
  463 0025 02       		.uleb128 0x2
  464 0026 01       		.byte	0x1
  465 0027 06       		.byte	0x6
- 466 0028 E6020000 		.4byte	.LASF0
+ 466 0028 0A030000 		.4byte	.LASF0
  467 002c 03       		.uleb128 0x3
  468 002d 14000000 		.4byte	.LASF4
  469 0031 02       		.byte	0x2
@@ -598,13 +598,13 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  473 0038 01       		.byte	0x1
  474 0039 08       		.byte	0x8
  475 003a 67000000 		.4byte	.LASF1
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 11
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 11
 
 
  476 003e 02       		.uleb128 0x2
  477 003f 02       		.byte	0x2
  478 0040 05       		.byte	0x5
- 479 0041 B3020000 		.4byte	.LASF2
+ 479 0041 D7020000 		.4byte	.LASF2
  480 0045 02       		.uleb128 0x2
  481 0046 02       		.byte	0x2
  482 0047 07       		.byte	0x7
@@ -630,11 +630,11 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  502 0070 02       		.uleb128 0x2
  503 0071 08       		.byte	0x8
  504 0072 05       		.byte	0x5
- 505 0073 9A020000 		.4byte	.LASF9
+ 505 0073 BE020000 		.4byte	.LASF9
  506 0077 02       		.uleb128 0x2
  507 0078 08       		.byte	0x8
  508 0079 07       		.byte	0x7
- 509 007a 4C020000 		.4byte	.LASF10
+ 509 007a FB010000 		.4byte	.LASF10
  510 007e 04       		.uleb128 0x4
  511 007f 04       		.byte	0x4
  512 0080 05       		.byte	0x5
@@ -642,23 +642,23 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  514 0085 02       		.uleb128 0x2
  515 0086 04       		.byte	0x4
  516 0087 07       		.byte	0x7
- 517 0088 2F020000 		.4byte	.LASF11
+ 517 0088 DE010000 		.4byte	.LASF11
  518 008c 02       		.uleb128 0x2
  519 008d 08       		.byte	0x8
  520 008e 04       		.byte	0x4
- 521 008f 7C020000 		.4byte	.LASF12
+ 521 008f A0020000 		.4byte	.LASF12
  522 0093 02       		.uleb128 0x2
  523 0094 04       		.byte	0x4
  524 0095 07       		.byte	0x7
- 525 0096 88020000 		.4byte	.LASF13
+ 525 0096 AC020000 		.4byte	.LASF13
  526 009a 02       		.uleb128 0x2
  527 009b 01       		.byte	0x1
  528 009c 08       		.byte	0x8
- 529 009d A8020000 		.4byte	.LASF14
+ 529 009d CC020000 		.4byte	.LASF14
  530 00a1 03       		.uleb128 0x3
- 531 00a2 63020000 		.4byte	.LASF15
+ 531 00a2 12020000 		.4byte	.LASF15
  532 00a6 03       		.byte	0x3
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 12
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 12
 
 
  533 00a7 18       		.byte	0x18
@@ -669,12 +669,12 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  538 00b2 2C       		.byte	0x2c
  539 00b3 4C000000 		.4byte	0x4c
  540 00b7 03       		.uleb128 0x3
- 541 00b8 C3020000 		.4byte	.LASF17
+ 541 00b8 E7020000 		.4byte	.LASF17
  542 00bc 03       		.byte	0x3
  543 00bd 30       		.byte	0x30
  544 00be 5E000000 		.4byte	0x5e
  545 00c2 05       		.uleb128 0x5
- 546 00c3 BD020000 		.4byte	.LASF18
+ 546 00c3 E1020000 		.4byte	.LASF18
  547 00c7 04       		.byte	0x4
  548 00c8 E401     		.2byte	0x1e4
  549 00ca 37000000 		.4byte	0x37
@@ -693,13 +693,13 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  562 00e3 15       		.byte	0x15
  563 00e4 0D010000 		.4byte	0x10d
  564 00e8 07       		.uleb128 0x7
- 565 00e9 91020000 		.4byte	.LASF21
+ 565 00e9 B5020000 		.4byte	.LASF21
  566 00ed 05       		.byte	0x5
  567 00ee 16       		.byte	0x16
  568 00ef A1000000 		.4byte	0xa1
  569 00f3 00       		.byte	0
  570 00f4 07       		.uleb128 0x7
- 571 00f5 AD020000 		.4byte	.LASF22
+ 571 00f5 D1020000 		.4byte	.LASF22
  572 00f9 05       		.byte	0x5
  573 00fa 17       		.byte	0x17
  574 00fb 7E000000 		.4byte	0x7e
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  587 0114 00000000 		.4byte	.LFB64
  588 0118 20000000 		.4byte	.LFE64-.LFB64
  589 011c 01       		.uleb128 0x1
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 13
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 13
 
 
  590 011d 9C       		.byte	0x9c
@@ -748,7 +748,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  614 014d A7030000 		.4byte	0x3a7
  615 0151 00       		.byte	0
  616 0152 0C       		.uleb128 0xc
- 617 0153 0B030000 		.4byte	.LASF47
+ 617 0153 2F030000 		.4byte	.LASF47
  618 0157 01       		.byte	0x1
  619 0158 0A       		.byte	0xa
  620 0159 DC000000 		.4byte	0xdc
@@ -758,13 +758,13 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  624 0166 9C       		.byte	0x9c
  625 0167 6F030000 		.4byte	0x36f
  626 016b 0D       		.uleb128 0xd
- 627 016c 6B020000 		.4byte	.LASF24
+ 627 016c 8F020000 		.4byte	.LASF24
  628 0170 01       		.byte	0x1
  629 0171 14       		.byte	0x14
  630 0172 B7000000 		.4byte	0xb7
  631 0176 00000000 		.4byte	.LLST0
  632 017a 0D       		.uleb128 0xd
- 633 017b 77020000 		.4byte	.LASF25
+ 633 017b 9B020000 		.4byte	.LASF25
  634 017f 01       		.byte	0x1
  635 0180 16       		.byte	0x16
  636 0181 D5000000 		.4byte	0xd5
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  644 0198 0D       		.uleb128 0xd
  645 0199 49000000 		.4byte	.LASF27
  646 019d 01       		.byte	0x1
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 14
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 14
 
 
  647 019e 29       		.byte	0x29
@@ -795,7 +795,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  658 01bb 36000000 		.4byte	.LBE2-.LBB2
  659 01bf EE010000 		.4byte	0x1ee
  660 01c3 0D       		.uleb128 0xd
- 661 01c4 AD020000 		.4byte	.LASF22
+ 661 01c4 D1020000 		.4byte	.LASF22
  662 01c8 01       		.byte	0x1
  663 01c9 3A       		.byte	0x3a
  664 01ca A1000000 		.4byte	0xa1
@@ -820,7 +820,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  683 01f3 26000000 		.4byte	.LBE3-.LBB3
  684 01f7 17020000 		.4byte	0x217
  685 01fb 0D       		.uleb128 0xd
- 686 01fc AD020000 		.4byte	.LASF22
+ 686 01fc D1020000 		.4byte	.LASF22
  687 0200 01       		.byte	0x1
  688 0201 43       		.byte	0x43
  689 0202 A1000000 		.4byte	0xa1
@@ -838,11 +838,11 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  701 0218 CA010000 		.4byte	.LBB4
  702 021c 26000000 		.4byte	.LBE4-.LBB4
  703 0220 40020000 		.4byte	0x240
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 15
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 15
 
 
  704 0224 0D       		.uleb128 0xd
- 705 0225 AD020000 		.4byte	.LASF22
+ 705 0225 D1020000 		.4byte	.LASF22
  706 0229 01       		.byte	0x1
  707 022a 4B       		.byte	0x4b
  708 022b A1000000 		.4byte	0xa1
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  758 028f 50       		.byte	0x50
  759 0290 01       		.uleb128 0x1
  760 0291 30       		.byte	0x30
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 16
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 16
 
 
  761 0292 00       		.byte	0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  815 0304 74000000 		.4byte	.LVL20
  816 0308 B2030000 		.4byte	0x3b2
  817 030c 16030000 		.4byte	0x316
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 17
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 17
 
 
  818 0310 0A       		.uleb128 0xa
@@ -1016,9 +1016,9 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  870 037b 12       		.uleb128 0x12
  871 037c AC000000 		.4byte	0xac
  872 0380 13       		.uleb128 0x13
- 873 0381 20020000 		.4byte	.LASF31
+ 873 0381 CF010000 		.4byte	.LASF31
  874 0385 05       		.byte	0x5
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 18
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 18
 
 
  875 0386 1C       		.byte	0x1c
@@ -1032,8 +1032,8 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  883 039a 07       		.byte	0x7
  884 039b 26       		.byte	0x26
  885 039c 14       		.uleb128 0x14
- 886 039d 3C020000 		.4byte	.LASF33
- 887 03a1 3C020000 		.4byte	.LASF33
+ 886 039d EB010000 		.4byte	.LASF33
+ 887 03a1 EB010000 		.4byte	.LASF33
  888 03a5 08       		.byte	0x8
  889 03a6 26       		.byte	0x26
  890 03a7 14       		.uleb128 0x14
@@ -1062,23 +1062,23 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  913 03dc 09       		.byte	0x9
  914 03dd 69       		.byte	0x69
  915 03de 14       		.uleb128 0x14
- 916 03df F2020000 		.4byte	.LASF39
- 917 03e3 F2020000 		.4byte	.LASF39
+ 916 03df 16030000 		.4byte	.LASF39
+ 917 03e3 16030000 		.4byte	.LASF39
  918 03e7 0C       		.byte	0xc
  919 03e8 8B       		.byte	0x8b
  920 03e9 14       		.uleb128 0x14
- 921 03ea 03030000 		.4byte	.LASF40
- 922 03ee 03030000 		.4byte	.LASF40
+ 921 03ea 27030000 		.4byte	.LASF40
+ 922 03ee 27030000 		.4byte	.LASF40
  923 03f2 0A       		.byte	0xa
  924 03f3 76       		.byte	0x76
  925 03f4 14       		.uleb128 0x14
- 926 03f5 CC020000 		.4byte	.LASF41
- 927 03f9 CC020000 		.4byte	.LASF41
+ 926 03f5 F0020000 		.4byte	.LASF41
+ 927 03f9 F0020000 		.4byte	.LASF41
  928 03fd 0D       		.byte	0xd
  929 03fe 29       		.byte	0x29
  930 03ff 00       		.byte	0
  931              		.section	.debug_abbrev,"",%progbits
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 19
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 19
 
 
  932              	.Ldebug_abbrev0:
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  986 0035 00       		.byte	0
  987 0036 05       		.uleb128 0x5
  988 0037 16       		.uleb128 0x16
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 20
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 20
 
 
  989 0038 00       		.byte	0
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  1043 006e 12       		.uleb128 0x12
  1044 006f 06       		.uleb128 0x6
  1045 0070 40       		.uleb128 0x40
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 21
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 21
 
 
  1046 0071 18       		.uleb128 0x18
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  1100 00af 18       		.uleb128 0x18
  1101 00b0 9642     		.uleb128 0x2116
  1102 00b2 19       		.uleb128 0x19
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 22
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 22
 
 
  1103 00b3 01       		.uleb128 0x1
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  1157 00eb 11       		.uleb128 0x11
  1158 00ec 34       		.uleb128 0x34
  1159 00ed 00       		.byte	0
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 23
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 23
 
 
  1160 00ee 03       		.uleb128 0x3
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  1214 0124 00       		.byte	0
  1215 0125 00       		.byte	0
  1216              		.section	.debug_loc,"",%progbits
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 24
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 24
 
 
  1217              	.Ldebug_loc0:
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  1271              	.LLST3:
  1272 006e B0000000 		.4byte	.LVL28
  1273 0072 B7000000 		.4byte	.LVL29-1
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 25
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 25
 
 
  1274 0076 0600     		.2byte	0x6
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  1328 00df 51       		.byte	0x51
  1329 00e0 93       		.byte	0x93
  1330 00e1 04       		.uleb128 0x4
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 26
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 26
 
 
  1331 00e2 66010000 		.4byte	.LVL50
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  1380      756C6174 
  1380      65645F64 
  1380      69737461 
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 27
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 27
 
 
  1380      6E636500 
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  1404      74696F6E 
  1405              	.LASF34:
  1406 0103 54696D65 		.ascii	"Timer_Sonar_Start\000"
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 28
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 28
 
 
  1406      725F536F 
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  1426 01b1 5F5F7569 		.ascii	"__uint32_t\000"
  1426      6E743332 
  1426      5F7400
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 29
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 29
 
 
  1427              	.LASF35:
@@ -1689,111 +1689,119 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 1
  1430 01c6 706F7369 		.ascii	"position\000"
  1430      74696F6E 
  1430      00
- 1431              	.LASF44:
- 1432 01cf 433A5C55 		.ascii	"C:\\Users\\midtg\\Documents\\GitHub\\I3E3PRJ_Repo\\"
- 1432      73657273 
- 1432      5C6D6964 
- 1432      74675C44 
- 1432      6F63756D 
- 1433 01fc 50536F43 		.ascii	"PSoCcontroller\\PSoCcontroller.cydsn\000"
- 1433      636F6E74 
- 1433      726F6C6C 
- 1433      65725C50 
- 1433      536F4363 
- 1434              	.LASF31:
- 1435 0220 736F6E61 		.ascii	"sonarTimerDone\000"
- 1435      7254696D 
- 1435      6572446F 
- 1435      6E6500
- 1436              	.LASF11:
- 1437 022f 756E7369 		.ascii	"unsigned int\000"
- 1437      676E6564 
- 1437      20696E74 
- 1437      00
- 1438              	.LASF33:
- 1439 023c 54726967 		.ascii	"Trigger_2_Write\000"
- 1439      6765725F 
- 1439      325F5772 
- 1439      69746500 
- 1440              	.LASF10:
- 1441 024c 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1441      206C6F6E 
- 1441      6720756E 
- 1441      7369676E 
- 1441      65642069 
- 1442              	.LASF15:
- 1443 0263 75696E74 		.ascii	"uint8_t\000"
- 1443      385F7400 
- 1444              	.LASF24:
- 1445 026b 74696D65 		.ascii	"timervaerdi\000"
- 1445      72766165 
- 1445      72646900 
- 1446              	.LASF25:
- 1447 0277 74696D65 		.ascii	"time\000"
- 1447      00
- 1448              	.LASF12:
- 1449 027c 6C6F6E67 		.ascii	"long double\000"
- 1449      20646F75 
- 1449      626C6500 
- 1450              	.LASF13:
- 1451 0288 73697A65 		.ascii	"sizetype\000"
- 1451      74797065 
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc9jMSZK.s 			page 30
+ 1431              	.LASF31:
+ 1432 01cf 736F6E61 		.ascii	"sonarTimerDone\000"
+ 1432      7254696D 
+ 1432      6572446F 
+ 1432      6E6500
+ 1433              	.LASF11:
+ 1434 01de 756E7369 		.ascii	"unsigned int\000"
+ 1434      676E6564 
+ 1434      20696E74 
+ 1434      00
+ 1435              	.LASF33:
+ 1436 01eb 54726967 		.ascii	"Trigger_2_Write\000"
+ 1436      6765725F 
+ 1436      325F5772 
+ 1436      69746500 
+ 1437              	.LASF10:
+ 1438 01fb 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1438      206C6F6E 
+ 1438      6720756E 
+ 1438      7369676E 
+ 1438      65642069 
+ 1439              	.LASF15:
+ 1440 0212 75696E74 		.ascii	"uint8_t\000"
+ 1440      385F7400 
+ 1441              	.LASF44:
+ 1442 021a 433A5C55 		.ascii	"C:\\Users\\jens1\\Aarhus universitet\\Lasse Bygum H"
+ 1442      73657273 
+ 1442      5C6A656E 
+ 1442      73315C41 
+ 1442      61726875 
+ 1443 0249 65726F6C 		.ascii	"erold Krarup - E3PRJ\\I3E3PRJ_Repo\\PSoCcontroller\\"
+ 1443      64204B72 
+ 1443      61727570 
+ 1443      202D2045 
+ 1443      3350524A 
+ 1444 027a 50536F43 		.ascii	"PSoCcontroller.cydsn\000"
+ 1444      636F6E74 
+ 1444      726F6C6C 
+ 1444      65722E63 
+ 1444      7964736E 
+ 1445              	.LASF24:
+ 1446 028f 74696D65 		.ascii	"timervaerdi\000"
+ 1446      72766165 
+ 1446      72646900 
+ 1447              	.LASF25:
+ 1448 029b 74696D65 		.ascii	"time\000"
+ 1448      00
+ 1449              	.LASF12:
+ 1450 02a0 6C6F6E67 		.ascii	"long double\000"
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 30
 
 
- 1451      00
- 1452              	.LASF21:
- 1453 0291 64657465 		.ascii	"detected\000"
- 1453      63746564 
- 1453      00
- 1454              	.LASF9:
- 1455 029a 6C6F6E67 		.ascii	"long long int\000"
- 1455      206C6F6E 
- 1455      6720696E 
- 1455      7400
- 1456              	.LASF14:
- 1457 02a8 63686172 		.ascii	"char\000"
- 1457      00
- 1458              	.LASF22:
- 1459 02ad 77696474 		.ascii	"width\000"
- 1459      6800
- 1460              	.LASF2:
- 1461 02b3 73686F72 		.ascii	"short int\000"
- 1461      7420696E 
- 1461      7400
- 1462              	.LASF18:
- 1463 02bd 75696E74 		.ascii	"uint8\000"
- 1463      3800
- 1464              	.LASF17:
- 1465 02c3 75696E74 		.ascii	"uint32_t\000"
- 1465      33325F74 
- 1465      00
- 1466              	.LASF41:
- 1467 02cc 4563686F 		.ascii	"Echo_2_Read\000"
- 1467      5F325F52 
- 1467      65616400 
- 1468              	.LASF43:
- 1469 02d8 536F6E61 		.ascii	"SonarDriver.c\000"
- 1469      72447269 
- 1469      7665722E 
- 1469      6300
- 1470              	.LASF0:
- 1471 02e6 7369676E 		.ascii	"signed char\000"
- 1471      65642063 
- 1471      68617200 
- 1472              	.LASF39:
- 1473 02f2 55415254 		.ascii	"UART_1_PutString\000"
- 1473      5F315F50 
- 1473      75745374 
- 1473      72696E67 
- 1473      00
- 1474              	.LASF40:
- 1475 0303 43794465 		.ascii	"CyDelay\000"
- 1475      6C617900 
- 1476              	.LASF47:
- 1477 030b 536F6E61 		.ascii	"Sonar_GetPosition\000"
- 1477      725F4765 
- 1477      74506F73 
- 1477      6974696F 
- 1477      6E00
- 1478              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1450      20646F75 
+ 1450      626C6500 
+ 1451              	.LASF13:
+ 1452 02ac 73697A65 		.ascii	"sizetype\000"
+ 1452      74797065 
+ 1452      00
+ 1453              	.LASF21:
+ 1454 02b5 64657465 		.ascii	"detected\000"
+ 1454      63746564 
+ 1454      00
+ 1455              	.LASF9:
+ 1456 02be 6C6F6E67 		.ascii	"long long int\000"
+ 1456      206C6F6E 
+ 1456      6720696E 
+ 1456      7400
+ 1457              	.LASF14:
+ 1458 02cc 63686172 		.ascii	"char\000"
+ 1458      00
+ 1459              	.LASF22:
+ 1460 02d1 77696474 		.ascii	"width\000"
+ 1460      6800
+ 1461              	.LASF2:
+ 1462 02d7 73686F72 		.ascii	"short int\000"
+ 1462      7420696E 
+ 1462      7400
+ 1463              	.LASF18:
+ 1464 02e1 75696E74 		.ascii	"uint8\000"
+ 1464      3800
+ 1465              	.LASF17:
+ 1466 02e7 75696E74 		.ascii	"uint32_t\000"
+ 1466      33325F74 
+ 1466      00
+ 1467              	.LASF41:
+ 1468 02f0 4563686F 		.ascii	"Echo_2_Read\000"
+ 1468      5F325F52 
+ 1468      65616400 
+ 1469              	.LASF43:
+ 1470 02fc 536F6E61 		.ascii	"SonarDriver.c\000"
+ 1470      72447269 
+ 1470      7665722E 
+ 1470      6300
+ 1471              	.LASF0:
+ 1472 030a 7369676E 		.ascii	"signed char\000"
+ 1472      65642063 
+ 1472      68617200 
+ 1473              	.LASF39:
+ 1474 0316 55415254 		.ascii	"UART_1_PutString\000"
+ 1474      5F315F50 
+ 1474      75745374 
+ 1474      72696E67 
+ 1474      00
+ 1475              	.LASF40:
+ 1476 0327 43794465 		.ascii	"CyDelay\000"
+ 1476      6C617900 
+ 1477              	.LASF47:
+ 1478 032f 536F6E61 		.ascii	"Sonar_GetPosition\000"
+ 1478      725F4765 
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\cc0j4bvD.s 			page 31
+
+
+ 1478      74506F73 
+ 1478      6974696F 
+ 1478      6E00
+ 1479              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -85,6 +85,7 @@
 #include "ADC_SAR_WaSens_IRQ.h"
 #include "ADC_SAR_WaSens_theACLK.h"
 #include "SPI_1_IntClock.h"
+#include "cy_em_eeprom.h"
 #include "core_cm3_psoc5.h"
 #include "CyDmac.h"
 #include "CyFlash.h"

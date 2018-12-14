@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.274ms
+Loading plugins phase: Elapsed time ==> 0s.239ms
 <CYPRESSTAG name="CyDsfit arguments...">
-cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\PSoCcontroller.cyprj -d CY8C5888LTI-LP097 -s C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\jens1\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\PSoCcontroller.cyprj -d CY8C5888LTI-LP097 -s C:\Users\jens1\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 3s.412ms
+Elaboration phase: Elapsed time ==> 2s.885ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.120ms
+HDL generation phase: Elapsed time ==> 0s.140ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -25,23 +25,23 @@ HDL generation phase: Elapsed time ==> 0s.120ms
 ======================================================================
 Compiling:  PSoCcontroller.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\PSoCcontroller.cyprj -dcpsoc3 PSoCcontroller.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\jens1\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\PSoCcontroller.cyprj -dcpsoc3 PSoCcontroller.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  PSoCcontroller.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\PSoCcontroller.cyprj -dcpsoc3 PSoCcontroller.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\jens1\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\PSoCcontroller.cyprj -dcpsoc3 PSoCcontroller.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  PSoCcontroller.v
 Program  :   vlogfe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\PSoCcontroller.cyprj -dcpsoc3 -verilog PSoCcontroller.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\jens1\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\PSoCcontroller.cyprj -dcpsoc3 -verilog PSoCcontroller.v
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Thu Dec 13 04:53:01 2018
+Thu Dec 13 10:06:27 2018
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 PSoCcontroller.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Thu Dec 13 04:53:01 2018
+Thu Dec 13 10:06:27 2018
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
@@ -107,11 +107,11 @@ vlogfe:  No errors.
 ======================================================================
 Compiling:  PSoCcontroller.v
 Program  :   tovif
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\PSoCcontroller.cyprj -dcpsoc3 -verilog PSoCcontroller.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\jens1\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\PSoCcontroller.cyprj -dcpsoc3 -verilog PSoCcontroller.v
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Thu Dec 13 04:53:02 2018
+Thu Dec 13 10:06:29 2018
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -122,9 +122,9 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\codegentemp\PSoCcontroller.ctl'.
+Linking 'C:\Users\jens1\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\codegentemp\PSoCcontroller.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
-Linking 'C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\codegentemp\PSoCcontroller.v'.
+Linking 'C:\Users\jens1\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\codegentemp\PSoCcontroller.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80\B_Timer_v2_80.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'.
@@ -149,11 +149,11 @@ tovif:  No errors.
 ======================================================================
 Compiling:  PSoCcontroller.v
 Program  :   topld
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\PSoCcontroller.cyprj -dcpsoc3 -verilog PSoCcontroller.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\jens1\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\PSoCcontroller.cyprj -dcpsoc3 -verilog PSoCcontroller.v
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Thu Dec 13 04:53:04 2018
+Thu Dec 13 10:06:31 2018
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -164,9 +164,9 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\codegentemp\PSoCcontroller.ctl'.
+Linking 'C:\Users\jens1\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\codegentemp\PSoCcontroller.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
-Linking 'C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\codegentemp\PSoCcontroller.v'.
+Linking 'C:\Users\jens1\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\codegentemp\PSoCcontroller.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80\B_Timer_v2_80.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'.
@@ -1313,16 +1313,16 @@ topld:  No errors.
 
 CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
-Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\PSoCcontroller.cyprj -dcpsoc3 PSoCcontroller.v -verilog
+Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\jens1\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\PSoCcontroller.cyprj" -dcpsoc3 PSoCcontroller.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 4s.255ms
+Warp synthesis phase: Elapsed time ==> 5s.121ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.2.0.641, Family: PSoC3, Started at: Thursday, 13 December 2018 04:53:05
-Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\midtg\Documents\GitHub\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\PSoCcontroller.cyprj -d CY8C5888LTI-LP097 PSoCcontroller.v -verilog
+cyp3fit: V4.2.0.641, Family: PSoC3, Started at: Thursday, 13 December 2018 10:06:31
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\jens1\Aarhus universitet\Lasse Bygum Herold Krarup - E3PRJ\I3E3PRJ_Repo\PSoCcontroller\PSoCcontroller.cydsn\PSoCcontroller.cyprj -d CY8C5888LTI-LP097 PSoCcontroller.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.060ms
+Design parsing phase: Elapsed time ==> 0s.050ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -4074,8 +4074,8 @@ Analog (SC/CT) Blocks         :    0 :    4 :    4 :  0.00 %
 DAC                           :      :      :      :        
   VIDAC                       :    0 :    4 :    4 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.377ms
-Tech Mapping phase: Elapsed time ==> 0s.502ms
+Technology Mapping: Elapsed time ==> 0s.230ms
+Tech Mapping phase: Elapsed time ==> 0s.340ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 Initial Analog Placement Results:
@@ -4134,10 +4134,10 @@ SAR[1]@[FFB(SAR,1)] : \ADC_Moisture:ADC_SAR\
 Vref[13]@[FFB(Vref,13)] : \ADC_Moisture:vRef_Vdda_1\
 SAR[0]@[FFB(SAR,0)] : \ADC_SAR_WaSens:ADC_SAR\
 
-Analog Placement phase: Elapsed time ==> 1s.647ms
+Analog Placement phase: Elapsed time ==> 1s.046ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
-Analog Routing phase: Elapsed time ==> 0s.009ms
+Analog Routing phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -4220,11 +4220,11 @@ Dump of CyP35AnalogRoutingResultsDB
 IsVddaHalfUsedForComp = False
 IsVddaHalfUsedForSar0 = True
 IsVddaHalfUsedForSar1 = True
-Analog Code Generation phase: Elapsed time ==> 0s.432ms
+Analog Code Generation phase: Elapsed time ==> 0s.350ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
-I2076: Total run-time: 2.6 sec.
+I2076: Total run-time: 2.3 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -4248,14 +4248,14 @@ PLD Packing Summary
 <CYPRESSTAG name="Packed PLD Contents">
 Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.004ms
+PLD Packing: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.248ms
+Partitioning: Elapsed time ==> 0s.210ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -7315,33 +7315,33 @@ Port | Pin | Fixed |      Type |       Drive Mode |                     Name | C
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.174ms
-Digital Placement phase: Elapsed time ==> 3s.500ms
+Digital component placer commit/Report: Elapsed time ==> 0s.099ms
+Digital Placement phase: Elapsed time ==> 3s.239ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc5/psoc5lp/route_arch-rrg.cydata" --vh2-path "PSoCcontroller_r.vh2" --pcf-path "PSoCcontroller.pco" --des-name "PSoCcontroller" --dsf-path "PSoCcontroller.dsf" --sdc-path "PSoCcontroller.sdc" --lib-path "PSoCcontroller_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 3s.789ms
+Digital Routing phase: Elapsed time ==> 3s.190ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.290ms
+Bitstream Generation phase: Elapsed time ==> 0s.559ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.069ms
+Bitstream Verification phase: Elapsed time ==> 0s.080ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in PSoCcontroller_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.936ms
+Static timing analysis phase: Elapsed time ==> 0s.939ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.378ms
+Design database save phase: Elapsed time ==> 0s.389ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 11s.647ms
+cydsfit: Elapsed time ==> 10s.266ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 11s.648ms
-API generation phase: Elapsed time ==> 2s.920ms
-Dependency generation phase: Elapsed time ==> 0s.018ms
-Cleanup phase: Elapsed time ==> 0s.002ms
+Fitter phase: Elapsed time ==> 10s.276ms
+API generation phase: Elapsed time ==> 35s.247ms
+Dependency generation phase: Elapsed time ==> 0s.060ms
+Cleanup phase: Elapsed time ==> 0s.000ms

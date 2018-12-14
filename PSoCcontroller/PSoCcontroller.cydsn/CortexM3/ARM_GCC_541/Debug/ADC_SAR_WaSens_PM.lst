@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 1
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccjtUrOL.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 1
   28:Generated_Source\PSoC5/ADC_SAR_WaSens_PM.c **** 
   29:Generated_Source\PSoC5/ADC_SAR_WaSens_PM.c **** 
   30:Generated_Source\PSoC5/ADC_SAR_WaSens_PM.c **** /*******************************************************************************
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 2
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccjtUrOL.s 			page 2
 
 
   31:Generated_Source\PSoC5/ADC_SAR_WaSens_PM.c **** * Function Name: ADC_SAR_WaSens_SaveConfig
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 1
   47              		@ args = 0, pretend = 0, frame = 0
   48              		@ frame_needed = 0, uses_anonymous_args = 0
   49              		@ link register save eliminated.
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 3
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccjtUrOL.s 			page 3
 
 
   50 0000 7047     		bx	lr
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 1
   94:Generated_Source\PSoC5/ADC_SAR_WaSens_PM.c ****         if((ADC_SAR_WaSens_SAR_CSR0_REG & ADC_SAR_WaSens_SAR_SOF_START_CONV) != 0u)
   76              		.loc 1 94 0
   77 000c 0A4B     		ldr	r3, .L9+4
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 4
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccjtUrOL.s 			page 4
 
 
   78 000e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 1
  108:Generated_Source\PSoC5/ADC_SAR_WaSens_PM.c **** }
  109:Generated_Source\PSoC5/ADC_SAR_WaSens_PM.c **** 
  110:Generated_Source\PSoC5/ADC_SAR_WaSens_PM.c **** 
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 5
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccjtUrOL.s 			page 5
 
 
  111:Generated_Source\PSoC5/ADC_SAR_WaSens_PM.c **** /*******************************************************************************
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 1
  143 001a 08BD     		pop	{r3, pc}
  144              	.L15:
  145              		.align	2
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 6
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccjtUrOL.s 			page 6
 
 
  146              	.L14:
@@ -327,14 +327,14 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 1
  169 000c 5B000000 		.4byte	.LASF22
  170 0010 0C       		.byte	0xc
  171 0011 1C000000 		.4byte	.LASF23
- 172 0015 59010000 		.4byte	.LASF24
+ 172 0015 7D010000 		.4byte	.LASF24
  173 0019 00000000 		.4byte	.Ldebug_ranges0+0
  174 001d 00000000 		.4byte	0
  175 0021 00000000 		.4byte	.Ldebug_line0
  176 0025 02       		.uleb128 0x2
  177 0026 01       		.byte	0x1
  178 0027 06       		.byte	0x6
- 179 0028 53020000 		.4byte	.LASF0
+ 179 0028 77020000 		.4byte	.LASF0
  180 002c 02       		.uleb128 0x2
  181 002d 01       		.byte	0x1
  182 002e 08       		.byte	0x8
@@ -342,7 +342,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 1
  184 0033 02       		.uleb128 0x2
  185 0034 02       		.byte	0x2
  186 0035 05       		.byte	0x5
- 187 0036 2E020000 		.4byte	.LASF2
+ 187 0036 52020000 		.4byte	.LASF2
  188 003a 02       		.uleb128 0x2
  189 003b 02       		.byte	0x2
  190 003c 07       		.byte	0x7
@@ -350,7 +350,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 1
  192 0041 02       		.uleb128 0x2
  193 0042 04       		.byte	0x4
  194 0043 05       		.byte	0x5
- 195 0044 3E020000 		.4byte	.LASF4
+ 195 0044 62020000 		.4byte	.LASF4
  196 0048 02       		.uleb128 0x2
  197 0049 04       		.byte	0x4
  198 004a 07       		.byte	0x7
@@ -358,14 +358,14 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 1
  200 004f 02       		.uleb128 0x2
  201 0050 08       		.byte	0x8
  202 0051 05       		.byte	0x5
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 7
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccjtUrOL.s 			page 7
 
 
- 203 0052 E8010000 		.4byte	.LASF6
+ 203 0052 0C020000 		.4byte	.LASF6
  204 0056 02       		.uleb128 0x2
  205 0057 08       		.byte	0x8
  206 0058 07       		.byte	0x7
- 207 0059 B7010000 		.4byte	.LASF7
+ 207 0059 66010000 		.4byte	.LASF7
  208 005d 03       		.uleb128 0x3
  209 005e 04       		.byte	0x4
  210 005f 05       		.byte	0x5
@@ -373,9 +373,9 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 1
  212 0064 02       		.uleb128 0x2
  213 0065 04       		.byte	0x4
  214 0066 07       		.byte	0x7
- 215 0067 AA010000 		.4byte	.LASF8
+ 215 0067 59010000 		.4byte	.LASF8
  216 006b 04       		.uleb128 0x4
- 217 006c 38020000 		.4byte	.LASF12
+ 217 006c 5C020000 		.4byte	.LASF12
  218 0070 02       		.byte	0x2
  219 0071 E401     		.2byte	0x1e4
  220 0073 2C000000 		.4byte	0x2c
@@ -390,7 +390,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 1
  229 0085 02       		.uleb128 0x2
  230 0086 01       		.byte	0x1
  231 0087 08       		.byte	0x8
- 232 0088 F6010000 		.4byte	.LASF11
+ 232 0088 1A020000 		.4byte	.LASF11
  233 008c 04       		.uleb128 0x4
  234 008d E9000000 		.4byte	.LASF13
  235 0091 02       		.byte	0x2
@@ -404,21 +404,21 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 1
  243 00a0 2A       		.byte	0x2a
  244 00a1 B2000000 		.4byte	0xb2
  245 00a5 07       		.uleb128 0x7
- 246 00a6 47020000 		.4byte	.LASF25
+ 246 00a6 6B020000 		.4byte	.LASF25
  247 00aa 03       		.byte	0x3
  248 00ab 2C       		.byte	0x2c
  249 00ac 6B000000 		.4byte	0x6b
  250 00b0 00       		.byte	0
  251 00b1 00       		.byte	0
  252 00b2 08       		.uleb128 0x8
- 253 00b3 11020000 		.4byte	.LASF14
+ 253 00b3 35020000 		.4byte	.LASF14
  254 00b7 03       		.byte	0x3
  255 00b8 2D       		.byte	0x2d
  256 00b9 9D000000 		.4byte	0x9d
  257 00bd 09       		.uleb128 0x9
- 258 00be CE010000 		.4byte	.LASF15
+ 258 00be F2010000 		.4byte	.LASF15
  259 00c2 01       		.byte	0x1
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 8
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccjtUrOL.s 			page 8
 
 
  260 00c3 2C       		.byte	0x2c
@@ -427,7 +427,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 1
  263 00cc 01       		.uleb128 0x1
  264 00cd 9C       		.byte	0x9c
  265 00ce 09       		.uleb128 0x9
- 266 00cf 5F020000 		.4byte	.LASF16
+ 266 00cf 83020000 		.4byte	.LASF16
  267 00d3 01       		.byte	0x1
  268 00d4 40       		.byte	0x40
  269 00d5 00000000 		.4byte	.LFB1
@@ -448,7 +448,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 1
  284 00f9 37010000 		.4byte	0x137
  285 00fd 00       		.byte	0
  286 00fe 0A       		.uleb128 0xa
- 287 00ff 7C020000 		.4byte	.LASF18
+ 287 00ff A0020000 		.4byte	.LASF18
  288 0103 01       		.byte	0x1
  289 0104 84       		.byte	0x84
  290 0105 00000000 		.4byte	.LFB3
@@ -464,7 +464,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 1
  300 0121 4D010000 		.4byte	0x14d
  301 0125 00       		.byte	0
  302 0126 0C       		.uleb128 0xc
- 303 0127 FB010000 		.4byte	.LASF26
+ 303 0127 1F020000 		.4byte	.LASF26
  304 012b 01       		.byte	0x1
  305 012c 18       		.byte	0x18
  306 012d B2000000 		.4byte	0xb2
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 1
  314 0141 35       		.byte	0x35
  315 0142 0D       		.uleb128 0xd
  316 0143 13010000 		.4byte	.LASF20
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 9
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccjtUrOL.s 			page 9
 
 
  317 0147 13010000 		.4byte	.LASF20
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 1
  371 002b 00       		.byte	0
  372 002c 03       		.uleb128 0x3
  373 002d 0E       		.uleb128 0xe
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 10
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccjtUrOL.s 			page 10
 
 
  374 002e 3A       		.uleb128 0x3a
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 1
  428 0064 00       		.byte	0
  429 0065 00       		.byte	0
  430 0066 09       		.uleb128 0x9
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 11
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccjtUrOL.s 			page 11
 
 
  431 0067 2E       		.uleb128 0x2e
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 1
  485 00a1 00       		.byte	0
  486 00a2 00       		.byte	0
  487 00a3 0C       		.uleb128 0xc
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 12
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccjtUrOL.s 			page 12
 
 
  488 00a4 34       		.uleb128 0x34
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 1
  542 0008 00000000 		.4byte	.LFB1
  543 000c 02000000 		.4byte	.LFE1
  544 0010 00000000 		.4byte	.LFB2
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 13
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccjtUrOL.s 			page 13
 
 
  545 0014 40000000 		.4byte	.LFE2
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 1
  568      69676E65 
  568      6420696E 
  568      7400
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 14
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccjtUrOL.s 			page 14
 
 
  569              	.LASF3:
@@ -808,86 +808,91 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 1
  578      57615365 
  578      6E735F53 
  578      746F7000 
- 579              	.LASF24:
- 580 0159 433A5C55 		.ascii	"C:\\Users\\midtg\\Documents\\GitHub\\I3E3PRJ_Repo\\"
- 580      73657273 
- 580      5C6D6964 
- 580      74675C44 
- 580      6F63756D 
- 581 0186 50536F43 		.ascii	"PSoCcontroller\\PSoCcontroller.cydsn\000"
- 581      636F6E74 
- 581      726F6C6C 
- 581      65725C50 
- 581      536F4363 
- 582              	.LASF8:
- 583 01aa 756E7369 		.ascii	"unsigned int\000"
- 583      676E6564 
- 583      20696E74 
- 583      00
- 584              	.LASF7:
- 585 01b7 6C6F6E67 		.ascii	"long long unsigned int\000"
- 585      206C6F6E 
- 585      6720756E 
- 585      7369676E 
- 585      65642069 
- 586              	.LASF15:
- 587 01ce 4144435F 		.ascii	"ADC_SAR_WaSens_SaveConfig\000"
- 587      5341525F 
- 587      57615365 
- 587      6E735F53 
- 587      61766543 
- 588              	.LASF6:
- 589 01e8 6C6F6E67 		.ascii	"long long int\000"
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc5SGy6j.s 			page 15
+ 579              	.LASF8:
+ 580 0159 756E7369 		.ascii	"unsigned int\000"
+ 580      676E6564 
+ 580      20696E74 
+ 580      00
+ 581              	.LASF7:
+ 582 0166 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 582      206C6F6E 
+ 582      6720756E 
+ 582      7369676E 
+ 582      65642069 
+ 583              	.LASF24:
+ 584 017d 433A5C55 		.ascii	"C:\\Users\\jens1\\Aarhus universitet\\Lasse Bygum H"
+ 584      73657273 
+ 584      5C6A656E 
+ 584      73315C41 
+ 584      61726875 
+ 585 01ac 65726F6C 		.ascii	"erold Krarup - E3PRJ\\I3E3PRJ_Repo\\PSoCcontroller\\"
+ 585      64204B72 
+ 585      61727570 
+ 585      202D2045 
+ 585      3350524A 
+ 586 01dd 50536F43 		.ascii	"PSoCcontroller.cydsn\000"
+ 586      636F6E74 
+ 586      726F6C6C 
+ 586      65722E63 
+ 586      7964736E 
+ 587              	.LASF15:
+ 588 01f2 4144435F 		.ascii	"ADC_SAR_WaSens_SaveConfig\000"
+ 588      5341525F 
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccjtUrOL.s 			page 15
 
 
- 589      206C6F6E 
- 589      6720696E 
- 589      7400
- 590              	.LASF11:
- 591 01f6 63686172 		.ascii	"char\000"
- 591      00
- 592              	.LASF26:
- 593 01fb 4144435F 		.ascii	"ADC_SAR_WaSens_backup\000"
- 593      5341525F 
- 593      57615365 
- 593      6E735F62 
- 593      61636B75 
- 594              	.LASF14:
- 595 0211 4144435F 		.ascii	"ADC_SAR_WaSens_BACKUP_STRUCT\000"
- 595      5341525F 
- 595      57615365 
- 595      6E735F42 
- 595      41434B55 
- 596              	.LASF2:
- 597 022e 73686F72 		.ascii	"short int\000"
- 597      7420696E 
- 597      7400
- 598              	.LASF12:
- 599 0238 75696E74 		.ascii	"uint8\000"
- 599      3800
- 600              	.LASF4:
- 601 023e 6C6F6E67 		.ascii	"long int\000"
- 601      20696E74 
- 601      00
- 602              	.LASF25:
- 603 0247 656E6162 		.ascii	"enableState\000"
- 603      6C655374 
- 603      61746500 
- 604              	.LASF0:
- 605 0253 7369676E 		.ascii	"signed char\000"
- 605      65642063 
- 605      68617200 
- 606              	.LASF16:
- 607 025f 4144435F 		.ascii	"ADC_SAR_WaSens_RestoreConfig\000"
- 607      5341525F 
- 607      57615365 
- 607      6E735F52 
- 607      6573746F 
- 608              	.LASF18:
- 609 027c 4144435F 		.ascii	"ADC_SAR_WaSens_Wakeup\000"
- 609      5341525F 
- 609      57615365 
- 609      6E735F57 
- 609      616B6575 
- 610              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 588      57615365 
+ 588      6E735F53 
+ 588      61766543 
+ 589              	.LASF6:
+ 590 020c 6C6F6E67 		.ascii	"long long int\000"
+ 590      206C6F6E 
+ 590      6720696E 
+ 590      7400
+ 591              	.LASF11:
+ 592 021a 63686172 		.ascii	"char\000"
+ 592      00
+ 593              	.LASF26:
+ 594 021f 4144435F 		.ascii	"ADC_SAR_WaSens_backup\000"
+ 594      5341525F 
+ 594      57615365 
+ 594      6E735F62 
+ 594      61636B75 
+ 595              	.LASF14:
+ 596 0235 4144435F 		.ascii	"ADC_SAR_WaSens_BACKUP_STRUCT\000"
+ 596      5341525F 
+ 596      57615365 
+ 596      6E735F42 
+ 596      41434B55 
+ 597              	.LASF2:
+ 598 0252 73686F72 		.ascii	"short int\000"
+ 598      7420696E 
+ 598      7400
+ 599              	.LASF12:
+ 600 025c 75696E74 		.ascii	"uint8\000"
+ 600      3800
+ 601              	.LASF4:
+ 602 0262 6C6F6E67 		.ascii	"long int\000"
+ 602      20696E74 
+ 602      00
+ 603              	.LASF25:
+ 604 026b 656E6162 		.ascii	"enableState\000"
+ 604      6C655374 
+ 604      61746500 
+ 605              	.LASF0:
+ 606 0277 7369676E 		.ascii	"signed char\000"
+ 606      65642063 
+ 606      68617200 
+ 607              	.LASF16:
+ 608 0283 4144435F 		.ascii	"ADC_SAR_WaSens_RestoreConfig\000"
+ 608      5341525F 
+ 608      57615365 
+ 608      6E735F52 
+ 608      6573746F 
+ 609              	.LASF18:
+ 610 02a0 4144435F 		.ascii	"ADC_SAR_WaSens_Wakeup\000"
+ 610      5341525F 
+ 610      57615365 
+ 610      6E735F57 
+ 610      616B6575 
+ 611              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

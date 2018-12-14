@@ -168,7 +168,7 @@ CY_ISR(ISR_SPI_RX_handler)
 }
 // ===================== FUNCTION DEFINITIONS ===================================
 void setMode(enum Mode newMode){
-    if (mode >= NORMAL_MODE && mode < STANDBY_MODE) {
+    if (mode >= NORMAL_MODE && mode <= STANDBY_MODE) {
         currentState = states[newMode];
         mode = newMode;
     }
@@ -187,23 +187,23 @@ void checkForPigeonAndShoot(void) {
             int targetX, targetY; //assign target X position
             switch(pigeonPosition.width){
                 case 1:
-                    targetX = (90-35) + pigeonPosition.distance/3;
+                    targetX = (90-20) + pigeonPosition.distance/3;
                     break;
                 case 2:
-                    targetX = (90-30);
+                    targetX = (90-25);
                     break;
                 case 3:
-                    targetX = (90-25) - pigeonPosition.distance/3;
+                    targetX = (90-30) - pigeonPosition.distance/3;
                     break;
                 default: break;
             }
             
             if (pigeonPosition.distance < 20) { //assign target Y position
-                targetY = -90;
-            } else if (pigeonPosition.distance > 20 && pigeonPosition.distance < 40) {
                 targetY = -80;
+            } else if (pigeonPosition.distance > 20 && pigeonPosition.distance < 40) {
+                targetY = -70;
             } else if (pigeonPosition.distance > 40) {
-                targetY = -70;   
+                targetY = -60;   
             } else {
                 targetY = stepperPositionY;
             }
@@ -260,18 +260,12 @@ void manualMode(void) {
 }
 
 void automatiskVanding(void) {
-    int moisture = MoistureSensor_getResult();
-    if (moisture > MOISTURE_THRESHOLD) {
-        //SPI_sendMoisture(moisture);
-        moveDegreesX(165-stepperPositionX); //move to top left
-        moveDegreesY(-120-stepperPositionY);
-        WaterPump_fireWater(TRUE);//start firing
-        moveDegreesX(195-stepperPositionX); //move to top right corner 
-        moveDegreesY(-150-stepperPositionY);//move down to middle
-        moveDegreesX(165-stepperPositionX); //move to middle left side
-        moveDegreesY(-180-stepperPositionY); //move down to bottom
-        moveDegreesX(165-stepperPositionX);//move to bottom right side
-        WaterPump_fireWater(FALSE);//stop firingvoid SPI_send_flowers_watered(){
+    if (MoistureSensor_getResult() > MOISTURE_THRESHOLD) {
+        while ( MoistureSensor_getResult() > MOISTURE_THRESHOLD ){
+            WaterPump_fireWater(TRUE);//start firing
+        }
+        WaterPump_fireWater(FALSE);//stop firing
+        SPI_send_flowers_watered();
     }
 }
 

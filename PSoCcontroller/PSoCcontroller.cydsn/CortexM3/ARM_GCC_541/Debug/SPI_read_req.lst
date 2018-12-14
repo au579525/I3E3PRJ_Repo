@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 1
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccKvCY1d.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 1
   28:Generated_Source\PSoC5/SPI_read_req.c **** *
   29:Generated_Source\PSoC5/SPI_read_req.c **** * \brief Writes the value to the physical port (data output register), masking
   30:Generated_Source\PSoC5/SPI_read_req.c **** *  and shifting the bits appropriately. 
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 2
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccKvCY1d.s 			page 2
 
 
   31:Generated_Source\PSoC5/SPI_read_req.c **** *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 1
   52              		.size	SPI_read_req_Write, .-SPI_read_req_Write
   53              		.section	.text.SPI_read_req_SetDriveMode,"ax",%progbits
   54              		.align	2
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 3
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccKvCY1d.s 			page 3
 
 
   55              		.global	SPI_read_req_SetDriveMode
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 1
   77 0012 00BF     		.align	2
   78              	.L5:
   79 0014 07500040 		.word	1073762311
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 4
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccKvCY1d.s 			page 4
 
 
   80              		.cfi_endproc
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 1
  110              		.align	2
  111              		.global	SPI_read_req_ReadDataReg
  112              		.thumb
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 5
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccKvCY1d.s 			page 5
 
 
  113              		.thumb_func
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 1
  139              	.Ldebug_info0:
  140 0000 1B010000 		.4byte	0x11b
  141 0004 0400     		.2byte	0x4
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 6
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccKvCY1d.s 			page 6
 
 
  142 0006 00000000 		.4byte	.Ldebug_abbrev0
@@ -306,15 +306,15 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 1
  144 000b 01       		.uleb128 0x1
  145 000c 6B000000 		.4byte	.LASF20
  146 0010 0C       		.byte	0xc
- 147 0011 C7010000 		.4byte	.LASF21
- 148 0015 2A010000 		.4byte	.LASF22
+ 147 0011 EB010000 		.4byte	.LASF21
+ 148 0015 4E010000 		.4byte	.LASF22
  149 0019 00000000 		.4byte	.Ldebug_ranges0+0
  150 001d 00000000 		.4byte	0
  151 0021 00000000 		.4byte	.Ldebug_line0
  152 0025 02       		.uleb128 0x2
  153 0026 01       		.byte	0x1
  154 0027 06       		.byte	0x6
- 155 0028 F6010000 		.4byte	.LASF0
+ 155 0028 1A020000 		.4byte	.LASF0
  156 002c 02       		.uleb128 0x2
  157 002d 01       		.byte	0x1
  158 002e 08       		.byte	0x8
@@ -322,7 +322,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 1
  160 0033 02       		.uleb128 0x2
  161 0034 02       		.byte	0x2
  162 0035 05       		.byte	0x5
- 163 0036 B7010000 		.4byte	.LASF2
+ 163 0036 DB010000 		.4byte	.LASF2
  164 003a 02       		.uleb128 0x2
  165 003b 02       		.byte	0x2
  166 003c 07       		.byte	0x7
@@ -330,7 +330,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 1
  168 0041 02       		.uleb128 0x2
  169 0042 04       		.byte	0x4
  170 0043 05       		.byte	0x5
- 171 0044 ED010000 		.4byte	.LASF4
+ 171 0044 11020000 		.4byte	.LASF4
  172 0048 02       		.uleb128 0x2
  173 0049 04       		.byte	0x4
  174 004a 07       		.byte	0x7
@@ -338,11 +338,11 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 1
  176 004f 02       		.uleb128 0x2
  177 0050 08       		.byte	0x8
  178 0051 05       		.byte	0x5
- 179 0052 A4010000 		.4byte	.LASF6
+ 179 0052 C8010000 		.4byte	.LASF6
  180 0056 02       		.uleb128 0x2
  181 0057 08       		.byte	0x8
  182 0058 07       		.byte	0x7
- 183 0059 88010000 		.4byte	.LASF7
+ 183 0059 37010000 		.4byte	.LASF7
  184 005d 03       		.uleb128 0x3
  185 005e 04       		.byte	0x4
  186 005f 05       		.byte	0x5
@@ -350,15 +350,15 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 1
  188 0064 02       		.uleb128 0x2
  189 0065 04       		.byte	0x4
  190 0066 07       		.byte	0x7
- 191 0067 7B010000 		.4byte	.LASF8
+ 191 0067 2A010000 		.4byte	.LASF8
  192 006b 04       		.uleb128 0x4
- 193 006c C1010000 		.4byte	.LASF12
+ 193 006c E5010000 		.4byte	.LASF12
  194 0070 02       		.byte	0x2
  195 0071 E401     		.2byte	0x1e4
  196 0073 2C000000 		.4byte	0x2c
  197 0077 02       		.uleb128 0x2
  198 0078 04       		.byte	0x4
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 7
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccKvCY1d.s 			page 7
 
 
  199 0079 04       		.byte	0x4
@@ -370,7 +370,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 1
  205 0085 02       		.uleb128 0x2
  206 0086 01       		.byte	0x1
  207 0087 08       		.byte	0x8
- 208 0088 B2010000 		.4byte	.LASF11
+ 208 0088 D6010000 		.4byte	.LASF11
  209 008c 04       		.uleb128 0x4
  210 008d F9000000 		.4byte	.LASF13
  211 0091 02       		.byte	0x2
@@ -411,17 +411,17 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 1
  246 00df 9C       		.byte	0x9c
  247 00e0 F4000000 		.4byte	0xf4
  248 00e4 07       		.uleb128 0x7
- 249 00e5 9F010000 		.4byte	.LASF17
+ 249 00e5 C3010000 		.4byte	.LASF17
  250 00e9 01       		.byte	0x1
  251 00ea 5A       		.byte	0x5a
  252 00eb 6B000000 		.4byte	0x6b
  253 00ef 21000000 		.4byte	.LLST1
  254 00f3 00       		.byte	0
  255 00f4 09       		.uleb128 0x9
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 8
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccKvCY1d.s 			page 8
 
 
- 256 00f5 02020000 		.4byte	.LASF18
+ 256 00f5 26020000 		.4byte	.LASF18
  257 00f9 01       		.byte	0x1
  258 00fa 71       		.byte	0x71
  259 00fb 6B000000 		.4byte	0x6b
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 1
  310 0022 0B       		.uleb128 0xb
  311 0023 3E       		.uleb128 0x3e
  312 0024 0B       		.uleb128 0xb
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 9
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccKvCY1d.s 			page 9
 
 
  313 0025 03       		.uleb128 0x3
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 1
  367 005c 3A       		.uleb128 0x3a
  368 005d 0B       		.uleb128 0xb
  369 005e 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 10
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccKvCY1d.s 			page 10
 
 
  370 005f 0B       		.uleb128 0xb
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 1
  424 000a 50       		.byte	0x50
  425 000b 0A000000 		.4byte	.LVL2
  426 000f 18000000 		.4byte	.LFE0
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 11
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccKvCY1d.s 			page 11
 
 
  427 0013 0400     		.2byte	0x4
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 1
  480      02004900 
  480      00000201 
  480      FB0E0D00 
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 12
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccKvCY1d.s 			page 12
 
 
  480      01010101 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 1
  502 00fe 6C6F6E67 		.ascii	"long unsigned int\000"
  502      20756E73 
  502      69676E65 
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 13
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccKvCY1d.s 			page 13
 
 
  502      6420696E 
@@ -732,67 +732,72 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 1
  505              	.LASF10:
  506 0123 646F7562 		.ascii	"double\000"
  506      6C6500
- 507              	.LASF22:
- 508 012a 433A5C55 		.ascii	"C:\\Users\\midtg\\Documents\\GitHub\\I3E3PRJ_Repo\\"
- 508      73657273 
- 508      5C6D6964 
- 508      74675C44 
- 508      6F63756D 
- 509 0157 50536F43 		.ascii	"PSoCcontroller\\PSoCcontroller.cydsn\000"
- 509      636F6E74 
- 509      726F6C6C 
- 509      65725C50 
- 509      536F4363 
- 510              	.LASF8:
- 511 017b 756E7369 		.ascii	"unsigned int\000"
- 511      676E6564 
- 511      20696E74 
- 511      00
- 512              	.LASF7:
- 513 0188 6C6F6E67 		.ascii	"long long unsigned int\000"
- 513      206C6F6E 
- 513      6720756E 
- 513      7369676E 
- 513      65642069 
- 514              	.LASF17:
- 515 019f 6D6F6465 		.ascii	"mode\000"
- 515      00
- 516              	.LASF6:
- 517 01a4 6C6F6E67 		.ascii	"long long int\000"
- 517      206C6F6E 
- 517      6720696E 
- 517      7400
- 518              	.LASF11:
- 519 01b2 63686172 		.ascii	"char\000"
- 519      00
- 520              	.LASF2:
- 521 01b7 73686F72 		.ascii	"short int\000"
- 521      7420696E 
- 521      7400
- 522              	.LASF12:
- 523 01c1 75696E74 		.ascii	"uint8\000"
- 523      3800
- 524              	.LASF21:
- 525 01c7 47656E65 		.ascii	"Generated_Source\\PSoC5\\SPI_read_req.c\000"
- 525      72617465 
- 525      645F536F 
- 525      75726365 
- 525      5C50536F 
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cckGhxEj.s 			page 14
+ 507              	.LASF8:
+ 508 012a 756E7369 		.ascii	"unsigned int\000"
+ 508      676E6564 
+ 508      20696E74 
+ 508      00
+ 509              	.LASF7:
+ 510 0137 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 510      206C6F6E 
+ 510      6720756E 
+ 510      7369676E 
+ 510      65642069 
+ 511              	.LASF22:
+ 512 014e 433A5C55 		.ascii	"C:\\Users\\jens1\\Aarhus universitet\\Lasse Bygum H"
+ 512      73657273 
+ 512      5C6A656E 
+ 512      73315C41 
+ 512      61726875 
+ 513 017d 65726F6C 		.ascii	"erold Krarup - E3PRJ\\I3E3PRJ_Repo\\PSoCcontroller\\"
+ 513      64204B72 
+ 513      61727570 
+ 513      202D2045 
+ 513      3350524A 
+ 514 01ae 50536F43 		.ascii	"PSoCcontroller.cydsn\000"
+ 514      636F6E74 
+ 514      726F6C6C 
+ 514      65722E63 
+ 514      7964736E 
+ 515              	.LASF17:
+ 516 01c3 6D6F6465 		.ascii	"mode\000"
+ 516      00
+ 517              	.LASF6:
+ 518 01c8 6C6F6E67 		.ascii	"long long int\000"
+ 518      206C6F6E 
+ 518      6720696E 
+ 518      7400
+ 519              	.LASF11:
+ 520 01d6 63686172 		.ascii	"char\000"
+ 520      00
+ 521              	.LASF2:
+ 522 01db 73686F72 		.ascii	"short int\000"
+ 522      7420696E 
+ 522      7400
+ 523              	.LASF12:
+ 524 01e5 75696E74 		.ascii	"uint8\000"
+ 524      3800
+ 525              	.LASF21:
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccKvCY1d.s 			page 14
 
 
- 526              	.LASF4:
- 527 01ed 6C6F6E67 		.ascii	"long int\000"
- 527      20696E74 
- 527      00
- 528              	.LASF0:
- 529 01f6 7369676E 		.ascii	"signed char\000"
- 529      65642063 
- 529      68617200 
- 530              	.LASF18:
- 531 0202 5350495F 		.ascii	"SPI_read_req_Read\000"
- 531      72656164 
- 531      5F726571 
- 531      5F526561 
- 531      6400
- 532              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 526 01eb 47656E65 		.ascii	"Generated_Source\\PSoC5\\SPI_read_req.c\000"
+ 526      72617465 
+ 526      645F536F 
+ 526      75726365 
+ 526      5C50536F 
+ 527              	.LASF4:
+ 528 0211 6C6F6E67 		.ascii	"long int\000"
+ 528      20696E74 
+ 528      00
+ 529              	.LASF0:
+ 530 021a 7369676E 		.ascii	"signed char\000"
+ 530      65642063 
+ 530      68617200 
+ 531              	.LASF18:
+ 532 0226 5350495F 		.ascii	"SPI_read_req_Read\000"
+ 532      72656164 
+ 532      5F726571 
+ 532      5F526561 
+ 532      6400
+ 533              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

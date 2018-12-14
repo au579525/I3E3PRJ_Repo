@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
   28:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** ********************************************************************************/
   29:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** /* `#START ADC_SAR_WaSens_IRQ_intc` */
   30:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** 
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 2
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 2
 
 
   31:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** /* `#END` */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
   85:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** *  the interrupt to the interrupt controller.
   86:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** *  
   87:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** *  When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 3
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 3
 
 
   88:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** *  used to provide consistent definition across compilers:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  142:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** 
  143:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** 
  144:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** /*******************************************************************************
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 4
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 4
 
 
  145:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** * Function Name: ADC_SAR_WaSens_IRQ_Interrupt
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  182:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** *   When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
  183:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** *   used to provide consistent definition across compilers:
  184:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** *
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 5
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 5
 
 
  185:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** *   Function definition example:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  211:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** * Function Name: ADC_SAR_WaSens_IRQ_GetVector
  212:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** ********************************************************************************
  213:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** *
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 6
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 6
 
 
  214:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** * Summary:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  241:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** *   Note calling ADC_SAR_WaSens_IRQ_Start or ADC_SAR_WaSens_IRQ_StartEx will 
  242:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** *   override any effect this API would have had. This API should only be called
  243:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** *   after ADC_SAR_WaSens_IRQ_Start or ADC_SAR_WaSens_IRQ_StartEx has been called. 
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 7
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 7
 
 
  244:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** *   To set the initial priority for the component, use the Design-Wide Resources
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  270:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** *
  271:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** * Parameters:
  272:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** *   None
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 8
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 8
 
 
  273:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** *
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  299:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** *
  300:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** * Parameters:
  301:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** *   None
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 9
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 9
 
 
  302:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** *
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  182              		.cfi_startproc
  183              		@ args = 0, pretend = 0, frame = 0
  184              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 10
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 10
 
 
  185              		@ link register save eliminated.
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  352:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c ****     *ADC_SAR_WaSens_IRQ_INTC_CLR_EN = ADC_SAR_WaSens_IRQ__INTC_MASK;
  217              		.loc 1 352 0
  218 0000 8022     		movs	r2, #128
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 11
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 11
 
 
  219 0002 014B     		ldr	r3, .L23
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  268              		.align	2
  269              		.global	ADC_SAR_WaSens_IRQ_StartEx
  270              		.thumb
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 12
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 12
 
 
  271              		.thumb_func
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  137:Generated_Source\PSoC5/ADC_SAR_WaSens_IRQ.c **** 
  319              		.loc 1 137 0
  320 0002 FFF7FEFF 		bl	ADC_SAR_WaSens_IRQ_Disable
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 13
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 13
 
 
  321              	.LVL16:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  348 0000 8022     		movs	r2, #128
  349 0002 014B     		ldr	r3, .L36
  350 0004 1A60     		str	r2, [r3]
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 14
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 14
 
 
  351 0006 7047     		bx	lr
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  380 0008 80E200E0 		.word	-536812928
  381              		.cfi_endproc
  382              	.LFE12:
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 15
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 15
 
 
  383              		.size	ADC_SAR_WaSens_IRQ_ClearPending, .-ADC_SAR_WaSens_IRQ_ClearPending
@@ -854,8 +854,8 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  393 000b 01       		.uleb128 0x1
  394 000c 65000000 		.4byte	.LASF34
  395 0010 0C       		.byte	0xc
- 396 0011 50020000 		.4byte	.LASF35
- 397 0015 B3010000 		.4byte	.LASF36
+ 396 0011 B3010000 		.4byte	.LASF35
+ 397 0015 2B020000 		.4byte	.LASF36
  398 0019 00000000 		.4byte	.Ldebug_ranges0+0
  399 001d 00000000 		.4byte	0
  400 0021 00000000 		.4byte	.Ldebug_line0
@@ -866,19 +866,19 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  405 002c 03       		.uleb128 0x3
  406 002d 04       		.byte	0x4
  407 002e 07       		.byte	0x7
- 408 002f 04020000 		.4byte	.LASF0
+ 408 002f DF010000 		.4byte	.LASF0
  409 0033 03       		.uleb128 0x3
  410 0034 08       		.byte	0x8
  411 0035 05       		.byte	0x5
- 412 0036 AA020000 		.4byte	.LASF1
+ 412 0036 CE020000 		.4byte	.LASF1
  413 003a 03       		.uleb128 0x3
  414 003b 08       		.byte	0x8
  415 003c 04       		.byte	0x4
- 416 003d 38030000 		.4byte	.LASF2
+ 416 003d 5C030000 		.4byte	.LASF2
  417 0041 03       		.uleb128 0x3
  418 0042 01       		.byte	0x1
  419 0043 06       		.byte	0x6
- 420 0044 44030000 		.4byte	.LASF3
+ 420 0044 68030000 		.4byte	.LASF3
  421 0048 03       		.uleb128 0x3
  422 0049 01       		.byte	0x1
  423 004a 08       		.byte	0x8
@@ -886,7 +886,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  425 004f 03       		.uleb128 0x3
  426 0050 02       		.byte	0x2
  427 0051 05       		.byte	0x5
- 428 0052 EB020000 		.4byte	.LASF5
+ 428 0052 0F030000 		.4byte	.LASF5
  429 0056 03       		.uleb128 0x3
  430 0057 02       		.byte	0x2
  431 0058 07       		.byte	0x7
@@ -894,26 +894,26 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  433 005d 03       		.uleb128 0x3
  434 005e 04       		.byte	0x4
  435 005f 05       		.byte	0x5
- 436 0060 11030000 		.4byte	.LASF7
+ 436 0060 35030000 		.4byte	.LASF7
  437 0064 03       		.uleb128 0x3
  438 0065 04       		.byte	0x4
  439 0066 07       		.byte	0x7
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 16
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 16
 
 
  440 0067 F8000000 		.4byte	.LASF8
  441 006b 03       		.uleb128 0x3
  442 006c 08       		.byte	0x8
  443 006d 07       		.byte	0x7
- 444 006e 39020000 		.4byte	.LASF9
+ 444 006e 14020000 		.4byte	.LASF9
  445 0072 03       		.uleb128 0x3
  446 0073 04       		.byte	0x4
  447 0074 07       		.byte	0x7
- 448 0075 A1020000 		.4byte	.LASF10
+ 448 0075 C5020000 		.4byte	.LASF10
  449 0079 03       		.uleb128 0x3
  450 007a 01       		.byte	0x1
  451 007b 08       		.byte	0x8
- 452 007c B8020000 		.4byte	.LASF11
+ 452 007c DC020000 		.4byte	.LASF11
  453 0080 04       		.uleb128 0x4
  454 0081 04       		.byte	0x4
  455 0082 86000000 		.4byte	0x86
@@ -951,14 +951,14 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  487 00ca 07       		.uleb128 0x7
  488 00cb 93000000 		.4byte	0x93
  489 00cf 06       		.uleb128 0x6
- 490 00d0 7C020000 		.4byte	.LASF18
+ 490 00d0 A0020000 		.4byte	.LASF18
  491 00d4 02       		.byte	0x2
  492 00d5 A002     		.2byte	0x2a0
  493 00d7 80000000 		.4byte	0x80
  494 00db 08       		.uleb128 0x8
  495 00dc 36010000 		.4byte	.LASF26
  496 00e0 01       		.byte	0x1
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 17
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 17
 
 
  497 00e1 A0       		.byte	0xa0
@@ -976,14 +976,14 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  509 00fc 9C       		.byte	0x9c
  510 00fd 1C010000 		.4byte	0x11c
  511 0101 0A       		.uleb128 0xa
- 512 0102 31020000 		.4byte	.LASF22
+ 512 0102 0C020000 		.4byte	.LASF22
  513 0106 01       		.byte	0x1
  514 0107 C8       		.byte	0xc8
  515 0108 CF000000 		.4byte	0xcf
  516 010c 01       		.uleb128 0x1
  517 010d 50       		.byte	0x50
  518 010e 0B       		.uleb128 0xb
- 519 010f BD020000 		.4byte	.LASF19
+ 519 010f E1020000 		.4byte	.LASF19
  520 0113 01       		.byte	0x1
  521 0114 CA       		.byte	0xca
  522 0115 1C010000 		.4byte	0x11c
@@ -1004,7 +1004,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  537 0136 9C       		.byte	0x9c
  538 0137 49010000 		.4byte	0x149
  539 013b 0B       		.uleb128 0xb
- 540 013c BD020000 		.4byte	.LASF19
+ 540 013c E1020000 		.4byte	.LASF19
  541 0140 01       		.byte	0x1
  542 0141 E2       		.byte	0xe2
  543 0142 1C010000 		.4byte	0x11c
@@ -1012,13 +1012,13 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  545 0147 53       		.byte	0x53
  546 0148 00       		.byte	0
  547 0149 0D       		.uleb128 0xd
- 548 014a CC020000 		.4byte	.LASF21
+ 548 014a F0020000 		.4byte	.LASF21
  549 014e 01       		.byte	0x1
  550 014f 0201     		.2byte	0x102
  551 0151 00000000 		.4byte	.LFB6
  552 0155 10000000 		.4byte	.LFE6-.LFB6
  553 0159 01       		.uleb128 0x1
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 18
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 18
 
 
  554 015a 9C       		.byte	0x9c
@@ -1056,7 +1056,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  586 01ab 01       		.uleb128 0x1
  587 01ac 9C       		.byte	0x9c
  588 01ad 12       		.uleb128 0x12
- 589 01ae F5020000 		.4byte	.LASF37
+ 589 01ae 19030000 		.4byte	.LASF37
  590 01b2 01       		.byte	0x1
  591 01b3 4801     		.2byte	0x148
  592 01b5 87000000 		.4byte	0x87
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  608 01db 3D       		.byte	0x3d
  609 01dc 00000000 		.4byte	.LFB0
  610 01e0 1C000000 		.4byte	.LFE0-.LFB0
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 19
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 19
 
 
  611 01e4 01       		.uleb128 0x1
@@ -1113,7 +1113,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  640 0222 9B010000 		.4byte	0x19b
  641 0226 00       		.byte	0
  642 0227 09       		.uleb128 0x9
- 643 0228 50030000 		.4byte	.LASF30
+ 643 0228 74030000 		.4byte	.LASF30
  644 022c 01       		.byte	0x1
  645 022d 68       		.byte	0x68
  646 022e 00000000 		.4byte	.LFB1
@@ -1122,7 +1122,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  649 0237 9C       		.byte	0x9c
  650 0238 85020000 		.4byte	0x285
  651 023c 16       		.uleb128 0x16
- 652 023d 31020000 		.4byte	.LASF22
+ 652 023d 0C020000 		.4byte	.LASF22
  653 0241 01       		.byte	0x1
  654 0242 68       		.byte	0x68
  655 0243 CF000000 		.4byte	0xcf
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  665 0262 01       		.uleb128 0x1
  666 0263 50       		.byte	0x50
  667 0264 02       		.uleb128 0x2
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 20
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 20
 
 
  668 0265 74       		.byte	0x74
@@ -1159,7 +1159,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  683 0280 9B010000 		.4byte	0x19b
  684 0284 00       		.byte	0
  685 0285 09       		.uleb128 0x9
- 686 0286 89020000 		.4byte	.LASF31
+ 686 0286 AD020000 		.4byte	.LASF31
  687 028a 01       		.byte	0x1
  688 028b 86       		.byte	0x86
  689 028c 00000000 		.4byte	.LFB2
@@ -1175,7 +1175,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  699 02a8 EC000000 		.4byte	0xec
  700 02ac 00       		.byte	0
  701 02ad 11       		.uleb128 0x11
- 702 02ae 1A030000 		.4byte	.LASF32
+ 702 02ae 3E030000 		.4byte	.LASF32
  703 02b2 01       		.byte	0x1
  704 02b3 7801     		.2byte	0x178
  705 02b5 00000000 		.4byte	.LFB11
@@ -1183,7 +1183,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  707 02bd 01       		.uleb128 0x1
  708 02be 9C       		.byte	0x9c
  709 02bf 11       		.uleb128 0x11
- 710 02c0 11020000 		.4byte	.LASF33
+ 710 02c0 EC010000 		.4byte	.LASF33
  711 02c4 01       		.byte	0x1
  712 02c5 9101     		.2byte	0x191
  713 02c7 00000000 		.4byte	.LFB12
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  722 0002 01       		.byte	0x1
  723 0003 25       		.uleb128 0x25
  724 0004 0E       		.uleb128 0xe
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 21
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 21
 
 
  725 0005 13       		.uleb128 0x13
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  779 003b 00       		.byte	0
  780 003c 03       		.uleb128 0x3
  781 003d 0E       		.uleb128 0xe
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 22
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 22
 
 
  782 003e 3A       		.uleb128 0x3a
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  836 0075 06       		.uleb128 0x6
  837 0076 40       		.uleb128 0x40
  838 0077 18       		.uleb128 0x18
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 23
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 23
 
 
  839 0078 9742     		.uleb128 0x2117
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  893 00af 06       		.uleb128 0x6
  894 00b0 40       		.uleb128 0x40
  895 00b1 18       		.uleb128 0x18
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 24
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 24
 
 
  896 00b2 9742     		.uleb128 0x2117
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  950 00ea 0B       		.uleb128 0xb
  951 00eb 3B       		.uleb128 0x3b
  952 00ec 05       		.uleb128 0x5
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 25
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 25
 
 
  953 00ed 27       		.uleb128 0x27
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  1007 0125 12       		.uleb128 0x12
  1008 0126 2E       		.uleb128 0x2e
  1009 0127 00       		.byte	0
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 26
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 26
 
 
  1010 0128 3F       		.uleb128 0x3f
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  1064 0166 03       		.uleb128 0x3
  1065 0167 0E       		.uleb128 0xe
  1066 0168 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 27
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 27
 
 
  1067 0169 0B       		.uleb128 0xb
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  1121 000c 0000     		.2byte	0
  1122 000e 0000     		.2byte	0
  1123 0010 00000000 		.4byte	.LFB3
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 28
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 28
 
 
  1124 0014 02000000 		.4byte	.LFE3-.LFB3
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  1178 0064 0C000000 		.4byte	.LFE12
  1179 0068 00000000 		.4byte	0
  1180 006c 00000000 		.4byte	0
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 29
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 29
 
 
  1181              		.section	.debug_line,"",%progbits
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  1201      00
  1202              	.LASF8:
  1203 00f8 6C6F6E67 		.ascii	"long unsigned int\000"
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 30
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 30
 
 
  1203      20756E73 
@@ -1788,115 +1788,120 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 1
  1220              	.LASF13:
  1221 01ac 75696E74 		.ascii	"uint32\000"
  1221      333200
- 1222              	.LASF36:
- 1223 01b3 433A5C55 		.ascii	"C:\\Users\\midtg\\Documents\\GitHub\\I3E3PRJ_Repo\\"
- 1223      73657273 
- 1223      5C6D6964 
- 1223      74675C44 
- 1223      6F63756D 
- 1224 01e0 50536F43 		.ascii	"PSoCcontroller\\PSoCcontroller.cydsn\000"
- 1224      636F6E74 
- 1224      726F6C6C 
- 1224      65725C50 
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 31
+ 1222              	.LASF35:
+ 1223 01b3 47656E65 		.ascii	"Generated_Source\\PSoC5\\ADC_SAR_WaSens_IRQ.c\000"
+ 1223      72617465 
+ 1223      645F536F 
+ 1223      75726365 
+ 1223      5C50536F 
+ 1224              	.LASF0:
+ 1225 01df 756E7369 		.ascii	"unsigned int\000"
+ 1225      676E6564 
+ 1225      20696E74 
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 31
 
 
- 1224      536F4363 
- 1225              	.LASF0:
- 1226 0204 756E7369 		.ascii	"unsigned int\000"
- 1226      676E6564 
- 1226      20696E74 
- 1226      00
- 1227              	.LASF33:
- 1228 0211 4144435F 		.ascii	"ADC_SAR_WaSens_IRQ_ClearPending\000"
- 1228      5341525F 
- 1228      57615365 
- 1228      6E735F49 
- 1228      52515F43 
- 1229              	.LASF22:
- 1230 0231 61646472 		.ascii	"address\000"
- 1230      65737300 
- 1231              	.LASF9:
- 1232 0239 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1232      206C6F6E 
- 1232      6720756E 
- 1232      7369676E 
- 1232      65642069 
- 1233              	.LASF35:
- 1234 0250 47656E65 		.ascii	"Generated_Source\\PSoC5\\ADC_SAR_WaSens_IRQ.c\000"
- 1234      72617465 
- 1234      645F536F 
- 1234      75726365 
- 1234      5C50536F 
- 1235              	.LASF18:
- 1236 027c 63796973 		.ascii	"cyisraddress\000"
- 1236      72616464 
- 1236      72657373 
- 1236      00
- 1237              	.LASF31:
- 1238 0289 4144435F 		.ascii	"ADC_SAR_WaSens_IRQ_Stop\000"
- 1238      5341525F 
- 1238      57615365 
- 1238      6E735F49 
- 1238      52515F53 
- 1239              	.LASF10:
- 1240 02a1 73697A65 		.ascii	"sizetype\000"
- 1240      74797065 
- 1240      00
- 1241              	.LASF1:
- 1242 02aa 6C6F6E67 		.ascii	"long long int\000"
- 1242      206C6F6E 
- 1242      6720696E 
- 1242      7400
- 1243              	.LASF11:
- 1244 02b8 63686172 		.ascii	"char\000"
- 1244      00
- 1245              	.LASF19:
- 1246 02bd 72616D56 		.ascii	"ramVectorTable\000"
- 1246      6563746F 
- 1246      72546162 
- 1246      6C6500
- 1247              	.LASF21:
- 1248 02cc 4144435F 		.ascii	"ADC_SAR_WaSens_IRQ_SetPriority\000"
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\cc0ks42L.s 			page 32
+ 1225      00
+ 1226              	.LASF33:
+ 1227 01ec 4144435F 		.ascii	"ADC_SAR_WaSens_IRQ_ClearPending\000"
+ 1227      5341525F 
+ 1227      57615365 
+ 1227      6E735F49 
+ 1227      52515F43 
+ 1228              	.LASF22:
+ 1229 020c 61646472 		.ascii	"address\000"
+ 1229      65737300 
+ 1230              	.LASF9:
+ 1231 0214 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1231      206C6F6E 
+ 1231      6720756E 
+ 1231      7369676E 
+ 1231      65642069 
+ 1232              	.LASF36:
+ 1233 022b 433A5C55 		.ascii	"C:\\Users\\jens1\\Aarhus universitet\\Lasse Bygum H"
+ 1233      73657273 
+ 1233      5C6A656E 
+ 1233      73315C41 
+ 1233      61726875 
+ 1234 025a 65726F6C 		.ascii	"erold Krarup - E3PRJ\\I3E3PRJ_Repo\\PSoCcontroller\\"
+ 1234      64204B72 
+ 1234      61727570 
+ 1234      202D2045 
+ 1234      3350524A 
+ 1235 028b 50536F43 		.ascii	"PSoCcontroller.cydsn\000"
+ 1235      636F6E74 
+ 1235      726F6C6C 
+ 1235      65722E63 
+ 1235      7964736E 
+ 1236              	.LASF18:
+ 1237 02a0 63796973 		.ascii	"cyisraddress\000"
+ 1237      72616464 
+ 1237      72657373 
+ 1237      00
+ 1238              	.LASF31:
+ 1239 02ad 4144435F 		.ascii	"ADC_SAR_WaSens_IRQ_Stop\000"
+ 1239      5341525F 
+ 1239      57615365 
+ 1239      6E735F49 
+ 1239      52515F53 
+ 1240              	.LASF10:
+ 1241 02c5 73697A65 		.ascii	"sizetype\000"
+ 1241      74797065 
+ 1241      00
+ 1242              	.LASF1:
+ 1243 02ce 6C6F6E67 		.ascii	"long long int\000"
+ 1243      206C6F6E 
+ 1243      6720696E 
+ 1243      7400
+ 1244              	.LASF11:
+ 1245 02dc 63686172 		.ascii	"char\000"
+ 1245      00
+ 1246              	.LASF19:
+ 1247 02e1 72616D56 		.ascii	"ramVectorTable\000"
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccya8LKP.s 			page 32
 
 
- 1248      5341525F 
- 1248      57615365 
- 1248      6E735F49 
- 1248      52515F53 
- 1249              	.LASF5:
- 1250 02eb 73686F72 		.ascii	"short int\000"
- 1250      7420696E 
- 1250      7400
- 1251              	.LASF37:
- 1252 02f5 4144435F 		.ascii	"ADC_SAR_WaSens_IRQ_GetState\000"
- 1252      5341525F 
- 1252      57615365 
- 1252      6E735F49 
- 1252      52515F47 
- 1253              	.LASF7:
- 1254 0311 6C6F6E67 		.ascii	"long int\000"
- 1254      20696E74 
- 1254      00
- 1255              	.LASF32:
- 1256 031a 4144435F 		.ascii	"ADC_SAR_WaSens_IRQ_SetPending\000"
- 1256      5341525F 
- 1256      57615365 
- 1256      6E735F49 
- 1256      52515F53 
- 1257              	.LASF2:
- 1258 0338 6C6F6E67 		.ascii	"long double\000"
- 1258      20646F75 
- 1258      626C6500 
- 1259              	.LASF3:
- 1260 0344 7369676E 		.ascii	"signed char\000"
- 1260      65642063 
- 1260      68617200 
- 1261              	.LASF30:
- 1262 0350 4144435F 		.ascii	"ADC_SAR_WaSens_IRQ_StartEx\000"
- 1262      5341525F 
- 1262      57615365 
- 1262      6E735F49 
- 1262      52515F53 
- 1263              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1247      6563746F 
+ 1247      72546162 
+ 1247      6C6500
+ 1248              	.LASF21:
+ 1249 02f0 4144435F 		.ascii	"ADC_SAR_WaSens_IRQ_SetPriority\000"
+ 1249      5341525F 
+ 1249      57615365 
+ 1249      6E735F49 
+ 1249      52515F53 
+ 1250              	.LASF5:
+ 1251 030f 73686F72 		.ascii	"short int\000"
+ 1251      7420696E 
+ 1251      7400
+ 1252              	.LASF37:
+ 1253 0319 4144435F 		.ascii	"ADC_SAR_WaSens_IRQ_GetState\000"
+ 1253      5341525F 
+ 1253      57615365 
+ 1253      6E735F49 
+ 1253      52515F47 
+ 1254              	.LASF7:
+ 1255 0335 6C6F6E67 		.ascii	"long int\000"
+ 1255      20696E74 
+ 1255      00
+ 1256              	.LASF32:
+ 1257 033e 4144435F 		.ascii	"ADC_SAR_WaSens_IRQ_SetPending\000"
+ 1257      5341525F 
+ 1257      57615365 
+ 1257      6E735F49 
+ 1257      52515F53 
+ 1258              	.LASF2:
+ 1259 035c 6C6F6E67 		.ascii	"long double\000"
+ 1259      20646F75 
+ 1259      626C6500 
+ 1260              	.LASF3:
+ 1261 0368 7369676E 		.ascii	"signed char\000"
+ 1261      65642063 
+ 1261      68617200 
+ 1262              	.LASF30:
+ 1263 0374 4144435F 		.ascii	"ADC_SAR_WaSens_IRQ_StartEx\000"
+ 1263      5341525F 
+ 1263      57615365 
+ 1263      6E735F49 
+ 1263      52515F53 
+ 1264              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

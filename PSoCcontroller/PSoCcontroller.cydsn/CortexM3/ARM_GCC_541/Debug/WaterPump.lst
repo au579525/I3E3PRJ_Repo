@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccnfEhJc.s 			page 1
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccBJ7vV6.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccnfEhJc.s 			page 1
   51              	.LFB64:
    5:WaterPump.c   ****     }
    6:WaterPump.c   **** 
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccnfEhJc.s 			page 2
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccBJ7vV6.s 			page 2
 
 
    7:WaterPump.c   ****     void WaterPump_fireWater(int x) {
@@ -118,12 +118,12 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccnfEhJc.s 			page 1
  100 001d 00000000 		.4byte	0
  101 0021 00000000 		.4byte	.Ldebug_line0
  102 0025 02       		.uleb128 0x2
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccnfEhJc.s 			page 3
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccBJ7vV6.s 			page 3
 
 
  103 0026 01       		.byte	0x1
  104 0027 06       		.byte	0x6
- 105 0028 A8010000 		.4byte	.LASF0
+ 105 0028 CC010000 		.4byte	.LASF0
  106 002c 02       		.uleb128 0x2
  107 002d 01       		.byte	0x1
  108 002e 08       		.byte	0x8
@@ -131,20 +131,20 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccnfEhJc.s 			page 1
  110 0033 02       		.uleb128 0x2
  111 0034 02       		.byte	0x2
  112 0035 05       		.byte	0x5
- 113 0036 D0010000 		.4byte	.LASF2
+ 113 0036 F4010000 		.4byte	.LASF2
  114 003a 02       		.uleb128 0x2
  115 003b 02       		.byte	0x2
  116 003c 07       		.byte	0x7
  117 003d 0E000000 		.4byte	.LASF3
  118 0041 03       		.uleb128 0x3
- 119 0042 C0010000 		.4byte	.LASF9
+ 119 0042 E4010000 		.4byte	.LASF9
  120 0046 02       		.byte	0x2
  121 0047 3F       		.byte	0x3f
  122 0048 4C000000 		.4byte	0x4c
  123 004c 02       		.uleb128 0x2
  124 004d 04       		.byte	0x4
  125 004e 05       		.byte	0x5
- 126 004f 63010000 		.4byte	.LASF4
+ 126 004f B6010000 		.4byte	.LASF4
  127 0053 02       		.uleb128 0x2
  128 0054 04       		.byte	0x4
  129 0055 07       		.byte	0x7
@@ -166,19 +166,19 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccnfEhJc.s 			page 1
  145 0071 07       		.byte	0x7
  146 0072 21000000 		.4byte	.LASF8
  147 0076 03       		.uleb128 0x3
- 148 0077 DA010000 		.4byte	.LASF10
+ 148 0077 FE010000 		.4byte	.LASF10
  149 007b 03       		.byte	0x3
  150 007c 2C       		.byte	0x2c
  151 007d 41000000 		.4byte	0x41
  152 0081 02       		.uleb128 0x2
  153 0082 04       		.byte	0x4
  154 0083 04       		.byte	0x4
- 155 0084 CA010000 		.4byte	.LASF11
+ 155 0084 EE010000 		.4byte	.LASF11
  156 0088 02       		.uleb128 0x2
  157 0089 08       		.byte	0x8
  158 008a 04       		.byte	0x4
- 159 008b 94010000 		.4byte	.LASF12
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccnfEhJc.s 			page 4
+ 159 008b AF010000 		.4byte	.LASF12
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccBJ7vV6.s 			page 4
 
 
  160 008f 02       		.uleb128 0x2
@@ -188,11 +188,11 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccnfEhJc.s 			page 1
  164 0096 02       		.uleb128 0x2
  165 0097 08       		.byte	0x8
  166 0098 04       		.byte	0x4
- 167 0099 B4010000 		.4byte	.LASF14
+ 167 0099 D8010000 		.4byte	.LASF14
  168 009d 02       		.uleb128 0x2
  169 009e 04       		.byte	0x4
  170 009f 07       		.byte	0x7
- 171 00a0 E2010000 		.4byte	.LASF15
+ 171 00a0 06020000 		.4byte	.LASF15
  172 00a4 05       		.uleb128 0x5
  173 00a5 FF000000 		.4byte	.LASF16
  174 00a9 01       		.byte	0x1
@@ -213,7 +213,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccnfEhJc.s 			page 1
  189 00c7 00       		.byte	0
  190 00c8 00       		.byte	0
  191 00c9 05       		.uleb128 0x5
- 192 00ca 80010000 		.4byte	.LASF17
+ 192 00ca 9B010000 		.4byte	.LASF17
  193 00ce 01       		.byte	0x1
  194 00cf 07       		.byte	0x7
  195 00d0 00000000 		.4byte	.LFB64
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccnfEhJc.s 			page 1
  214 00fc F3       		.byte	0xf3
  215 00fd 01       		.uleb128 0x1
  216 00fe 50       		.byte	0x50
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccnfEhJc.s 			page 5
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccBJ7vV6.s 			page 5
 
 
  217 00ff 00       		.byte	0
@@ -253,15 +253,15 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccnfEhJc.s 			page 1
  226 010e 00       		.byte	0
  227 010f 00       		.byte	0
  228 0110 0A       		.uleb128 0xa
- 229 0111 9B010000 		.4byte	.LASF21
+ 229 0111 BF010000 		.4byte	.LASF21
  230 0115 04       		.byte	0x4
  231 0116 1207     		.2byte	0x712
  232 0118 1C010000 		.4byte	0x11c
  233 011c 0B       		.uleb128 0xb
  234 011d 76000000 		.4byte	0x76
  235 0121 0C       		.uleb128 0xc
- 236 0122 6C010000 		.4byte	.LASF22
- 237 0126 6C010000 		.4byte	.LASF22
+ 236 0122 87010000 		.4byte	.LASF22
+ 237 0126 87010000 		.4byte	.LASF22
  238 012a 05       		.byte	0x5
  239 012b 26       		.byte	0x26
  240 012c 00       		.byte	0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccnfEhJc.s 			page 1
  271 001c 00       		.byte	0
  272 001d 00       		.byte	0
  273 001e 03       		.uleb128 0x3
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccnfEhJc.s 			page 6
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccBJ7vV6.s 			page 6
 
 
  274 001f 16       		.uleb128 0x16
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccnfEhJc.s 			page 1
  328 0058 13       		.uleb128 0x13
  329 0059 00       		.byte	0
  330 005a 00       		.byte	0
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccnfEhJc.s 			page 7
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccBJ7vV6.s 			page 7
 
 
  331 005b 07       		.uleb128 0x7
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccnfEhJc.s 			page 1
  385 0096 00       		.byte	0
  386 0097 49       		.uleb128 0x49
  387 0098 13       		.uleb128 0x13
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccnfEhJc.s 			page 8
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccBJ7vV6.s 			page 8
 
 
  388 0099 00       		.byte	0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccnfEhJc.s 			page 1
  442 000e 0000     		.2byte	0
  443 0010 00000000 		.4byte	.LFB63
  444 0014 0A000000 		.4byte	.LFE63-.LFB63
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccnfEhJc.s 			page 9
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccBJ7vV6.s 			page 9
 
 
  445 0018 00000000 		.4byte	.LFB64
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccnfEhJc.s 			page 1
  471      74696F6E 
  472              	.LASF5:
  473 00c8 6C6F6E67 		.ascii	"long unsigned int\000"
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccnfEhJc.s 			page 10
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccBJ7vV6.s 			page 10
 
 
  473      20756E73 
@@ -565,67 +565,72 @@ ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccnfEhJc.s 			page 1
  481 010d 63686172 		.ascii	"char\000"
  481      00
  482              	.LASF20:
- 483 0112 433A5C55 		.ascii	"C:\\Users\\midtg\\Documents\\GitHub\\I3E3PRJ_Repo\\"
+ 483 0112 433A5C55 		.ascii	"C:\\Users\\jens1\\Aarhus universitet\\Lasse Bygum H"
  483      73657273 
- 483      5C6D6964 
- 483      74675C44 
- 483      6F63756D 
- 484 013f 50536F43 		.ascii	"PSoCcontroller\\PSoCcontroller.cydsn\000"
- 484      636F6E74 
- 484      726F6C6C 
- 484      65725C50 
- 484      536F4363 
- 485              	.LASF4:
- 486 0163 6C6F6E67 		.ascii	"long int\000"
- 486      20696E74 
- 486      00
- 487              	.LASF22:
- 488 016c 50696E5F 		.ascii	"Pin_WaterPump_Write\000"
- 488      57617465 
- 488      7250756D 
- 488      705F5772 
- 488      69746500 
- 489              	.LASF17:
- 490 0180 57617465 		.ascii	"WaterPump_fireWater\000"
- 490      7250756D 
- 490      705F6669 
- 490      72655761 
- 490      74657200 
- 491              	.LASF12:
- 492 0194 646F7562 		.ascii	"double\000"
- 492      6C6500
- 493              	.LASF21:
- 494 019b 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 494      52784275 
- 494      66666572 
-ARM GAS  C:\Users\midtg\AppData\Local\Temp\ccnfEhJc.s 			page 11
+ 483      5C6A656E 
+ 483      73315C41 
+ 483      61726875 
+ 484 0141 65726F6C 		.ascii	"erold Krarup - E3PRJ\\I3E3PRJ_Repo\\PSoCcontroller\\"
+ 484      64204B72 
+ 484      61727570 
+ 484      202D2045 
+ 484      3350524A 
+ 485 0172 50536F43 		.ascii	"PSoCcontroller.cydsn\000"
+ 485      636F6E74 
+ 485      726F6C6C 
+ 485      65722E63 
+ 485      7964736E 
+ 486              	.LASF22:
+ 487 0187 50696E5F 		.ascii	"Pin_WaterPump_Write\000"
+ 487      57617465 
+ 487      7250756D 
+ 487      705F5772 
+ 487      69746500 
+ 488              	.LASF17:
+ 489 019b 57617465 		.ascii	"WaterPump_fireWater\000"
+ 489      7250756D 
+ 489      705F6669 
+ 489      72655761 
+ 489      74657200 
+ 490              	.LASF12:
+ 491 01af 646F7562 		.ascii	"double\000"
+ 491      6C6500
+ 492              	.LASF4:
+ 493 01b6 6C6F6E67 		.ascii	"long int\000"
+ 493      20696E74 
+ARM GAS  C:\Users\jens1\AppData\Local\Temp\ccBJ7vV6.s 			page 11
 
 
- 494      00
- 495              	.LASF0:
- 496 01a8 7369676E 		.ascii	"signed char\000"
- 496      65642063 
- 496      68617200 
- 497              	.LASF14:
- 498 01b4 6C6F6E67 		.ascii	"long double\000"
- 498      20646F75 
- 498      626C6500 
- 499              	.LASF9:
- 500 01c0 5F5F696E 		.ascii	"__int32_t\000"
- 500      7433325F 
- 500      7400
- 501              	.LASF11:
- 502 01ca 666C6F61 		.ascii	"float\000"
- 502      7400
- 503              	.LASF2:
- 504 01d0 73686F72 		.ascii	"short int\000"
- 504      7420696E 
- 504      7400
- 505              	.LASF10:
- 506 01da 696E7433 		.ascii	"int32_t\000"
- 506      325F7400 
- 507              	.LASF15:
- 508 01e2 73697A65 		.ascii	"sizetype\000"
- 508      74797065 
- 508      00
- 509              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 493      00
+ 494              	.LASF21:
+ 495 01bf 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 495      52784275 
+ 495      66666572 
+ 495      00
+ 496              	.LASF0:
+ 497 01cc 7369676E 		.ascii	"signed char\000"
+ 497      65642063 
+ 497      68617200 
+ 498              	.LASF14:
+ 499 01d8 6C6F6E67 		.ascii	"long double\000"
+ 499      20646F75 
+ 499      626C6500 
+ 500              	.LASF9:
+ 501 01e4 5F5F696E 		.ascii	"__int32_t\000"
+ 501      7433325F 
+ 501      7400
+ 502              	.LASF11:
+ 503 01ee 666C6F61 		.ascii	"float\000"
+ 503      7400
+ 504              	.LASF2:
+ 505 01f4 73686F72 		.ascii	"short int\000"
+ 505      7420696E 
+ 505      7400
+ 506              	.LASF10:
+ 507 01fe 696E7433 		.ascii	"int32_t\000"
+ 507      325F7400 
+ 508              	.LASF15:
+ 509 0206 73697A65 		.ascii	"sizetype\000"
+ 509      74797065 
+ 509      00
+ 510              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
